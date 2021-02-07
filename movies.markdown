@@ -1,8 +1,6 @@
----
-layout page
----
+![movies](movies.jpg)
 
-### P0
+### Done
 
 * [Life is Beautiful](https://www.ifvod.tv/detail?id=36mwvaQ50sB)
 * [Palmer](https://www.ifvod.tv/detail?id=oEasSDlsGtF)
@@ -23,7 +21,7 @@ layout page
 * [Green Book](https://www.ifvod.tv/detail?id=36hhXdMQV66)
 * [Wonder Boy](https://www.ifvod.tv/detail?id=F49tXL7ysxD)
 
-### P1
+### Watch List
 
 * [Hacksaw Ridge](https://www.ifvod.tv/detail?id=QsW026GyTaH)
 * [The Martian](https://www.ifvod.tv/detail?id=RhkXUZtu4I9)
