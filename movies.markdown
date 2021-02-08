@@ -2,6 +2,7 @@
 
 ### Done
 
+* [Good Will Hunting](https://www.ifvod.tv/detail?id=hEr4fuGA8W5)
 * [Life is Beautiful](https://www.ifvod.tv/detail?id=36mwvaQ50sB)
 * [Palmer](https://www.ifvod.tv/detail?id=oEasSDlsGtF)
 * [Soul](https://www.ifvod.tv/detail?id=zxf2OYZChf7)
@@ -22,7 +23,9 @@
 * [Wonder Boy](https://www.ifvod.tv/detail?id=F49tXL7ysxD)
 
 ### Watch List
-
+* [As Good As It Gets](https://www.ifvod.tv/detail?id=b6BjBlDgql2)
+* [The Scent of Women](https://www.ifvod.tv/detail?id=zWeRC9Lh1rD)
+* [Dead Poets Society](https://www.ifvod.tv/detail?id=d7iJAdzh9BL)
 * [Hacksaw Ridge](https://www.ifvod.tv/detail?id=QsW026GyTaH)
 * [The Martian](https://www.ifvod.tv/detail?id=RhkXUZtu4I9)
 * [Darkest Hour](https://www.ifvod.tv/detail?id=CoLuOjIGSFB)
@@ -41,8 +44,6 @@
 * [Gone with the Wind](https://www.ifvod.tv/detail?id=eKiAePdhhz3)
 * [The Pianist](https://www.ifvod.tv/detail?id=q8RJnYDRFzF)
 * [Lord of the Rings](https://www.ifvod.tv/detail?id=OMJsl4YHUY2)
-* [Good Will Hunting](https://www.ifvod.tv/detail?id=hEr4fuGA8W5)
-* [The Scent of Women](https://www.ifvod.tv/detail?id=zWeRC9Lh1rD)
 * [Hobbit 1](https://www.ifvod.tv/detail?id=ab49P9WVPA2)
 * [Hobbit 2](https://www.ifvod.tv/detail?id=eP63pCc6YqC)
 * [Hobbit 3](https://www.ifvod.tv/detail?id=Ez2s1BY8qW9)
