@@ -64,7 +64,7 @@
 乐幽心屡止，遵事迹犹遽。
 终罢斯结庐，慕陶直可庶。">吏舍</a>停。
 
-<a href="#" title="
+<a href="#" class="custom-tooltip">永日<span class="tooltip-text">
 永日方戚戚，出行复悠悠。
 女子今有行，大江溯轻舟。
 尔辈苦无恃，抚念益慈柔。
@@ -76,7 +76,7 @@
 孝恭遵妇道，容止顺其猷。
 别离在今晨，见尔当何秋。
 居闲始自遣，临感忽难收。
-归来视幼女，零泪缘缨流。">永日</a><a href="#" class="custom-tooltip">汲井<span class="tooltip-text">
+归来视幼女，零泪缘缨流。</span></a><a href="#" class="custom-tooltip">汲井<span class="tooltip-text">
 汲井漱寒齿，清心拂尘服。
 闲持贝叶书，步出东斋读。
 真源了无取，妄迹世所逐。
