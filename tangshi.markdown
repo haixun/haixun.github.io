@@ -13,12 +13,12 @@
   border-radius: 6px;
   position: absolute;
   z-index: 1;
-  bottom: 125%; /* Position the tooltip above the text */
+  bottom: 100%; /* Position the tooltip above the text */
   left: 50%;
   margin-left: -60px; /* Center the tooltip */
   opacity: 0;
   transition: opacity 0.3s;
-  width: 120px;
+  width: 220px;
   font-size: 18px; /* Set the font size */
 }
 
