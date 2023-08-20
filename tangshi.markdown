@@ -76,7 +76,12 @@
 神欢体自轻，意欲凌风翔。
 吴中盛文史，群彦今汪洋。
 方知大藩地，岂曰财赋疆。</span></a><a href="#" class="custom-tooltip">凄凄<span class="tooltip-text">
-</span></a>吹。
+凄凄去亲爱，泛泛入烟雾。
+归棹洛阳人，残钟广陵树。
+今朝此为别，何处还相遇。
+世事波上舟，沿洄安得住。
+</span></a>停。
+
 
 <a href="#" class="custom-tooltip">今朝<span class="tooltip-text">
 今朝郡斋冷，忽念山中客。
