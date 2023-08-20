@@ -18,7 +18,7 @@
   margin-left: -60px; /* Center the tooltip */
   opacity: 0;
   transition: opacity 0.3s;
-  width: 200px;
+  width: 120px;
   font-size: 18px; /* Set the font size */
 }
 
@@ -27,6 +27,7 @@
   opacity: .8;
 }
 </style>
+
 ## 唐诗三百首 ｜ 五言古诗
 
 [孤鸿](https://so.gushiwen.cn/shiwenv_f4a35c0d146a.aspx)[江南](https://so.gushiwen.cn/shiwenv_02ba8d3eabab.aspx)飞，[暮从](https://so.gushiwen.cn/shiwenv_047024512325.aspx)[花间](https://so.gushiwen.cn/shiwenv_3185407c5519.aspx)归。
@@ -75,14 +76,14 @@
 孝恭遵妇道，容止顺其猷。
 别离在今晨，见尔当何秋。
 居闲始自遣，临感忽难收。
-归来视幼女，零泪缘缨流。">永日</a><a href="#" title="
+归来视幼女，零泪缘缨流。">永日</a><a href="#" class="custom-tooltip">汲井<span class="tooltip-text">
 汲井漱寒齿，清心拂尘服。
 闲持贝叶书，步出东斋读。
 真源了无取，妄迹世所逐。
 遗言冀可冥，缮性何由熟。
 道人庭宇静，苔色连深竹。
 日出雾露馀，青松如膏沐。
-澹然离言说，悟悦心自足。">汲井</a>思，<a href="#" class="custom-tooltip">久为<span class="tooltip-text">
+澹然离言说，悟悦心自足。</span></a>思，<a href="#" class="custom-tooltip">久为<span class="tooltip-text">
 久为簪组累，幸此南夷谪。
 闲依农圃邻，偶似山林客。
 晓耕翻露草，夜榜响溪石。
