@@ -14,4 +14,7 @@
 
 [今朝](https://so.gushiwen.cn/shiwenv_bde0a1fcff27.aspx)[客从](https://so.gushiwen.cn/shiwenv_c40eeba65a3e.aspx)来，[落帆](https://so.gushiwen.cn/shiwenv_9a4af1036d85.aspx)[吏舍](https://so.gushiwen.cn/shiwenv_48b0176c1010.aspx)停。
 
-[永日](https://so.gushiwen.cn/shiwenv_871dfe3a1377.aspx)[汲井](https://so.gushiwen.cn/shiwenv_8483f12e6ef6.aspx)思，[久为](https://so.gushiwen.cn/shiwenv_324652b6ac3d.aspx)故乡期。
+[永日](https://so.gushiwen.cn/shiwenv_871dfe3a1377.aspx)[汲井](https://so.gushiwen.cn/shiwenv_8483f12e6ef6.aspx)思，[久为](https://so.gushiwen.cn/shiwenv_324652b6ac3d.aspx)< href="#" title="久为簪组累，幸此南夷谪。
+闲依农圃邻，偶似山林客。
+晓耕翻露草，夜榜响溪石。
+来往不逢人，长歌楚天碧。">故乡</a>期。
