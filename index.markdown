@@ -44,6 +44,7 @@ data-driven semantic networks to enable text understanding.
 * [The coming disruption to e-commerce search](https://medium.com/gobeyond-ai/the-coming-disruption-in-e-commerce-search-3ffa0eb9a5d9)
 * [An Annotated Reading List of Conversational AI](https://medium.com/gobeyond-ai/a-reading-list-and-mini-survey-of-conversational-ai-32fceea97180)
 * [Getting NLP Ready for Business](https://medium.com/gobeyond-ai/getting-nlp-ready-for-business-4cc96d81c933)
+* [父亲节](https://medium.com/@haixun/%E7%88%B6%E4%BA%B2%E8%8A%82-ae67a6005d9c)
 
 ### Other links
 
