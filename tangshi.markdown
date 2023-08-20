@@ -1,3 +1,4 @@
+<style>
 .custom-tooltip {
   position: relative;
   display: inline-block;
@@ -24,7 +25,7 @@
   visibility: visible;
   opacity: 1;
 }
-
+</style>
 ## 唐诗三百首 ｜ 五言古诗
 
 [孤鸿](https://so.gushiwen.cn/shiwenv_f4a35c0d146a.aspx)[江南](https://so.gushiwen.cn/shiwenv_02ba8d3eabab.aspx)飞，[暮从](https://so.gushiwen.cn/shiwenv_047024512325.aspx)[花间](https://so.gushiwen.cn/shiwenv_3185407c5519.aspx)归。
