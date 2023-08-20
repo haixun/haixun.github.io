@@ -1,3 +1,29 @@
+.custom-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Position the tooltip above the text */
+  left: 50%;
+  margin-left: -60px; /* Center the tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 18px; /* Set the font size */
+}
+
+.custom-tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
 
 ## 唐诗三百首 ｜ 五言古诗
 
@@ -19,18 +45,15 @@
 今朝郡斋冷，忽念山中客。
 涧底束荆薪，归来煮白石。
 欲持一瓢酒，远慰风雨夕。
-落叶满空山，何处寻行迹。">今朝</a>
-<a href="#" title="
+落叶满空山，何处寻行迹。">今朝</a><a href="#" title="
 客从东方来，衣上灞陵雨。
 问客何为来，采山因买斧。
 冥冥花正开，飏飏燕新乳。
-昨别今已春，鬓丝生几缕。">客从</a>来，
-<a href="#" title="
+昨别今已春，鬓丝生几缕。">客从</a>来，<a href="#" title="
 落帆逗淮镇，停舫临孤驿。
 浩浩风起波，冥冥日沉夕。
 人归山郭暗，雁下芦洲白。
-独夜忆秦关，听钟未眠客。">落帆</a>
-<a href="#" title="
+独夜忆秦关，听钟未眠客。">落帆</a><a href="#" title="
 吏舍跼终年，出郊旷清曙。
 杨柳散和风，青山澹吾虑。
 依丛适自憩，缘涧还复去。
@@ -57,8 +80,8 @@
 遗言冀可冥，缮性何由熟。
 道人庭宇静，苔色连深竹。
 日出雾露馀，青松如膏沐。
-澹然离言说，悟悦心自足。">汲井</a>思，<a href="#" title="
+澹然离言说，悟悦心自足。">汲井</a>思，<a href="#" class="custom-tooltip">久为<span class="tooltip-text">
 久为簪组累，幸此南夷谪。
 闲依农圃邻，偶似山林客。
 晓耕翻露草，夜榜响溪石。
-来往不逢人，长歌楚天碧。">久为</a>故乡期。
+来往不逢人，长歌楚天碧。</span></a>故乡期。
