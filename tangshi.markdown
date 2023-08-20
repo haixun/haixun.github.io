@@ -17,4 +17,4 @@
 [永日](https://so.gushiwen.cn/shiwenv_871dfe3a1377.aspx)[汲井](https://so.gushiwen.cn/shiwenv_8483f12e6ef6.aspx)思，[久为](https://so.gushiwen.cn/shiwenv_324652b6ac3d.aspx)<a href="#" title="久为簪组累，幸此南夷谪。
 闲依农圃邻，偶似山林客。
 晓耕翻露草，夜榜响溪石。
-来往不逢人，长歌楚天碧。">故乡</a>期。
+来往不逢人，长歌楚天碧。">久为</a>故乡期。
