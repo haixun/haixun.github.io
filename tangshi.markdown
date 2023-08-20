@@ -42,7 +42,41 @@
 
 [高卧](https://so.gushiwen.cn/shiwenv_c6f492aeb6d7.aspx)[绝顶](https://so.gushiwen.cn/shiwenv_23c91fa1d5eb.aspx)望，[幽意](https://so.gushiwen.cn/shiwenv_99260121fb8c.aspx)[清溪](https://so.gushiwen.cn/shiwenv_0b87829569c8.aspx)归。
 
-[塔势](https://so.gushiwen.cn/shiwenv_14f186d50948.aspx)[昔岁](https://so.gushiwen.cn/shiwenv_b0dc7d922c3d.aspx)立，[兵卫](https://so.gushiwen.cn/shiwenv_4d064982fa0e.aspx)[凄凄](https://so.gushiwen.cn/shiwenv_9a7569bbab39.aspx)吹。
+<a href="#" class="custom-tooltip">塔势<span class="tooltip-text">
+塔势如涌出，孤高耸天宫。
+登临出世界，磴道盘虚空。
+突兀压神州，峥嵘如鬼工。
+四角碍白日，七层摩苍穹。
+下窥指高鸟，俯听闻惊风。
+连山若波涛，奔走似朝东。
+青槐夹驰道，宫馆何玲珑。
+秋色从西来，苍然满关中。
+五陵北原上，万古青濛濛。
+净理了可悟，胜因夙所宗。
+誓将挂冠去，觉道资无穷。</span></a><a href="#" class="custom-tooltip">昔岁<span class="tooltip-text">
+昔岁逢太平，山林二十年。
+泉源在庭户，洞壑当门前。
+井税有常期，日晏犹得眠。
+忽然遭世变，数岁亲戎旃。
+今来典斯郡，山夷又纷然。
+城小贼不屠，人贫伤可怜。
+是以陷邻境，此州独见全。
+使臣将王命，岂不如贼焉？
+今彼征敛者，迫之如火煎。
+谁能绝人命，以作时世贤！
+思欲委符节，引竿自刺船。
+将家就鱼麦，归老江湖边。</span></a>立，<a href="#" class="custom-tooltip">兵卫<span class="tooltip-text">
+兵卫森画戟，宴寝凝清香。
+海上风雨至，逍遥池阁凉。
+烦疴近消散，嘉宾复满堂。
+自惭居处崇，未睹斯民康。
+理会是非遣，性达形迹忘。
+鲜肥属时禁，蔬果幸见尝。
+俯饮一杯酒，仰聆金玉章。
+神欢体自轻，意欲凌风翔。
+吴中盛文史，群彦今汪洋。
+方知大藩地，岂曰财赋疆。</span></a><a href="#" class="custom-tooltip">凄凄<span class="tooltip-text">
+</span></a>吹。
 
 <a href="#" class="custom-tooltip">今朝<span class="tooltip-text">
 今朝郡斋冷，忽念山中客。
@@ -56,7 +90,7 @@
 落帆逗淮镇，停舫临孤驿。
 浩浩风起波，冥冥日沉夕。
 人归山郭暗，雁下芦洲白。
-独夜忆秦关，听钟未眠客。</span></a>来，<a href="#" class="custom-tooltip">吏舍<span class="tooltip-text">
+独夜忆秦关，听钟未眠客。</span></a><a href="#" class="custom-tooltip">吏舍<span class="tooltip-text">
 吏舍跼终年，出郊旷清曙。
 杨柳散和风，青山澹吾虑。
 依丛适自憩，缘涧还复去。
