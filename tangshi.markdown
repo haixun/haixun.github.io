@@ -18,12 +18,13 @@
   margin-left: -60px; /* Center the tooltip */
   opacity: 0;
   transition: opacity 0.3s;
+  width: 200px;
   font-size: 18px; /* Set the font size */
 }
 
 .custom-tooltip:hover .tooltip-text {
   visibility: visible;
-  opacity: 1;
+  opacity: .8;
 }
 </style>
 ## 唐诗三百首 ｜ 五言古诗
