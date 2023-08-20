@@ -15,9 +15,14 @@
 
 [塔势](https://so.gushiwen.cn/shiwenv_14f186d50948.aspx)[昔岁](https://so.gushiwen.cn/shiwenv_b0dc7d922c3d.aspx)立，[兵卫](https://so.gushiwen.cn/shiwenv_4d064982fa0e.aspx)[凄凄](https://so.gushiwen.cn/shiwenv_9a7569bbab39.aspx)吹。
 
-[今朝](https://so.gushiwen.cn/shiwenv_bde0a1fcff27.aspx)[客从](https://so.gushiwen.cn/shiwenv_c40eeba65a3e.aspx)来，[落帆](https://so.gushiwen.cn/shiwenv_9a4af1036d85.aspx)[吏舍](https://so.gushiwen.cn/shiwenv_48b0176c1010.aspx)停。
+<a href="#" title="
+今朝郡斋冷，忽念山中客。
+涧底束荆薪，归来煮白石。
+欲持一瓢酒，远慰风雨夕。
+落叶满空山，何处寻行迹。">今朝</a>[客从](https://so.gushiwen.cn/shiwenv_c40eeba65a3e.aspx)来，[落帆](https://so.gushiwen.cn/shiwenv_9a4af1036d85.aspx)[吏舍](https://so.gushiwen.cn/shiwenv_48b0176c1010.aspx)停。
 
-<a href="#" title="永日方戚戚，出行复悠悠。
+<a href="#" title="
+永日方戚戚，出行复悠悠。
 女子今有行，大江溯轻舟。
 尔辈苦无恃，抚念益慈柔。
 幼为长所育，两别泣不休。
@@ -28,13 +33,15 @@
 孝恭遵妇道，容止顺其猷。
 别离在今晨，见尔当何秋。
 居闲始自遣，临感忽难收。
-归来视幼女，零泪缘缨流。">永日</a><a href="#" title="汲井漱寒齿，清心拂尘服。
+归来视幼女，零泪缘缨流。">永日</a><a href="#" title="
+汲井漱寒齿，清心拂尘服。
 闲持贝叶书，步出东斋读。
 真源了无取，妄迹世所逐。
 遗言冀可冥，缮性何由熟。
 道人庭宇静，苔色连深竹。
 日出雾露馀，青松如膏沐。
-澹然离言说，悟悦心自足。">汲井</a>思，<a href="#" title="久为簪组累，幸此南夷谪。
+澹然离言说，悟悦心自足。">汲井</a>思，<a href="#" title="
+久为簪组累，幸此南夷谪。
 闲依农圃邻，偶似山林客。
 晓耕翻露草，夜榜响溪石。
 来往不逢人，长歌楚天碧。">久为</a>故乡期。
