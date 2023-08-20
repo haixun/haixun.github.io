@@ -30,7 +30,32 @@
 
 ## 唐诗三百首 ｜ 五言古诗
 
-[孤鸿](https://so.gushiwen.cn/shiwenv_f4a35c0d146a.aspx)[江南](https://so.gushiwen.cn/shiwenv_02ba8d3eabab.aspx)飞，[暮从](https://so.gushiwen.cn/shiwenv_047024512325.aspx)[花间](https://so.gushiwen.cn/shiwenv_3185407c5519.aspx)归。
+<a href="#" class="custom-tooltip">孤鸿<span class="tooltip-text">
+孤鸿海上来，池潢不敢顾。
+侧见双翠鸟，巢在三珠树。
+矫矫珍木巅，得无金丸惧？
+美服患人指，高明逼神恶。
+今我游冥冥，弋者何所慕！</span></a><a href="#" class="custom-tooltip">江南<span class="tooltip-text">
+江南有丹橘，经冬犹绿林。
+岂伊地气暖？自有岁寒心。
+可以荐嘉客，奈何阻重深。
+运命惟所遇，循环不可寻。
+徒言树桃李，此木岂无阴？</span></a>飞，<a href="#" class="custom-tooltip">暮从<span class="tooltip-text">
+暮从碧山下，山月随人归。
+却顾所来径，苍苍横翠微。
+相携及田家，童稚开荆扉。
+绿竹入幽径，青萝拂行衣。
+欢言得所憩，美酒聊共挥。
+长歌吟松风，曲尽河星稀。
+我醉君复乐，陶然共忘机。</span></a><a href="#" class="custom-tooltip">花间<span class="tooltip-text">
+花间一壶酒，独酌无相亲。
+举杯邀明月，对影成三人。
+月既不解饮，影徒随我身。
+暂伴月将影，行乐须及春。
+我歌月徘徊，我舞影零乱。
+醒时同交欢，醉后各分散。
+永结无情游，相期邈云汉。
+</span></a>归。
 
 [兰叶](https://so.gushiwen.cn/shiwenv_d5419292d268.aspx)[幽人](https://so.gushiwen.cn/shiwenv_5e265e29083e.aspx)倚，[燕草](https://so.gushiwen.cn/shiwenv_727c47ecf120.aspx)[岱宗](https://so.gushiwen.cn/shiwenv_efec283b31e0.aspx)随。
 
