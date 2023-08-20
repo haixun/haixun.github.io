@@ -32,15 +32,15 @@
 
 [孤鸿](https://so.gushiwen.cn/shiwenv_f4a35c0d146a.aspx)[江南](https://so.gushiwen.cn/shiwenv_02ba8d3eabab.aspx)飞，[暮从](https://so.gushiwen.cn/shiwenv_047024512325.aspx)[花间](https://so.gushiwen.cn/shiwenv_3185407c5519.aspx)归。
 
-[兰叶](https://so.gushiwen.cn/shiwenv_d5419292d268.aspx)[幽人](https://so.gushiwen.cn/shiwenv_5e265e29083e.aspx)折，[燕草](https://so.gushiwen.cn/shiwenv_727c47ecf120.aspx)[岱宗](https://so.gushiwen.cn/shiwenv_efec283b31e0.aspx)倚。
+[兰叶](https://so.gushiwen.cn/shiwenv_d5419292d268.aspx)[幽人](https://so.gushiwen.cn/shiwenv_5e265e29083e.aspx)倚，[燕草](https://so.gushiwen.cn/shiwenv_727c47ecf120.aspx)[岱宗](https://so.gushiwen.cn/shiwenv_efec283b31e0.aspx)随。
 
-[人生](https://so.gushiwen.cn/shiwenv_9670cc44eef4.aspx)[绝代](https://so.gushiwen.cn/shiwenv_33daedbc42a1.aspx)梦，[死别](https://so.gushiwen.cn/shiwenv_46c874845670.aspx)[浮云](https://so.gushiwen.cn/shiwenv_12c487f7a589.aspx)随。
+[人生](https://so.gushiwen.cn/shiwenv_9670cc44eef4.aspx)[绝代](https://so.gushiwen.cn/shiwenv_33daedbc42a1.aspx)梦，[死别](https://so.gushiwen.cn/shiwenv_46c874845670.aspx)[浮云](https://so.gushiwen.cn/shiwenv_12c487f7a589.aspx)期。
 
-[下马](https://so.gushiwen.cn/shiwenv_dc090c40cab3.aspx)[圣代](https://so.gushiwen.cn/shiwenv_dfa0d65184ac.aspx)游，[言入](https://so.gushiwen.cn/shiwenv_3ca53d3dfb52.aspx)[斜光](https://so.gushiwen.cn/shiwenv_8813f91342c8.aspx)里。
+[下马](https://so.gushiwen.cn/shiwenv_dc090c40cab3.aspx)[圣代](https://so.gushiwen.cn/shiwenv_dfa0d65184ac.aspx)游，[言入](https://so.gushiwen.cn/shiwenv_3ca53d3dfb52.aspx)[斜光](https://so.gushiwen.cn/shiwenv_8813f91342c8.aspx)舞。
 
 [艳色](https://so.gushiwen.cn/shiwenv_f73dd1f66af4.aspx)[北山](https://so.gushiwen.cn/shiwenv_59375fc2edd7.aspx)映，[山光](https://so.gushiwen.cn/shiwenv_9306064f2630.aspx)[夕阳](https://so.gushiwen.cn/shiwenv_2c7594304bb9.aspx)辉。
 
-[高卧](https://so.gushiwen.cn/shiwenv_c6f492aeb6d7.aspx)[绝顶](https://so.gushiwen.cn/shiwenv_23c91fa1d5eb.aspx)望，[幽意](https://so.gushiwen.cn/shiwenv_99260121fb8c.aspx)[清溪](https://so.gushiwen.cn/shiwenv_0b87829569c8.aspx)归。
+[高卧](https://so.gushiwen.cn/shiwenv_c6f492aeb6d7.aspx)[绝顶](https://so.gushiwen.cn/shiwenv_23c91fa1d5eb.aspx)望，[幽意](https://so.gushiwen.cn/shiwenv_99260121fb8c.aspx)[清溪](https://so.gushiwen.cn/shiwenv_0b87829569c8.aspx)隐。
 
 <a href="#" class="custom-tooltip">塔势<span class="tooltip-text">
 塔势如涌出，孤高耸天宫。
@@ -80,7 +80,7 @@
 归棹洛阳人，残钟广陵树。
 今朝此为别，何处还相遇。
 世事波上舟，沿洄安得住。
-</span></a>停。
+</span></a>息。
 
 
 <a href="#" class="custom-tooltip">今朝<span class="tooltip-text">
