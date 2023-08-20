@@ -44,25 +44,25 @@
 
 [塔势](https://so.gushiwen.cn/shiwenv_14f186d50948.aspx)[昔岁](https://so.gushiwen.cn/shiwenv_b0dc7d922c3d.aspx)立，[兵卫](https://so.gushiwen.cn/shiwenv_4d064982fa0e.aspx)[凄凄](https://so.gushiwen.cn/shiwenv_9a7569bbab39.aspx)吹。
 
-<a href="#" title="
+<a href="#" class="custom-tooltip">今朝<span class="tooltip-text">
 今朝郡斋冷，忽念山中客。
 涧底束荆薪，归来煮白石。
 欲持一瓢酒，远慰风雨夕。
-落叶满空山，何处寻行迹。">今朝</a><a href="#" title="
+落叶满空山，何处寻行迹。</span></a><a href="#" class="custom-tooltip">客从<span class="tooltip-text">
 客从东方来，衣上灞陵雨。
 问客何为来，采山因买斧。
 冥冥花正开，飏飏燕新乳。
-昨别今已春，鬓丝生几缕。">客从</a>来，<a href="#" title="
+昨别今已春，鬓丝生几缕。</span></a>来，<a href="#" class="custom-tooltip">落帆<span class="tooltip-text">
 落帆逗淮镇，停舫临孤驿。
 浩浩风起波，冥冥日沉夕。
 人归山郭暗，雁下芦洲白。
-独夜忆秦关，听钟未眠客。">落帆</a><a href="#" title="
+独夜忆秦关，听钟未眠客。</span></a>来，<a href="#" class="custom-tooltip">吏舍<span class="tooltip-text">
 吏舍跼终年，出郊旷清曙。
 杨柳散和风，青山澹吾虑。
 依丛适自憩，缘涧还复去。
 微雨霭芳原，春鸠鸣何处。
 乐幽心屡止，遵事迹犹遽。
-终罢斯结庐，慕陶直可庶。">吏舍</a>停。
+终罢斯结庐，慕陶直可庶。</span></a>停。
 
 <a href="#" class="custom-tooltip">永日<span class="tooltip-text">
 永日方戚戚，出行复悠悠。
