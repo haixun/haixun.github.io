@@ -38,15 +38,16 @@ data-driven semantic networks to enable text understanding.
 * **Best Student Paper Runner-Up Award**, *Inverse Time Dependency in Convex Regularized Learning*, in the 9th International Conference on Data Mining (ICDM), 2009 
 * **Best Paper Award**, *Modeling and Querying E-Commerce Data in Hybrid Relational-XML DBMSs*, in the 27th International Conference on Conceptual Modeling (ER), 2008
 
+### Medium Articles
+* [Supercharging ML/AI Foundations at Instacart](https://medium.com/p/d48214a2b511)
+* [The Data Science Behind the Man Who Solved the Market](https://medium.com/swlh/the-data-science-behind-the-man-who-solved-the-market-1398ed6ed35e)
+* [The coming disruption to e-commerce search](https://medium.com/gobeyond-ai/the-coming-disruption-in-e-commerce-search-3ffa0eb9a5d9)
+* [An Annotated Reading List of Conversational AI](https://medium.com/gobeyond-ai/a-reading-list-and-mini-survey-of-conversational-ai-32fceea97180)
+* [Getting NLP Ready for Business](https://medium.com/gobeyond-ai/getting-nlp-ready-for-business-4cc96d81c933)
 
 ### Other links
 
 * [LinkedIn](https://www.linkedin.com/in/haixun/), [Google Scholar](https://scholar.google.com/citations?user=Q1mcglAAAAAJ&hl=en), [DBLP](https://dblp.org/pers/hd/w/Wang:Haixun)
-* Articles published on medium.com:
-    - [The Data Science Behind the Man Who Solved the Market](https://medium.com/swlh/the-data-science-behind-the-man-who-solved-the-market-1398ed6ed35e)
-    - [The coming disruption to e-commerce search](https://medium.com/gobeyond-ai/the-coming-disruption-in-e-commerce-search-3ffa0eb9a5d9)
-    - [An Annotated Reading List of Conversational AI](https://medium.com/gobeyond-ai/a-reading-list-and-mini-survey-of-conversational-ai-32fceea97180)
-    - [Getting NLP Ready for Business](https://medium.com/gobeyond-ai/getting-nlp-ready-for-business-4cc96d81c933)
 * [My blog](http://haixunwang.spaces.live.com) (really old)
 * Projects I initiated and led at Microsoft  Research
     - [Probase](probase.html) (a data driven semantic network for text understanding)
