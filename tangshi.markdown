@@ -57,15 +57,153 @@
 永结无情游，相期邈云汉。
 </span></a>归。
 
-[兰叶](https://so.gushiwen.cn/shiwenv_d5419292d268.aspx)[幽人](https://so.gushiwen.cn/shiwenv_5e265e29083e.aspx)倚，[燕草](https://so.gushiwen.cn/shiwenv_727c47ecf120.aspx)[岱宗](https://so.gushiwen.cn/shiwenv_efec283b31e0.aspx)随。
+<a href="#" class="custom-tooltip">兰叶<span class="tooltip-text">
+兰叶春葳蕤，桂华秋皎洁。
+欣欣此生意，自尔为佳节。
+谁知林栖者，闻风坐相悦。
+草木有本心，何求美人折！</span></a><a href="#" class="custom-tooltip">幽人<span class="tooltip-text">
+幽人归独卧，滞虑洗孤清。
+持此谢高鸟，因之传远情。
+日夕怀空意，人谁感至精？
+飞沉理自隔，何所慰吾诚？
+</span></a>倚，</span></a><a href="#" class="custom-tooltip">燕草<span class="tooltip-text">
+燕草如碧丝，秦桑低绿枝。
+当君怀归日，是妾断肠时。
+春风不相识，何事入罗帏。
+</span></a><a href="#" class="custom-tooltip">岱宗<span class="tooltip-text">
+岱宗夫如何？齐鲁青未了。
+造化钟神秀，阴阳割昏晓。
+荡胸生曾云，决眦入归鸟。
+会当凌绝顶，一览众山小。
+</span></a>随。
 
-[人生](https://so.gushiwen.cn/shiwenv_9670cc44eef4.aspx)[绝代](https://so.gushiwen.cn/shiwenv_33daedbc42a1.aspx)梦，[死别](https://so.gushiwen.cn/shiwenv_46c874845670.aspx)[浮云](https://so.gushiwen.cn/shiwenv_12c487f7a589.aspx)期。
+<a href="#" class="custom-tooltip">人生<span class="tooltip-text">
+人生不相见，动如参与商。
+今夕复何夕，共此灯烛光。
+少壮能几时，鬓发各已苍。
+访旧半为鬼，惊呼热中肠。
+焉知二十载，重上君子堂。
+昔别君未婚，儿女忽成行。
+怡然敬父执，问我来何方。
+问答未及已，驱儿罗酒浆。
+夜雨剪春韭，新炊间黄粱。
+主称会面难，一举累十觞。
+十觞亦不醉，感子故意长。
+明日隔山岳，世事两茫茫。</span></a><a href="#" class="custom-tooltip">绝代<span class="tooltip-text">
+绝代有佳人，幽居在空谷。
+自云良家子，零落依草木。
+关中昔丧乱，兄弟遭杀戮。
+官高何足论，不得收骨肉。
+世情恶衰歇，万事随转烛。
+夫婿轻薄儿，新人美如玉。
+合昏尚知时，鸳鸯不独宿。
+但见新人笑，那闻旧人哭。
+在山泉水清，出山泉水浊。
+侍婢卖珠回，牵萝补茅屋。
+摘花不插发，采柏动盈掬。
+天寒翠袖薄，日暮倚修竹。
+</span></a>梦，</span></a><a href="#" class="custom-tooltip">死别<span class="tooltip-text">
+死别已吞声，生别常恻恻。
+江南瘴疠地，逐客无消息。
+故人入我梦，明我长相忆。
+君今在罗网，何以有羽翼？
+恐非平生魂，路远不可测。
+魂来枫林青，魂返关塞黑。
+落月满屋梁，犹疑照颜色。
+水深波浪阔，无使蛟龙得。
+</span></a><a href="#" class="custom-tooltip">浮云<span class="tooltip-text">
+浮云终日行，游子久不至。
+三夜频梦君，情亲见君意。
+告归常局促，苦道来不易。
+江湖多风波，舟楫恐失坠。
+出门搔白首，若负平生志。
+冠盖满京华，斯人独憔悴。
+孰云网恢恢，将老身反累。
+千秋万岁名，寂寞身后事。
+</span></a>期。
 
-[下马](https://so.gushiwen.cn/shiwenv_dc090c40cab3.aspx)[圣代](https://so.gushiwen.cn/shiwenv_dfa0d65184ac.aspx)游，[言入](https://so.gushiwen.cn/shiwenv_3ca53d3dfb52.aspx)[斜光](https://so.gushiwen.cn/shiwenv_8813f91342c8.aspx)舞。
+<a href="#" class="custom-tooltip">下马<span class="tooltip-text">
+下马饮君酒，问君何所之？
+君言不得意，归卧南山陲。
+但去莫复问，白云无尽时。
+</span></a><a href="#" class="custom-tooltip">圣代<span class="tooltip-text">
+圣代无隐者，英灵尽来归。
+遂令东山客，不得顾采薇。
+既至金门远，孰云吾道非。
+江淮度寒食，京洛缝春衣。
+置酒长安道，同心与我违。
+行当浮桂棹，未几拂荆扉。
+远树带行客，孤村当落晖。
+吾谋适不用，勿谓知音稀。
+</span></a>游，<a href="#" class="custom-tooltip">言入<span class="tooltip-text">
+言入黄花川，每逐青溪水。
+随山将万转，趣途无百里。
+声喧乱石中，色静深松里。
+漾漾泛菱荇，澄澄映葭苇。
+我心素已闲，清川澹如此。
+请留磐石上，垂钓将已矣。</span></a><a href="#" class="custom-tooltip">斜光<span class="tooltip-text">
+斜光照墟落，穷巷牛羊归。
+野老念牧童，倚杖候荆扉。
+雉雊麦苗秀，蚕眠桑叶稀。
+田夫荷锄立，相见语依依。
+即此羡闲逸，怅然吟式微。
+</span></a>舞。
 
-[艳色](https://so.gushiwen.cn/shiwenv_f73dd1f66af4.aspx)[北山](https://so.gushiwen.cn/shiwenv_59375fc2edd7.aspx)映，[山光](https://so.gushiwen.cn/shiwenv_9306064f2630.aspx)[夕阳](https://so.gushiwen.cn/shiwenv_2c7594304bb9.aspx)辉。
+<a href="#" class="custom-tooltip">艳色<span class="tooltip-text">
+艳色天下重，西施宁久微。
+朝为越溪女，暮作吴宫妃。
+贱日岂殊众，贵来方悟稀。
+邀人傅脂粉，不自著罗衣。
+君宠益娇态，君怜无是非。
+当时浣纱伴，莫得同车归。
+持谢邻家子，效颦安可希。
+</span></a><a href="#" class="custom-tooltip">北山<span class="tooltip-text">
+北山白云里，隐者自怡悦。
+相望试登高，心随雁飞灭。
+愁因薄暮起，兴是清秋发。
+时见归村人，沙行渡头歇。
+天边树若荠，江畔洲如月。
+何当载酒来，共醉重阳节。
+</span></a>映，<a href="#" class="custom-tooltip">山光<span class="tooltip-text">
+山光忽西落，池月渐东上。
+散发乘夕凉，开轩卧闲敞。
+荷风送香气，竹露滴清响。
+欲取鸣琴弹，恨无知音赏。
+感此怀故人，终宵劳梦想。
+</span></a><a href="#" class="custom-tooltip">夕阳<span class="tooltip-text">
+夕阳度西岭，群壑倏已暝。
+松月生夜凉，风泉满清听。
+樵人归欲尽，烟鸟栖初定。
+之子期宿来，孤琴候萝径。
+</span></a>辉。
 
-[高卧](https://so.gushiwen.cn/shiwenv_c6f492aeb6d7.aspx)[绝顶](https://so.gushiwen.cn/shiwenv_23c91fa1d5eb.aspx)望，[幽意](https://so.gushiwen.cn/shiwenv_99260121fb8c.aspx)[清溪](https://so.gushiwen.cn/shiwenv_0b87829569c8.aspx)隐。
+<a href="#" class="custom-tooltip">高卧<span class="tooltip-text">
+高卧南斋时，开帷月初吐。
+清辉澹水木，演漾在窗户。
+荏苒几盈虚，澄澄变今古。
+美人清江畔，是夜越吟苦。
+千里共如何，微风吹兰杜。
+</span></a><a href="#" class="custom-tooltip">绝顶<span class="tooltip-text">
+绝顶一茅茨，直上三十里。
+扣关无僮仆，窥室唯案几。
+若非巾柴车，应是钓秋水。
+差池不相见，黾勉空仰止。
+草色新雨中，松声晚窗里。
+及兹契幽绝，自足荡心耳。
+虽无宾主意，颇得清净理。
+兴尽方下山，何必待之子。
+</span></a>望，<a href="#" class="custom-tooltip">幽意<span class="tooltip-text">
+幽意无断绝，此去随所偶。
+晚风吹行舟，花路入溪口。
+际夜转西壑，隔山望南斗。
+潭烟飞溶溶，林月低向后。
+生事且弥漫，愿为持竿叟。
+</span></a><a href="#" class="custom-tooltip">清溪<span class="tooltip-text">
+清溪深不测，隐处唯孤云。
+松际露微月，清光犹为君。
+茅亭宿花影，药院滋苔纹。
+余亦谢时去，西山鸾鹤群。
+</span></a>隐。
 
 <a href="#" class="custom-tooltip">塔势<span class="tooltip-text">
 塔势如涌出，孤高耸天宫。
