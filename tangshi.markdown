@@ -1,3 +1,6 @@
+
+## 唐诗三百首 ｜ 五言古诗
+
 [孤鸿](https://so.gushiwen.cn/shiwenv_f4a35c0d146a.aspx)[江南](https://so.gushiwen.cn/shiwenv_02ba8d3eabab.aspx)飞，[暮从](https://so.gushiwen.cn/shiwenv_047024512325.aspx)[花间](https://so.gushiwen.cn/shiwenv_3185407c5519.aspx)归。
 
 [兰叶](https://so.gushiwen.cn/shiwenv_d5419292d268.aspx)[幽人](https://so.gushiwen.cn/shiwenv_5e265e29083e.aspx)折，[燕草](https://so.gushiwen.cn/shiwenv_727c47ecf120.aspx)[岱宗](https://so.gushiwen.cn/shiwenv_efec283b31e0.aspx)倚。
@@ -14,7 +17,18 @@
 
 [今朝](https://so.gushiwen.cn/shiwenv_bde0a1fcff27.aspx)[客从](https://so.gushiwen.cn/shiwenv_c40eeba65a3e.aspx)来，[落帆](https://so.gushiwen.cn/shiwenv_9a4af1036d85.aspx)[吏舍](https://so.gushiwen.cn/shiwenv_48b0176c1010.aspx)停。
 
-[永日](https://so.gushiwen.cn/shiwenv_871dfe3a1377.aspx)<a href="#" title="汲井漱寒齿，清心拂尘服。
+<a href="#" title="永日方戚戚，出行复悠悠。
+女子今有行，大江溯轻舟。
+尔辈苦无恃，抚念益慈柔。
+幼为长所育，两别泣不休。
+对此结中肠，义往难复留。
+自小阙内训，事姑贻我忧。
+赖兹托令门，任恤庶无尤。
+贫俭诚所尚，资从岂待周。
+孝恭遵妇道，容止顺其猷。
+别离在今晨，见尔当何秋。
+居闲始自遣，临感忽难收。
+归来视幼女，零泪缘缨流。">永日</a><a href="#" title="汲井漱寒齿，清心拂尘服。
 闲持贝叶书，步出东斋读。
 真源了无取，妄迹世所逐。
 遗言冀可冥，缮性何由熟。
