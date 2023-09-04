@@ -12,6 +12,6 @@ with open('readinglist.markdown', 'w') as publicReadingList, open('myreadinglist
         personalReadingList.write(f"### Week of {week}\n\n")
         for article in articles:
             publicReadingList.write(f"* [{article['title']}]({article['url']}), {article['source']}\n")
-            personalReadingList.write(f"* [{article['title']}]({article['url']}), [Local]({article['local']}), {article['source']}\n")
+            personalReadingList.write(f"* [{article['title']}]({article['url']})([local]({article['local']})), {article['source']}\n")
         publicReadingList.write(f"\n")
         personalReadingList.write(f"\n")
