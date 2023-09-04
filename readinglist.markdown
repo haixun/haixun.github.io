@@ -1,4 +1,4 @@
-## Reading List
+# Reading List
 
 ### Week of Sept 3
 
