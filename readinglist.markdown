@@ -1,4 +1,6 @@
-## Week of Sept 3
+## Reading List
+
+### Week of Sept 3
 
 * [The Transformative, Alarming Power of Gene Editing](https://www.newyorker.com/magazine/2023/09/11/the-transformative-alarming-power-of-gene-editing), The New Yorker
 
@@ -12,7 +14,7 @@
 
 * [Can We Talk to Whales](https://www.newyorker.com/magazine/2023/09/11/can-we-talk-to-whales), The New Yorker
 
-## Week of Aug 27
+### Week of Aug 27
 
 * [Generative AI: Is this the End of Human Creativity?](https://www.rs-online.com/designspark/generative-ai-is-this-the-end-of-human-creativity), DesignSpark
 
