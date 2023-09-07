@@ -2,6 +2,7 @@
 
 ### Week of Sept 3, 2022
 
+* [What OpenAI Really Wants](https://www.wired.com/story/what-openai-really-wants/) [[local](https://www.dropbox.com/scl/fi/bp57rbgdjcxgpcdefni7c/Essay-What-OpenAI-Really-Wants.pdf?rlkey=az1twnhc5gcwkdxp0ew4lnnrv&dl=0)], Wired
 * [THE NOVEL THAT HELPED ME UNDERSTAND AMERICAN CULTURE](https://www.theatlantic.com/books/archive/2023/09/the-bell-jar-anniversary-americana/675079/?utm_campaign=the-atlantic&utm_content=true-anthem&utm_medium=social&utm_source=linkedin) [[local](https://www.dropbox.com/scl/fi/ben2pf2nw2jg1ia3be6oi/Essay-THE-NOVEL-THAT-HELPED-ME-UNDERSTAND-AMERICAN-CULTURE.pdf?rlkey=jsm7lbhbwz6p1xw8xjddggagq&dl=0)], The Atlantic
 * [Language agents: a critical evolutionary step of artificial intelligence](https://yusu.substack.com/p/language-agents) [[local](https://www.dropbox.com/scl/fi/u2l2krzvrbuskl6ywgy1x/Essay-Language-agents_-a-critical-evolutionary-step-of-artificial-intelligence.pdf?rlkey=qw8q7rqmn9wkz6x1q2c4uhbb4&dl=0)], Substback
 * [Large language models aren’t people. Let’s stop testing them as if they were.](https://www.technologyreview.com/2023/08/30/1078670/large-language-models-arent-people-lets-stop-testing-them-like-they-were/) [[local](https://www.dropbox.com/scl/fi/r5wsuqmgl6azbe26ot0cb/Large-language-models-aren-t-people.-Let-s-stop-testing-them-as-if-they-were.-_-MIT-Technology-Review.pdf?rlkey=81szdoyl5iqv1hw6mqm4s7krz&dl=0)], MIT Technology Review

@@ -2,6 +2,7 @@
 
 ### Week of Sept 3, 2022
 
+* [What OpenAI Really Wants](https://www.wired.com/story/what-openai-really-wants/), Wired
 * [THE NOVEL THAT HELPED ME UNDERSTAND AMERICAN CULTURE](https://www.theatlantic.com/books/archive/2023/09/the-bell-jar-anniversary-americana/675079/?utm_campaign=the-atlantic&utm_content=true-anthem&utm_medium=social&utm_source=linkedin), The Atlantic
 * [Language agents: a critical evolutionary step of artificial intelligence](https://yusu.substack.com/p/language-agents), Substback
 * [Large language models aren’t people. Let’s stop testing them as if they were.](https://www.technologyreview.com/2023/08/30/1078670/large-language-models-arent-people-lets-stop-testing-them-like-they-were/), MIT Technology Review
