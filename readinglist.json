@@ -1,6 +1,12 @@
 {
     "Sept 10, 2022": [
 	{
+	    "title": "Large Language Models as Optimiers",
+	    "url": "https://arxiv.org/abs/2309.03409",
+	    "source": "arXiv",
+	    "local": "https://www.dropbox.com/scl/fi/wr145y65truqwb8zqoz7h/Paper-Large-Language-Models-as-Optimiers.pdf?rlkey=qgrngv6tif7eqmrxknubg9gos&dl=0"
+	},
+	{
 	    "title": "AI Prompt Engineering Isn’t the Future",
 	    "url": "https://hbr.org/2023/06/ai-prompt-engineering-isnt-the-future",
 	    "source": "Havard Business Review",
