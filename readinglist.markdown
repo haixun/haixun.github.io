@@ -1,5 +1,10 @@
 # Reading List
 
+### Week of Sept 10, 2022
+
+* [AI Prompt Engineering Isn’t the Future](https://hbr.org/2023/06/ai-prompt-engineering-isnt-the-future), Havard Business Review
+* [Will Your Uploaded Mind Still Be You](https://www.wsj.com/articles/will-your-uploaded-mind-still-be-you-11568386410), WSJ
+
 ### Week of Sept 3, 2022
 
 * [What OpenAI Really Wants](https://www.wired.com/story/what-openai-really-wants/), Wired
