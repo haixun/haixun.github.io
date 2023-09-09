@@ -5,6 +5,8 @@
 * [Large Language Models as Optimiers](https://arxiv.org/abs/2309.03409) [[local](https://www.dropbox.com/scl/fi/wr145y65truqwb8zqoz7h/Paper-Large-Language-Models-as-Optimiers.pdf?rlkey=qgrngv6tif7eqmrxknubg9gos&dl=0)], arXiv
 * [AI Prompt Engineering Isn’t the Future](https://hbr.org/2023/06/ai-prompt-engineering-isnt-the-future) [[local](https://www.dropbox.com/scl/fi/fliuyu90rqq8skachn4tc/Essay-AI-Prompt-Engineering-Isn-t-the-Future.pdf?rlkey=veu6qwjvl4k9ds5rcol6nja40&dl=0)], Havard Business Review
 * [Will Your Uploaded Mind Still Be You](https://www.wsj.com/articles/will-your-uploaded-mind-still-be-you-11568386410) [[local](https://www.dropbox.com/scl/fi/tpv0q4kwy4ot9bzgvidjt/Will-Your-Uploaded-Mind-Still-Be-You-WSJ.pdf?rlkey=tf0g7w8ejzmrok8ookr5i3q2a&dl=0)], WSJ
+* [ChatGPT Killed the Old AI. Now Everyone Is Rushing to Build a New One](https://thealgorithmicbridge.substack.com/p/chatgpt-killed-the-old-ai-now-everyone) [[local](https://www.dropbox.com/scl/fi/74yshfsyzqsoe7itb5udu/Essay-ChatGPT-Killed-the-Old-AI.-Now-Everyone-Is-Rushing-to-Build-a-New-One.pdf?rlkey=x2vehctobdmp1d2jub1ben5f5&dl=0)], The Algorithmic Bridge
+* [AI Companies Have Exhausted Human-Made Data. They're Now Using AI to Make More](https://thealgorithmicbridge.substack.com/p/ai-companies-have-exhausted-human?utm_source=profile&utm_medium=reader2) [[local](https://www.dropbox.com/scl/fi/74yshfsyzqsoe7itb5udu/Essay-ChatGPT-Killed-the-Old-AI.-Now-Everyone-Is-Rushing-to-Build-a-New-One.pdf?rlkey=x2vehctobdmp1d2jub1ben5f5&dl=0)], The Algorithmic Bridge
 
 ### Week of Sept 3, 2022
 

@@ -5,6 +5,8 @@
 * [Large Language Models as Optimiers](https://arxiv.org/abs/2309.03409), arXiv
 * [AI Prompt Engineering Isn’t the Future](https://hbr.org/2023/06/ai-prompt-engineering-isnt-the-future), Havard Business Review
 * [Will Your Uploaded Mind Still Be You](https://www.wsj.com/articles/will-your-uploaded-mind-still-be-you-11568386410), WSJ
+* [ChatGPT Killed the Old AI. Now Everyone Is Rushing to Build a New One](https://thealgorithmicbridge.substack.com/p/chatgpt-killed-the-old-ai-now-everyone), The Algorithmic Bridge
+* [AI Companies Have Exhausted Human-Made Data. They're Now Using AI to Make More](https://thealgorithmicbridge.substack.com/p/ai-companies-have-exhausted-human?utm_source=profile&utm_medium=reader2), The Algorithmic Bridge
 
 ### Week of Sept 3, 2022
 
