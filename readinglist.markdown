@@ -2,6 +2,7 @@
 
 ### Week of Sept 10, 2022
 
+* [Will ChatGPT supplant us as writers, thinkers?](https://news.harvard.edu/gazette/story/2023/02/will-chatgpt-replace-human-writers-pinker-weighs-in), The Harvard Gazette
 * [Large Language Models as Optimiers](https://arxiv.org/abs/2309.03409), arXiv
 * [AI Prompt Engineering Isn’t the Future](https://hbr.org/2023/06/ai-prompt-engineering-isnt-the-future), Havard Business Review
 * [Will Your Uploaded Mind Still Be You](https://www.wsj.com/articles/will-your-uploaded-mind-still-be-you-11568386410), WSJ
