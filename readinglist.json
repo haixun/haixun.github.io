@@ -1,13 +1,25 @@
 {
     "Sept 10, 2022": [
 	{
+	    "title":"A new frontier in artificial intelligence: Implications of Generative AI for businesses",
+	    "url":"https://www2.deloitte.com/content/dam/Deloitte/us/Documents/deloitte-analytics/us-ai-institute-generative-artificial-intelligence.pdf",
+	    "source":"Deloitte AI Institute",
+	    "local":"https://www.dropbox.com/scl/fi/svibui3pne9vq6bslleei/Report-A-new-frontier-in-artificial-intelligence.pdf?rlkey=vc2h4rcnq3biqsgt1gd7ls8g3&dl=0"
+	},
+	{
+	    "title":"The economic potential of generative AI",
+	    "url":"https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier#introduction",
+	    "source":"McKinsey",
+	    "local":"https://www.dropbox.com/scl/fi/3shk29esqarouu6e9gxcr/The-economic-potential-of-generative-AI.pdf?rlkey=h22d3itptn34mw1kvkwvavcst&dl=0"
+	},
+	{
 	    "title":"Will ChatGPT supplant us as writers, thinkers?",
 	    "url":"https://news.harvard.edu/gazette/story/2023/02/will-chatgpt-replace-human-writers-pinker-weighs-in",
 	    "source":"The Harvard Gazette",
 	    "local":"https://www.dropbox.com/scl/fi/6en78qfsq19fragu4jxzx/Essay-Will-ChatGPT-replace-human-writers-Steven-Pinker.pdf?rlkey=67eskrre7bs7n68xbqnv9jpx0&dl=0"
 	},
 	{
-	    "title": "Large Language Models as Optimiers",
+	    "title": "Large Language Models as Optimizers",
 	    "url": "https://arxiv.org/abs/2309.03409",
 	    "source": "arXiv",
 	    "local": "https://www.dropbox.com/scl/fi/wr145y65truqwb8zqoz7h/Paper-Large-Language-Models-as-Optimiers.pdf?rlkey=qgrngv6tif7eqmrxknubg9gos&dl=0"

@@ -2,8 +2,10 @@
 
 ### Week of Sept 10, 2022
 
+* [A new frontier in artificial intelligence: Implications of Generative AI for businesses](https://www2.deloitte.com/content/dam/Deloitte/us/Documents/deloitte-analytics/us-ai-institute-generative-artificial-intelligence.pdf), Deloitte AI Institute
+* [The economic potential of generative AI](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier#introduction), McKinsey
 * [Will ChatGPT supplant us as writers, thinkers?](https://news.harvard.edu/gazette/story/2023/02/will-chatgpt-replace-human-writers-pinker-weighs-in), The Harvard Gazette
-* [Large Language Models as Optimiers](https://arxiv.org/abs/2309.03409), arXiv
+* [Large Language Models as Optimizers](https://arxiv.org/abs/2309.03409), arXiv
 * [AI Prompt Engineering Isn’t the Future](https://hbr.org/2023/06/ai-prompt-engineering-isnt-the-future), Havard Business Review
 * [Will Your Uploaded Mind Still Be You](https://www.wsj.com/articles/will-your-uploaded-mind-still-be-you-11568386410), WSJ
 * [ChatGPT Killed the Old AI. Now Everyone Is Rushing to Build a New One](https://thealgorithmicbridge.substack.com/p/chatgpt-killed-the-old-ai-now-everyone), The Algorithmic Bridge
