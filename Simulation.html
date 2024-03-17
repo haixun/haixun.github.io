@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html><head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="Content-Security-Policy" content="script-src 'none'; media-src 'none'">
+		<title>Zotero Report</title>
+		<link rel="stylesheet" type="text/css" href="data:text/css;base64,Ym9keSB7CgliYWNrZ3JvdW5kOiB3aGl0ZTsKfQoKYSB7Cgl0ZXh0LWRlY29yYXRpb246IHVuZGVybGluZTsKfQoKYm9keSB7CglwYWRkaW5nOiAwOwp9Cgp1bC5yZXBvcnQgbGkuaXRlbSB7Cglib3JkZXItdG9wOiA0cHggc29saWQgIzU1NTsKCXBhZGRpbmctdG9wOiAxZW07CglwYWRkaW5nLWxlZnQ6IDFlbTsKCXBhZGRpbmctcmlnaHQ6IDFlbTsKCW1hcmdpbi1ib3R0b206IDJlbTsKfQoKaDEsIGgyLCBoMywgaDQsIGg1LCBoNiB7Cglmb250LXdlaWdodDogbm9ybWFsOwp9CgpoMiB7CgltYXJnaW46IDAgMCAuNWVtOwp9CgpoMi5wYXJlbnRJdGVtIHsKCWZvbnQtd2VpZ2h0OiBib2xkOwoJZm9udC1zaXplOiAxZW07CglwYWRkaW5nOiAwIDAgLjVlbTsKCWJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjY2NjOwp9CgovKiBJZiBjb21iaW5pbmcgY2hpbGRyZW4sIGRpc3BsYXkgcGFyZW50IHNsaWdodGx5IGxhcmdlciAqLwp1bC5yZXBvcnQuY29tYmluZUNoaWxkSXRlbXMgaDIucGFyZW50SXRlbSB7Cglmb250LXNpemU6IDEuMWVtOwoJcGFkZGluZy1ib3R0b206IC43NWVtOwoJbWFyZ2luLWJvdHRvbTogLjRlbTsKfQoKaDIucGFyZW50SXRlbSAudGl0bGUgewoJZm9udC13ZWlnaHQ6IG5vcm1hbDsKfQoKaDMgewoJbWFyZ2luLWJvdHRvbTogLjZlbTsKCWZvbnQtd2VpZ2h0OiBib2xkICFpbXBvcnRhbnQ7Cglmb250LXNpemU6IDFlbTsKCWRpc3BsYXk6IGJsb2NrOwp9CgovKiBNZXRhZGF0YSB0YWJsZSAqLwp0aCB7Cgl2ZXJ0aWNhbC1hbGlnbjogdG9wOwoJdGV4dC1hbGlnbjogcmlnaHQ7Cgl3aWR0aDogMTUlOwoJd2hpdGUtc3BhY2U6IG5vd3JhcDsKfQoKdGQgewoJcGFkZGluZy1sZWZ0OiAuNWVtOwp9CgoKdWwucmVwb3J0LCB1bC5ub3RlcywgdWwudGFncyB7CglsaXN0LXN0eWxlOiBub25lOwoJbWFyZ2luLWxlZnQ6IDA7CglwYWRkaW5nLWxlZnQ6IDA7Cn0KCi8qIFRhZ3MgKi8KaDMudGFncyB7Cglmb250LXNpemU6IDEuMWVtOwp9Cgp1bC50YWdzIHsKCWxpbmUtaGVpZ2h0OiAxLjc1ZW07CglsaXN0LXN0eWxlOiBub25lOwp9Cgp1bC50YWdzIGxpIHsKCWRpc3BsYXk6IGlubGluZTsKfQoKdWwudGFncyBsaTpub3QoOmxhc3QtY2hpbGQpOmFmdGVyIHsKCWNvbnRlbnQ6ICcsICc7Cn0KCgovKiBDaGlsZCBub3RlcyAqLwpoMy5ub3RlcyB7Cglmb250LXNpemU6IDEuMWVtOwp9Cgp1bC5ub3RlcyB7CgltYXJnaW4tYm90dG9tOiAxLjJlbTsKfQoKdWwubm90ZXMgPiBsaTpmaXJzdC1jaGlsZCBwIHsKCW1hcmdpbi10b3A6IDA7Cn0KCnVsLm5vdGVzID4gbGkgewoJcGFkZGluZzogLjdlbSAwOwp9Cgp1bC5ub3RlcyA+IGxpOm5vdCg6bGFzdC1jaGlsZCkgewoJYm9yZGVyLWJvdHRvbTogMXB4ICNjY2Mgc29saWQ7Cn0KCgp1bC5ub3RlcyA+IGxpIHA6Zmlyc3QtY2hpbGQgewoJbWFyZ2luLXRvcDogMDsKfQoKdWwubm90ZXMgPiBsaSBwOmxhc3QtY2hpbGQgewoJbWFyZ2luLWJvdHRvbTogMDsKfQoKLyogQWRkIHF1b3RhdGlvbiBtYXJrcyBhcm91bmQgYmxvY2txdW90ZSAqLwp1bC5ub3RlcyA+IGxpIGJsb2NrcXVvdGUgcDpub3QoOmVtcHR5KTpiZWZvcmUsCmxpLm5vdGUgYmxvY2txdW90ZSBwOm5vdCg6ZW1wdHkpOmJlZm9yZSB7Cgljb250ZW50OiAn4oCcJzsKfQoKdWwubm90ZXMgPiBsaSBibG9ja3F1b3RlIHA6bm90KDplbXB0eSk6bGFzdC1jaGlsZDphZnRlciwKbGkubm90ZSBibG9ja3F1b3RlIHA6bm90KDplbXB0eSk6bGFzdC1jaGlsZDphZnRlciB7Cgljb250ZW50OiAn4oCdJzsKfQoKLyogUHJlc2VydmUgd2hpdGVzcGFjZSBvbiBwbGFpbnRleHQgbm90ZXMgKi8KdWwubm90ZXMgbGkgcC5wbGFpbnRleHQsIGxpLm5vdGUgcC5wbGFpbnRleHQsIGRpdi5ub3RlIHAucGxhaW50ZXh0IHsKCXdoaXRlLXNwYWNlOiBwcmUtd3JhcDsKfQoKLyogRGlzcGxheSB0YWdzIHdpdGhpbiBjaGlsZCBub3RlcyBpbmxpbmUgKi8KdWwubm90ZXMgaDMudGFncyB7CglkaXNwbGF5OiBpbmxpbmU7Cglmb250LXNpemU6IDFlbTsKfQoKdWwubm90ZXMgaDMudGFnczphZnRlciB7Cgljb250ZW50OiAnICc7Cn0KCnVsLm5vdGVzIHVsLnRhZ3MgewoJZGlzcGxheTogaW5saW5lOwp9Cgp1bC5ub3RlcyB1bC50YWdzIGxpOm5vdCg6bGFzdC1jaGlsZCk6YWZ0ZXIgewoJY29udGVudDogJywgJzsKfQoKCi8qIENoaWxkIGF0dGFjaG1lbnRzICovCmgzLmF0dGFjaG1lbnRzIHsKCWZvbnQtc2l6ZTogMS4xZW07Cn0KCnVsLmF0dGFjaG1lbnRzIGxpIHsKCXBhZGRpbmctdG9wOiAuNWVtOwp9Cgp1bC5hdHRhY2htZW50cyBkaXYubm90ZSB7CgltYXJnaW4tbGVmdDogMmVtOwp9Cgp1bC5hdHRhY2htZW50cyBkaXYubm90ZSBwOmZpcnN0LWNoaWxkIHsKCW1hcmdpbi10b3A6IC43NWVtOwp9CgpkaXYgdGFibGUgewoJYm9yZGVyLWNvbGxhcHNlOiBjb2xsYXBzZTsKfQoKZGl2IHRhYmxlIHRkLCBkaXYgdGFibGUgdGggewoJYm9yZGVyOiAxcHggI2NjYyBzb2xpZDsKCWJvcmRlci1jb2xsYXBzZTogY29sbGFwc2U7Cgl3b3JkLWJyZWFrOiBicmVhay1hbGw7Cn0KCmRpdiB0YWJsZSB0ZCBwOmVtcHR5OjphZnRlciwgZGl2IHRhYmxlIHRoIHA6ZW1wdHk6OmFmdGVyIHsKCWNvbnRlbnQ6ICJcMDBhMCI7Cn0KCmRpdiB0YWJsZSB0ZCAqOmZpcnN0LWNoaWxkLCBkaXYgdGFibGUgdGggKjpmaXJzdC1jaGlsZCB7CgltYXJnaW4tdG9wOiAwOwp9CgpkaXYgdGFibGUgdGQgKjpsYXN0LWNoaWxkLCBkaXYgdGFibGUgdGggKjpsYXN0LWNoaWxkIHsKCW1hcmdpbi1ib3R0b206IDA7Cn0K">
+		<link rel="stylesheet" type="text/css" media="screen,projection" href="data:text/css;base64,LyogR2VuZXJpYyBzdHlsZXMgKi8KYm9keSB7Cglmb250OiA2Mi41JSBHZW9yZ2lhLCBUaW1lcywgc2VyaWY7Cgl3aWR0aDogNzgwcHg7CgltYXJnaW46IDAgYXV0bzsKfQoKaDIgewoJZm9udC1zaXplOiAxLjVlbTsKCWxpbmUtaGVpZ2h0OiAxLjVlbTsKCWZvbnQtZmFtaWx5OiBHZW9yZ2lhLCBUaW1lcywgc2VyaWY7Cn0KCnAgewoJbGluZS1oZWlnaHQ6IDEuNWVtOwp9CgphOmxpbmssIGE6dmlzaXRlZCB7Cgljb2xvcjogIzkwMDsKfQoKYTpob3ZlciwgYTphY3RpdmUgewoJY29sb3I6ICM3Nzc7Cn0KCgp1bC5yZXBvcnQgewoJZm9udC1zaXplOiAxLjRlbTsKCXdpZHRoOiA2ODBweDsKCW1hcmdpbjogMCBhdXRvOwoJcGFkZGluZzogMjBweCAyMHB4Owp9CgovKiBNZXRhZGF0YSB0YWJsZSAqLwp0YWJsZSB7Cglib3JkZXI6IDFweCAjY2NjIHNvbGlkOwoJb3ZlcmZsb3c6IGF1dG87Cgl3aWR0aDogMTAwJTsKCW1hcmdpbjogLjFlbSBhdXRvIC43NWVtOwoJcGFkZGluZzogMC41ZW07Cn0K">
+		<link rel="stylesheet" type="text/css" media="print" href="data:text/css;base64,Ym9keSB7Cglmb250OiAxMnB0ICJUaW1lcyBOZXcgUm9tYW4iLCBUaW1lcywgR2VvcmdpYSwgc2VyaWY7CgltYXJnaW46IDA7Cgl3aWR0aDogYXV0bzsKCWNvbG9yOiBibGFjazsKfQoKLyogUGFnZSBCcmVha3MgKHBhZ2UtYnJlYWstaW5zaWRlIG9ubHkgcmVjb2duaXplZCBieSBPcGVyYSkgKi8KaDEsIGgyLCBoMywgaDQsIGg1LCBoNiB7CglwYWdlLWJyZWFrLWFmdGVyOiBhdm9pZDsKCXBhZ2UtYnJlYWstaW5zaWRlOiBhdm9pZDsKfQoKdWwsIG9sLCBkbCB7CglwYWdlLWJyZWFrLWluc2lkZTogYXZvaWQ7Cgljb2xvci1hZGp1c3Q6IGV4YWN0Owp9CgpoMiB7Cglmb250LXNpemU6IDEuM2VtOwoJbGluZS1oZWlnaHQ6IDEuM2VtOwp9CgphIHsKCWNvbG9yOiAjMDAwOwoJdGV4dC1kZWNvcmF0aW9uOiBub25lOwp9Cg==">
+	</head>
+	<body>
+		<ul class="report combineChildItems">
+			<li id="item_VYI8IXNX" class="item journalArticle">
+			<h2>AI language models cannot replace human research participants</h2>
+				<table>
+					<tbody><tr>
+						<th>Item Type</th>
+						<td>Journal Article</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Jacqueline Harding</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>William D’Alessandro</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>N. G. Laskowski</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Robert Long</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>2023-07-21</td>
+					</tr>
+					<tr>
+					<th>Language</th>
+						<td>en</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>Springer Link</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="https://doi.org/10.1007/s00146-023-01725-x">https://doi.org/10.1007/s00146-023-01725-x</a></td>
+					</tr>
+					<tr>
+					<th>Accessed</th>
+						<td>3/12/2024, 3:34:05 PM</td>
+					</tr>
+					<tr>
+					<th>Publication</th>
+						<td>AI &amp; SOCIETY</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.1007/s00146-023-01725-x">10.1007/s00146-023-01725-x</a></td>
+					</tr>
+					<tr>
+					<th>Journal Abbr</th>
+						<td>AI &amp; Soc</td>
+					</tr>
+					<tr>
+					<th>ISSN</th>
+						<td>1435-5655</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>3/12/2024, 3:34:05 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>3/12/2024, 3:34:05 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_RM8KENKU">Full Text PDF					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_5XAVVZNQ" class="item preprint">
+			<h2>Approaching Human-Level Forecasting with Language Models</h2>
+				<table>
+					<tbody><tr>
+						<th>Item Type</th>
+						<td>Preprint</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Danny Halawi</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Fred Zhang</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Chen Yueh-Han</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Jacob Steinhardt</td>
+					</tr>
+					<tr>
+					<th>Abstract</th>
+						<td>Forecasting future events is important for policy and decision
+ making. In this work, we study whether language models (LMs) can 
+forecast at the level of competitive human forecasters. Towards this 
+goal, we develop a retrieval-augmented LM system designed to 
+automatically search for relevant information, generate forecasts, and 
+aggregate predictions. To facilitate our study, we collect a large 
+dataset of questions from competitive forecasting platforms. Under a 
+test set published after the knowledge cut-offs of our LMs, we evaluate 
+the end-to-end performance of our system against the aggregates of human
+ forecasts. On average, the system nears the crowd aggregate of 
+competitive forecasters, and in some settings surpasses it. Our work 
+suggests that using LMs to forecast the future could provide accurate 
+predictions at scale and help to inform institutional decision making.</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>2024-02-28</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>arXiv.org</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="http://arxiv.org/abs/2402.18563">http://arxiv.org/abs/2402.18563</a></td>
+					</tr>
+					<tr>
+					<th>Accessed</th>
+						<td>3/12/2024, 3:36:19 PM</td>
+					</tr>
+					<tr>
+					<th>Extra</th>
+						<td>arXiv:2402.18563 [cs]</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.48550/arXiv.2402.18563">10.48550/arXiv.2402.18563</a></td>
+					</tr>
+					<tr>
+					<th>Repository</th>
+						<td>arXiv</td>
+					</tr>
+					<tr>
+					<th>Archive ID</th>
+						<td>arXiv:2402.18563</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>3/12/2024, 3:36:19 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>3/17/2024, 2:14:49 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">Tags:</h3>
+				<ul class="tags">
+					<li>Computer Science - Artificial Intelligence</li>
+					<li>Computer Science - Computation and Language</li>
+					<li>Computer Science - Information Retrieval</li>
+					<li>Computer Science - Machine Learning</li>
+				</ul>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_F69L2X27">arXiv Fulltext PDF					</li>
+					<li id="item_RXTXVBN3">arXiv.org Snapshot					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_MN5RBGBH" class="item journalArticle">
+			<h2>Can AI language models replace human participants?</h2>
+				<table>
+					<tbody><tr>
+						<th>Item Type</th>
+						<td>Journal Article</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Danica Dillion</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Niket Tandon</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Yuling Gu</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Kurt Gray</td>
+					</tr>
+					<tr>
+					<th>Abstract</th>
+						<td>Recent work suggests that language models such as GPT can make
+ human-like judgments across a number of domains. We explore whether and
+ when language models might replace human participants in psychological 
+science. We review nascent research, provide a theoretical model, and 
+outline caveats of using AI as a participant.</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>2023-07-01</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>ScienceDirect</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="https://www.sciencedirect.com/science/article/pii/S1364661323000980">https://www.sciencedirect.com/science/article/pii/S1364661323000980</a></td>
+					</tr>
+					<tr>
+					<th>Accessed</th>
+						<td>3/12/2024, 3:37:02 PM</td>
+					</tr>
+					<tr>
+					<th>Volume</th>
+						<td>27</td>
+					</tr>
+					<tr>
+					<th>Pages</th>
+						<td>597-600</td>
+					</tr>
+					<tr>
+					<th>Publication</th>
+						<td>Trends in Cognitive Sciences</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.1016/j.tics.2023.04.008">10.1016/j.tics.2023.04.008</a></td>
+					</tr>
+					<tr>
+					<th>Issue</th>
+						<td>7</td>
+					</tr>
+					<tr>
+					<th>Journal Abbr</th>
+						<td>Trends in Cognitive Sciences</td>
+					</tr>
+					<tr>
+					<th>ISSN</th>
+						<td>1364-6613</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>3/12/2024, 3:37:02 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>3/12/2024, 3:37:02 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">Tags:</h3>
+				<ul class="tags">
+					<li>artificial intelligence</li>
+					<li>judgments</li>
+					<li>language models</li>
+					<li>morality</li>
+					<li>participants</li>
+					<li>research methods</li>
+				</ul>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_L4RQ72QD">ScienceDirect Snapshot					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_FQET2DNM" class="item preprint">
+			<h2>Can LLMs Capture Human Preferences?</h2>
+				<table>
+					<tbody><tr>
+						<th>Item Type</th>
+						<td>Preprint</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Ali Goli</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Amandeep Singh</td>
+					</tr>
+					<tr>
+					<th>Abstract</th>
+						<td>We explore the viability of Large Language Models (LLMs), 
+specifically OpenAI's GPT-3.5 and GPT-4, in emulating human survey 
+respondents and eliciting preferences, with a focus on intertemporal 
+choices. Leveraging the extensive literature on intertemporal 
+discounting for benchmarking, we examine responses from LLMs across 
+various languages and compare them to human responses, exploring 
+preferences between smaller, sooner, and larger, later rewards. Our 
+findings reveal that both GPT models demonstrate less patience than 
+humans, with GPT-3.5 exhibiting a lexicographic preference for earlier 
+rewards, unlike human decision-makers. Though GPT-4 does not display 
+lexicographic preferences, its measured discount rates are still 
+considerably larger than those found in humans. Interestingly, GPT 
+models show greater patience in languages with weak future tense 
+references, such as German and Mandarin, aligning with existing 
+literature that suggests a correlation between language structure and 
+intertemporal preferences. We demonstrate how prompting GPT to explain 
+its decisions, a procedure we term "chain-of-thought conjoint," can 
+mitigate, but does not eliminate, discrepancies between LLM and human 
+responses. While directly eliciting preferences using LLMs may yield 
+misleading results, combining chain-of-thought conjoint with topic 
+modeling aids in hypothesis generation, enabling researchers to explore 
+the underpinnings of preferences. Chain-of-thought conjoint provides a 
+structured framework for marketers to use LLMs to identify potential 
+attributes or factors that can explain preference heterogeneity across 
+different customers and contexts.</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>2024-02-29</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>arXiv.org</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="http://arxiv.org/abs/2305.02531">http://arxiv.org/abs/2305.02531</a></td>
+					</tr>
+					<tr>
+					<th>Accessed</th>
+						<td>3/12/2024, 3:39:29 PM</td>
+					</tr>
+					<tr>
+					<th>Extra</th>
+						<td>arXiv:2305.02531 [cs]</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.48550/arXiv.2305.02531">10.48550/arXiv.2305.02531</a></td>
+					</tr>
+					<tr>
+					<th>Repository</th>
+						<td>arXiv</td>
+					</tr>
+					<tr>
+					<th>Archive ID</th>
+						<td>arXiv:2305.02531</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>3/12/2024, 3:39:29 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>3/12/2024, 3:39:29 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">Tags:</h3>
+				<ul class="tags">
+					<li>Computer Science - Artificial Intelligence</li>
+					<li>Computer Science - Computation and Language</li>
+				</ul>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_6IIA5B2P">arXiv Fulltext PDF					</li>
+					<li id="item_N2E2WU7Y">arXiv.org Snapshot					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_473F4PJ9" class="item preprint">
+			<h2>Evaluating General-Purpose AI with Psychometrics</h2>
+				<table>
+					<tbody><tr>
+						<th>Item Type</th>
+						<td>Preprint</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Xiting Wang</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Liming Jiang</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Jose Hernandez-Orallo</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>David Stillwell</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Luning Sun</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Fang Luo</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Xing Xie</td>
+					</tr>
+					<tr>
+					<th>Abstract</th>
+						<td>Comprehensive and accurate evaluation of general-purpose AI 
+systems such as large language models allows for effective mitigation of
+ their risks and deepened understanding of their capabilities. Current 
+evaluation methodology, mostly based on benchmarks of specific tasks, 
+falls short of adequately assessing these versatile AI systems, as 
+present techniques lack a scientific foundation for predicting their 
+performance on unforeseen tasks and explaining their varying performance
+ on specific task items or user inputs. Moreover, existing benchmarks of
+ specific tasks raise growing concerns about their reliability and 
+validity. To tackle these challenges, we suggest transitioning from 
+task-oriented evaluation to construct-oriented evaluation. 
+Psychometrics, the science of psychological measurement, provides a 
+rigorous methodology for identifying and measuring the latent constructs
+ that underlie performance across multiple tasks. We discuss its merits,
+ warn against potential pitfalls, and propose a framework to put it into
+ practice. Finally, we explore future opportunities of integrating 
+psychometrics with the evaluation of general-purpose AI systems.</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>2023-12-29</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>arXiv.org</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="http://arxiv.org/abs/2310.16379">http://arxiv.org/abs/2310.16379</a></td>
+					</tr>
+					<tr>
+					<th>Accessed</th>
+						<td>3/12/2024, 3:37:32 PM</td>
+					</tr>
+					<tr>
+					<th>Extra</th>
+						<td>arXiv:2310.16379 [cs]</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.48550/arXiv.2310.16379">10.48550/arXiv.2310.16379</a></td>
+					</tr>
+					<tr>
+					<th>Repository</th>
+						<td>arXiv</td>
+					</tr>
+					<tr>
+					<th>Archive ID</th>
+						<td>arXiv:2310.16379</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>3/12/2024, 3:37:32 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>3/17/2024, 2:14:58 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">Tags:</h3>
+				<ul class="tags">
+					<li>Computer Science - Artificial Intelligence</li>
+					<li>Computer Science - Computers and Society</li>
+				</ul>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_H7YHCZY4">arXiv Fulltext PDF					</li>
+					<li id="item_XV8FX3PE">arXiv.org Snapshot					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_I8M3VJCY" class="item preprint">
+			<h2>Generative Agents: Interactive Simulacra of Human Behavior</h2>
+				<table>
+					<tbody><tr>
+						<th>Item Type</th>
+						<td>Preprint</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Joon Sung Park</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Joseph C. O'Brien</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Carrie J. Cai</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Meredith Ringel Morris</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Percy Liang</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Michael S. Bernstein</td>
+					</tr>
+					<tr>
+					<th>Abstract</th>
+						<td>Believable proxies of human behavior can empower interactive 
+applications ranging from immersive environments to rehearsal spaces for
+ interpersonal communication to prototyping tools. In this paper, we 
+introduce generative agents--computational software agents that simulate
+ believable human behavior. Generative agents wake up, cook breakfast, 
+and head to work; artists paint, while authors write; they form 
+opinions, notice each other, and initiate conversations; they remember 
+and reflect on days past as they plan the next day. To enable generative
+ agents, we describe an architecture that extends a large language model
+ to store a complete record of the agent's experiences using natural 
+language, synthesize those memories over time into higher-level 
+reflections, and retrieve them dynamically to plan behavior. We 
+instantiate generative agents to populate an interactive sandbox 
+environment inspired by The Sims, where end users can interact with a 
+small town of twenty five agents using natural language. In an 
+evaluation, these generative agents produce believable individual and 
+emergent social behaviors: for example, starting with only a single 
+user-specified notion that one agent wants to throw a Valentine's Day 
+party, the agents autonomously spread invitations to the party over the 
+next two days, make new acquaintances, ask each other out on dates to 
+the party, and coordinate to show up for the party together at the right
+ time. We demonstrate through ablation that the components of our agent 
+architecture--observation, planning, and reflection--each contribute 
+critically to the believability of agent behavior. By fusing large 
+language models with computational, interactive agents, this work 
+introduces architectural and interaction patterns for enabling 
+believable simulations of human behavior.</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>2023-08-05</td>
+					</tr>
+					<tr>
+					<th>Short Title</th>
+						<td>Generative Agents</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>arXiv.org</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="http://arxiv.org/abs/2304.03442">http://arxiv.org/abs/2304.03442</a></td>
+					</tr>
+					<tr>
+					<th>Accessed</th>
+						<td>3/12/2024, 3:38:07 PM</td>
+					</tr>
+					<tr>
+					<th>Extra</th>
+						<td>arXiv:2304.03442 [cs]</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.48550/arXiv.2304.03442">10.48550/arXiv.2304.03442</a></td>
+					</tr>
+					<tr>
+					<th>Repository</th>
+						<td>arXiv</td>
+					</tr>
+					<tr>
+					<th>Archive ID</th>
+						<td>arXiv:2304.03442</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>3/12/2024, 3:38:07 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>3/12/2024, 3:38:07 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">Tags:</h3>
+				<ul class="tags">
+					<li>Computer Science - Artificial Intelligence</li>
+					<li>Computer Science - Human-Computer Interaction</li>
+					<li>Computer Science - Machine Learning</li>
+				</ul>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_3JKTG65J">arXiv Fulltext PDF					</li>
+					<li id="item_X6A8HG5G">arXiv.org Snapshot					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_GWPU689H" class="item preprint">
+			<h2>Genie: Achieving Human Parity in Content-Grounded Datasets Generation</h2>
+				<table>
+					<tbody><tr>
+						<th>Item Type</th>
+						<td>Preprint</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Asaf Yehudai</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Boaz Carmeli</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Yosi Mass</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Ofir Arviv</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Nathaniel Mills</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Assaf Toledo</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Eyal Shnarch</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Leshem Choshen</td>
+					</tr>
+					<tr>
+					<th>Abstract</th>
+						<td>The lack of high-quality data for content-grounded generation 
+tasks has been identified as a major obstacle to advancing these tasks. 
+To address this gap, we propose Genie, a novel method for automatically 
+generating high-quality content-grounded data. It consists of three 
+stages: (a) Content Preparation, (b) Generation: creating task-specific 
+examples from the content (e.g., question-answer pairs or summaries). 
+(c) Filtering mechanism aiming to ensure the quality and faithfulness of
+ the generated data. We showcase this methodology by generating three 
+large-scale synthetic data, making wishes, for Long-Form 
+Question-Answering (LFQA), summarization, and information extraction. In
+ a human evaluation, our generated data was found to be natural and of 
+high quality. Furthermore, we compare models trained on our data with 
+models trained on human-written data -- ELI5 and ASQA for LFQA and 
+CNN-DailyMail for Summarization. We show that our models are on par with
+ or outperforming models trained on human-generated data and 
+consistently outperforming them in faithfulness. Finally, we applied our
+ method to create LFQA data within the medical domain and compared a 
+model trained on it with models trained on other domains.</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>2024-01-25</td>
+					</tr>
+					<tr>
+					<th>Short Title</th>
+						<td>Genie</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>arXiv.org</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="http://arxiv.org/abs/2401.14367">http://arxiv.org/abs/2401.14367</a></td>
+					</tr>
+					<tr>
+					<th>Accessed</th>
+						<td>3/12/2024, 3:37:52 PM</td>
+					</tr>
+					<tr>
+					<th>Extra</th>
+						<td>arXiv:2401.14367 [cs]</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.48550/arXiv.2401.14367">10.48550/arXiv.2401.14367</a></td>
+					</tr>
+					<tr>
+					<th>Repository</th>
+						<td>arXiv</td>
+					</tr>
+					<tr>
+					<th>Archive ID</th>
+						<td>arXiv:2401.14367</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>3/12/2024, 3:37:52 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>3/12/2024, 3:37:52 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">Tags:</h3>
+				<ul class="tags">
+					<li>Computer Science - Artificial Intelligence</li>
+					<li>Computer Science - Computation and Language</li>
+					<li>Computer Science - Machine Learning</li>
+				</ul>
+				<h3 class="notes">Notes:</h3>
+				<ul class="notes">
+					<li id="item_GKR4NDSU">
+<p class="plaintext">Comment: Accepted to ICLR24</p>
+					</li>
+				</ul>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_LPBL2LUA">arXiv Fulltext PDF					</li>
+					<li id="item_NZAQLYV3">arXiv.org Snapshot					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_NA9GB8VT" class="item preprint">
+			<h2>Large Language Models as Simulated Economic Agents: What Can We Learn from Homo Silicus?</h2>
+				<table>
+					<tbody><tr>
+						<th>Item Type</th>
+						<td>Preprint</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>John J. Horton</td>
+					</tr>
+					<tr>
+					<th>Abstract</th>
+						<td>Newly-developed large language models (LLM) -- because of how 
+they are trained and designed -- are implicit computational models of 
+humans -- a homo silicus. These models can be used the same way 
+economists use homo economicus: they can be given endowments, 
+information, preferences, and so on and then their behavior can be 
+explored in scenarios via simulation. I demonstrate this approach using 
+OpenAI's GPT3 with experiments derived from Charness and Rabin (2002), 
+Kahneman, Knetsch and Thaler (1986) and Samuelson and Zeckhauser (1988).
+ The findings are qualitatively similar to the original results, but it 
+is also trivially easy to try variations that offer fresh insights. 
+Departing from the traditional laboratory paradigm, I also create a 
+hiring scenario where an employer faces applicants that differ in 
+experience and wage ask and then analyze how a minimum wage affects 
+realized wages and the extent of labor-labor substitution.</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>2023-01-18</td>
+					</tr>
+					<tr>
+					<th>Short Title</th>
+						<td>Large Language Models as Simulated Economic Agents</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>arXiv.org</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="http://arxiv.org/abs/2301.07543">http://arxiv.org/abs/2301.07543</a></td>
+					</tr>
+					<tr>
+					<th>Accessed</th>
+						<td>3/12/2024, 3:41:33 PM</td>
+					</tr>
+					<tr>
+					<th>Extra</th>
+						<td>arXiv:2301.07543 [econ, q-fin]</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.48550/arXiv.2301.07543">10.48550/arXiv.2301.07543</a></td>
+					</tr>
+					<tr>
+					<th>Repository</th>
+						<td>arXiv</td>
+					</tr>
+					<tr>
+					<th>Archive ID</th>
+						<td>arXiv:2301.07543</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>3/12/2024, 3:41:33 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>3/12/2024, 3:41:33 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">Tags:</h3>
+				<ul class="tags">
+					<li>Economics - General Economics</li>
+				</ul>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_ABDU6FZJ">arXiv Fulltext PDF					</li>
+					<li id="item_KKHTQBD5">arXiv.org Snapshot					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_65KWM4YB" class="item journalArticle">
+			<h2>Out of One, Many: Using Language Models to Simulate Human Samples</h2>
+				<table>
+					<tbody><tr>
+						<th>Item Type</th>
+						<td>Journal Article</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Lisa P. Argyle</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Ethan C. Busby</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Nancy Fulda</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Joshua Gubler</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Christopher Rytting</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>David Wingate</td>
+					</tr>
+					<tr>
+					<th>Abstract</th>
+						<td>We propose and explore the possibility that language models 
+can be studied as effective proxies for specific human sub-populations 
+in social science research. Practical and research applications of 
+artificial intelligence tools have sometimes been limited by problematic
+ biases (such as racism or sexism), which are often treated as uniform 
+properties of the models. We show that the "algorithmic bias" within one
+ such tool -- the GPT-3 language model -- is instead both fine-grained 
+and demographically correlated, meaning that proper conditioning will 
+cause it to accurately emulate response distributions from a wide 
+variety of human subgroups. We term this property "algorithmic fidelity"
+ and explore its extent in GPT-3. We create "silicon samples" by 
+conditioning the model on thousands of socio-demographic backstories 
+from real human participants in multiple large surveys conducted in the 
+United States. We then compare the silicon and human samples to 
+demonstrate that the information contained in GPT-3 goes far beyond 
+surface similarity. It is nuanced, multifaceted, and reflects the 
+complex interplay between ideas, attitudes, and socio-cultural context 
+that characterize human attitudes. We suggest that language models with 
+sufficient algorithmic fidelity thus constitute a novel and powerful 
+tool to advance understanding of humans and society across a variety of 
+disciplines.</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>07/2023</td>
+					</tr>
+					<tr>
+					<th>Short Title</th>
+						<td>Out of One, Many</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>arXiv.org</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="http://arxiv.org/abs/2209.06899">http://arxiv.org/abs/2209.06899</a></td>
+					</tr>
+					<tr>
+					<th>Accessed</th>
+						<td>3/12/2024, 3:43:15 PM</td>
+					</tr>
+					<tr>
+					<th>Extra</th>
+						<td>arXiv:2209.06899 [cs]</td>
+					</tr>
+					<tr>
+					<th>Volume</th>
+						<td>31</td>
+					</tr>
+					<tr>
+					<th>Pages</th>
+						<td>337-351</td>
+					</tr>
+					<tr>
+					<th>Publication</th>
+						<td>Political Analysis</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.1017/pan.2023.2">10.1017/pan.2023.2</a></td>
+					</tr>
+					<tr>
+					<th>Issue</th>
+						<td>3</td>
+					</tr>
+					<tr>
+					<th>Journal Abbr</th>
+						<td>Polit. Anal.</td>
+					</tr>
+					<tr>
+					<th>ISSN</th>
+						<td>1047-1987, 1476-4989</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>3/12/2024, 3:43:15 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>3/12/2024, 3:43:15 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">Tags:</h3>
+				<ul class="tags">
+					<li>Computer Science - Computation and Language</li>
+					<li>Computer Science - Machine Learning</li>
+				</ul>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_G5XSZ4XE">arXiv Fulltext PDF					</li>
+					<li id="item_6RRX7G9K">arXiv.org Snapshot					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_54PGIL5U" class="item journalArticle">
+			<h2>The Challenge of Using LLMs to Simulate Human Behavior: A Causal Inference Perspective</h2>
+				<table>
+					<tbody><tr>
+						<th>Item Type</th>
+						<td>Journal Article</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>George Gui</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Olivier Toubia</td>
+					</tr>
+					<tr>
+					<th>Abstract</th>
+						<td>Large Language Models (LLMs) have demonstrated impressive 
+potential to simulate human behavior. Using a causal inference 
+framework, we empirically and theoretically analyze the challenges of 
+conducting LLM-simulated experiments, and explore potential solutions. 
+In the context of demand estimation, we show that variations in the 
+treatment included in the prompt (e.g., price of focal product) can 
+cause variations in unspecified confounding factors (e.g., price of 
+competitors, historical prices, outside temperature), introducing 
+endogeneity and yielding implausibly flat demand curves. We propose a 
+theoretical framework suggesting this endogeneity issue generalizes to 
+other contexts and won't be fully resolved by merely improving the 
+training data. Unlike real experiments where researchers assign 
+pre-existing units across conditions, LLMs simulate units based on the 
+entire prompt, which includes the description of the treatment. 
+Therefore, due to associations in the training data, the characteristics
+ of individuals and environments simulated by the LLM can be affected by
+ the treatment assignment. We explore two potential solutions. The first
+ specifies all contextual variables that affect both treatment and 
+outcome, which we demonstrate to be challenging for a general-purpose 
+LLM. The second explicitly specifies the source of treatment variation 
+in the prompt given to the LLM (e.g., by informing the LLM that the 
+store is running an experiment). While this approach only allows the 
+estimation of a conditional average treatment effect that depends on the
+ specific experimental design, it provides valuable directional results 
+for exploratory analysis.</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>2023</td>
+					</tr>
+					<tr>
+					<th>Short Title</th>
+						<td>The Challenge of Using LLMs to Simulate Human Behavior</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>arXiv.org</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="http://arxiv.org/abs/2312.15524">http://arxiv.org/abs/2312.15524</a></td>
+					</tr>
+					<tr>
+					<th>Accessed</th>
+						<td>3/12/2024, 3:42:07 PM</td>
+					</tr>
+					<tr>
+					<th>Extra</th>
+						<td>arXiv:2312.15524 [cs, econ, stat]</td>
+					</tr>
+					<tr>
+					<th>Publication</th>
+						<td>SSRN Electronic Journal</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.2139/ssrn.4650172">10.2139/ssrn.4650172</a></td>
+					</tr>
+					<tr>
+					<th>Journal Abbr</th>
+						<td>SSRN Journal</td>
+					</tr>
+					<tr>
+					<th>ISSN</th>
+						<td>1556-5068</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>3/12/2024, 3:42:07 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>3/12/2024, 3:42:07 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">Tags:</h3>
+				<ul class="tags">
+					<li>Computer Science - Artificial Intelligence</li>
+					<li>Computer Science - Information Retrieval</li>
+					<li>Economics - Econometrics</li>
+					<li>Statistics - Applications</li>
+				</ul>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_UAH4F6V4">arXiv Fulltext PDF					</li>
+					<li id="item_843DQTQE">arXiv.org Snapshot					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_BLZN6FA2" class="item preprint">
+			<h2>Using GPT for Market Research</h2>
+				<table>
+					<tbody><tr>
+						<th>Item Type</th>
+						<td>Preprint</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>James Brand</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Ayelet Israeli</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Donald Ngwe</td>
+					</tr>
+					<tr>
+					<th>Abstract</th>
+						<td>Large language models (LLMs) have quickly become popular as 
+labor-augmenting tools for programming, writing, and many other 
+processes that benefit from quick text generation. In this paper we 
+explore the uses and benefits of LLMs for researchers and practitioners 
+who aim to understand consumer preferences. We focus on the 
+distributional nature of LLM responses, and query the Generative 
+Pre-trained Transformer 3.5 (GPT-3.5) model to generate hundreds of 
+survey responses to each prompt. We offer two sets of results to 
+illustrate our approach and assess it. First, we show that GPT-3.5, a 
+widely-used LLM, responds to sets of survey questions in ways that are 
+consistent with economic theory and well-documented patterns of consumer
+ behavior, including downward-sloping demand curves and state 
+dependence. Second, we show that estimates of willingness-to-pay for 
+products and features generated by GPT-3.5 are of realistic magnitudes 
+and match estimates from a recent study that elicited preferences from 
+human consumers. We also offer preliminary guidelines for how best to 
+query information from GPT-3.5 for marketing purposes and discuss 
+potential limitations.</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>2023-03-21</td>
+					</tr>
+					<tr>
+					<th>Language</th>
+						<td>en</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>Social Science Research Network</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="https://papers.ssrn.com/abstract=4395751">https://papers.ssrn.com/abstract=4395751</a></td>
+					</tr>
+					<tr>
+					<th>Accessed</th>
+						<td>3/12/2024, 3:42:41 PM</td>
+					</tr>
+					<tr>
+					<th>Place</th>
+						<td>Rochester, NY</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.2139/ssrn.4395751">10.2139/ssrn.4395751</a></td>
+					</tr>
+					<tr>
+					<th>Genre</th>
+						<td>SSRN Scholarly Paper</td>
+					</tr>
+					<tr>
+					<th>Archive ID</th>
+						<td>4395751</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>3/12/2024, 3:42:41 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>3/12/2024, 3:42:41 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">Tags:</h3>
+				<ul class="tags">
+					<li>AI</li>
+					<li>Conjoint</li>
+					<li>Consumer preferences</li>
+					<li>Generative Pre-trained Transformer (GPT)</li>
+					<li>Large language models (LLMs)</li>
+					<li>Market research</li>
+				</ul>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_6N2HEVDS">Full Text PDF					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_YER4HDYJ" class="item preprint">
+			<h2>Using Large Language Models to Simulate Multiple Humans and Replicate Human Subject Studies</h2>
+				<table>
+					<tbody><tr>
+						<th>Item Type</th>
+						<td>Preprint</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Gati Aher</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Rosa I. Arriaga</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Adam Tauman Kalai</td>
+					</tr>
+					<tr>
+					<th>Abstract</th>
+						<td>We introduce a new type of test, called a Turing Experiment 
+(TE), for evaluating to what extent a given language model, such as GPT 
+models, can simulate different aspects of human behavior. A TE can also 
+reveal consistent distortions in a language model's simulation of a 
+specific human behavior. Unlike the Turing Test, which involves 
+simulating a single arbitrary individual, a TE requires simulating a 
+representative sample of participants in human subject research. We 
+carry out TEs that attempt to replicate well-established findings from 
+prior studies. We design a methodology for simulating TEs and illustrate
+ its use to compare how well different language models are able to 
+reproduce classic economic, psycholinguistic, and social psychology 
+experiments: Ultimatum Game, Garden Path Sentences, Milgram Shock 
+Experiment, and Wisdom of Crowds. In the first three TEs, the existing 
+findings were replicated using recent models, while the last TE reveals a
+ "hyper-accuracy distortion" present in some language models (including 
+ChatGPT and GPT-4), which could affect downstream applications in 
+education and the arts.</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>2023-07-09</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>arXiv.org</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="http://arxiv.org/abs/2208.10264">http://arxiv.org/abs/2208.10264</a></td>
+					</tr>
+					<tr>
+					<th>Accessed</th>
+						<td>3/12/2024, 3:43:42 PM</td>
+					</tr>
+					<tr>
+					<th>Extra</th>
+						<td>arXiv:2208.10264 [cs]</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.48550/arXiv.2208.10264">10.48550/arXiv.2208.10264</a></td>
+					</tr>
+					<tr>
+					<th>Repository</th>
+						<td>arXiv</td>
+					</tr>
+					<tr>
+					<th>Archive ID</th>
+						<td>arXiv:2208.10264</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>3/12/2024, 3:43:42 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>3/12/2024, 3:43:42 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">Tags:</h3>
+				<ul class="tags">
+					<li>Computer Science - Artificial Intelligence</li>
+					<li>Computer Science - Computation and Language</li>
+					<li>Computer Science - Machine Learning</li>
+				</ul>
+				<h3 class="notes">Notes:</h3>
+				<ul class="notes">
+					<li id="item_79Q3US9Z">
+<p class="plaintext">Comment: Accepted for oral presentation at International Conference on Machine Learning (ICML) 2023</p>
+					</li>
+				</ul>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_VLNID84W">arXiv Fulltext PDF					</li>
+					<li id="item_JE6DWU54">arXiv.org Snapshot					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_LYLZB3FV" class="item preprint">
+			<h2>Whose Opinions Do Language Models Reflect?</h2>
+				<table>
+					<tbody><tr>
+						<th>Item Type</th>
+						<td>Preprint</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Shibani Santurkar</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Esin Durmus</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Faisal Ladhak</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Cinoo Lee</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Percy Liang</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Tatsunori Hashimoto</td>
+					</tr>
+					<tr>
+					<th>Abstract</th>
+						<td>Language models (LMs) are increasingly being used in 
+open-ended contexts, where the opinions reflected by LMs in response to 
+subjective queries can have a profound impact, both on user 
+satisfaction, as well as shaping the views of society at large. In this 
+work, we put forth a quantitative framework to investigate the opinions 
+reflected by LMs -- by leveraging high-quality public opinion polls and 
+their associated human responses. Using this framework, we create 
+OpinionsQA, a new dataset for evaluating the alignment of LM opinions 
+with those of 60 US demographic groups over topics ranging from abortion
+ to automation. Across topics, we find substantial misalignment between 
+the views reflected by current LMs and those of US demographic groups: 
+on par with the Democrat-Republican divide on climate change. Notably, 
+this misalignment persists even after explicitly steering the LMs 
+towards particular demographic groups. Our analysis not only confirms 
+prior observations about the left-leaning tendencies of some human 
+feedback-tuned LMs, but also surfaces groups whose opinions are poorly 
+reflected by current LMs (e.g., 65+ and widowed individuals). Our code 
+and data are available at https://github.com/tatsu-lab/opinions_qa.</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>2023-03-30</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>arXiv.org</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="http://arxiv.org/abs/2303.17548">http://arxiv.org/abs/2303.17548</a></td>
+					</tr>
+					<tr>
+					<th>Accessed</th>
+						<td>3/12/2024, 3:43:56 PM</td>
+					</tr>
+					<tr>
+					<th>Extra</th>
+						<td>arXiv:2303.17548 [cs]</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.48550/arXiv.2303.17548">10.48550/arXiv.2303.17548</a></td>
+					</tr>
+					<tr>
+					<th>Repository</th>
+						<td>arXiv</td>
+					</tr>
+					<tr>
+					<th>Archive ID</th>
+						<td>arXiv:2303.17548</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>3/12/2024, 3:43:56 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>3/12/2024, 3:43:56 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">Tags:</h3>
+				<ul class="tags">
+					<li>Computer Science - Artificial Intelligence</li>
+					<li>Computer Science - Computation and Language</li>
+					<li>Computer Science - Computers and Society</li>
+					<li>Computer Science - Machine Learning</li>
+				</ul>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_MSH2Q6V3">arXiv Fulltext PDF					</li>
+					<li id="item_8MFDZ64Z">arXiv.org Snapshot					</li>
+				</ul>
+			</li>
+
+		</ul>
+	
+</body></html>
