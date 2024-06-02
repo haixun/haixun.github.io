@@ -1,0 +1,210 @@
+* Difference between coche and carro
+
+"Coche" and "Carro" both translate to "car" in English. However, the
+usage varies based on region. In Spain, "coche" is commonly used,
+while in Latin America, "carro" is more prevalent. So the difference
+between them is mainly regional.
+
+* Top 20 Spanish adjectives
+
+1. Bueno (good)
+   - Yo soy bueno en matemáticas. (I am good at math.)
+   - Tú eres bueno en dibujar. (You are good at drawing.)
+   - Ella es buena persona. (She is a good person.)
+
+2. Malo (bad)
+   - Este café es malo. (This coffee is bad.)
+   - Tú eres malo en natación. (You are bad at swimming.)
+   - Él es malo en ajedrez. (He is bad at chess.)
+
+3. Grande (big)
+   - Mi casa es grande. (My house is big.)
+   - Tu coche es grande. (Your car is big.)
+   - Su perro es grande. (His dog is big.)
+
+4. Pequeño (small)
+   - Yo tengo una pequeña idea. (I have a small idea.)
+   - Tienes un pequeño problema. (You have a small problem.)
+   - Ella tiene un perro pequeño. (She has a small dog.)
+
+5. Joven (young)
+   - Yo soy joven. (I am young.)
+   - Tú pareces joven. (You look young.)
+   - Él es joven. (He is young.)
+
+6. Viejo (old)
+   - Yo me siento viejo. (I feel old.)
+   - Tú pareces viejo. (You look old.)
+   - Ella tiene un libro viejo. (She has an old book.)
+
+7. Hermoso (beautiful)
+   - Yo tengó una hermosa idea. (I have a beautiful idea.)
+   - Tienes un hermoso coche. (You have a beautiful car.)
+   - Su vestido es hermoso. (His dress is beautiful.)
+
+8. Feo (ugly)
+   - Yo tengo un feo sentimiento sobre esto. (I have an ugly feeling about this.)
+   - Tu dibujo es feo. (Your drawing is ugly.)
+   - Ella cree que el cuadro es feo. (She thinks the painting is ugly.)
+
+9. Feliz (happy)
+   - Yo soy feliz. (I am happy.)
+   - Te ves feliz. (You look happy.)
+   - Él es un hombre feliz. (He is a happy man.)
+
+10. Triste (sad)
+   - Me siento triste. (I feel sad.)
+   - Te ves triste. (You look sad.)
+   - Ella se ve triste. (She looks sad.)
+
+11. Rico (rich, delicious)
+   - Yo no soy rico. (I am not rich.)
+   - El postre está rico. (The dessert is delicious.)
+   - Él es un hombre rico. (He is a rich man.)
+
+12. Pobre (poor)
+   - No soy pobre. (I am not poor.)
+   - Te ves pobre. (You look poor.)
+   - Ella es una mujer pobre. (She is a poor woman.)
+
+13. Rápido (fast)
+   - Yo corro rápido. (I run fast.)
+   - Eres rápido. (You are fast.)
+   - Él habla rápido. (He speaks fast.)
+
+14. Lento (slow)
+   - Yo aprendo lento. (I learn slow.)
+   - Eres un corredor lento. (You are a slow runner.)
+   - Ella es una lectora lenta. (She is a slow reader.)
+
+15. Dulce (sweet)
+   - Yo soy una persona dulce. (I am a sweet person.)
+   - Tienes una voz dulce. (You have a sweet voice.)
+   - Ella tiene un perfume dulce. (She has a sweet perfume.)
+
+16. Amargo (bitter)
+   - No me gusta el café amargo. (I don't like bitter coffee.)
+   - Tu cara parece amarga. (Your face looks bitter.)
+   - Él dijo palabras amargas. (He said bitter words.)
+
+17. Cálido (warm)
+   - Yo prefiero el clima cálido. (I prefer warm weather.)
+   - Tu abrigo es cálido. (Your coat is warm.)
+   - Su sonrisa es cálida. (Her smile is warm.)
+
+18. Frío (cold)
+   - No me gusta el clima frío. (I don't like cold weather.)
+   - Tu mano está fría. (Your hand is cold.)
+   - Ella es una persona fría. (She is a cold person.)
+
+19. Limpio (clean)
+   - Yo mantengo mi casa limpia. (I keep my house clean.)
+   - Tu coche es muy limpio. (Your car is very clean.)
+   - Él es un hombre limpio. (He is a clean man.)
+
+20. Sucio (dirty)
+   - Yo no soy una persona sucia. (I am not a dirty person.)
+   - Tus zapatos están sucios. (Your shoes are dirty.)
+   - Su coche está sucio. (His car is dirty.)
+
+* Top 20 spanish verbs
+
+1. Ser (To be)
+   - Yo soy feliz. (I am happy.)
+   - Tú eres inteligente. (You are intelligent.)
+   - Él es amable. (He is kind.)
+
+2. Estar (To be)
+   - Yo estoy cansado. (I am tired.)
+   - Tú estás en casa. (You are at home.)
+   - Ella está comiendo. (She is eating.)
+
+3. Tener (To have)
+   - Yo tengo un libro. (I have a book.)
+   - Tú tienes la llave. (You have the key.)
+   - Él tiene un coche. (He has a car.)
+
+4. Hacer (To do/make)
+   - Yo hago deporte. (I do sports.)
+   - Tú haces la comida. (You make the food.)
+   - Ella hace la tarea. (She does the homework.)
+
+5. Decir (To say/tell)
+   - Yo digo la verdad. (I tell the truth.)
+   - Tú dices una historia. (You tell a story.)
+   - Él dice que está bien. (He says it's fine.)
+
+6. Ir (To go)
+   - Yo voy al cine. (I go to the cinema.)
+   - Tú vas al mercado. (You go to the market.)
+   - Ella va a la escuela. (She goes to school.)
+
+7. Ver (To see)
+   - Yo veo la televisión. (I watch TV.)
+   - Tú ves un pájaro. (You see a bird.)
+   - Él ve el mar. (He sees the sea.)
+
+8. Dar (To give)
+   - Yo doy un regalo. (I give a gift.)
+   - Tú das consejos. (You give advice.)
+   - Ella da una manzana. (She gives an apple.)
+
+9. Saber (To know)
+   - Yo sé la respuesta. (I know the answer.)
+   - Tú sabes cocinar. (You know how to cook.)
+   - Él sabe francés. (He knows French.)
+
+10. Poder (To be able to/can)
+    - Yo puedo correr. (I can run.)
+    - Tú puedes hablar. (You can speak.)
+    - Ella puede cantar. (She can sing.)
+
+11. Querer (To want)
+    - Yo quiero un helado. (I want an ice cream.)
+    - Tú quieres aprender. (You want to learn.)
+    - Él quiere jugar. (He wants to play.)
+
+12. Venir (To come)
+    - Yo vengo a visitarte. (I come to visit you.)
+    - Tú vienes a la fiesta. (You come to the party.)
+    - Ella viene a la reunión. (She comes to the meeting.)
+
+13. Pensar (To think)
+    - Yo pienso en ti. (I think about you.)
+    - Tú piensas en vacaciones. (You think about holidays.)
+    - Él piensa en su futuro. (He thinks about his future.)
+
+14. Salir (To leave/go out)
+    - Yo salgo del trabajo a las seis. (I leave work at six.)
+    - Tú sales con tus amigos. (You go out with your friends.)
+    - Ella sale del supermercado. (She leaves the supermarket.)
+
+15. Llegar (To arrive)
+    - Yo llego a casa a las ocho. (I arrive home at eight.)
+    - Tú llegas tarde. (You arrive late.)
+    - Él llega temprano. (He arrives early.)
+
+16. Pasar (To happen/spend time)
+    - Yo paso el rato leyendo. (I spend time reading.)
+    - Tú pasas el verano en la playa. (You spend the summer at the beach.)
+    - Le pasa algo a él. (Something happens to him.)
+
+17. Sentir (To feel)
+    - Yo siento miedo. (I feel fear.)
+    - Tú sientes calor. (You feel heat.)
+    - Él siente tristeza. (He feels sadness.)
+
+18. Crear (To create)
+    - Yo creo un dibujo. (I create a drawing.)
+    - Tú creas una canción. (You create a song.)
+    - Ella crea una historia. (She creates a story.)
+
+19. Comenzar (To begin)
+    - Yo comienzo a leer el libro. (I begin to read the book.)
+    - Tú comienzas el trabajo. (You begin the work.)
+    - Él comienza la partida. (He begins the game.)
+
+20. Hablar (To talk/speak)
+    - Yo hablo español. (I speak Spanish.)
+    - Tú hablas con la profesora. (You talk with the teacher.)
+    - Ella habla por teléfono. (She speaks on the phone.)

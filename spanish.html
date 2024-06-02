@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-06-02 Sun 10:46 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="author" content="Haixun Wang" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgf3237a5">1. Difference between coche and carro</a></li>
+<li><a href="#org66f395b">2. Top 20 Spanish adjectives</a></li>
+<li><a href="#orgbdf40fe">3. Top 20 spanish verbs</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf3237a5" class="outline-2">
+<h2 id="orgf3237a5"><span class="section-number-2">1.</span> Difference between coche and carro</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+"Coche" and "Carro" both translate to "car" in English. However, the
+usage varies based on region. In Spain, "coche" is commonly used,
+while in Latin America, "carro" is more prevalent. So the difference
+between them is mainly regional.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org66f395b" class="outline-2">
+<h2 id="org66f395b"><span class="section-number-2">2.</span> Top 20 Spanish adjectives</h2>
+<div class="outline-text-2" id="text-2">
+<ol class="org-ol">
+<li>Bueno (good)
+<ul class="org-ul">
+<li>Yo soy bueno en matemáticas. (I am good at math.)</li>
+<li>Tú eres bueno en dibujar. (You are good at drawing.)</li>
+<li>Ella es buena persona. (She is a good person.)</li>
+</ul></li>
+
+<li>Malo (bad)
+<ul class="org-ul">
+<li>Este café es malo. (This coffee is bad.)</li>
+<li>Tú eres malo en natación. (You are bad at swimming.)</li>
+<li>Él es malo en ajedrez. (He is bad at chess.)</li>
+</ul></li>
+
+<li>Grande (big)
+<ul class="org-ul">
+<li>Mi casa es grande. (My house is big.)</li>
+<li>Tu coche es grande. (Your car is big.)</li>
+<li>Su perro es grande. (His dog is big.)</li>
+</ul></li>
+
+<li>Pequeño (small)
+<ul class="org-ul">
+<li>Yo tengo una pequeña idea. (I have a small idea.)</li>
+<li>Tienes un pequeño problema. (You have a small problem.)</li>
+<li>Ella tiene un perro pequeño. (She has a small dog.)</li>
+</ul></li>
+
+<li>Joven (young)
+<ul class="org-ul">
+<li>Yo soy joven. (I am young.)</li>
+<li>Tú pareces joven. (You look young.)</li>
+<li>Él es joven. (He is young.)</li>
+</ul></li>
+
+<li>Viejo (old)
+<ul class="org-ul">
+<li>Yo me siento viejo. (I feel old.)</li>
+<li>Tú pareces viejo. (You look old.)</li>
+<li>Ella tiene un libro viejo. (She has an old book.)</li>
+</ul></li>
+
+<li>Hermoso (beautiful)
+<ul class="org-ul">
+<li>Yo tengó una hermosa idea. (I have a beautiful idea.)</li>
+<li>Tienes un hermoso coche. (You have a beautiful car.)</li>
+<li>Su vestido es hermoso. (His dress is beautiful.)</li>
+</ul></li>
+
+<li>Feo (ugly)
+<ul class="org-ul">
+<li>Yo tengo un feo sentimiento sobre esto. (I have an ugly feeling about this.)</li>
+<li>Tu dibujo es feo. (Your drawing is ugly.)</li>
+<li>Ella cree que el cuadro es feo. (She thinks the painting is ugly.)</li>
+</ul></li>
+
+<li>Feliz (happy)
+<ul class="org-ul">
+<li>Yo soy feliz. (I am happy.)</li>
+<li>Te ves feliz. (You look happy.)</li>
+<li>Él es un hombre feliz. (He is a happy man.)</li>
+</ul></li>
+
+<li>Triste (sad)
+<ul class="org-ul">
+<li>Me siento triste. (I feel sad.)</li>
+<li>Te ves triste. (You look sad.)</li>
+<li>Ella se ve triste. (She looks sad.)</li>
+</ul></li>
+
+<li>Rico (rich, delicious)
+<ul class="org-ul">
+<li>Yo no soy rico. (I am not rich.)</li>
+<li>El postre está rico. (The dessert is delicious.)</li>
+<li>Él es un hombre rico. (He is a rich man.)</li>
+</ul></li>
+
+<li>Pobre (poor)
+<ul class="org-ul">
+<li>No soy pobre. (I am not poor.)</li>
+<li>Te ves pobre. (You look poor.)</li>
+<li>Ella es una mujer pobre. (She is a poor woman.)</li>
+</ul></li>
+
+<li>Rápido (fast)
+<ul class="org-ul">
+<li>Yo corro rápido. (I run fast.)</li>
+<li>Eres rápido. (You are fast.)</li>
+<li>Él habla rápido. (He speaks fast.)</li>
+</ul></li>
+
+<li>Lento (slow)
+<ul class="org-ul">
+<li>Yo aprendo lento. (I learn slow.)</li>
+<li>Eres un corredor lento. (You are a slow runner.)</li>
+<li>Ella es una lectora lenta. (She is a slow reader.)</li>
+</ul></li>
+
+<li>Dulce (sweet)
+<ul class="org-ul">
+<li>Yo soy una persona dulce. (I am a sweet person.)</li>
+<li>Tienes una voz dulce. (You have a sweet voice.)</li>
+<li>Ella tiene un perfume dulce. (She has a sweet perfume.)</li>
+</ul></li>
+
+<li>Amargo (bitter)
+<ul class="org-ul">
+<li>No me gusta el café amargo. (I don't like bitter coffee.)</li>
+<li>Tu cara parece amarga. (Your face looks bitter.)</li>
+<li>Él dijo palabras amargas. (He said bitter words.)</li>
+</ul></li>
+
+<li>Cálido (warm)
+<ul class="org-ul">
+<li>Yo prefiero el clima cálido. (I prefer warm weather.)</li>
+<li>Tu abrigo es cálido. (Your coat is warm.)</li>
+<li>Su sonrisa es cálida. (Her smile is warm.)</li>
+</ul></li>
+
+<li>Frío (cold)
+<ul class="org-ul">
+<li>No me gusta el clima frío. (I don't like cold weather.)</li>
+<li>Tu mano está fría. (Your hand is cold.)</li>
+<li>Ella es una persona fría. (She is a cold person.)</li>
+</ul></li>
+
+<li>Limpio (clean)
+<ul class="org-ul">
+<li>Yo mantengo mi casa limpia. (I keep my house clean.)</li>
+<li>Tu coche es muy limpio. (Your car is very clean.)</li>
+<li>Él es un hombre limpio. (He is a clean man.)</li>
+</ul></li>
+
+<li>Sucio (dirty)
+<ul class="org-ul">
+<li>Yo no soy una persona sucia. (I am not a dirty person.)</li>
+<li>Tus zapatos están sucios. (Your shoes are dirty.)</li>
+<li>Su coche está sucio. (His car is dirty.)</li>
+</ul></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgbdf40fe" class="outline-2">
+<h2 id="orgbdf40fe"><span class="section-number-2">3.</span> Top 20 spanish verbs</h2>
+<div class="outline-text-2" id="text-3">
+<ol class="org-ol">
+<li>Ser (To be)
+<ul class="org-ul">
+<li>Yo soy feliz. (I am happy.)</li>
+<li>Tú eres inteligente. (You are intelligent.)</li>
+<li>Él es amable. (He is kind.)</li>
+</ul></li>
+
+<li>Estar (To be)
+<ul class="org-ul">
+<li>Yo estoy cansado. (I am tired.)</li>
+<li>Tú estás en casa. (You are at home.)</li>
+<li>Ella está comiendo. (She is eating.)</li>
+</ul></li>
+
+<li>Tener (To have)
+<ul class="org-ul">
+<li>Yo tengo un libro. (I have a book.)</li>
+<li>Tú tienes la llave. (You have the key.)</li>
+<li>Él tiene un coche. (He has a car.)</li>
+</ul></li>
+
+<li>Hacer (To do/make)
+<ul class="org-ul">
+<li>Yo hago deporte. (I do sports.)</li>
+<li>Tú haces la comida. (You make the food.)</li>
+<li>Ella hace la tarea. (She does the homework.)</li>
+</ul></li>
+
+<li>Decir (To say/tell)
+<ul class="org-ul">
+<li>Yo digo la verdad. (I tell the truth.)</li>
+<li>Tú dices una historia. (You tell a story.)</li>
+<li>Él dice que está bien. (He says it's fine.)</li>
+</ul></li>
+
+<li>Ir (To go)
+<ul class="org-ul">
+<li>Yo voy al cine. (I go to the cinema.)</li>
+<li>Tú vas al mercado. (You go to the market.)</li>
+<li>Ella va a la escuela. (She goes to school.)</li>
+</ul></li>
+
+<li>Ver (To see)
+<ul class="org-ul">
+<li>Yo veo la televisión. (I watch TV.)</li>
+<li>Tú ves un pájaro. (You see a bird.)</li>
+<li>Él ve el mar. (He sees the sea.)</li>
+</ul></li>
+
+<li>Dar (To give)
+<ul class="org-ul">
+<li>Yo doy un regalo. (I give a gift.)</li>
+<li>Tú das consejos. (You give advice.)</li>
+<li>Ella da una manzana. (She gives an apple.)</li>
+</ul></li>
+
+<li>Saber (To know)
+<ul class="org-ul">
+<li>Yo sé la respuesta. (I know the answer.)</li>
+<li>Tú sabes cocinar. (You know how to cook.)</li>
+<li>Él sabe francés. (He knows French.)</li>
+</ul></li>
+
+<li>Poder (To be able to/can)
+<ul class="org-ul">
+<li>Yo puedo correr. (I can run.)</li>
+<li>Tú puedes hablar. (You can speak.)</li>
+<li>Ella puede cantar. (She can sing.)</li>
+</ul></li>
+
+<li>Querer (To want)
+<ul class="org-ul">
+<li>Yo quiero un helado. (I want an ice cream.)</li>
+<li>Tú quieres aprender. (You want to learn.)</li>
+<li>Él quiere jugar. (He wants to play.)</li>
+</ul></li>
+
+<li>Venir (To come)
+<ul class="org-ul">
+<li>Yo vengo a visitarte. (I come to visit you.)</li>
+<li>Tú vienes a la fiesta. (You come to the party.)</li>
+<li>Ella viene a la reunión. (She comes to the meeting.)</li>
+</ul></li>
+
+<li>Pensar (To think)
+<ul class="org-ul">
+<li>Yo pienso en ti. (I think about you.)</li>
+<li>Tú piensas en vacaciones. (You think about holidays.)</li>
+<li>Él piensa en su futuro. (He thinks about his future.)</li>
+</ul></li>
+
+<li>Salir (To leave/go out)
+<ul class="org-ul">
+<li>Yo salgo del trabajo a las seis. (I leave work at six.)</li>
+<li>Tú sales con tus amigos. (You go out with your friends.)</li>
+<li>Ella sale del supermercado. (She leaves the supermarket.)</li>
+</ul></li>
+
+<li>Llegar (To arrive)
+<ul class="org-ul">
+<li>Yo llego a casa a las ocho. (I arrive home at eight.)</li>
+<li>Tú llegas tarde. (You arrive late.)</li>
+<li>Él llega temprano. (He arrives early.)</li>
+</ul></li>
+
+<li>Pasar (To happen/spend time)
+<ul class="org-ul">
+<li>Yo paso el rato leyendo. (I spend time reading.)</li>
+<li>Tú pasas el verano en la playa. (You spend the summer at the beach.)</li>
+<li>Le pasa algo a él. (Something happens to him.)</li>
+</ul></li>
+
+<li>Sentir (To feel)
+<ul class="org-ul">
+<li>Yo siento miedo. (I feel fear.)</li>
+<li>Tú sientes calor. (You feel heat.)</li>
+<li>Él siente tristeza. (He feels sadness.)</li>
+</ul></li>
+
+<li>Crear (To create)
+<ul class="org-ul">
+<li>Yo creo un dibujo. (I create a drawing.)</li>
+<li>Tú creas una canción. (You create a song.)</li>
+<li>Ella crea una historia. (She creates a story.)</li>
+</ul></li>
+
+<li>Comenzar (To begin)
+<ul class="org-ul">
+<li>Yo comienzo a leer el libro. (I begin to read the book.)</li>
+<li>Tú comienzas el trabajo. (You begin the work.)</li>
+<li>Él comienza la partida. (He begins the game.)</li>
+</ul></li>
+
+<li>Hablar (To talk/speak)
+<ul class="org-ul">
+<li>Yo hablo español. (I speak Spanish.)</li>
+<li>Tú hablas con la profesora. (You talk with the teacher.)</li>
+<li>Ella habla por teléfono. (She speaks on the phone.)</li>
+</ul></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Haixun Wang</p>
+<p class="date">Created: 2024-06-02 Sun 10:46</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

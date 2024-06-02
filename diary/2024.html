@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-06-02 Sun 10:47 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="author" content="Haixun Wang" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org0b60929">1. 06/01/2024</a></li>
+<li><a href="#org676ef41">2. 05/31/2024</a></li>
+<li><a href="#orgf321035">3. 05/30/2024</a>
+<ul>
+<li><a href="#org748ac2c">3.1. Discussion w/ Sierra (https://sierra.ai/)</a></li>
+</ul>
+</li>
+<li><a href="#org78c747e">4. 05/26/2024</a>
+<ul>
+<li><a href="#orgb875a73">4.1. Oracle</a></li>
+<li><a href="#org7dd7378">4.2. Trip &amp; Clarice</a></li>
+<li><a href="#org66c9abd">4.3. Oppenheimer</a></li>
+<li><a href="#orgefba80e">4.4. ACM Fellow App</a></li>
+<li><a href="#orgc896c94">4.5. VAE</a></li>
+</ul>
+</li>
+<li><a href="#orgbc05a73">5. 05/25/2024</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0b60929" class="outline-2">
+<h2 id="org0b60929"><span class="section-number-2">1.</span> 06/01/2024</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+The family watched a film titled "Nowhere Special" in our living
+room. The movie, whilst heart-wrenching, depicts the tale of a single
+father who, diagnosed with cancer, is compelled to put his son up for
+adoption. Despite interviewing multiple prospective families, he
+selects a single mother who lost her own baby at a young age and can
+no longer conceive. While I didn't verify, it seemingly presents as a
+low-budget production. Nonetheless, the tangible struggle, profound
+love, and palpable helplessness conveyed in the movie resonated as
+remarkably authentic.
+</p>
+
+<p>
+Additionally, Ruru is departing for NYC the next day. It will be some
+time before we can indulge in a movie night. There's a touch of
+melancholy associated with this, but perhaps the movie brought some
+relief. After all, it serves as a reminder that there are, indeed,
+greater sorrows in life.
+</p>
+
+
+<div id="org5bd331c" class="figure">
+<p><img src="./img/nowherespecial.jpg" alt="nowherespecial.jpg" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org676ef41" class="outline-2">
+<h2 id="org676ef41"><span class="section-number-2">2.</span> 05/31/2024</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+I attended a Zoom meeting with Carlo's students to commemorate his
+80th birthday—a full decade after we celebrated his 70th birthday at
+UCLA.
+</p>
+
+<p>
+Despite repeated comments noting little change in him, it's clear to
+me that he has indeed aged. I perceived a potential desire in him to
+address these comments, perhaps to mention his health concerns, but he
+chose not to. Aging is a very sad aspect of life, and I cannot help
+but imagine the much worse situation of myself in 30 years, should I
+still be here.
+</p>
+
+<p>
+The thought of visiting him in LA has crossed my mind, however, my
+desire to do so is not particularly strong. Fundamentally, I'm not
+very close to him, but it might be my issue. I am not close to
+anybody.
+</p>
+
+
+<div id="orge824449" class="figure">
+<p><img src="./img/carlo80.png" alt="carlo80.png" />
+</p>
+</div>
+
+<p>
+The day was unexpectedly sunny following persistent gloomy weather. I
+had reserved a table for three at Le Grand Bistro American for 7:30pm,
+anticipating a sunset view. However, we were seated indoors by the
+waiter. None of us complained because of the lingering outdoor
+chilliness.  The food was satisfactory but not impressive. After
+dinner, we took a brief stroll by the water, during which, Ruru
+amusingly pretended to play piano on a covered Yamaha-branded boat.
+</p>
+
+
+<div id="org6203987" class="figure">
+<p><img src="./img/ruruyamaha.jpg" alt="ruruyamaha.jpg" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf321035" class="outline-2">
+<h2 id="orgf321035"><span class="section-number-2">3.</span> 05/30/2024</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org748ac2c" class="outline-3">
+<h3 id="org748ac2c"><span class="section-number-3">3.1.</span> Discussion w/ Sierra (<a href="https://sierra.ai/">https://sierra.ai/</a>)</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>Clay Bavor (co-founder)</li>
+<li>elevate your customer experience w/ a trusted conversational ai platform</li>
+<li>fundamentally transform business</li>
+<li>customer service</li>
+<li>very complex reasoning</li>
+<li>sonar reasoning?</li>
+<li>hired princeton professor who worked on REACT paper</li>
+<li>70% customer increase, CSAT increase</li>
+<li>devised a programming language to compose skills
+dial determinism to 10??</li>
+<li>headless API?</li>
+<li>AI agents represent a new type of software</li>
+<li>Step 1: RAG - "how can i add an item to an existing order?" (no training/fine-tuning models), low ceiling</li>
+<li>more complex knowledge base -&gt; multiple articles, Sonas??? working memory</li>
+<li>Step 2: "I am missing something from my last order" -&gt; i did not get the blueberries</li>
+<li>business logic??</li>
+</ul>
+
+<p>
+you mentioned a programming language to compose skills &#x2026; how to compose? natural language? how much customization
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org78c747e" class="outline-2">
+<h2 id="org78c747e"><span class="section-number-2">4.</span> 05/26/2024</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orgb875a73" class="outline-3">
+<h3 id="orgb875a73"><span class="section-number-3">4.1.</span> Oracle</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+I had a chat with Jun Qian of Oracle for 2.5 hours at a Panera place
+in Factoria. Dan Roth has joined, which complicates things, and they
+have a few other candidates. Overall, not clear if it's a good choice,
+but just like many other choices, it's hard to tell.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7dd7378" class="outline-3">
+<h3 id="org7dd7378"><span class="section-number-3">4.2.</span> Trip &amp; Clarice</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+I'm still bothered with the American Airline ticket situation - we
+have over $13,000 credit with AA but seems can only be used to book AA
+tickets to UK. I'm also not sure if Clarice made the right choice
+about her internship, i.e., whether she should've stayed with UIUC to
+learn the hardcore of ML instead of going to Celonois where she
+probably won't learn much in the summer. Yongjian said I'm
+overthinking, which could be true.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org66c9abd" class="outline-3">
+<h3 id="org66c9abd"><span class="section-number-3">4.3.</span> Oppenheimer</h3>
+<div class="outline-text-3" id="text-4-3">
+<p>
+The family watched "Oppenheimer" in the living room - an impressive
+film. It provoked several thoughts. Firstly, it displayed how people
+worked on significant projects, although they were used for
+destructive purposes. This leads to a question: what are the most
+meaningful projects to work on today? Could it be AI in science? What
+could be my contribution in this field? Secondly, it showed that
+technology is never primary; the driving force is always business,
+politics, or products.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgefba80e" class="outline-3">
+<h3 id="orgefba80e"><span class="section-number-3">4.4.</span> ACM Fellow App</h3>
+<div class="outline-text-3" id="text-4-4">
+<p>
+I wrote a 750 word draft. Still waiting for David Lomet and Phil
+Bernstein's endorsements.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc896c94" class="outline-3">
+<h3 id="orgc896c94"><span class="section-number-3">4.5.</span> VAE</h3>
+<div class="outline-text-3" id="text-4-5">
+<p>
+I have been continually pondering this simple formula
+</p>
+
+<p>
+\[ P(X) = \int P(X|z; \theta) P(z) dz\]
+</p>
+
+<p>
+in the setting of variational autoencoder (VAE).
+</p>
+
+<p>
+Here we have
+</p>
+
+<p>
+\(P(X|z;\theta)  = \mathcal{N}(X|f(z, \theta), \delta^2 * I)\)
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbc05a73" class="outline-2">
+<h2 id="orgbc05a73"><span class="section-number-2">5.</span> 05/25/2024</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+I've decided to begin keeping a diary, the purpose of which, I
+believe, is to remain candid with myself. This notion partly came from
+a post I saw on LinkedIn or Twitter. It seems worth reflecting upon daily.
+</p>
+
+
+<div id="org9c5b115" class="figure">
+<p><img src="./img/10habits.png" alt="10habits.png" />
+</p>
+</div>
+
+<p>
+Today, I accomplished several tasks:
+</p>
+
+<p>
+a) I requested endorsements from four individuals for my ACM Fellow
+application, an issue I've too long delayed. As of now, I've received
+responses from Jiawei and Beng Chin.
+</p>
+
+<p>
+b) Had a conversation with Alon about my decision regarding HKUST and
+my ACM Fellow application. He is truly kind-hearted, and I need to
+consider an appropriate way to express my gratitude.
+</p>
+
+<p>
+c) I started on my ACM application and began documenting my
+contributions, but progress has been slow due to my lack of focus.
+</p>
+
+<p>
+Additionally, I spent the morning with my family visiting the Issaquah
+Farmer's Market and Costco. We also stopped by to see the local
+attraction known as "Jakob Two Trees, Issaquah's Troll." Clarice had
+already been there on her longboard, so she was our guide. We took a
+few pictures - it was a trip worth making.
+</p>
+
+<p>
+We also had a conversation about Clarice's reading habits. Her
+literary skills don't match mine, which is somewhat disheartening.
+</p>
+
+<p>
+Unfortunately, I'm still dealing with a lingering cough and a runny
+nose, hindering my full recovery.
+</p>
+
+
+<div id="org00a7056" class="figure">
+<p><img src="./img/troll-issaquah.jpg" alt="troll-issaquah.jpg" />
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Haixun Wang</p>
+<p class="date">Created: 2024-06-02 Sun 10:47</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
