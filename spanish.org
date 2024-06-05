@@ -1,10 +1,3 @@
-* Difference between coche and carro
-
-"Coche" and "Carro" both translate to "car" in English. However, the
-usage varies based on region. In Spain, "coche" is commonly used,
-while in Latin America, "carro" is more prevalent. So the difference
-between them is mainly regional.
-
 * Top 20 Spanish adjectives
 
 1. Bueno (good)
@@ -26,6 +19,21 @@ between them is mainly regional.
    - Yo tengo una pequeña idea. (I have a small idea.)
    - Tienes un pequeño problema. (You have a small problem.)
    - Ella tiene un perro pequeño. (She has a small dog.)
+
+In Spanish, adjectives generally follow the noun. However, some
+adjectives can be placed before the noun, changing the emphasis or
+sometimes the meaning.
+
+When "pequeño" follows the noun (perro pequeño), it's a descriptive,
+objective fact - the dog is small.
+
+When "pequeño" comes before the noun (pequeña idea, pequeño problema),
+it often adds a subjective or emotional nuance, for example, implying
+the idea is modest or the problem is not so significant. Placement
+before the noun can be more idiomatic or poetic, making the phrase
+more expressive than just a plain fact.
+
+Exceptions and nuances do exist, and usage can depend on regions and individual expression.
 
 5. Joven (young)
    - Yo soy joven. (I am young.)
@@ -208,3 +216,119 @@ between them is mainly regional.
     - Yo hablo español. (I speak Spanish.)
     - Tú hablas con la profesora. (You talk with the teacher.)
     - Ella habla por teléfono. (She speaks on the phone.)
+
+* Top 10 quotes 
+
+- Miguel de Cervantes: A renowned Spanish writer, best known for his
+  classic novel "Don Quixote," which is considered one of the greatest
+  works of fiction ever written.
+- Quote: "El que lee mucho y anda mucho, ve mucho y sabe mucho."
+- Translation: "He who reads much and walks much, sees much and knows
+  much."
+
+- Pablo Picasso: A famous Spanish painter, sculptor, and co-founder of
+  the Cubist movement, whose works include "Guernica" and "Les
+  Demoiselles d'Avignon."
+- Quote: "La inspiración existe, pero tiene que encontrarte
+  trabajando."
+- Translation: "Inspiration exists, but it has to find you working."
+
+- Federico García Lorca: A Spanish poet, playwright, and theatre
+  director, known for his works such as "Romancero Gitano" and "Bodas
+  de sangre."
+- Quote: "La poesía no quiere adeptos, quiere amantes."
+- Translation: "Poetry does not want followers, it wants lovers."
+
+- Antonio Machado: A Spanish poet and one of the leading figures of
+  the Generation of '98, known for his works "Campos de Castilla" and
+  "Soledades."
+- Quote: "Caminante, no hay camino, se hace camino al andar."
+- Translation: "Traveler, there is no path, you make the path as you
+  walk."
+
+- Salvador Dalí: A prominent Spanish surrealist artist, famous for his
+  striking and bizarre images in his work, including "The Persistence
+  of Memory."
+- Quote: "La única diferencia entre un loco y yo es que yo no estoy
+  loco."
+- Translation: "The only difference between a madman and me is that I
+  am not mad."
+
+- Luis Buñuel: A Spanish filmmaker known for his work in surrealist
+  cinema, with notable films like "Un Chien Andalou" and "The Discreet
+  Charm of the Bourgeoisie."
+- Quote: "La memoria es un campo fértil para la creación."
+- Translation: "Memory is a fertile field for creation."
+
+- Javier Marías: A contemporary Spanish author, translator, and
+  columnist, known for his novels such as "A Heart So White" and
+  "Tomorrow in the Battle Think on Me."
+- Quote: "La vida no es más que una sombra que pasa."
+- Translation: "Life is nothing but a passing shadow."
+
+- Pedro Almodóvar: An acclaimed Spanish film director, screenwriter,
+  and producer, known for films like "Talk to Her," "All About My
+  Mother," and "Volver."
+- Quote: "Para que el arte sea inmortal, debe estar lleno de olvido."
+- Translation: "For art to be immortal, it must be full of
+  forgetfulness."
+
+- Rosalía de Castro: A significant Galician romanticist writer and
+  poet of the 19th century, noted for her poetry collections "Cantares
+  gallegos" and "Follas novas."
+- Quote: "Dicen que no hablan las plantas, ni las fuentes, ni los
+  pájaros."
+- Translation: "They say that plants, fountains, and birds do not
+  speak."
+
+- Concha Buika: A contemporary Spanish singer known for her fusion of
+  flamenco, jazz, and soul, with albums like "Niña de Fuego" and "El
+  Último Trago."
+- Quote: "No se puede vivir sin amor, pero tampoco se puede vivir sin
+  libertad."
+- Translation: "You can't live without love, but you can't live
+  without freedom either."
+
+These individuals have made significant contributions to Spanish
+culture and their quotes reflect their profound thoughts and artistic
+sensibilities.
+
+* Top 10 quotes from Gabriel Garcia Marquez
+
+1. "La sabiduría nos llega cuando ya no sirve de nada."
+   Translation: "Wisdom comes to us when it's already too late."
+
+2. "Recordar es fácil para el que tiene memoria. Olvidar es difícil para quien tiene corazón."
+   Translation: "To remember is easy for those who have memory. To forget is hard for those who have heart."
+
+3. "Nadie merece tus lágrimas, y quien las merezca no te hará llorar."
+   Translation: "Nobody deserves your tears, and whoever deserves them won't make you cry."
+
+4. "No hay medicina que cure lo que no cura la felicidad."
+   Translation: "There is no medicine that cures what happiness does not."
+
+5. "El secreto de una buena vejez no es otra cosa que un pacto honrado con la soledad."
+   Translation: "The secret to a good old age is nothing more than an honest pact with solitude."
+   
+6. "La vida no es sino una continua sucesión de oportunidades para sobrevivir."
+   Translation: "Life is nothing more than a continuous succession of opportunities to survive."
+
+7. "El amor se hace más grande y noble en la calamidad."
+   Translation: "Love becomes greater and nobler in calamity."
+
+8. "Lo único que me duele de morir, es que no es de amor."
+   Translation: "The only thing that makes me sad about dying, is that it's not out of love."
+
+9. "La peor forma de extrañar a alguien es estar sentado a su lado y saber que nunca lo podrás tener."
+   Translation: "The worst way to miss someone is to be seated by their side and know you can never have them."
+
+10. "En realidad, el único momento de la vida en que me siento yo mismo es cuando estoy con mis amigos."
+   Translation: "Actually, the only time in life when I feel myself is when I'm with my friends." 
+
+* Difference between coche and carro
+
+"Coche" and "Carro" both translate to "car" in English. However, the
+usage varies based on region. In Spain, "coche" is commonly used,
+while in Latin America, "carro" is more prevalent. So the difference
+between them is mainly regional.
+

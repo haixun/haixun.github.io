@@ -1,3 +1,36 @@
+* 06/04/2024
+
+Today marks the 35th anniversary of the June 4 Tiananmen
+massacre. Numerous questions about what happened on that day still
+persist. But 35 years later, the only emotion it evokes in me is
+nostalgia. I reminisce about a young man, just 17 years old then. The
+fact that he was on the streets protesting carries no
+significance. What stirs in me is his youth. Every year, the world
+commerates the event, and each time, it brings a visualization of my
+17-year-old self, and it whispers to me, "you were so young then."
+
+#+CAPTION: Hotel view
+#+ATTR_ORG: :width 400
+[[./img/sfview.jpg]]
+
+#+CAPTION: Dinner at Restaurant Aizu
+#+ATTR_ORG: :width 400
+[[./img/aizudinner.jpg]]
+
+I'm in San Francisco today. The city's landscape is beautifully framed
+from my room in the Hilton Union Square, with a distant waterfront
+view. I spent the day at the office for the Carrot AI jam, but I can't
+shake off the feeling of life slipping away unexploited. Li Tan shared
+his idea for a startup company with me. I can't tell it's a good idea
+or not, but I see clearly it's an example of not wasting one's life.
+
+* 06/02/2024
+
+We sent off Ruru to NYC today, with her goose and longboard. Feeling
+happy for her to spend 10 weeks in NYC with a nice company. Not sure
+how much she can learn over there. Also, the relationship with Fellows
+Fund is worrisome.
+
 * 06/01/2024
 
 The family watched a film titled "Nowhere Special" in our living
@@ -73,7 +106,6 @@ amusingly pretended to play piano on a covered Yamaha-branded boat.
 - business logic??
 
 you mentioned a programming language to compose skills ... how to compose? natural language? how much customization
-
 
 * 05/26/2024
 
