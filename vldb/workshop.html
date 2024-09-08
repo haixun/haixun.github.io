@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)https://ceur-ws.org/Vol-3462/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="./workshop_files/ceur-ws.css">
+<title>CEUR-WS.org/Vol-3462 - Workshops at 49th International Conference on Very Large Data Bases (VLDBW-2023)</title>
+<style type="text/css">
+    @font-face{font-family:"Roboto";src:url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Roboto/roboto-100.woff) format("woff"),url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Roboto/roboto-100.woff2) format("woff2"),url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Roboto/roboto-100.ttf) format("truetype");font-style:normal;font-weight:100;font-display:swap}@font-face{font-family:"Roboto";src:url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Roboto/roboto-300.woff) format("woff"),url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Roboto/roboto-300.woff2) format("woff2"),url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Roboto/roboto-300.ttf) format("truetype");font-style:normal;font-weight:300;font-display:swap}@font-face{font-family:"Roboto";src:url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Roboto/roboto-400.woff) format("woff"),url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Roboto/roboto-400.woff2) format("woff2"),url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Roboto/roboto-400.ttf) format("truetype");font-style:normal;font-weight:400;font-display:swap}@font-face{font-family:"Roboto";src:url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Roboto/roboto-500.woff) format("woff"),url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Roboto/roboto-500.woff2) format("woff2"),url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Roboto/roboto-500.ttf) format("truetype");font-style:normal;font-weight:500;font-display:swap}@font-face{font-family:"Roboto";src:url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Roboto/roboto-700.woff) format("woff"),url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Roboto/roboto-700.woff2) format("woff2"),url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Roboto/roboto-700.ttf) format("truetype");font-style:normal;font-weight:700;font-display:swap}@font-face{font-family:"Roboto";src:url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Roboto/roboto-900.woff) format("woff"),url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Roboto/roboto-900.woff2) format("woff2"),url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Roboto/roboto-900.ttf) format("truetype");font-style:normal;font-weight:900;font-display:swap}@font-face{font-family:"Rebond";src:url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Rebond/rebond-400.woff) format("woff"),url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Rebond/rebond-400.woff2) format("woff2"),url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Rebond/rebond-400.ttf) format("truetype");font-style:normal;font-weight:400;font-display:swap}@font-face{font-family:"Rebond";src:url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Rebond/rebond-500.woff) format("woff"),url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Rebond/rebond-500.woff2) format("woff2"),url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Rebond/rebond-500.ttf) format("truetype");font-style:normal;font-weight:500;font-display:swap}@font-face{font-family:"Rebond";src:url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Rebond/rebond-600.woff) format("woff"),url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Rebond/rebond-600.woff2) format("woff2"),url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Rebond/rebond-600.ttf) format("truetype");font-style:normal;font-weight:600;font-display:swap}@font-face{font-family:"Rebond";src:url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Rebond/rebond-700.woff) format("woff"),url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Rebond/rebond-700.woff2) format("woff2"),url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Rebond/rebond-700.ttf) format("truetype");font-style:normal;font-weight:700;font-display:swap}
+    #__wikibuy__ .__wikibuy.__onTop,body~div:not(#gdx-bubble-host),#piggyWrapper,#honeyContainer,#earny-root{position:absolute !important;z-index:100000 !important}.mm-slideout{z-index:initial}.sorry-for-this__empty-styles{position:relative;z-index:10000}
+    #cfifcbdebgbdfieabegadcbadhgaadbb div:empty {
+      display: block !important;
+    }
+  </style><style data-styled="active" data-styled-version="5.3.9">.dWTrLf{visibility:hidden;}.igvzJt{font-family:roboto;font-weight:100;}.igvzJr{font-family:roboto;font-weight:300;}.igvzJo{font-family:roboto;font-weight:400;}.igvzJp{font-family:roboto;font-weight:500;}.igvzJn{font-family:roboto;font-weight:700;}.igvzJl{font-family:roboto;font-weight:900;}.uAvZv{font-family:rebond;font-weight:400;}.uAvZu{font-family:rebond;font-weight:500;}.uAvZx{font-family:rebond;font-weight:600;}.uAvZw{font-family:rebond;font-weight:700;}</style></head>
+<!--CEURLANG=eng -->
+<body>
+
+<table style="border: 0; border-spacing: 0; border-collapse: collapse; width: 95%">
+   <tbody><tr>
+   <td style="text-align: left; vertical-align: middle">
+   <a href="https://ceur-ws.org/"><div id="CEURWSLOGO"></div></a>
+   </td>
+   <td style="text-align: right; vertical-align: middle">
+   <div style="float:left" id="CEURCCBY"></div>
+   <span class="CEURVOLNR">Vol-3462</span> <br>
+   <span class="CEURURN">urn:nbn:de:0074-3462-7</span>
+   <p class="unobtrusive copyright" style="text-align: justify">Copyright © 2023 for 
+   the individual papers by the papers' authors. 
+   Copyright © <span class="CEURPUBYEAR">2023</span> for the volume
+   as a collection by its editors.
+   This volume and its papers are published under the
+   Creative Commons License Attribution 4.0 International
+   <a href="https://creativecommons.org/licenses/by/4.0/">(<span class="CEURLIC">CC BY 4.0</span>)</a>.</p>
+   </td>
+   </tr>
+   </tbody>
+</table>
+
+<hr>
+
+<br><br><br>
+<a href="https://vldb.org/2023/"><img alt="VLDB 2023" src="./workshop_files/VLDB23_logo.png" height="100"></a>
+<h1><a href="https://vldb.org/2023/?program-schedule-workshops"><span class="CEURVOLACRONYM">VLDBW 2023</span></a><br>
+<span class="CEURVOLTITLE">Workshops at VLDB 2023</span></h1>
+<br>
+
+
+<h3>
+<span class="CEURFULLTITLE">Joint Proceedings of Workshops at the 49th International Conference on Very Large Data Bases</span>
+(<span class="CEURCOLOCATED">VLDB 2023</span>)<br>
+</h3>
+<h3><span class="CEURLOCTIME">Vancouver, Canada, August 28 - September 1, 2023</span>.</h3> 
+
+<br>
+<b> Edited by </b>
+<p>
+</p>
+
+<!-- <h3>
+   <i>VLDB 2023 Workshops Chairs and Workshops Proceedings Chairs</i><br><br>
+   <a href="https://www.win.tue.nl/~gfletche/"><span class="CEURVOLEDITOR">George Fletcher</span></a>, <a href="https://www.tue.nl">Eindhoven University of Technology</a>, The Netherlands<br>
+   <a href="https://www.verenakantere.com "><span class="CEURVOLEDITOR">Verena Kantere</span></a>, <a href="https://www.ntua.gr">NTUA</a>, Greece<br>
+</h3> -->
+        
+<h3>
+   <i>Program Chairs of VLDB 2023 Joint Workshops</i>
+</h3>
+
+   <span class="CEURVOLEDITOR">Rajesh Bordawekar</span>, IBM T.J. Watson Research Center, USA<br>
+   <span class="CEURVOLEDITOR">Cinzia Cappiello</span>, Politecnico di Milano, Italy<br>
+   <span class="CEURVOLEDITOR">Vasilis Efthymiou</span>, University of Crete, Greece<br>
+   <span class="CEURVOLEDITOR">Lisa Ehrlinger</span>, Software Competence Center Hagenberg GmbH, Austria<br>
+   <span class="CEURVOLEDITOR">Vijay Gadepally</span>, Massachusetts Institute of Technology, USA<br>
+   <span class="CEURVOLEDITOR">Sainyam Galhotra</span>, Cornell University, USA<br>
+   <span class="CEURVOLEDITOR">Sandra Geisler</span>, RWTH Aachen University and Fraunhofer Institute for Applied Information Technology FIT, Germany<br>
+   <span class="CEURVOLEDITOR">Sven Groppe</span>, University of Lübeck, Germany<br>
+   <span class="CEURVOLEDITOR">Le Gruenwald</span>, University of Oklahoma, USA<br>
+   <span class="CEURVOLEDITOR">Alon Halevy</span>, Meta, USA<br>
+   <span class="CEURVOLEDITOR">Hazar Harmouch</span>, Hasso Plattner Institute, University of Potsdam, Germany<br>
+   <span class="CEURVOLEDITOR">Oktie Hassanzadeh</span>, IBM T.J. Watson Research Center, USA<br>
+   <span class="CEURVOLEDITOR">Ihab Ilyas</span>, Apple, University of Waterloo, USA<br>
+   <span class="CEURVOLEDITOR">Ernesto Jiménez-Ruiz</span>, University of London, UK<br>
+   <span class="CEURVOLEDITOR">Sanjay Krishnan</span>, University of Chicago, USA<br>
+   <span class="CEURVOLEDITOR">Tirthankar Lahiri</span>, Oracle, USA<br>
+   <span class="CEURVOLEDITOR">Guoliang Li</span>, Tsinghua University, China<br>
+   <span class="CEURVOLEDITOR">Jiaheng Lu</span>, University of Helsinki, Finland<br>
+   <span class="CEURVOLEDITOR">Wolfgang Mauerer</span>, Technical University of Applied Science Regensburg, Germany<br>
+   <span class="CEURVOLEDITOR">Umar Farooq Minhas</span>, Apple, USA<br>
+   <span class="CEURVOLEDITOR">Felix Naumann</span>, Hasso Plattner Institute, University of Potsdam, Germany<br>
+   <span class="CEURVOLEDITOR">M. Tamer Özsu</span>, University of Waterloo, Canada<br>
+   <span class="CEURVOLEDITOR">El Kindi Rezig</span>, University of Utah, USA<br>
+   <span class="CEURVOLEDITOR">Kavitha Srinivas</span>, IBM Research, USA<br>
+   <span class="CEURVOLEDITOR">Michael Stonebraker</span>, Massachusetts Institute of Technology, USA<br>
+   <span class="CEURVOLEDITOR">Satyanarayana R Valluri</span>, Databricks, USA<br>
+   <span class="CEURVOLEDITOR">Maria-Esther Vidal</span>, TIB-Leibniz Information Centre for Science and Technology and Leibniz University of Hannover, Germany<br>
+   <span class="CEURVOLEDITOR">Haixun Wang</span>, Instacart, USA<br>
+   <span class="CEURVOLEDITOR">Jiannan Wang</span>, Simon Fraser University, Canada<br>
+   <span class="CEURVOLEDITOR">Yingjun Wu</span>, RisingWave Labs, USA<br>
+   <span class="CEURVOLEDITOR">Xun Xue</span>, Huawei Technologies Canada, Canada<br>
+   <span class="CEURVOLEDITOR">Mohamed Zait</span>, Databricks, USA<br>
+   <span class="CEURVOLEDITOR">Kai Zeng</span>, Huawei, China<br>
+
+<br><br>
+
+<hr>
+
+<br><br><br>
+
+
+<div class="CEURTOC">
+<h2> Table of Contents </h2>
+<br>
+
+
+<h3><span class="CEURSESSION">14th International Workshop on Accelerating Analytics and Data Management Systems Using Modern Processors and Storage Architectures (ADMS)</span></h3>
+
+<ul>
+   <li id="ADMS1"><a href="https://ceur-ws.org/Vol-3462/ADMS1.pdf">
+   <span class="CEURTITLE">Post-Moore’s Law Fusion: High-Bandwidth Memory, Accelerators, and Native Half-Precision Processing for CPU-Local Analytics</span></a><br>
+   <span class="CEURAUTHOR">Viktor Sanca</span>,
+   <span class="CEURAUTHOR">Anastasia Ailamaki</span>
+   </li>
+   <li id="ADMS2"><a href="https://ceur-ws.org/Vol-3462/ADMS2.pdf">
+   <span class="CEURTITLE">An Intermediate Representation for Composable Typed Streaming Dataflow Designs</span></a><br>
+   <span class="CEURAUTHOR">Matthijs A. Reukers</span>,
+   <span class="CEURAUTHOR">Yongding Tian</span>,
+   <span class="CEURAUTHOR">Zaid Al-Ars</span>,
+   <span class="CEURAUTHOR">Peter Hofstee</span>,
+   <span class="CEURAUTHOR">Matthijs Brobbel</span>,
+   <span class="CEURAUTHOR">Johan Peltenburg</span>,
+   <span class="CEURAUTHOR">Jeroen van Straten</span>
+   </li>
+   <li id="ADMS3"><a href="https://ceur-ws.org/Vol-3462/ADMS3.pdf">
+   <span class="CEURTITLE">Towards MRAM Byte-Addressable Persistent Memory in Edge Database Systems</span></a><br>
+   <span class="CEURAUTHOR">Luís Meruje Ferreira</span>,
+   <span class="CEURAUTHOR">Fábio Coelho</span>,
+   <span class="CEURAUTHOR">José Orlando Pereira</span>
+   </li>
+   <li id="ADMS4"><a href="https://ceur-ws.org/Vol-3462/ADMS4.pdf">
+   <span class="CEURTITLE">Exploiting Code Generation for Efficient LIKE Pattern Matching</span></a><br>
+   <span class="CEURAUTHOR">Adrian Riedl</span>,
+   <span class="CEURAUTHOR">Philipp Fent</span>,
+   <span class="CEURAUTHOR">Maximilian Bandle</span>,
+   <span class="CEURAUTHOR">Thomas Neumann</span>
+   </li>
+   <li id="ADMS5"><a href="https://ceur-ws.org/Vol-3462/ADMS5.pdf">
+   <span class="CEURTITLE">Evaluating SIMD Compiler-Intrinsics for Database Systems</span></a><br>
+   <span class="CEURAUTHOR">Lawrence Benson</span>,
+   <span class="CEURAUTHOR">Richard Ebeling</span>,
+   <span class="CEURAUTHOR">Tilmann Rabl</span>
+   </li>
+   <li id="ADMS6"><a href="https://ceur-ws.org/Vol-3462/ADMS6.pdf">
+   <span class="CEURTITLE">GAMUT: Matrix Multiplication-Like Tasks on GPUs</span></a><br>
+   <span class="CEURAUTHOR">Xincheng Xie</span>,
+   <span class="CEURAUTHOR">Junyoung Kim</span>,
+   <span class="CEURAUTHOR">Kenneth Ross</span>
+   </li>
+   <li id="ADMS7"><a href="https://ceur-ws.org/Vol-3462/ADMS7.pdf">
+   <span class="CEURTITLE">ByteGAP: A Non-continuous Distributed Graph Computing System using Persistent Memory</span></a><br>
+   <span class="CEURAUTHOR">Miaomiao Cheng</span>,
+   <span class="CEURAUTHOR">Jiujian Chen</span>,
+   <span class="CEURAUTHOR">Cheng Zhao</span>,
+   <span class="CEURAUTHOR">Cheng Chen</span>,
+   <span class="CEURAUTHOR">Yongmin Hu</span>,
+   <span class="CEURAUTHOR">Xiaoliang Cong</span>,
+   <span class="CEURAUTHOR">Liang Qin</span>,
+   <span class="CEURAUTHOR">Hexiang Lin</span>,
+   <span class="CEURAUTHOR">Rong Hua Li</span>,
+   <span class="CEURAUTHOR">Guoren Wang</span>,
+   <span class="CEURAUTHOR">Shuai Zhang</span>,
+   <span class="CEURAUTHOR">Lei Zhang</span>
+   </li>
+</ul>
+
+<h3><span class="CEURSESSION">5th Applied AI for Database Systems and Applications (AIDB)</span></h3>
+
+<ul>
+   <li id="AIDB1"><a href="https://ceur-ws.org/Vol-3462/AIDB1.pdf">
+   <span class="CEURTITLE">COOOL: A Learning-To-Rank Approach for SQL Hint Recommendations </span></a><br>
+   <span class="CEURAUTHOR">Xianghong Xu</span>,
+   <span class="CEURAUTHOR">Zhibing Zhao</span>,
+   <span class="CEURAUTHOR">Tieying Zhang</span>,
+   <span class="CEURAUTHOR">Rong Kang</span>,
+   <span class="CEURAUTHOR">Luming Sun</span>,
+   <span class="CEURAUTHOR">Jianjun Chen</span>
+   </li>
+   <li id="AIDB2"><a href="https://ceur-ws.org/Vol-3462/AIDB2.pdf">
+   <span class="CEURTITLE">Improving K-means Clustering Using Speculation</span></a><br>
+   <span class="CEURAUTHOR">Stefan Igescu</span>,
+   <span class="CEURAUTHOR">Viktor Sanca</span>,
+   <span class="CEURAUTHOR">Eleni Zapridou</span>,
+   <span class="CEURAUTHOR">Anastasia Ailamaki</span>
+   </li>
+   <li id="AIDB3"><a href="https://ceur-ws.org/Vol-3462/AIDB3.pdf">
+   <span class="CEURTITLE">DBMLSched: Scheduling In-database Machine Learning Jobs</span></a><br>
+   <span class="CEURAUTHOR">Yunjia Zheng</span>,
+   <span class="CEURAUTHOR">Yuxuan Tian</span>,
+   <span class="CEURAUTHOR">Joseph V. D’Silva</span>,
+   <span class="CEURAUTHOR">Bettina Kemme</span>
+   </li>
+   <li id="AIDB4"><a href="https://ceur-ws.org/Vol-3462/AIDB4.pdf">
+   <span class="CEURTITLE">CorBit: Leveraging Correlations for Compressing Bitmap Indexes</span></a><br>
+   <span class="CEURAUTHOR">Xi Lyu</span>,
+   <span class="CEURAUTHOR">Andreas Kipf</span>,
+   <span class="CEURAUTHOR">Pascal Pfeil</span>,
+   <span class="CEURAUTHOR">Dominik Horn</span>,
+   <span class="CEURAUTHOR">Jana Giceva</span>,
+   <span class="CEURAUTHOR">Tim Kraska</span>
+   </li>
+   <li id="AIDB5"><a href="https://ceur-ws.org/Vol-3462/AIDB5.pdf">
+   <span class="CEURTITLE">Learned Query Superoptimization</span></a><br>
+   <span class="CEURAUTHOR">Ryan Marcus</span>
+   </li>
+   <li id="AIDB6"><a href="https://ceur-ws.org/Vol-3462/AIDB6.pdf">
+   <span class="CEURTITLE">Towards Adaptive Fault-Tolerant Sharded Databases</span></a><br>
+   <span class="CEURAUTHOR">Bhavana Mehta</span>,
+   <span class="CEURAUTHOR">Neelesh C A</span>,
+   <span class="CEURAUTHOR">Prashanth S Iyer</span>,
+   <span class="CEURAUTHOR">Mohammad Javad Amiri</span>,
+   <span class="CEURAUTHOR">Boon Thau Loo</span>,
+   <span class="CEURAUTHOR">Ryan Marcus</span>
+   </li>
+</ul>
+
+
+<h3><span class="CEURSESSION">2nd International Workshop on Composable Data Management Systems 2023 (CDMS)</span></h3>
+
+<ul>
+   <li id="CDMS0"><a href="https://ceur-ws.org/Vol-3462/CDMS0.pdf">
+   <span class="CEURTITLE">Preface CDMS</span></a><br>
+   <span class="CEURAUTHOR">Satyanarayana R Vallur</span>,
+   <span class="CEURAUTHOR">Mohamed Zait</span>
+   </li>
+   <li id="CDMS1"><a href="https://ceur-ws.org/Vol-3462/CDMS1.pdf">
+      <span class="CEURTITLE">Horizons of Composability</span></a><br>
+      <span class="CEURAUTHOR">Orri Erling</span>
+   </li>
+   <li id="CDMS2"><a href="https://ceur-ws.org/Vol-3462/CDMS2.pdf">
+      <span class="CEURTITLE">Unbundling of the DBMS stack</span></a><br>
+      <span class="CEURAUTHOR">Mosha Pasumansky</span>,
+      <span class="CEURAUTHOR">Benjamin Wagner</span>
+   </li>
+   <li id="CDMS3"><a href="https://ceur-ws.org/Vol-3462/CDMS3.pdf">
+      <span class="CEURTITLE">Hybrid Query Execution; What is a database client, anyway?</span></a><br>
+      <span class="CEURAUTHOR">Jordan Tigani</span>
+   </li>
+   <li id="CDMS4"><a href="https://ceur-ws.org/Vol-3462/CDMS4.pdf">
+      <span class="CEURTITLE">Taking Postgres into the 21st Century</span></a><br>
+      <span class="CEURAUTHOR">Nikita Shamgunov</span>
+   </li>
+   <li id="CDMS5"><a href="https://ceur-ws.org/Vol-3462/CDMS5.pdf">
+      <span class="CEURTITLE">Innovating with Storage Formats to Push The Limits in A Hybrid Database</span></a><br>
+      <span class="CEURAUTHOR">Eugene Kogan</span>
+   </li>
+   <li id="CDMS6"><a href="https://ceur-ws.org/Vol-3462/CDMS6.pdf">
+      <span class="CEURTITLE">Holistic Extensibility for Integrated Data Analysis Pipelines in DAPHNE (Invited Talk)</span></a><br>
+      <span class="CEURAUTHOR">Patrick Damme</span>
+   </li>
+   <li id="CDMS7"><a href="https://ceur-ws.org/Vol-3462/CDMS7.pdf">
+      <span class="CEURTITLE">Relation-Based In-Database Stream Processing</span></a><br>
+      <span class="CEURAUTHOR">Christian Winter</span>,
+      <span class="CEURAUTHOR">Thomas Neumann</span>,
+      <span class="CEURAUTHOR">Alfons Kemper</span>
+   </li>
+   <li id="CDMS8"><a href="https://ceur-ws.org/Vol-3462/CDMS8.pdf">
+      <span class="CEURTITLE">The Gluten Open-Source Software Project: Modernizing Java-based Query Engines for the Lakehouse Era</span></a><br>
+      <span class="CEURAUTHOR">Akash Shankaran</span>,
+      <span class="CEURAUTHOR">George Gu</span>,
+      <span class="CEURAUTHOR">Weiting Chen</span>,
+      <span class="CEURAUTHOR">Binwei Yang</span>,
+      <span class="CEURAUTHOR">Chidamber Kulkarni</span>,
+      <span class="CEURAUTHOR">Mark Rambacher</span>,
+      <span class="CEURAUTHOR">Nesime Tatbul</span>,
+      <span class="CEURAUTHOR">David E. Cohen</span>
+   </li>
+   <li id="CDMS9"><a href="https://ceur-ws.org/Vol-3462/CDMS9.pdf">
+      <span class="CEURTITLE">Wisent: An In-Memory Serialization Format for Leafy Trees</span></a><br>
+      <span class="CEURAUTHOR">Hubert Mohr-Daurat</span>, 
+      <span class="CEURAUTHOR">Holger Pirk</span>
+   </li>
+   <li id="CDMS10"><a href="https://ceur-ws.org/Vol-3462/CDMS10.pdf">
+      <span class="CEURTITLE">Building a Serverless Data Lakehouse from Spare Parts </span></a><br>
+      <span class="CEURAUTHOR">Jacopo Tagliabue</span>,
+      <span class="CEURAUTHOR">Ciro Greco</span>,
+      <span class="CEURAUTHOR">Luca Bigon</span>
+   </li>
+   <li id="CDMS11"><a href="https://ceur-ws.org/Vol-3462/CDMS11.pdf">
+      <span class="CEURTITLE">E-Scan: Consuming Contextual Data with Model Plugins</span></a><br>
+      <span class="CEURAUTHOR">Viktor Sanca</span>,
+      <span class="CEURAUTHOR">Anastasia Ailamaki</span>
+   </li>
+   <li id="CDMS12"><a href="https://ceur-ws.org/Vol-3462/CDMS12.pdf">
+      <span class="CEURTITLE">Polygraph - An Arrow Format for Large Apache Calcite Query Plans and Multi-Language Data Systems (Lightning Talk)</span></a><br>
+      <span class="CEURAUTHOR">Adam Kennedy</span>
+   </li>
+   <li id="CDMS13"><a href="https://ceur-ws.org/Vol-3462/CDMS13.pdf">
+      <span class="CEURTITLE">Composable Gateway for Database (Lightning Talk)</span></a><br>
+      <span class="CEURAUTHOR">Aditya Jalan</span>,
+      <span class="CEURAUTHOR">Muthu Annamalai</span>
+   </li>
+   <li id="CDMS14"><a href="https://ceur-ws.org/Vol-3462/CDMS14.pdf">
+      <span class="CEURTITLE">Using Multiple Composable, Hardware-Accelerated Executors (Lightning Talk)</span></a><br>
+      <span class="CEURAUTHOR">Felipe Aramburu</span>
+   </li>
+   <li id="CDMS15"><a href="https://ceur-ws.org/Vol-3462/CDMS15.pdf">
+      <span class="CEURTITLE">The Case for Decoupled Transaction Managers (Lightning Talk)</span></a><br>
+      <span class="CEURAUTHOR">Hiroyuki Yamada</span>,
+      <span class="CEURAUTHOR">Toshihiro Suzuk</span>,
+      <span class="CEURAUTHOR">Vincent Guilpain</span>,
+      <span class="CEURAUTHOR">Mitsunori Komatsu</span>,
+      <span class="CEURAUTHOR">Akihiro Okuno</span>,
+      <span class="CEURAUTHOR">Jun Nemoto</span>
+   </li>
+   <li id="CDMS16"><a href="https://ceur-ws.org/Vol-3462/CDMS16.pdf">
+      <span class="CEURTITLE">Techniques in Accelerating Query Processing on GPU</span></a><br>
+      <span class="CEURAUTHOR">Jimmy Lu</span>
+   </li>
+   <li id="CDMS17"><a href="https://ceur-ws.org/Vol-3462/CDMS17.pdf">
+      <span class="CEURTITLE">Towards Efficient and Secure UDF Execution with BabelfishLib (Lightning Talk)</span></a><br>
+      <span class="CEURAUTHOR">Philipp M. Grulich</span>,
+      <span class="CEURAUTHOR">Steffen Zeuch</span>,
+      <span class="CEURAUTHOR">Volker Markl</span>
+   </li>
+   <li id="CDMS18"><a href="https://ceur-ws.org/Vol-3462/CDMS18.pdf">
+      <span class="CEURTITLE">The Rise of Open Table Formats: Diving into the Next Decade of Data Lakes</span></a><br>
+      <span class="CEURAUTHOR">Walaa Eldin Moustafa</span>
+   </li>
+</ul>
+
+<h3><span class="CEURSESSION">1st Workshop on Cloud Databases (CloudDB)</span></h3>
+
+<ul>
+   <li id="CloudDB1"><a href="https://ceur-ws.org/Vol-3462/CloudDB1.pdf">
+   <span class="CEURTITLE">QuEST: Fast, Expressive, and Cheap Analytics for Distributed Traces Using Cloud Storage</span></a><br>
+   <span class="CEURAUTHOR">Jessica Berg</span>,
+   <span class="CEURAUTHOR">Muhammad Haseeb</span>,
+   <span class="CEURAUTHOR">Haiming Chen</span>,
+   <span class="CEURAUTHOR">Yaojia Ju</span>,
+   <span class="CEURAUTHOR">Anirudh Sivaraman</span>,
+   <span class="CEURAUTHOR">Ravi Netraval</span>,
+   <span class="CEURAUTHOR">Srinivas Narayana</span>
+   </li>
+   <li id="CloudDB2"><a href="https://ceur-ws.org/Vol-3462/CloudDB2.pdf">
+      <span class="CEURTITLE">QFilter: Towards a Fine-Grained Access Control for Aggregation Query Processing over Secret Shared Data</span></a><br>
+      <span class="CEURAUTHOR">Meghdad Mirabi</span>
+      <span class="CEURAUTHOR">Carsten Binnig</span>
+   </li>
+</ul>
+
+<h3><span class="CEURSESSION">2nd International Workshop on Data Ecosystems (DEco)</span></h3>
+
+<ul>
+   <li id="DEco0"><a href="https://ceur-ws.org/Vol-3462/DEco0.pdf">
+   <span class="CEURTITLE">Preface DEco</span></a><br>
+   <span class="CEURAUTHOR">Cinzia Cappiello</span>,
+   <span class="CEURAUTHOR">Sandra Geisler</span>,
+   <span class="CEURAUTHOR">Maria-Esther Vidal</span>
+   </li>
+   <li id="DEco00"><a href="https://ceur-ws.org/Vol-3462/DEco00.pdf">
+      <span class="CEURTITLE">Culture Data Space: A Case Study in Federated Data Ecosystems</span></a><br>
+      <span class="CEURAUTHOR">Matthias Jarke</span>
+   </li>
+   <li id="DEco1"><a href="https://ceur-ws.org/Vol-3462/DEco1.pdf">
+      <span class="CEURTITLE">Trustful Data Sharing in the Forest-based Sector - Opportunities and Challenges for a Data Trustee</span></a><br>
+      <span class="CEURAUTHOR">Lennart Schinke</span>,
+      <span class="CEURAUTHOR">Martin Hoppen</span>,
+      <span class="CEURAUTHOR">Alexander Atanasyan</span>,
+      <span class="CEURAUTHOR">Xuebilian Gong</span>,
+      <span class="CEURAUTHOR">Frank Heinze</span>,
+      <span class="CEURAUTHOR">Kathrin Stollenwerk</span>,
+      <span class="CEURAUTHOR">Jürgen Roßmann</span>
+   </li>
+   <li id="DEco2"><a href="https://ceur-ws.org/Vol-3462/DEco2.pdf">
+      <span class="CEURTITLE">Data Science Platform Applied to Health in Contribution to the Brazilian Unified Health System</span></a><br>
+      <span class="CEURAUTHOR">Marcel Pedroso</span>,
+      <span class="CEURAUTHOR">Rebecca Salles</span>,
+      <span class="CEURAUTHOR">Raphael Saldanha</span>,
+      <span class="CEURAUTHOR">Vinicius Kreischer de Almeida</span>,
+      <span class="CEURAUTHOR">Gabriel Souto</span>,
+      <span class="CEURAUTHOR">Balthazar Paixão</span>,
+      <span class="CEURAUTHOR">Sérgio Ricardo de Borba Cruz</span>,
+      <span class="CEURAUTHOR">Carlos Cardoso</span>,
+      <span class="CEURAUTHOR">Victor Ribeiro</span>,
+      <span class="CEURAUTHOR">Raquel Gritz</span>,
+      <span class="CEURAUTHOR">Carmen Bonifácio</span>,
+      <span class="CEURAUTHOR">Matheus Miloski</span>,
+      <span class="CEURAUTHOR">Carlos Augusto de Sousa</span>,
+      <span class="CEURAUTHOR">Gizelton Pereira Alencar</span>,
+      <span class="CEURAUTHOR">Ariane Alves</span>,
+      <span class="CEURAUTHOR">Nelson Niero Neto</span>,
+      <span class="CEURAUTHOR">Letícia Sabbadini</span>,
+      <span class="CEURAUTHOR">Eduardo Ogasawara</span>,
+      <span class="CEURAUTHOR">Christovam Barcellos</span>,
+      <span class="CEURAUTHOR">Fabio Porto</span>,
+      <span class="CEURAUTHOR">Lucas Zinato Carraro</span>,
+      <span class="CEURAUTHOR">Jefferson Lima</span>
+   </li>
+   <li id="DEco3"><a href="https://ceur-ws.org/Vol-3462/DEco3.pdf">
+      <span class="CEURTITLE">Towards Federated Machine Learning and Distributed Ledger Technology-based Data Monetization</span></a><br>
+      <span class="CEURAUTHOR">Timo Himmelsbach</span>,
+      <span class="CEURAUTHOR">Yongli Mou</span>,
+      <span class="CEURAUTHOR">Stefan Decker</span>,
+      <span class="CEURAUTHOR">Armin Heinzl</span>
+   </li>
+</ul>
+
+<h3><span class="CEURSESSION">Workshop on Databases and Large Language Models (LLMDB)</span></h3>
+
+<ul>
+   <li id="LLMDB1"><a href="https://ceur-ws.org/Vol-3462/LLMDB1.pdf">
+   <span class="CEURTITLE">Proportionate Diversification of Top-k LLM Results using Database Queries</span></a><br>
+   <span class="CEURAUTHOR">Thinh On</span>,
+   <span class="CEURAUTHOR">Subhodeep Ghosh</span>,
+   <span class="CEURAUTHOR">Mengnan Du</span>,
+   <span class="CEURAUTHOR">Senjuti Basu Roy</span>
+   </li>
+   <li id="LLMDB2"><a href="https://ceur-ws.org/Vol-3462/LLMDB2.pdf">
+      <span class="CEURTITLE">Towards Consistent Language Models Using Declarative Constraints</span></a><br>
+      <span class="CEURAUTHOR">Jasmin Mousav</span>,
+      <span class="CEURAUTHOR">Arash Termehchy</span>
+   </li>
+   <li id="LLMDB3"><a href="https://ceur-ws.org/Vol-3462/LLMDB3.pdf">
+      <span class="CEURTITLE">Generating Data Augmentation Queries Using Large Language Models</span></a><br>
+      <span class="CEURAUTHOR">Christopher Buss</span>,
+      <span class="CEURAUTHOR">Jasmin Mosavi</span>,
+      <span class="CEURAUTHOR">Mikhail Tokarev</span>,
+      <span class="CEURAUTHOR">Arash Termehchy</span>,
+      <span class="CEURAUTHOR">David Maier</span>,
+      <span class="CEURAUTHOR">Stefan Lee</span>
+   </li>
+
+</ul>
+
+<h3><span class="CEURSESSION">6th Polystore Systems for Heterogeneous Data in Multiple Databases with Privacy and Security Assurances (POLY)</span></h3>
+
+<ul>
+   <li id="POLY1"><a href="https://ceur-ws.org/Vol-3462/POLY1.pdf">
+   <span class="CEURTITLE">PolySem: Efficient Polyglot Analytics on Semantic Data</span></a><br>
+   <span class="CEURAUTHOR">Xinyu Liu</span>,
+   <span class="CEURAUTHOR">Venkatesh Emani</span>,
+   <span class="CEURAUTHOR">Avrilia Floratou</span>,
+   <span class="CEURAUTHOR">Joyce Cahoon</span>,
+   <span class="CEURAUTHOR">Philip Seamark</span>,
+   <span class="CEURAUTHOR">Carlo Curino</span>
+   </li>
+   <li id="POLY2"><a href="https://ceur-ws.org/Vol-3462/POLY2.pdf">
+      <span class="CEURTITLE">Towards a Practical HTAP Engine for Polystores</span></a><br>
+      <span class="CEURAUTHOR">Hiroyuki Yamada</span>,
+      <span class="CEURAUTHOR">Akihiro Okuno</span>,
+      <span class="CEURAUTHOR">Toshihiro Suzuki</span>,
+      <span class="CEURAUTHOR">Jun Nemoto</span>
+   </li>
+
+</ul>
+
+<h3><span class="CEURSESSION">12th International Workshop on Quality in Databases (QDB)</span></h3>
+
+<ul>
+   <li id="QDB0"><a href="https://ceur-ws.org/Vol-3462/QDB0.pdf">
+   <span class="CEURTITLE">Preface QDB</span></a><br>
+   <span class="CEURAUTHOR">Lisa Ehrlinger</span>,
+   <span class="CEURAUTHOR">Hazar Harmouch</span>,
+   <span class="CEURAUTHOR">Ihab Ilyas</span>,
+   <span class="CEURAUTHOR">Felix Naumann</span>
+   </li>
+   <li id="QDB1"><a href="https://ceur-ws.org/Vol-3462/QDB1.pdf">
+      <span class="CEURTITLE">Data Quality and Data Ethics: Towards a Trade-off Evaluation</span></a><br>
+      <span class="CEURAUTHOR">Fabio Azzalini</span>,
+      <span class="CEURAUTHOR">Cinzia Cappiello</span>,
+      <span class="CEURAUTHOR">Chiara Criscuolo</span>,
+      <span class="CEURAUTHOR">Camilla Sancricca</span>,
+      <span class="CEURAUTHOR">Letizia Tanca</span>
+   </li>
+   <li id="QDB2"><a href="https://ceur-ws.org/Vol-3462/QDB2.pdf">
+      <span class="CEURTITLE">About the Effects of Data Imputation Techniques on ML Uncertainty</span></a><br>
+      <span class="CEURAUTHOR">Cinzia Cappiello</span>,
+      <span class="CEURAUTHOR">Federico Cerutti</span>,
+      <span class="CEURAUTHOR">Camilla Sancricca</span>,
+      <span class="CEURAUTHOR">Riccardo Zanelli</span>
+   </li>
+   <li id="QDB3"><a href="https://ceur-ws.org/Vol-3462/QDB3.pdf">
+      <span class="CEURTITLE">On the Data Quality of Remotely Sensed Forest Maps</span></a><br>
+      <span class="CEURAUTHOR">Shadi Ghasemitaheri</span>,
+      <span class="CEURAUTHOR">Amelia Holcomb</span>,
+      <span class="CEURAUTHOR">Lukasz Golab</span>,
+      <span class="CEURAUTHOR">Srinivasan Keshav</span>
+   </li>
+   <li id="QDB4"><a href="https://ceur-ws.org/Vol-3462/QDB4.pdf">
+      <span class="CEURTITLE">Data Quality in Data Streams by Modular Change Point Detection</span></a><br>
+      <span class="CEURAUTHOR">Yaron Kanza</span>,
+      <span class="CEURAUTHOR">Rajat Malik</span>,
+      <span class="CEURAUTHOR">Divesh Srivastava</span>,
+      <span class="CEURAUTHOR">Caroline Stone</span>,
+      <span class="CEURAUTHOR">Gordon Woodhull</span>
+   </li>
+   <li id="QDB5"><a href="https://ceur-ws.org/Vol-3462/QDB5.pdf">
+      <span class="CEURTITLE">A Plaque Test for Redundancies in Relational Data</span></a><br>
+      <span class="CEURAUTHOR">Christoph Köhnen</span>,
+      <span class="CEURAUTHOR">Stefan Klessinger</span>,
+      <span class="CEURAUTHOR">Jens Zumbrägel</span>,
+      <span class="CEURAUTHOR">Stefanie Scherzinger</span>
+   </li>
+</ul>
+
+<h3><span class="CEURSESSION">International Workshop on Quantum Data Science and Management (QDSM)</span></h3>
+
+<ul>
+   
+   <li id="QDSM1"><a href="https://ceur-ws.org/Vol-3462/QDSM1.pdf">
+      <span class="CEURTITLE">Preface QDSM</span></a><br>
+      <span class="CEURAUTHOR">Valter Uotila</span>,
+      <span class="CEURAUTHOR">Sven Groppe</span>,
+      <span class="CEURAUTHOR">Le Gruenwald</span>,
+      <span class="CEURAUTHOR">Jiaheng Lu</span>,
+      <span class="CEURAUTHOR">Wolfgang Mauerer</span>
+   </li>
+   <li id="QDSM2"><a href="https://ceur-ws.org/Vol-3462/QDSM2.pdf">
+      <span class="CEURTITLE">Quantum Optimisation of General Join Trees</span></a><br>
+      <span class="CEURAUTHOR">Manuel Schönberger</span>,
+      <span class="CEURAUTHOR">Immanuel Trummer</span>,
+      <span class="CEURAUTHOR">Wolfgang Mauerer</span>
+   </li>
+   <li id="QDSM3"><a href="https://ceur-ws.org/Vol-3462/QDSM3.pdf">
+      <span class="CEURTITLE">An Evolutionary Algorithm Design for Pauli-based Quantum Kernel Classification</span></a><br>
+      <span class="CEURAUTHOR">Yozef Tjandra</span>,
+      <span class="CEURAUTHOR">Hendrik Santoso Sugiarto</span>
+   </li>
+   <li id="QDSM4"><a href="https://ceur-ws.org/Vol-3462/QDSM4.pdf">
+      <span class="CEURTITLE">Empirical Evaluation of A Quantum Accelerated Approach for The Central Path Method in Linear Programming</span></a><br>
+      <span class="CEURAUTHOR">Vijay Adoni</span>,
+      <span class="CEURAUTHOR">Sajad Fathi Hafshejani</span>,
+      <span class="CEURAUTHOR">Daya Gaur</span>
+   </li>
+   <li id="QDSM5"><a href="https://ceur-ws.org/Vol-3462/QDSM5.pdf">
+      <span class="CEURTITLE">Index Tuning with Machine Learning on Quantum Computers for Large-Scale Database Applications</span></a><br>
+      <span class="CEURAUTHOR">Le Gruenwald</span>,
+      <span class="CEURAUTHOR">Tobias Winker</span>,
+      <span class="CEURAUTHOR">Umut Çalıkyılmaz</span>,
+      <span class="CEURAUTHOR">Jinghua Groppe</span>,
+      <span class="CEURAUTHOR">Sven Groppe</span>
+   </li>
+   <li id="QDSM6"><a href="https://ceur-ws.org/Vol-3462/QDSM6.pdf">
+      <span class="CEURTITLE">Quantum Computing for Databases: A Short Survey and Vision</span></a><br>
+      <span class="CEURAUTHOR">Gongsheng Yuan</span>,
+      <span class="CEURAUTHOR">Jiaheng Lu</span>,
+      <span class="CEURAUTHOR">Yuxing Chen</span>,
+      <span class="CEURAUTHOR">Sai Wu</span>,
+      <span class="CEURAUTHOR">Chang Yao</span>,
+      <span class="CEURAUTHOR">Zhengtong Yan</span>,
+      <span class="CEURAUTHOR">Tuodu Li</span>,
+      <span class="CEURAUTHOR">Gang Chen</span>
+   </li>
+</ul>
+
+
+<h3><span class="CEURSESSION">Workshop on Serverless Data Analytics (SDA)</span></h3>
+
+<ul>
+   <li id="SDA0"><a href="https://ceur-ws.org/Vol-3462/SDA0.pdf">
+      <span class="CEURTITLE">Preface SDA</span></a><br>
+      <span class="CEURAUTHOR">M. Tamer Özsu</span>,
+      <span class="CEURAUTHOR">Xun Xue</span>
+   </li>
+   <li id="SDA1"><a href="https://ceur-ws.org/Vol-3462/SDA1.pdf">
+      <span class="CEURTITLE">Rethinking Serverless Computing: from the Programming Model to the Platform Design</span></a><br>
+      <span class="CEURAUTHOR">Gustavo Alonso</span>,
+      <span class="CEURAUTHOR">Ana Klimovic</span>,
+      <span class="CEURAUTHOR">Tom Kuchler</span>,
+      <span class="CEURAUTHOR">Michael Wawrzoniak</span>
+   </li>
+   <li id="SDA2"><a href="https://ceur-ws.org/Vol-3462/SDA2.pdf">
+      <span class="CEURTITLE">BabelMR: A Polyglot Framework for Serverless MapReduce</span></a><br>
+      <span class="CEURAUTHOR">Fabian Mahling</span>,
+      <span class="CEURAUTHOR">Paul Rößler</span>,
+      <span class="CEURAUTHOR">Thomas Bodner</span>,
+      <span class="CEURAUTHOR">Tilmann Rabl</span>
+   </li>
+   <li id="SDA3"><a href="https://ceur-ws.org/Vol-3462/SDA3.pdf">
+      <span class="CEURTITLE">Ephemeral Per-query Engines for Serverless Analytics</span></a><br>
+      <span class="CEURAUTHOR">Michael Wawrzoniak</span>,
+      <span class="CEURAUTHOR">Rodrigo Bruno</span>,
+      <span class="CEURAUTHOR">Ana Klimovic</span>,
+      <span class="CEURAUTHOR">Gustavo Alonso</span>
+   </li>
+   <li id="SDA4"><a href="https://ceur-ws.org/Vol-3462/SDA4.pdf">
+      <span class="CEURTITLE">Hyperspecialized Compilation for Serverless Data Analytics</span></a><br>
+      <span class="CEURAUTHOR">Leonhard Spiegelberg</span>,
+      <span class="CEURAUTHOR">Tim Kraska</span>,
+      <span class="CEURAUTHOR">Malte Schwarzkopf</span>
+   </li>
+</ul>
+
+<h3><span class="CEURSESSION">Workshop on Tabular Data Analysis (TaDA)</span></h3>
+
+<ul>
+   <li id="TADA0"><a href="https://ceur-ws.org/Vol-3462/TADA0.pdf">
+      <span class="CEURTITLE">Preface TaDA</span></a><br>
+      <span class="CEURAUTHOR">Vasilis Efthymiou</span>,
+      <span class="CEURAUTHOR">Sainyam Galhotra</span>,
+      <span class="CEURAUTHOR">Oktie Hassanzadeh</span>,
+      <span class="CEURAUTHOR">Ernesto Jiménez-Ruiz</span>,
+      <span class="CEURAUTHOR">Kavitha Srinivas</span>
+   </li>
+   <li id="TADA1"><a href="https://ceur-ws.org/Vol-3462/TADA1.pdf">
+      <span class="CEURTITLE">Column Type Annotation using ChatGPT</span></a><br>
+      <span class="CEURAUTHOR">Keti Korini</span>,
+      <span class="CEURAUTHOR">Christian Bizer</span>
+   </li>
+   <li id="TADA2"><a href="https://ceur-ws.org/Vol-3462/TADA2.pdf">
+      <span class="CEURTITLE">Table Union Search with Preferences</span></a><br>
+      <span class="CEURAUTHOR">Hamed Mirzaei</span>,
+      <span class="CEURAUTHOR">Davood Rafiei</span>
+   </li>
+   <li id="TADA3"><a href="https://ceur-ws.org/Vol-3462/TADA3.pdf">
+      <span class="CEURTITLE">WikiDBs: A Corpus of Relational Databases From Wikidata</span></a><br>
+      <span class="CEURAUTHOR">Liane Vogel</span>,
+      <span class="CEURAUTHOR">Carsten Binnig</span>
+   </li>
+   <li id="TADA4"><a href="https://ceur-ws.org/Vol-3462/TADA4.pdf">
+      <span class="CEURTITLE">Adversarial Attacks on Tables with Entity Swap</span></a><br>
+      <span class="CEURAUTHOR">Aneta Koleva</span>,
+      <span class="CEURAUTHOR">Martin Ringsquandl</span>,
+      <span class="CEURAUTHOR">Volker Tresp</span>
+   </li>
+   <li id="TADA5"><a href="https://ceur-ws.org/Vol-3462/TADA5.pdf">
+      <span class="CEURTITLE">To Join or Not to Join: An Analysis on the Usefulness of Joining Tables in Open Government Data Portals</span></a><br>
+      <span class="CEURAUTHOR">Arif Usta</span>,
+      <span class="CEURAUTHOR">Semih Salihoğlu</span>
+   </li>
+   <li id="TADA6"><a href="https://ceur-ws.org/Vol-3462/TADA6.pdf">
+      <span class="CEURTITLE">Knowledge Graph-driven Tabular Data Discovery from Scientific Documents</span></a><br>
+      <span class="CEURAUTHOR">Vijay S. Kuma</span>,
+      <span class="CEURAUTHOR">Varish Mulwad</span>,
+      <span class="CEURAUTHOR">Jenny Weisenberg Williams</span>,
+      <span class="CEURAUTHOR">Tim Finin</span>,
+      <span class="CEURAUTHOR">Sharad Dixit</span>,
+      <span class="CEURAUTHOR">Anupam Joshi</span>
+   </li>
+   <li id="TADA7"><a href="https://ceur-ws.org/Vol-3462/TADA7.pdf">
+      <span class="CEURTITLE">Towards Generative Semantic Table Interpretation</span></a><br>
+      <span class="CEURAUTHOR">Viet-Phi Huynh</span>,
+      <span class="CEURAUTHOR">Yoan Chabot</span>,
+      <span class="CEURAUTHOR">Raphaël Troncy</span>
+   </li>
+   <li id="TADA8"><a href="https://ceur-ws.org/Vol-3462/TADA8.pdf">
+      <span class="CEURTITLE">Fair Sequential Group Recommendations in SQUIRREL Movies</span></a><br>
+      <span class="CEURAUTHOR">Eva Chrysostomaki</span>,
+      <span class="CEURAUTHOR">Maria Stratigi</span>,
+      <span class="CEURAUTHOR">Vasilis Efthymiou</span>,
+      <span class="CEURAUTHOR">Kostas Stefanidis</span>,
+      <span class="CEURAUTHOR">Dimitris Plexousakis</span>
+   </li>
+   <li id="TADA9"><a href="https://ceur-ws.org/Vol-3462/TADA9.pdf">
+      <span class="CEURTITLE">Discovering and Integrating Tabular Data</span></a><br>
+      <span class="CEURAUTHOR">Davood Rafiei</span>,
+      <span class="CEURAUTHOR">Arash Dargahi Nobari</span>,
+      <span class="CEURAUTHOR">Soroush Omidvartehrani</span>
+   </li>
+</ul>
+
+
+
+
+</div>
+
+
+<hr>
+<span class="unobtrusive">
+2023-08-20: submitted by Jiannan Wang, 
+            metadata incl. bibliographic data published under <a href="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons CC0</a><br>
+<span class="CEURPUBDATE">2023-08-22</span>: published on CEUR Workshop Proceedings (CEUR-WS.org, ISSN 1613-0073)
+   |<a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fceur-ws.org%2FVol-3462%2F">valid HTML5</a>|
+</span>
+
+<div id="definer-bubble-host" style="position: absolute; top: 0px; overflow: visible; z-index: 500000; width: 0px; height: 0px; min-height: 0px; margin: 0px; padding: 0px;"><template shadowrootmode="open"><link type="text/css" class="darkreader" rel="stylesheet" href="chrome-extension://noagjioaihamoljcbelhdlldnmlgnkon/inject/bubble.css"><div id="definer-bubble" class="definer-bubble" style="display: none; --v-primary-base: #a36600; --v-primary-lighten5: #ffec8d; --v-primary-lighten4: #ffcf72; --v-primary-lighten3: #feb458; --v-primary-lighten2: #df993e; --v-primary-lighten1: #c17f23; --v-primary-darken1: #864e00; --v-primary-darken2: #6a3700; --v-primary-darken3: #512000; --v-primary-darken4: #3d0900; --v-secondary-base: #455a64; --v-secondary-lighten5: #c6dde9; --v-secondary-lighten4: #abc2cd; --v-secondary-lighten3: #90a6b2; --v-secondary-lighten2: #768c97; --v-secondary-lighten1: #5d737d; --v-secondary-darken1: #2e434c; --v-secondary-darken2: #182c35; --v-secondary-darken3: #011820; --v-secondary-darken4: #000009; --v-accent-base: #fff8e1; --v-accent-lighten5: #ffffff; --v-accent-lighten4: #ffffff; --v-accent-lighten3: #ffffff; --v-accent-lighten2: #ffffff; --v-accent-lighten1: #fffffe; --v-accent-darken1: #e2dbc5; --v-accent-darken2: #c6c0aa; --v-accent-darken3: #aba58f; --v-accent-darken4: #908a76; --v-error-base: #f44336; --v-error-lighten5: #ffd6b5; --v-error-lighten4: #ffb89a; --v-error-lighten3: #ff9b80; --v-error-lighten2: #ff7e66; --v-error-lighten1: #ff614e; --v-error-darken1: #d31f1f; --v-error-darken2: #b30008; --v-error-darken3: #940000; --v-error-darken4: #760000; --v-warning-base: #ff5722; --v-warning-lighten5: #ffe7a5; --v-warning-lighten4: #ffc98a; --v-warning-lighten3: #ffac6f; --v-warning-lighten2: #ff9055; --v-warning-lighten1: #ff743c; --v-warning-darken1: #de3902; --v-warning-darken2: #bd1300; --v-warning-darken3: #9e0000; --v-warning-darken4: #800000; --v-info-base: #546e7a; --v-info-lighten5: #d8f5ff; --v-info-lighten4: #bcd8e6; --v-info-lighten3: #a1bdca; --v-info-lighten2: #87a2ae; --v-info-lighten1: #6d8794; --v-info-darken1: #3c5661; --v-info-darken2: #253e49; --v-info-darken3: #0d2933; --v-info-darken4: #00141e; --v-success-base: #4caf50; --v-success-lighten5: #dcffd6; --v-success-lighten4: #beffba; --v-success-lighten3: #a2ff9e; --v-success-lighten2: #85e783; --v-success-lighten1: #69cb69; --v-success-darken1: #2d9437; --v-success-darken2: #00791e; --v-success-darken3: #006000; --v-success-darken4: #004700; --v-ground-base: #343a40; --v-ground-lighten5: #b0b7be; --v-ground-lighten4: #959ca3; --v-ground-lighten3: #7b8289; --v-ground-lighten2: #636970; --v-ground-lighten1: #4b5157; --v-ground-darken1: #1f242a; --v-ground-darken2: #070f16; --v-ground-darken3: #000000; --v-ground-darken4: #000000; --v-text-base: #ffffff; --v-text-lighten5: #ffffff; --v-text-lighten4: #ffffff; --v-text-lighten3: #ffffff; --v-text-lighten2: #ffffff; --v-text-lighten1: #ffffff; --v-text-darken1: #e2e2e2; --v-text-darken2: #c6c6c6; --v-text-darken3: #ababab; --v-text-darken4: #919191; --v-ptext-base: #ffa000; --v-ptext-lighten5: #ffffa4; --v-ptext-lighten4: #ffff87; --v-ptext-lighten3: #fff36b; --v-ptext-lighten2: #ffd74e; --v-ptext-lighten1: #ffbb30; --v-ptext-darken1: #df8600; --v-ptext-darken2: #c06c00; --v-ptext-darken3: #a15400; --v-ptext-darken4: #843c00; --v-contrast-base: #ffffff; --v-contrast-lighten5: #ffffff; --v-contrast-lighten4: #ffffff; --v-contrast-lighten3: #ffffff; --v-contrast-lighten2: #ffffff; --v-contrast-lighten1: #ffffff; --v-contrast-darken1: #e2e2e2; --v-contrast-darken2: #c6c6c6; --v-contrast-darken3: #ababab; --v-contrast-darken4: #919191; --v-anchor-base: #a6d7ff; --v-anchor-lighten5: #ffffff; --v-anchor-lighten4: #ffffff; --v-anchor-lighten3: #fcffff; --v-anchor-lighten2: #dfffff; --v-anchor-lighten1: #c2f3ff; --v-anchor-darken1: #8abbe2; --v-anchor-darken2: #6fa0c6; --v-anchor-darken3: #5486ab; --v-anchor-darken4: #386d90; --font-family: &quot;Roboto&quot;, sans-serif; --font-size: 16px; --font-weight: normal; --border-radius-left-top: 4px; --border-radius-right-top: 4px; --border-radius-right-bottom: 4px; --border-radius-left-bottom: 4px; --border-radius: 4px; --toolbar-height: 50px; --primary-rgb: 163, 102, 0; --secondary-rgb: 69, 90, 100; --accent-rgb: 255, 248, 225; --error-rgb: 244, 67, 54; --warning-rgb: 255, 87, 34; --info-rgb: 84, 110, 122; --success-rgb: 76, 175, 80; --ground-rgb: 52, 58, 64; --text-rgb: 255, 255, 255; --ptext-rgb: 255, 160, 0; --contrast-rgb: 255, 255, 255; --anchor-rgb: 166, 215, 255;"><!----> <div data-v-38e7f61e="" class="definer-bubble-arrow definer-bubble-arrow animated fadeIn" style="width: 10px; height: 10px;"></div> <!----></div><style id="lumetrium_custom_css"></style></template></div><script id="eibafdecbdcafifabbcfibefjdgadfid" type="text/javascript" src="chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/js/jQuery.js"></script><script id="deagjiiedgceffgcbiehadjdiaedaega" type="text/javascript" src="chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/js/jgi.js"></script><div id="cfifcbdebgbdfieabegadcbadhgaadbb" style="color-scheme: initial; forced-color-adjust: initial; mask: initial; math-depth: initial; position: relative; position-anchor: initial; text-size-adjust: initial; appearance: initial; color: initial; font: initial; font-palette: initial; font-synthesis: initial; inset-area: initial; text-orientation: initial; text-rendering: initial; text-spacing-trim: initial; -webkit-font-smoothing: initial; -webkit-locale: initial; -webkit-text-orientation: initial; -webkit-writing-mode: initial; writing-mode: initial; zoom: initial; accent-color: initial; place-content: initial; place-items: initial; place-self: initial; alignment-baseline: initial; anchor-name: initial; animation-composition: initial; animation: initial; app-region: initial; aspect-ratio: initial; backdrop-filter: initial; backface-visibility: initial; background: initial; background-blend-mode: initial; baseline-shift: initial; baseline-source: initial; block-size: initial; border-block: initial; border: initial; border-radius: initial; border-collapse: initial; border-end-end-radius: initial; border-end-start-radius: initial; border-inline: initial; border-start-end-radius: initial; border-start-start-radius: initial; inset: initial; box-shadow: initial; box-sizing: initial; break-after: initial; break-before: initial; break-inside: initial; buffered-rendering: initial; caption-side: initial; caret-color: initial; clear: initial; clip: initial; clip-path: initial; clip-rule: initial; color-interpolation: initial; color-interpolation-filters: initial; color-rendering: initial; columns: initial; column-fill: initial; gap: initial; column-rule: initial; column-span: initial; contain: initial; contain-intrinsic-block-size: initial; contain-intrinsic-size: initial; contain-intrinsic-inline-size: initial; container: initial; content: initial; content-visibility: initial; counter-increment: initial; counter-reset: initial; counter-set: initial; cursor: initial; cx: initial; cy: initial; d: initial; display: initial; dominant-baseline: initial; empty-cells: initial; field-sizing: initial; fill: initial; fill-opacity: initial; fill-rule: initial; filter: initial; flex: initial; flex-flow: initial; float: initial; flood-color: initial; flood-opacity: initial; grid: initial; grid-area: initial; height: initial; hyphenate-character: initial; hyphenate-limit-chars: initial; hyphens: initial; image-orientation: initial; image-rendering: initial; initial-letter: initial; inline-size: initial; inset-block: initial; inset-inline: initial; isolation: initial; letter-spacing: initial; lighting-color: initial; line-break: initial; list-style: initial; margin-block: initial; margin: initial; margin-inline: initial; marker: initial; mask-type: initial; math-shift: initial; math-style: initial; max-block-size: initial; max-height: initial; max-inline-size: initial; max-width: initial; min-block-size: initial; min-height: initial; min-inline-size: initial; min-width: initial; mix-blend-mode: initial; object-fit: initial; object-position: initial; object-view-box: initial; offset: initial; opacity: initial; order: initial; orphans: initial; outline: initial; outline-offset: initial; overflow-anchor: initial; overflow-clip-margin: initial; overflow-wrap: initial; overflow: initial; overlay: initial; overscroll-behavior-block: initial; overscroll-behavior-inline: initial; overscroll-behavior: initial; padding-block: initial; padding: initial; padding-inline: initial; page: initial; page-orientation: initial; paint-order: initial; perspective: initial; perspective-origin: initial; pointer-events: initial; position-try: initial; position-visibility: initial; quotes: initial; r: initial; resize: initial; rotate: initial; ruby-align: initial; ruby-position: initial; rx: initial; ry: initial; scale: initial; scroll-behavior: initial; scroll-margin-block: initial; scroll-margin: initial; scroll-margin-inline: initial; scroll-padding-block: initial; scroll-padding: initial; scroll-padding-inline: initial; scroll-snap-align: initial; scroll-snap-stop: initial; scroll-snap-type: initial; scroll-timeline: initial; scrollbar-color: initial; scrollbar-gutter: initial; scrollbar-width: initial; shape-image-threshold: initial; shape-margin: initial; shape-outside: initial; shape-rendering: initial; size: initial; speak: initial; stop-color: initial; stop-opacity: initial; stroke: initial; stroke-dasharray: initial; stroke-dashoffset: initial; stroke-linecap: initial; stroke-linejoin: initial; stroke-miterlimit: initial; stroke-opacity: initial; stroke-width: initial; tab-size: initial; table-layout: initial; text-align: initial; text-align-last: initial; text-anchor: initial; text-combine-upright: initial; text-decoration: initial; text-decoration-skip-ink: initial; text-emphasis: initial; text-emphasis-position: initial; text-indent: initial; text-overflow: initial; text-shadow: initial; text-transform: initial; text-underline-offset: initial; text-underline-position: initial; white-space: initial; timeline-scope: initial; touch-action: initial; transform: initial; transform-box: initial; transform-origin: initial; transform-style: initial; transition: initial; translate: initial; user-select: initial; vector-effect: initial; vertical-align: initial; view-timeline: initial; view-transition-class: initial; view-transition-name: initial; visibility: initial; border-spacing: initial; -webkit-box-align: initial; -webkit-box-decoration-break: initial; -webkit-box-direction: initial; -webkit-box-flex: initial; -webkit-box-ordinal-group: initial; -webkit-box-orient: initial; -webkit-box-pack: initial; -webkit-box-reflect: initial; -webkit-line-break: initial; -webkit-line-clamp: initial; -webkit-mask-box-image: initial; -webkit-print-color-adjust: initial; -webkit-rtl-ordering: initial; -webkit-ruby-position: initial; -webkit-tap-highlight-color: initial; -webkit-text-combine: initial; -webkit-text-decorations-in-effect: initial; -webkit-text-fill-color: initial; -webkit-text-security: initial; -webkit-text-stroke: initial; -webkit-user-drag: initial; widows: initial; width: initial; will-change: initial; word-break: initial; word-spacing: initial; x: initial; y: initial; z-index: 2147483647;"><div class="ibfjddbcifeffabbbgbfejacebhegfbe" style="all: initial;"><template shadowrootmode="closed"><div class="shoptagr-inject"><div class="FontLoaderstyle__FontContainer-sc-xfvj6v-0 dWTrLf"><span class="FontLoaderstyle__FontItem-sc-xfvj6v-1 igvzJt"></span><span class="FontLoaderstyle__FontItem-sc-xfvj6v-1 igvzJr"></span><span class="FontLoaderstyle__FontItem-sc-xfvj6v-1 igvzJo"></span><span class="FontLoaderstyle__FontItem-sc-xfvj6v-1 igvzJp"></span><span class="FontLoaderstyle__FontItem-sc-xfvj6v-1 igvzJn"></span><span class="FontLoaderstyle__FontItem-sc-xfvj6v-1 igvzJl"></span><span class="FontLoaderstyle__FontItem-sc-xfvj6v-1 uAvZv"></span><span class="FontLoaderstyle__FontItem-sc-xfvj6v-1 uAvZu"></span><span class="FontLoaderstyle__FontItem-sc-xfvj6v-1 uAvZx"></span><span class="FontLoaderstyle__FontItem-sc-xfvj6v-1 uAvZw"></span></div><style data-styled="active" data-styled-version="5.3.9">.dWTrLf{visibility:hidden;}.igvzJt{font-family:roboto;font-weight:100;}.igvzJr{font-family:roboto;font-weight:300;}.igvzJo{font-family:roboto;font-weight:400;}.igvzJp{font-family:roboto;font-weight:500;}.igvzJn{font-family:roboto;font-weight:700;}.igvzJl{font-family:roboto;font-weight:900;}.uAvZv{font-family:rebond;font-weight:400;}.uAvZu{font-family:rebond;font-weight:500;}.uAvZx{font-family:rebond;font-weight:600;}.uAvZw{font-family:rebond;font-weight:700;}.gNIZkE{vertical-align:middle;min-width:24px;min-height:24px;max-width:24px;max-height:24px;}.hnDiSM{vertical-align:middle;min-width:19px;min-height:19px;max-width:19px;max-height:19px;}.fskGsU{vertical-align:middle;min-width:20px;min-height:20px;max-width:20px;max-height:20px;}.bEIgmJ{vertical-align:middle;min-width:12px;min-height:auto;max-width:12px;max-height:none;}.isfeZd{font-weight:500;font-size:20px;line-height:23px;font-family:'Rebond';font-style:normal;text-align:inherit;margin-bottom:0px;margin-left:0px;margin-right:0px;margin-top:0px;color:currentColor;-webkit-text-decoration:none;text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;}.gREJLS{font-weight:500;font-size:20px;line-height:23px;font-family:'Rebond';font-style:normal;text-align:inherit;margin-bottom:0px;margin-left:0px;margin-right:0px;margin-top:0px;color:currentColor;-webkit-text-decoration:none;text-decoration:none;}.kGxgXk{font-weight:400;font-size:12px;line-height:16px;font-family:'Roboto';font-style:normal;text-align:inherit;margin-bottom:0px;margin-left:0px;margin-right:0px;margin-top:0px;color:currentColor;-webkit-text-decoration:none;text-decoration:none;font-weight:500;}.iWiZKP{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:8px;margin-bottom:0px;margin-left:0px;margin-right:0px;margin-top:0px;}.iJikCG{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:8px;margin-bottom:0px;margin-left:0px;margin-right:0px;margin-top:0px;}.TVhSJ{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:15px;margin-bottom:0px;margin-left:0px;margin-right:0px;margin-top:0px;}.dbmDMh{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;gap:0;width:100%;margin-bottom:44px;margin-left:0px;margin-right:0px;margin-top:0px;}.cfzqAx{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;gap:0;width:100%;margin-bottom:0px;margin-left:0px;margin-right:0px;margin-top:0px;}.idXJAk{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:0;margin-bottom:20px;margin-left:0px;margin-right:0px;margin-top:0px;}.kSFwqO{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:right;-ms-flex-direction:right;flex-direction:right;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:8px;margin-bottom:20px;margin-left:0px;margin-right:0px;margin-top:0px;}.fFUrUi{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:0;margin-bottom:0px;margin-left:0px;margin-right:0px;margin-top:0px;}.hdbPH{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:12px;width:100%;margin-bottom:44px;margin-left:0px;margin-right:0px;margin-top:0px;}.jRtIaY{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:right;-ms-flex-direction:right;flex-direction:right;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:20px;margin-bottom:20px;margin-left:0px;margin-right:0px;margin-top:0px;}.dCVlWL{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:right;-ms-flex-direction:right;flex-direction:right;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:14px;margin-bottom:20px;margin-left:0px;margin-right:0px;margin-top:0px;}.ecTviN{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;gap:12px;margin-bottom:0px;margin-left:0px;margin-right:0px;margin-top:0px;}.iFFOpu{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;gap:4px;margin-bottom:0px;margin-left:0px;margin-right:0px;margin-top:0px;}.cKXhCN{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:20px;margin-bottom:0px;margin-left:0px;margin-right:0px;margin-top:0px;}.fVSsvC{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:0;margin-bottom:44px;margin-left:0px;margin-right:0px;margin-top:0px;}.crGMfD{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:0;margin-bottom:0px;margin-left:0px;margin-right:0px;margin-top:0px;}.iSqKQt{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:12px;margin-bottom:44px;margin-left:0px;margin-right:0px;margin-top:0px;}.ExeDG{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;border:1px solid #ECE9DD;background:#fff;border-radius:100px;min-width:40px;min-height:40px;max-width:40px;max-height:40px;overflow:hidden;}.elNnSx{object-fit:contain;}.jpIxAp{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;pointer-events:none;}.qwRPZ{position:absolute;bottom:78px;width:100%;z-index:1000;max-height:60px;}.hOiApn{position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column-reverse;-ms-flex-direction:column-reverse;flex-direction:column-reverse;}.iwzpvb{cursor:pointer;padding:0;border:none;outline:none;background:transparent;}.Lzwes{color:#808178;background:#000000;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;gap:5px;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;height:100%;}.dHTJWo{color:#FFB514;background:#000000;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;gap:5px;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;height:100%;}.jiMGPY{position:absolute;bottom:0;left:0;width:100%;height:68px;background:#000000;z-index:1000;}.jiMGPY > *{width:50%;}.cOluVy{height:68px;min-height:68px;line-height:68px;background:#FBFBF8;color:#1B1C1D;padding:0 12px;border-bottom:1px solid #ECE9DD;}.eBnAZB::first-letter{text-transform:uppercase;}.liAcne{overflow:hidden;white-space:nowrap;}.dSfCBw{-webkit-text-decoration:underline;text-decoration:underline;cursor:pointer;}.dSfCBw:hover{color:#C295E9;}.dSfCBw::first-letter{text-transform:uppercase;}.exyuej{color:#1B1C1D;-webkit-transition:color 0.15s ease-in-out;transition:color 0.15s ease-in-out;}.exyuej:hover{color:#C295E9;}.jotlIa{color:#1B1C1D;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-transition:color 0.15s ease-in-out;transition:color 0.15s ease-in-out;}.jotlIa:hover{color:#C295E9;}.kByGcO{color:#1B1C1D;-webkit-transition:color 0.15s ease-in-out;transition:color 0.15s ease-in-out;}.kByGcO:hover{color:#C295E9;}.hkcbMn{overflow-y:auto;overflow-x:hidden;-webkit-scrollbar-width:none;-moz-scrollbar-width:none;-ms-scrollbar-width:none;scrollbar-width:none;position:relative;height:calc(650px - 68px - 68px);padding:20px;}.hAsFdH{background:#FBFBF8;color:#1B1C1D;padding-bottom:68px;height:inherit;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}.krtaUZ{width:375px;height:650px;position:relative;background:#FBFBF8;border-radius:10px;overflow:hidden;}.iVyJWt{z-index:1000000004;position:fixed;top:35px;float:none;width:auto;right:0px;}@media (max-height:685px){.iVyJWt{top:5px;}}.fTPmQC{display:none;opacity:0;vertical-align:top;border-radius:10px;}</style><div><div class="st-app" id="st-app"><div class="InjectAppstyle__AppWidget-sc-2rfi8l-0 iVyJWt app-widget"><div class="InjectAppstyle__IframeWrap-sc-2rfi8l-1 fTPmQC"><div class="IframeAppstyle__IframeAppContainer-sc-118pdyz-0 krtaUZ shoptagr"><div class="StyledLayoutstyle__StyledLayout-sc-av8kjx-0 hAsFdH layout1"><div class="MainWindowLayoutstyle__Layout-sc-1jcvrg2-0 kauEDk"><div class="Stackstyles__StackContainer-sc-qgtqup-0 iWiZKP MainWindowHeaderstyle__HeaderWrapper-sc-jevnby-0 cOluVy"><div class="Stackstyles__StackContainer-sc-qgtqup-0 iJikCG MainWindowHeaderstyle__TitleWrapper-sc-jevnby-2 liAcne"><h4 class="ExtTypographystyles__H4-sc-1ktnqyg-3 isfeZd MainWindowHeaderstyle__Title-sc-jevnby-1 eBnAZB">Store</h4></div><div class="Stackstyles__StackContainer-sc-qgtqup-0 TVhSJ"><div id="karma-save-from-header-button" role="button" class="ButtonSimpleSavestyle__SaveButtonContainer-sc-17o3ey3-0 jpIxAp MainWindowSaveButtonstyle__StyledButtonSimpleSave-sc-1fhaj0f-0 kByGcO" data-alooma-section="header" data-alooma-source="store" data-alooma-element="save_item"><svg color="#B8B5A5" width="24" height="24" viewBox="0 0 21 20" xmlns="http://www.w3.org/2000/svg" fill="none" class="BaseIconstyles__BaseIconRoot-sc-1uucpm5-0 gNIZkE"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.16699 3.28322C2.16699 1.46995 3.62529 0 5.42418 0H15.5765C17.3754 0 18.8337 1.46995 18.8337 3.28322V18.1062C18.8337 18.9099 17.9335 19.3853 17.2697 18.932L10.7066 14.4501L3.709 18.9632C3.04356 19.3924 2.16699 18.9147 2.16699 18.1228V3.28322ZM5.42418 1.44974C4.4196 1.44974 3.60523 2.27062 3.60523 3.28322V17.309L10.7292 12.7144L17.3954 17.2667V3.28322C17.3954 2.27062 16.581 1.44974 15.5765 1.44974H5.42418Z" fill="currentColor"></path></svg></div><button data-alooma-disabled="false" data-alooma-section="header" data-alooma-source="store" data-alooma-element="notifications" class="MainWindowLinkstyle__StyledButton-sc-1lvni6x-0 iwzpvb MainWindowNotificationsLinkstyle__StyledNotificationLink-sc-1dcy3ni-0 jotlIa"><svg color="currentColor" width="24" height="24" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg" fill="none" class="BaseIconstyles__BaseIconRoot-sc-1uucpm5-0 gNIZkE"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.4119 10.2502V11.4876C6.4119 13.5196 5.62397 15.4724 4.21379 16.9354L3.88945 17.2719V18.4926H21.3895V17.2719L21.0651 16.9354C19.6549 15.4724 18.867 13.5196 18.867 11.4876V11.0599C18.867 8.39708 17.8148 6.82181 16.5634 5.88708C15.2706 4.92138 13.697 4.59264 12.6639 4.59264C10.0917 4.59264 8.57072 5.56614 7.67066 6.70794C6.74179 7.88628 6.41961 9.31698 6.4119 10.2502ZM6.33559 5.65552C7.57186 4.08722 9.59375 2.89264 12.6639 2.89264C13.982 2.89264 15.9348 3.29563 17.5808 4.5251C19.2682 5.78555 20.567 7.86891 20.567 11.0599V11.4876C20.567 13.0796 21.1843 14.6095 22.2891 15.7557L22.7114 16.1938C22.9539 16.4454 23.0895 16.7813 23.0895 17.1307V20.1926H2.18945V17.1307C2.18945 16.7813 2.32496 16.4454 2.56747 16.1938L2.98981 15.7557C4.0946 14.6095 4.7119 13.0796 4.7119 11.4876V10.2405C4.7212 9.00554 5.12916 7.18597 6.33559 5.65552Z" fill="currentColor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M10.0233 20.1924C10.3814 21.2952 11.4173 22.0924 12.6395 22.0924C13.8616 22.0924 14.8975 21.2952 15.2556 20.1924H10.0233ZM16.2395 19.3424V18.4924H9.03945V19.3424H8.18945C8.18945 21.8001 10.1818 23.7924 12.6395 23.7924C15.0971 23.7924 17.0895 21.8001 17.0895 19.3424H16.2395Z" fill="currentColor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M13.4891 0.142639V3.74264H11.7891V0.142639H13.4891Z" fill="currentColor"></path></svg></button><button data-alooma-disabled="false" data-alooma-section="header" data-alooma-source="store" data-alooma-element="my_account" class="MainWindowLinkstyle__StyledButton-sc-1lvni6x-0 iwzpvb MainWindowProfileLinkstyle__StyledProfileLink-sc-j39m08-0 exyuej"><svg color="currentColor" width="24" height="24" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg" fill="none" class="BaseIconstyles__BaseIconRoot-sc-1uucpm5-0 gNIZkE"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.6383 2.19286C7.14305 2.19286 2.68828 6.64763 2.68828 12.1429C2.68828 17.6381 7.14305 22.0929 12.6383 22.0929C18.1335 22.0929 22.5883 17.6381 22.5883 12.1429C22.5883 6.64763 18.1335 2.19286 12.6383 2.19286ZM0.988281 12.1429C0.988281 5.70874 6.20416 0.492859 12.6383 0.492859C19.0724 0.492859 24.2883 5.70874 24.2883 12.1429C24.2883 18.577 19.0724 23.7929 12.6383 23.7929C6.20416 23.7929 0.988281 18.577 0.988281 12.1429Z" fill="currentColor"></path><path d="M10.2387 9.14287C10.2387 10.137 9.43278 10.9429 8.43867 10.9429C7.44456 10.9429 6.63867 10.137 6.63867 9.14287C6.63867 8.14875 7.44456 7.34286 8.43867 7.34286C9.43278 7.34286 10.2387 8.14875 10.2387 9.14287Z" fill="currentColor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M8.51747 14.0324C9.45848 15.2852 10.9539 16.0929 12.6383 16.0929C14.3226 16.0929 15.8181 15.2852 16.7591 14.0324L18.1183 15.0534C16.8701 16.7152 14.8799 17.7929 12.6383 17.7929C10.3967 17.7929 8.40649 16.7152 7.1582 15.0534L8.51747 14.0324Z" fill="currentColor"></path><path d="M18.6391 9.14287C18.6391 10.137 17.8332 10.9429 16.8391 10.9429C15.845 10.9429 15.0391 10.137 15.0391 9.14287C15.0391 8.14875 15.845 7.34286 16.8391 7.34286C17.8332 7.34286 18.6391 8.14875 18.6391 9.14287Z" fill="currentColor"></path></svg></button><svg color="#1B1C1D" width="19" height="19" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg" fill="none" role="button" data-alooma-section="header" data-alooma-source="store" data-alooma-element="cross" class="BaseIconstyles__BaseIconRoot-sc-1uucpm5-0 hnDiSM"><path fill-rule="evenodd" clip-rule="evenodd" d="M22.2392 3.74389L4.23919 21.7439L3.03711 20.5418L21.0371 2.54181L22.2392 3.74389Z" fill="currentColor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M4.23919 2.54181L22.2392 20.5418L21.0371 21.7439L3.03711 3.74389L4.23919 2.54181Z" fill="currentColor"></path></svg></div></div><div id="store" class="MainWindowLayoutstyle__MainWindowContent-sc-1jcvrg2-1 hkcbMn" style="padding: 32px 20px;"><div class="Stackstyles__StackContainer-sc-qgtqup-0 iSqKQt"><div width="40" height="40" class="StoreLogostyles__StoreLogoWrap-sc-dbs5sc-0 ExeDG"><svg color="#DDD8C2" width="12" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" fill="none" class="BaseIconstyles__BaseIconRoot-sc-1uucpm5-0 bEIgmJ"><path d="M0 34.7992V1.59998C0 0.639745 0.639577 0 1.59956 0H8.79757C9.75755 0 10.3971 0.639745 10.3971 1.59998V22.1596L31.111 1.52016C33.1107 -0.399687 36.3896 -0.55993 38.4692 1.52016C40.6285 3.68007 40.3885 6.95983 38.4692 8.88029L25.5125 21.8397C27.3521 26.5598 32.3901 29.9998 38.309 29.9998H38.3888C39.3487 29.9998 39.9883 30.6396 39.9883 31.5998V38.4C39.9883 39.3596 39.3487 40 38.3888 40H37.4294C28.8718 40 21.5136 35.9202 17.4349 29.6806L9.27694 38.3196C8.23717 39.4395 6.87761 39.9994 5.19825 39.9994C2.15934 39.9994 0 37.8395 0 34.7992Z" fill="currentColor"></path></svg></div><h4 class="ExtTypographystyles__H4-sc-1ktnqyg-3 gREJLS">ceur-ws.org</h4></div><div class="Stackstyles__StackContainer-sc-qgtqup-0 dbmDMh"><div class="Stackstyles__StackContainer-sc-qgtqup-0 cfzqAx"><div class="Stackstyles__StackContainer-sc-qgtqup-0 idXJAk"><svg aria-labelledby="t1sameg-aria" role="img" width="207" height="23" viewBox="0 0 207 23"><title id="t1sameg-aria">Loading...</title><rect role="presentation" x="0" y="0" width="100%" height="100%" clip-path="url(#t1sameg-diff)" style="fill: url(&quot;#t1sameg-animated-diff&quot;);"></rect><defs><clippath id="t1sameg-diff"><rect x="0" y="0" rx="5" ry="5" width="207" height="23"></rect></clippath><lineargradient id="t1sameg-animated-diff"><stop offset="0%" stop-color="#DDD8C2" stop-opacity="1"><animate attributeName="offset" values="-2; -2; 1" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate></stop><stop offset="50%" stop-color="#eee" stop-opacity="1"><animate attributeName="offset" values="-1; -1; 2" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate></stop><stop offset="100%" stop-color="#DDD8C2" stop-opacity="1"><animate attributeName="offset" values="0; 0; 3" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate></stop></lineargradient></defs></svg></div><div class="Stackstyles__StackContainer-sc-qgtqup-0 jRtIaY" style="overflow: hidden;"><svg aria-labelledby="o1psuy5-aria" role="img" width="301" height="122" viewBox="0 0 301 122"><title id="o1psuy5-aria">Loading...</title><rect role="presentation" x="0" y="0" width="100%" height="100%" clip-path="url(#o1psuy5-diff)" style="fill: url(&quot;#o1psuy5-animated-diff&quot;);"></rect><defs><clippath id="o1psuy5-diff"><rect x="0" y="0" rx="5" ry="5" width="301" height="122"></rect></clippath><lineargradient id="o1psuy5-animated-diff"><stop offset="0%" stop-color="#DDD8C2" stop-opacity="1"><animate attributeName="offset" values="-2; -2; 1" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate></stop><stop offset="50%" stop-color="#eee" stop-opacity="1"><animate attributeName="offset" values="-1; -1; 2" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate></stop><stop offset="100%" stop-color="#DDD8C2" stop-opacity="1"><animate attributeName="offset" values="0; 0; 3" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate></stop></lineargradient></defs></svg><svg aria-labelledby="y04ir4-aria" role="img" width="301" height="122" viewBox="0 0 301 122"><title id="y04ir4-aria">Loading...</title><rect role="presentation" x="0" y="0" width="100%" height="100%" clip-path="url(#y04ir4-diff)" style="fill: url(&quot;#y04ir4-animated-diff&quot;);"></rect><defs><clippath id="y04ir4-diff"><rect x="0" y="0" rx="5" ry="5" width="301" height="122"></rect></clippath><lineargradient id="y04ir4-animated-diff"><stop offset="0%" stop-color="#DDD8C2" stop-opacity="1"><animate attributeName="offset" values="-2; -2; 1" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate></stop><stop offset="50%" stop-color="#eee" stop-opacity="1"><animate attributeName="offset" values="-1; -1; 2" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate></stop><stop offset="100%" stop-color="#DDD8C2" stop-opacity="1"><animate attributeName="offset" values="0; 0; 3" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate></stop></lineargradient></defs></svg></div><div class="Stackstyles__StackContainer-sc-qgtqup-0 fFUrUi"><svg aria-labelledby="5g16wmg-aria" role="img" width="40" height="20" viewBox="0 0 40 20"><title id="5g16wmg-aria">Loading...</title><rect role="presentation" x="0" y="0" width="100%" height="100%" clip-path="url(#5g16wmg-diff)" style="fill: url(&quot;#5g16wmg-animated-diff&quot;);"></rect><defs><clippath id="5g16wmg-diff"><rect x="0" y="0" rx="5" ry="5" width="40" height="20"></rect></clippath><lineargradient id="5g16wmg-animated-diff"><stop offset="0%" stop-color="#DDD8C2" stop-opacity="1"><animate attributeName="offset" values="-2; -2; 1" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate></stop><stop offset="50%" stop-color="#eee" stop-opacity="1"><animate attributeName="offset" values="-1; -1; 2" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate></stop><stop offset="100%" stop-color="#DDD8C2" stop-opacity="1"><animate attributeName="offset" values="0; 0; 3" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate></stop></lineargradient></defs></svg></div></div></div><div class="Stackstyles__StackContainer-sc-qgtqup-0 cfzqAx"><div class="Stackstyles__StackContainer-sc-qgtqup-0 cfzqAx"><div class="Stackstyles__StackContainer-sc-qgtqup-0 idXJAk"><svg aria-labelledby="q6t7mfr-aria" role="img" width="207" height="23" viewBox="0 0 207 23"><title id="q6t7mfr-aria">Loading...</title><rect role="presentation" x="0" y="0" width="100%" height="100%" clip-path="url(#q6t7mfr-diff)" style="fill: url(&quot;#q6t7mfr-animated-diff&quot;);"></rect><defs><clippath id="q6t7mfr-diff"><rect x="0" y="0" rx="5" ry="5" width="207" height="23"></rect></clippath><lineargradient id="q6t7mfr-animated-diff"><stop offset="0%" stop-color="#DDD8C2" stop-opacity="1"><animate attributeName="offset" values="-2; -2; 1" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate></stop><stop offset="50%" stop-color="#eee" stop-opacity="1"><animate attributeName="offset" values="-1; -1; 2" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate></stop><stop offset="100%" stop-color="#DDD8C2" stop-opacity="1"><animate attributeName="offset" values="0; 0; 3" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate></stop></lineargradient></defs></svg></div><div class="Stackstyles__StackContainer-sc-qgtqup-0 dCVlWL" style="overflow: hidden;"><div class="Stackstyles__StackContainer-sc-qgtqup-0 ecTviN"><svg aria-labelledby="4nf99me-aria" role="img" width="200" height="187" viewBox="0 0 200 187"><title id="4nf99me-aria">Loading...</title><rect role="presentation" x="0" y="0" width="100%" height="100%" clip-path="url(#4nf99me-diff)" style="fill: url(&quot;#4nf99me-animated-diff&quot;);"></rect><defs><clippath id="4nf99me-diff"><rect x="0" y="0" rx="10" ry="10" width="200" height="187"></rect></clippath><lineargradient id="4nf99me-animated-diff"><stop offset="0%" stop-color="#DDD8C2" stop-opacity="1"><animate attributeName="offset" values="-2; -2; 1" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate></stop><stop offset="50%" stop-color="#eee" stop-opacity="1"><animate attributeName="offset" values="-1; -1; 2" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate></stop><stop offset="100%" stop-color="#DDD8C2" stop-opacity="1"><animate attributeName="offset" values="0; 0; 3" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate></stop></lineargradient></defs></svg><div class="Stackstyles__StackContainer-sc-qgtqup-0 iFFOpu"><svg aria-labelledby="g0ai2vb-aria" role="img" width="100" height="21" viewBox="0 0 100 21"><title id="g0ai2vb-aria">Loading...</title><rect role="presentation" x="0" y="0" width="100%" height="100%" clip-path="url(#g0ai2vb-diff)" style="fill: url(&quot;#g0ai2vb-animated-diff&quot;);"></rect><defs><clippath id="g0ai2vb-diff"><rect x="0" y="0" rx="5" ry="5" width="100" height="21"></rect></clippath><lineargradient id="g0ai2vb-animated-diff"><stop offset="0%" stop-color="#DDD8C2" stop-opacity="1"><animate attributeName="offset" values="-2; -2; 1" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate></stop><stop offset="50%" stop-color="#eee" stop-opacity="1"><animate attributeName="offset" values="-1; -1; 2" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate></stop><stop offset="100%" stop-color="#DDD8C2" stop-opacity="1"><animate attributeName="offset" values="0; 0; 3" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate></stop></lineargradient></defs></svg><svg aria-labelledby="l2vmjq-aria" role="img" width="200" height="40" viewBox="0 0 200 40"><title id="l2vmjq-aria">Loading...</title><rect role="presentation" x="0" y="0" width="100%" height="100%" clip-path="url(#l2vmjq-diff)" style="fill: url(&quot;#l2vmjq-animated-diff&quot;);"></rect><defs><clippath id="l2vmjq-diff"><rect x="0" y="0" rx="5" ry="5" width="200" height="40"></rect></clippath><lineargradient id="l2vmjq-animated-diff"><stop offset="0%" stop-color="#DDD8C2" stop-opacity="1"><animate attributeName="offset" values="-2; -2; 1" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate></stop><stop offset="50%" stop-color="#eee" stop-opacity="1"><animate attributeName="offset" values="-1; -1; 2" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate></stop><stop offset="100%" stop-color="#DDD8C2" stop-opacity="1"><animate attributeName="offset" values="0; 0; 3" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate></stop></lineargradient></defs></svg></div></div><div class="Stackstyles__StackContainer-sc-qgtqup-0 ecTviN"><svg aria-labelledby="o1iagyd-aria" role="img" width="200" height="187" viewBox="0 0 200 187"><title id="o1iagyd-aria">Loading...</title><rect role="presentation" x="0" y="0" width="100%" height="100%" clip-path="url(#o1iagyd-diff)" style="fill: url(&quot;#o1iagyd-animated-diff&quot;);"></rect><defs><clippath id="o1iagyd-diff"><rect x="0" y="0" rx="10" ry="10" width="200" height="187"></rect></clippath><lineargradient id="o1iagyd-animated-diff"><stop offset="0%" stop-color="#DDD8C2" stop-opacity="1"><animate attributeName="offset" values="-2; -2; 1" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate></stop><stop offset="50%" stop-color="#eee" stop-opacity="1"><animate attributeName="offset" values="-1; -1; 2" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate></stop><stop offset="100%" stop-color="#DDD8C2" stop-opacity="1"><animate attributeName="offset" values="0; 0; 3" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate></stop></lineargradient></defs></svg><div class="Stackstyles__StackContainer-sc-qgtqup-0 iFFOpu"><svg aria-labelledby="4j5pf8i-aria" role="img" width="100" height="21" viewBox="0 0 100 21"><title id="4j5pf8i-aria">Loading...</title><rect role="presentation" x="0" y="0" width="100%" height="100%" clip-path="url(#4j5pf8i-diff)" style="fill: url(&quot;#4j5pf8i-animated-diff&quot;);"></rect><defs><clippath id="4j5pf8i-diff"><rect x="0" y="0" rx="5" ry="5" width="100" height="21"></rect></clippath><lineargradient id="4j5pf8i-animated-diff"><stop offset="0%" stop-color="#DDD8C2" stop-opacity="1"><animate attributeName="offset" values="-2; -2; 1" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate></stop><stop offset="50%" stop-color="#eee" stop-opacity="1"><animate attributeName="offset" values="-1; -1; 2" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate></stop><stop offset="100%" stop-color="#DDD8C2" stop-opacity="1"><animate attributeName="offset" values="0; 0; 3" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate></stop></lineargradient></defs></svg><svg aria-labelledby="b6r5ubo-aria" role="img" width="200" height="40" viewBox="0 0 200 40"><title id="b6r5ubo-aria">Loading...</title><rect role="presentation" x="0" y="0" width="100%" height="100%" clip-path="url(#b6r5ubo-diff)" style="fill: url(&quot;#b6r5ubo-animated-diff&quot;);"></rect><defs><clippath id="b6r5ubo-diff"><rect x="0" y="0" rx="5" ry="5" width="200" height="40"></rect></clippath><lineargradient id="b6r5ubo-animated-diff"><stop offset="0%" stop-color="#DDD8C2" stop-opacity="1"><animate attributeName="offset" values="-2; -2; 1" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate></stop><stop offset="50%" stop-color="#eee" stop-opacity="1"><animate attributeName="offset" values="-1; -1; 2" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate></stop><stop offset="100%" stop-color="#DDD8C2" stop-opacity="1"><animate attributeName="offset" values="0; 0; 3" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate></stop></lineargradient></defs></svg></div></div><div class="Stackstyles__StackContainer-sc-qgtqup-0 ecTviN"><svg aria-labelledby="14nfisb-aria" role="img" width="200" height="187" viewBox="0 0 200 187"><title id="14nfisb-aria">Loading...</title><rect role="presentation" x="0" y="0" width="100%" height="100%" clip-path="url(#14nfisb-diff)" style="fill: url(&quot;#14nfisb-animated-diff&quot;);"></rect><defs><clippath id="14nfisb-diff"><rect x="0" y="0" rx="10" ry="10" width="200" height="187"></rect></clippath><lineargradient id="14nfisb-animated-diff"><stop offset="0%" stop-color="#DDD8C2" stop-opacity="1"><animate attributeName="offset" values="-2; -2; 1" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate></stop><stop offset="50%" stop-color="#eee" stop-opacity="1"><animate attributeName="offset" values="-1; -1; 2" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate></stop><stop offset="100%" stop-color="#DDD8C2" stop-opacity="1"><animate attributeName="offset" values="0; 0; 3" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate></stop></lineargradient></defs></svg><div class="Stackstyles__StackContainer-sc-qgtqup-0 iFFOpu"><svg aria-labelledby="u4ipj5g-aria" role="img" width="100" height="21" viewBox="0 0 100 21"><title id="u4ipj5g-aria">Loading...</title><rect role="presentation" x="0" y="0" width="100%" height="100%" clip-path="url(#u4ipj5g-diff)" style="fill: url(&quot;#u4ipj5g-animated-diff&quot;);"></rect><defs><clippath id="u4ipj5g-diff"><rect x="0" y="0" rx="5" ry="5" width="100" height="21"></rect></clippath><lineargradient id="u4ipj5g-animated-diff"><stop offset="0%" stop-color="#DDD8C2" stop-opacity="1"><animate attributeName="offset" values="-2; -2; 1" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate></stop><stop offset="50%" stop-color="#eee" stop-opacity="1"><animate attributeName="offset" values="-1; -1; 2" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate></stop><stop offset="100%" stop-color="#DDD8C2" stop-opacity="1"><animate attributeName="offset" values="0; 0; 3" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate></stop></lineargradient></defs></svg><svg aria-labelledby="72w74a-aria" role="img" width="200" height="40" viewBox="0 0 200 40"><title id="72w74a-aria">Loading...</title><rect role="presentation" x="0" y="0" width="100%" height="100%" clip-path="url(#72w74a-diff)" style="fill: url(&quot;#72w74a-animated-diff&quot;);"></rect><defs><clippath id="72w74a-diff"><rect x="0" y="0" rx="5" ry="5" width="200" height="40"></rect></clippath><lineargradient id="72w74a-animated-diff"><stop offset="0%" stop-color="#DDD8C2" stop-opacity="1"><animate attributeName="offset" values="-2; -2; 1" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate></stop><stop offset="50%" stop-color="#eee" stop-opacity="1"><animate attributeName="offset" values="-1; -1; 2" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate></stop><stop offset="100%" stop-color="#DDD8C2" stop-opacity="1"><animate attributeName="offset" values="0; 0; 3" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate></stop></lineargradient></defs></svg></div></div></div><div class="Stackstyles__StackContainer-sc-qgtqup-0 fFUrUi"><svg aria-labelledby="6biirec-aria" role="img" width="40" height="20" viewBox="0 0 40 20"><title id="6biirec-aria">Loading...</title><rect role="presentation" x="0" y="0" width="100%" height="100%" clip-path="url(#6biirec-diff)" style="fill: url(&quot;#6biirec-animated-diff&quot;);"></rect><defs><clippath id="6biirec-diff"><rect x="0" y="0" rx="5" ry="5" width="40" height="20"></rect></clippath><lineargradient id="6biirec-animated-diff"><stop offset="0%" stop-color="#DDD8C2" stop-opacity="1"><animate attributeName="offset" values="-2; -2; 1" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate></stop><stop offset="50%" stop-color="#eee" stop-opacity="1"><animate attributeName="offset" values="-1; -1; 2" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate></stop><stop offset="100%" stop-color="#DDD8C2" stop-opacity="1"><animate attributeName="offset" values="0; 0; 3" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate></stop></lineargradient></defs></svg></div></div></div></div></div><div class="AlertsPortalstyle__AlertsWrapper-sc-ulhwai-0 qwRPZ"><div class="AlertsPortalstyle__AlertsContainer-sc-ulhwai-1 hOiApn"></div></div><div class="Stackstyles__StackContainer-sc-qgtqup-0 crGMfD MainWindowFooterstyle__FooterWrapper-sc-1p4w2zh-0 jiMGPY"><button data-alooma-disabled="false" data-alooma-section="footer" data-alooma-source="store" data-alooma-element="store" id="v2_store-tab" class="MainWindowLinkstyle__StyledButton-sc-1lvni6x-0 iwzpvb MainWindowNavButtonstyle__StyledRouteLink-sc-1k4ey7y-0 dHTJWo"><svg color="currentColor" width="20" height="20" viewBox="0 0 21 20" xmlns="http://www.w3.org/2000/svg" fill="none" class="BaseIconstyles__BaseIconRoot-sc-1uucpm5-0 fskGsU"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.39108 1.54101C3.67474 1.09975 4.16332 0.833008 4.68789 0.833008H16.278C16.8026 0.833008 17.2911 1.09975 17.5748 1.54101L19.5933 4.68097C20.6371 6.30467 20.3431 8.44666 18.9004 9.72906C18.706 9.9019 18.4956 10.0461 18.2746 10.1619V17.4997H19.6496V18.9163H1.31627V17.4997H2.69127V10.1619C2.47025 10.0461 2.25988 9.9019 2.06543 9.72906C0.622731 8.44666 0.328721 6.30467 1.37253 4.68097L3.39108 1.54101L3.98691 1.92404L3.39108 1.54101ZM4.10793 10.5161V17.4997H16.8579V10.5161C16.0493 10.5231 15.2402 10.217 14.6267 9.60347L13.5719 8.54872L13.3078 9.03926C12.0964 11.2889 8.86946 11.2889 7.65809 9.03926L7.39395 8.54872L6.33921 9.60347C5.72568 10.217 4.91658 10.5231 4.10793 10.5161ZM4.68789 2.24967C4.64536 2.24967 4.60575 2.2713 4.58275 2.30708L2.5642 5.44704C1.89773 6.48377 2.08546 7.85142 3.00662 8.67023C3.67918 9.26807 4.70117 9.23803 5.33747 8.60174L6.66941 7.2698C7.20228 6.73692 8.09816 6.86841 8.45544 7.53193L8.90542 8.36762C9.5819 9.62394 11.384 9.62394 12.0604 8.36762L12.5104 7.53193C12.8677 6.86841 13.7636 6.73692 14.2965 7.2698L15.6284 8.60173C16.2647 9.23803 17.2867 9.26806 17.9593 8.67023C18.8804 7.85142 19.0681 6.48377 18.4017 5.44704L16.3831 2.30708C16.3601 2.2713 16.3205 2.24967 16.278 2.24967H4.68789Z" fill="currentColor"></path></svg><div font-weight="500" class="ExtTypographystyles__LabelSmall-sc-1ktnqyg-13 kGxgXk">Store</div></button><button data-alooma-disabled="false" data-alooma-section="footer" data-alooma-source="store" data-alooma-element="my_karma" id="v2_myKarma-tab" class="MainWindowLinkstyle__StyledButton-sc-1lvni6x-0 iwzpvb MainWindowNavButtonstyle__StyledRouteLink-sc-1k4ey7y-0 Lzwes"><svg color="currentColor" width="20" height="20" viewBox="0 0 21 20" xmlns="http://www.w3.org/2000/svg" fill="none" class="BaseIconstyles__BaseIconRoot-sc-1uucpm5-0 fskGsU"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.16699 3.28322C2.16699 1.46995 3.62529 0 5.42418 0H15.5765C17.3754 0 18.8337 1.46995 18.8337 3.28322V18.1062C18.8337 18.9099 17.9335 19.3853 17.2697 18.932L10.7066 14.4501L3.709 18.9632C3.04356 19.3924 2.16699 18.9147 2.16699 18.1228V3.28322ZM5.42418 1.44974C4.4196 1.44974 3.60523 2.27062 3.60523 3.28322V17.309L10.7292 12.7144L17.3954 17.2667V3.28322C17.3954 2.27062 16.581 1.44974 15.5765 1.44974H5.42418Z" fill="currentColor"></path></svg><div font-weight="500" class="ExtTypographystyles__LabelSmall-sc-1ktnqyg-13 kGxgXk">My Karma</div></button></div></div></div></div></div><div class="InjectAppstyle__AppWidget-sc-2rfi8l-0 iVyJWt app-widget"><div class="InjectAppstyle__IframeWrap-sc-2rfi8l-1 fTPmQC"></div></div></div></div></div><style type="text/css">@font-face{font-family:"Roboto";src:url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Roboto/roboto-100.woff) format("woff"),url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Roboto/roboto-100.woff2) format("woff2"),url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Roboto/roboto-100.ttf) format("truetype");font-style:normal;font-weight:100;font-display:swap}@font-face{font-family:"Roboto";src:url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Roboto/roboto-300.woff) format("woff"),url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Roboto/roboto-300.woff2) format("woff2"),url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Roboto/roboto-300.ttf) format("truetype");font-style:normal;font-weight:300;font-display:swap}@font-face{font-family:"Roboto";src:url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Roboto/roboto-400.woff) format("woff"),url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Roboto/roboto-400.woff2) format("woff2"),url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Roboto/roboto-400.ttf) format("truetype");font-style:normal;font-weight:400;font-display:swap}@font-face{font-family:"Roboto";src:url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Roboto/roboto-500.woff) format("woff"),url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Roboto/roboto-500.woff2) format("woff2"),url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Roboto/roboto-500.ttf) format("truetype");font-style:normal;font-weight:500;font-display:swap}@font-face{font-family:"Roboto";src:url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Roboto/roboto-700.woff) format("woff"),url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Roboto/roboto-700.woff2) format("woff2"),url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Roboto/roboto-700.ttf) format("truetype");font-style:normal;font-weight:700;font-display:swap}@font-face{font-family:"Roboto";src:url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Roboto/roboto-900.woff) format("woff"),url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Roboto/roboto-900.woff2) format("woff2"),url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Roboto/roboto-900.ttf) format("truetype");font-style:normal;font-weight:900;font-display:swap}@font-face{font-family:"Rebond";src:url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Rebond/rebond-400.woff) format("woff"),url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Rebond/rebond-400.woff2) format("woff2"),url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Rebond/rebond-400.ttf) format("truetype");font-style:normal;font-weight:400;font-display:swap}@font-face{font-family:"Rebond";src:url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Rebond/rebond-500.woff) format("woff"),url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Rebond/rebond-500.woff2) format("woff2"),url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Rebond/rebond-500.ttf) format("truetype");font-style:normal;font-weight:500;font-display:swap}@font-face{font-family:"Rebond";src:url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Rebond/rebond-600.woff) format("woff"),url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Rebond/rebond-600.woff2) format("woff2"),url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Rebond/rebond-600.ttf) format("truetype");font-style:normal;font-weight:600;font-display:swap}@font-face{font-family:"Rebond";src:url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Rebond/rebond-700.woff) format("woff"),url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Rebond/rebond-700.woff2) format("woff2"),url(chrome-extension://emalgedpdlghbkikiaeocoblajamonoh/fonts/Rebond/rebond-700.ttf) format("truetype");font-style:normal;font-weight:700;font-display:swap}*::-webkit-scrollbar{width:5px;background:rgba(0,0,0,.05)}*::-webkit-scrollbar:hover{width:25px;background:rgba(0,0,0,.1)}*::-webkit-scrollbar-track{border-radius:50%}*::-webkit-scrollbar-thumb{border-radius:5px;background:rgba(0,0,0,.1)}*::-webkit-scrollbar-thumb:hover{background:rgba(0,0,0,.2)}a:active,a:focus,button:active,button:focus,textarea:active,textarea:focus,input:active,input:focus{outline:none}a{text-decoration:none}a:hover,a:focus,a:active{text-decoration:none}input::-moz-placeholder,textarea::-moz-placeholder{color:inherit;opacity:inherit}input::-ms-input-placeholder,textarea::-ms-input-placeholder{color:inherit;opacity:inherit}input::-moz-placeholder,textarea::-moz-placeholder{color:inherit;opacity:inherit}[role=button]{cursor:pointer}*,*::before,*::after{box-sizing:border-box}.shoptagr-inject{direction:initial;box-sizing:border-box;text-align:left;font-family:Roboto,sans-serif;font-size:16px;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}</style></template></div></div><iframe id="ucUU5XXe" frameborder="0" src="./workshop_files/translateSandbox.html" style="width: 0px; height: 0px; display: none;"></iframe></body></html>

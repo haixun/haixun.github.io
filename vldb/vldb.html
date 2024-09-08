@@ -1,0 +1,859 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-09-08 Sun 06:47 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Proceedings of Workshops at the 50th International Conference on Very Large Data Bases (VLDB 2024)</title>
+<meta name="author" content="Haixun Wang" />
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/bigblow_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/bigblow_theme/css/bigblow.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/bigblow_theme/css/hideshow.css"/>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/bigblow_theme/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/bigblow_theme/js/jquery-ui-1.10.2.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/bigblow_theme/js/jquery.localscroll-min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/bigblow_theme/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/bigblow_theme/js/jquery.zclip.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/bigblow_theme/js/bigblow.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/bigblow_theme/js/hideshow.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Proceedings of Workshops at the 50th International Conference on Very Large Data Bases (VLDB 2024)</h1>
+
+<div id="outline-container-org819b149" class="outline-2">
+<h2 id="org819b149">VLDBW 2024</h2>
+<div class="outline-text-2" id="text-org819b149">
+</div>
+<div id="outline-container-org6033a8d" class="outline-3">
+<h3 id="org6033a8d">VLDB 2024 Workshop Chairs</h3>
+<div class="outline-text-3" id="text-org6033a8d">
+</div>
+<div id="outline-container-orga5e3dcd" class="outline-4">
+<h4 id="orga5e3dcd">Themis Palpanas, Philippe Bonnet</h4>
+</div>
+</div>
+<div id="outline-container-orgf9e7644" class="outline-3">
+<h3 id="orgf9e7644">VLDB 2024 Workshop Proceeding Chair</h3>
+<div class="outline-text-3" id="text-orgf9e7644">
+</div>
+<div id="outline-container-org13db8b2" class="outline-4">
+<h4 id="org13db8b2">Haixun Wang</h4>
+</div>
+</div>
+<div id="outline-container-org32b4e8e" class="outline-3">
+<h3 id="org32b4e8e">Accepted Workshops</h3>
+<div class="outline-text-3" id="text-org32b4e8e">
+</div>
+<div id="outline-container-org1061770" class="outline-4">
+<h4 id="org1061770">ADMS: 15th Workshop on Accelerating Analytics and Data Management Systems using Modern Processor and Storage Architectures</h4>
+<div class="outline-text-4" id="text-org1061770">
+<ul class="org-ul">
+<li>Workshop Chairs: Rajesh Bordawekar and Tirthankar Lahiri</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb924142" class="outline-4">
+<h4 id="orgb924142">BigVis: 7th International Workshop on Big Data Visual Exploration and Analytics</h4>
+<div class="outline-text-4" id="text-orgb924142">
+<ul class="org-ul">
+<li>Workshop Chairs: Nikos Bikakis, Panos K. Chrysanthis, Guoliang Li, George Papastefanatos</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org727054c" class="outline-4">
+<h4 id="org727054c">DATAI: 1st International Workshop on Data-driven AI</h4>
+<div class="outline-text-4" id="text-org727054c">
+<ul class="org-ul">
+<li>Workshop Chairs: Hongzhi Wang, Nan Tang, Lei Cao, Chengliang Chai, Xiaoou Ding</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org374ea7e" class="outline-4">
+<h4 id="org374ea7e">FAB: 6th International Workshop on Foundations and Applications of Blockchain</h4>
+<div class="outline-text-4" id="text-org374ea7e">
+<ul class="org-ul">
+<li>Workshop Chairs: Mohammad Javad Amiri</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge1c5b71" class="outline-4">
+<h4 id="orge1c5b71">LLM+KG: 1st International Workshop on Data Management Opportunities in Unifying Large Language Models + Knowledge Graphs</h4>
+<div class="outline-text-4" id="text-orge1c5b71">
+<ul class="org-ul">
+<li>Workshop Chairs: Arijit Khan, Tianxing Wu, Xi Chen</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org06aa1fa" class="outline-4">
+<h4 id="org06aa1fa">QDB: 13th International Workshop on Quality in Databases</h4>
+<div class="outline-text-4" id="text-org06aa1fa">
+<ul class="org-ul">
+<li>Workshop Chairs: Lisa Ehrlinger, Hazar Harmouch, Sourav S Bhowmick</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9c91614" class="outline-4">
+<h4 id="org9c91614">QDSM: 2nd International Workshop on Quantum Data Science and Management</h4>
+<div class="outline-text-4" id="text-org9c91614">
+<ul class="org-ul">
+<li>Workshop Chairs: Sven Groppe, Jiaheng Lu, Wolfgang Mauerer, Le Gruenwald</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3f4e5b8" class="outline-4">
+<h4 id="org3f4e5b8">TaDA: 2nd International Workshop on Tabular Data Analysis</h4>
+<div class="outline-text-4" id="text-org3f4e5b8">
+<ul class="org-ul">
+<li>Workshop Chairs: Vasilis Efthymiou, Sainyam Galhotra, Oktie Hassanzadeh, Chuan Lei, Kavitha Srinivas</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfe02e24" class="outline-4">
+<h4 id="orgfe02e24">LSGDA: 3rd International Workshop on Large-Scale Graph Data Analytics</h4>
+<div class="outline-text-4" id="text-orgfe02e24">
+<ul class="org-ul">
+<li>Workshop Chairs: Wenjie Zhang, Lu Qin, Ying Zhang, Long Yuan, Zhengyi Yang</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1165e13" class="outline-4">
+<h4 id="org1165e13">CloudDB: 2nd Workshop on Cloud Databases</h4>
+<div class="outline-text-4" id="text-org1165e13">
+<ul class="org-ul">
+<li>Workshop Chairs: Jiannan Wang, Kai Zeng, Guoliang Li, and Sanjay Krishnan</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org72a461b" class="outline-2">
+<h2 id="org72a461b">ADMS</h2>
+<div class="outline-text-2" id="text-org72a461b">
+</div>
+<div id="outline-container-orgb631ed7" class="outline-3">
+<h3 id="orgb631ed7">15th Workshop on Accelerating Analytics and Data Management Systems using Modern Processor and Storage Architectures</h3>
+<div class="outline-text-3" id="text-orgb631ed7">
+</div>
+<div id="outline-container-org8b07671" class="outline-4">
+<h4 id="org8b07671"><a href="./VLDB-Workshop-2024/ADMS/ADMS24_01.pdf">Bandwidth Expansion via CXL: A Pathway to Accelerating In-Memory Analytical Processing</a></h4>
+<div class="outline-text-4" id="text-org8b07671">
+<p>
+Wentao Huang, Mo Sha, Mian Lu, Yuqiang Chen, Bingsheng He, Kian-Lee Tan
+</p>
+</div>
+</div>
+<div id="outline-container-org79d8093" class="outline-4">
+<h4 id="org79d8093"><a href="./VLDB-Workshop-2024/ADMS/ADMS24_02.pdf">Can Delta Compete with Frame-of-Reference for Lightweight Integer Compression?,</a></h4>
+<div class="outline-text-4" id="text-org79d8093">
+<p>
+Julia Spindler, Philipp Fent, Adrian Riedl, Thomas Neumann
+</p>
+</div>
+</div>
+<div id="outline-container-org7cb482a" class="outline-4">
+<h4 id="org7cb482a"><a href="./VLDB-Workshop-2024/ADMS/ADMS24_03.pdf">Optimizing Sorting for Chiplet-Based CPUs</a></h4>
+<div class="outline-text-4" id="text-org7cb482a">
+<p>
+Alessandro Fogli, Peter Pletzuch, Jana Giceva
+</p>
+</div>
+</div>
+<div id="outline-container-org74d1d25" class="outline-4">
+<h4 id="org74d1d25"><a href="./VLDB-Workshop-2024/ADMS/ADMS24_04.pdf">Ghostwriter: a Distributed Message Broker on RDMA and NVM</a></h4>
+<div class="outline-text-4" id="text-org74d1d25">
+<p>
+Hendrik Makait, Bonaventura Del Monte, Tilmann Rabl
+</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgc51afbe" class="outline-2">
+<h2 id="orgc51afbe">BigVis</h2>
+<div class="outline-text-2" id="text-orgc51afbe">
+</div>
+<div id="outline-container-org33918fc" class="outline-3">
+<h3 id="org33918fc">7th International Workshop on Big Data Visual Exploration and Analytics</h3>
+<div class="outline-text-3" id="text-org33918fc">
+</div>
+<div id="outline-container-org1e99aa3" class="outline-4">
+<h4 id="org1e99aa3"><a href="./VLDB-Workshop-2024/BigVis/BigVis2024_01.pdf">Techniques for interactive visual examination of autonomous vessel performance</a></h4>
+<div class="outline-text-4" id="text-org1e99aa3">
+<p>
+Natalia Andrienko, Gennady Andrienko, Dimitris Zissis, Alexandros Troupiotis-Kapeliaris and Giannis Spiliopoulos
+</p>
+</div>
+</div>
+<div id="outline-container-orgc26d9fb" class="outline-4">
+<h4 id="orgc26d9fb"><a href="./VLDB-Workshop-2024/BigVis/BigVis2024_02.pdf">A Unified Visual Exploration Framework for (Semi-)structured Data</a></h4>
+<div class="outline-text-4" id="text-orgc26d9fb">
+<p>
+Théo Bouganim, Ioana Manolescu and Emmanuel Pietriga
+</p>
+</div>
+</div>
+<div id="outline-container-org58b445e" class="outline-4">
+<h4 id="org58b445e"><a href="./VLDB-Workshop-2024/BigVis/BigVis2024_03.pdf">QPV: An Input Control Component For Progressive Visualization Analytics </a></h4>
+<div class="outline-text-4" id="text-org58b445e">
+<p>
+Xin Zhang and Ahmed Eldawy
+</p>
+</div>
+</div>
+<div id="outline-container-org8947b73" class="outline-4">
+<h4 id="org8947b73"><a href="./VLDB-Workshop-2024/BigVis/BigVis2024_04.pdf">InterpretStack: Interpretable Exploration and Interactive Visualization Construction of Stacking Algorithm</a></h4>
+<div class="outline-text-4" id="text-org8947b73">
+<p>
+Yu Wang, Jing Lu, Le Liu, Junping Zhang and Siming Chen
+</p>
+</div>
+</div>
+<div id="outline-container-orgd47df97" class="outline-4">
+<h4 id="orgd47df97"><a href="./VLDB-Workshop-2024/BigVis/BigVis2024_05.pdf">Vizard: Improving Visual Data Literacy with Large Language Models</a></h4>
+<div class="outline-text-4" id="text-orgd47df97">
+<p>
+Rubab Zahra Sarfraz and Samar Haider
+</p>
+</div>
+</div>
+<div id="outline-container-org436be9c" class="outline-4">
+<h4 id="org436be9c"><a href="./VLDB-Workshop-2024/BigVis/BigVis2024_06.pdf">Tangible Progress: Employing Visual Metaphors and Physical Interfaces in AI-based English Language Learning</a></h4>
+<div class="outline-text-4" id="text-org436be9c">
+<p>
+Mei Wang, Hai-Ning Liang, Yu Liu, Chengtao Ji and Lingyun Yu
+</p>
+</div>
+</div>
+<div id="outline-container-org2b4b233" class="outline-4">
+<h4 id="org2b4b233"><a href="./VLDB-Workshop-2024/BigVis/BigVis2024_07.pdf">EvalGPT: A Visual Analytic Framework for Enhancing Trust in Large Language Models</a></h4>
+<div class="outline-text-4" id="text-org2b4b233">
+<p>
+Xu Yang, Yiheng Liang, Le Liu, Lianwei Wu and Xiaoru Yuan
+</p>
+</div>
+</div>
+<div id="outline-container-orgecef79f" class="outline-4">
+<h4 id="orgecef79f"><a href="./VLDB-Workshop-2024/BigVis/BigVis2024_08.pdf">Partial Adaptive Indexing for Approximate Query Answering</a></h4>
+<div class="outline-text-4" id="text-orgecef79f">
+<p>
+Stavros Maroulis, Nikos Bikakis, Vasileios Stamatopoulos and George Papastefanatos
+</p>
+</div>
+</div>
+<div id="outline-container-org331e8fe" class="outline-4">
+<h4 id="org331e8fe"><a href="./VLDB-Workshop-2024/BigVis/BigVis2024_09.pdf">Enhancing Geographic Information Visualization: A Comparative Analysis of Digital Maps and Projection Augmented Relief Maps</a></h4>
+<div class="outline-text-4" id="text-org331e8fe">
+<p>
+Chang Yuan Lang Teng, Zhiwei Shi, Lingyun Yu and Yu Liu
+</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgf8187ac" class="outline-2">
+<h2 id="orgf8187ac">DATAI</h2>
+<div class="outline-text-2" id="text-orgf8187ac">
+</div>
+<div id="outline-container-orgb5f353d" class="outline-3">
+<h3 id="orgb5f353d">1st International Workshop on Data-driven AI</h3>
+<div class="outline-text-3" id="text-orgb5f353d">
+</div>
+<div id="outline-container-orgdd4bc0e" class="outline-4">
+<h4 id="orgdd4bc0e"><a href="./VLDB-Workshop-2024/DATAI/DATAI-1.pdf">Addressing Data Management Challenges for Interoperable Data Science</a></h4>
+<div class="outline-text-4" id="text-orgdd4bc0e">
+<p>
+Ilin Tolovski,Tilmann Rabl
+</p>
+</div>
+</div>
+<div id="outline-container-org4a05c9e" class="outline-4">
+<h4 id="org4a05c9e"><a href="./VLDB-Workshop-2024/DATAI/DATAI-2.pdf">Missing Value Imputation via Pre-trained Language Models with Trainable Prompt and Retrieval Augmentation</a></h4>
+<div class="outline-text-4" id="text-org4a05c9e">
+<p>
+Xiang Huang, Shuang Hao
+</p>
+</div>
+</div>
+<div id="outline-container-orgbae2e45" class="outline-4">
+<h4 id="orgbae2e45"><a href="./VLDB-Workshop-2024/DATAI/DATAI-3.pdf">LLM-assisted Labeling Function Generation for Semantic Type Detection</a></h4>
+<div class="outline-text-4" id="text-orgbae2e45">
+<p>
+Chenjie Li, Dan Zhang, Jin Wang
+</p>
+</div>
+</div>
+<div id="outline-container-org4a43d0a" class="outline-4">
+<h4 id="org4a43d0a"><a href="./VLDB-Workshop-2024/DATAI/DATAI-4.pdf">Approximate Functional Dependencies Discovery Using Markov Blanket</a></h4>
+<div class="outline-text-4" id="text-org4a43d0a">
+<p>
+Jinqi Liu, Anzhen Zhang, Jiajia Li, Na Guo, Jing Zhang
+</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org07c610d" class="outline-2">
+<h2 id="org07c610d">FAB</h2>
+<div class="outline-text-2" id="text-org07c610d">
+</div>
+<div id="outline-container-orgc053891" class="outline-3">
+<h3 id="orgc053891">6th International Workshop on Foundations and Applications of Blockchain</h3>
+<div class="outline-text-3" id="text-orgc053891">
+</div>
+<div id="outline-container-org018db50" class="outline-4">
+<h4 id="org018db50"><a href="./VLDB-Workshop-2024/FAB/FAB-1.pdf">Proceedings of the Sixth International Workshop on Foundations and Applications of Blockchain (FAB)</a></h4>
+<div class="outline-text-4" id="text-org018db50">
+<p>
+Mohammad Javad Amiri
+</p>
+</div>
+</div>
+<div id="outline-container-org37820b0" class="outline-4">
+<h4 id="org37820b0"><a href="./VLDB-Workshop-2024/FAB/FAB-2.pdf">Benefits and Challenges of Decentralization in Data Systems: Opportunities for Data Management Research</a></h4>
+<div class="outline-text-4" id="text-org37820b0">
+<p>
+Ruben Mayer
+</p>
+</div>
+</div>
+<div id="outline-container-org15d02fd" class="outline-4">
+<h4 id="org15d02fd"><a href="./VLDB-Workshop-2024/FAB/FAB-3.pdf">Data Management and AI for Blockchain Data Analysis: A Round Trip and Opportunities</a></h4>
+<div class="outline-text-4" id="text-org15d02fd">
+<p>
+Arijit Khan
+</p>
+</div>
+</div>
+<div id="outline-container-org05e9a03" class="outline-4">
+<h4 id="org05e9a03"><a href="./VLDB-Workshop-2024/FAB/FAB-4.pdf">Practical Declarative Smart Contracts Optimization</a></h4>
+<div class="outline-text-4" id="text-org05e9a03">
+<p>
+Lan Lu, Tao Luo, Jingyi Li, Hongxun Ding, Brendan Massey, Haoxian Chen, Boon Thau Loo
+</p>
+</div>
+</div>
+<div id="outline-container-org5f28567" class="outline-4">
+<h4 id="org5f28567"><a href="./VLDB-Workshop-2024/FAB/FAB-5.pdf">CroCRPC: Cross-Chain Remote Procedure Calls Framework for dApps</a></h4>
+<div class="outline-text-4" id="text-org5f28567">
+<p>
+Avishek De, Divyakant Agrawal, Amr El Abbadi
+</p>
+</div>
+</div>
+<div id="outline-container-orge709f2a" class="outline-4">
+<h4 id="orge709f2a"><a href="./VLDB-Workshop-2024/FAB/FAB-6.pdf">From On-chain to Macro: Assessing the Importance of Data Source Diversity in Cryptocurrency Market Forecasting</a></h4>
+<div class="outline-text-4" id="text-orge709f2a">
+<p>
+Giorgos Demosthenous, Chryssis Georgiou, Eliada Polydorou
+</p>
+</div>
+</div>
+<div id="outline-container-orgc20b3f3" class="outline-4">
+<h4 id="orgc20b3f3"><a href="./VLDB-Workshop-2024/FAB/FAB-7.pdf">SOK: Blockchain for Provenance</a></h4>
+<div class="outline-text-4" id="text-orgc20b3f3">
+<p>
+Asma Jodeiri Akbarfam, Hoda Maleki
+</p>
+</div>
+</div>
+<div id="outline-container-orgabd7cbc" class="outline-4">
+<h4 id="orgabd7cbc"><a href="./VLDB-Workshop-2024/FAB/FAB-8.pdf">A Comprehensive Outlook for Analyzing and Enhancing the Performance of Blockchain Platforms</a></h4>
+<div class="outline-text-4" id="text-orgabd7cbc">
+<p>
+Jeeta Chacko
+</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgbf3d549" class="outline-2">
+<h2 id="orgbf3d549">LLM+KG</h2>
+<div class="outline-text-2" id="text-orgbf3d549">
+</div>
+<div id="outline-container-org7ec53e9" class="outline-3">
+<h3 id="org7ec53e9">1st International Workshop on Data Management Opportunities in Unifying Large Language Models + Knowledge Graphs</h3>
+<div class="outline-text-3" id="text-org7ec53e9">
+</div>
+<div id="outline-container-org4412fc1" class="outline-4">
+<h4 id="org4412fc1"><a href="./VLDB-Workshop-2024/LLM+KG/LLM+KG-1.pdf">LLM+KG: Data Management Opportunities in Unifying Large Language Models + Knowledge Graphs</a></h4>
+<div class="outline-text-4" id="text-org4412fc1">
+<p>
+Arijit Khan, Tianxing Wu, Xi Chen
+</p>
+</div>
+</div>
+<div id="outline-container-org6211cb0" class="outline-4">
+<h4 id="org6211cb0"><a href="./VLDB-Workshop-2024/LLM+KG/LLM+KG-2.pdf">OneEdit: A Neural-Symbolic Collaboratively Knowledge Editing System</a></h4>
+<div class="outline-text-4" id="text-org6211cb0">
+<p>
+Ningyu Zhang, Zekun Xi, Yujie Luo, Peng Wang, Bozhong Tian, Yunzhi Yao, Jintian Zhang, Shumin Deng, mengshu sun, Lei Liang, Zhiqiang Zhang, Xiaowei Zhu, Jun Zhou, Huajun Chen
+</p>
+</div>
+</div>
+<div id="outline-container-org02cde55" class="outline-4">
+<h4 id="org02cde55"><a href="./VLDB-Workshop-2024/LLM+KG/LLM+KG-4.pdf">Knowledge Graph Efficient Construction: Embedding Chain-of-Thought into LLMs</a></h4>
+<div class="outline-text-4" id="text-org02cde55">
+<p>
+Jixuan Nie, Xia HOU, wenfeng song, xuan wang, Xingliang Jin, Xinyu Zhang, ShuoZhe Zhang, Jiaqi Shi
+</p>
+</div>
+</div>
+<div id="outline-container-orga232a44" class="outline-4">
+<h4 id="orga232a44"><a href="./VLDB-Workshop-2024/LLM+KG/LLM+KG-5.pdf">Benchmarking and Analyzing In-context Learning, Fine-tuning and Supervised Learning for Biomedical Knowledge Curation: a focused study on chemical entities of biological interest</a></h4>
+<div class="outline-text-4" id="text-orga232a44">
+<p>
+Yusuf Abdulle, Emily Groves, Minhong Wang, Holger Kunz, Jason Hoelscher-Obermaier, Ronin Wu, Honghan Wu
+</p>
+</div>
+</div>
+<div id="outline-container-orge80fd47" class="outline-4">
+<h4 id="orge80fd47"><a href="./VLDB-Workshop-2024/LLM+KG/LLM+KG-8.pdf">Leveraging LLMs Few-shot Learning to Improve Instruction-driven Knowledge Graph Construction</a></h4>
+<div class="outline-text-4" id="text-orge80fd47">
+<p>
+Yongli Mou, Li Liu, Sulayman Sowe, Diego Collarana, Stefan Decker
+</p>
+</div>
+</div>
+<div id="outline-container-orga886d21" class="outline-4">
+<h4 id="orga886d21"><a href="./VLDB-Workshop-2024/LLM+KG/LLM+KG-9.pdf">Research Trends for the Interplay between Large Language Models and Knowledge Graphs</a></h4>
+<div class="outline-text-4" id="text-orga886d21">
+<p>
+Hanieh Khorashadizadeh
+</p>
+</div>
+</div>
+<div id="outline-container-org5aad5f2" class="outline-4">
+<h4 id="org5aad5f2"><a href="./VLDB-Workshop-2024/LLM+KG/LLM+KG-11.pdf">Enhancing Large Language Models with Multimodality and Knowledge Graphs for Hallucination-free Open-set Object Recognition</a></h4>
+<div class="outline-text-4" id="text-org5aad5f2">
+<p>
+Xinfu Liu, Wu Yirui, Yuting Zhou, Junyang Chen, huan wang, Ye Liu, Shaohua Wan
+</p>
+</div>
+</div>
+<div id="outline-container-org5e531b2" class="outline-4">
+<h4 id="org5e531b2"><a href="./VLDB-Workshop-2024/LLM+KG/LLM+KG-12.pdf">SPIREX: Improving LLM-based relation extraction from RNA-focused scientific literature using graph machine learning</a></h4>
+<div class="outline-text-4" id="text-org5e531b2">
+<p>
+Emanuele Cavalleri, Mauricio Soto-Gomez, Ali Pashaeibarough, Dario Malchiodi, Harry Caufield, Justin Reese, Chris Mungall, Peter Robinson, Elena Casiraghi, Giorgio Valentini, Marco Mesiti
+</p>
+</div>
+</div>
+<div id="outline-container-orgefed618" class="outline-4">
+<h4 id="orgefed618"><a href="./VLDB-Workshop-2024/LLM+KG/LLM+KG-13.pdf">InfuserKI: Enhancing Large Language Models with Knowledge Graphs via Infuser-Guided Knowledge Integration</a></h4>
+<div class="outline-text-4" id="text-orgefed618">
+<p>
+Fali Wang, Runxue Bao, Suhang Wang, Wenchao Yu, Yanchi Liu, Wei Cheng, Haifeng Chen
+</p>
+</div>
+</div>
+<div id="outline-container-orgf251a64" class="outline-4">
+<h4 id="orgf251a64"><a href="./VLDB-Workshop-2024/LLM+KG/LLM+KG-15.pdf">From Instructions to ODRL Usage Policies: An Ontology Guided Approach</a></h4>
+<div class="outline-text-4" id="text-orgf251a64">
+<p>
+Daham M. Mustafa, Abhishek Nadgeri, Diego Collarana, Benedikt T. Arnold, Christoph Quix, Christoph Lange, Stefan Decker
+</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org90551d8" class="outline-2">
+<h2 id="org90551d8">QDB</h2>
+<div class="outline-text-2" id="text-org90551d8">
+</div>
+<div id="outline-container-orgda081bc" class="outline-3">
+<h3 id="orgda081bc">13th International Workshop on Quality in Databases</h3>
+<div class="outline-text-3" id="text-orgda081bc">
+</div>
+<div id="outline-container-orga51343a" class="outline-4">
+<h4 id="orga51343a"><a href="./VLDB-Workshop-2024/QDB/QDB-0.pdf">13th International Workshop on Quality in Databases: Preface</a></h4>
+<div class="outline-text-4" id="text-orga51343a">
+<p>
+Sourav S Bhowmick, Lisa Ehrlinger, Hazar Harmouch
+</p>
+</div>
+</div>
+<div id="outline-container-org54cfae6" class="outline-4">
+<h4 id="org54cfae6"><a href="./VLDB-Workshop-2024/QDB/QDB-1.pdf">Accelerating the Data Cleaning Systems Raha and Baran through Task and Data Parallelism</a></h4>
+<div class="outline-text-4" id="text-org54cfae6">
+<p>
+Fatemeh Ahmadi, Yusuf Mandirali, Ziawasch Abedjan
+</p>
+</div>
+</div>
+<div id="outline-container-org2196388" class="outline-4">
+<h4 id="org2196388"><a href="./VLDB-Workshop-2024/QDB/QDB-2.pdf">Towards Semi-Supervised Data Quality Detection In Graphs</a></h4>
+<div class="outline-text-4" id="text-org2196388">
+<p>
+Rubab Zahra Sarfraz
+</p>
+</div>
+</div>
+<div id="outline-container-orge26115a" class="outline-4">
+<h4 id="orge26115a"><a href="./VLDB-Workshop-2024/QDB/QDB-3.pdf">Valuation-based Data Acquisition for Machine Learning Fairness</a></h4>
+<div class="outline-text-4" id="text-orge26115a">
+<p>
+Ekta Pradhan, Romila Pradhan
+</p>
+</div>
+</div>
+<div id="outline-container-orgfcc559a" class="outline-4">
+<h4 id="orgfcc559a"><a href="./VLDB-Workshop-2024/QDB/QDB-4.pdf">AutoFAIR : Automatic Data FAIRification via Machine Reading</a></h4>
+<div class="outline-text-4" id="text-orgfcc559a">
+<p>
+Tingyan Ma, Wei Liu, Bin Lu, Xiaoying Gan, Yunqiang Zhu, Luoyi Fu, Chenghu Zhou
+</p>
+</div>
+</div>
+<div id="outline-container-org63898f9" class="outline-4">
+<h4 id="org63898f9"><a href="./VLDB-Workshop-2024/QDB/QDB-5.pdf">Compute Engine Testing with Privacy-Compliant Production-Like Synthetic Data</a></h4>
+<div class="outline-text-4" id="text-org63898f9">
+<p>
+Yu Liu, Jiangnan Cheng, Steve Chuck, Lyublena Antova, Yurgis  Baykshtis,  Matt  David, Ge Gao, Mehrdad  Honarkhah, Kuan-Sung  Huang, Chen-Kuei Lee, Usman  Muhammad, Shihao  Peng, Andrii  Rosa, Rebecca Schlussel, Michael Shang, Kelvin  Silva, Brandon Vo, Zac Wen, Yihao Zhou
+</p>
+</div>
+</div>
+<div id="outline-container-orged81303" class="outline-4">
+<h4 id="orged81303"><a href="./VLDB-Workshop-2024/QDB/QDB-6.pdf">Process Model-based Access Control Policies for Cross-Organizational Data Sharing</a></h4>
+<div class="outline-text-4" id="text-orged81303">
+<p>
+Liam Tirpitz, Leon Gentges
+</p>
+</div>
+</div>
+<div id="outline-container-org1cc1d4c" class="outline-4">
+<h4 id="org1cc1d4c"><a href="./VLDB-Workshop-2024/QDB/QDB-7.pdf">Tracking Consistency over Data Streams with InkStream [Demo</a>]</h4>
+<div class="outline-text-4" id="text-org1cc1d4c">
+<p>
+Samuele Langhi, Angela Bonifati, Riccardo Tommasini
+</p>
+</div>
+</div>
+<div id="outline-container-orgf7fe8be" class="outline-4">
+<h4 id="orgf7fe8be"><a href="./VLDB-Workshop-2024/QDB/QDB-8.pdf">A Data Generator to Explore the Interactions Between Concept Drifts and Anomalies [Demo</a>]</h4>
+<div class="outline-text-4" id="text-orgf7fe8be">
+<p>
+Jongjun Park, Akanksha Nehete, Tammy Zeng, Fei Chiang
+</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgfd5ed43" class="outline-2">
+<h2 id="orgfd5ed43">QDSM</h2>
+<div class="outline-text-2" id="text-orgfd5ed43">
+</div>
+<div id="outline-container-org6857831" class="outline-3">
+<h3 id="org6857831">2nd International Workshop on Quantum Data Science and Management</h3>
+<div class="outline-text-3" id="text-org6857831">
+</div>
+<div id="outline-container-org3314434" class="outline-4">
+<h4 id="org3314434"><a href="./VLDB-Workshop-2024/QDSM/QDSM.1.pdf">Workshop Summary of the Second International Workshop on Quantum Data Science and Management (QDSM)</a></h4>
+<div class="outline-text-4" id="text-org3314434">
+<p>
+Valter Uotila, Sven Groppe, Le Guenwald, Jiaheng Lu, Wolfgang Mauerer
+</p>
+</div>
+</div>
+<div id="outline-container-org38afe03" class="outline-4">
+<h4 id="org38afe03"><a href="./VLDB-Workshop-2024/QDSM/QDSM.4.pdf">Quantum Storage Design for Tables in RDBMS</a></h4>
+<div class="outline-text-4" id="text-org38afe03">
+<p>
+Tuodu Li, Gongsheng Yuan, Chang Yao, Meng Shi, Ziyue Wang, Ling Qian and Jiaheng Lu
+</p>
+</div>
+</div>
+<div id="outline-container-org2f979d9" class="outline-4">
+<h4 id="org2f979d9"><a href="./VLDB-Workshop-2024/QDSM/QDSM.5.pdf">Supervised Learning on Relational Databases with Quantum Graph Neural Networks</a></h4>
+<div class="outline-text-4" id="text-org2f979d9">
+<p>
+Martin Vogrin, Rok Vogrin, Sven Groppe and Jinghua Groppe
+</p>
+</div>
+</div>
+<div id="outline-container-org33d49bf" class="outline-4">
+<h4 id="org33d49bf"><a href="./VLDB-Workshop-2024/QDSM/QDSM.6.pdf">Quantum Data Structures for Enhanced Database Performance</a></h4>
+<div class="outline-text-4" id="text-org33d49bf">
+<p>
+Tim Littau, Ziyu Li and Rihan Hai
+</p>
+</div>
+</div>
+<div id="outline-container-org0718883" class="outline-4">
+<h4 id="org0718883"><a href="./VLDB-Workshop-2024/QDSM/QDSM.7.pdf">Graphs on Qubits: Demonstrating Three Graph Algorithms on Quantum Computers</a></h4>
+<div class="outline-text-4" id="text-org0718883">
+<p>
+Lauri Vuorenkoski and Valter Uotila
+</p>
+</div>
+</div>
+<div id="outline-container-org1cf53bd" class="outline-4">
+<h4 id="org1cf53bd"><a href="./VLDB-Workshop-2024/QDSM/QDSM.8.pdf">Is Quantum-Based SQL Query Execution Viable?</a></h4>
+<div class="outline-text-4" id="text-org1cf53bd">
+<p>
+Manish Kesarwani and Jayant Haritsa
+</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org4f3d777" class="outline-2">
+<h2 id="org4f3d777">TaDA</h2>
+<div class="outline-text-2" id="text-org4f3d777">
+</div>
+<div id="outline-container-orgac9a0d6" class="outline-3">
+<h3 id="orgac9a0d6">2nd International Workshop on Tabular Data Analysis</h3>
+<div class="outline-text-3" id="text-orgac9a0d6">
+</div>
+<div id="outline-container-org8e4ecc5" class="outline-4">
+<h4 id="org8e4ecc5"><a href="./VLDB-Workshop-2024/TaDA/TaDA.1.pdf">2nd International Workshop on Tabular Data Analysis (TaDA)</a></h4>
+<div class="outline-text-4" id="text-org8e4ecc5">
+<p>
+Vasilis Efthymiou, Sainyam Galhotra, Oktie Hassanzadeh, Chuan Lei, Kavitha Srinivas
+</p>
+</div>
+</div>
+<div id="outline-container-orgce2ad32" class="outline-4">
+<h4 id="orgce2ad32"><a href="./VLDB-Workshop-2024/TaDA/TaDA.2.pdf">Toward a Declarative Query Language for Machine Learning</a></h4>
+<div class="outline-text-4" id="text-orgce2ad32">
+<p>
+Hasan Jamil
+</p>
+</div>
+</div>
+<div id="outline-container-org509961a" class="outline-4">
+<h4 id="org509961a"><a href="./VLDB-Workshop-2024/TaDA/TaDA.3.pdf">ALT-GEN: Benchmarking Table Union Search using Large Language Models</a></h4>
+<div class="outline-text-4" id="text-org509961a">
+<p>
+Koyena Pal, Aamod Khatiwada, Roee Shraga, Renée J. Miller
+</p>
+</div>
+</div>
+<div id="outline-container-org6505773" class="outline-4">
+<h4 id="org6505773"><a href="./VLDB-Workshop-2024/TaDA/TaDA.4.pdf">LLMs for Data Engineering on Enterprise Data</a></h4>
+<div class="outline-text-4" id="text-org6505773">
+<p>
+Jan-Micha Bodensohn, Ulf Brackmann, Liane Vogel, Matthias Urban, Anupam Sanghi, Carsten Binnig
+</p>
+</div>
+</div>
+<div id="outline-container-org1d27a4d" class="outline-4">
+<h4 id="org1d27a4d"><a href="./VLDB-Workshop-2024/TaDA/TaDA.5.pdf">Fast and Accurate Regional Effect Plots for Automated Tabular Data Analysis</a></h4>
+<div class="outline-text-4" id="text-org1d27a4d">
+<p>
+Vasilis Gkolemis, Theodore Dalamagas, Eirini Ntoutsi, Christos Diou
+</p>
+</div>
+</div>
+<div id="outline-container-org31f1fc7" class="outline-4">
+<h4 id="org31f1fc7"><a href="./VLDB-Workshop-2024/TaDA/TaDA.6.pdf">Transform Table to Database Using Large Language Models</a></h4>
+<div class="outline-text-4" id="text-org31f1fc7">
+<p>
+Zezhou Huang, Jia Guo, Eugene Wu
+</p>
+</div>
+</div>
+<div id="outline-container-orgc50f7f0" class="outline-4">
+<h4 id="orgc50f7f0"><a href="./VLDB-Workshop-2024/TaDA/TaDA.7.pdf">GFS: Graph-based Feature Synthesis for Prediction over Relational Databases</a></h4>
+<div class="outline-text-4" id="text-orgc50f7f0">
+<p>
+Han Zhang, Quan Gan, David Wipf, Weinan Zhang
+</p>
+</div>
+</div>
+<div id="outline-container-orgfafc244" class="outline-4">
+<h4 id="orgfafc244"><a href="./VLDB-Workshop-2024/TaDA/TaDA.8.pdf">Schema Matching with Large Language Models: an Experimental Study</a></h4>
+<div class="outline-text-4" id="text-orgfafc244">
+<p>
+Marcel Parciak, Brecht Vandevoort, Frank Neven, Liesbet M. Peeters, Stijn Vansummeren
+</p>
+</div>
+</div>
+<div id="outline-container-org956e8fb" class="outline-4">
+<h4 id="org956e8fb"><a href="./VLDB-Workshop-2024/TaDA/TaDA.9.pdf">Finding Support for Tabular LLM Outputs</a></h4>
+<div class="outline-text-4" id="text-org956e8fb">
+<p>
+Grace Fan, Roee Shraga, Renée J. Miller
+</p>
+</div>
+</div>
+<div id="outline-container-org9f7d1f6" class="outline-4">
+<h4 id="org9f7d1f6"><a href="./VLDB-Workshop-2024/TaDA/TaDA.10.pdf">4DBInfer: A 4D Benchmarking Toolbox for Graph-Centric Predictive Modeling on RDBs</a></h4>
+<div class="outline-text-4" id="text-org9f7d1f6">
+<p>
+Minjie Wang, Quan Gan, David Wipf, ZhenkunCai, Ning Li, Jianheng Tang, Yanlin Zhang, ZizhaoZhang, ZunyaoMao, YakunSong, Yanbo Wang, Jiahang Li, HanZhang, Guang Yang, Xiao Qin, Chuan Lei, Muhan Zhang, Weinan Zhang, Christos Faloutsos, Zheng Zhang
+</p>
+</div>
+</div>
+<div id="outline-container-orgc27e172" class="outline-4">
+<h4 id="orgc27e172"><a href="./VLDB-Workshop-2024/TaDA/TaDA.11.pdf">Large Language Models as Data Preprocessors</a></h4>
+<div class="outline-text-4" id="text-orgc27e172">
+<p>
+Haochen Zhang, Yuyang Dong, Chuan Xiao, Masafumi Oyamada
+</p>
+</div>
+</div>
+<div id="outline-container-orgb55bdc1" class="outline-4">
+<h4 id="orgb55bdc1"><a href="./VLDB-Workshop-2024/TaDA/TaDA.12.pdf">DEMA: Enhancing Causal Analysis through Data Enrichment and Discovery in Data Lakes</a></h4>
+<div class="outline-text-4" id="text-orgb55bdc1">
+<p>
+Kayvon Heravi, Saathvik Dirisala, Babak Salimi
+</p>
+</div>
+</div>
+<div id="outline-container-org7d476be" class="outline-4">
+<h4 id="org7d476be"><a href="./VLDB-Workshop-2024/TaDA/TaDA.13.pdf">Data Quality Management for Responsible AI in Data Lakes</a></h4>
+<div class="outline-text-4" id="text-org7d476be">
+<p>
+Carolina Cortes, Camila Sanz, Lorena Etcheverry, Adriana Marotta
+</p>
+</div>
+</div>
+<div id="outline-container-org97dfe78" class="outline-4">
+<h4 id="org97dfe78"><a href="./VLDB-Workshop-2024/TaDA/TaDA.14.pdf">Humboldt: Metadata-Driven Extensible Data Discovery</a></h4>
+<div class="outline-text-4" id="text-org97dfe78">
+<p>
+Alex Bäuerle, Çağatay Demiralp, Michael Stonebraker
+</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org4d502a3" class="outline-2">
+<h2 id="org4d502a3">LSGDA</h2>
+<div class="outline-text-2" id="text-org4d502a3">
+</div>
+<div id="outline-container-org532edd4" class="outline-3">
+<h3 id="org532edd4">3rd International Workshop on Large-Scale Graph Data Analytics</h3>
+<div class="outline-text-3" id="text-org532edd4">
+</div>
+<div id="outline-container-orgef24feb" class="outline-4">
+<h4 id="orgef24feb"><a href="./VLDB-Workshop-2024/LSGDA/LSGDA24.01.pdf">Report on the 3rd International Workshop on Large-Scale Graph Data Analytics (LSGDA 2024)</a></h4>
+<div class="outline-text-4" id="text-orgef24feb">
+<p>
+Long Yuan, Zhengyi Yang, Qingqiang Sun, Alexander Zhou
+</p>
+</div>
+</div>
+<div id="outline-container-org739530f" class="outline-4">
+<h4 id="org739530f"><a href="./VLDB-Workshop-2024/LSGDA/LSGDA24.02.pdf">XCrowd: Real-Time Dynamic Crowd Movement Simulation on Graph Networks</a></h4>
+<div class="outline-text-4" id="text-org739530f">
+<p>
+Jan Appel, Andreas Weiler
+</p>
+</div>
+</div>
+<div id="outline-container-org3be9806" class="outline-4">
+<h4 id="org3be9806"><a href="./VLDB-Workshop-2024/LSGDA/LSGDA24.03.pdf">MRG-SER: Self-supervised Spatial Entity Resolution Based on Multi-Relational Graph</a></h4>
+<div class="outline-text-4" id="text-org3be9806">
+<p>
+Hanchen Qiu, Haojia Zhu, Zhicheng Li, Jiahui Jin
+</p>
+</div>
+</div>
+<div id="outline-container-org7a0fc07" class="outline-4">
+<h4 id="org7a0fc07"><a href="./VLDB-Workshop-2024/LSGDA/LSGDA24.04.pdf">Enhancing Neo4j Query Efficiency with Seamless Integration of the GOpt Optimization Framework</a></h4>
+<div class="outline-text-4" id="text-org7a0fc07">
+<p>
+Bingqing Lyu, Xiaoli Zhou, Longbin Lai, Yufan Yang, Yunkai Lou, Yongfei Liu
+</p>
+</div>
+</div>
+<div id="outline-container-org0174157" class="outline-4">
+<h4 id="org0174157"><a href="./VLDB-Workshop-2024/LSGDA/LSGDA24.05.pdf">Designing Graph Neural Networks in Compliance with the European Artificial Intelligence Act</a></h4>
+<div class="outline-text-4" id="text-org0174157">
+<p>
+Barbara Hoffmann, Jana Vatter, Ruben Mayer
+</p>
+</div>
+</div>
+<div id="outline-container-orge233554" class="outline-4">
+<h4 id="orge233554"><a href="./VLDB-Workshop-2024/LSGDA/LSGDA24.06.pdf">Size Does (Not) Matter? Sparsification and Graph Neural Network Sampling for Large-scale Graphs</a></h4>
+<div class="outline-text-4" id="text-orge233554">
+<p>
+Jana Vatter, Maurice L. Rochau, Ruben Mayer, Hans-Arno Jacobsen
+</p>
+</div>
+</div>
+<div id="outline-container-orgfda144b" class="outline-4">
+<h4 id="orgfda144b"><a href="./VLDB-Workshop-2024/LSGDA/LSGDA24.07.pdf">HyperFedNet: Communication-Efficient Personalized Federated Learning Via Hypernetwork</a></h4>
+<div class="outline-text-4" id="text-orgfda144b">
+<p>
+Xingyun Chen, Yan Huang, Zhenzhen Xie, Junjie Pang
+</p>
+</div>
+</div>
+<div id="outline-container-orgb87e8cc" class="outline-4">
+<h4 id="orgb87e8cc"><a href="./VLDB-Workshop-2024/LSGDA/LSGDA24.08.pdf">Parallel Higher-order Truss Decomposition</a></h4>
+<div class="outline-text-4" id="text-orgb87e8cc">
+<p>
+Chen Chen, Jingya Qian, Hui Luo, Yongye Li, Xiaoyang Wang
+</p>
+</div>
+</div>
+<div id="outline-container-org3470e6c" class="outline-4">
+<h4 id="org3470e6c"><a href="./VLDB-Workshop-2024/LSGDA/LSGDA24.09.pdf">Text to Graph Query Using Filter Condition Attributes</a></h4>
+<div class="outline-text-4" id="text-org3470e6c">
+<p>
+Yang Liu, Xin Wang, Jiake Ge, Hui Wang, Dawei Xu, Yongzhe Jia
+</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgd9cf567" class="outline-2">
+<h2 id="orgd9cf567">CloudDB</h2>
+<div class="outline-text-2" id="text-orgd9cf567">
+</div>
+<div id="outline-container-org9a99728" class="outline-3">
+<h3 id="org9a99728">2nd Workshop on Cloud Databases</h3>
+<div class="outline-text-3" id="text-org9a99728">
+</div>
+<div id="outline-container-orgae0fdd6" class="outline-4">
+<h4 id="orgae0fdd6"><a href="./VLDB-Workshop-2024/CloudDB/clouddb-2.pdf">Corra: Correlation-Aware Column Compression</a></h4>
+<div class="outline-text-4" id="text-orgae0fdd6">
+<p>
+Hanwen Liu, Mihail Stoian, Alexander van Renen, Andreas Kipf
+</p>
+</div>
+</div>
+<div id="outline-container-orgd3e95da" class="outline-4">
+<h4 id="orgd3e95da"><a href="./VLDB-Workshop-2024/CloudDB/clouddb-3.pdf">MetaHive: A Cache-Optimized Metadata Management for Heterogeneous Key-Value Stores</a></h4>
+<div class="outline-text-4" id="text-orgd3e95da">
+<p>
+Alireza Heidari, Amirhossein Ahmadi, Zefeng Zhi, Wei Zhang
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Haixun Wang</p>
+<p class="date">Created: 2024-09-08 Sun 06:47</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

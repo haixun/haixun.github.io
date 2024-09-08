@@ -1,0 +1,221 @@
+#+OPTIONS: toc:nil num:nil
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-bigblow.setup
+
+#+TITLE: Proceedings of Workshops at the 50th International Conference on Very Large Data Bases (VLDB 2024)
+
+* VLDBW 2024
+** VLDB 2024 Workshop Chairs
+*** Themis Palpanas, Philippe Bonnet
+** VLDB 2024 Workshop Proceeding Chair
+*** Haixun Wang
+** Accepted Workshops
+*** ADMS: 15th Workshop on Accelerating Analytics and Data Management Systems using Modern Processor and Storage Architectures
+- Workshop Chairs: Rajesh Bordawekar and Tirthankar Lahiri
+*** BigVis: 7th International Workshop on Big Data Visual Exploration and Analytics
+- Workshop Chairs: Nikos Bikakis, Panos K. Chrysanthis, Guoliang Li, George Papastefanatos
+*** DATAI: 1st International Workshop on Data-driven AI 
+- Workshop Chairs: Hongzhi Wang, Nan Tang, Lei Cao, Chengliang Chai, Xiaoou Ding
+*** FAB: 6th International Workshop on Foundations and Applications of Blockchain
+- Workshop Chairs: Mohammad Javad Amiri
+*** LLM+KG: 1st International Workshop on Data Management Opportunities in Unifying Large Language Models + Knowledge Graphs
+- Workshop Chairs: Arijit Khan, Tianxing Wu, Xi Chen
+*** QDB: 13th International Workshop on Quality in Databases
+- Workshop Chairs: Lisa Ehrlinger, Hazar Harmouch, Sourav S Bhowmick
+*** QDSM: 2nd International Workshop on Quantum Data Science and Management
+- Workshop Chairs: Sven Groppe, Jiaheng Lu, Wolfgang Mauerer, Le Gruenwald
+*** TaDA: 2nd International Workshop on Tabular Data Analysis
+- Workshop Chairs: Vasilis Efthymiou, Sainyam Galhotra, Oktie Hassanzadeh, Chuan Lei, Kavitha Srinivas
+*** LSGDA: 3rd International Workshop on Large-Scale Graph Data Analytics
+- Workshop Chairs: Wenjie Zhang, Lu Qin, Ying Zhang, Long Yuan, Zhengyi Yang
+*** CloudDB: 2nd Workshop on Cloud Databases
+- Workshop Chairs: Jiannan Wang, Kai Zeng, Guoliang Li, and Sanjay Krishnan
+* ADMS
+** 15th Workshop on Accelerating Analytics and Data Management Systems using Modern Processor and Storage Architectures
+*** [[./VLDB-Workshop-2024/ADMS/ADMS24_01.pdf][Bandwidth Expansion via CXL: A Pathway to Accelerating In-Memory Analytical Processing]]
+    Wentao Huang, Mo Sha, Mian Lu, Yuqiang Chen, Bingsheng He, Kian-Lee Tan
+*** [[./VLDB-Workshop-2024/ADMS/ADMS24_02.pdf][Can Delta Compete with Frame-of-Reference for Lightweight Integer Compression?,]]
+    Julia Spindler, Philipp Fent, Adrian Riedl, Thomas Neumann
+*** [[./VLDB-Workshop-2024/ADMS/ADMS24_03.pdf][Optimizing Sorting for Chiplet-Based CPUs]]
+    Alessandro Fogli, Peter Pletzuch, Jana Giceva
+*** [[./VLDB-Workshop-2024/ADMS/ADMS24_04.pdf][Ghostwriter: a Distributed Message Broker on RDMA and NVM]]
+    Hendrik Makait, Bonaventura Del Monte, Tilmann Rabl
+
+
+* BigVis
+** 7th International Workshop on Big Data Visual Exploration and Analytics
+*** [[./VLDB-Workshop-2024/BigVis/BigVis2024_01.pdf][Techniques for interactive visual examination of autonomous vessel performance]]
+    Natalia Andrienko, Gennady Andrienko, Dimitris Zissis, Alexandros Troupiotis-Kapeliaris and Giannis Spiliopoulos
+*** [[./VLDB-Workshop-2024/BigVis/BigVis2024_02.pdf][A Unified Visual Exploration Framework for (Semi-)structured Data]]
+    Théo Bouganim, Ioana Manolescu and Emmanuel Pietriga
+*** [[./VLDB-Workshop-2024/BigVis/BigVis2024_03.pdf][QPV: An Input Control Component For Progressive Visualization Analytics ]]
+    Xin Zhang and Ahmed Eldawy
+*** [[./VLDB-Workshop-2024/BigVis/BigVis2024_04.pdf][InterpretStack: Interpretable Exploration and Interactive Visualization Construction of Stacking Algorithm]]
+    Yu Wang, Jing Lu, Le Liu, Junping Zhang and Siming Chen
+*** [[./VLDB-Workshop-2024/BigVis/BigVis2024_05.pdf][Vizard: Improving Visual Data Literacy with Large Language Models]]
+    Rubab Zahra Sarfraz and Samar Haider
+*** [[./VLDB-Workshop-2024/BigVis/BigVis2024_06.pdf][Tangible Progress: Employing Visual Metaphors and Physical Interfaces in AI-based English Language Learning]]
+    Mei Wang, Hai-Ning Liang, Yu Liu, Chengtao Ji and Lingyun Yu
+*** [[./VLDB-Workshop-2024/BigVis/BigVis2024_07.pdf][EvalGPT: A Visual Analytic Framework for Enhancing Trust in Large Language Models]]
+    Xu Yang, Yiheng Liang, Le Liu, Lianwei Wu and Xiaoru Yuan
+*** [[./VLDB-Workshop-2024/BigVis/BigVis2024_08.pdf][Partial Adaptive Indexing for Approximate Query Answering]]
+    Stavros Maroulis, Nikos Bikakis, Vasileios Stamatopoulos and George Papastefanatos
+*** [[./VLDB-Workshop-2024/BigVis/BigVis2024_09.pdf][Enhancing Geographic Information Visualization: A Comparative Analysis of Digital Maps and Projection Augmented Relief Maps]]
+    Chang Yuan Lang Teng, Zhiwei Shi, Lingyun Yu and Yu Liu
+
+
+* DATAI
+** 1st International Workshop on Data-driven AI 
+*** [[./VLDB-Workshop-2024/DATAI/DATAI-1.pdf][Addressing Data Management Challenges for Interoperable Data Science]]
+    Ilin Tolovski,Tilmann Rabl
+*** [[./VLDB-Workshop-2024/DATAI/DATAI-2.pdf][Missing Value Imputation via Pre-trained Language Models with Trainable Prompt and Retrieval Augmentation]]
+    Xiang Huang, Shuang Hao
+*** [[./VLDB-Workshop-2024/DATAI/DATAI-3.pdf][LLM-assisted Labeling Function Generation for Semantic Type Detection]]
+    Chenjie Li, Dan Zhang, Jin Wang
+*** [[./VLDB-Workshop-2024/DATAI/DATAI-4.pdf][Approximate Functional Dependencies Discovery Using Markov Blanket]]
+    Jinqi Liu, Anzhen Zhang, Jiajia Li, Na Guo, Jing Zhang
+
+
+* FAB
+** 6th International Workshop on Foundations and Applications of Blockchain
+*** [[./VLDB-Workshop-2024/FAB/FAB-1.pdf][Proceedings of the Sixth International Workshop on Foundations and Applications of Blockchain (FAB)]]
+    Mohammad Javad Amiri
+*** [[./VLDB-Workshop-2024/FAB/FAB-2.pdf][Benefits and Challenges of Decentralization in Data Systems: Opportunities for Data Management Research]]
+    Ruben Mayer
+*** [[./VLDB-Workshop-2024/FAB/FAB-3.pdf][Data Management and AI for Blockchain Data Analysis: A Round Trip and Opportunities]]
+    Arijit Khan
+*** [[./VLDB-Workshop-2024/FAB/FAB-4.pdf][Practical Declarative Smart Contracts Optimization]]
+    Lan Lu, Tao Luo, Jingyi Li, Hongxun Ding, Brendan Massey, Haoxian Chen, Boon Thau Loo
+*** [[./VLDB-Workshop-2024/FAB/FAB-5.pdf][CroCRPC: Cross-Chain Remote Procedure Calls Framework for dApps]]
+    Avishek De, Divyakant Agrawal, Amr El Abbadi
+*** [[./VLDB-Workshop-2024/FAB/FAB-6.pdf][From On-chain to Macro: Assessing the Importance of Data Source Diversity in Cryptocurrency Market Forecasting]]
+    Giorgos Demosthenous, Chryssis Georgiou, Eliada Polydorou
+*** [[./VLDB-Workshop-2024/FAB/FAB-7.pdf][SOK: Blockchain for Provenance]]
+    Asma Jodeiri Akbarfam, Hoda Maleki
+*** [[./VLDB-Workshop-2024/FAB/FAB-8.pdf][A Comprehensive Outlook for Analyzing and Enhancing the Performance of Blockchain Platforms]]
+    Jeeta Chacko
+
+
+* LLM+KG
+** 1st International Workshop on Data Management Opportunities in Unifying Large Language Models + Knowledge Graphs
+*** [[./VLDB-Workshop-2024/LLM+KG/LLM+KG-1.pdf][LLM+KG: Data Management Opportunities in Unifying Large Language Models + Knowledge Graphs]]
+    Arijit Khan, Tianxing Wu, Xi Chen
+*** [[./VLDB-Workshop-2024/LLM+KG/LLM+KG-2.pdf][OneEdit: A Neural-Symbolic Collaboratively Knowledge Editing System]]
+    Ningyu Zhang, Zekun Xi, Yujie Luo, Peng Wang, Bozhong Tian, Yunzhi Yao, Jintian Zhang, Shumin Deng, mengshu sun, Lei Liang, Zhiqiang Zhang, Xiaowei Zhu, Jun Zhou, Huajun Chen
+*** [[./VLDB-Workshop-2024/LLM+KG/LLM+KG-4.pdf][Knowledge Graph Efficient Construction: Embedding Chain-of-Thought into LLMs]]
+    Jixuan Nie, Xia HOU, wenfeng song, xuan wang, Xingliang Jin, Xinyu Zhang, ShuoZhe Zhang, Jiaqi Shi
+*** [[./VLDB-Workshop-2024/LLM+KG/LLM+KG-5.pdf][Benchmarking and Analyzing In-context Learning, Fine-tuning and Supervised Learning for Biomedical Knowledge Curation: a focused study on chemical entities of biological interest]]
+    Yusuf Abdulle, Emily Groves, Minhong Wang, Holger Kunz, Jason Hoelscher-Obermaier, Ronin Wu, Honghan Wu
+*** [[./VLDB-Workshop-2024/LLM+KG/LLM+KG-8.pdf][Leveraging LLMs Few-shot Learning to Improve Instruction-driven Knowledge Graph Construction]]
+    Yongli Mou, Li Liu, Sulayman Sowe, Diego Collarana, Stefan Decker
+*** [[./VLDB-Workshop-2024/LLM+KG/LLM+KG-9.pdf][Research Trends for the Interplay between Large Language Models and Knowledge Graphs]]
+    Hanieh Khorashadizadeh
+*** [[./VLDB-Workshop-2024/LLM+KG/LLM+KG-11.pdf][Enhancing Large Language Models with Multimodality and Knowledge Graphs for Hallucination-free Open-set Object Recognition]]
+    Xinfu Liu, Wu Yirui, Yuting Zhou, Junyang Chen, huan wang, Ye Liu, Shaohua Wan
+*** [[./VLDB-Workshop-2024/LLM+KG/LLM+KG-12.pdf][SPIREX: Improving LLM-based relation extraction from RNA-focused scientific literature using graph machine learning]]
+    Emanuele Cavalleri, Mauricio Soto-Gomez, Ali Pashaeibarough, Dario Malchiodi, Harry Caufield, Justin Reese, Chris Mungall, Peter Robinson, Elena Casiraghi, Giorgio Valentini, Marco Mesiti
+*** [[./VLDB-Workshop-2024/LLM+KG/LLM+KG-13.pdf][InfuserKI: Enhancing Large Language Models with Knowledge Graphs via Infuser-Guided Knowledge Integration]]
+    Fali Wang, Runxue Bao, Suhang Wang, Wenchao Yu, Yanchi Liu, Wei Cheng, Haifeng Chen
+*** [[./VLDB-Workshop-2024/LLM+KG/LLM+KG-15.pdf][From Instructions to ODRL Usage Policies: An Ontology Guided Approach]]
+    Daham M. Mustafa, Abhishek Nadgeri, Diego Collarana, Benedikt T. Arnold, Christoph Quix, Christoph Lange, Stefan Decker
+
+
+* QDB
+** 13th International Workshop on Quality in Databases
+*** [[./VLDB-Workshop-2024/QDB/QDB-0.pdf][13th International Workshop on Quality in Databases: Preface]]
+    Sourav S Bhowmick, Lisa Ehrlinger, Hazar Harmouch
+*** [[./VLDB-Workshop-2024/QDB/QDB-1.pdf][Accelerating the Data Cleaning Systems Raha and Baran through Task and Data Parallelism]]
+    Fatemeh Ahmadi, Yusuf Mandirali, Ziawasch Abedjan
+*** [[./VLDB-Workshop-2024/QDB/QDB-2.pdf][Towards Semi-Supervised Data Quality Detection In Graphs]]
+    Rubab Zahra Sarfraz
+*** [[./VLDB-Workshop-2024/QDB/QDB-3.pdf][Valuation-based Data Acquisition for Machine Learning Fairness]]
+    Ekta Pradhan, Romila Pradhan
+*** [[./VLDB-Workshop-2024/QDB/QDB-4.pdf][AutoFAIR : Automatic Data FAIRification via Machine Reading]]
+    Tingyan Ma, Wei Liu, Bin Lu, Xiaoying Gan, Yunqiang Zhu, Luoyi Fu, Chenghu Zhou
+*** [[./VLDB-Workshop-2024/QDB/QDB-5.pdf][Compute Engine Testing with Privacy-Compliant Production-Like Synthetic Data]]
+    Yu Liu, Jiangnan Cheng, Steve Chuck, Lyublena Antova, Yurgis  Baykshtis,  Matt  David, Ge Gao, Mehrdad  Honarkhah, Kuan-Sung  Huang, Chen-Kuei Lee, Usman  Muhammad, Shihao  Peng, Andrii  Rosa, Rebecca Schlussel, Michael Shang, Kelvin  Silva, Brandon Vo, Zac Wen, Yihao Zhou
+*** [[./VLDB-Workshop-2024/QDB/QDB-6.pdf][Process Model-based Access Control Policies for Cross-Organizational Data Sharing]]
+    Liam Tirpitz, Leon Gentges
+*** [[./VLDB-Workshop-2024/QDB/QDB-7.pdf][Tracking Consistency over Data Streams with InkStream [Demo]]]
+    Samuele Langhi, Angela Bonifati, Riccardo Tommasini
+*** [[./VLDB-Workshop-2024/QDB/QDB-8.pdf][A Data Generator to Explore the Interactions Between Concept Drifts and Anomalies [Demo]]]
+    Jongjun Park, Akanksha Nehete, Tammy Zeng, Fei Chiang
+
+
+* QDSM
+** 2nd International Workshop on Quantum Data Science and Management
+*** [[./VLDB-Workshop-2024/QDSM/QDSM.1.pdf][Workshop Summary of the Second International Workshop on Quantum Data Science and Management (QDSM)]]
+    Valter Uotila, Sven Groppe, Le Guenwald, Jiaheng Lu, Wolfgang Mauerer
+*** [[./VLDB-Workshop-2024/QDSM/QDSM.4.pdf][Quantum Storage Design for Tables in RDBMS]]
+    Tuodu Li, Gongsheng Yuan, Chang Yao, Meng Shi, Ziyue Wang, Ling Qian and Jiaheng Lu
+*** [[./VLDB-Workshop-2024/QDSM/QDSM.5.pdf][Supervised Learning on Relational Databases with Quantum Graph Neural Networks]]
+    Martin Vogrin, Rok Vogrin, Sven Groppe and Jinghua Groppe
+*** [[./VLDB-Workshop-2024/QDSM/QDSM.6.pdf][Quantum Data Structures for Enhanced Database Performance]]
+    Tim Littau, Ziyu Li and Rihan Hai
+*** [[./VLDB-Workshop-2024/QDSM/QDSM.7.pdf][Graphs on Qubits: Demonstrating Three Graph Algorithms on Quantum Computers]]
+    Lauri Vuorenkoski and Valter Uotila
+*** [[./VLDB-Workshop-2024/QDSM/QDSM.8.pdf][Is Quantum-Based SQL Query Execution Viable?]]
+    Manish Kesarwani and Jayant Haritsa
+
+
+* TaDA
+** 2nd International Workshop on Tabular Data Analysis
+*** [[./VLDB-Workshop-2024/TaDA/TaDA.1.pdf][2nd International Workshop on Tabular Data Analysis (TaDA)]]
+    Vasilis Efthymiou, Sainyam Galhotra, Oktie Hassanzadeh, Chuan Lei, Kavitha Srinivas
+*** [[./VLDB-Workshop-2024/TaDA/TaDA.2.pdf][Toward a Declarative Query Language for Machine Learning]]
+    Hasan Jamil
+*** [[./VLDB-Workshop-2024/TaDA/TaDA.3.pdf][ALT-GEN: Benchmarking Table Union Search using Large Language Models]]
+    Koyena Pal, Aamod Khatiwada, Roee Shraga, Renée J. Miller
+*** [[./VLDB-Workshop-2024/TaDA/TaDA.4.pdf][LLMs for Data Engineering on Enterprise Data]]
+    Jan-Micha Bodensohn, Ulf Brackmann, Liane Vogel, Matthias Urban, Anupam Sanghi, Carsten Binnig
+*** [[./VLDB-Workshop-2024/TaDA/TaDA.5.pdf][Fast and Accurate Regional Effect Plots for Automated Tabular Data Analysis]]
+    Vasilis Gkolemis, Theodore Dalamagas, Eirini Ntoutsi, Christos Diou
+*** [[./VLDB-Workshop-2024/TaDA/TaDA.6.pdf][Transform Table to Database Using Large Language Models]]
+    Zezhou Huang, Jia Guo, Eugene Wu
+*** [[./VLDB-Workshop-2024/TaDA/TaDA.7.pdf][GFS: Graph-based Feature Synthesis for Prediction over Relational Databases]]
+    Han Zhang, Quan Gan, David Wipf, Weinan Zhang
+*** [[./VLDB-Workshop-2024/TaDA/TaDA.8.pdf][Schema Matching with Large Language Models: an Experimental Study]]
+    Marcel Parciak, Brecht Vandevoort, Frank Neven, Liesbet M. Peeters, Stijn Vansummeren
+*** [[./VLDB-Workshop-2024/TaDA/TaDA.9.pdf][Finding Support for Tabular LLM Outputs]]
+    Grace Fan, Roee Shraga, Renée J. Miller
+*** [[./VLDB-Workshop-2024/TaDA/TaDA.10.pdf][4DBInfer: A 4D Benchmarking Toolbox for Graph-Centric Predictive Modeling on RDBs]]
+    Minjie Wang, Quan Gan, David Wipf, ZhenkunCai, Ning Li, Jianheng Tang, Yanlin Zhang, ZizhaoZhang, ZunyaoMao, YakunSong, Yanbo Wang, Jiahang Li, HanZhang, Guang Yang, Xiao Qin, Chuan Lei, Muhan Zhang, Weinan Zhang, Christos Faloutsos, Zheng Zhang
+*** [[./VLDB-Workshop-2024/TaDA/TaDA.11.pdf][Large Language Models as Data Preprocessors]]
+    Haochen Zhang, Yuyang Dong, Chuan Xiao, Masafumi Oyamada
+*** [[./VLDB-Workshop-2024/TaDA/TaDA.12.pdf][DEMA: Enhancing Causal Analysis through Data Enrichment and Discovery in Data Lakes]]
+    Kayvon Heravi, Saathvik Dirisala, Babak Salimi
+*** [[./VLDB-Workshop-2024/TaDA/TaDA.13.pdf][Data Quality Management for Responsible AI in Data Lakes]]
+    Carolina Cortes, Camila Sanz, Lorena Etcheverry, Adriana Marotta
+*** [[./VLDB-Workshop-2024/TaDA/TaDA.14.pdf][Humboldt: Metadata-Driven Extensible Data Discovery]]
+    Alex Bäuerle, Çağatay Demiralp, Michael Stonebraker
+
+
+* LSGDA
+** 3rd International Workshop on Large-Scale Graph Data Analytics
+*** [[./VLDB-Workshop-2024/LSGDA/LSGDA24.01.pdf][Report on the 3rd International Workshop on Large-Scale Graph Data Analytics (LSGDA 2024)]]
+    Long Yuan, Zhengyi Yang, Qingqiang Sun, Alexander Zhou
+*** [[./VLDB-Workshop-2024/LSGDA/LSGDA24.02.pdf][XCrowd: Real-Time Dynamic Crowd Movement Simulation on Graph Networks]]
+    Jan Appel, Andreas Weiler
+*** [[./VLDB-Workshop-2024/LSGDA/LSGDA24.03.pdf][MRG-SER: Self-supervised Spatial Entity Resolution Based on Multi-Relational Graph]]
+    Hanchen Qiu, Haojia Zhu, Zhicheng Li, Jiahui Jin
+*** [[./VLDB-Workshop-2024/LSGDA/LSGDA24.04.pdf][Enhancing Neo4j Query Efficiency with Seamless Integration of the GOpt Optimization Framework]]
+    Bingqing Lyu, Xiaoli Zhou, Longbin Lai, Yufan Yang, Yunkai Lou, Yongfei Liu
+*** [[./VLDB-Workshop-2024/LSGDA/LSGDA24.05.pdf][Designing Graph Neural Networks in Compliance with the European Artificial Intelligence Act]]
+    Barbara Hoffmann, Jana Vatter, Ruben Mayer
+*** [[./VLDB-Workshop-2024/LSGDA/LSGDA24.06.pdf][Size Does (Not) Matter? Sparsification and Graph Neural Network Sampling for Large-scale Graphs]]
+    Jana Vatter, Maurice L. Rochau, Ruben Mayer, Hans-Arno Jacobsen
+*** [[./VLDB-Workshop-2024/LSGDA/LSGDA24.07.pdf][HyperFedNet: Communication-Efficient Personalized Federated Learning Via Hypernetwork]]
+    Xingyun Chen, Yan Huang, Zhenzhen Xie, Junjie Pang
+*** [[./VLDB-Workshop-2024/LSGDA/LSGDA24.08.pdf][Parallel Higher-order Truss Decomposition]]
+    Chen Chen, Jingya Qian, Hui Luo, Yongye Li, Xiaoyang Wang
+*** [[./VLDB-Workshop-2024/LSGDA/LSGDA24.09.pdf][Text to Graph Query Using Filter Condition Attributes]]
+    Yang Liu, Xin Wang, Jiake Ge, Hui Wang, Dawei Xu, Yongzhe Jia
+
+
+* CloudDB
+** 2nd Workshop on Cloud Databases
+*** [[./VLDB-Workshop-2024/CloudDB/clouddb-2.pdf][Corra: Correlation-Aware Column Compression]]
+    Hanwen Liu, Mihail Stoian, Alexander van Renen, Andreas Kipf
+*** [[./VLDB-Workshop-2024/CloudDB/clouddb-3.pdf][MetaHive: A Cache-Optimized Metadata Management for Heterogeneous Key-Value Stores]]
+    Alireza Heidari, Amirhossein Ahmadi, Zefeng Zhi, Wei Zhang
+
+

@@ -1,0 +1,75 @@
+ADMS	Bandwidth Expansion via CXL: A Pathway to Accelerating In-Memory Analytical Processing	1	Wentao Huang, Mo Sha, Mian Lu, Yuqiang Chen, Bingsheng He, Kian-Lee Tan	ADMS24_01.pdf	ADMS24_01_Copyright.pdf	
+ADMS	Can Delta Compete with Frame-of-Reference for Lightweight Integer Compression?,	2	Julia Spindler, Philipp Fent, Adrian Riedl, Thomas Neumann	ADMS24_02.pdf	ADMS24_02_Copyright.pdf	
+ADMS	Optimizing Sorting for Chiplet-Based CPUs	3	Alessandro Fogli, Peter Pletzuch, Jana Giceva	ADMS24_03.pdf	ADMS24_03_Copyright.pdf	
+ADMS	Ghostwriter: a Distributed Message Broker on RDMA and NVM	4	Hendrik Makait, Bonaventura Del Monte, Tilmann Rabl	ADMS24_04.pdf	ADMS24_04_Copyright.pdf	
+BigVis	Techniques for interactive visual examination of autonomous vessel performance	1	Natalia Andrienko, Gennady Andrienko, Dimitris Zissis, Alexandros Troupiotis-Kapeliaris and Giannis Spiliopoulos	BigVis2024_01.pdf	BigVis2024_01_Copyright.pdf	
+BigVis	A Unified Visual Exploration Framework for (Semi-)structured Data	2	Théo Bouganim, Ioana Manolescu and Emmanuel Pietriga	BigVis2024_02.pdf	BigVis2024_02_Copyright.pdf	
+BigVis	QPV: An Input Control Component For Progressive Visualization Analytics 	3	Xin Zhang and Ahmed Eldawy	BigVis2024_03.pdf	BigVis2024_03_Copyright.pdf	
+BigVis	InterpretStack: Interpretable Exploration and Interactive Visualization Construction of Stacking Algorithm	4	Yu Wang, Jing Lu, Le Liu, Junping Zhang and Siming Chen	BigVis2024_04.pdf	BigVis2024_04_Copyright.pdf	
+BigVis	Vizard: Improving Visual Data Literacy with Large Language Models	5	Rubab Zahra Sarfraz and Samar Haider	BigVis2024_05.pdf	BigVis2024_05_Copyright.pdf	
+BigVis	Tangible Progress: Employing Visual Metaphors and Physical Interfaces in AI-based English Language Learning	6	Mei Wang, Hai-Ning Liang, Yu Liu, Chengtao Ji and Lingyun Yu	BigVis2024_06.pdf	BigVis2024_06_Copyright.pdf	
+BigVis	EvalGPT: A Visual Analytic Framework for Enhancing Trust in Large Language Models	7	Xu Yang, Yiheng Liang, Le Liu, Lianwei Wu and Xiaoru Yuan	BigVis2024_07.pdf	BigVis2024_07_Copyright.pdf	
+BigVis	Partial Adaptive Indexing for Approximate Query Answering	8	Stavros Maroulis, Nikos Bikakis, Vasileios Stamatopoulos and George Papastefanatos	BigVis2024_08.pdf	BigVis2024_08_Copyright.pdf	
+BigVis	Enhancing Geographic Information Visualization: A Comparative Analysis of Digital Maps and Projection Augmented Relief Maps	9	Chang Yuan Lang Teng, Zhiwei Shi, Lingyun Yu and Yu Liu	BigVis2024_09.pdf	BigVis2024_09_Copyright.pdf	
+CloudDB	Corra: Correlation-Aware Column Compression	2	Hanwen Liu, Mihail Stoian, Alexander van Renen, Andreas Kipf	clouddb-2.pdf	https://drive.google.com/file/d/10x5OVtfXM8KqhV4PiA-DNRDS4AM2862s/view?usp=drive_link	
+CloudDB	MetaHive: A Cache-Optimized Metadata Management for Heterogeneous Key-Value Stores	3	Alireza Heidari, Amirhossein Ahmadi, Zefeng Zhi, Wei Zhang	clouddb-3.pdf	https://drive.google.com/file/d/1rktNBiKSZlWg9RauGLXKAAxwEZQdPblF/view?usp=drive_link	
+DATAI	Addressing Data Management Challenges for Interoperable Data Science	1	Ilin Tolovski,Tilmann Rabl	DATAI-1.pdf	DATAI-1-Copyright.pdf	
+DATAI	Missing Value Imputation via Pre-trained Language Models with Trainable Prompt and Retrieval Augmentation	2	Xiang Huang, Shuang Hao	DATAI-2.pdf	DATAI-2-Copyright.pdf	
+DATAI	LLM-assisted Labeling Function Generation for Semantic Type Detection	3	Chenjie Li, Dan Zhang, Jin Wang	DATAI-3.pdf	DATAI-3-Copyright.pdf	
+DATAI	Approximate Functional Dependencies Discovery Using Markov Blanket	4	Jinqi Liu, Anzhen Zhang, Jiajia Li, Na Guo, Jing Zhang	DATAI-4.pdf	DATAI-4-Copyright.pdf	
+FAB	Proceedings of the Sixth International Workshop on Foundations and Applications of Blockchain (FAB)	1	Mohammad Javad Amiri	FAB-1.pdf	FAB-1-Copyright.pdf	Preface
+FAB	Benefits and Challenges of Decentralization in Data Systems: Opportunities for Data Management Research	2	Ruben Mayer	FAB-2.pdf	FAB-2-Copyright.pdf	Keynote
+FAB	Data Management and AI for Blockchain Data Analysis: A Round Trip and Opportunities	3	Arijit Khan	FAB-3.pdf	FAB-3-Copyright.pdf	Keynote
+FAB	Practical Declarative Smart Contracts Optimization	4	Lan Lu, Tao Luo, Jingyi Li, Hongxun Ding, Brendan Massey, Haoxian Chen, Boon Thau Loo	FAB-4.pdf	FAB-4-Copyright.pdf	
+FAB	CroCRPC: Cross-Chain Remote Procedure Calls Framework for dApps	5	Avishek De, Divyakant Agrawal, Amr El Abbadi	FAB-5.pdf	FAB-5-Copyright.pdf	
+FAB	From On-chain to Macro: Assessing the Importance of Data Source Diversity in Cryptocurrency Market Forecasting	6	Giorgos Demosthenous, Chryssis Georgiou, Eliada Polydorou	FAB-6.pdf	FAB-6-Copyright.pdf	
+FAB	SOK: Blockchain for Provenance	7	Asma Jodeiri Akbarfam, Hoda Maleki	FAB-7.pdf	FAB-7-Copyright.pdf	
+FAB	A Comprehensive Outlook for Analyzing and Enhancing the Performance of Blockchain Platforms	8	Jeeta Chacko	FAB-8.pdf	FAB-8-Copyright.pdf	
+LLM+KG	LLM+KG: Data Management Opportunities in Unifying Large Language Models + Knowledge Graphs	1	Arijit Khan, Tianxing Wu, Xi Chen	LLM+KG-1.pdf	LLM+KG-1-Copyright.pdf	
+LLM+KG	OneEdit: A Neural-Symbolic Collaboratively Knowledge Editing System	2	Ningyu Zhang, Zekun Xi, Yujie Luo, Peng Wang, Bozhong Tian, Yunzhi Yao, Jintian Zhang, Shumin Deng, mengshu sun, Lei Liang, Zhiqiang Zhang, Xiaowei Zhu, Jun Zhou, Huajun Chen	LLM+KG-2.pdf	LLM+KG-2-Copyright.pdf	
+LLM+KG	Knowledge Graph Efficient Construction: Embedding Chain-of-Thought into LLMs	4	Jixuan Nie, Xia HOU, wenfeng song, xuan wang, Xingliang Jin, Xinyu Zhang, ShuoZhe Zhang, Jiaqi Shi	LLM+KG-4.pdf	LLM+KG-4-Copyright.pdf	
+LLM+KG	Benchmarking and Analyzing In-context Learning, Fine-tuning and Supervised Learning for Biomedical Knowledge Curation: a focused study on chemical entities of biological interest	5	Yusuf Abdulle, Emily Groves, Minhong Wang, Holger Kunz, Jason Hoelscher-Obermaier, Ronin Wu, Honghan Wu	LLM+KG-5.pdf	LLM+KG-5-Copyright.pdf	
+LLM+KG	Leveraging LLMs Few-shot Learning to Improve Instruction-driven Knowledge Graph Construction	8	Yongli Mou, Li Liu, Sulayman Sowe, Diego Collarana, Stefan Decker	LLM+KG-8.pdf	LLM+KG-8-Copyright.pdf	
+LLM+KG	Research Trends for the Interplay between Large Language Models and Knowledge Graphs	9	Hanieh Khorashadizadeh	LLM+KG-9.pdf	LLM+KG-9-Copyright.pdf	
+LLM+KG	Enhancing Large Language Models with Multimodality and Knowledge Graphs for Hallucination-free Open-set Object Recognition	11	Xinfu Liu, Wu Yirui, Yuting Zhou, Junyang Chen, huan wang, Ye Liu, Shaohua Wan	LLM+KG-11.pdf	LLM+KG-11-Copyright.pdf	
+LLM+KG	SPIREX: Improving LLM-based relation extraction from RNA-focused scientific literature using graph machine learning	12	Emanuele Cavalleri, Mauricio Soto-Gomez, Ali Pashaeibarough, Dario Malchiodi, Harry Caufield, Justin Reese, Chris Mungall, Peter Robinson, Elena Casiraghi, Giorgio Valentini, Marco Mesiti	LLM+KG-12.pdf	LLM+KG-12-Copyright.pdf	
+LLM+KG	InfuserKI: Enhancing Large Language Models with Knowledge Graphs via Infuser-Guided Knowledge Integration	13	Fali Wang, Runxue Bao, Suhang Wang, Wenchao Yu, Yanchi Liu, Wei Cheng, Haifeng Chen	LLM+KG-13.pdf	LLM+KG-13-Copyright.pdf	
+LLM+KG	From Instructions to ODRL Usage Policies: An Ontology Guided Approach	15	Daham M. Mustafa, Abhishek Nadgeri, Diego Collarana, Benedikt T. Arnold, Christoph Quix, Christoph Lange, Stefan Decker	LLM+KG-15.pdf	LLM+KG-15-Copyright.pdf	
+QDB	13th International Workshop on Quality in Databases: Preface	0	Sourav S Bhowmick, Lisa Ehrlinger, Hazar Harmouch	QDB-0.pdf		
+QDB	Accelerating the Data Cleaning Systems Raha and Baran through Task and Data Parallelism	1	Fatemeh Ahmadi, Yusuf Mandirali, Ziawasch Abedjan	QDB-1.pdf	QDB-1-Copyright.pdf	
+QDB	Towards Semi-Supervised Data Quality Detection In Graphs	2	Rubab Zahra Sarfraz	QDB-2.pdf	QDB-2-Copyright.pdf	
+QDB	Valuation-based Data Acquisition for Machine Learning Fairness	3	Ekta Pradhan, Romila Pradhan	QDB-3.pdf	QDB-3-Copyright.pdf	
+QDB	AutoFAIR : Automatic Data FAIRification via Machine Reading	4	Tingyan Ma, Wei Liu, Bin Lu, Xiaoying Gan, Yunqiang Zhu, Luoyi Fu, Chenghu Zhou	QDB-4.pdf	QDB-4-Copyright.pdf	
+QDB	Compute Engine Testing with Privacy-Compliant Production-Like Synthetic Data	5	Yu Liu, Jiangnan Cheng, Steve Chuck, Lyublena Antova, Yurgis  Baykshtis,  Matt  David, Ge Gao, Mehrdad  Honarkhah, Kuan-Sung  Huang, Chen-Kuei Lee, Usman  Muhammad, Shihao  Peng, Andrii  Rosa, Rebecca Schlussel, Michael Shang, Kelvin  Silva, Brandon Vo, Zac Wen, Yihao Zhou	QDB-5.pdf	QDB-5-Copyright.pdf	
+QDB	Process Model-based Access Control Policies for Cross-Organizational Data Sharing	6	Liam Tirpitz, Leon Gentges	QDB-6.pdf	QDB-6-Copyright.pdf	
+QDB	Tracking Consistency over Data Streams with InkStream [Demo]	7	Samuele Langhi, Angela Bonifati, Riccardo Tommasini	QDB-7.pdf	QDB-7-Copyright.pdf	
+QDB	A Data Generator to Explore the Interactions Between Concept Drifts and Anomalies [Demo]	8	Jongjun Park, Akanksha Nehete, Tammy Zeng, Fei Chiang	QDB-8.pdf	QDB-8-Copyright.pdf	
+QDSM	Workshop Summary of the Second International Workshop on Quantum Data Science and Management (QDSM)	1	Valter Uotila, Sven Groppe, Le Guenwald, Jiaheng Lu, Wolfgang Mauerer	QDSM.1.pdf	QDSM.1.Copyright.pdf	
+QDSM	Quantum Storage Design for Tables in RDBMS	4	Tuodu Li, Gongsheng Yuan, Chang Yao, Meng Shi, Ziyue Wang, Ling Qian and Jiaheng Lu	QDSM.4.pdf	QDSM.4.Copyright.pdf	
+QDSM	Supervised Learning on Relational Databases with Quantum Graph Neural Networks	5	Martin Vogrin, Rok Vogrin, Sven Groppe and Jinghua Groppe	QDSM.5.pdf	QDSM.5.Copyright.pdf	
+QDSM	Quantum Data Structures for Enhanced Database Performance	6	Tim Littau, Ziyu Li and Rihan Hai	QDSM.6.pdf	QDSM.6.Copyright.pdf	
+QDSM	Graphs on Qubits: Demonstrating Three Graph Algorithms on Quantum Computers	7	Lauri Vuorenkoski and Valter Uotila	QDSM.7.pdf	QDSM.7.Copyright.pdf	
+QDSM	Is Quantum-Based SQL Query Execution Viable?	8	Manish Kesarwani and Jayant Haritsa	QDSM.8.pdf	QDSM.8.Copyright.pdf	
+TaDA	2nd International Workshop on Tabular Data Analysis (TaDA)	1	Vasilis Efthymiou, Sainyam Galhotra, Oktie Hassanzadeh, Chuan Lei, Kavitha Srinivas	TaDA.1.pdf	TaDA.1.Copyright.pdf	
+TaDA	Toward a Declarative Query Language for Machine Learning	2	Hasan Jamil	TaDA.2.pdf	TaDA.2.Copyright.pdf	
+TaDA	ALT-GEN: Benchmarking Table Union Search using Large Language Models	3	Koyena Pal, Aamod Khatiwada, Roee Shraga, Renée J. Miller	TaDA.3.pdf	TaDA.3.Copyright.pdf	
+TaDA	LLMs for Data Engineering on Enterprise Data	4	Jan-Micha Bodensohn, Ulf Brackmann, Liane Vogel, Matthias Urban, Anupam Sanghi, Carsten Binnig	TaDA.4.pdf	TaDA.4.Copyright.pdf	
+TaDA	Fast and Accurate Regional Effect Plots for Automated Tabular Data Analysis	5	Vasilis Gkolemis, Theodore Dalamagas, Eirini Ntoutsi, Christos Diou	TaDA.5.pdf	TaDA.5.Copyright.pdf	
+TaDA	Transform Table to Database Using Large Language Models	6	Zezhou Huang, Jia Guo, Eugene Wu	TaDA.6.pdf	TaDA.6.Copyright.pdf	
+TaDA	GFS: Graph-based Feature Synthesis for Prediction over Relational Databases	7	Han Zhang, Quan Gan, David Wipf, Weinan Zhang	TaDA.7.pdf	TaDA.7.Copyright.pdf	
+TaDA	Schema Matching with Large Language Models: an Experimental Study	8	Marcel Parciak, Brecht Vandevoort, Frank Neven, Liesbet M. Peeters, Stijn Vansummeren	TaDA.8.pdf	TaDA.8.Copyright.pdf	
+TaDA	Finding Support for Tabular LLM Outputs	9	Grace Fan, Roee Shraga, Renée J. Miller	TaDA.9.pdf	TaDA.9.Copyright.pdf	
+TaDA	4DBInfer: A 4D Benchmarking Toolbox for Graph-Centric Predictive Modeling on RDBs	10	Minjie Wang, Quan Gan, David Wipf, ZhenkunCai, Ning Li, Jianheng Tang, Yanlin Zhang, ZizhaoZhang, ZunyaoMao, YakunSong, Yanbo Wang, Jiahang Li, HanZhang, Guang Yang, Xiao Qin, Chuan Lei, Muhan Zhang, Weinan Zhang, Christos Faloutsos, Zheng Zhang	TaDA.10.pdf	TaDA.10.Copyright.pdf	
+TaDA	Large Language Models as Data Preprocessors	11	Haochen Zhang, Yuyang Dong, Chuan Xiao, Masafumi Oyamada	TaDA.11.pdf	TaDA.11.Copyright.pdf	
+TaDA	DEMA: Enhancing Causal Analysis through Data Enrichment and Discovery in Data Lakes	12	Kayvon Heravi, Saathvik Dirisala, Babak Salimi	TaDA.12.pdf	TaDA.12.Copyright.pdf	
+TaDA	Data Quality Management for Responsible AI in Data Lakes	13	Carolina Cortes, Camila Sanz, Lorena Etcheverry, Adriana Marotta	TaDA.13.pdf	TaDA.13.Copyright.pdf	
+TaDA	Humboldt: Metadata-Driven Extensible Data Discovery	14	Alex Bäuerle, Çağatay Demiralp, Michael Stonebraker	TaDA.14.pdf	TaDA.14.Copyright.pdf	
+LSGDA	Report on the 3rd International Workshop on Large-Scale Graph Data Analytics (LSGDA 2024)	1	Long Yuan, Zhengyi Yang, Qingqiang Sun, Alexander Zhou	LSGDA24.01.pdf	LSGDA24.01.Copyright.pdf	
+LSGDA	XCrowd: Real-Time Dynamic Crowd Movement Simulation on Graph Networks	2	Jan Appel, Andreas Weiler	LSGDA24.02.pdf	LSGDA24.02.Copyright.pdf	
+LSGDA	MRG-SER: Self-supervised Spatial Entity Resolution Based on Multi-Relational Graph	3	Hanchen Qiu, Haojia Zhu, Zhicheng Li, Jiahui Jin	LSGDA24.03.pdf	LSGDA24.03.Copyright.pdf	
+LSGDA	Enhancing Neo4j Query Efficiency with Seamless Integration of the GOpt Optimization Framework	4	Bingqing Lyu, Xiaoli Zhou, Longbin Lai, Yufan Yang, Yunkai Lou, Yongfei Liu	LSGDA24.04.pdf	LSGDA24.04.Copyright.pdf	
+LSGDA	Designing Graph Neural Networks in Compliance with the European Artificial Intelligence Act	5	Barbara Hoffmann, Jana Vatter, Ruben Mayer	LSGDA24.05.pdf	LSGDA24.05.Copyright.pdf	
+LSGDA	Size Does (Not) Matter? Sparsification and Graph Neural Network Sampling for Large-scale Graphs	6	Jana Vatter, Maurice L. Rochau, Ruben Mayer, Hans-Arno Jacobsen	LSGDA24.06.pdf	LSGDA24.06.Copyright.pdf	
+LSGDA	HyperFedNet: Communication-Efficient Personalized Federated Learning Via Hypernetwork	7	Xingyun Chen, Yan Huang, Zhenzhen Xie, Junjie Pang	LSGDA24.07.pdf	LSGDA24.07.Copyright.pdf	
+LSGDA	Parallel Higher-order Truss Decomposition	8	Chen Chen, Jingya Qian, Hui Luo, Yongye Li, Xiaoyang Wang	LSGDA24.08.pdf	LSGDA24.08.Copyright.pdf	
+LSGDA	Text to Graph Query Using Filter Condition Attributes	9	Yang Liu, Xin Wang, Jiake Ge, Hui Wang, Dawei Xu, Yongzhe Jia	LSGDA24.09.pdf	LSGDA24.09.Copyright.pdf	
