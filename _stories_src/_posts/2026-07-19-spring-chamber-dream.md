@@ -3,7 +3,7 @@ layout: post
 title: "Spring Chamber Dream"
 date: 2026-07-19
 categories: [short-story]
-image: "/assets/images/spring-chamber-dream.png"
+image: "/assets/images/spring-chamber-dream.jpg"
 subtitle: "A story of sacrifice, distance, and the music we carry"
 ---
 
