@@ -1,0 +1,31 @@
+# Site settings
+title: Stories & Essays
+description: A collection of short fiction and personal essays
+baseurl: /stories
+url: https://haixun.github.io
+author: Your Name
+
+# Build settings
+markdown: kramdown
+permalink: /:title/
+
+# Plugins (GitHub Pages supported)
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - CLAUDE.md
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      image: "/assets/images/placeholder.jpg"

@@ -1,0 +1,26 @@
+# Central metadata for all stories and essays
+# Add entries here; the corresponding markdown file goes in _posts/
+
+- slug: spring-chamber-dream
+  title: "Spring Chamber Dream"
+  category: short-story
+  date: 2026-07-19
+  description: "A brief description for listings"
+
+- slug: the-wrong-square
+  title: "The Wrong Square"
+  category: short-story
+  date: 2025-01-20
+  description: "A brief description for listings"
+
+- slug: third-poem-down
+  title: "Third Poem Down"
+  category: short-story
+  date: 2025-01-20
+  description: "A brief description for listings"
+
+- slug: when-the-shit-hits
+  title: "When the Shit Hits"
+  category: essay
+  date: 2025-01-20
+  description: "A brief description for listings"
