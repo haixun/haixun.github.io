@@ -1,0 +1,494 @@
+/*
+ * Elegant Literary Theme
+ * Inspired by The New Yorker & Paris Review
+ */
+
+:root {
+  --color-bg: #faf9f7;
+  --color-bg-alt: #f5f3f0;
+  --color-text: #1a1a1a;
+  --color-text-light: #666;
+  --color-text-lighter: #999;
+  --color-accent: #8b0000;
+  --color-border: #e5e3df;
+  --color-card-bg: #fff;
+
+  --font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --max-width: 1200px;
+  --content-width: 680px;
+}
+
+/* Reset & Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-serif);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-text);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Header */
+.site-header {
+  padding: 2rem 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-card-bg);
+}
+
+.nav-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-title {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--color-text);
+  letter-spacing: 0.02em;
+}
+
+.site-title:hover {
+  color: var(--color-accent);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.nav-links a:hover {
+  color: var(--color-text);
+}
+
+/* Main Content */
+.main-content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+/* Homepage */
+.home-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.home-title {
+  font-size: 3rem;
+  font-weight: 400;
+  margin: 0 0 1rem;
+  letter-spacing: -0.02em;
+}
+
+.home-subtitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--color-text-light);
+  margin: 0;
+}
+
+/* Story Grid */
+.stories-section {
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-text-lighter);
+  margin: 0 0 2rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.stories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 2.5rem;
+}
+
+/* Story Card */
+.story-card {
+  background: var(--color-card-bg);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.story-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.story-card-image {
+  aspect-ratio: 16/10;
+  overflow: hidden;
+  background: var(--color-bg-alt);
+}
+
+.story-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.story-card:hover .story-card-image img {
+  transform: scale(1.05);
+}
+
+.story-card-content {
+  padding: 1.5rem;
+}
+
+.story-card-meta {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-text-lighter);
+  margin-bottom: 0.75rem;
+}
+
+.story-card-title {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.3;
+  margin: 0 0 0.75rem;
+}
+
+.story-card-title a {
+  color: var(--color-text);
+}
+
+.story-card-title a:hover {
+  color: var(--color-accent);
+}
+
+.story-card-excerpt {
+  font-size: 0.95rem;
+  color: var(--color-text-light);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Featured Story */
+.featured-story {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 4rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.featured-image {
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  border-radius: 4px;
+  background: var(--color-bg-alt);
+}
+
+.featured-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.featured-content {
+  padding: 1rem 0;
+}
+
+.featured-label {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-accent);
+  margin-bottom: 1rem;
+}
+
+.featured-title {
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0 0 1rem;
+}
+
+.featured-title a {
+  color: var(--color-text);
+}
+
+.featured-title a:hover {
+  color: var(--color-accent);
+}
+
+.featured-excerpt {
+  font-size: 1.1rem;
+  color: var(--color-text-light);
+  line-height: 1.7;
+  font-style: italic;
+}
+
+/* Post Page */
+.post {
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+.post-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.post-hero {
+  margin: -3rem -1.5rem 3rem;
+  aspect-ratio: 21/9;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .post-hero {
+    margin: -3rem calc((var(--content-width) - 100vw) / 2 + 1.5rem) 3rem;
+    max-width: 100vw;
+  }
+}
+
+.post-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.post-meta {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-text-lighter);
+  margin-bottom: 1.5rem;
+}
+
+.post-meta span {
+  margin: 0 0.5rem;
+}
+
+.post-meta span:first-child {
+  margin-left: 0;
+}
+
+.post-category {
+  color: var(--color-accent);
+}
+
+.post-title {
+  font-size: 2.8rem;
+  font-weight: 500;
+  line-height: 1.15;
+  margin: 0 0 1rem;
+  letter-spacing: -0.02em;
+}
+
+.post-subtitle {
+  font-size: 1.3rem;
+  font-style: italic;
+  color: var(--color-text-light);
+  margin: 0;
+}
+
+/* Post Content */
+.post-content {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.post-content p {
+  margin: 0 0 1.75rem;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.post-content p:first-of-type::first-letter {
+  font-size: 4rem;
+  float: left;
+  line-height: 1;
+  margin: 0.1em 0.15em 0 0;
+  font-weight: 500;
+}
+
+.post-content h2, .post-content h3 {
+  margin: 2.5rem 0 1rem;
+  font-weight: 500;
+}
+
+.post-content blockquote {
+  margin: 2rem 0;
+  padding: 0 0 0 1.5rem;
+  border-left: 3px solid var(--color-accent);
+  font-style: italic;
+  color: var(--color-text-light);
+}
+
+.post-content hr {
+  border: none;
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.post-content hr::before {
+  content: "* * *";
+  letter-spacing: 1em;
+  color: var(--color-text-lighter);
+}
+
+/* Section dividers in stories (the ◆ character) */
+.post-content p:only-child,
+.post-content p:has(◆) {
+  text-align: center;
+}
+
+.post-footer {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.back-link {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Page */
+.page {
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+.page-header {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.page-content {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.page-content p {
+  margin: 0 0 1.5rem;
+}
+
+/* Footer */
+.site-footer {
+  margin-top: 4rem;
+  padding: 2rem 1.5rem;
+  border-top: 1px solid var(--color-border);
+  background: var(--color-card-bg);
+}
+
+.footer-content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-content p {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: var(--color-text-lighter);
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+
+  .home-title {
+    font-size: 2.2rem;
+  }
+
+  .featured-story {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .featured-title {
+    font-size: 1.8rem;
+  }
+
+  .stories-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .post-title {
+    font-size: 2rem;
+  }
+
+  .post-content p:first-of-type::first-letter {
+    font-size: 3rem;
+  }
+}

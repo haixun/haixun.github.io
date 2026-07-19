@@ -1,0 +1,96 @@
+---
+layout: default
+title: Home
+---
+
+<div class="home-header">
+  <h1 class="home-title">Stories & Essays</h1>
+  <p class="home-subtitle">A collection of short fiction and personal essays</p>
+</div>
+
+{% assign all_posts = site.posts %}
+{% assign featured = all_posts | first %}
+
+{% if featured %}
+<div class="featured-story">
+  <div class="featured-image">
+    <a href="{{ featured.url | relative_url }}">
+      <img src="{{ featured.image | default: '/assets/images/placeholder.jpg' | relative_url }}" alt="{{ featured.title }}">
+    </a>
+  </div>
+  <div class="featured-content">
+    <div class="featured-label">Featured</div>
+    <h2 class="featured-title">
+      <a href="{{ featured.url | relative_url }}">{{ featured.title }}</a>
+    </h2>
+    <p class="featured-excerpt">{{ featured.excerpt | strip_html | truncate: 200 }}</p>
+  </div>
+</div>
+{% endif %}
+
+{% assign stories = site.posts | where_exp: "post", "post.categories contains 'short-story'" %}
+{% assign stories = stories | shift %}
+
+{% if stories.size > 0 %}
+<section class="stories-section">
+  <h2 class="section-title">Short Stories</h2>
+  <div class="stories-grid">
+    {% for post in stories %}
+    <article class="story-card">
+      <div class="story-card-image">
+        <a href="{{ post.url | relative_url }}">
+          <img src="{{ post.image | default: '/assets/images/placeholder.jpg' | relative_url }}" alt="{{ post.title }}">
+        </a>
+      </div>
+      <div class="story-card-content">
+        <div class="story-card-meta">
+          {{ post.date | date: "%B %Y" }}
+          &middot;
+          {% assign words = post.content | number_of_words %}
+          {% assign minutes = words | divided_by: 200 %}
+          {% if minutes < 1 %}{% assign minutes = 1 %}{% endif %}
+          {{ minutes }} min read
+        </div>
+        <h3 class="story-card-title">
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h3>
+        <p class="story-card-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{% assign essays = site.posts | where_exp: "post", "post.categories contains 'essay'" %}
+
+{% if essays.size > 0 %}
+<section class="stories-section">
+  <h2 class="section-title">Essays</h2>
+  <div class="stories-grid">
+    {% for post in essays %}
+    <article class="story-card">
+      <div class="story-card-image">
+        <a href="{{ post.url | relative_url }}">
+          <img src="{{ post.image | default: '/assets/images/placeholder.jpg' | relative_url }}" alt="{{ post.title }}">
+        </a>
+      </div>
+      <div class="story-card-content">
+        <div class="story-card-meta">
+          {{ post.date | date: "%B %Y" }}
+          &middot;
+          {% assign words = post.content | number_of_words %}
+          {% assign minutes = words | divided_by: 200 %}
+          {% if minutes < 1 %}{% assign minutes = 1 %}{% endif %}
+          {{ minutes }} min read
+        </div>
+        <h3 class="story-card-title">
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h3>
+        <p class="story-card-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
