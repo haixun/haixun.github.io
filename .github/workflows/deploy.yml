@@ -1,4 +1,4 @@
-name: Deploy Stories to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -25,11 +25,23 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.3'
-          bundler-cache: true
-          working-directory: stories
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
+      # Build the main/root Jekyll site
+      - name: Install root site dependencies
+        run: bundle install
+
+      - name: Build root site
+        run: bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
+
+      # Build the stories site
+      - name: Install stories dependencies
+        working-directory: stories
+        run: bundle install
 
       - name: Build stories site
         working-directory: stories
@@ -37,10 +49,14 @@ jobs:
         env:
           JEKYLL_ENV: production
 
+      # Merge: copy stories into root _site/stories
+      - name: Merge sites
+        run: |
+          mkdir -p _site/stories
+          cp -r stories/_site/* _site/stories/
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
-        with:
-          path: stories/_site
 
   deploy:
     environment:
