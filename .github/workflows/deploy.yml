@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy Stories to GitHub Pages
 
 on:
   push:
@@ -32,26 +32,15 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Build stories site
-        run: |
-          cd stories
-          bundle exec jekyll build --baseurl "/stories"
+        working-directory: stories
+        run: bundle exec jekyll build
         env:
           JEKYLL_ENV: production
 
-      - name: Prepare deployment
-        run: |
-          # Create output directory
-          mkdir -p _site
-
-          # Copy stories site to _site/stories
-          cp -r stories/_site _site/stories
-
-          # Copy any other static files from root (if they exist)
-          # Exclude stories/, .git/, .github/, and Jekyll-specific files
-          find . -maxdepth 1 -type f \( -name "*.html" -o -name "*.css" -o -name "*.js" -o -name "*.jpg" -o -name "*.png" -o -name "*.ico" \) -exec cp {} _site/ \;
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          path: stories/_site
 
   deploy:
     environment:
