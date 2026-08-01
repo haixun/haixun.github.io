@@ -4,48 +4,70 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Writing portfolio site served at `haixun.github.io/stories`. Uses Jekyll with the Type-on-Strap remote theme, hosted on GitHub Pages.
+Writing portfolio site served at `haixun.github.io/stories`. Uses a custom elegant literary theme with Cormorant Garamond typography. The site is pre-built and served as static HTML via GitHub Pages.
+
+## Directory Structure
+
+```
+haixun.github.io/
+├── _stories_src/          # Jekyll source (this folder)
+│   ├── _posts/            # Story/essay markdown files
+│   ├── _layouts/          # HTML templates
+│   ├── _data/stories.yml  # Metadata (optional)
+│   ├── assets/            # Source images and CSS
+│   └── _config.yml        # Jekyll config
+├── stories/               # Built static output (served at /stories/)
+└── [other root site files]
+```
 
 ## Development Commands
 
 ```bash
-cd /Users/haixun/haixun.github.io/stories
+cd /Users/haixun/haixun.github.io/_stories_src
+
+# Install dependencies (first time)
 bundle install
-bundle exec jekyll serve --livereload    # Preview at http://localhost:4000/stories
-bundle exec jekyll build
+
+# Local preview
+bundle exec jekyll serve    # Preview at http://localhost:4000/stories
+
+# Build for production
+bundle exec jekyll build --destination ../stories
 ```
 
-## Adding Content
+## Deployment Workflow
 
-1. Add metadata to `_data/stories.yml`:
-   ```yaml
-   - slug: the-last-train
-     title: "The Last Train"
-     category: short-story
-     date: 2024-01-15
-   ```
+After making changes:
 
-2. Create post in `_posts/` with filename `YYYY-MM-DD-slug.md`:
-   ```markdown
-   ---
-   layout: post
-   ---
+```bash
+cd /Users/haixun/haixun.github.io/_stories_src
+bundle exec jekyll build --destination ../stories
+cd ..
+git add -A && git commit -m "Update stories" && git push
+```
 
-   Your story content here...
-   ```
+## Adding/Editing Content
 
-The title and category come from `_data/stories.yml`, not the post's front matter.
+Posts are in `_posts/` with filename `YYYY-MM-DD-slug.md`:
 
-## Directory Structure
+```markdown
+---
+layout: post
+title: "Story Title"
+date: YYYY-MM-DD
+categories: [short-story]   # or [essay]
+image: "/assets/images/story-name.jpg"
+subtitle: "Optional subtitle"
+---
 
-- `_posts/`: Story and essay markdown files (naming: `YYYY-MM-DD-slug.md`)
-- `_data/stories.yml`: Central metadata for all content
-- `_layouts/`: Override theme layouts if needed
-- `_config.yml`: Site config with remote theme
+Story content here...
+```
+
+Images go in `assets/images/`.
 
 ## Strict Rules
 
-1. **No Custom Plugins**: Only GitHub Pages-supported plugins
-2. **Categories**: `short-story` or `essay` only
-3. **No Node.js**: Ruby/Jekyll only
-4. **File Naming**: Posts must follow `YYYY-MM-DD-slug.md` format
+1. **Categories**: Use only `short-story` or `essay`
+2. **File Naming**: Posts must follow `YYYY-MM-DD-slug.md` format
+3. **Always rebuild**: After any change, run `bundle exec jekyll build --destination ../stories`
+4. **No Node.js**: Ruby/Jekyll only
