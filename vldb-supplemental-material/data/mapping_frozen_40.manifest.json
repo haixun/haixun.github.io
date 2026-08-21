@@ -1,0 +1,18 @@
+{
+  "file": "mapping_frozen_40.json",
+  "n_items": 40,
+  "per_family": {
+    "causal_direction": 10,
+    "edge_redirection": 10,
+    "participant_reassignment": 10,
+    "role_rebinding": 10
+  },
+  "item_payload_sha256": "e6e325d9ab1ed4102a2aac96e2d24bab2b80ab2200b599bf21d760696a149728",
+  "predicate_ontology_source": "scripts/llm_experiments.py::RELATION_VOCAB",
+  "role_vocabulary": [
+    "AGENT",
+    "TARGET",
+    "THIRD_PARTY",
+    "ACTUALITY"
+  ]
+}

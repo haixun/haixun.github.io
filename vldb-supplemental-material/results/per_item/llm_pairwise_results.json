@@ -1,0 +1,689 @@
+{
+  "metadata": {
+    "experiment": "llm_pairwise",
+    "model": "gpt-4o",
+    "seed": 42
+  },
+  "by_config": {
+    "pairwise_gpt-4o": {
+      "config": "pairwise_gpt-4o",
+      "overall": {
+        "q2_wins": 60,
+        "n": 60,
+        "accuracy": 1.0
+      },
+      "development": {
+        "q2_wins": 20,
+        "n": 20,
+        "accuracy": 1.0
+      },
+      "test": {
+        "q2_wins": 40,
+        "n": 40,
+        "accuracy": 1.0
+      },
+      "per_triplet": [
+        {
+          "triplet_id": 1,
+          "schema_id": "S01",
+          "block": "A",
+          "split": "development",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "B",
+          "q2_position": "B",
+          "reason": "Both involve authority figures creating false emergencies to manipulate behavior through fear."
+        },
+        {
+          "triplet_id": 2,
+          "schema_id": "S02",
+          "block": "A",
+          "split": "development",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "A",
+          "q2_position": "A",
+          "reason": "Both involve betrayal where a confidant uses shared information for personal gain, undermining the original sharer's opportunity."
+        },
+        {
+          "triplet_id": 3,
+          "schema_id": "S03",
+          "block": "A",
+          "split": "development",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "A",
+          "q2_position": "A",
+          "reason": "Both involve a secret action taken by one party that benefits the other, who remains unaware of the truth and believes they achieved the outcome on their own."
+        },
+        {
+          "triplet_id": 4,
+          "schema_id": "S04",
+          "block": "A",
+          "split": "development",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "A",
+          "q2_position": "A",
+          "reason": "Both situations involve someone taking credit for another person's work without acknowledgment, leading to personal gain for the one who misrepresented the work."
+        },
+        {
+          "triplet_id": 5,
+          "schema_id": "S05",
+          "block": "A",
+          "split": "development",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "B",
+          "q2_position": "B",
+          "reason": "Both involve a person pretending to enjoy something to spare the feelings of a loved one who is proud of their effort."
+        },
+        {
+          "triplet_id": 6,
+          "schema_id": "S06",
+          "block": "A",
+          "split": "development",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "B",
+          "q2_position": "B",
+          "reason": "Both involve a mentor figure who deceptively undermines the individual's opportunities to keep them dependent, despite outwardly encouraging them."
+        },
+        {
+          "triplet_id": 7,
+          "schema_id": "S07",
+          "block": "A",
+          "split": "development",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "B",
+          "q2_position": "B",
+          "reason": "Both involve taking the blame to protect someone more vulnerable from severe consequences, without the other party confessing."
+        },
+        {
+          "triplet_id": 8,
+          "schema_id": "S08",
+          "block": "A",
+          "split": "development",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "A",
+          "q2_position": "A",
+          "reason": "Both involve a seemingly generous offer that later reveals hidden conditions, leading to accusations of ingratitude when those conditions are not met."
+        },
+        {
+          "triplet_id": 9,
+          "schema_id": "S09",
+          "block": "A",
+          "split": "development",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "A",
+          "q2_position": "A",
+          "reason": "Both involve individuals feigning incompetence to shift responsibilities onto someone else."
+        },
+        {
+          "triplet_id": 10,
+          "schema_id": "S10",
+          "block": "A",
+          "split": "development",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "A",
+          "q2_position": "A",
+          "reason": "Both stories involve a reversal of expectations where the seemingly supportive person undermines and the seemingly competitive or disapproving person actually helps."
+        },
+        {
+          "triplet_id": 11,
+          "schema_id": "S11",
+          "block": "A",
+          "split": "development",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "A",
+          "q2_position": "A",
+          "reason": "Both involve individuals creating problems themselves to appear indispensable by solving them."
+        },
+        {
+          "triplet_id": 12,
+          "schema_id": "S12",
+          "block": "A",
+          "split": "development",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "B",
+          "q2_position": "B",
+          "reason": "Both involve a fabricated crisis to test the protagonist's commitment, resulting in a temporary financial loss and a revelation of deception."
+        },
+        {
+          "triplet_id": 13,
+          "schema_id": "S13",
+          "block": "A",
+          "split": "development",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "A",
+          "q2_position": "A",
+          "reason": "Both involve a well-intentioned deception intended to protect, which ultimately causes more harm than the truth would have."
+        },
+        {
+          "triplet_id": 14,
+          "schema_id": "S14",
+          "block": "A",
+          "split": "development",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "A",
+          "q2_position": "A",
+          "reason": "Both stories involve initial failure leading to a period of learning and skill-building, resulting in a greater success than originally sought."
+        },
+        {
+          "triplet_id": 15,
+          "schema_id": "S15",
+          "block": "A",
+          "split": "development",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "B",
+          "q2_position": "B",
+          "reason": "Both stories involve an initial negative perception and avoidance, followed by an unexpected bonding experience that leads to a strong friendship."
+        },
+        {
+          "triplet_id": 16,
+          "schema_id": "S16",
+          "block": "A",
+          "split": "development",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "B",
+          "q2_position": "B",
+          "reason": "Both the situation and Candidate B describe a skill that initially led to professional success but eventually became overwhelming and detrimental to personal well-being."
+        },
+        {
+          "triplet_id": 17,
+          "schema_id": "S17",
+          "block": "A",
+          "split": "development",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "A",
+          "q2_position": "A",
+          "reason": "Both stories reveal an unexpected positive transformation in a person's character during a crisis, contrary to prior perceptions."
+        },
+        {
+          "triplet_id": 18,
+          "schema_id": "S18",
+          "block": "A",
+          "split": "development",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "B",
+          "q2_position": "B",
+          "reason": "Both involve an initial reluctance to attend an event, followed by an unexpected opportunity that significantly changes the person's life."
+        },
+        {
+          "triplet_id": 19,
+          "schema_id": "S19",
+          "block": "A",
+          "split": "development",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "B",
+          "q2_position": "B",
+          "reason": "Both involve realizing a lack of true understanding when attempting to teach someone else, prompting a need to learn the fundamentals."
+        },
+        {
+          "triplet_id": 20,
+          "schema_id": "S20",
+          "block": "A",
+          "split": "development",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "A",
+          "q2_position": "A",
+          "reason": "Both involve well-intentioned help that inadvertently enables the recipient's detrimental behavior, leading to a realization of the negative impact of the assistance."
+        },
+        {
+          "triplet_id": 21,
+          "schema_id": "S01",
+          "block": "B",
+          "split": "test",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "B",
+          "q2_position": "B",
+          "reason": "Both involve authority figures creating false urgency to improve performance, knowing the actual timing of the events in advance."
+        },
+        {
+          "triplet_id": 22,
+          "schema_id": "S02",
+          "block": "B",
+          "split": "test",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "B",
+          "q2_position": "B",
+          "reason": "Both involve betrayal of trust and exploitation of shared information for personal gain without proper acknowledgment or permission."
+        },
+        {
+          "triplet_id": 23,
+          "schema_id": "S03",
+          "block": "B",
+          "split": "test",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "A",
+          "q2_position": "A",
+          "reason": "Both involve a selfless act where the benefactor conceals their contribution, allowing the beneficiary to believe in an alternate explanation."
+        },
+        {
+          "triplet_id": 24,
+          "schema_id": "S04",
+          "block": "B",
+          "split": "test",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "A",
+          "q2_position": "A",
+          "reason": "Both involve someone else taking credit for the individual's work and benefiting from it without acknowledging the original creator."
+        },
+        {
+          "triplet_id": 25,
+          "schema_id": "S05",
+          "block": "B",
+          "split": "test",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "B",
+          "q2_position": "B",
+          "reason": "Both involve enduring an uncomfortable situation to maintain another person's happiness, without revealing the true feelings about the situation."
+        },
+        {
+          "triplet_id": 26,
+          "schema_id": "S06",
+          "block": "B",
+          "split": "test",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "A",
+          "q2_position": "A",
+          "reason": "Both involve a trusted mentor who secretly undermines the protagonist's progress while outwardly expressing support."
+        },
+        {
+          "triplet_id": 27,
+          "schema_id": "S07",
+          "block": "B",
+          "split": "test",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "A",
+          "q2_position": "A",
+          "reason": "Both involve someone taking the blame for another's mistake, resulting in personal consequences, while the person at fault remains silent and does not correct the false narrative."
+        },
+        {
+          "triplet_id": 28,
+          "schema_id": "S08",
+          "block": "B",
+          "split": "test",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "A",
+          "q2_position": "A",
+          "reason": "Both involve an initial offer with no conditions that later turns into a demand for compliance, leading to a threat when the demand is resisted."
+        },
+        {
+          "triplet_id": 29,
+          "schema_id": "S09",
+          "block": "B",
+          "split": "test",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "B",
+          "q2_position": "B",
+          "reason": "Both involve someone feigning incompetence to avoid responsibility while possessing the capability to perform the task."
+        },
+        {
+          "triplet_id": 30,
+          "schema_id": "S10",
+          "block": "B",
+          "split": "test",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "B",
+          "q2_position": "B",
+          "reason": "Both involve unexpected support from an anticipated adversary and betrayal from a trusted ally."
+        },
+        {
+          "triplet_id": 31,
+          "schema_id": "S11",
+          "block": "B",
+          "split": "test",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "B",
+          "q2_position": "B",
+          "reason": "Both involve someone fabricating a threat or danger to appear as a hero by resolving the situation they created."
+        },
+        {
+          "triplet_id": 32,
+          "schema_id": "S12",
+          "block": "B",
+          "split": "test",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "B",
+          "q2_position": "B",
+          "reason": "Both involve a fabricated crisis to test loyalty, resulting in a sacrifice based on deception."
+        },
+        {
+          "triplet_id": 33,
+          "schema_id": "S13",
+          "block": "B",
+          "split": "test",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "B",
+          "q2_position": "B",
+          "reason": "Both involve a professional withholding critical information to avoid causing immediate distress, resulting in significant negative consequences for the client."
+        },
+        {
+          "triplet_id": 34,
+          "schema_id": "S14",
+          "block": "B",
+          "split": "test",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "B",
+          "q2_position": "B",
+          "reason": "Both involve initial rejection leading to an unexpected opportunity that ultimately defines their career path."
+        },
+        {
+          "triplet_id": 35,
+          "schema_id": "S15",
+          "block": "B",
+          "split": "test",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "A",
+          "q2_position": "A",
+          "reason": "Both stories involve initial animosity that transforms into a positive relationship through shared adversity and discovery of common interests."
+        },
+        {
+          "triplet_id": 36,
+          "schema_id": "S16",
+          "block": "B",
+          "split": "test",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "B",
+          "q2_position": "B",
+          "reason": "Both stories involve a skill or trait that initially brings success but ultimately leads to personal isolation and negative consequences."
+        },
+        {
+          "triplet_id": 37,
+          "schema_id": "S17",
+          "block": "B",
+          "split": "test",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "B",
+          "q2_position": "B",
+          "reason": "Both stories reveal an unexpected positive side of a person previously perceived negatively, showing hidden depth and capability during a crisis."
+        },
+        {
+          "triplet_id": 38,
+          "schema_id": "S18",
+          "block": "B",
+          "split": "test",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "B",
+          "q2_position": "B",
+          "reason": "Both involve an unintended action leading to an unexpected positive outcome that significantly impacts the person's future."
+        },
+        {
+          "triplet_id": 39,
+          "schema_id": "S19",
+          "block": "B",
+          "split": "test",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "B",
+          "q2_position": "B",
+          "reason": "Both involve realizing a lack of deep understanding when trying to explain something assumed to be well-known."
+        },
+        {
+          "triplet_id": 40,
+          "schema_id": "S20",
+          "block": "B",
+          "split": "test",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "B",
+          "q2_position": "B",
+          "reason": "Both involve enabling behavior that unintentionally perpetuates a harmful situation by removing consequences."
+        },
+        {
+          "triplet_id": 41,
+          "schema_id": "S01",
+          "block": "C",
+          "split": "test",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "B",
+          "q2_position": "B",
+          "reason": "Both involve an authority figure creating a false sense of surveillance to ensure consistent high performance."
+        },
+        {
+          "triplet_id": 42,
+          "schema_id": "S02",
+          "block": "C",
+          "split": "test",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "A",
+          "q2_position": "A",
+          "reason": "Both involve a betrayal of trust where a partner or advisor uses proprietary information for personal gain without proper acknowledgment."
+        },
+        {
+          "triplet_id": 43,
+          "schema_id": "S03",
+          "block": "C",
+          "split": "test",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "A",
+          "q2_position": "A",
+          "reason": "Both involve a person secretly making a personal sacrifice to help someone else, who remains unaware and grateful for what they believe to be a fortunate circumstance."
+        },
+        {
+          "triplet_id": 44,
+          "schema_id": "S04",
+          "block": "C",
+          "split": "test",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "A",
+          "q2_position": "A",
+          "reason": "Both involve someone else taking credit for the work of the narrator, with the narrator's contribution being minimized or unacknowledged."
+        },
+        {
+          "triplet_id": 45,
+          "schema_id": "S05",
+          "block": "C",
+          "split": "test",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "A",
+          "q2_position": "A",
+          "reason": "Both involve enduring an uncomfortable situation to maintain the happiness or intimacy of a loved one, without revealing the personal discomfort it causes."
+        },
+        {
+          "triplet_id": 46,
+          "schema_id": "S06",
+          "block": "C",
+          "split": "test",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "A",
+          "q2_position": "A",
+          "reason": "Both involve a trusted mentor secretly undermining the protagonist's advancement for personal gain while maintaining a facade of support."
+        },
+        {
+          "triplet_id": 47,
+          "schema_id": "S07",
+          "block": "C",
+          "split": "test",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "A",
+          "q2_position": "A",
+          "reason": "Both involve someone taking responsibility for another's mistake and enduring consequences to protect the other person."
+        },
+        {
+          "triplet_id": 48,
+          "schema_id": "S08",
+          "block": "C",
+          "split": "test",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "A",
+          "q2_position": "A",
+          "reason": "Both involve a gift given with the appearance of no strings attached, followed by the giver imposing conditions or expectations that contradict the initial promise."
+        },
+        {
+          "triplet_id": 49,
+          "schema_id": "S09",
+          "block": "C",
+          "split": "test",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "B",
+          "q2_position": "B",
+          "reason": "Both involve individuals feigning incompetence in an area where they are actually skilled to avoid responsibility."
+        },
+        {
+          "triplet_id": 50,
+          "schema_id": "S10",
+          "block": "C",
+          "split": "test",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "A",
+          "q2_position": "A",
+          "reason": "Both involve unexpected support from an adversary and betrayal from a trusted ally."
+        },
+        {
+          "triplet_id": 51,
+          "schema_id": "S11",
+          "block": "C",
+          "split": "test",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "A",
+          "q2_position": "A",
+          "reason": "Both involve individuals creating problems themselves to appear indispensable and receive praise for fixing them."
+        },
+        {
+          "triplet_id": 52,
+          "schema_id": "S12",
+          "block": "C",
+          "split": "test",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "A",
+          "q2_position": "A",
+          "reason": "Both involve a deceptive test of loyalty or commitment, where the stated crisis was fabricated to evaluate the protagonist's response."
+        },
+        {
+          "triplet_id": 53,
+          "schema_id": "S13",
+          "block": "C",
+          "split": "test",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "A",
+          "q2_position": "A",
+          "reason": "Both involve someone withholding critical information to protect another's immediate happiness, resulting in long-term negative consequences."
+        },
+        {
+          "triplet_id": 54,
+          "schema_id": "S14",
+          "block": "C",
+          "split": "test",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "B",
+          "q2_position": "B",
+          "reason": "Both involve an initial failure leading to unexpected self-discovery and a new, successful direction."
+        },
+        {
+          "triplet_id": 55,
+          "schema_id": "S15",
+          "block": "C",
+          "split": "test",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "B",
+          "q2_position": "B",
+          "reason": "Both stories involve initial conflict and misunderstanding that transform into mutual understanding and collaboration after a shared experience reveals deeper personal connections."
+        },
+        {
+          "triplet_id": 56,
+          "schema_id": "S16",
+          "block": "C",
+          "split": "test",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "B",
+          "q2_position": "B",
+          "reason": "Both stories involve a trait initially seen as positive leading to negative consequences due to lack of boundaries, resulting in personal loss."
+        },
+        {
+          "triplet_id": 57,
+          "schema_id": "S17",
+          "block": "C",
+          "split": "test",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "A",
+          "q2_position": "A",
+          "reason": "Both stories involve someone initially perceived negatively who reveals unexpected competence and kindness in a crisis."
+        },
+        {
+          "triplet_id": 58,
+          "schema_id": "S18",
+          "block": "C",
+          "split": "test",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "B",
+          "q2_position": "B",
+          "reason": "Both stories involve an unexpected, chance encounter leading to a significant and positive life change."
+        },
+        {
+          "triplet_id": 59,
+          "schema_id": "S19",
+          "block": "C",
+          "split": "test",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "A",
+          "q2_position": "A",
+          "reason": "Both involve realizing a lack of understanding when trying to teach something they thought they had mastered."
+        },
+        {
+          "triplet_id": 60,
+          "schema_id": "S20",
+          "block": "C",
+          "split": "test",
+          "q2_beats_q3": true,
+          "outcome": "Q2_WIN",
+          "choice": "A",
+          "q2_position": "A",
+          "reason": "Both involve enabling behavior that prevents the other person from developing necessary skills, leading to dependency and inability to cope independently."
+        }
+      ]
+    }
+  }
+}

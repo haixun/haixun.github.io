@@ -1,0 +1,115 @@
+{
+  "metadata": {
+    "name": "Surface-Balanced Structural-Mapping Prototype (DRAFT)",
+    "version": "0.1.0-proto",
+    "role": "PROTOTYPE / DEV. 6 items to check whether mapping metrics + node-only/edge-shuffle controls behave under the surface-balanced minimal-pair design, on the CURRENT flat representation (representation change deferred; see relation_only_plan.md).",
+    "design": "Query in domain A. cand_correct in domain B is graph-isomorphic to the query (gold correspondence = identity on roles). cand_counterfactual in domain B differs from cand_correct by EXACTLY one declared edit (role rebinding / causal direction / edge redirection / participant reassignment), predicate multiset preserved. cand_correct and cand_counterfactual are near-identical in wording, so surface (predicate bag + tokens) ties and only relational organization separates them. Both candidates are equally cross-domain from the query, so cross-domain extraction noise is symmetric in the ranking.",
+    "plausibility_note": "Counterfactual edits are chosen so BOTH candidates remain pragmatically plausible (e.g. debt<->depression, tariff<->mill both causal directions occur), to avoid an implausibility cue that LLM components could exploit instead of structural mapping.",
+    "purity_note": "role_rebinding and causal_direction edits leave the node inventory unchanged (pure edge edits) => all edge-blind baselines tie. edge_redirection and participant_reassignment introduce a THIRD_PARTY node, so node-only can partially separate them; flagged for interpretation.",
+    "predicate_vocabulary_frozen": true
+  },
+  "items": [
+    {
+      "id": 201,
+      "family": "role_rebinding",
+      "domain_a": "workplace",
+      "domain_b": "family",
+      "query": "The manager deceived the new hire, leaned on her goodwill to cover his own missed targets, and knew the whole time it would set her back.",
+      "cand_correct": "The father deceived his teenage daughter, leaned on her trust to cover his own broken promises, and knew the whole time it would set her back.",
+      "cand_counterfactual": "The father was deceived by his teenage daughter, yet he still leaned on her trust to cover his own broken promises, and knew the whole time it would set her back.",
+      "predicate_multiset": ["deceives", "exploits", "intends"],
+      "edit_type": "swap subject/object of the deceives edge",
+      "changed_query_edge": ["AGENT", "deceives", "TARGET"],
+      "gold_scaffold": {
+        "query": {"roles": ["AGENT", "TARGET"], "relations": [["AGENT", "deceives", "TARGET"], ["AGENT", "exploits", "TARGET"], ["AGENT", "intends", "actually_negative"]]},
+        "cand_correct": {"roles": ["AGENT", "TARGET"], "relations": [["AGENT", "deceives", "TARGET"], ["AGENT", "exploits", "TARGET"], ["AGENT", "intends", "actually_negative"]]},
+        "cand_counterfactual": {"roles": ["AGENT", "TARGET"], "relations": [["TARGET", "deceives", "AGENT"], ["AGENT", "exploits", "TARGET"], ["AGENT", "intends", "actually_negative"]]}
+      }
+    },
+    {
+      "id": 202,
+      "family": "role_rebinding",
+      "domain_a": "finance",
+      "domain_b": "medicine",
+      "query": "The advisor misled the client, leaned on her trust to bury his own losses, and understood all along that it would ruin her.",
+      "cand_correct": "The surgeon misled the patient, leaned on her trust to bury his own errors, and understood all along that it would ruin her.",
+      "cand_counterfactual": "The surgeon was misled by the patient, yet he still leaned on her trust to bury his own errors, and understood all along that it would ruin her.",
+      "predicate_multiset": ["deceives", "exploits", "intends"],
+      "edit_type": "swap subject/object of the deceives edge",
+      "changed_query_edge": ["AGENT", "deceives", "TARGET"],
+      "gold_scaffold": {
+        "query": {"roles": ["AGENT", "TARGET"], "relations": [["AGENT", "deceives", "TARGET"], ["AGENT", "exploits", "TARGET"], ["AGENT", "intends", "actually_negative"]]},
+        "cand_correct": {"roles": ["AGENT", "TARGET"], "relations": [["AGENT", "deceives", "TARGET"], ["AGENT", "exploits", "TARGET"], ["AGENT", "intends", "actually_negative"]]},
+        "cand_counterfactual": {"roles": ["AGENT", "TARGET"], "relations": [["TARGET", "deceives", "AGENT"], ["AGENT", "exploits", "TARGET"], ["AGENT", "intends", "actually_negative"]]}
+      }
+    },
+    {
+      "id": 203,
+      "family": "causal_direction",
+      "domain_a": "ecology",
+      "domain_b": "economics",
+      "query": "The new dam causes the wetland downstream to dry out, it powers the town that barely notices, and the agency buries its own impact study.",
+      "cand_correct": "The new tariff causes the local mill to shut down, it shields the industry that barely notices, and the ministry buries its own impact study.",
+      "cand_counterfactual": "The local mill's shutdown causes the new tariff, it shields the industry that barely notices, and the ministry buries its own impact study.",
+      "predicate_multiset": ["causes", "enables", "conceals"],
+      "edit_type": "reverse the causes edge direction",
+      "changed_query_edge": ["AGENT", "causes", "TARGET"],
+      "gold_scaffold": {
+        "query": {"roles": ["AGENT", "TARGET", "THIRD_PARTY"], "relations": [["AGENT", "causes", "TARGET"], ["AGENT", "enables", "THIRD_PARTY"], ["AGENT", "conceals", "ACTUALITY"]]},
+        "cand_correct": {"roles": ["AGENT", "TARGET", "THIRD_PARTY"], "relations": [["AGENT", "causes", "TARGET"], ["AGENT", "enables", "THIRD_PARTY"], ["AGENT", "conceals", "ACTUALITY"]]},
+        "cand_counterfactual": {"roles": ["AGENT", "TARGET", "THIRD_PARTY"], "relations": [["TARGET", "causes", "AGENT"], ["AGENT", "enables", "THIRD_PARTY"], ["AGENT", "conceals", "ACTUALITY"]]}
+      }
+    },
+    {
+      "id": 204,
+      "family": "causal_direction",
+      "domain_a": "health",
+      "domain_b": "organization",
+      "query": "Chronic stress causes her migraines, it blocks the recovery she keeps fighting for, and she hides how bad things have gotten.",
+      "cand_correct": "Constant layoffs cause the team's burnout, they block the growth the CEO keeps fighting for, and she hides how bad things have gotten.",
+      "cand_counterfactual": "The team's burnout causes the constant layoffs, they block the growth the CEO keeps fighting for, and she hides how bad things have gotten.",
+      "predicate_multiset": ["causes", "prevents", "conceals"],
+      "edit_type": "reverse the causes edge direction",
+      "changed_query_edge": ["AGENT", "causes", "TARGET"],
+      "gold_scaffold": {
+        "query": {"roles": ["AGENT", "TARGET", "THIRD_PARTY"], "relations": [["AGENT", "causes", "TARGET"], ["AGENT", "prevents", "THIRD_PARTY"], ["AGENT", "conceals", "ACTUALITY"]]},
+        "cand_correct": {"roles": ["AGENT", "TARGET", "THIRD_PARTY"], "relations": [["AGENT", "causes", "TARGET"], ["AGENT", "prevents", "THIRD_PARTY"], ["AGENT", "conceals", "ACTUALITY"]]},
+        "cand_counterfactual": {"roles": ["AGENT", "TARGET", "THIRD_PARTY"], "relations": [["TARGET", "causes", "AGENT"], ["AGENT", "prevents", "THIRD_PARTY"], ["AGENT", "conceals", "ACTUALITY"]]}
+      }
+    },
+    {
+      "id": 205,
+      "family": "edge_redirection",
+      "domain_a": "relationship",
+      "domain_b": "startup",
+      "query": "He invented rivals to keep his partner anxious, lied to her about them constantly, and used her fear to control the money.",
+      "cand_correct": "He invented competitors to keep his cofounder anxious, lied to her about them constantly, and used her fear to control the budget.",
+      "cand_counterfactual": "He invented competitors to keep his cofounder anxious, but the lies about them he fed to the investors, and he used her fear to control the budget.",
+      "predicate_multiset": ["manufactures_threat", "deceives", "exploits"],
+      "edit_type": "redirect the deceives edge object from TARGET to THIRD_PARTY",
+      "changed_query_edge": ["AGENT", "deceives", "TARGET"],
+      "gold_scaffold": {
+        "query": {"roles": ["AGENT", "TARGET"], "relations": [["AGENT", "manufactures_threat", "TARGET"], ["AGENT", "deceives", "TARGET"], ["AGENT", "exploits", "TARGET"]]},
+        "cand_correct": {"roles": ["AGENT", "TARGET"], "relations": [["AGENT", "manufactures_threat", "TARGET"], ["AGENT", "deceives", "TARGET"], ["AGENT", "exploits", "TARGET"]]},
+        "cand_counterfactual": {"roles": ["AGENT", "TARGET", "THIRD_PARTY"], "relations": [["AGENT", "manufactures_threat", "TARGET"], ["AGENT", "deceives", "THIRD_PARTY"], ["AGENT", "exploits", "TARGET"]]}
+      }
+    },
+    {
+      "id": 206,
+      "family": "participant_reassignment",
+      "domain_a": "family",
+      "domain_b": "workplace",
+      "query": "To spare her mother worry, she hid the diagnosis and handled it all alone, but the secrecy ended up hurting her mother most.",
+      "cand_correct": "To spare her deputy stress, the director hid the audit and handled it all alone, but the secrecy ended up hurting her deputy most.",
+      "cand_counterfactual": "To spare her deputy stress, the director hid the audit and handled it all alone, but the secrecy ended up hurting the junior staff most.",
+      "predicate_multiset": ["protects_by_withholding", "conceals", "harms_by_helping"],
+      "edit_type": "reassign the harms_by_helping edge object from TARGET to THIRD_PARTY",
+      "changed_query_edge": ["AGENT", "harms_by_helping", "TARGET"],
+      "gold_scaffold": {
+        "query": {"roles": ["AGENT", "TARGET"], "relations": [["AGENT", "protects_by_withholding", "TARGET"], ["AGENT", "conceals", "ACTUALITY"], ["AGENT", "harms_by_helping", "TARGET"]]},
+        "cand_correct": {"roles": ["AGENT", "TARGET"], "relations": [["AGENT", "protects_by_withholding", "TARGET"], ["AGENT", "conceals", "ACTUALITY"], ["AGENT", "harms_by_helping", "TARGET"]]},
+        "cand_counterfactual": {"roles": ["AGENT", "TARGET", "THIRD_PARTY"], "relations": [["AGENT", "protects_by_withholding", "TARGET"], ["AGENT", "conceals", "ACTUALITY"], ["AGENT", "harms_by_helping", "THIRD_PARTY"]]}
+      }
+    }
+  ]
+}

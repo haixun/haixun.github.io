@@ -1,0 +1,6 @@
+# Frozen instrument for the mask-integrity probe (A2 audit).
+model: gpt-4o-mini
+seed: 42
+n_episodes: 180
+mask_prompt_sha256: 61dc1080496b0afe4b2f2b89970cdd132456d8c37b1e220c2080a565feda4d62
+item_ids_sha256: 91365cf9056297779bc1f74d653a6a41616e9898024a5a96692486cb50a24eb3

@@ -1,0 +1,6858 @@
+{
+  "1770180e57678c16": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "manufactures_threat",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "ACTUALITY"
+      ],
+      [
+        "AGENT",
+        "intends",
+        "FEAR"
+      ],
+      [
+        "THIRD_PARTY",
+        "enables",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "harms_by_helping",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "An agent creates a false threat to manipulate a target, leading to unintended harm to a third party."
+  },
+  "9207eba142509c6a": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "manufactures_threat",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "actually_negative",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "appears_positive",
+        "THIRD_PARTY"
+      ],
+      [
+        "TARGET",
+        "reveals_hidden_trait",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An AGENT deceives a TARGET by manufacturing a threat to achieve an intention, while concealing their true negative impact on the TARGET and appearing positive to a THIRD_PARTY."
+  },
+  "484ff015f1b3eeb8": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "reveals_hidden_trait",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An agent intends to help a target by causing a positive outcome that enables a third party, revealing the target's hidden trait."
+  },
+  "aa872d8147715fc0": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "exploits",
+        "AGENT"
+      ],
+      [
+        "THIRD_PARTY",
+        "appears_positive",
+        "AGENT"
+      ],
+      [
+        "THIRD_PARTY",
+        "actually_negative",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An agent shares a strategy with a third party in confidence, who then exploits this information to harm the agent while maintaining a facade of positivity."
+  },
+  "aca16dc891c58dc7": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TO GAIN ADVANTAGE"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "TRUE INTENTIONS"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "exploits",
+        "TARGET'S WORK"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "OWN SUCCESS"
+      ],
+      [
+        "THIRD_PARTY",
+        "harms_by_helping",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An individual manipulates another's efforts for personal gain, leading to an unexpected negative outcome for the original creator."
+  },
+  "f71c5ec51b12d070": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "TARGET",
+        "enables",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "intends",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "actually_positive",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "An agent intends to help a target, which enables the agent to achieve a positive outcome, leading to gratitude from a third party."
+  },
+  "8dcf65efb4f12952": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "sacrifices_for",
+        "TARGET"
+      ],
+      [
+        "THIRD_PARTY",
+        "appears_positive",
+        "TARGET"
+      ],
+      [
+        "THIRD_PARTY",
+        "actually_negative",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An AGENT conceals their true intentions from a THIRD_PARTY while enabling the TARGET to believe they have succeeded fairly."
+  },
+  "a9d21fdfc86b94e7": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "TARGET"
+      ],
+      [
+        "THIRD_PARTY",
+        "reveals_hidden_trait",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "misattributes_credit",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An agent secretly helps a target while concealing their actions, leading to a reversal of the target's understanding of their own achievements, which is later revealed by a third party."
+  },
+  "f4b654387e70444c": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "THIRD_PARTY"
+      ],
+      [
+        "TARGET",
+        "actually_negative",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "appears_positive",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "One entity achieves a goal at the expense of another, leading to disappointment, but subsequently assists a third entity in finding an alternative opportunity."
+  },
+  "b05284f18927b374": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "misattributes_credit",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "appears_positive",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "actually_negative",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An AGENT exploits a TARGET's work while concealing the truth from a THIRD_PARTY, leading to a misattribution of credit."
+  },
+  "3283cedf8e72d690": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "misattributes_credit",
+        "TARGET"
+      ],
+      [
+        "THIRD_PARTY",
+        "appears_positive",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "actually_negative",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An AGENT conceals the true source of an achievement, deceiving a THIRD_PARTY while misattributing credit to themselves, resulting in a negative outcome for the TARGET."
+  },
+  "84464becab7dbcb3": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "causes",
+        "AGENT"
+      ],
+      [
+        "THIRD_PARTY",
+        "appears_positive",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "actually_positive",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "An agent's intention leads to a third party enabling recognition, which positively affects the agent."
+  },
+  "9d12db1078708ce4": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "causes",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "sacrifices_for",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "actually_negative",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "appears_positive",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "An agent conceals their true feelings to protect a third party, leading to a deceptive appearance of satisfaction while actually experiencing negative feelings."
+  },
+  "aa5b116aaa6d3a0d": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "appears_positive",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "ACTUALLY_NEGATIVE"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "misattributes_credit",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An agent intends to create a positive experience for a target, concealing the actual negative outcome, while enabling a third party to misattribute credit."
+  },
+  "ab65520bc857d898": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "appears_positive",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "actually_positive",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An agent expresses a preference that enables a target to fulfill an intention, resulting in a positive outcome for a third party."
+  },
+  "283837270620e954": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "ACTUALLY_NEGATIVE"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "prevents",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "appears_positive",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "actually_negative",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "exploits",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An AGENT feigns support while secretly undermining a TARGET to maintain control and dependency."
+  },
+  "74916acbe170d2d5": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "TARGET"
+      ],
+      [
+        "THIRD_PARTY",
+        "conceals",
+        "TARGET"
+      ],
+      [
+        "THIRD_PARTY",
+        "prevents",
+        "AGENT"
+      ],
+      [
+        "THIRD_PARTY",
+        "deceives",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An AGENT is encouraged by their intentions while a THIRD_PARTY conceals information to prevent the AGENT from achieving their potential."
+  },
+  "c03dbe10745e5c94": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "actually_positive",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "appears_negative",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An agent provides critical feedback that appears negative but ultimately enables a third party's success."
+  },
+  "c2e876772919df4d": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "causes",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "sacrifices_for",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "deceives",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An agent causes harm to a target while concealing the truth from a third party, sacrificing their own well-being to protect the third party, who deceives the agent."
+  },
+  "acc87343d782bcf3": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "TARGET",
+        "causes",
+        "HARM"
+      ],
+      [
+        "AGENT",
+        "sacrifices_for",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "OWN_MISTAKE"
+      ],
+      [
+        "AGENT",
+        "intends",
+        "TO_PROTECT"
+      ]
+    ],
+    "pattern": "An individual conceals their own mistake to protect another from harm, while facing accountability themselves."
+  },
+  "ffff7ea705428e75": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "causes",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "sacrifices_for",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An agent causes harm to a target while concealing the truth from a third party, but later reveals their hidden trait and sacrifices for the target."
+  },
+  "4614184210f6e9a0": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "ACTUALLY_NEGATIVE"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "harms_by_helping",
+        "TARGET"
+      ],
+      [
+        "TARGET",
+        "tests_loyalty",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "appears_positive",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "actually_negative",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An agent's seemingly generous act conceals a manipulative intention that ultimately harms the target."
+  },
+  "f9c7dc96a853e8dc": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "ACTUALLY_NEGATIVE"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "misattributes_credit",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "appears_positive",
+        "THIRD_PARTY"
+      ],
+      [
+        "TARGET",
+        "tests_loyalty",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "actually_negative",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An AGENT helps a TARGET while concealing their negative intentions, leading to a reversal of expectations when the TARGET seeks independence."
+  },
+  "9558bfd4e5de705a": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "CONDITIONS"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "appears_positive",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "actually_positive",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An agent provides a gift to a target without revealing conditions, leading to a positive outcome that reflects well on the agent."
+  },
+  "5d240dba4b8be316": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "exploits",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "An agent strategically feigns inability to manipulate a target, ultimately revealing a hidden trait while exploiting a third party."
+  },
+  "cb6ad5ee0f25c1ee": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "TARGET"
+      ],
+      [
+        "TARGET",
+        "exploits",
+        "AGENT"
+      ],
+      [
+        "TARGET",
+        "actually_negative",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An agent exploits a target's feigned inability, concealing the truth from a third party while revealing the target's hidden trait."
+  },
+  "59e1299787d1b264": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "sacrifices_for",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An agent struggles with a task, leading to a division of responsibilities that allows a third party to focus on their strengths."
+  },
+  "ec4c0c6982c8de6f": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "THIRD_PARTY",
+        "conceals",
+        "AGENT"
+      ],
+      [
+        "THIRD_PARTY",
+        "enables",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "actually_negative",
+        "TARGET"
+      ],
+      [
+        "THIRD_PARTY",
+        "actually_positive",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "reverses_expectation",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An AGENT deceives a TARGET while a THIRD_PARTY enables the TARGET's success despite the AGENT's negative intentions."
+  },
+  "aacea57e37cc60d8": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "THIRD_PARTY",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "THIRD_PARTY",
+        "conceals",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "TARGET"
+      ],
+      [
+        "THIRD_PARTY",
+        "harms_by_helping",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "protects_by_withholding",
+        "TARGET"
+      ]
+    ],
+    "pattern": "A third party intends to help the target while concealing their true actions from the agent, leading to a reversal of expectations regarding loyalty and support."
+  },
+  "b1320e17b5303317": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "TARGET"
+      ],
+      [
+        "THIRD_PARTY",
+        "actually_negative",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "actually_positive",
+        "TARGET"
+      ],
+      [
+        "THIRD_PARTY",
+        "appears_negative",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "An agent's positive intention leads to a beneficial outcome for the target, while a third party's negative stance remains consistent with their appearance."
+  },
+  "82124b0a1f3293f7": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "manufactures_threat",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "misattributes_credit",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "appears_positive",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "actually_negative",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "reveals_hidden_trait",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An AGENT creates a false threat to gain credit and conceal their true intentions, ultimately being revealed by a THIRD_PARTY."
+  },
+  "50616b6a74ca75ad": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "manufactures_threat",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "appears_positive",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "actually_negative",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "prevents",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An AGENT creates a false threat to manipulate a THIRD_PARTY, ultimately revealing their own negative intentions."
+  },
+  "02f8d411c0270e67": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "reveals_hidden_trait",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "appears_positive",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An agent identifies a problem, resolves it, and gains recognition while revealing their capability."
+  },
+  "91894dc52d8b6aed": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "sacrifices_for",
+        "TARGET"
+      ],
+      [
+        "TARGET",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "TARGET",
+        "deceives",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "tests_loyalty",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An agent sacrifices for a target who conceals a third party's existence and deceives the agent, leading to a test of loyalty that reveals a hidden trait."
+  },
+  "bda8f05d2da14273": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "tests_loyalty",
+        "TARGET"
+      ],
+      [
+        "THIRD_PARTY",
+        "actually_positive",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "sacrifices_for",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "An agent deceives a target to test their loyalty, leading to a revelation of hidden traits."
+  },
+  "9e7c50fb031f5814": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "TARGET"
+      ],
+      [
+        "THIRD_PARTY",
+        "causes",
+        "TARGET"
+      ],
+      [
+        "TARGET",
+        "prevents",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "actually_positive",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "sacrifices_for",
+        "TARGET"
+      ],
+      [
+        "TARGET",
+        "reveals_hidden_trait",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An agent intends to help a target by enabling them to prevent a threat, while revealing their hidden traits through the act of sacrifice."
+  },
+  "8af70ff09366d0ac": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "reveals_hidden_trait",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "protects_by_withholding",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "harms_by_helping",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An agent conceals a truth from a target to protect them, but this concealment ultimately causes harm to the target when the truth is revealed by a third party."
+  },
+  "a0733566c6e13d12": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "protects_by_withholding",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "harms_by_helping",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An agent conceals information from a target under the intention of protection, which ultimately causes harm to the target."
+  },
+  "c9bc3f22751e6bdb": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "actually_positive",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "actually_negative",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An agent conceals information from a target, intending to enable a positive revelation at an appropriate time, while a third party's perception of the agent is negatively affected."
+  },
+  "2538fdbb060d79d6": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "HUMILIATION"
+      ],
+      [
+        "HUMILIATION",
+        "enables",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "actually_positive",
+        "NEW_SKILLS"
+      ],
+      [
+        "AGENT",
+        "reverses_expectation",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "actually_positive",
+        "NEW_ROLE"
+      ]
+    ],
+    "pattern": "An agent experiences a setback that leads to personal growth, resulting in an unexpected positive outcome."
+  },
+  "d3cb882594a52f7f": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "actually_positive",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "reverses_expectation",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An agent's initial failure leads to a concealed learning process that enables a subsequent success, reversing expectations."
+  },
+  "42fda8f26fd083d3": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "actually_positive",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An agent's intention leads to a successful outcome for the target, enabling a positive perception from a third party."
+  },
+  "e852da49ff9184ff": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "deceives",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "actually_positive",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "reverses_expectation",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "An initial conflict leads to a revelation that transforms the relationship into a positive bond."
+  },
+  "8dd567eb8bdf406e": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "NEGATIVE_PERCEPTION"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "SHARED_EXPERIENCE"
+      ],
+      [
+        "THIRD_PARTY",
+        "enables",
+        "BONDING"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "reverses_expectation",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An initial negative perception leads to a shared experience that transforms the relationship into a positive bond."
+  },
+  "cda9fba31babaa40": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "actually_positive",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An agent intends to build a relationship with a target, which enables a third party to reveal a hidden trait, leading to a positive outcome for the agent."
+  },
+  "df57673544ecb363": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "harms_by_helping",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "reverses_expectation",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "A skill that initially benefits the AGENT ultimately leads to unintended harm for the THIRD_PARTY."
+  },
+  "251912938637beaf": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "harms_by_helping",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An agent's intention to help a target leads to unintended harm, revealing a hidden trait of the agent."
+  },
+  "8fa027634c85cb93": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "appears_positive",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "actually_positive",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "The AGENT balances their intentions to maintain a positive appearance while concealing aspects of their behavior that could harm their relationships."
+  },
+  "65a01fd45281785b": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "appears_negative",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "sacrifices_for",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "actually_positive",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An entity that appears negative unexpectedly reveals a hidden positive trait through self-sacrifice for another."
+  },
+  "e9e6c0936f3bafc3": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "harms_by_helping",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An underestimated entity takes decisive action against a deceptive authority, leading to an unexpected outcome."
+  },
+  "b0315aec5061e818": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "appears_negative",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "An agent's actions during a crisis reveal their true nature, causing harm to a third party."
+  },
+  "f74b2b215ea2b42b": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "sacrifices_for",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "A reluctant decision to fulfill an obligation leads to unexpected positive outcomes for others."
+  },
+  "4fbcba1672a92c3a": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "causes",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "actually_positive",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "An AGENT's intention leads to an enabling situation for a THIRD_PARTY, resulting in a positive outcome that reveals hidden traits."
+  },
+  "21c590cdbafef348": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "actually_positive",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "actually_positive",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "An agent pursues opportunities with the intention of achieving a positive outcome, which ultimately leads to the realization of a beneficial relationship while concealing the inevitability of such an outcome."
+  },
+  "d1426099b7c40ca1": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "ACTUAL_UNDERSTANDING"
+      ],
+      [
+        "TARGET",
+        "reveals_hidden_trait",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "ACTUAL_LEARNING"
+      ],
+      [
+        "AGENT",
+        "harms_by_helping",
+        "TARGET"
+      ]
+    ],
+    "pattern": "The AGENT intends to assist the TARGET but conceals their actual understanding, leading to a revelation that enables the AGENT's actual learning while inadvertently harming the TARGET's perception."
+  },
+  "2331eed3b4f3e945": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "OWN_INABILITY"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "OWN_LACK_OF_MASTERY"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "SELF_REFLECTION"
+      ]
+    ],
+    "pattern": "An agent intends to help a target but conceals their own limitations, leading to a revelation of hidden traits."
+  },
+  "1036f4a1fd333205": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "reveals_hidden_trait",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An agent intends to help a target, enabling a third party to reveal a hidden trait of the agent."
+  },
+  "d4328a8cfdaf5f17": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "TARGET"
+      ],
+      [
+        "THIRD_PARTY",
+        "reveals_hidden_trait",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "harms_by_helping",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An agent intends to help a target but ultimately enables harmful behavior, while a third party reveals the negative consequences of the agent's actions."
+  },
+  "8340b7330b604b40": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "harms_by_helping",
+        "TARGET"
+      ],
+      [
+        "TARGET",
+        "reveals_hidden_trait",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "An agent intends to help a target but ultimately harms the target by concealing the target's true abilities."
+  },
+  "b25a6b5571537ffa": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "prevents",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "sacrifices_for",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "TARGET"
+      ],
+      [
+        "TARGET",
+        "appears_negative",
+        "AGENT"
+      ],
+      [
+        "TARGET",
+        "actually_positive",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "An agent's refusal to enable a target leads to the target confronting their issues, resulting in a positive outcome for a third party."
+  },
+  "72d5d800bdce2131": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An agent manipulates a situation to create urgency, concealing their true intentions while revealing a hidden trait."
+  },
+  "f7e5149b94abc39c": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "manufactures_threat",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "exploits",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An agent creates an illusion of pressure to manipulate the target into extreme effort while concealing the true nature of the situation from a third party."
+  },
+  "36a51fec868002af": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "An agent intends to prepare a target, causing a third party to succeed through enabled actions."
+  },
+  "e839d30dc000c320": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "deceives",
+        "AGENT"
+      ],
+      [
+        "THIRD_PARTY",
+        "misattributes_credit",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "An agent shares valuable information with a target, enabling a third party to exploit the situation, leading to deception and misattribution of credit, ultimately revealing the third party's hidden trait."
+  },
+  "6429b3d1c25bbc48": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "deceives",
+        "AGENT"
+      ],
+      [
+        "THIRD_PARTY",
+        "exploits",
+        "AGENT"
+      ],
+      [
+        "THIRD_PARTY",
+        "causes",
+        "AGENT"
+      ],
+      [
+        "THIRD_PARTY",
+        "actually_negative",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An agent trusts a third party with sensitive information, who conceals their true intentions and exploits the agent for personal gain."
+  },
+  "5992d5355bb2c51d": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "TARGET",
+        "enables",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "enables",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An agent intends to help a target, which enables the agent to cause a third party to also be helped."
+  },
+  "7cacf2421320dedf": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "sacrifices_for",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "TARGET"
+      ],
+      [
+        "TARGET",
+        "enables",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "misattributes_credit",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An agent sacrifices for a target while concealing the truth from a third party, leading to deception and misattribution of credit."
+  },
+  "f7c49d4ae66cc1b1": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "TARGET"
+      ],
+      [
+        "THIRD_PARTY",
+        "misattributes_credit",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "appears_positive",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "actually_positive",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An agent helps a target while concealing their identity from a third party, leading to misattributed credit and a positive appearance."
+  },
+  "53feebbae708693a": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "TARGET"
+      ],
+      [
+        "TARGET",
+        "causes",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "appears_positive",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "reveals_hidden_trait",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An agent intends to help a target, enabling the target's success, which ultimately reflects positively on the agent while revealing the target's hidden potential."
+  },
+  "8476b0a8fba08126": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "THIRD_PARTY",
+        "conceals",
+        "AGENT"
+      ],
+      [
+        "THIRD_PARTY",
+        "misattributes_credit",
+        "AGENT"
+      ],
+      [
+        "THIRD_PARTY",
+        "appears_positive",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "actually_positive",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An agent's contributions are concealed and misattributed by a third party, who appears positive while the agent remains unrecognized."
+  },
+  "d170ae674a957519": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "TARGET"
+      ],
+      [
+        "THIRD_PARTY",
+        "misattributes_credit",
+        "AGENT"
+      ],
+      [
+        "THIRD_PARTY",
+        "actually_positive",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An agent intends to benefit a target while concealing and deceiving a third party, leading to misattributed credit and an unexpected positive outcome for the agent."
+  },
+  "690833f1ffa1c25e": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "TARGET"
+      ],
+      [
+        "THIRD_PARTY",
+        "misattributes_credit",
+        "AGENT"
+      ],
+      [
+        "THIRD_PARTY",
+        "appears_positive",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An agent intends to create a positive outcome for a target, which leads to a third party misattributing credit to the agent while appearing to support them."
+  },
+  "23411b503830a038": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "sacrifices_for",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "appears_positive",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "harms_by_helping",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "tests_loyalty",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "An AGENT intends to help a TARGET while concealing the negative impact on the TARGET, leading to a deceptive appearance of positivity for a THIRD_PARTY."
+  },
+  "3baa90373adc4c8c": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "sacrifices_for",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "appears_positive",
+        "TARGET"
+      ],
+      [
+        "TARGET",
+        "actually_negative",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "harms_by_helping",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An agent conceals a negative aspect of a target to maintain a positive appearance for a third party, while sacrificing their own preferences."
+  },
+  "f5244c3ea3be00d5": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "causes",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "actually_positive",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An agent's honesty leads to a positive change in their relationship with a third party."
+  },
+  "ef837f88db6037a2": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "prevents",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "appears_positive",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "actually_negative",
+        "TARGET"
+      ],
+      [
+        "THIRD_PARTY",
+        "reveals_hidden_trait",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An agent feigns support while secretly undermining the target, leading to a revelation of the agent's true intentions by a third party."
+  },
+  "cc9a1c4e4cb72ebc": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "ACTUAL INTENTIONS"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "DEPENDENCY"
+      ],
+      [
+        "THIRD_PARTY",
+        "reveals_hidden_trait",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "actually_negative",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An agent feigns positive intentions while concealing harmful actions that exploit a target's dependency, which is later revealed by a third party."
+  },
+  "2c8829d96805acfc": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "appears_negative",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "actually_positive",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "An agent's harsh feedback appears negative but ultimately enables the target's growth and success."
+  },
+  "46de1c3126d9f1e4": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "harms_by_helping",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "causes",
+        "AGENT"
+      ],
+      [
+        "THIRD_PARTY",
+        "appears_negative",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "sacrifices_for",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "An agent conceals their own wrongdoing to protect a target, resulting in harm to the target while appearing negative to a third party."
+  },
+  "4faf1d9ebf45f0b3": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "conceals",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "intends",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "harms_by_helping",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "sacrifices_for",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "appears_negative",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "actually_negative",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "An agent conceals the truth to deceive a third party, resulting in harm to the agent while appearing negative to the third party."
+  },
+  "f02e82e881f3a2e7": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "MANAGER",
+      "TEAM"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "causes",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "appears_positive",
+        "TEAM"
+      ],
+      [
+        "AGENT",
+        "actually_positive",
+        "TEAM"
+      ]
+    ],
+    "pattern": "An agent causes a negative outcome, is confronted, reveals a hidden trait of responsibility, and subsequently improves their standing with a group."
+  },
+  "f93d5e78f6fce4aa": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "appears_positive",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "actually_negative",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "tests_loyalty",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "harms_by_helping",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An AGENT initially supports a TARGET but later reveals negative intentions, leading to harm for the TARGET while manipulating perceptions of loyalty."
+  },
+  "e9a6606d02d97eca": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "manufactures_threat",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "exploits",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "actually_negative",
+        "THIRD_PARTY"
+      ],
+      [
+        "TARGET",
+        "prevents",
+        "DISASTER"
+      ]
+    ],
+    "pattern": "An agent intends to manipulate a target by concealing their true motivations and manufacturing a threat, ultimately exploiting the target to achieve their own ends."
+  },
+  "4b69cbe151fab62b": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "TARGET"
+      ],
+      [
+        "TARGET",
+        "causes",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "appears_positive",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "actually_negative",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "reverses_expectation",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "An agent intends to support a target, which ultimately causes a negative outcome for the agent, while the agent appears positive to a third party despite the negative reality."
+  },
+  "6a7df4b550aa9aeb": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "actually_negative",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "appears_positive",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "misattributes_credit",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An agent's deceptive behavior leads to a third party misattributing credit while concealing the agent's true intentions."
+  },
+  "c08a95bc85633ccf": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "reveals_hidden_trait",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "harms_by_helping",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An agent feigns inability to exploit a target while concealing their true capabilities, ultimately harming the target by helping them."
+  },
+  "fef2bfaf2f7beec9": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "TARGET",
+        "causes",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "TARGET"
+      ],
+      [
+        "TARGET",
+        "actually_positive",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "An agent intends to help a target, which causes a positive outcome for a third party."
+  },
+  "43a549bdeb67da28": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "reveals_hidden_trait",
+        "AGENT"
+      ],
+      [
+        "THIRD_PARTY",
+        "actually_positive",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "harms_by_helping",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An AGENT intends to support a TARGET while concealing a deceptive relationship with a THIRD_PARTY, who ultimately reveals a hidden trait that benefits the AGENT at the expense of the TARGET."
+  },
+  "4ce702c7783c171f": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "THIRD_PARTY",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "TARGET"
+      ],
+      [
+        "THIRD_PARTY",
+        "conceals",
+        "AGENT"
+      ],
+      [
+        "THIRD_PARTY",
+        "actually_negative",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "actually_positive",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "TARGET"
+      ],
+      [
+        "THIRD_PARTY",
+        "misattributes_credit",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An agent's positive outcome is enabled by a third party's negative assessment, revealing hidden traits while concealing the agent's true value."
+  },
+  "c5e532895a3c3a01": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "harms_by_helping",
+        "AGENT"
+      ],
+      [
+        "THIRD_PARTY",
+        "appears_positive",
+        "AGENT"
+      ],
+      [
+        "THIRD_PARTY",
+        "actually_negative",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "An AGENT seeks support while a THIRD_PARTY appears to help but ultimately harms the AGENT."
+  },
+  "b6fdb539663a6ddd": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "manufactures_threat",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "appears_positive",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "actually_negative",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An agent fabricates a threat to manipulate a target, concealing their true intentions while appearing to be a hero to a third party."
+  },
+  "9adf1759f526e873": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "TARGET"
+      ],
+      [
+        "THIRD_PARTY",
+        "conceals",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "appears_positive",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "actually_negative",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "manufactures_threat",
+        "TARGET"
+      ],
+      [
+        "THIRD_PARTY",
+        "reveals_hidden_trait",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An agent creates a threat to appear heroic while concealing their true intentions from a third party."
+  },
+  "8590eea66a2031eb": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "prevents",
+        "TARGET"
+      ],
+      [
+        "THIRD_PARTY",
+        "reveals_hidden_trait",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An agent intends to protect a target by preventing a threat, which is confirmed by a third party revealing the agent's true intentions."
+  },
+  "57c43f2dfa0ac28a": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "manufactures_threat",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "tests_loyalty",
+        "TARGET"
+      ],
+      [
+        "TARGET",
+        "sacrifices_for",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "appears_positive",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "actually_negative",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An AGENT deceives a TARGET by manufacturing a threat to test loyalty, leading to a sacrifice that is misattributed as proof of devotion."
+  },
+  "86dfaae302d6a739": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "sacrifices_for",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "TARGET",
+        "deceives",
+        "AGENT"
+      ],
+      [
+        "THIRD_PARTY",
+        "reveals_hidden_trait",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "tests_loyalty",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An agent sacrifices for a target while being deceived about a third party's true situation, leading to a revelation of hidden traits."
+  },
+  "8c330cca314e1c81": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "THIRD_PARTY",
+        "intends",
+        "AGENT"
+      ],
+      [
+        "THIRD_PARTY",
+        "causes",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "sacrifices_for",
+        "TARGET"
+      ],
+      [
+        "TARGET",
+        "actually_positive",
+        "AGENT"
+      ],
+      [
+        "TARGET",
+        "reveals_hidden_trait",
+        "AGENT"
+      ]
+    ],
+    "pattern": "A third party intends to help an agent, causing a target to face a crisis, while the agent sacrifices for the target, leading to a positive outcome for the agent and revealing the agent's loyalty."
+  },
+  "1b9944d1eb8e46a2": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "conceals",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "intends",
+        "PROTECTS_BY_WITHHOLDING"
+      ],
+      [
+        "AGENT",
+        "harms_by_helping",
+        "TARGET"
+      ],
+      [
+        "THIRD_PARTY",
+        "enables",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "actually_negative",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An agent conceals critical information from a target to maintain a facade of calm, ultimately harming the target while appearing to act in their best interest."
+  },
+  "c4290fbaef168c36": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "conceals",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "protects_by_withholding",
+        "TARGET"
+      ],
+      [
+        "TARGET",
+        "causes",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "harms_by_helping",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An agent conceals a threat from a target, intending to protect them, but this protection ultimately leads to harm for a third party."
+  },
+  "28c4e2f676fc4d06": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "enables",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "TARGET"
+      ],
+      [
+        "TARGET",
+        "appears_negative",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "actually_positive",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An agent intends to help a target by causing a third party to enable the target, while concealing the target's negative appearance that is actually positive."
+  },
+  "339126e8ffcc06e9": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "enables",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "reverses_expectation",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An initial setback leads to unexpected growth and a clearer purpose."
+  },
+  "ac51fcd26ceaae94": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "enables",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "appears_negative",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "actually_positive",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "reverses_expectation",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An agent's failure leads to unexpected success through the intervention of a third party."
+  },
+  "1d5e779214a0b503": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "actually_positive",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An AGENT's intentions and efforts lead to a positive outcome for the TARGET, which also benefits a THIRD_PARTY."
+  },
+  "c89be1234aa67e05": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "NEGATIVE_TRAIT"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "COLLABORATION"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "TARGET"
+      ],
+      [
+        "TARGET",
+        "actually_positive",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "reverses_expectation",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An initial negative perception leads to unexpected collaboration, revealing hidden traits and transforming the relationship."
+  },
+  "4e7333e3e41fc2d3": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "enables",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "TARGET"
+      ],
+      [
+        "TARGET",
+        "reveals_hidden_trait",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "actually_positive",
+        "TARGET"
+      ]
+    ],
+    "pattern": "Conflict leads to unexpected collaboration, revealing shared traits and fostering a positive relationship."
+  },
+  "6e81356f32b3bc95": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "actually_negative",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "harms_by_helping",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An AGENT's negative intentions towards a TARGET are concealed from a THIRD_PARTY while enabling a superficial collaboration that ultimately harms the TARGET."
+  },
+  "f86e6e970b4d0276": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "actually_negative",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "harms_by_helping",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "appears_positive",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "sacrifices_for",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "The agent's intention to achieve success leads to unintended harm to third parties, revealing a hidden negative trait."
+  },
+  "3e4a65645ba365f6": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "actually_negative",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "sacrifices_for",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "harms_by_helping",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An entity's intended advantage leads to unforeseen negative consequences that reveal deeper issues."
+  },
+  "894834f2d9cc4e79": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "sacrifices_for",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "An agent conceals their true intentions to enable a third party's preference while sacrificing their own desires."
+  },
+  "703d8536c29ecfd0": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "appears_positive",
+        "AGENT"
+      ],
+      [
+        "THIRD_PARTY",
+        "actually_negative",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "reverses_expectation",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "An entity with a negative perception unexpectedly reveals a hidden supportive trait, altering the perception of their role."
+  },
+  "0ba08caa643c4a9f": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "ACTUALLY_POSITIVE"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "appears_negative",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "reverses_expectation",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An individual who appears negative conceals a positive trait and unexpectedly enables a life-saving action."
+  },
+  "7e8718e8925620c5": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "actually_negative",
+        "AGENT"
+      ],
+      [
+        "THIRD_PARTY",
+        "harms_by_helping",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An AGENT's negative intentions towards a TARGET are revealed through their actions, which ultimately harm the TARGET while concealing their true nature from a THIRD_PARTY."
+  },
+  "2b09904923f0af50": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "THIRD_PARTY",
+        "reveals_hidden_trait",
+        "AGENT"
+      ],
+      [
+        "THIRD_PARTY",
+        "enables",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An agent's reflexive action is observed by a third party, leading to the revelation of a hidden trait that enables future support."
+  },
+  "9776b593cf171620": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "DETOUR"
+      ],
+      [
+        "DETOUR",
+        "causes",
+        "ENCOUNTER"
+      ],
+      [
+        "ENCOUNTER",
+        "enables",
+        "DISCOVERY"
+      ],
+      [
+        "DISCOVERY",
+        "actually_positive",
+        "AGENT"
+      ],
+      [
+        "DETOUR",
+        "reveals_hidden_trait",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An unintended action leads to a beneficial outcome that reveals the true potential of the initiator."
+  },
+  "7d8881c0ceb33f83": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "actually_positive",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "sacrifices_for",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "An agent expresses genuine appreciation towards a target, which is observed by a third party, revealing the agent's positive trait without leading to any ulterior benefit."
+  },
+  "d092d0d5e8727934": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "BLIND_SPOTS"
+      ],
+      [
+        "THIRD_PARTY",
+        "reveals_hidden_trait",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "actually_negative",
+        "CONFIDENCE"
+      ],
+      [
+        "AGENT",
+        "actually_positive",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "An agent's confidence is undermined by a third party's inquiry, revealing the agent's hidden limitations."
+  },
+  "3a33a2c2a664f066": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An agent's intention to help a target leads to a revelation of the agent's own understanding."
+  },
+  "b8159f1d7fc101c2": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "tests_loyalty",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "actually_positive",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An agent demonstrates expertise to a third party, who tests the agent's knowledge, reinforcing the agent's self-perception of competence."
+  },
+  "9fb35a39509df2f0": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "HARM"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "harms_by_helping",
+        "TARGET"
+      ],
+      [
+        "THIRD_PARTY",
+        "reveals_hidden_trait",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An agent intends to help a target but ultimately causes harm by enabling negative behavior and concealing the consequences."
+  },
+  "59341f537dc400c2": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "harms_by_helping",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "An agent prioritizes the dignity of a target, leading to unintended harm and the revelation of hidden traits to a third party."
+  },
+  "7375ef5d941d0aba": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "prevents",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "sacrifices_for",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "actually_positive",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An agent sets boundaries with a target, prevents harmful behavior, enables a third party's support, sacrifices personal comfort for the target's benefit, and ultimately leads to a positive outcome."
+  },
+  "969aa2f1a6aa4ab6": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "manufactures_threat",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An agent deceives a target by manufacturing a threat, which causes a third party to experience a revelation about the agent's true nature."
+  },
+  "dd8ce7a495338018": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "TARGET"
+      ],
+      [
+        "THIRD_PARTY",
+        "reveals_hidden_trait",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "actually_negative",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An agent creates a false perception to influence the behavior of a target, while a third party reveals the truth about the agent's intentions."
+  },
+  "673c90dec74bc19b": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "appears_positive",
+        "AGENT"
+      ],
+      [
+        "THIRD_PARTY",
+        "actually_positive",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An agent intends to create a positive outcome for a target by concealing the truth from a third party, leading to a deceptive appearance of success."
+  },
+  "e10a549bb4d0b62c": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "exploits",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "misattributes_credit",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "harms_by_helping",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An agent exploits a target while deceiving a third party and misattributing credit, ultimately harming the target under the guise of positive intent."
+  },
+  "c5bcbeb7acb33810": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "exploits",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "misattributes_credit",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "actually_negative",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An AGENT intends to help a TARGET but ultimately conceals their true intentions, deceives the TARGET, and exploits the situation, leading to a misattribution of credit that reveals the AGENT's actually negative traits."
+  },
+  "bd997f7f4119a1d1": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "tests_loyalty",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "actually_positive",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An AGENT places trust in a THIRD_PARTY, who respects that trust, leading to a positive outcome for the AGENT."
+  },
+  "6facdf4c953ca326": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "sacrifices_for",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "misattributes_credit",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "actually_negative",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "appears_positive",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "An agent conceals their true sacrifices while deceiving a target, leading to a third party misattributing credit and perceiving the agent positively despite the agent's actual negative experience."
+  },
+  "b05f497a36c36cd5": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "sacrifices_for",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "misattributes_credit",
+        "AGENT"
+      ],
+      [
+        "THIRD_PARTY",
+        "appears_positive",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An entity sacrifices for another while concealing their identity, leading a third party to misattribute credit and perceive the situation positively."
+  },
+  "7053dc62f08ee898": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "THIRD_PARTY",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "THIRD_PARTY",
+        "enables",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "intends",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "actually_positive",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "A third party intends to support a target, enabling the agent to reveal a hidden trait, while the agent intends to express gratitude towards the third party."
+  },
+  "3196009299237d6c": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "TARGET"
+      ],
+      [
+        "THIRD_PARTY",
+        "conceals",
+        "AGENT"
+      ],
+      [
+        "THIRD_PARTY",
+        "deceives",
+        "TARGET"
+      ],
+      [
+        "THIRD_PARTY",
+        "appears_positive",
+        "TARGET"
+      ],
+      [
+        "THIRD_PARTY",
+        "misattributes_credit",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An AGENT's contributions are concealed and misattributed by a THIRD_PARTY, leading to a deceptive appearance of credit and recognition."
+  },
+  "52ff50d83d56384f": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "misattributes_credit",
+        "AGENT"
+      ],
+      [
+        "THIRD_PARTY",
+        "appears_positive",
+        "TARGET"
+      ],
+      [
+        "TARGET",
+        "actually_negative",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An agent enables a target while concealing and deceiving a third party, leading to misattributed credit and a positive appearance for the target, despite the agent's negative reality."
+  },
+  "5dee358323a45f18": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "POSITIVE_OUTCOME"
+      ],
+      [
+        "THIRD_PARTY",
+        "misattributes_credit",
+        "AGENT"
+      ],
+      [
+        "THIRD_PARTY",
+        "appears_positive",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An agent intends to create a positive outcome, which is misattributed by a third party, leading to an appearance of positivity for the agent."
+  },
+  "dd79b9c4e29844be": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "sacrifices_for",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "appears_positive",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "actually_negative",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An agent intends to create joy for a target while concealing the negative impact on themselves."
+  },
+  "631b9f44aeb8e7cb": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "sacrifices_for",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "enables",
+        "AGENT"
+      ],
+      [
+        "THIRD_PARTY",
+        "appears_positive",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "actually_negative",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An agent conceals their true feelings to maintain intimacy with a third party, leading to a deceptive appearance of shared interests."
+  },
+  "4ce56fe3aba283bd": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "PREFERENCE"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "TARGET"
+      ],
+      [
+        "TARGET",
+        "actually_positive",
+        "EXPERIENCE"
+      ]
+    ],
+    "pattern": "An agent intends to create a positive experience for a target while concealing the target's true preference, leading to a revelation that enables a more enjoyable outcome."
+  },
+  "632e4891a5575d5c": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "ACTUALLY_NEGATIVE"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "harms_by_helping",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "appears_positive",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "actually_negative",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An agent manipulates perceptions to maintain control over a target while concealing negative traits."
+  },
+  "38d65222e23e2bd2": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "prevents",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "exploits",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "appears_positive",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "actually_negative",
+        "TARGET"
+      ],
+      [
+        "THIRD_PARTY",
+        "reveals_hidden_trait",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An AGENT appears to support a TARGET while concealing harmful intentions that exploit a THIRD_PARTY."
+  },
+  "45e5f14652ad4424": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "appears_negative",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "actually_positive",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An agent's negative assessment of a target's abilities ultimately enables the target's growth and advancement."
+  },
+  "7f233fb95a8337db": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "RESPONSIBILITY"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "appears_negative",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "actually_negative",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "An agent intends to enable a target while concealing their responsibility, leading to a third party's negative perception of the agent."
+  },
+  "fbe813cc401e7509": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "causes",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "sacrifices_for",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "protects_by_withholding",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "An agent conceals the truth of a situation to protect a third party from the consequences of their actions."
+  },
+  "14466c0e6492bf66": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "causes",
+        "TARGET"
+      ],
+      [
+        "THIRD_PARTY",
+        "intends",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "AGENT"
+      ],
+      [
+        "THIRD_PARTY",
+        "appears_positive",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An agent causes a situation that reveals a hidden trait, while a third party intends to guide the agent and appears positive towards them."
+  },
+  "60466ec7b1219255": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "harms_by_helping",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "appears_positive",
+        "AGENT"
+      ],
+      [
+        "THIRD_PARTY",
+        "actually_negative",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An agent's seemingly generous act conceals their true intentions, leading to harm for the target while maintaining a positive appearance to a third party."
+  },
+  "84d47779930cd759": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "ACTUAL_TERMS"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "exploits",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "appears_positive",
+        "ACTUAL_TERMS"
+      ],
+      [
+        "AGENT",
+        "actually_negative",
+        "ACTUAL_TERMS"
+      ],
+      [
+        "AGENT",
+        "reverses_expectation",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An AGENT manipulates a TARGET by concealing true intentions and exploiting perceived opportunities, leading to a reversal of expectations."
+  },
+  "9e904325aa08196b": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "THIRD_PARTY",
+        "intends",
+        "AGENT"
+      ],
+      [
+        "THIRD_PARTY",
+        "enables",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "appears_positive",
+        "AGENT"
+      ],
+      [
+        "THIRD_PARTY",
+        "actually_negative",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "A benefactor intends to support an agent while concealing their true expectations, leading to a deceptive appearance of freedom that ultimately reveals hidden traits of the benefactor."
+  },
+  "62384b193064060c": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "appears_negative",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "actually_positive",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "reverses_expectation",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "An individual feigns inability to engage in a task, leading others to misattribute credit and perceive them negatively, while concealing their true competence."
+  },
+  "0bd90f49bf6a34ee": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "TARGET",
+        "deceives",
+        "AGENT"
+      ],
+      [
+        "THIRD_PARTY",
+        "reveals_hidden_trait",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "harms_by_helping",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "An agent intends to assist a target while the target deceives the agent, concealing their true capabilities, which are later revealed by a third party, ultimately harming the third party through the agent's misguided help."
+  },
+  "7452f9dd6cbed429": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "HARM"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "INABILITY"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "CLEANUP"
+      ],
+      [
+        "AGENT",
+        "appears_positive",
+        "CONTRIBUTION"
+      ],
+      [
+        "AGENT",
+        "actually_negative",
+        "COOKING_SKILL"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "LACK_OF_SKILL"
+      ]
+    ],
+    "pattern": "An agent intends to help but conceals their inability, leading to harm while enabling a different positive contribution."
+  },
+  "b11b16ea88b228fe": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "THIRD_PARTY",
+        "conceals",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "actually_positive",
+        "TARGET"
+      ],
+      [
+        "THIRD_PARTY",
+        "actually_negative",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "reverses_expectation",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "An entity misattributes credit to another while concealing the negative intentions of a third party, leading to a reversal of expectations."
+  },
+  "2446bc601af2ff1c": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "deceives",
+        "AGENT"
+      ],
+      [
+        "THIRD_PARTY",
+        "enables",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "An entity with harmful intentions conceals its true motives while another entity unexpectedly provides assistance, revealing the hidden treachery of a trusted ally."
+  },
+  "6d2eb0eda4436ed8": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "THIRD_PARTY",
+        "reveals_hidden_trait",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "actually_positive",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "One party intends to gain advantage while another party supports and reveals the positive traits of the first party."
+  },
+  "1aee2efaaf132c03": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "manufactures_threat",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "appears_positive",
+        "AGENT"
+      ],
+      [
+        "THIRD_PARTY",
+        "actually_negative",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An individual creates a false need for their own importance while misleading others about their contributions."
+  },
+  "5d505e5ae6cd7b9e": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "manufactures_threat",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "appears_positive",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "actually_negative",
+        "TARGET"
+      ],
+      [
+        "THIRD_PARTY",
+        "misattributes_credit",
+        "AGENT"
+      ],
+      [
+        "THIRD_PARTY",
+        "enables",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An agent creates a false narrative to gain positive recognition while concealing their true negative actions."
+  },
+  "8238e20e68f2840b": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "actually_positive",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An entity acts with the intention to correct errors, which leads to the prevention of negative outcomes for another entity, ultimately revealing the positive impact of the first entity's actions."
+  },
+  "754447be1fde5ac7": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "sacrifices_for",
+        "TARGET"
+      ],
+      [
+        "TARGET",
+        "deceives",
+        "AGENT"
+      ],
+      [
+        "TARGET",
+        "tests_loyalty",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "TARGET"
+      ],
+      [
+        "TARGET",
+        "actually_positive",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An agent sacrifices for a target who deceives the agent to test loyalty, leading to the revelation of a hidden trait in the target."
+  },
+  "e897ce07e63ca421": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "tests_loyalty",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "sacrifices_for",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "appears_positive",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "actually_negative",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "An AGENT deceives a TARGET to test their loyalty, while concealing the truth from a THIRD_PARTY, leading to a sacrifice that appears positive but is actually negative."
+  },
+  "3fd5ef5b4061f69f": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "actually_positive",
+        "AGENT"
+      ],
+      [
+        "TARGET",
+        "actually_positive",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An agent intends to help a target in need, enabling the target to overcome a genuine crisis, while revealing the agent's positive traits to a third party."
+  },
+  "f4e359c778babb91": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "THIRD_PARTY",
+        "conceals",
+        "TARGET"
+      ],
+      [
+        "THIRD_PARTY",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "harms_by_helping",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "sacrifices_for",
+        "AGENT"
+      ]
+    ],
+    "pattern": "A third party conceals a harmful truth from an agent to protect their enjoyment, leading to a devastating revelation that harms both the agent and a third party."
+  },
+  "c88f465de8cdfb02": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "conceals",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "intends",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "harms_by_helping",
+        "TARGET"
+      ],
+      [
+        "THIRD_PARTY",
+        "causes",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An agent conceals a harmful truth from a target while intending to protect a third party, ultimately causing harm to the target."
+  },
+  "18f125fc65c58223": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "THIRD_PARTY",
+        "intends",
+        "AGENT"
+      ],
+      [
+        "THIRD_PARTY",
+        "causes",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "sacrifices_for",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "protects_by_withholding",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "A third party intends to reveal a hidden trait of the target, causing the agent to sacrifice their plans, ultimately protecting the third party."
+  },
+  "e77de84558d1f0b5": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "SELF_REFLECTION"
+      ],
+      [
+        "SELF_REFLECTION",
+        "enables",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "CAREER"
+      ],
+      [
+        "TARGET",
+        "actually_negative",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "actually_positive",
+        "CAREER"
+      ]
+    ],
+    "pattern": "The AGENT's intention leads to a negative outcome for the TARGET, which enables self-reflection that reveals a hidden trait, ultimately resulting in a positive transformation for the AGENT."
+  },
+  "2a2df22a4adbf8b5": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "THIRD_PARTY"
+      ],
+      [
+        "TARGET",
+        "appears_negative",
+        "AGENT"
+      ],
+      [
+        "TARGET",
+        "actually_positive",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "reverses_expectation",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An AGENT's initial failure conceals a hidden potential that ultimately enables a beneficial transformation for a THIRD_PARTY."
+  },
+  "c9779f97cf92b057": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "actually_positive",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An agent intends to achieve a goal, causes the desired outcome, and enables the target to reach a positive state."
+  },
+  "0c0ac77b3be71fe0": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "VULNERABILITY"
+      ],
+      [
+        "TARGET",
+        "conceals",
+        "VULNERABILITY"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "actually_positive",
+        "TARGET"
+      ],
+      [
+        "TARGET",
+        "actually_positive",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "reverses_expectation",
+        "TARGET"
+      ]
+    ],
+    "pattern": "Two individuals initially at odds discover shared experiences that transform their relationship."
+  },
+  "ae7adab2f0f3d454": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "TARGET",
+        "causes",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "TARGET"
+      ],
+      [
+        "TARGET",
+        "enables",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "actually_positive",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An initial adversarial relationship transforms into collaboration through mutual understanding, revealing hidden traits that lead to positive outcomes."
+  },
+  "76d3dcab612f7ced": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "actually_positive",
+        "TARGET"
+      ],
+      [
+        "TARGET",
+        "appears_positive",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "protects_by_withholding",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "A positive relationship develops through mutual intentions and support, leading to a beneficial outcome for both parties."
+  },
+  "89bfab85b8473244": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "FORGIVENESS"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "TARGET"
+      ],
+      [
+        "THIRD_PARTY",
+        "appears_positive",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "BOUNDARIES"
+      ],
+      [
+        "AGENT",
+        "actually_negative",
+        "FORGIVENESS"
+      ],
+      [
+        "AGENT",
+        "harms_by_helping",
+        "SELF"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "LACK_OF_SELF_PROTECTION"
+      ]
+    ],
+    "pattern": "An entity intends to support another, enabling harmful behavior while concealing the negative consequences of their actions, leading to self-harm and the revelation of a hidden trait."
+  },
+  "535e17e57064c2f9": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "CAREER"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "DESTRUCTION_OF_RELATIONSHIPS"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "HARM_TO_PERSONAL_LIFE"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "CURIOSITY"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "NEED_TO_KNOW"
+      ],
+      [
+        "AGENT",
+        "harms_by_helping",
+        "RELATIONSHIPS"
+      ]
+    ],
+    "pattern": "An agent's intention to pursue knowledge leads to the destruction of personal connections, revealing a hidden trait that ultimately harms their relationships."
+  },
+  "22ddff3cb0caf556": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "FORGIVENESS"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "REMORSE"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "SELF-PROTECTION"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "BALANCE"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "STRENGTH"
+      ],
+      [
+        "AGENT",
+        "tests_loyalty",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "protects_by_withholding",
+        "FORGIVENESS"
+      ],
+      [
+        "AGENT",
+        "harms_by_helping",
+        "TARGET"
+      ]
+    ],
+    "pattern": "The agent navigates the complexities of forgiveness and self-protection, revealing strength while balancing grace and boundaries."
+  },
+  "0eadc2f356e158a9": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "appears_negative",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "actually_positive",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "intends",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "sacrifices_for",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An entity that appears negative unexpectedly reveals a positive trait while helping another entity in distress."
+  },
+  "c08065e03fe3edf6": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "conceals",
+        "ACTUALLY_NEGATIVE"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "THIRD_PARTY",
+        "reveals_hidden_trait",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "appears_negative",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "actually_positive",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An entity initially perceived as ineffective reveals hidden capabilities in a crisis, ultimately benefiting another entity."
+  },
+  "0515649bf87ed0a5": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "actually_negative",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "harms_by_helping",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An individual appears negative while concealing their true character, ultimately revealing their hidden traits that harm another."
+  },
+  "92c5d319fbda8e16": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "reverses_expectation",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An unexpected action by the AGENT leads to significant positive outcomes for the THIRD_PARTY, altering the AGENT's initial intention."
+  },
+  "de4d7a510fa7762d": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "TARGET",
+        "enables",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "An agent's intention leads to an enabling situation for a third party, resulting in an unexpected positive outcome for the agent."
+  },
+  "6c83738145cdfcc8": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "An agent's deliberate efforts lead to a beneficial outcome for a target, facilitated by a third party."
+  },
+  "d0cdf0718f2264a7": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "UNDERSTANDING"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "SELF-STUDY"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "LACK_OF_MASTERY"
+      ],
+      [
+        "TARGET",
+        "causes",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An agent's intention to help a target leads to the revelation of the agent's hidden lack of understanding, enabling self-discovery."
+  },
+  "a4a1a97613832c1a": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "UNDERSTANDING"
+      ],
+      [
+        "TARGET",
+        "reveals_hidden_trait",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An agent intends to help a target but conceals their own lack of understanding, leading to the target revealing the agent's hidden trait of driving by feel."
+  },
+  "8deb892b0098d48c": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An agent intends to teach a target, enabling the target's understanding while revealing the agent's own depth of knowledge."
+  },
+  "fa4d423535342692": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "prevents",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "TARGET"
+      ],
+      [
+        "THIRD_PARTY",
+        "reveals_hidden_trait",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "harms_by_helping",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An AGENT intends to help a TARGET but ultimately prevents the TARGET from developing necessary skills, leading to harm despite the AGENT's positive intentions."
+  },
+  "a12028f9b57a6def": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "protects_by_withholding",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "harms_by_helping",
+        "TARGET"
+      ],
+      [
+        "TARGET",
+        "reveals_hidden_trait",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "An agent intends to support a target but conceals the target's vulnerabilities, ultimately harming the target's ability to cope with challenges."
+  },
+  "85a6144fe4d2b04c": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "intends",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "prevents",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "TARGET"
+      ],
+      [
+        "TARGET",
+        "appears_negative",
+        "AGENT"
+      ],
+      [
+        "TARGET",
+        "actually_positive",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "reveals_hidden_trait",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An agent withholds support from a target, leading to the target's growth despite initial negative reactions."
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "annotator1": {
+    "completed_items": 60,
+    "scored_items": 57,
+    "q2_accuracy": 0.9824561403508771,
+    "q2_accuracy_tie_as_fail": 0.9824561403508771,
+    "q2_accuracy_tie_excluded": 1.0,
+    "q2_accuracy_tie_half_credit": 0.9912280701754386,
+    "n_ties": 1,
+    "tie_items": [
+      15
+    ],
+    "version_mismatch_items": [
+      29,
+      30,
+      41
+    ],
+    "missing_confidence_cells": [
+      [
+        48,
+        "a"
+      ]
+    ]
+  },
+  "annotator2": {
+    "completed_items": 28,
+    "scored_items": 28,
+    "q2_accuracy": 1.0,
+    "q2_accuracy_tie_as_fail": 1.0,
+    "q2_accuracy_tie_excluded": 1.0,
+    "q2_accuracy_tie_half_credit": 1.0,
+    "n_ties": 0,
+    "tie_items": [],
+    "version_mismatch_items": [],
+    "missing_confidence_cells": []
+  },
+  "agreement": {
+    "n_raters": 2,
+    "overlap_items": 28,
+    "raw_agreement": 0.9642857142857143,
+    "cohen_kappa": 1.0,
+    "kappa_n_nontie": 27,
+    "note": "2 raters only; paper's preregistered plan targets >=3 raters + Fleiss kappa."
+  },
+  "gap_recovery": {
+    "human_reference": 0.9824561403508771,
+    "human_reference_sheet": "annotator1",
+    "text_floor_dense": 0.1,
+    "methods": {
+      "llm_pairwise": {
+        "accuracy": 1.0,
+        "gap_recovery": 1.0198807157057654
+      },
+      "llm_extract_match": {
+        "accuracy": 0.9166666666666666,
+        "gap_recovery": 0.9254473161033797
+      },
+      "llm_extract_overlap": {
+        "accuracy": 0.7666666666666667,
+        "gap_recovery": 0.7554671968190856
+      }
+    }
+  }
+}

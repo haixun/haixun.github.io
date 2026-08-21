@@ -1,0 +1,529 @@
+{
+  "43d20928d779b4a1": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "ACTUALITY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "deceives",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "exploits",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "ACTUALITY"
+      ],
+      [
+        "ACTUALITY",
+        "actually_negative",
+        "TARGET"
+      ]
+    ],
+    "pattern": "The AGENT deceives and exploits the TARGET by concealing an ACTUALITY that is actually negative for the TARGET."
+  },
+  "4a28461a2d7e9e82": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "ACTUALITY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "deceives",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "exploits",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "ACTUALITY"
+      ],
+      [
+        "ACTUALITY",
+        "actually_negative",
+        "TARGET"
+      ]
+    ],
+    "pattern": "The AGENT deceives and exploits the TARGET by concealing the ACTUALITY, which is actually negative for the TARGET."
+  },
+  "501cbdb7e494d4a4": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "ACTUALITY"
+    ],
+    "relations": [
+      [
+        "TARGET",
+        "deceives",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "exploits",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "ACTUALITY"
+      ],
+      [
+        "ACTUALITY",
+        "actually_negative",
+        "TARGET"
+      ]
+    ],
+    "pattern": "The AGENT is deceived by the TARGET but exploits the TARGET by concealing an ACTUALITY that is actually negative for the TARGET."
+  },
+  "92b6ea6bdb170e1b": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "ACTUALITY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "deceives",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "exploits",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "ACTUALITY"
+      ],
+      [
+        "ACTUALITY",
+        "actually_negative",
+        "TARGET"
+      ]
+    ],
+    "pattern": "The AGENT deceives and exploits the TARGET by concealing an ACTUALITY that is actually negative for the TARGET."
+  },
+  "a051c2fa46d16c82": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "ACTUALITY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "deceives",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "exploits",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "ACTUALITY"
+      ],
+      [
+        "ACTUALITY",
+        "actually_negative",
+        "TARGET"
+      ]
+    ],
+    "pattern": "The AGENT deceives and exploits the TARGET by concealing the ACTUALITY, which is actually negative for the TARGET."
+  },
+  "ade8ae2194f9b8c1": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "ACTUALITY"
+    ],
+    "relations": [
+      [
+        "TARGET",
+        "deceives",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "ACTUALITY"
+      ],
+      [
+        "AGENT",
+        "exploits",
+        "TARGET"
+      ],
+      [
+        "ACTUALITY",
+        "actually_negative",
+        "TARGET"
+      ]
+    ],
+    "pattern": "The AGENT is deceived by the TARGET but uses this deception to conceal an ACTUALITY, exploiting the TARGET despite knowing the ACTUALITY will harm the TARGET."
+  },
+  "3e4964b792a800f1": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY",
+      "ACTUALITY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "causes",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "ACTUALITY"
+      ]
+    ],
+    "pattern": "An AGENT causes harm to a TARGET while enabling a THIRD_PARTY and conceals the ACTUALITY of its actions."
+  },
+  "b7631a53b1771e7f": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY",
+      "ACTUALITY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "causes",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "protects_by_withholding",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "ACTUALITY"
+      ]
+    ],
+    "pattern": "The AGENT causes harm to the TARGET while protecting the THIRD_PARTY and concealing the ACTUALITY."
+  },
+  "aa21447766107e12": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY",
+      "ACTUALITY"
+    ],
+    "relations": [
+      [
+        "TARGET",
+        "causes",
+        "ACTUALITY"
+      ],
+      [
+        "ACTUALITY",
+        "protects_by_withholding",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "appears_negative",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "ACTUALITY"
+      ]
+    ],
+    "pattern": "A concealed intention causes an outcome that protects a third party while appearing negative to the agent."
+  },
+  "c4e1a07f00d56f20": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "ACTUALITY"
+    ],
+    "relations": [
+      [
+        "TARGET",
+        "causes",
+        "AGENT"
+      ],
+      [
+        "TARGET",
+        "prevents",
+        "ACTUALITY"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "ACTUALITY"
+      ]
+    ],
+    "pattern": "The TARGET causes harm to the AGENT, preventing the desired ACTUALITY, which the AGENT conceals."
+  },
+  "546c907847f8aa13": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "ACTUALITY"
+    ],
+    "relations": [
+      [
+        "ACTUALITY",
+        "causes",
+        "TARGET"
+      ],
+      [
+        "TARGET",
+        "prevents",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "ACTUALITY"
+      ]
+    ],
+    "pattern": "An underlying condition causes harm to a group, which in turn prevents the primary actor's goal, while the primary actor conceals the severity of the condition."
+  },
+  "dd765dbec2c384c1": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY",
+      "ACTUALITY"
+    ],
+    "relations": [
+      [
+        "TARGET",
+        "causes",
+        "THIRD_PARTY"
+      ],
+      [
+        "THIRD_PARTY",
+        "prevents",
+        "ACTUALITY"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "ACTUALITY"
+      ]
+    ],
+    "pattern": "The TARGET's condition causes the THIRD_PARTY's actions, which prevent the AGENT's desired ACTUALITY, while the AGENT conceals the true state of the ACTUALITY."
+  },
+  "4bbff2dc591a9e2d": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY",
+      "ACTUALITY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "manufactures_threat",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "exploits",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "ACTUALITY"
+      ],
+      [
+        "THIRD_PARTY",
+        "actually_negative",
+        "ACTUALITY"
+      ]
+    ],
+    "pattern": "The AGENT creates a false THIRD_PARTY threat to deceive and control the TARGET, concealing the true ACTUALITY."
+  },
+  "1906b9475d0e03b3": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "ACTUALITY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "manufactures_threat",
+        "ACTUALITY"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "exploits",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "ACTUALITY"
+      ]
+    ],
+    "pattern": "The AGENT manufactures a threat and deceives the TARGET to exploit their fear, concealing the ACTUALITY."
+  },
+  "526efe6c4baeceec": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY",
+      "ACTUALITY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "manufactures_threat",
+        "ACTUALITY"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "exploits",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "ACTUALITY"
+      ]
+    ],
+    "pattern": "The AGENT manufactures a threat to exploit the TARGET and deceives the THIRD_PARTY, while concealing the ACTUALITY."
+  },
+  "c22cb76b6b691fff": {
+    "roles": [
+      "AGENT",
+      "THIRD_PARTY",
+      "ACTUALITY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "conceals",
+        "ACTUALITY"
+      ],
+      [
+        "AGENT",
+        "intends",
+        "PROTECTS_BY_WITHHOLDING"
+      ],
+      [
+        "ACTUALITY",
+        "actually_negative",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "harms_by_helping",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "An AGENT conceals an ACTUALITY to protect a THIRD_PARTY, but the concealment inadvertently harms the THIRD_PARTY."
+  },
+  "65ebc2b73553a86b": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "ACTUALITY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "conceals",
+        "ACTUALITY"
+      ],
+      [
+        "AGENT",
+        "intends",
+        "PROTECTS_BY_WITHHOLDING"
+      ],
+      [
+        "AGENT",
+        "harms_by_helping",
+        "TARGET"
+      ],
+      [
+        "ACTUALITY",
+        "actually_negative",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An AGENT conceals an ACTUALITY to protect a TARGET, but this action inadvertently harms the TARGET."
+  },
+  "dd07fed132660b77": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY",
+      "ACTUALITY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "conceals",
+        "ACTUALITY"
+      ],
+      [
+        "AGENT",
+        "sacrifices_for",
+        "TARGET"
+      ],
+      [
+        "ACTUALITY",
+        "actually_negative",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "harms_by_helping",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "An AGENT conceals an ACTUALITY to protect a TARGET, but this action inadvertently harms a THIRD_PARTY."
+  }
+}

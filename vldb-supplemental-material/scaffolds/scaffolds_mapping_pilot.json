@@ -1,0 +1,464 @@
+{
+  "43d20928d779b4a1": {
+    "roles": [
+      "AGENT",
+      "TARGET"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "deceives",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "exploits",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "actually_negative",
+        "TARGET"
+      ]
+    ],
+    "pattern": "AGENT deceives and exploits TARGET, knowing it will actually negatively impact TARGET."
+  },
+  "4a28461a2d7e9e82": {
+    "roles": [
+      "AGENT",
+      "TARGET"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "deceives",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "exploits",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "actually_negative",
+        "TARGET"
+      ]
+    ],
+    "pattern": "The AGENT deceives and exploits the TARGET, knowing it will actually negatively impact the TARGET."
+  },
+  "501cbdb7e494d4a4": {
+    "roles": [
+      "AGENT",
+      "TARGET"
+    ],
+    "relations": [
+      [
+        "TARGET",
+        "deceives",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "exploits",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "actually_negative",
+        "TARGET"
+      ]
+    ],
+    "pattern": "The AGENT is deceived by the TARGET, yet the AGENT exploits the TARGET's trust to cover their own failures, knowing it will harm the TARGET."
+  },
+  "92b6ea6bdb170e1b": {
+    "roles": [
+      "AGENT",
+      "TARGET"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "deceives",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "exploits",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "causes",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "actually_negative",
+        "AGENT"
+      ]
+    ],
+    "pattern": "The AGENT deceives and exploits the TARGET, causing harm while being fully aware of the negative impact."
+  },
+  "a051c2fa46d16c82": {
+    "roles": [
+      "AGENT",
+      "TARGET"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "deceives",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "exploits",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "actually_negative",
+        "TARGET"
+      ]
+    ],
+    "pattern": "The AGENT deceives and exploits the TARGET, concealing their own faults, fully aware it will actually negatively impact the TARGET."
+  },
+  "ade8ae2194f9b8c1": {
+    "roles": [
+      "AGENT",
+      "TARGET"
+    ],
+    "relations": [
+      [
+        "TARGET",
+        "deceives",
+        "AGENT"
+      ],
+      [
+        "AGENT",
+        "exploits",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "actually_negative",
+        "TARGET"
+      ]
+    ],
+    "pattern": "The TARGET deceives the AGENT, who then exploits and conceals from the TARGET, ultimately causing harm."
+  },
+  "3e4964b792a800f1": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "causes",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "enables",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "AGENT"
+      ]
+    ],
+    "pattern": "An AGENT causes harm to a TARGET while enabling a THIRD_PARTY and conceals its own actions."
+  },
+  "b7631a53b1771e7f": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "causes",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "THIRD_PARTY"
+      ],
+      [
+        "AGENT",
+        "protects_by_withholding",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "An action by AGENT causes harm to TARGET while concealing and protecting the interests of THIRD_PARTY."
+  },
+  "aa21447766107e12": {
+    "roles": [
+      "EVENT",
+      "POLICY",
+      "INDUSTRY",
+      "AUTHORITY"
+    ],
+    "relations": [
+      [
+        "POLICY",
+        "causes",
+        "EVENT"
+      ],
+      [
+        "POLICY",
+        "protects_by_withholding",
+        "INDUSTRY"
+      ],
+      [
+        "AUTHORITY",
+        "conceals",
+        "EVENT"
+      ]
+    ],
+    "pattern": "A POLICY causes an EVENT, protects_by_withholding an INDUSTRY, and an AUTHORITY conceals the EVENT."
+  },
+  "c4e1a07f00d56f20": {
+    "roles": [
+      "AGENT",
+      "CONDITION",
+      "GOAL"
+    ],
+    "relations": [
+      [
+        "CONDITION",
+        "causes",
+        "AGENT"
+      ],
+      [
+        "CONDITION",
+        "prevents",
+        "GOAL"
+      ],
+      [
+        "AGENT",
+        "conceals",
+        "CONDITION"
+      ]
+    ],
+    "pattern": "A CONDITION causes AGENT distress, prevents a GOAL, and AGENT conceals the severity of the CONDITION."
+  },
+  "546c907847f8aa13": {
+    "roles": [
+      "AGENT",
+      "TEAM",
+      "CEO"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "causes",
+        "TEAM"
+      ],
+      [
+        "TEAM",
+        "prevents",
+        "AGENT"
+      ],
+      [
+        "CEO",
+        "conceals",
+        "TEAM"
+      ]
+    ],
+    "pattern": "AGENT causes TEAM to prevent AGENT's goal, while CEO conceals the true situation."
+  },
+  "dd765dbec2c384c1": {
+    "roles": [
+      "TEAM",
+      "CEO",
+      "LAYOFFS",
+      "GROWTH"
+    ],
+    "relations": [
+      [
+        "TEAM",
+        "causes",
+        "LAYOFFS"
+      ],
+      [
+        "LAYOFFS",
+        "prevents",
+        "GROWTH"
+      ],
+      [
+        "CEO",
+        "intends",
+        "GROWTH"
+      ],
+      [
+        "CEO",
+        "conceals",
+        "TEAM"
+      ]
+    ],
+    "pattern": "The TEAM causes a negative outcome that prevents the intended positive outcome, while the CEO conceals the true state of affairs."
+  },
+  "4bbff2dc591a9e2d": {
+    "roles": [
+      "AGENT",
+      "TARGET"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "manufactures_threat",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "exploits",
+        "TARGET"
+      ]
+    ],
+    "pattern": "AGENT manufactures_threat and deceives TARGET to exploit them."
+  },
+  "1906b9475d0e03b3": {
+    "roles": [
+      "AGENT",
+      "TARGET"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "manufactures_threat",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "exploits",
+        "TARGET"
+      ]
+    ],
+    "pattern": "AGENT manufactures_threat and deceives TARGET to exploit TARGET's fear for control."
+  },
+  "526efe6c4baeceec": {
+    "roles": [
+      "AGENT",
+      "COFOUNDER",
+      "INVESTORS"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "manufactures_threat",
+        "COFOUNDER"
+      ],
+      [
+        "AGENT",
+        "deceives",
+        "INVESTORS"
+      ],
+      [
+        "AGENT",
+        "exploits",
+        "COFOUNDER"
+      ]
+    ],
+    "pattern": "AGENT manufactures_threat to exploit COFOUNDER and deceives INVESTORS."
+  },
+  "c22cb76b6b691fff": {
+    "roles": [
+      "AGENT",
+      "TARGET"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "conceals",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "intends",
+        "PROTECTS_BY_WITHHOLDING"
+      ],
+      [
+        "AGENT",
+        "actually_negative",
+        "TARGET"
+      ]
+    ],
+    "pattern": "AGENT conceals information from TARGET intending to protect, but this actually negatively impacts TARGET."
+  },
+  "65ebc2b73553a86b": {
+    "roles": [
+      "AGENT",
+      "TARGET"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "conceals",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "sacrifices_for",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "harms_by_helping",
+        "TARGET"
+      ]
+    ],
+    "pattern": "An AGENT conceals information to sacrifice for a TARGET, but this action ultimately harms the TARGET."
+  },
+  "dd07fed132660b77": {
+    "roles": [
+      "AGENT",
+      "TARGET",
+      "THIRD_PARTY"
+    ],
+    "relations": [
+      [
+        "AGENT",
+        "conceals",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "sacrifices_for",
+        "TARGET"
+      ],
+      [
+        "AGENT",
+        "harms_by_helping",
+        "THIRD_PARTY"
+      ]
+    ],
+    "pattern": "An AGENT conceals information from a TARGET to protect them, but this action inadvertently harms a THIRD_PARTY."
+  }
+}

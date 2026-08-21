@@ -1,0 +1,726 @@
+{
+  "seed": 42,
+  "n_items": 60,
+  "items": [
+    {
+      "item_id": 1,
+      "block": "A",
+      "is_foil": false,
+      "q2_position": "B",
+      "expected": {
+        "struct_a": "N",
+        "surf_a": "Y",
+        "struct_b": "Y",
+        "surf_b": "N"
+      }
+    },
+    {
+      "item_id": 2,
+      "block": "A",
+      "is_foil": false,
+      "q2_position": "A",
+      "expected": {
+        "struct_a": "Y",
+        "surf_a": "N",
+        "struct_b": "N",
+        "surf_b": "Y"
+      }
+    },
+    {
+      "item_id": 3,
+      "block": "A",
+      "is_foil": false,
+      "q2_position": "A",
+      "expected": {
+        "struct_a": "Y",
+        "surf_a": "N",
+        "struct_b": "N",
+        "surf_b": "Y"
+      }
+    },
+    {
+      "item_id": 4,
+      "block": "A",
+      "is_foil": false,
+      "q2_position": "A",
+      "expected": {
+        "struct_a": "Y",
+        "surf_a": "N",
+        "struct_b": "N",
+        "surf_b": "Y"
+      }
+    },
+    {
+      "item_id": 5,
+      "block": "A",
+      "is_foil": false,
+      "q2_position": "B",
+      "expected": {
+        "struct_a": "N",
+        "surf_a": "Y",
+        "struct_b": "Y",
+        "surf_b": "N"
+      }
+    },
+    {
+      "item_id": 6,
+      "block": "A",
+      "is_foil": false,
+      "q2_position": "B",
+      "expected": {
+        "struct_a": "N",
+        "surf_a": "Y",
+        "struct_b": "Y",
+        "surf_b": "N"
+      }
+    },
+    {
+      "item_id": 7,
+      "block": "A",
+      "is_foil": false,
+      "q2_position": "B",
+      "expected": {
+        "struct_a": "N",
+        "surf_a": "Y",
+        "struct_b": "Y",
+        "surf_b": "N"
+      }
+    },
+    {
+      "item_id": 8,
+      "block": "A",
+      "is_foil": false,
+      "q2_position": "A",
+      "expected": {
+        "struct_a": "Y",
+        "surf_a": "N",
+        "struct_b": "N",
+        "surf_b": "Y"
+      }
+    },
+    {
+      "item_id": 9,
+      "block": "A",
+      "is_foil": false,
+      "q2_position": "A",
+      "expected": {
+        "struct_a": "Y",
+        "surf_a": "N",
+        "struct_b": "N",
+        "surf_b": "Y"
+      }
+    },
+    {
+      "item_id": 10,
+      "block": "A",
+      "is_foil": false,
+      "q2_position": "A",
+      "expected": {
+        "struct_a": "Y",
+        "surf_a": "N",
+        "struct_b": "N",
+        "surf_b": "Y"
+      }
+    },
+    {
+      "item_id": 11,
+      "block": "A",
+      "is_foil": false,
+      "q2_position": "A",
+      "expected": {
+        "struct_a": "Y",
+        "surf_a": "N",
+        "struct_b": "N",
+        "surf_b": "Y"
+      }
+    },
+    {
+      "item_id": 12,
+      "block": "A",
+      "is_foil": false,
+      "q2_position": "B",
+      "expected": {
+        "struct_a": "N",
+        "surf_a": "Y",
+        "struct_b": "Y",
+        "surf_b": "N"
+      }
+    },
+    {
+      "item_id": 13,
+      "block": "A",
+      "is_foil": false,
+      "q2_position": "A",
+      "expected": {
+        "struct_a": "Y",
+        "surf_a": "N",
+        "struct_b": "N",
+        "surf_b": "Y"
+      }
+    },
+    {
+      "item_id": 14,
+      "block": "A",
+      "is_foil": false,
+      "q2_position": "A",
+      "expected": {
+        "struct_a": "Y",
+        "surf_a": "N",
+        "struct_b": "N",
+        "surf_b": "Y"
+      }
+    },
+    {
+      "item_id": 15,
+      "block": "A",
+      "is_foil": false,
+      "q2_position": "B",
+      "expected": {
+        "struct_a": "N",
+        "surf_a": "Y",
+        "struct_b": "Y",
+        "surf_b": "N"
+      }
+    },
+    {
+      "item_id": 16,
+      "block": "A",
+      "is_foil": false,
+      "q2_position": "B",
+      "expected": {
+        "struct_a": "N",
+        "surf_a": "Y",
+        "struct_b": "Y",
+        "surf_b": "N"
+      }
+    },
+    {
+      "item_id": 17,
+      "block": "A",
+      "is_foil": false,
+      "q2_position": "A",
+      "expected": {
+        "struct_a": "Y",
+        "surf_a": "N",
+        "struct_b": "N",
+        "surf_b": "Y"
+      }
+    },
+    {
+      "item_id": 18,
+      "block": "A",
+      "is_foil": false,
+      "q2_position": "B",
+      "expected": {
+        "struct_a": "N",
+        "surf_a": "Y",
+        "struct_b": "Y",
+        "surf_b": "N"
+      }
+    },
+    {
+      "item_id": 19,
+      "block": "A",
+      "is_foil": false,
+      "q2_position": "B",
+      "expected": {
+        "struct_a": "N",
+        "surf_a": "Y",
+        "struct_b": "Y",
+        "surf_b": "N"
+      }
+    },
+    {
+      "item_id": 20,
+      "block": "A",
+      "is_foil": false,
+      "q2_position": "A",
+      "expected": {
+        "struct_a": "Y",
+        "surf_a": "N",
+        "struct_b": "N",
+        "surf_b": "Y"
+      }
+    },
+    {
+      "item_id": 21,
+      "block": "B",
+      "is_foil": false,
+      "q2_position": "B",
+      "expected": {
+        "struct_a": "N",
+        "surf_a": "Y",
+        "struct_b": "Y",
+        "surf_b": "N"
+      }
+    },
+    {
+      "item_id": 22,
+      "block": "B",
+      "is_foil": false,
+      "q2_position": "B",
+      "expected": {
+        "struct_a": "N",
+        "surf_a": "Y",
+        "struct_b": "Y",
+        "surf_b": "N"
+      }
+    },
+    {
+      "item_id": 23,
+      "block": "B",
+      "is_foil": false,
+      "q2_position": "A",
+      "expected": {
+        "struct_a": "Y",
+        "surf_a": "N",
+        "struct_b": "N",
+        "surf_b": "Y"
+      }
+    },
+    {
+      "item_id": 24,
+      "block": "B",
+      "is_foil": false,
+      "q2_position": "A",
+      "expected": {
+        "struct_a": "Y",
+        "surf_a": "N",
+        "struct_b": "N",
+        "surf_b": "Y"
+      }
+    },
+    {
+      "item_id": 25,
+      "block": "B",
+      "is_foil": false,
+      "q2_position": "B",
+      "expected": {
+        "struct_a": "N",
+        "surf_a": "Y",
+        "struct_b": "Y",
+        "surf_b": "N"
+      }
+    },
+    {
+      "item_id": 26,
+      "block": "B",
+      "is_foil": false,
+      "q2_position": "A",
+      "expected": {
+        "struct_a": "Y",
+        "surf_a": "N",
+        "struct_b": "N",
+        "surf_b": "Y"
+      }
+    },
+    {
+      "item_id": 27,
+      "block": "B",
+      "is_foil": false,
+      "q2_position": "A",
+      "expected": {
+        "struct_a": "Y",
+        "surf_a": "N",
+        "struct_b": "N",
+        "surf_b": "Y"
+      }
+    },
+    {
+      "item_id": 28,
+      "block": "B",
+      "is_foil": false,
+      "q2_position": "A",
+      "expected": {
+        "struct_a": "Y",
+        "surf_a": "N",
+        "struct_b": "N",
+        "surf_b": "Y"
+      }
+    },
+    {
+      "item_id": 29,
+      "block": "B",
+      "is_foil": false,
+      "q2_position": "B",
+      "expected": {
+        "struct_a": "N",
+        "surf_a": "Y",
+        "struct_b": "Y",
+        "surf_b": "N"
+      }
+    },
+    {
+      "item_id": 30,
+      "block": "B",
+      "is_foil": false,
+      "q2_position": "B",
+      "expected": {
+        "struct_a": "N",
+        "surf_a": "Y",
+        "struct_b": "Y",
+        "surf_b": "N"
+      }
+    },
+    {
+      "item_id": 31,
+      "block": "B",
+      "is_foil": false,
+      "q2_position": "B",
+      "expected": {
+        "struct_a": "N",
+        "surf_a": "Y",
+        "struct_b": "Y",
+        "surf_b": "N"
+      }
+    },
+    {
+      "item_id": 32,
+      "block": "B",
+      "is_foil": false,
+      "q2_position": "B",
+      "expected": {
+        "struct_a": "N",
+        "surf_a": "Y",
+        "struct_b": "Y",
+        "surf_b": "N"
+      }
+    },
+    {
+      "item_id": 33,
+      "block": "B",
+      "is_foil": false,
+      "q2_position": "B",
+      "expected": {
+        "struct_a": "N",
+        "surf_a": "Y",
+        "struct_b": "Y",
+        "surf_b": "N"
+      }
+    },
+    {
+      "item_id": 34,
+      "block": "B",
+      "is_foil": false,
+      "q2_position": "B",
+      "expected": {
+        "struct_a": "N",
+        "surf_a": "Y",
+        "struct_b": "Y",
+        "surf_b": "N"
+      }
+    },
+    {
+      "item_id": 35,
+      "block": "B",
+      "is_foil": false,
+      "q2_position": "A",
+      "expected": {
+        "struct_a": "Y",
+        "surf_a": "N",
+        "struct_b": "N",
+        "surf_b": "Y"
+      }
+    },
+    {
+      "item_id": 36,
+      "block": "B",
+      "is_foil": false,
+      "q2_position": "B",
+      "expected": {
+        "struct_a": "N",
+        "surf_a": "Y",
+        "struct_b": "Y",
+        "surf_b": "N"
+      }
+    },
+    {
+      "item_id": 37,
+      "block": "B",
+      "is_foil": false,
+      "q2_position": "B",
+      "expected": {
+        "struct_a": "N",
+        "surf_a": "Y",
+        "struct_b": "Y",
+        "surf_b": "N"
+      }
+    },
+    {
+      "item_id": 38,
+      "block": "B",
+      "is_foil": false,
+      "q2_position": "B",
+      "expected": {
+        "struct_a": "N",
+        "surf_a": "Y",
+        "struct_b": "Y",
+        "surf_b": "N"
+      }
+    },
+    {
+      "item_id": 39,
+      "block": "B",
+      "is_foil": false,
+      "q2_position": "B",
+      "expected": {
+        "struct_a": "N",
+        "surf_a": "Y",
+        "struct_b": "Y",
+        "surf_b": "N"
+      }
+    },
+    {
+      "item_id": 40,
+      "block": "B",
+      "is_foil": false,
+      "q2_position": "B",
+      "expected": {
+        "struct_a": "N",
+        "surf_a": "Y",
+        "struct_b": "Y",
+        "surf_b": "N"
+      }
+    },
+    {
+      "item_id": 41,
+      "block": "C",
+      "is_foil": false,
+      "q2_position": "B",
+      "expected": {
+        "struct_a": "N",
+        "surf_a": "Y",
+        "struct_b": "Y",
+        "surf_b": "N"
+      }
+    },
+    {
+      "item_id": 42,
+      "block": "C",
+      "is_foil": false,
+      "q2_position": "A",
+      "expected": {
+        "struct_a": "Y",
+        "surf_a": "N",
+        "struct_b": "N",
+        "surf_b": "Y"
+      }
+    },
+    {
+      "item_id": 43,
+      "block": "C",
+      "is_foil": false,
+      "q2_position": "A",
+      "expected": {
+        "struct_a": "Y",
+        "surf_a": "N",
+        "struct_b": "N",
+        "surf_b": "Y"
+      }
+    },
+    {
+      "item_id": 44,
+      "block": "C",
+      "is_foil": false,
+      "q2_position": "A",
+      "expected": {
+        "struct_a": "Y",
+        "surf_a": "N",
+        "struct_b": "N",
+        "surf_b": "Y"
+      }
+    },
+    {
+      "item_id": 45,
+      "block": "C",
+      "is_foil": false,
+      "q2_position": "A",
+      "expected": {
+        "struct_a": "Y",
+        "surf_a": "N",
+        "struct_b": "N",
+        "surf_b": "Y"
+      }
+    },
+    {
+      "item_id": 46,
+      "block": "C",
+      "is_foil": false,
+      "q2_position": "A",
+      "expected": {
+        "struct_a": "Y",
+        "surf_a": "N",
+        "struct_b": "N",
+        "surf_b": "Y"
+      }
+    },
+    {
+      "item_id": 47,
+      "block": "C",
+      "is_foil": false,
+      "q2_position": "A",
+      "expected": {
+        "struct_a": "Y",
+        "surf_a": "N",
+        "struct_b": "N",
+        "surf_b": "Y"
+      }
+    },
+    {
+      "item_id": 48,
+      "block": "C",
+      "is_foil": false,
+      "q2_position": "A",
+      "expected": {
+        "struct_a": "Y",
+        "surf_a": "N",
+        "struct_b": "N",
+        "surf_b": "Y"
+      }
+    },
+    {
+      "item_id": 49,
+      "block": "C",
+      "is_foil": false,
+      "q2_position": "B",
+      "expected": {
+        "struct_a": "N",
+        "surf_a": "Y",
+        "struct_b": "Y",
+        "surf_b": "N"
+      }
+    },
+    {
+      "item_id": 50,
+      "block": "C",
+      "is_foil": false,
+      "q2_position": "A",
+      "expected": {
+        "struct_a": "Y",
+        "surf_a": "N",
+        "struct_b": "N",
+        "surf_b": "Y"
+      }
+    },
+    {
+      "item_id": 51,
+      "block": "C",
+      "is_foil": false,
+      "q2_position": "A",
+      "expected": {
+        "struct_a": "Y",
+        "surf_a": "N",
+        "struct_b": "N",
+        "surf_b": "Y"
+      }
+    },
+    {
+      "item_id": 52,
+      "block": "C",
+      "is_foil": false,
+      "q2_position": "A",
+      "expected": {
+        "struct_a": "Y",
+        "surf_a": "N",
+        "struct_b": "N",
+        "surf_b": "Y"
+      }
+    },
+    {
+      "item_id": 53,
+      "block": "C",
+      "is_foil": false,
+      "q2_position": "A",
+      "expected": {
+        "struct_a": "Y",
+        "surf_a": "N",
+        "struct_b": "N",
+        "surf_b": "Y"
+      }
+    },
+    {
+      "item_id": 54,
+      "block": "C",
+      "is_foil": false,
+      "q2_position": "B",
+      "expected": {
+        "struct_a": "N",
+        "surf_a": "Y",
+        "struct_b": "Y",
+        "surf_b": "N"
+      }
+    },
+    {
+      "item_id": 55,
+      "block": "C",
+      "is_foil": false,
+      "q2_position": "B",
+      "expected": {
+        "struct_a": "N",
+        "surf_a": "Y",
+        "struct_b": "Y",
+        "surf_b": "N"
+      }
+    },
+    {
+      "item_id": 56,
+      "block": "C",
+      "is_foil": false,
+      "q2_position": "B",
+      "expected": {
+        "struct_a": "N",
+        "surf_a": "Y",
+        "struct_b": "Y",
+        "surf_b": "N"
+      }
+    },
+    {
+      "item_id": 57,
+      "block": "C",
+      "is_foil": false,
+      "q2_position": "A",
+      "expected": {
+        "struct_a": "Y",
+        "surf_a": "N",
+        "struct_b": "N",
+        "surf_b": "Y"
+      }
+    },
+    {
+      "item_id": 58,
+      "block": "C",
+      "is_foil": false,
+      "q2_position": "B",
+      "expected": {
+        "struct_a": "N",
+        "surf_a": "Y",
+        "struct_b": "Y",
+        "surf_b": "N"
+      }
+    },
+    {
+      "item_id": 59,
+      "block": "C",
+      "is_foil": false,
+      "q2_position": "A",
+      "expected": {
+        "struct_a": "Y",
+        "surf_a": "N",
+        "struct_b": "N",
+        "surf_b": "Y"
+      }
+    },
+    {
+      "item_id": 60,
+      "block": "C",
+      "is_foil": false,
+      "q2_position": "A",
+      "expected": {
+        "struct_a": "Y",
+        "surf_a": "N",
+        "struct_b": "N",
+        "surf_b": "Y"
+      }
+    }
+  ]
+}

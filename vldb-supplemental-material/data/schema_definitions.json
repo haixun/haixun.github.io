@@ -1,0 +1,82 @@
+{
+  "S01": {
+    "name": "Authority fabricates urgency through deception to control subordinate",
+    "structural_difference_type": "genuine_vs_fabricated"
+  },
+  "S02": {
+    "name": "Trusted insider betrays confidence for personal gain",
+    "structural_difference_type": "cooperative_vs_exploitative"
+  },
+  "S03": {
+    "name": "Actor incurs a concealed personal cost to benefit another without seeking recognition",
+    "structural_difference_type": "concealed_vs_transparent"
+  },
+  "S04": {
+    "name": "Authority figure takes credit for subordinate's work",
+    "structural_difference_type": "credit_appropriation_vs_attribution"
+  },
+  "S05": {
+    "name": "Person maintains false pretense to preserve relationship",
+    "structural_difference_type": "genuine_vs_fabricated"
+  },
+  "S06": {
+    "name": "Person discovers mentor was undermining them while appearing supportive",
+    "structural_difference_type": "cooperative_vs_exploitative"
+  },
+  "S07": {
+    "name": "Punishment falls on innocent party who accepts it to protect the guilty",
+    "structural_difference_type": "innocent_vs_guilty_punished"
+  },
+  "S08": {
+    "name": "Gift given with hidden strings attached, creating obligation",
+    "structural_difference_type": "conditional_vs_unconditional"
+  },
+  "S09": {
+    "name": "Person feigns incompetence to avoid responsibility",
+    "structural_difference_type": "genuine_vs_fabricated"
+  },
+  "S10": {
+    "name": "Apparent enemy provides crucial help, apparent ally causes harm",
+    "structural_difference_type": "role_reversal"
+  },
+  "S11": {
+    "name": "Person manufactures problem to become the hero who solves it",
+    "structural_difference_type": "genuine_vs_fabricated"
+  },
+  "S12": {
+    "name": "Person tests loyalty by creating situation requiring sacrifice",
+    "structural_difference_type": "genuine_vs_fabricated"
+  },
+  "S13": {
+    "name": "Withholding information 'for their own good' causes greater harm",
+    "structural_difference_type": "helpful_vs_enabling"
+  },
+  "S14": {
+    "name": "Apparent failure leads to unexpected success through indirect path",
+    "structural_difference_type": "direct_vs_indirect_trajectory"
+  },
+  "S15": {
+    "name": "Forced proximity creates bond between initial antagonists",
+    "structural_difference_type": "expected_vs_counter_stereotypical"
+  },
+  "S16": {
+    "name": "Person's strength becomes their downfall when taken to extreme",
+    "structural_difference_type": "causal_direction_reversal"
+  },
+  "S17": {
+    "name": "Acting against type in crisis reveals true character",
+    "structural_difference_type": "expected_vs_counter_stereotypical"
+  },
+  "S18": {
+    "name": "Small incidental choice produces an unforeseen, disproportionate life-changing outcome",
+    "structural_difference_type": "direct_vs_indirect_trajectory"
+  },
+  "S19": {
+    "name": "Teaching someone reveals gaps in your own understanding",
+    "structural_difference_type": "matched_vs_contradictory"
+  },
+  "S20": {
+    "name": "Person enables harmful behavior while believing they're helping",
+    "structural_difference_type": "helpful_vs_enabling"
+  }
+}

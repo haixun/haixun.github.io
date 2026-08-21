@@ -1,0 +1,60 @@
+{
+  "lambda": 0.5,
+  "shuffle_seeds": 20,
+  "matchers": {
+    "predicate_only": {
+      "held_out_wins": 32,
+      "held_out_n": 40,
+      "held_out_acc": 82.5,
+      "held_out_ci": [
+        70.0,
+        93.75
+      ],
+      "all_wins": 47,
+      "all_n": 60,
+      "all_acc": 80.83333333333333
+    },
+    "triple_aware": {
+      "held_out_wins": 28,
+      "held_out_n": 40,
+      "held_out_acc": 72.5,
+      "held_out_ci": [
+        58.75,
+        85.0
+      ],
+      "all_wins": 41,
+      "all_n": 60,
+      "all_acc": 70.0
+    },
+    "soft_align": {
+      "held_out_wins": 31,
+      "held_out_n": 40,
+      "held_out_acc": 77.5,
+      "held_out_ci": [
+        65.0,
+        90.0
+      ],
+      "all_wins": 43,
+      "all_n": 60,
+      "all_acc": 71.66666666666667
+    },
+    "triple_reverse": {
+      "held_out_wins": 24,
+      "held_out_n": 40,
+      "held_out_acc": 63.74999999999999,
+      "held_out_ci": [
+        48.75,
+        78.75
+      ],
+      "all_wins": 37,
+      "all_n": 60,
+      "all_acc": 65.0
+    },
+    "triple_shuffle": {
+      "held_out_acc": 53.68750000000001,
+      "all_acc": 52.87500000000001,
+      "held_out_std": 8.143968243430226,
+      "note": "triple_aware after endpoint shuffle, mean over 20 seeds"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "shuffled_control": {
+    "real_overlap_accuracy": 0.7666666666666667,
+    "shuffled_mean": 0.5152083333333334,
+    "shuffled_p2.5": 0.4083333333333333,
+    "shuffled_p97.5": 0.6166666666666667,
+    "seeds": 200,
+    "interpretation": "shuffled collapses toward 50% chance while the real assignment is far higher -> the matcher tracks query<->candidate structure, not a Q2-slot bias."
+  },
+  "second_model": {
+    "model": "gpt-4o-mini",
+    "extract_overlap": 0.7333333333333333,
+    "extract_match": 0.8833333333333333,
+    "pairwise": 0.9166666666666666
+  }
+}
