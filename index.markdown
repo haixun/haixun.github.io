@@ -11,16 +11,17 @@ layout: default
   </div>
 </header>
 
-I lead [the Algorithms
+I lead the AI and Data team at [EvenUp](https://www.evenuplaw.com),
+where we use generative AI and agentic systems to reinvent legal
+tech. Before EvenUp, I led [the Algorithms
 team](https://tech.instacart.com/a-small-engineering-team-with-a-big-impact-40184c40d7e)
-that focuses on using machine learning for e-commerce and fulfillment
-at [Instacart](https://www.instacart.com). Previously, I led the
-Research & Applied Science organization at WeWork, working on NLP,
-computer vision, robotics, data management, sensor networks,
-ubiquitous computing, etc. In my previous jobs, I worked on machine
-learning and text understanding. My team built large-scale NLP
-pipelines for short text and document understanding, and we developed
-data-driven semantic networks to enable text understanding.
+at [Instacart](https://www.instacart.com), applying machine learning
+to e-commerce and fulfillment. Earlier, I led the Research & Applied
+Science organization at WeWork, with work spanning NLP, computer
+vision, robotics, data management, sensor networks, and ubiquitous
+computing. Across these roles, I’ve focused on machine learning and
+text understanding, including large-scale NLP pipelines for short text
+and documents and data-driven semantic networks.
 
 ### Experience
 
