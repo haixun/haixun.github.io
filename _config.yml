@@ -27,7 +27,7 @@ twitter_username: haixun
 github_username:  haixun
 
 # Build settings
-theme: minima
+# theme: none -- see _layouts/default.html
 #plugins:
 #  - jekyll-feed
 
@@ -41,6 +41,7 @@ theme: minima
 #
 exclude:
   - _stories_src/
+  - serve.sh
   - .sass-cache/
   - .jekyll-cache/
   - Gemfile
