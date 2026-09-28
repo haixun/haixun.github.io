@@ -42,6 +42,7 @@ github_username:  haixun
 exclude:
   - _stories_src/
   - serve.sh
+  - CLAUDE.md
   - .sass-cache/
   - .jekyll-cache/
   - Gemfile
