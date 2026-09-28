@@ -25,25 +25,31 @@ and documents and data-driven semantic networks.
 
 ### Experience
 
-* **VP Engineering, Head of AI, EvenUp (present)**
-* **Editor in Chief, IEEE Data Engineering Bulletin (present)**
-* VP Engineering, Algorithms & Distinguished Scientist, Instacart
-* VP Engineering & Distinguished Scientist, WeWork
-* Director of Natural Language Processing, Amazon
-* Engineering Manager and Research Scientist, Facebook
-* Staff Research Scientist, Google Research
-* Senior Researcher, Microsoft Research
-* Research Staff Member, IBM Research
+* **VP Engineering, Head of AI, EvenUp** (2024 – present)
+* **Affiliate Full Professor, Electrical & Computer Engineering, University of Washington** (2022 – present)
+* **Board of Trustees, VLDB Endowment** (2022 – present)
+* **Distinguished Fellow, Fellows Fund** (2021 – present)
+* **Editor in Chief, IEEE Data Engineering Bulletin** (2018 – present)
+* VP Engineering, Algorithms & Distinguished Scientist, Instacart (2020 – 2024)
+* VP Engineering & Distinguished Scientist, WeWork (2018 – 2020)
+* Director of Natural Language Processing, Amazon (2017 – 2018)
+* Engineering Manager and Research Scientist, Facebook (2015 – 2017)
+* Staff Research Scientist, Google Research (2013 – 2015)
+* Senior Researcher, Microsoft Research (2009 – 2013)
+* Technical Assistant to Head of Research, IBM Research (2007 – 2009)
+* Research Staff Member, IBM T. J. Watson Research Center (2000 – 2006)
 
 
 ### Honors
 
-* **ACM Fellow**, 2025
-* **IEEE Fellow**, 2017
+* **ACM Fellow**, 2025, *for contributions to graph-based systems and their application to text understanding*
+* **ICDE 10 Year Influential Paper Award**, *How to Partition a Billion-Node Graph*, in ICDE 2014 (awarded 2024)
+* **IEEE Fellow**, 2017, *for contributions to knowledge bases for text understanding*
 * **Best Paper Award**, *Short Text Understanding Through Lexical-Semantic Analysis*, in the 31st International Conference on Data Engineering (ICDE), 2015
-* **ICDM 10 Year Highest Impact Paper Award**, *Moment: Maintaining closed frequent itemsets over a stream sliding window*, in ICDM 2004
-* **Best Student Paper Runner-Up Award**, *Inverse Time Dependency in Convex Regularized Learning*, in the 9th International Conference on Data Mining (ICDM), 2009 
+* **ICDM 10 Year Highest Impact Paper Award**, *Moment: Maintaining closed frequent itemsets over a stream sliding window*, in ICDM 2004 (awarded 2013)
+* **Best Student Paper Runner-Up Award**, *Inverse Time Dependency in Convex Regularized Learning*, in the 9th International Conference on Data Mining (ICDM), 2009
 * **Best Paper Award**, *Modeling and Querying E-Commerce Data in Hybrid Relational-XML DBMSs*, in the 27th International Conference on Conceptual Modeling (ER), 2008
+* **IBM High-Value Application Award**, 2008 (given to top patents filed that year)
 
 ### Blogs
 * [What's Inside Jev](https://haixun.substack.com/p/whats-inside-jev)
