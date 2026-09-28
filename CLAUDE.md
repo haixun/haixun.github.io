@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Personal site for Haixun Wang, served by **classic GitHub Pages** (no Actions workflow) from `master` at `haixun.github.io`. It is really two Jekyll sites plus a pile of static files:
 
-1. **Root site**: Jekyll with the `minima` theme, built by GitHub Pages on push (`github-pages` gem). The pages are `index.markdown`, `about.markdown`, `probase.markdown`, `tangshi*.markdown`, `readinglist.markdown`, and others.
+1. **Root site**: Jekyll with **no theme**, built by GitHub Pages on push (`github-pages` gem). Every page uses the single self-contained `_layouts/default.html`, which holds all the CSS inline. There are no includes and no Sass. Pages are `index.markdown`, `about.markdown`, `probase.markdown`, `tangshi*.markdown`, `readinglist.markdown`, and others.
 2. **Stories site** (`/stories/`): its own Jekyll project in `_stories_src/`, which has a custom theme and its own `_config.yml` with `baseurl: /stories`. The root `_config.yml` excludes it. GitHub Pages does **not** build it. You build it locally and commit the generated HTML to `stories/`. See `_stories_src/CLAUDE.md` for its content rules, front matter, and allowed categories.
 3. **Static artifacts**: hand-written or exported HTML (`genai.html`, `ecommerce.html`, `trinity.html`, `spanish.html`, `Simulation.html`, `vldb/*.html`). These have no front matter, so Jekyll copies them unchanged.
 
@@ -23,7 +23,17 @@ bundle exec jekyll serve                      # http://localhost:4000/stories
 bundle exec jekyll build --destination ../stories
 ```
 
+Markdown files without front matter (`movies`, `tangshi*`, `readinglist*`) are still rendered on GitHub Pages by its `jekyll-optional-front-matter` plugin, but plain Jekyll 4 skips them, so they won't appear in the local preview. Give a page front matter (`layout: default`) if you need to preview it.
+
 If you change anything under `_stories_src/` and don't rebuild, the live site won't change. `stories/_site/` is a stray, gitignored artifact. Ignore it.
+
+## Home page (`index.markdown`)
+
+The header is an HTML `<header class="intro">` block (photo + name + current title), styled in `_layouts/default.html`. In Experience and Honors, current roles are bold, every entry carries years, and lists run newest first.
+
+`Haixun Wang CV Mar 2026.md` in the repo root is the source for Experience and Honors. It is deliberately untracked because it contains a phone number, and anything committed here gets published. Never commit it.
+
+After pushing, `gh api repos/haixun/haixun.github.io/pages/builds/latest` shows whether the Pages build for your commit has finished.
 
 ## Generated files: edit the source, not the output
 
