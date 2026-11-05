@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="A verified, step-by-step route into protein engineering for someone who already builds machine learning models.">
+<style>
+/* base reset, equivalent to the artifact host's skeleton */
+:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0;font:14px system-ui,-apple-system,"Segoe UI",sans-serif}
+img{max-width:100%}
+[hidden]{display:none!important}
+</style>
+<title>N to C</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+</head>
+<body>
+<style>
+/* Layout: a polypeptide chain running N-terminus to C-terminus down the page.
+   Phase accents follow the spectrum colouring used in every structure figure. */
+:root{
+  --ground:#f7f8fa; --panel:#ffffff; --ink:#15181d; --muted:#5d6672; --faint:#8b94a1;
+  --rule:#dfe3e9; --rule-soft:#edeff3;
+  --n-term:#2563c9; --cyan:#0e8ba8; --green:#2f8f4e; --amber:#b5790d; --c-term:#c2442e;
+  --accent:var(--n-term);
+  --warn-bg:#fff6ed; --warn-rule:#f0c9a4;
+  --display:"Newsreader",Georgia,"Times New Roman",serif;
+  --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ground:#101317; --panel:#171b21; --ink:#e8ebef; --muted:#a0a9b6; --faint:#737d8b;
+  --rule:#2a3039; --rule-soft:#21262d;
+  --n-term:#6ea4f5; --cyan:#3fc0db; --green:#5fc47e; --amber:#e0ad48; --c-term:#f0796a;
+  --warn-bg:#2a1f16; --warn-rule:#5c4227;
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --ground:#101317; --panel:#171b21; --ink:#e8ebef; --muted:#a0a9b6; --faint:#737d8b;
+  --rule:#2a3039; --rule-soft:#21262d;
+  --n-term:#6ea4f5; --cyan:#3fc0db; --green:#5fc47e; --amber:#e0ad48; --c-term:#f0796a;
+  --warn-bg:#2a1f16; --warn-rule:#5c4227;
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);font-family:var(--body);line-height:1.6;
+  -webkit-font-smoothing:antialiased}
+.wrap{max-width:860px;margin:0 auto;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+  padding-block:0}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--accent) 35%,transparent)}
+a:hover{border-bottom-color:var(--accent)}
+a:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}
+code{font-family:var(--mono);font-size:.88em;background:var(--rule-soft);padding:.12em .36em;border-radius:3px;
+  word-break:break-word}
+h1,h2,h3{text-wrap:balance;margin:0}
+
+/* ---- masthead ---- */
+.mast{padding-block:52px 34px;border-bottom:1px solid var(--rule)}
+.alphabet{font-family:var(--mono);font-size:12px;letter-spacing:.34em;color:var(--faint);
+  margin-bottom:22px;word-break:break-all}
+h1{font-family:var(--display);font-size:clamp(40px,8vw,66px);line-height:1.02;font-weight:500;letter-spacing:-.018em}
+h1 .nt{color:var(--n-term)} h1 .ct{color:var(--c-term)}
+.standfirst{font-family:var(--display);font-size:clamp(18px,2.6vw,21px);line-height:1.5;color:var(--muted);
+  margin-top:20px;max-width:60ch}
+.stamp{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:26px;font-size:12.5px;color:var(--faint);
+  font-family:var(--mono)}
+
+/* ---- thesis ---- */
+.thesis{padding-block:34px;border-bottom:1px solid var(--rule)}
+.thesis p{margin:0 0 14px;max-width:66ch}
+.thesis p:last-child{margin-bottom:0}
+.pull{font-family:var(--display);font-size:clamp(21px,3.4vw,27px);line-height:1.34;font-weight:500;
+  margin:0 0 18px;max-width:24ch;letter-spacing:-.01em}
+
+/* ---- notice ---- */
+.notice{background:var(--warn-bg);border:1px solid var(--warn-rule);border-radius:7px;
+  padding:18px 20px;margin-block:30px}
+.notice .lab{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--amber);font-weight:500}
+.notice h3{font-family:var(--display);font-size:20px;font-weight:600;margin:7px 0 8px}
+.notice p{margin:0;font-size:14.5px;color:var(--muted);max-width:62ch}
+
+/* ---- progress ---- */
+.prog{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--ground);
+  border-bottom:1px solid var(--rule);padding-block:11px;
+  display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.prog .bar{flex:1 1 180px;min-width:0;height:4px;background:var(--rule);border-radius:3px;overflow:hidden}
+.prog .fill{height:100%;width:0;border-radius:3px;
+  background:linear-gradient(90deg,var(--n-term),var(--cyan),var(--green),var(--amber),var(--c-term));
+  transition:width .3s ease}
+.prog .count{font-family:var(--mono);font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.prog button{font-family:var(--mono);font-size:11.5px;color:var(--faint);background:none;
+  border:1px solid var(--rule);border-radius:4px;padding:4px 9px;cursor:pointer}
+.prog button:hover{color:var(--ink);border-color:var(--faint)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);
+  z-index:11;background:var(--ground)}
+
+/* ---- phases: the chain ---- */
+.phase{position:relative;padding-block:38px;padding-left:46px;border-bottom:1px solid var(--rule-soft)}
+.phase::before{content:"";position:absolute;left:11px;top:52px;bottom:-1px;width:2px;background:var(--rule)}
+.phase:last-of-type::before{bottom:auto;height:26px}
+.phase::after{content:"";position:absolute;left:5px;top:40px;width:14px;height:14px;border-radius:50%;
+  background:var(--pc);box-shadow:0 0 0 4px var(--ground)}
+.p1{--pc:var(--n-term);--accent:var(--n-term)}
+.p2{--pc:var(--cyan);--accent:var(--cyan)}
+.p3{--pc:var(--green);--accent:var(--green)}
+.p4{--pc:var(--amber);--accent:var(--amber)}
+.p5{--pc:var(--c-term);--accent:var(--c-term)}
+.ph-meta{font-family:var(--mono);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--pc);font-weight:500;display:flex;gap:14px;flex-wrap:wrap}
+.phase h2{font-family:var(--display);font-size:clamp(26px,4.4vw,34px);font-weight:500;
+  letter-spacing:-.015em;margin:9px 0 10px;line-height:1.14}
+.lede{color:var(--muted);margin:0 0 22px;max-width:64ch}
+
+/* ---- steps ---- */
+.step{display:flex;gap:13px;align-items:flex-start;padding:13px 0;border-top:1px solid var(--rule-soft)}
+.step:first-of-type{border-top:0}
+.step input{appearance:none;flex:0 0 17px;width:17px;height:17px;margin-top:3px;border:1.5px solid var(--rule);
+  border-radius:4px;cursor:pointer;background:var(--panel);transition:.15s}
+.step input:hover{border-color:var(--pc)}
+.step input:checked{background:var(--pc);border-color:var(--pc)}
+.step input:checked::after{content:"";display:block;width:4px;height:8px;margin:2px auto 0;
+  border:solid var(--panel);border-width:0 2px 2px 0;transform:rotate(43deg)}
+.step .txt{flex:1 1 auto;min-width:0}
+.step input:checked + .txt{opacity:.5}
+.step .hd{font-weight:600;font-size:15px;margin-bottom:3px}
+.step .bd{font-size:14px;color:var(--muted)}
+.step .bd p{margin:0 0 6px}
+.step .bd p:last-child{margin-bottom:0}
+
+/* ---- tables ---- */
+.scroll{overflow-x:auto;margin-block:20px;border:1px solid var(--rule);border-radius:7px;background:var(--panel)}
+table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:480px}
+th,td{text-align:left;padding:9px 13px;border-bottom:1px solid var(--rule-soft);vertical-align:top}
+th{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);
+  font-weight:500;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+td strong{font-weight:600}
+.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* ---- tags ---- */
+.tag{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;
+  padding:2px 6px;border-radius:3px;border:1px solid var(--rule);color:var(--faint);white-space:nowrap}
+.tag.pr{color:var(--green);border-color:color-mix(in srgb,var(--green) 40%,transparent)}
+.tag.co{color:var(--amber);border-color:color-mix(in srgb,var(--amber) 40%,transparent)}
+
+/* ---- generic section ---- */
+.sec{padding-block:38px;border-bottom:1px solid var(--rule-soft)}
+.sec h2{font-family:var(--display);font-size:clamp(25px,4vw,32px);font-weight:500;letter-spacing:-.015em;
+  margin:0 0 10px}
+.sec > p{color:var(--muted);max-width:64ch;margin:0 0 16px}
+.wrong{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));margin-top:22px}
+.wrong .c{background:var(--panel);border:1px solid var(--rule);border-radius:7px;padding:15px 17px}
+.wrong .c h4{margin:0 0 6px;font-size:14.5px;font-weight:600}
+.wrong .c p{margin:0;font-size:13.5px;color:var(--muted)}
+
+footer{padding-block:34px 56px;font-size:13px;color:var(--faint)}
+footer p{margin:0 0 10px;max-width:68ch}
+footer a{color:var(--faint)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<div class="wrap">
+
+<header class="mast">
+  <div class="alphabet">A C D E F G H I K L M N P Q R S T V W Y</div>
+  <h1><span class="nt">N</span> to <span class="ct">C</span></h1>
+  <p class="standfirst">A working route into protein engineering for someone who already builds models. Twenty tokens, no grammar, and a feedback loop measured in weeks.</p>
+  <div class="stamp">
+    <span>Verified 5 Nov 2026</span>
+    <span>~3 months to competence</span>
+    <span>Checkboxes save locally</span>
+  </div>
+</header>
+
+<section class="thesis">
+  <p class="pull">This is not a prediction problem.</p>
+  <p>It is a design–build–test–learn loop where the cycle time is weeks, the batch size is tiny, and the measurements are noisy. The machine learning that transfers is active learning, Bayesian optimisation and experimental design under a brutal budget — not supervised learning at scale.</p>
+  <p>One number explains the whole field. There are about <strong>150 million</strong> protein sequences in UniProt and about <strong>263,000</strong> experimentally determined structures in the PDB. Function labels are scarcer still, and almost every one is specific to the assay that produced it. You will never have enough labels. Everything below follows from that.</p>
+  <p>The other thing to internalise early: you do not need a biology degree. You need a different, smaller, stranger subset of biology than a bench scientist carries. As one computational scientist embedded in a protein lab put it, <em>the biology a computational biologist needs to know is not necessarily the same as an experimental biologist needs to know.</em></p>
+</section>
+
+<div class="notice">
+  <div class="lab">Closes in 3 days</div>
+  <h3>Free wet-lab validation of your designs, right now</h3>
+  <p>The Anthropic × Adaptyv protein design competition tests entries at no cost to you. Challenge 5 (KRAS G12D pMHC) closes <strong>23:59 Anywhere-on-Earth, 8 November 2026</strong>; Track 3 is the open track for anyone using their own tools, with no guaranteed testing allocation. Results publish on Proteinbase on 15 December. If you want to skip to Phase 3 and actually close a loop, this is the cheapest door that will ever be open. <a href="https://adaptyvbio.com" target="_blank" rel="noopener">adaptyvbio.com</a></p>
+</div>
+
+<div class="prog">
+  <span class="count" id="count">0 / 0 done</span>
+  <div class="bar"><div class="fill" id="fill"></div></div>
+  <button id="reset" type="button">Reset</button>
+</div>
+
+<!-- PHASE 1 -->
+<section class="phase p1">
+  <div class="ph-meta"><span>Phase 1</span><span>One weekend</span></div>
+  <h2>Run the stack before you read about it</h2>
+  <p class="lede">Reading first is the slow path. Run four things on one protein and the shape of the field becomes physical in an afternoon.</p>
+
+  <div class="step"><input type="checkbox" id="s1"><label class="txt" for="s1">
+    <div class="hd">Fold something you already care about</div>
+    <div class="bd"><p>Open <a href="https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/ColabFold2_preview.ipynb" target="_blank" rel="noopener">ColabFold2_preview</a> — added September 2026, it gives you <strong>18 sets of weights in one notebook</strong>: AlphaFold 3, OpenBind-0, Boltz-2, Protenix, RoseTTAFold3, Chai-1, ESMFold2. Fold a monomer, then a two-chain complex. Watch the confidence scores and notice they are honest about the complex.</p></div>
+  </label></div>
+
+  <div class="step"><input type="checkbox" id="s2"><label class="txt" for="s2">
+    <div class="hd">Check whether the structure already exists</div>
+    <div class="bd"><p><a href="https://alphafold.ebi.ac.uk" target="_blank" rel="noopener">AlphaFold DB</a> holds over 260 million predictions under CC-BY-4.0. For most proteins the answer is already computed, free, and commercially usable. Knowing this saves you from burning a GPU on a solved problem.</p></div>
+  </label></div>
+
+  <div class="step"><input type="checkbox" id="s3"><label class="txt" for="s3">
+    <div class="hd">Score mutations with no labels at all</div>
+    <div class="bd"><p>Run <a href="https://huggingface.co/facebook/esm2_t33_650M_UR50D" target="_blank" rel="noopener">ESM-2 650M</a> and read masked-token likelihoods across a sequence. Zero-shot variant-effect prediction works, with no training data, and that single observation is the most important intuition in the field.</p>
+    <p><em>Note:</em> ESM moved. EvolutionaryScale is now part of Chan Zuckerberg Biohub, and the ESM-3 and ESM-C weights were <strong>relicensed to MIT</strong> — the old non-commercial Cambrian terms are marked legacy. The 2022 ESM-2 repo has been archived read-only since August 2024; it still works and is still the standard baseline.</p></div>
+  </label></div>
+
+  <div class="step"><input type="checkbox" id="s4"><label class="txt" for="s4">
+    <div class="hd">Design a binder</div>
+    <div class="bd"><p>The <a href="https://colab.research.google.com/github/martinpacesa/BindCraft/blob/main/notebooks/BindCraft.ipynb" target="_blank" rel="noopener">BindCraft notebook</a> is the best-maintained free binder-design Colab and it is official, not community-run. It is slow on free Colab, which is itself informative. BindCraft is MIT but installs PyRosetta, which is non-commercial only — check that before you build anything on it.</p></div>
+  </label></div>
+
+  <div class="step"><input type="checkbox" id="s5"><label class="txt" for="s5">
+    <div class="hd">Write down what surprised you</div>
+    <div class="bd"><p>Usually: how good zero-shot is, how bad complexes are, and how little of this is a modelling problem.</p></div>
+  </label></div>
+</section>
+
+<!-- PHASE 2 -->
+<section class="phase p2">
+  <div class="ph-meta"><span>Phase 2</span><span>Weeks 1–4</span></div>
+  <h2>Learn the three paradigms and the shape of the data</h2>
+  <p class="lede">Now the reading pays off, because you have something to hang it on.</p>
+
+  <div class="step"><input type="checkbox" id="s6"><label class="txt" for="s6">
+    <div class="hd">Watch Frances Arnold's Nobel lecture</div>
+    <div class="bd"><p><a href="https://www.nobelprize.org/prizes/chemistry/2018/arnold/lecture/" target="_blank" rel="noopener">Innovation by Evolution: Bringing New Chemistry to Life</a>. The highest-return hour in the subject. Her entire argument is <em>we cannot predict, so we evolve</em> — made by someone who tried the rational way first and watched it fail.</p></div>
+  </label></div>
+
+  <div class="step"><input type="checkbox" id="s7"><label class="txt" for="s7">
+    <div class="hd">Be able to name the three paradigms</div>
+    <div class="bd">
+      <p><strong>Directed evolution.</strong> Mutate, screen, keep winners, repeat. Deliberately gives up on understanding. Won a Nobel. Still the default that works.</p>
+      <p><strong>Rational design.</strong> Understand the mechanism, make targeted mutations. Intuitive to engineers, and it mostly fails.</p>
+      <p><strong>Generative design.</strong> Now genuinely real, at the hit rates in the reality check below.</p>
+    </div>
+  </label></div>
+
+  <div class="step"><input type="checkbox" id="s8"><label class="txt" for="s8">
+    <div class="hd">Take the Rosetta Commons bootcamp</div>
+    <div class="bd"><p>The <a href="https://www.youtube.com/playlist?list=PLFavr8uo6kSr9ms7g7eQI5CqAJSP8kpf7" target="_blank" rel="noopener">ML Protein Design Bootcamp</a> — free on YouTube since April 2026, and the single best structured course for your background. Covers AlphaFold, ESMFold, ProteinMPNN, RFdiffusion and the workflows that join them. Assumes Python, PyMOL and a command line.</p>
+    <p>Avoid the commonly recommended MIT 6.874 — its public material stops at Spring 2021. The current MIT course is GenAI4Bio, and its materials are behind Canvas. <a href="https://web.stanford.edu/class/cs279" target="_blank" rel="noopener">Stanford CS279</a> posts its slides publicly and covers protein design.</p></div>
+  </label></div>
+
+  <div class="step"><input type="checkbox" id="s9"><label class="txt" for="s9">
+    <div class="hd">Read one orientation review, not five</div>
+    <div class="bd">
+      <p><strong>For the design side:</strong> "The past, present and future of de novo protein design," <em>Nature</em> 652:1139–1152, April 2026 <span class="tag pr">peer-reviewed</span>. Its thesis is that the field has largely solved <em>how</em> to design binders, so the open question is <em>what</em> to design. Paywalled.</p>
+      <p><strong>For the field:</strong> "Protein engineering: status report," <em>PEDS</em> 39:gzag020, July 2026, 81 authors including Arnold <span class="tag pr">peer-reviewed</span>.</p>
+      <p><strong>The corrective:</strong> Wittmann, <a href="https://arxiv.org/abs/2609.03046" target="_blank" rel="noopener">"Advances in Machine Learning for Directed Evolution: A Five-Year Retrospective"</a> (free). Argues ML-guided directed evolution has underdelivered on a goals mismatch — researchers chase an <em>optimal</em> protein while directed evolution only needs a <em>sufficient</em> one — and that nearly every method ignores DNA synthesis cost. Read this before you trust the MLDE literature.</p>
+    </div>
+  </label></div>
+
+  <div class="step"><input type="checkbox" id="s10"><label class="txt" for="s10">
+    <div class="hd">Benchmark yourself on ProteinGym</div>
+    <div class="bd"><p><a href="https://proteingym.org" target="_blank" rel="noopener">ProteinGym</a> v1.3: 217 deep mutational scanning assays, about 2.7 million variants. This is the dataset that teaches you what a function label actually is — assay-specific, noisy, and poorly transferable. Expect zero-shot to be competitive with supervised.</p>
+    <p>Then note what <a href="https://proceedings.mlr.press/v306/didi26a.html" target="_blank" rel="noopener">FLIP2</a> (ICML 2026) found: <strong>simpler models often matched or beat fine-tuned protein language models</strong>. The repo's front page is still 2021-era, so this is easy to miss.</p></div>
+  </label></div>
+
+  <div class="step"><input type="checkbox" id="s11"><label class="txt" for="s11">
+    <div class="hd">Learn what an assay costs</div>
+    <div class="bd"><p>This single piece of knowledge separates people who are useful here from people who are not. See the costs table below. The gap between <em>what can be measured at scale</em> and <em>what you actually care about</em> is the entire field.</p></div>
+  </label></div>
+</section>
+
+<!-- PHASE 3 -->
+<section class="phase p3">
+  <div class="ph-meta"><span>Phase 3</span><span>Weeks 5–12</span></div>
+  <h2>Close one real loop</h2>
+  <p class="lede">You cannot become competent without this, because the knowledge is tacit and lives in what goes wrong. The good news is that you no longer need a lab — you can buy the wet half.</p>
+
+  <div class="step"><input type="checkbox" id="s12"><label class="txt" for="s12">
+    <div class="hd">Pick a target with a known positive control</div>
+    <div class="bd"><p>Choose something with a published binder you can run alongside yours. Polar and membrane targets are where everything fails; so is maltose binding protein, which yielded zero binders in two separate 2026 campaigns. Start somewhere kind.</p></div>
+  </label></div>
+
+  <div class="step"><input type="checkbox" id="s13"><label class="txt" for="s13">
+    <div class="hd">Generate designs with a current tool</div>
+    <div class="bd">
+      <p><strong><a href="https://github.com/HannesStark/boltzgen" target="_blank" rel="noopener">BoltzGen</a></strong> (MIT) is the most active open binder codebase. Local only — there is no Colab and no official server, whatever a guide tells you. First run downloads about 39 GB; a 40 GB A100 is the comfortable floor.</p>
+      <p><strong><a href="https://github.com/RosettaCommons/RFD4-Proteina" target="_blank" rel="noopener">RFD4-Proteina</a></strong> (BSD-3, Baker Lab with NVIDIA, October 2026) is the newest and leanest — it co-designs sequence and structure together, so there is no separate ProteinMPNN step. Company-reported peak memory is 1.36 GB for a 200-residue design, against 8.50 GB for its predecessor. <span class="tag co">preprint</span></p>
+      <p><strong><a href="https://protenix-server.com" target="_blank" rel="noopener">PXDesign's free server</a></strong> needs no GPU at all, and PXDesign is Apache-2.0, the cleanest licence of the strong options.</p>
+    </div>
+  </label></div>
+
+  <div class="step"><input type="checkbox" id="s14"><label class="txt" for="s14">
+    <div class="hd">Cluster before you order</div>
+    <div class="bd"><p>Cluster passing designs at TM-score around 0.6 or you will buy the same binder twenty times. And do not trust a single in-silico verifier: ProtDBench found that verifiers show substantial bias and limited agreement under identical filtering, and that success-rate rankings disagree with throughput rankings.</p></div>
+  </label></div>
+
+  <div class="step"><input type="checkbox" id="s15"><label class="txt" for="s15">
+    <div class="hd">Buy the wet lab</div>
+    <div class="bd">
+      <p><a href="https://adaptyvbio.com/services/binding" target="_blank" rel="noopener">Adaptyv Bio</a> will synthesise and test your designs — DNA design and ordering, cell-free expression, and a label-free binding assay. <strong>From $99 per protein</strong>, or $169 per sequence for full affinity characterisation giving you real K<sub>D</sub>, k<sub>on</sub> and k<sub>off</sub>. Turnaround is <strong>3–4 weeks</strong>. There is a 20% discount if you publish results to Proteinbase, and an API since April 2026.</p>
+      <p>One caveat: no minimum order is published, but the quantity selector starts at 20 and defaults to 60, so a single-digit order may not be purchasable. Budget roughly $3,400 for a 20-sequence run with full affinity data.</p>
+      <p>No competitor offers this to individuals at a published price. Tierra is now Revr and publishes nothing; Proteos is now TrueCourse and is quote-only.</p>
+    </div>
+  </label></div>
+
+  <div class="step"><input type="checkbox" id="s16"><label class="txt" for="s16">
+    <div class="hd">Expect to fail, and calibrate on it</div>
+    <div class="bd"><p>The best worked example of one person running this end to end is the <a href="https://blog.booleanbiotech.com" target="_blank" rel="noopener">Boolean Biotech VHH competition</a>, posted April 2026: design a nanobody, submit a script, $50–100 of compute per design. <strong>None of the tested designs bound.</strong> That is a normal outcome and worth reading before you spend money.</p></div>
+  </label></div>
+</section>
+
+<!-- PHASE 4 -->
+<section class="phase p4">
+  <div class="ph-meta"><span>Phase 4</span><span>Ongoing</span></div>
+  <h2>Enter blind competitions, not benchmarks</h2>
+  <p class="lede">Retrospective benchmarks are contaminated. Prospective, wet-lab-validated competitions are the only honest scoreboard, and this became a real genre in 2025–26.</p>
+
+  <div class="step"><input type="checkbox" id="s17"><label class="txt" for="s17">
+    <div class="hd">Enter one</div>
+    <div class="bd"><p>The Anthropic × Adaptyv challenges run now (Challenge 5 closes 8 November). <a href="https://www.ebi.ac.uk/pdbe/complex-pred/capri" target="_blank" rel="noopener">CAPRI Round 66</a> is open, with registration to 19 November and predictions 2–20 November — it is nanobody–antigen interaction sites this round. Both give you a calibrated, public score.</p></div>
+  </label></div>
+
+  <div class="step"><input type="checkbox" id="s18"><label class="txt" for="s18">
+    <div class="hd">Read the one independent community benchmark</div>
+    <div class="bd"><p>"Bits to Binders," <em>Molecular Systems Biology</em>, October 2026 <span class="tag pr">peer-reviewed</span>: <strong>12,000 designs from 42 countries</strong> against human CD20, scored by a functional CAR-T proliferation assay rather than binding alone. Aggregate hit rate <strong>5.9%</strong>; per-team spread <strong>0.6% to 38.4%</strong>. This is what a competent non-expert should actually expect, and it is the honest counterweight to every vendor number.</p></div>
+  </label></div>
+
+  <div class="step"><input type="checkbox" id="s19"><label class="txt" for="s19">
+    <div class="hd">Know where the field keeps score</div>
+    <div class="bd"><p><a href="https://predictioncenter.org/casp17/" target="_blank" rel="noopener">CASP17</a> closed 11 September 2026 — 244 groups, 82,806 submissions. Results are not public yet, so treat any claimed CASP17 finding as unsourced. CASP16 (2024) concluded that <strong>single-chain folding is close to solved and complexes are not</strong>. <a href="https://proteinbase.com" target="_blank" rel="noopener">Proteinbase</a> now indexes 3,000+ wet-lab-validated designs with measured affinities.</p></div>
+  </label></div>
+</section>
+
+<!-- REALITY CHECK -->
+<section class="sec">
+  <h2>The reality check</h2>
+  <p>Published hit rates differ by up to a thousand-fold, and almost none of them are comparable. Before quoting any number, check the assay, the stringency, whether there is an affinity threshold at all, the denominator, and whether the construct was bivalent.</p>
+
+  <div class="scroll"><table>
+    <thead><tr><th>Method</th><th>Hit rate</th><th>What counts as a hit</th><th>Evidence</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Bits to Binders</strong><br>12,000 community designs</td><td class="num">5.9%</td><td>Functional enrichment in a pooled CAR-T screen</td><td><span class="tag pr">peer-reviewed</span> independent</td></tr>
+      <tr><td><strong>RFdiffusion</strong> minibinders</td><td class="num">19%</td><td>Single-point BLI at 10 µM, ≥50% of control</td><td><span class="tag pr">peer-reviewed</span> the baseline</td></tr>
+      <tr><td><strong>BindCraft</strong></td><td class="num">10–100%<br>avg 46.3%</td><td>Binding on SPR, but over only 7–53 heavily filtered designs per target; one target used a bivalent Fc fusion</td><td><span class="tag pr">peer-reviewed</span> not comparable to the row above</td></tr>
+      <tr><td><strong>RFantibody</strong> (de novo antibodies)</td><td class="num">0–2%</td><td>SPR with specificity controls, from <strong>9,000 designs per target</strong></td><td><span class="tag pr">peer-reviewed</span></td></tr>
+      <tr><td><strong>Germinal</strong> (de novo antibodies)</td><td class="num">4–22%</td><td>Luciferase prescreen, then BLI, 43–101 designs per antigen</td><td><span class="tag pr">peer-reviewed</span> best reviewed antibody rate</td></tr>
+      <tr><td><strong>Chai-2</strong> (antibodies)</td><td class="num">15.5%</td><td>One-point BLI, <strong>no affinity threshold</strong> — a 3.3 µM hit is counted. ≤20 designs per target</td><td><span class="tag co">company preprint</span> unreplicated since Jul 2025</td></tr>
+      <tr><td><strong>AlphaProteo</strong></td><td class="num">0–88%</td><td>Yeast-display signal &gt;0.2. Zero on TNFα</td><td><span class="tag co">company report</span> never released</td></tr>
+      <tr><td>Independent test of BindCraft peptides</td><td class="num">0% on 2 of 4</td><td>No detectable binding for PD-1 or PD-L1; 0 at WDR5's intended site</td><td><span class="tag pr">peer-reviewed</span> independent</td></tr>
+    </tbody>
+  </table></div>
+
+  <p>The defensible summary: <strong>peer-reviewed minibinder pipelines report roughly 5–50% of assayed designs showing detectable binding, usually between 10 nM and 1 µM, with the honest community aggregate near 6%. Peer-reviewed de novo antibody design needs thousands of designs per target at a 0–2% hit rate. Company claims of 15–35% at twenty designs per target exist, and none has been peer-reviewed or independently reproduced.</strong></p>
+</section>
+
+<!-- WHAT ML PEOPLE GET WRONG -->
+<section class="sec">
+  <h2>What people from your background get wrong</h2>
+  <div class="wrong">
+    <div class="c"><h4>Treating it as Kaggle</h4><p>Benchmarks are contaminated and labels contradict each other. The same molecule appears in standard sets labelled both ways for the same property. Reported accuracy partly measures how well you fitted the contradiction.</p></div>
+    <div class="c"><h4>Optimising affinity</h4><p>Your design has to express, stay soluble, and survive formulation. Aggregation, viscosity and immunogenicity kill more candidates than weak binding does, and almost no model addresses them.</p></div>
+    <div class="c"><h4>Assuming mutations add up</h4><p>Epistasis is the norm. The landscape is rugged, so linear intuitions mislead and a double mutant is routinely worse than either single.</p></div>
+    <div class="c"><h4>Trusting the assay</h4><p>Two measurements of the same compound against the same target in the main public database agree at about R² 0.3. A model that reproduced that database perfectly would score about 0.3. Published models score about 0.3.</p></div>
+    <div class="c"><h4>Ignoring synthesis cost</h4><p>Nearly every ML-guided directed evolution method proposes libraries nobody can afford to build. Cost is a first-class constraint, not an afterthought.</p></div>
+    <div class="c"><h4>Chasing optimal</h4><p>Directed evolution wants a <em>sufficient</em> protein under constraints, not an optimal one. The goals mismatch is the single most-cited reason this literature has underdelivered.</p></div>
+  </div>
+</section>
+
+<!-- COSTS -->
+<section class="sec">
+  <h2>What it costs, late 2026</h2>
+  <p>List prices, verified today. The cheapest full loop — design, synthesise, express, measure — is a few thousand dollars and about a month.</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Step</th><th>Vendor</th><th>Price</th><th>Turnaround</th></tr></thead>
+    <tbody>
+      <tr><td>Gene fragment</td><td>IDT eBlocks</td><td class="num">$0.07/bp</td><td class="num">1–3 days</td></tr>
+      <tr><td>Cloned construct, ≤800 bp<br><span style="color:var(--faint)">cloning + 4 µg plasmid included</span></td><td>GenScript FLASH</td><td class="num">$89</td><td class="num">4 days</td></tr>
+      <tr><td>Expression only</td><td>Adaptyv</td><td class="num">from $49/protein</td><td class="num">2–3 weeks</td></tr>
+      <tr><td>Expression + binding yes/no</td><td>Adaptyv</td><td class="num">from $99/protein</td><td class="num">3–4 weeks</td></tr>
+      <tr><td>Full affinity (K<sub>D</sub>, k<sub>on</sub>, k<sub>off</sub>)</td><td>Adaptyv</td><td class="num">$169/sequence</td><td class="num">3–4 weeks</td></tr>
+      <tr><td>Small-scale expression, ≤15 kDa</td><td>Synbio HX-15Pro</td><td class="num">from $1,299</td><td class="num">4+ weeks</td></tr>
+      <tr><td>Design compute, one target</td><td>Any cloud A100</td><td class="num">~$200</td><td class="num">24 h</td></tr>
+    </tbody>
+  </table></div>
+  <p>At scale it gets much cheaper: one peer-reviewed 2026 pipeline reports <strong>$5 per construct at over 1,000 designs, 48 hours end to end</strong>. Commercial SPR and BLI pricing is now almost entirely quote-only — use a university core facility rate card as your anchor.</p>
+</section>
+
+<!-- CLOSING -->
+<section class="sec" style="border-bottom:0">
+  <h2>The asymmetry nobody mentions</h2>
+  <p>There is no published first-person account of a wet-lab biologist who learned to build models. Every substantial crossing-over narrative runs in your direction. That is an advantage — the path is worn and people will help you walk it — and it is also a quiet warning about who ends up holding the judgement in these partnerships.</p>
+  <p>The best-documented successful pairing in the literature describes itself not as complementary skills but as <em>deliberately engineered conflict</em>: arranging circumstances where a data scientist and a chemist must disagree and work it out. Plan for that rather than for a clean division of labour.</p>
+</section>
+
+<footer>
+  <p><strong>On the evidence.</strong> Every tool version, licence, URL and price here was checked against a primary source on 5 November 2026 — GitHub repositories and raw licence files, model cards, vendor pricing pages and publisher records. Tags mark <span class="tag pr">peer-reviewed</span> against <span class="tag co">company-reported</span>, because in this field the gap between the two is often a thousand-fold.</p>
+  <p>Two things move fastest and will rot first: the design-tool landscape, where the frontier generator changed in October 2026, and vendor pricing. Re-check both before relying on them. CASP17 results were not public at the time of writing, so any CASP17 claim you encounter is unsourced.</p>
+  <p>Progress checkboxes are stored in your own browser only. They are not shared and not visible to anyone else.</p>
+</footer>
+
+</div>
+
+<script>
+(function(){
+  var KEY="n2c-progress-v1";
+  var boxes=Array.prototype.slice.call(document.querySelectorAll('.step input[type=checkbox]'));
+  var countEl=document.getElementById('count'), fillEl=document.getElementById('fill');
+
+  function load(){
+    try{ var raw=localStorage.getItem(KEY); return raw?JSON.parse(raw):{}; }
+    catch(e){ return {}; }
+  }
+  function save(state){
+    try{ localStorage.setItem(KEY,JSON.stringify(state)); }catch(e){}
+  }
+  function render(){
+    var done=boxes.filter(function(b){return b.checked}).length;
+    countEl.textContent=done+" / "+boxes.length+" done";
+    fillEl.style.width=(boxes.length?(done/boxes.length*100):0)+"%";
+  }
+
+  var state=load();
+  boxes.forEach(function(b){
+    if(state[b.id]) b.checked=true;
+    b.addEventListener('change',function(){
+      state[b.id]=b.checked;
+      save(state); render();
+    });
+  });
+  document.getElementById('reset').addEventListener('click',function(){
+    boxes.forEach(function(b){b.checked=false});
+    state={}; save(state); render();
+  });
+  render();
+})();
+</script>
+
+</body>
+</html>
