@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Research notes on AI in drug design: how the design and filtering machinery works, and what companies in the field actually had in hand when they first raised money.">
+<title>AI and Drug Design</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="topbar"><div class="wrap">
+  <a href="../">&larr; haixun.github.io</a>
+  <span class="crumb"><b>AI and Drug Design</b></span>
+</div></nav>
+
+<header class="mast"><div class="wrap">
+  <p class="kicker">Research notes &middot; November 2026</p>
+  <h1>AI and Drug Design</h1>
+  <p class="lede">Two questions, worked through in some detail. How does the machinery
+  actually function &mdash; structure prediction, protein design, and the filtering that
+  stands between a designed molecule and a wet-lab experiment? And what did the companies
+  in this field actually have in hand when they first raised money?</p>
+</div></header>
+
+<div class="wrap">
+
+<p class="section-label">Start here</p>
+<p class="section-note">Written for a reader who builds machine learning models but has
+not done protein engineering.</p>
+
+<ul class="cards">
+  <li class="card">
+    <h3><a href="../protein-engineering.html">N to C</a></h3>
+    <p>A verified, step-by-step route into protein engineering for someone who already
+    builds models. The on-ramp: what to learn, in what order, and what to skip.</p>
+    <div class="meta"><span>On-ramp</span><span>Earlier page</span></div>
+  </li>
+  <li class="card">
+    <h3><a href="computational-drug-design-primer.html">How a Designed Molecule Becomes a Candidate</a></h3>
+    <p>The mechanism, end to end. What binding is physically and why a tenfold change in
+    affinity is only 1.4 kcal/mol; what structure predictors do and the four things they
+    are still bad at; steering them with restraints; three generations of binder-design
+    method; the filtering funnel before the wet lab; and why antibiotics are the hard
+    case. Ends with a glossary.</p>
+    <div class="meta"><span>Primer</span><span>7,600 words</span><span>13 sections</span></div>
+  </li>
+</ul>
+
+<p class="section-label">The financing study</p>
+<p class="section-note">What AI-for-drug companies had at their first institutional round,
+who their founders were, and how much they raised. Scope is protein and antibody design
+plus extracellular protein degradation.</p>
+
+<ul class="cards">
+  <li class="card wide">
+    <h3><a href="what-gets-funded-at-seed.html">What Gets Funded at Seed in AI Drug Design</a></h3>
+    <p>The synthesis. The first institutional round lands at the bottom two rungs of a
+    seven-rung evidence ladder, and twice arrived <em>before</em> the paper the whole
+    thesis rested on was published. Evidence in hand turns out to be inversely correlated
+    with money raised. Announced amounts run about twice what is actually drawn. The
+    median seed is $7.0M. And what moves a round by three orders of magnitude is a venture
+    firm deciding to build around a laboratory &mdash; not the professor's participation.</p>
+    <div class="meta"><span>Synthesis</span><span>6,400 words</span><span>14 findings</span></div>
+  </li>
+</ul>
+
+<p class="section-label">Evidence files</p>
+<p class="section-note">The research behind the synthesis, one file per front, about
+143,000 words in total. These are reference documents rather than essays: every figure
+is labelled company-reported or independently verifiable, gaps are written as
+&ldquo;not found&rdquo; rather than estimated, and each file ends with its own conflicts
+and sources.</p>
+
+<ul class="cards">
+  <li class="card">
+    <h3><a href="seed-protein-design-companies.html">Protein and Antibody Design Companies</a></h3>
+    <p>47 companies, with the evidence that existed at the first round, the amount, and the
+    founders' credentials for each. Also the finding that press-release round labels
+    silently compress tranches months apart, which only filings reveal.</p>
+    <div class="meta"><span>47 companies</span><span>24,700 words</span></div>
+  </li>
+  <li class="card">
+    <h3><a href="seed-extracellular-degraders.html">Extracellular and Targeted Degraders</a></h3>
+    <p>19 companies, built from SEC prospectuses, annual reports and every Form D read in
+    full, plus registry and publication dates. The segment where a $1bn acquisition
+    happened with no candidate molecule ever disclosed.</p>
+    <div class="meta"><span>19 companies</span><span>30,000 words</span></div>
+  </li>
+  <li class="card">
+    <h3><a href="seed-founder-credentials.html">Founder Credentials</a></h3>
+    <p>The archetypes, the laboratory lineages, and the honest answer on whether anyone
+    without biology credentials has raised a seed to develop drugs. Includes the
+    methodological trap that &ldquo;co-founder&rdquo; is a claim, not a fact.</p>
+    <div class="meta"><span>Archetypes</span><span>19,500 words</span></div>
+  </li>
+  <li class="card">
+    <h3><a href="seed-round-mechanics-and-investors.html">Round Mechanics and Investors</a></h3>
+    <p>Why classic biotech often has no seed round at all, the amount distributions
+    computed from a deal list rather than quoted as an average, tranche rates, and who
+    actually leads these rounds &mdash; which is not who talks about them.</p>
+    <div class="meta"><span>Mechanics</span><span>14,900 words</span></div>
+  </li>
+  <li class="card">
+    <h3><a href="seed-failures-and-survivorship.html">Failures and Survivorship</a></h3>
+    <p>The correction to any study of survivors. Named failures and stalls, the revised
+    clinical success rates, how to detect a company that has quietly stopped, and the gap
+    between what gets reported and what replicates.</p>
+    <div class="meta"><span>Base rates</span><span>34,400 words</span></div>
+  </li>
+  <li class="card">
+    <h3><a href="seed-investor-requirements.html">What Investors Say They Require</a></h3>
+    <p>The same question asked from the investors' side, in their own published words. The
+    central finding is an absence: nobody publishes a data threshold, and nobody tests
+    whether the AI is load-bearing.</p>
+    <div class="meta"><span>Stated criteria</span><span>19,600 words</span></div>
+  </li>
+</ul>
+
+<div class="note">
+  <p><strong>On the evidence.</strong> The financing study rests largely on primary
+  sources &mdash; SEC filings, Companies House, ClinicalTrials.gov, Europe PMC, FDA
+  approval lists and domain registry records &mdash; because a search budget ran out
+  early and pushed the work onto filings instead. Several of the strongest findings,
+  particularly the gap between announced and drawn amounts, exist only for that reason.
+  The same constraint means companies nobody named in advance were incompletely swept,
+  and a substantial Chinese and Korean cohort is not covered at all. Every clinical
+  percentage quoted anywhere in these documents is company-reported, open-label and
+  small-n; the two most-cited efficacy figures in the degrader segment rest on about six
+  and five participants respectively. Each document states its own limits.</p>
+</div>
+
+</div>
+
+<footer><div class="wrap">
+  <p>Haixun Wang &middot; November 2026</p>
+  <p>Rendered from Markdown research notes by <code>build.py</code> in this directory.</p>
+</div></footer>
+
+</body>
+</html>

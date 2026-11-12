@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="A synthesis written November 11, 2026, on what AI-for-drug-discovery companies actually had in hand when they raised their first institutional round, who their founders were, and how much they...">
+<title>What Gets Funded at Seed in AI Drug Design</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="topbar"><div class="wrap">
+  <a href="index.html">&larr; All documents</a>
+  <span class="crumb">Study &middot; <b>What Gets Funded at Seed in AI Drug Design</b></span>
+</div></nav>
+
+<header class="mast"><div class="wrap">
+  <p class="kicker">Study</p>
+  <h1>What Gets Funded at Seed in AI Drug Design</h1>
+  <p class="standfirst">A synthesis written November 11, 2026, on what AI-for-drug-discovery companies actually had in hand when they raised their first institutional round, who their founders were, and how much they raised. It is built from six evidence files in <code>sources/</code> (<code>seed-protein-design-companies.md</code>, <code>seed-extracellular-degraders.md</code>, <code>seed-founder-credentials.md</code>, <code>seed-round-mechanics-and-investors.md</code>, <code>seed-failures-and-survivorship.md</code>, <code>seed-investor-requirements.md</code>) totalling about 143,000 words, compiled the same week from SEC EDGAR filings, UK Companies House, ClinicalTrials.gov, Europe PMC, FDA approval lists, domain registry records and company sources. Those files carry the sourcing; this document carries the argument. It is the financing companion to <code>landscape.md</code>, which maps where AI enters drug discovery, and to <a href="computational-drug-design-primer.html"><code>computational-drug-design-primer.md</code></a>, which explains the machinery. Scope is protein and antibody design plus extracellular protein degradation; small-molecule discovery appears only for contrast.</p>
+</div></header>
+
+<div class="wrap">
+<nav class="toc">
+  <h2>Contents</h2>
+  <ol>
+    <li><a href="#the-short-version">The short version</a></li>
+    <li><a href="#1-the-word-seed-does-not-mean-what-it-means-in-software">1. The word "seed" does not mean what it means in software</a></li>
+    <li><a href="#2-what-they-actually-had-the-evidence-ladder">2. What they actually had: the evidence ladder</a></li>
+    <li><a href="#3-the-amounts">3. The amounts</a></li>
+    <li><a href="#4-who-gets-funded">4. Who gets funded</a></li>
+    <li><a href="#5-who-actually-writes-the-cheques">5. Who actually writes the cheques</a></li>
+    <li><a href="#6-what-investors-say-they-require-and-the-hole-at-the-centre">6. What investors say they require, and the hole at the centre</a></li>
+    <li><a href="#7-outcomes-and-the-survivorship-correction">7. Outcomes, and the survivorship correction</a></li>
+    <li><a href="#8-the-extracellular-degrader-segment-specifically">8. The extracellular degrader segment, specifically</a></li>
+    <li><a href="#9-what-this-implies-for-a-new-entrant">9. What this implies for a new entrant</a></li>
+    <li><a href="#10-what-this-study-could-not-establish">10. What this study could not establish</a></li>
+    <li><a href="#notes-on-evidence">Notes on evidence</a></li>
+    <li><a href="#sources">Sources</a></li>
+  </ol>
+</nav>
+<main class="doc">
+<h2 id="the-short-version">The short version</h2>
+<ol>
+<li><strong>Almost nothing was in hand.</strong> Across both segments the first institutional round typically arrived at the bottom two rungs of a seven-rung evidence ladder — a team, a published method, sometimes not even that. Two of the best-documented companies in the degrader segment were funded <strong>before</strong> the paper their whole thesis rested on was published: Lycia's first share sale preceded its founding <em>Nature</em> paper by five months, EpiBiologics' by six.</li>
+<li><strong>Evidence in hand is inversely correlated with money raised</strong>, at least among the three best-documented protein-design cases. Absci, with in vitro validation and revenue declared on its own Form D, raised <strong>$3.66M</strong>. Latent Labs, with a first share sale 28 days after incorporation and no product, model or laboratory, raised <strong>$10M</strong>. Xaira, resting on a preprint posted 40 days before launch, raised <strong>over $1bn</strong>. Capital tracked pedigree and the reputation of the published method, not company data.</li>
+<li><strong>The word "seed" has stopped carrying information.</strong> Classic biotech often had no seed at all: a venture-creation firm formed the company in-house and led a large Series A. At least 12 protein-design companies' first round was labelled Series A, and eight never had a seed. Meanwhile Flagship launched Lila Sciences with $200M it called a "seed". The label is now detached from the mechanism.</li>
+<li><strong>Announced numbers are ceilings, not cheques.</strong> Lycia's "$50M Series A" was a $50.4M offering of which <strong>$25.4M was sold and $25M was never drawn</strong>. Across the degrader segment the announced-to-drawn ratio runs about <strong>2× in eight cases</strong>. Press-release rounds also silently compress multiple tranches months apart.</li>
+<li><strong>The median AI-drug-discovery seed is about $7.0M</strong> (median of 56 rounds, January 2024 to September 2026; mean $11.3M, 10th percentile $2.0M, 90th percentile $28.1M). Series A medians run $24–32M. Against a $3.0M median US software seed in 2026 the ratio is roughly 2.3×, though the populations differ.</li>
+<li><strong>The modal funded founder is a recent trainee from a famous laboratory — not the professor, and not an outsider.</strong> The only quantitative base available (60 biotech IPOs, first half of 2021) found 63% of founders held a PhD and that most were principal investigators <em>or recent graduates of the lab where the technology was developed</em>, while only 3% of CEOs came from academia against 39% from pharma.</li>
+<li><strong>The famous professor is almost never the chief executive, and his name does not produce a large round.</strong> Academic founders were scientific-only in <strong>all twelve</strong> degrader cases examined. Within the Baker-lab lineage alone the spread is 40- to 1,000-fold: trainee-led, licensed-out companies raised $0.85M–$25M, while firm-incubated companies working on the same science raised $50M to over $1bn. <strong>What produces the large round is a venture firm deciding to build around the lab, not the professor's participation.</strong></li>
+<li><strong>An AI pedigree does substitute for biology credentials at seed — but only a specific one.</strong> EvolutionaryScale raised a $142M seed and Chai about $30M at a $150M valuation with no biology training, degrees or wet-lab credentials mentioned for any founder. The control that disciplines this reading: Cradle's founders are also non-biologists, but from Google <em>product</em> rather than DeepMind <em>research</em>, and raised €5.5M. The premium attaches to the AlphaFold, ESM and ChatGPT line specifically.</li>
+<li><strong>In therapeutics the biology credential is still required, but it can be rented.</strong> No verified case was found of a team with no biology credential <em>and</em> no credentialed co-founder raising a seed to develop drugs. Every apparent exception rented the credential — a Nobel laureate as one of two named co-founders, four National-Academy-class scientific co-founders, a tenured professor. <strong>The boundary is selling to drug developers versus being one</strong>: credential-free founding is routine in tools, where two Stanford CS undergraduates raised a $12M Series A and three MIT CS PhD students raised a $28M seed.</li>
+<li><strong>No investor publishes a seed-stage data threshold, and the question of whether the AI is load-bearing is not tested at all.</strong> One prominent firm's published diligence framework never mentions AI, machine learning or computation. No investor anywhere publishes a model-quality bar, an ablation requirement or a counterfactual test.</li>
+<li><strong>The crossover funds that talk about this space are largely absent from it.</strong> Of ten named generalist technology funds, only two appear in 56 AI-drug-discovery seed rounds; Lux, Founders Fund, Khosla, Felicis, Compound and NFX appear in none. The repeat leads are DCVC, Dimension and Madrona, and <strong>the most active strategic investor at seed is NVIDIA, not a pharmaceutical company</strong>.</li>
+<li><strong>The outcome record is worse than the widely-cited figures, and there are still no approvals.</strong> FDA's own 2026 novel-approvals list shows 48 approvals through 9 November, none AI-originated. And when the sample grew five-fold, Phase 2 success for AI-derived assets fell from ~40% to <strong>19.5%</strong> — below the 28% industry baseline.</li>
+<li><strong>Nothing has failed yet for computational reasons, which is why base rates cannot help you.</strong> Of all the large computational-biology deaths, exactly <strong>two</strong> were genuine computational failures. The rest failed on regulatory, safety or commercial grounds orthogonal to the model.</li>
+<li><strong>No preclinical platform company has ever been acquired for over $1bn</strong> — of 32 biotech acquisitions above that threshold, none was a preclinical platform, and seven of the ten biggest underperformers were platforms. Yet J&amp;J paid <strong>$1.0bn in cash</strong> for Firefly Bio in July 2026 with no IND, no registered trial and no named candidate ever disclosed. Modality scarcity and a Nobel laureate's name appear to have been sufficient.</li>
+</ol>
+<hr />
+<h2 id="1-the-word-seed-does-not-mean-what-it-means-in-software">1. The word "seed" does not mean what it means in software</h2>
+<p>This is the first thing to get right, because benchmarking against the wrong structure produces the wrong plan.</p>
+<p><strong>The classic biotech model has no seed round.</strong> A venture-creation firm forms the company inside itself, develops the science with its own staff and facilities, and the first external financing is a large Series A. The firms describe this on their own sites. One says it spends a period "at the seed stage, validating mechanisms and maturing a lead program well before a company launches" — the seed is a phase of the firm's internal work, not a financing event. Another runs an explicit internal incubation effort whose stated purpose is to generate the data needed <em>for a Series A</em>; the word "seed" never appears in its materials. A third describes in-house teams of scientists in its own laboratories. A fourth says it is "primarily focused on company formation".</p>
+<p>The primary proof is in the filings. Generate Biomedicines' S-1 states that "Flagship Pioneering founded Generate in 2018 as Flagship VL56, Inc.", and its capital structure contains only Series A, B and C — proof of absence rather than inference.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>First-round model</th>
+<th>How it works</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Venture-created</strong></td>
+<td>The firm forms the entity, staffs it, then funds a large Series A. No seed exists</td>
+<td>Generate, Xaira, Seismic ($101M Series A as first round), Deep Apple ($52M), Diagonal ($128M launch), Outpace ($30M Series A four months after founding), Abiologics, Prologue, Firefly Bio</td>
+</tr>
+<tr>
+<td><strong>Classic seed then A</strong></td>
+<td>A small priced round or SAFE, then a Series A on the resulting data</td>
+<td>Absci ($3.66M), Monod, A-Alpha ($2.8M), AI Proteins, most tools companies</td>
+</tr>
+<tr>
+<td><strong>Corporate-lab spinout</strong></td>
+<td>A team leaves a corporate AI lab; the "seed" is large and early</td>
+<td>EvolutionaryScale ($142M), Latent Labs ($50M total), Isomorphic (Alphabet-funded ~3.5 years before a $600M "first external round")</td>
+</tr>
+<tr>
+<td><strong>Milestone-gated facility</strong></td>
+<td>Announced at a ceiling, drawn in tranches against milestones</td>
+<td>Lycia ($50.4M offered, $25.4M sold), and the degrader segment generally</td>
+</tr>
+<tr>
+<td><strong>No venture round at all</strong></td>
+<td>Straight to public markets via reverse merger</td>
+<td>Neoleukin: spinout to publicly traded in seven months</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>And the labels have now detached from the mechanisms.</strong> In March 2025 Flagship launched Lila Sciences with $200M that both the firm and the trade press called a seed. Xaira launched with "more than $1bn in committed capital" — the company's own phrase, with no round name — which one tracker records as a Series A and nobody records as a seed. The same firm gave another company a $50M Series A seven months later. <strong>A round's name tells you about the firm's conventions, not about the company's stage.</strong></p>
+<p><strong>Announced numbers are ceilings.</strong> The pattern recurs across both segments and is only visible in filings:</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Announced</th>
+<th>Actually sold</th>
+<th>Source of the correction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lycia "$50M Series A"</td>
+<td><strong>$25.4M</strong>, with $25M never drawn</td>
+<td>Form D plus S-1 confirmation</td>
+</tr>
+<tr>
+<td>Monod "$25M seed"</td>
+<td>Two Form Ds seven months apart: $6.0M then $24.2M</td>
+<td>Form D first-sale dates</td>
+</tr>
+<tr>
+<td>AI Proteins "$18.2M seed"</td>
+<td><strong>$11.32M</strong></td>
+<td>Form D</td>
+</tr>
+<tr>
+<td>Icosavax "$51M Series A"</td>
+<td>$25.9M then $21.0M, preceded by a $0.6M "Series 1"</td>
+<td>Form D sequence</td>
+</tr>
+<tr>
+<td>Generate "$273M Series C"</td>
+<td>~$399.4M</td>
+<td>S-1</td>
+</tr>
+</tbody>
+</table></div>
+<p>Tranching is the structural difference that survives scrutiny. Life-sciences rounds structured in tranches ran between 23.6% and 33.3% across quarterly samples from late 2024 to mid-2026. No comparable figure is published for technology rounds, which is itself informative. Y Combinator's standard deal, by contrast, is identical for biotech and software and explicitly not contingent on milestones — its terms page does not mention biology anywhere.</p>
+<h2 id="2-what-they-actually-had-the-evidence-ladder">2. What they actually had: the evidence ladder</h2>
+<p>The six fronts used a common seven-rung ladder so the files would be comparable:</p>
+<ol>
+<li>Team and idea only</li>
+<li>Published academic paper(s) from the founders' lab, no company data</li>
+<li>Software, model or platform only; computational validation; no wet lab</li>
+<li>In vitro wet-lab validation</li>
+<li>In vivo animal efficacy</li>
+<li>A named development candidate</li>
+<li>IND-enabling studies or clinical stage</li>
+</ol>
+<p><strong>The answer to the question this study was commissioned to ask: the first institutional round typically lands on rungs 1 to 3.</strong> Rungs 4 and above are the exception, and — this is the uncomfortable part — being higher up the ladder did not correlate with raising more.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Company</th>
+<th>Ladder position at first round</th>
+<th>Raised</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Absci</td>
+<td><strong>4</strong> — in vitro validation, with revenue declared</td>
+<td><strong>$3.66M</strong></td>
+<td>Own Form D declares revenue of $1–$1,000,000</td>
+</tr>
+<tr>
+<td>Latent Labs</td>
+<td><strong>1–2</strong> — first share sale 28 days after incorporation; no product, model or lab</td>
+<td><strong>$10M</strong> (seed; $50M total)</td>
+<td>Companies House and filing dates</td>
+</tr>
+<tr>
+<td>Xaira</td>
+<td><strong>3</strong> — a method resting on a bioRxiv preprint posted 40 days before launch</td>
+<td><strong>&gt;$1bn</strong></td>
+<td>Launch announcement and preprint date</td>
+</tr>
+<tr>
+<td>Lycia</td>
+<td><strong>1–2</strong> — funded five months <em>before</em> the founding <em>Nature</em> paper</td>
+<td>$25.4M drawn</td>
+<td>Form D first sale 3 March 2020; paper 29 July 2020</td>
+</tr>
+<tr>
+<td>EpiBiologics</td>
+<td><strong>1–2</strong> — funded six months before its <em>Nature Biotechnology</em> paper</td>
+<td>not found</td>
+<td>Filing and publication dates</td>
+</tr>
+<tr>
+<td>Firefly Bio</td>
+<td>Never disclosed an IND, a trial or a candidate — and was acquired</td>
+<td><strong>$1.0bn exit</strong></td>
+<td>J&amp;J 8-K exhibit, 29 July 2026</td>
+</tr>
+</tbody>
+</table></div>
+<p>Treat the inverse correlation as an illustration rather than a measurement: these are the three best-documented protein-design cases, not a regression over the cohort, and the underlying filings are much better for some companies than others. But the direction is hard to argue with, and the mechanism is clear enough — <strong>the money is pricing the founders and the method's reputation, both of which exist before any company data does.</strong></p>
+<p><strong>Grants often came first.</strong> Several Institute for Protein Design spinouts assembled non-dilutive capital before or alongside a small seed: about $7M in grants before one company's $20M seed; NSF ($620K) and Gates ($800K) layered on a $2.8M seed at another; a $10M Gates grant at a third; and one Israeli company's Series A contains a national innovation-authority grant inside it. For a team that cannot access the pedigree premium, this is the most accessible rung on the ladder.</p>
+<h2 id="3-the-amounts">3. The amounts</h2>
+<p>The figures below were computed from a published company-level deal list of 57 seed and 46 Series A AI-drug-discovery rounds (January 2024 to September 2026) by the research front, because the tracker publishes deals but not stage-level medians. <strong>Medians, not means, are the useful number here</strong> — the sector's aggregates are routinely distorted by single enormous rounds.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Stage and year</th>
+<th>n</th>
+<th>Median</th>
+<th>Mean</th>
+<th>Mean ÷ median</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Seed 2024</td>
+<td>22</td>
+<td><strong>$9.75M</strong></td>
+<td>$11.36M</td>
+<td>1.16×</td>
+</tr>
+<tr>
+<td>Seed 2025</td>
+<td>18</td>
+<td><strong>$4.95M</strong></td>
+<td>$9.68M</td>
+<td>1.96×</td>
+</tr>
+<tr>
+<td>Seed 2026 YTD</td>
+<td>16</td>
+<td><strong>$8.50M</strong></td>
+<td>$13.18M</td>
+<td>1.55×</td>
+</tr>
+<tr>
+<td><strong>Seed pooled</strong></td>
+<td><strong>56</strong></td>
+<td><strong>$7.00M</strong></td>
+<td>$11.34M</td>
+<td>p10 $1.97M, p90 $28.06M</td>
+</tr>
+<tr>
+<td>Series A 2024</td>
+<td>13</td>
+<td><strong>$32.50M</strong></td>
+<td>$108.67M</td>
+<td><strong>3.34×</strong></td>
+</tr>
+<tr>
+<td>Series A 2025</td>
+<td>24</td>
+<td><strong>$24.10M</strong></td>
+<td>$55.23M</td>
+<td>2.29×</td>
+</tr>
+<tr>
+<td>Series A 2026 YTD</td>
+<td>9</td>
+<td><strong>$24.00M</strong></td>
+<td>$21.79M</td>
+<td>0.91×</td>
+</tr>
+</tbody>
+</table></div>
+<p>The 2024 Series A row is the cautionary tale: <strong>a single round was 70.8% of that year's Series A dollars.</strong> Removing it drops the mean from $108.7M to $34.4M while the median moves only from $32.5M to $29.2M. Any sector figure quoted as an average, without a median beside it, is close to useless.</p>
+<p>Against general software, AI-bio seeds are larger — $7.0M against a $3.0M median US seed in 2026 — a ratio of roughly 2.3×, or about 1.7× against a different relay's $4.1M. Different populations and different methodologies, so take the direction and not the magnitude. Worth noting that seed was the only stage whose median <em>fell</em> in the 2026 venture data.</p>
+<p><strong>Only one AI-bio seed valuation is verifiable anywhere</strong>: Chai Discovery at about $30M on a $150M valuation, when the company was six months old.</p>
+<p><strong>Second seeds are at least as common as graduations.</strong> Six of those 56 seed rounds were a company's <em>second</em> seed-labelled round, and two were down rounds — one from $35M to $26M from the same lead investor. Separately, nearly 40% of late-2024 seed and Series A financings in one analysis were insider bridges or extensions. There is no published biotech-specific seed-to-Series-A graduation rate; six publishers were checked. The closest proxy is a count showing 84 biopharma seed rounds against 121 Series As in 2025.</p>
+<h2 id="4-who-gets-funded">4. Who gets funded</h2>
+<h3 id="the-modal-founder-is-a-trainee-not-a-professor-and-not-an-outsider">The modal founder is a trainee, not a professor and not an outsider</h3>
+<p>The one quantitative base available — all 60 biotech IPOs in the first half of 2021 — found 63% of founders held a PhD, and that most were principal investigators <em>or recent graduates from the lab where the technology was developed</em>. Only 3% of chief executives came from academia, against 39% from pharma and 29% from biotech.</p>
+<p><strong>A postdoc is sufficient, and the professor is frequently not a founder at all.</strong> The evidence file documents multiple cases: a Baker postdoc building a direct competitor with zero Baker involvement; the lead author of a <em>Nature</em> machine-learning antibiotics paper running the company while her professor chairs the advisory board. A university technology-transfer office, quoted in 2019, described lab members "stepping up to take the role of CEO, rather than chief scientific officer."</p>
+<h3 id="co-founder-is-not-a-reliable-fact">"Co-founder" is not a reliable fact</h3>
+<p>This is the single most important methodological caution in the whole study, and it matters because the title is routinely used as evidence of endorsement. David Baker's own disclosure page claims founder roles in 21 companies; several of those companies give him a different title or none at all. One company's seed release calls him "Scientific Advisor" in its founders paragraph and "Co-founder" in his quote byline — in one document. Another lists him as a "Collaborator" and is absent from his own list. One company appears in both the founder and the non-founder-advisor tables <strong>on the same page</strong>. Exactly one Baker company has an SEC filing calling him a co-founder.</p>
+<p>Two specific traps the file flags: a well-known machine-learning professor is an advisory-board member at one company, not a founder; and a famous genome-editing scientist was not a founder of a company he is widely assumed to have founded. <strong>If you are assessing a competitor's credibility by its founder list, verify against filings.</strong></p>
+<h3 id="the-firm-produces-the-round-not-the-professor">The firm produces the round, not the professor</h3>
+<p>Within a single laboratory lineage, holding the science roughly constant, the spread is 40- to 1,000-fold:</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Route</th>
+<th>Capital raised</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Trainee-led, technology licensed out, regional seed investors</td>
+<td><strong>$0.85M – $25M</strong></td>
+</tr>
+<tr>
+<td>Venture firm incubates and builds around the same lab</td>
+<td><strong>$50M – $1bn+</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>In the largest case two firms "jointly incubated" the company; in another a firm is named "Founder and lead investor". <strong>The decision that moves the number by three orders of magnitude is a firm's decision to build a company, not a professor's decision to participate.</strong></p>
+<p>The 2024 Nobel Prize in Chemistry for protein design changed the marketing rather than the pattern. The billion-dollar launch came six months <em>before</em> the prize. The only post-Nobel spinout on the institute's official roster raised about $9M — small for the lineage. Formation rate is flat to down, and the institute's 2025–26 news contains no spinout announcements at all.</p>
+<h3 id="the-ai-pedigree-premium-is-real-narrow-and-measurable">The AI pedigree premium is real, narrow, and measurable</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Founder background</th>
+<th>Company</th>
+<th>First round</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Meta FAIR / ESM team</td>
+<td>EvolutionaryScale</td>
+<td><strong>$142M seed</strong></td>
+</tr>
+<tr>
+<td>No biology training mentioned for any founder</td>
+<td>Chai Discovery</td>
+<td><strong>~$30M at $150M valuation</strong></td>
+</tr>
+<tr>
+<td>DeepMind research alumnus, sole founder, computer-vision PhD</td>
+<td>Latent Labs</td>
+<td><strong>$50M total</strong></td>
+</tr>
+<tr>
+<td>Google <strong>product</strong>, non-biologists</td>
+<td>Cradle</td>
+<td><strong>€5.5M</strong></td>
+</tr>
+<tr>
+<td>Protein-design PhD, no AI brand</td>
+<td>Diffuse Bio</td>
+<td><strong>under $1M</strong></td>
+</tr>
+<tr>
+<td>Credentialed biology, conventional route</td>
+<td>typical cluster</td>
+<td><strong>$5M – $14M</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>The Cradle row is the control that makes this interpretable. Its founders are also non-biologists, and they raised two orders of magnitude less than EvolutionaryScale. <strong>The premium does not attach to being a technologist. It attaches to the AlphaFold, ESM and ChatGPT line specifically</strong> — to having built the thing the field now runs on.</p>
+<p><strong>What investors required alongside it shows up as the credentialed person arriving at or just after the priced round.</strong> One company added a former pharma chief scientific officer to its board at its $70M Series A and is now valued at $3.8bn with eight pharmaceutical partners, while still having no CSO and no scientific advisory board. Another assembled an advisory board of three Nobel laureates and a former big-pharma R&amp;D head. The instructive contrast: the company that added nobody was absorbed into a non-profit research institute seventeen months after its seed, on terms never disclosed.</p>
+<h3 id="the-outsider-question-answered-honestly">The outsider question, answered honestly</h3>
+<p>The group commissioning this study is strong in AI and computer science and not established in biology, so this was the question that mattered most. The answer has a clean boundary.</p>
+<p><strong>In tools, credential-free founding is routine.</strong> Two Stanford computer-science undergraduates raised a $12M Series A. Three MIT computer-science PhD students raised a $28M seed and signed five pharmaceutical collaborations within ten months, on an open-weights model.</p>
+<p><strong>In therapeutics, no verified case was found</strong> of a team with no biology credential <em>and</em> no credentialed co-founder raising a seed to develop drugs. Every apparent exception rented the credential:</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Apparent exception</th>
+<th>What was rented</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Founder with no PhD found</td>
+<td>A Nobel laureate as one of only two named co-founders</td>
+</tr>
+<tr>
+<td>Founders from a $575M software exit</td>
+<td>Four National-Academy-class scientific co-founders</td>
+</tr>
+<tr>
+<td>Two consumer-AI founders</td>
+<td>A tenured professor at a major medical school</td>
+</tr>
+<tr>
+<td>The one near-clean case</td>
+<td>Sold AI software to pharma first, earned the pipeline second</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>So the credential is required in therapeutics but it is rentable, and non-biology founders pay for it with a prior exit, a model the field adopts, or a disease they personally have.</strong> The boundary is whether you are selling to drug developers or trying to be one.</p>
+<p>Two negative results sharpen this. The purest talent-first, pre-idea investor in existence has <strong>three biotech companies in its entire portfolio</strong> — if credential-free therapeutics founding were viable at scale, it would show up there. And a PhD is not the binding constraint: one founder with a bachelor's degree, no postdoc and no prior industry role founded his company the year he graduated, was still chief executive at IPO, and held 11.28% pre-IPO, the largest individual stake.</p>
+<h3 id="advisory-boards-are-discounted-on-the-record">Advisory boards are discounted, on the record</h3>
+<p>A prominent biotech investor wrote that a scientific advisory board is "sometimes just 'window-dressing' for a story", that a member in name only can hurt rather than help, and that members typically take 0.1–0.3% equity. A 2026 exhibit: one company announced its advisory board <strong>two months after</strong> closing an $80M seed. Borrowed credibility is priced accordingly.</p>
+<h3 id="the-filings-price-the-academic-and-it-is-sobering">The filings price the academic, and it is sobering</h3>
+<p>At one venture-created company's IPO, the tenured professor who is both named co-founder and sitting chief technology officer held <strong>under 1%</strong>, against the founding firm's 56.6% and a recruited former big-pharma chief executive's 6.4%. At another, the operator CEO held 2.31%, a former industry CTO co-founder 1.56%, and the academic founders do not appear in the ownership table at all. In the degrader segment, five companies raised a first round <strong>with no chief executive in place</strong>.</p>
+<h2 id="5-who-actually-writes-the-cheques">5. Who actually writes the cheques</h2>
+<p>The gap between who discusses this sector and who funds it is wide. Of ten prominent generalist technology funds, only <strong>two</strong> appear in the 56-round AI-drug-discovery seed set. Lux Capital, Founders Fund, Khosla Ventures, Felicis, Compound, NFX and Civilization Ventures appear in <strong>zero</strong>.</p>
+<p>The actual repeat leads at seed are DCVC (two of the six largest), Dimension, Madrona and several European funds. <strong>The most active strategic investor is NVIDIA's venture arm</strong>, which backed one company's seed twice plus a $142M seed elsewhere. No seed round was found from Pfizer Ventures, J&amp;J's venture arm, Amgen, AbbVie, Roche, BMS, Boehringer, Sanofi Ventures or GV. One major pharmaceutical venture fund's own site, describing over $750M committed across 40-plus companies, never mentions seed or company creation.</p>
+<p>For several of the most active investors in this space — Dimension, Compound, Lux, Khosla, Founders Fund — there is <strong>no accessible published statement of criteria at all.</strong> Combined with the finding above, the firms that publish most about AI-bio seed investing are substantially not the ones doing it.</p>
+<h2 id="6-what-investors-say-they-require-and-the-hole-at-the-centre">6. What investors say they require, and the hole at the centre</h2>
+<p><strong>No investor publishes a seed-stage data threshold.</strong> One partner wrote plainly that people are "disappointed to learn there is no official checklist investors use during a diligence". The only explicit per-round milestone statement found anywhere in the sector was a single source specifying preclinical proof-of-concept in a relevant model for seed, and Phase 1b or 2a data for a Series A. The most explicit published ladder belongs to a <em>software</em> firm: pre-seed is "just the scientist with the idea", and seed buys "the proof point for the Series A round".</p>
+<p><strong>Nobody tests whether the AI is load-bearing.</strong> One prominent firm's published diligence framework — genetics, then pharmacology and PK/PD, then path to clinical proof-of-concept, then product thesis — never mentions AI, machine learning or computation. No investor publishes a model-quality threshold, an ablation requirement or a counterfactual test. The sharpest formulation of the right question comes from a journal author rather than an investor: does the model change which experiment gets run, which compound advances, or which weak programme gets killed?</p>
+<p><strong>The sector's own experts corroborate the measurement-floor problem</strong>, including in sources investors promote. A November 2026 <em>Nature Reviews Drug Discovery</em> piece with sixteen authors concludes that evidence of clinically relevant impact is "disappointingly limited". A prominent machine-learning-in-biology founder, cross-posted by a major venture firm, said better models without better data will "mostly help us generate failures faster". Two 2026 technical results make it concrete: a ligand-only model that cannot see the protein scores r = 0.66 on a standard free-energy benchmark, and only 3 of 22 top-ranked models on a widely used ADMET leaderboard reproduced.</p>
+<p><strong>The data-moat thesis is publicly contested by name.</strong> One firm requires "datasets that competitors can't easily replicate"; a published counter-argument holds that a validated assay or biomarker may benefit competitors and be harder for the organisation that paid for it to monetise.</p>
+<p><strong>No AI-washing enforcement action anywhere touches life sciences.</strong> Every verified SEC and DOJ action from March 2024 to April 2025 concerns investment advisory, HR technology, restaurant technology or consumer e-commerce. No regulator uses the term about drug discovery.</p>
+<h2 id="7-outcomes-and-the-survivorship-correction">7. Outcomes, and the survivorship correction</h2>
+<p>Any study of seed-funded survivors overestimates what seed investors require and what follows. The correction matters more than the main finding.</p>
+<p><strong>There are still no approvals.</strong> FDA's own novel-approvals list shows 48 approvals between 12 January and 9 November 2026, none AI-originated. The point is conceded in a peer-reviewed journal by the chief executive of one of the field's most prominent companies.</p>
+<p><strong>The widely-cited success advantage shrinks as the sample grows, and Phase 2 inverts.</strong> The familiar 80–90% Phase 1 and ~40% Phase 2 figures rest on 24 and 10 assets. A peer-reviewed October 2026 study of 129 assets across 69 companies finds:</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>AI-derived (2026 study)</th>
+<th>AI-derived (2023 figures)</th>
+<th>Industry baseline</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Phase 1</td>
+<td><strong>77.8%</strong> (n=72)</td>
+<td>80–90% (n=24)</td>
+<td>47%</td>
+</tr>
+<tr>
+<td>Phase 2</td>
+<td><strong>19.5%</strong> (n=24)</td>
+<td>~40% (n=10)</td>
+<td>28%</td>
+</tr>
+</tbody>
+</table></div>
+<p>So the Phase 1 advantage survives and the Phase 2 advantage reverses into a disadvantage. Worse, of the six Phase 2 stops in the original flattering dataset, only two were on negative data — the metric conflates scientific and commercial attrition in the favourable direction.</p>
+<p><strong>Almost nothing has failed for computational reasons.</strong> Of the large computational-biology deaths, one went down on an FDA warning letter, one on two patient deaths, and the rest on grounds orthogonal to the model. The file identifies <strong>exactly two genuine computational failures</strong>, one of them a de novo-designed protein discontinued in Phase 1 with no published reason. The field is too young for its base rates to inform anything — which cuts both ways.</p>
+<p><strong>No preclinical platform has ever produced a large acquisition.</strong> Of 32 biotech acquisitions above $1bn, none was a preclinical platform, and seven of the ten biggest underperformers were platforms. Against which: J&amp;J paid $1.0bn cash for Firefly Bio in July 2026 with no IND, no registered trial and no named candidate ever disclosed — the only exit in either segment achieved without dosing a human, by a company whose academic co-founder is the same Nobel laureate who founded Lycia.</p>
+<p><strong>The quiet middle is the modal outcome, by design.</strong> A law-review analysis found startup capital structures "are indeed designed to avoid bankruptcy"; failures resolve through assignments and acqui-hires that generate no public record. Even the best commercial shutdown count comes with its own author saying he bets they are missing a good chunk. The working detectors are compelled filings — Form D, ClinicalTrials.gov staleness rules, trademark renewals — and the best single signal found is <strong>a Form D with no accompanying press release</strong>: one company quietly took $9,999,997 in January 2026 and never announced it.</p>
+<p>A live example caught mid-process: one well-funded company's domain lapsed and was re-registered by an unrelated party in May 2026, with no trial ever registered, no press since launch and no later filing — while remaining listed on its lead investor's portfolio page. No shutdown was ever announced.</p>
+<p>Two counterweights worth stating. The Institute for Protein Design lists <strong>11 spinouts with zero closures in 11 years</strong>. And one company has two 786-patient Phase 3 trials running, which receives far less attention than the sector's louder names — while two of the most heavily capitalised companies in the field have <strong>zero registered trials</strong> between them.</p>
+<h2 id="8-the-extracellular-degrader-segment-specifically">8. The extracellular degrader segment, specifically</h2>
+<p>This segment is small enough to characterise completely, and it behaves consistently. Nineteen companies were examined, built from SEC primaries.</p>
+<p><strong>The pattern, in one line:</strong> the first institutional round is a milestone-gated facility announced at its ceiling; it arrives at ladder rung 1–2, before the decisive paper; the academic licence is nearly free; the real economics accrue to the founder's own side vehicle rather than the university; academic founders are scientific-only without exception; and valuation steps on the first human biomarker, not on the platform.</p>
+<p>The licence economics deserve emphasis because they invert the intuition. One company bought a perpetual worldwide exclusive licence for about <strong>$45,000</strong>. Another did not file its university licence as a material contract at all. Meanwhile one public company owes a founder-affiliated entity up to <strong>$157.9M</strong> against roughly $3.5M owed to the university. <strong>The university is not where the value is captured, and a licence is not the barrier a newcomer might assume.</strong></p>
+<p><strong>Every clinical percentage in this segment is company-reported, open-label and small.</strong> The most-cited figure in the field — a 96% mean maximum reduction in a target protein from a single subcutaneous dose — rests on about <strong>six active participants</strong> in one cohort with missing samples. Another company's "100% response" is five of five in a selected subgroup of fifteen, with no comparator. These are the numbers a new entrant would be benchmarked against, and they are thinner than their circulation suggests.</p>
+<p><strong>Corrections to claims in circulation</strong>, all from filings: the segment's widely-reported "first extracellular degrader in humans" was not first — a public company's 10-K states its three degraders reached the clinic two years earlier, and the company credited with the first makes no such claim itself. One company often grouped here is not a degrader at all. Two others frequently included are protein <em>stabilisers</em> working by a different mechanism, and two more are in unrelated modalities. <strong>Any competitive set assembled from press coverage in this space will contain category errors.</strong></p>
+<h2 id="9-what-this-implies-for-a-new-entrant">9. What this implies for a new entrant</h2>
+<p>Stated generally; the application to any particular programme belongs elsewhere.</p>
+<p><strong>The capital is priced on pedigree and method reputation, not on data.</strong> A team without the specific pedigree premium should expect the $5–14M credentialed-biology band at best, and should not plan against the headline numbers, which belong to venture-created entities and corporate-lab spinouts and are not addressable.</p>
+<p><strong>The credential can be rented, and the rental price is known.</strong> A scientific advisory board is discounted by investors and costs 0.1–0.3% in equity. A genuine credentialed co-founder is what the exceptions actually used, and the filings show academic founders ending up with under 1% to 2% of venture-created companies — so the equity cost of the credential is far lower than its apparent weight.</p>
+<p><strong>Tools are fundable without biology credentials; therapeutics are not.</strong> This is the cleanest decision in the study. If the team's advantage is computational, the fundable shape is selling to drug developers, with the pipeline earned later — which is exactly what the one near-clean therapeutic exception did.</p>
+<p><strong>Non-dilutive capital is the accessible rung.</strong> Grant funding preceded or accompanied the seed at several companies in the cohort. Current arithmetic puts US small-business research grants at roughly $2.58M equity-free against about $4.1M from a federal health agency's advanced research arm, versus an accelerator's $550K for over 10%.</p>
+<p><strong>The first human biomarker is where valuation steps.</strong> Not the platform, not the publication, not the partnership. In the segment examined here, platform partnerships were found to be value-neutral — one analysis noted that none of them moved the partner's stock.</p>
+<p><strong>And the thing to design against: nobody will test whether your AI is load-bearing, so nobody will reward it either.</strong> The sector's investors publish no model-quality bar. That means a computational advantage is not, by itself, a financeable asset — it has to show up as a molecule, a dataset nobody else has, or a tool somebody pays for.</p>
+<h2 id="10-what-this-study-could-not-establish">10. What this study could not establish</h2>
+<ul>
+<li><strong>No biotech-specific seed-to-Series-A graduation rate exists.</strong> Six publishers were checked. Cross-sector rates transfer badly, and the relays contradict each other for overlapping cohorts.</li>
+<li><strong>No AI-bio seed data before 2024</strong> in the tracker used, so the 2021 peak and the 2022–24 downturn are characterised only qualitatively.</li>
+<li><strong>Nothing on the most important venture-creation firm.</strong> Its site blocked automated access on every path attempted. There is no quotation, no stage nomenclature and no per-stage capital figure for it in these files.</li>
+<li><strong>No aggregate data on the repeat-founder premium, modal founding-team size, or founder-type-to-outcome correlation</strong>, beyond a single finding that founder-CEO and non-founder-CEO post-IPO returns are indistinguishable (65% versus 66%, n=184). This is the same gap <code>sources/the-pairing.md</code> reported, and it probably requires hand-building a census.</li>
+<li><strong>Founder credentials are the weakest field in the degrader file</strong>, with about 30 specific "not found" entries, because the shared search budget was exhausted.</li>
+<li><strong>Six of nineteen degrader companies have no checkable first-round filing</strong>, and the segment's public companies are far better evidenced than its private ones, so tier comparisons are not like-for-like.</li>
+<li><strong>SEC Form D coverage is incomplete.</strong> It was the highest-yield source in the whole study and remains partially unexplored.</li>
+</ul>
+<h2 id="notes-on-evidence">Notes on evidence</h2>
+<ul>
+<li><strong>This document contains no original research.</strong> It is a synthesis of the six files in <code>sources/</code>, which were compiled in parallel on 11 November 2026 and which carry the citations. Where this document states a figure, the source file states where it came from. Anyone relying on a specific number should read it there first.</li>
+<li><strong>The sourcing is unusually good in one respect and weak in another.</strong> The shared web-search budget was exhausted early across the six fronts, which pushed them onto primary sources — SEC EDGAR, UK Companies House, ClinicalTrials.gov, the NCBI and Europe PMC APIs, FDA approval lists and domain registry records. Several of the strongest findings here, particularly announced-versus-drawn amounts and tranche structure, exist <em>only</em> because filings were read directly. The same budget exhaustion degraded discovery of companies nobody had named in advance, so the 2025–26 cohort is incompletely swept and a substantial Chinese and Korean cohort is not covered at all.</li>
+<li><strong>Round amounts from filings are "sold", not "announced".</strong> The two differ by about 2× in this sector. Where this document gives both, the filing figure governs.</li>
+<li><strong>Every clinical percentage in this document is company-reported, open-label and small-n</strong>, and most come from press releases or prospectuses rather than peer review. The two most-cited efficacy figures in the degrader segment rest on about six and five participants respectively.</li>
+<li><strong>Aggregate financing statistics are medians computed by a research front from a published deal list</strong>, not figures quoted from an aggregator. The source tracker publishes deals but not stage-level medians. The computation is reproducible from the file.</li>
+<li><strong>Several of the group's own prior beliefs were corrected</strong> in the course of this work, including the identity of the first extracellular degrader in humans, the structure and size of one company's only round, the status of one company's press blackout, the scope of one asset's discontinuation, and the classification of four companies as degraders when they are not. Corrections are recorded in the relevant source files.</li>
+<li><strong>"Co-founder" was treated as a claim requiring verification, not a fact.</strong> The founder-credentials file documents one prominent academic's own disclosure page conflicting with the companies' own descriptions, including one company appearing in both the founder and non-founder tables on a single page. Founder attributions in this document inherit that uncertainty.</li>
+<li><strong>One misattributed quotation was caught and quarantined.</strong> A statement that reads exactly like a biotech investor on the shift from platforms to assets traces to a physician real-estate firm. It is flagged as unusable in <a href="seed-investor-requirements.html"><code>seed-investor-requirements.md</code></a> and is not used here.</li>
+<li><strong>An internal inconsistency was found in this repository</strong>: <code>sources/outcomes-and-deals.md</code> credits one firm as lead on a $120M Series A where the deal tracker credits another. It is unresolved, and neither should be cited until it is.</li>
+<li><strong>Selection bias runs in the obvious direction.</strong> Companies that raised and quietly stalled generate almost no public record by design, so the visible cohort is the surviving one. The failures file is the correction and should be read alongside any conclusion drawn from the others.</li>
+</ul>
+<h2 id="sources">Sources</h2>
+<p>The six evidence files, each with its own grouped sources, "Gaps and conflicts" section and per-figure provenance tags:</p>
+<ul>
+<li><a href="seed-protein-design-companies.html"><code>seed-protein-design-companies.md</code></a> — 47 companies in protein and antibody design, with the ladder position, amount and founder credentials for each; the tranche-compression findings</li>
+<li><a href="seed-extracellular-degraders.html"><code>seed-extracellular-degraders.md</code></a> — 19 companies across extracellular and intracellular degradation, built from SEC S-1, 424B4, 10-K, 10-Q and Form D filings read in full, plus registry and publication dates</li>
+<li><a href="seed-founder-credentials.html"><code>seed-founder-credentials.md</code></a> — the founder archetypes, the laboratory lineages, the credential-rental cases, and the tools-versus-therapeutics boundary</li>
+<li><a href="seed-round-mechanics-and-investors.html"><code>seed-round-mechanics-and-investors.md</code></a> — venture creation versus seed, the computed amount distributions, tranche rates, and who actually leads these rounds</li>
+<li><a href="seed-failures-and-survivorship.html"><code>seed-failures-and-survivorship.md</code></a> — named failures and stalls, the revised clinical success rates, base rates, the detection methods for quiet failure, and the reported-versus-real gap</li>
+<li><a href="seed-investor-requirements.html"><code>seed-investor-requirements.md</code></a> — what investors publish about their own criteria, the platform-versus-asset debate, the milestone ladder as stated rather than inferred, and where stated positions diverge from the funding record</li>
+</ul>
+<p><strong>Related work in this repository</strong></p>
+<ul>
+<li><code>landscape.md</code> — where AI enters drug discovery, the ten stages, the label noise floor, the clinical scorecard. The authority on what the science supports</li>
+<li><a href="computational-drug-design-primer.html"><code>computational-drug-design-primer.md</code></a> — how the design and filtering machinery works, for a reader without a protein-engineering background</li>
+<li><code>sources/the-pairing.md</code> — founding partnerships between computational and life-science people; the gap it reported on founder-outcome data is still open</li>
+<li><code>../eval/</code> — the benchmark-validity argument that recurs here as the absence of any model-quality bar in investor diligence</li>
+</ul>
+</main>
+</div>
+
+<footer><div class="wrap">
+  <p>What Gets Funded at Seed in AI Drug Design</p>
+  <p>Rendered from Markdown research notes. <a href="index.html">Back to the index</a>.</p>
+</div></footer>
+
+</body>
+</html>

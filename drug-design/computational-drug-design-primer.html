@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="A technical primer on protein engineering and computational drug design for a reader who has not done either, written November 7, 2026. It explains the machinery: what a drug has to do physically,...">
+<title>How a Designed Molecule Becomes a Candidate</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="topbar"><div class="wrap">
+  <a href="index.html">&larr; All documents</a>
+  <span class="crumb">Primer &middot; <b>How a Designed Molecule Becomes a Candi...</b></span>
+</div></nav>
+
+<header class="mast"><div class="wrap">
+  <p class="kicker">Primer</p>
+  <h1>How a Designed Molecule Becomes a Candidate</h1>
+  <p class="standfirst">A technical primer on protein engineering and computational drug design for a reader who has not done either, written November 7, 2026. It explains the machinery: what a drug has to do physically, how structure-prediction and design models work, and what the filtering funnel between a design and a wet-lab experiment actually consists of. It is the mechanism companion to <code>landscape.md</code>, which maps where AI enters drug discovery and is considerably more sceptical about results than any individual paper is; where the two meet, the landscape's numbers govern. It builds on two papers read in full: RGI-Toolkit on constrained structure prediction and ProteoCraft on binder design as search.</p>
+</div></header>
+
+<div class="wrap">
+<nav class="toc">
+  <h2>Contents</h2>
+  <ol>
+    <li><a href="#the-short-version">The short version</a></li>
+    <li><a href="#1-what-a-drug-has-to-do-stated-physically">1. What a drug has to do, stated physically</a></li>
+    <li><a href="#2-two-kinds-of-drug-two-different-problems">2. Two kinds of drug, two different problems</a></li>
+    <li><a href="#3-proteins-for-people-who-have-not-done-this">3. Proteins, for people who have not done this</a></li>
+    <li><a href="#4-the-three-computational-jobs-and-why-they-get-confused">4. The three computational jobs, and why they get confused</a></li>
+    <li><a href="#5-structure-prediction-what-the-models-actually-do">5. Structure prediction: what the models actually do</a></li>
+    <li><a href="#6-steering-the-models-restraints-at-prediction-time">6. Steering the models: restraints at prediction time</a></li>
+    <li><a href="#7-designing-a-binder-three-generations-of-method">7. Designing a binder: three generations of method</a></li>
+    <li><a href="#8-small-molecules-the-parallel-toolchain">8. Small molecules: the parallel toolchain</a></li>
+    <li><a href="#9-the-funnel-between-a-design-and-a-wet-lab-experiment">9. The funnel between a design and a wet-lab experiment</a></li>
+    <li><a href="#10-antibiotics-are-the-hard-case-for-specific-reasons">10. Antibiotics are the hard case, for specific reasons</a></li>
+    <li><a href="#11-what-is-still-genuinely-unsolved">11. What is still genuinely unsolved</a></li>
+    <li><a href="#12-where-the-openings-appear-to-be">12. Where the openings appear to be</a></li>
+    <li><a href="#glossary">Glossary</a></li>
+    <li><a href="#notes-on-evidence">Notes on evidence</a></li>
+    <li><a href="#sources">Sources</a></li>
+  </ol>
+</nav>
+<main class="doc">
+<h2 id="the-short-version">The short version</h2>
+<ol>
+<li><strong>Binding is geometry plus thermodynamics.</strong> A drug works by fitting a target closely enough that sticking to it is energetically favourable. Affinity spans ten orders of magnitude, and the useful range for a therapeutic is roughly 0.01 to 100 nanomolar. A factor of ten in affinity is about 1.4 kcal/mol — a rounding error in energy terms, which is why predicting affinity is hard.</li>
+<li><strong>Structure prediction is solved; the things built on top of it are not.</strong> Single-chain folds are essentially done. Binding affinity, pose prediction on unfamiliar protein families, and conformational ensembles are not. <code>landscape.md</code> puts the best blind affinity rank correlation at 0.39–0.42 against a label noise ceiling of 0.73.</li>
+<li><strong>There are three distinct computational jobs</strong> — predict a structure, design a sequence, and judge a design — and the central methodological hazard of the field is using the same model for jobs two and three. An optimiser pointed at a predictor will find that predictor's blind spots.</li>
+<li><strong>The design methods form a clear progression:</strong> generate-then-filter (RFdiffusion plus ProteinMPNN), gradient hallucination (BindCraft), and verified search (ProteoCraft). Each fixes the previous one's failure mode, and the newest adds an honest verification step inside the optimisation loop rather than after it.</li>
+<li><strong>The filter that matters most is orthogonality, not accuracy.</strong> Two independent weak checks beat one strong check, because optimisation pressure finds the holes in whatever you optimise against. In-silico refolding with a <em>different</em> model is the single highest-value filter in binder design.</li>
+<li><strong>For small molecules, most failures are not binding failures.</strong> They are solubility, permeability, metabolism, toxicity and off-target failures. Roughly 90% of candidates that reach human trials still fail, so the funnel exists to remove the molecules that would fail for reasons unrelated to the target.</li>
+<li><strong>Antibiotics are the hardest case and fail for a specific reason:</strong> Gram-negative bacteria have a double membrane and active efflux pumps, so potency against the purified enzyme predicts almost nothing. Accumulation has to be filtered for before affinity, not after.</li>
+<li><strong>Reported design hit rates range from under 1% to above 80%</strong>, improving by roughly two orders of magnitude in four years (author-reported). Almost none of it is independently replicated, and the measurement that would settle it — a blind, prospective, third-party wet-lab benchmark — does not exist.</li>
+</ol>
+<hr />
+<h2 id="1-what-a-drug-has-to-do-stated-physically">1. What a drug has to do, stated physically</h2>
+<p>A drug is a molecule that binds something in the body and changes what it does. Everything else follows from that.</p>
+<p><strong>Binding.</strong> Two molecules stick together when the bound state is more energetically favourable than the two separated states. The strength is reported as a dissociation constant, K<sub>D</sub>, in units of concentration: the concentration at which half the target is occupied. Lower is stronger. The scale is logarithmic and spans a wide range:</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>K<sub>D</sub></th>
+<th>What it means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>millimolar (mM)</td>
+<td>Barely binding. Buffer components bind this well.</td>
+</tr>
+<tr>
+<td>micromolar (µM)</td>
+<td>A typical screening hit, or a fragment. Not a drug.</td>
+</tr>
+<tr>
+<td>100 nanomolar (nM)</td>
+<td>A usable starting point.</td>
+</tr>
+<tr>
+<td>1–10 nM</td>
+<td>A good drug-like affinity.</td>
+</tr>
+<tr>
+<td>sub-nanomolar</td>
+<td>Strong. Antibodies and optimised drugs live here.</td>
+</tr>
+<tr>
+<td>picomolar (pM)</td>
+<td>Very tight. Some antibodies, some natural binders.</td>
+</tr>
+</tbody>
+</table></div>
+<p>The conversion that explains the field's difficulty: <strong>a tenfold change in K<sub>D</sub> corresponds to about 1.4 kcal/mol</strong> of binding free energy. A single hydrogen bond is worth a few kcal/mol; thermal energy at body temperature is about 0.6. So the difference between a useless micromolar compound and an excellent nanomolar one is a handful of kcal/mol out of hundreds in the system. Any computational method has to resolve a small difference between two large numbers, and the errors in those large numbers are themselves larger than the difference.</p>
+<p><strong>Specificity.</strong> Binding the target is necessary and nowhere near sufficient. The human body contains roughly 20,000 protein-coding genes and many more protein forms. A molecule that binds the target at 1 nM and forty other proteins at 10 nM is a toxin, not a drug. Specificity is the harder half of the problem and the less well served by computation, because it requires being confident about <em>non</em>-binding, and models trained on databases of things that do bind have almost no training signal for things that do not.</p>
+<p><strong>Kinetics.</strong> Two molecules with the same K<sub>D</sub> can behave differently in a body. K<sub>D</sub> is a ratio of an on-rate and an off-rate, and how long the molecule stays bound once bound — residence time — often predicts clinical effect better than affinity does. Computational prediction of kinetics is substantially behind prediction of affinity, which is itself not solved.</p>
+<p><strong>Everything after binding.</strong> The molecule must dissolve, survive the gut or the bloodstream, cross the membranes it needs to cross, reach the tissue, avoid being metabolised or excreted too quickly, not poison the liver or stop the heart, and not provoke an immune response. These properties are collectively <strong>ADMET</strong>: absorption, distribution, metabolism, excretion, toxicity. Most attrition happens here, not at the binding step.</p>
+<h2 id="2-two-kinds-of-drug-two-different-problems">2. Two kinds of drug, two different problems</h2>
+<p>The conversation around "AI drug design" moves between two modalities with different physics, different tooling and different failure modes. Keeping them apart is the first thing to get right.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th></th>
+<th><strong>Small molecules</strong></th>
+<th><strong>Biologics (proteins)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Size</td>
+<td>20–50 atoms, under ~500 daltons</td>
+<td>1,000–25,000+ atoms, 10–150 kilodaltons</td>
+</tr>
+<tr>
+<td>Examples</td>
+<td>Aspirin, statins, most antibiotics, most oral drugs</td>
+<td>Antibodies, insulin, enzymes, designed miniproteins</td>
+</tr>
+<tr>
+<td>How made</td>
+<td>Chemical synthesis</td>
+<td>Grown in cells</td>
+</tr>
+<tr>
+<td>Administration</td>
+<td>Usually a pill</td>
+<td>Usually injected; cannot survive the gut</td>
+</tr>
+<tr>
+<td>Can enter cells</td>
+<td>Often yes</td>
+<td>Almost never — restricted to targets outside cells or on their surface</td>
+</tr>
+<tr>
+<td>Design space</td>
+<td>~10<sup>60</sup> plausible drug-like molecules; chemistry is the constraint</td>
+<td>20<sup>L</sup> sequences for length L; synthesis is easy, so search is the constraint</td>
+</tr>
+<tr>
+<td>Main computational task</td>
+<td>Which molecule, and what pose in the pocket</td>
+<td>Which sequence, and does it fold and bind</td>
+</tr>
+<tr>
+<td>Main failure mode</td>
+<td>ADMET and toxicity</td>
+<td>Expression, aggregation, immunogenicity</td>
+</tr>
+<tr>
+<td>Mature tooling</td>
+<td>Docking, QSAR, free-energy methods, ADMET predictors</td>
+<td>Structure prediction, generative backbone design, sequence design</td>
+</tr>
+</tbody>
+</table></div>
+<p>The protein-engineering side has had the more dramatic recent progress, because proteins are strings over a 20-letter alphabet and therefore sit naturally in the same mathematical shape as language and images. The small-molecule side has the deeper and more mature computational tradition, going back decades, and the more direct commercial record.</p>
+<h2 id="3-proteins-for-people-who-have-not-done-this">3. Proteins, for people who have not done this</h2>
+<p>A protein is a chain. Each link is one of <strong>20 amino acids</strong>, each with the same backbone chemistry and a distinct side chain: some greasy, some charged, some capable of hydrogen bonds, one (cysteine) able to form a covalent bridge to another. The chain is written as a string of 20 letters. That string is the <strong>sequence</strong>.</p>
+<p>Left in water, the chain folds into a specific three-dimensional shape — the <strong>structure</strong> — driven mostly by the greasy side chains hiding from water in the interior while the charged ones stay on the surface. The shape is what does the work. The shape is almost entirely determined by the sequence, which is why predicting the second from the first was the field's defining problem for fifty years.</p>
+<p>A few consequences and terms:</p>
+<ul>
+<li><strong>The combinatorics are brutal.</strong> A modest 60-residue protein has 20<sup>60</sup> ≈ 10<sup>78</sup> possible sequences — more than the atoms in the observable universe. You cannot enumerate, and you cannot measure more than a tiny number, so everything is search.</li>
+<li><strong>Almost all sequences are junk.</strong> A random sequence usually does not fold into anything stable. Natural proteins are a vanishingly small, highly non-random subset, which is why models trained on natural sequences carry real information about what is plausible.</li>
+<li><strong>Interfaces are where binding happens.</strong> When two proteins bind, a patch of each surface — a few hundred to a couple of thousand square ångströms — comes into contact. The patch on the target is the <strong>epitope</strong>. A few residues contribute most of the energy; these are <strong>hotspots</strong>, and aiming a design at them is how you control <em>where</em> on a target your molecule binds.</li>
+<li><strong>Scaffold versus binder.</strong> A <strong>binder</strong> is the designed molecule. A <strong>scaffold</strong> is the structural framework it is built on. A <strong>miniprotein</strong> is a small designed binder, typically 50–150 residues, usually a few helices, with no natural ancestor. Miniproteins are the favourite output of the design field because they are small, stable, and easy to make.</li>
+<li><strong>Antibodies and nanobodies.</strong> An antibody is a large natural protein whose binding is done by six short loops, the <strong>CDRs</strong> (complementarity-determining regions), sitting on a fixed framework. Redesigning only the CDRs is a constrained, well-posed design problem: most of the molecule stays as nature made it, which solves the stability and manufacturability questions for free. A <strong>nanobody</strong> or <strong>VHH</strong> is a single-domain antibody fragment from camelids, around 15 kDa, that binds with one domain instead of two — simpler to design and to make, which is why it shows up repeatedly as a test case.</li>
+<li><strong>Proteins move.</strong> This matters more than beginners expect. A transporter opens to the outside and then to the inside. An enzyme closes over its substrate. A receptor has an active and an inactive shape. A single predicted structure is a photograph of something that is really a film, and drugs often work by binding one specific frame — holding a receptor in its inactive state, for example. Asking a model for a <em>particular</em> state, rather than its favourite state, turns out to be a distinct and unsolved-until-recently capability.</li>
+</ul>
+<h2 id="4-the-three-computational-jobs-and-why-they-get-confused">4. The three computational jobs, and why they get confused</h2>
+<p>Nearly all the tooling sorts into three jobs:</p>
+<ol>
+<li><strong>Prediction.</strong> Given a sequence (and perhaps a partner or a ligand), what is the structure?</li>
+<li><strong>Design.</strong> Given a target and a goal, what sequence should I make?</li>
+<li><strong>Evaluation.</strong> Given a proposed molecule, how likely is it to work?</li>
+</ol>
+<p>The confusion, and it is consequential, is that <strong>the same models serve all three</strong>. A structure predictor is the design engine (you optimise a sequence to make the predictor happy) and also the judge (you keep the designs the predictor scores well). That is a closed loop with no external reference, and it has a predictable failure: the optimiser finds inputs that score well without being good — adversarial examples against a model you are trusting as a ground truth. The field's name for this is <strong>hallucination</strong>, used both for the design technique and for its pathology.</p>
+<p>Everything interesting in the methods below is a strategy for breaking that loop.</p>
+<h2 id="5-structure-prediction-what-the-models-actually-do">5. Structure prediction: what the models actually do</h2>
+<p><strong>The two generations.</strong> AlphaFold2 (2020–21) read a protein's evolutionary record — a stack of related sequences from other organisms, the multiple sequence alignment or <strong>MSA</strong> — and reasoned about which residues co-vary, since residues that touch each other tend to mutate together. It produced structures at experimental accuracy and effectively closed the single-chain folding problem. The 2024 Nobel Prize in Chemistry went to this work and to the design work built on it.</p>
+<p>AlphaFold3 (2024) and its successors replaced the hand-built structural machinery with a <strong>diffusion</strong> model. Diffusion is worth understanding because it is the hook everything else attaches to:</p>
+<blockquote>
+<p>Start with the atoms in random positions — pure noise. Repeatedly ask a network "given this noisy arrangement, what did the clean structure probably look like?", take a partial step toward that answer, and repeat. Over tens to hundreds of steps the noise anneals into a structure. The same mechanism underlies image generation.</p>
+</blockquote>
+<p>The practical consequence is that generation is now an iterative process you can <strong>reach into</strong>, which Section 6 exploits.</p>
+<p>The other branch dropped the evolutionary record entirely. <strong>ESMFold</strong> and its descendants use a protein <strong>language model</strong> — trained on sequences the way an LLM is trained on text — and fold directly from one sequence. Slightly less accurate on hard targets, but much faster and MSA-free, which matters enormously for design, where you generate a sequence that has no evolutionary relatives to look up. This is why design pipelines disproportionately use language-model folders.</p>
+<p><strong>The current field.</strong> AlphaFold3, Boltz-2, Chai-1, Protenix, OpenFold3 and ESMFold2 are all <strong>co-folding</strong> models: they take protein chains plus small molecules, ions, nucleic acids and modifications, and predict the whole assembly at once. Several are open-weights, which is new and is what makes the toolkit-style work in Section 6 possible at all.</p>
+<p><strong>Confidence metrics, because they are everywhere.</strong> These are the numbers every paper reports and every filter thresholds on:</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Range</th>
+<th>What it says</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>pLDDT</strong></td>
+<td>0–100 (or 0–1)</td>
+<td>Per-residue local confidence. Above ~70 is a confident fold; below ~50 usually means disordered or wrong.</td>
+</tr>
+<tr>
+<td><strong>pTM</strong></td>
+<td>0–1</td>
+<td>Predicted accuracy of the overall fold.</td>
+</tr>
+<tr>
+<td><strong>ipTM</strong></td>
+<td>0–1</td>
+<td>Predicted accuracy of the <em>interface</em> between chains. The one that matters for binders. Above ~0.75 is the usual bar for a confident complex.</td>
+</tr>
+<tr>
+<td><strong>PAE / PDE</strong></td>
+<td>ångströms</td>
+<td>Predicted error between each pair of residues. Shows whether two domains are confidently placed <em>relative to each other</em>.</td>
+</tr>
+</tbody>
+</table></div>
+<p>The essential caveat: <strong>these are confidence, not correctness, and absolutely not affinity.</strong> A model can be confidently wrong, and a high-ipTM complex is a prediction that the two things <em>would</em> look like this if they bound, not evidence that they do. Treating ipTM as an affinity proxy is the most common error in reading this literature. It correlates with experimental success well enough to be the field's main filter, which is a statement about the absence of anything better.</p>
+<p><strong>What prediction is still bad at,</strong> and all four are load-bearing for drug design:</p>
+<ul>
+<li><strong>Affinity.</strong> Not solved. Blind rank correlations of 0.39–0.42 against a label noise ceiling of 0.73, with molecular weight alone predicting almost as well, and one headline correlation of 0.66 matched exactly by a baseline that never sees the protein (see <code>landscape.md</code>). Newer co-folding models report affinity heads approaching free-energy-method accuracy at a fraction of the cost; these are author-reported and should be read against the baseline problem above.</li>
+<li><strong>Novel pockets.</strong> Pose prediction collapses from ~66% on protein families redundant with the training set to ~2% without an alignment. The models are substantially retrieving rather than reasoning.</li>
+<li><strong>One state only.</strong> The model returns its favourite conformation, typically the one best represented in the structural database. Cryptic pockets, allosteric states and the inactive forms that drugs often target are systematically under-returned.</li>
+<li><strong>Small-molecule chemistry.</strong> Ligands come out with wrong <strong>chirality</strong> (handedness — and the mirror image of a drug can be inactive or harmful) or wrong <strong>cis/trans</strong> geometry around double bonds, and with distorted bond lengths and angles. A chemist rejects these on sight. This is the specific defect the RGI-Toolkit work fixes.</li>
+</ul>
+<h2 id="6-steering-the-models-restraints-at-prediction-time">6. Steering the models: restraints at prediction time</h2>
+<p>If a prediction is produced by a hundred small refinement steps, you can intervene at every step. That is <strong>restraint-guided inference</strong>: at each step, measure how far the current structure is from the rules you specified, and nudge the coordinates to break them less. Repeated across all steps, the output satisfies your rules. No retraining, and the model weights stay frozen.</p>
+<p>Two uses, and both matter commercially:</p>
+<p><strong>Enforcing chemistry.</strong> Tell the model that this ligand's bond lengths, angles, chirality and double-bond geometry must be correct, and that it must not overlap the protein. The RGI-Toolkit paper reports this across six predictors on 209 protein-ligand complexes drawn from PLINDER, reaching 100% agreement on chirality and cis/trans while also improving local geometry (author-reported). This converts a class of output that a medicinal chemist would discard into usable structures — unglamorous and immediately practical.</p>
+<p><strong>Choosing a state.</strong> Specify a distance, an angle, a dihedral, or a root-mean-square deviation from a reference structure, and the model moves toward the state you asked for. The paper demonstrates continuous steering between open and closed states of a binding protein and an enzyme, and outward- and inward-facing states of a transporter, with sampled conformations shifting systematically as the target value changes. This is how you ask for the frame of the film you care about.</p>
+<p><strong>What the models offer natively</strong> is uneven, which is the gap a general toolkit fills:</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Native control</th>
+<th>Mechanism</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AlphaFold2 / ColabFold</td>
+<td>Templates; MSA subsampling and trimming as a trick to shake out alternative states</td>
+<td>Indirect — change the input and hope</td>
+</tr>
+<tr>
+<td>AlphaFold3</td>
+<td>Custom MSAs, templates, explicit covalent bonds</td>
+<td><strong>No distance or contact restraints</strong></td>
+</tr>
+<tr>
+<td>Chai-1</td>
+<td>Contact, pocket and covalent restraints</td>
+<td>Learned — trained to read them as input</td>
+</tr>
+<tr>
+<td>Boltz-1x / Boltz-2</td>
+<td>Pocket and contact constraints, plus inference-time steering for chirality, ring planarity and clashes</td>
+<td>Boltz's steering is the direct predecessor of this idea</td>
+</tr>
+<tr>
+<td>Protenix</td>
+<td>Contact and pocket constraints</td>
+<td>Learned</td>
+</tr>
+</tbody>
+</table></div>
+<p>The distinction between <strong>learned</strong> and <strong>imposed</strong> is the one to hold onto. A learned constraint is a hint the model was trained to respect and can therefore ignore, and you are limited to the constraint types someone trained for. An imposed restraint corrects coordinates directly, so anything expressible as a differentiable function is enforceable — arbitrary distances, angles, dihedrals, RMSD to one or several references, custom reaction-coordinate expressions. The idea is not new, and Boltz already shipped a version of it; the contribution of a toolkit is generality (one YAML rule file, a selection language for picking atoms, six backends, a thin adapter plus one hook per model) and the extension of restraints to models like AlphaFold3 that have none.</p>
+<p><strong>The honest limits,</strong> as the authors state them: restraints must be physically sensible, and inconsistent or over-weighted ones produce strained or failed structures; RMSD targets have intrinsic geometric limits; ligand restraints inherit the quality of the reference conformer, and the generator for those sometimes fails outright; and per-step optimisation adds compute. The recommended discipline — several seeds, controls, confidence metrics, and checking that the restraints were actually satisfied — is the same discipline that applies everywhere else in this document.</p>
+<h2 id="7-designing-a-binder-three-generations-of-method">7. Designing a binder: three generations of method</h2>
+<p>The goal: given a target structure and a patch on it, produce a sequence that folds and binds there.</p>
+<p><strong>Generation one — physics and scaffold docking.</strong> Rosetta-era methods docked libraries of existing backbones against the target and optimised side chains. It worked, and it produced the field's foundational understanding, but hit rates were low enough — commonly well under 1% — that finding anything meant screening very large numbers of candidates, and docking rigid predefined scaffolds onto a rigid target left interface gaps and made some epitopes effectively untargetable.</p>
+<p><strong>Generation two — generate, then filter.</strong> The standard modern pipeline, and still the workhorse:</p>
+<ol>
+<li><strong>RFdiffusion</strong> generates a backbone — a shape, no sequence — conditioned on the target and the epitope.</li>
+<li><strong>ProteinMPNN</strong> reads that backbone and chooses a sequence likely to fold into it.</li>
+<li><strong>AlphaFold filtering</strong> predicts the complex and keeps candidates that score well.</li>
+</ol>
+<p>This raised experimental success rates by roughly an order of magnitude and is responsible for most of the field's credibility. Its structural weakness is that steps one and two do not talk to each other: the shape is chosen without knowing the chemistry that will fill it, and atomic-level interactions at the interface are never explicitly modelled. Step three is left to repair the gap by rejection.</p>
+<p><strong>Generation two-and-a-half — hallucination.</strong> <strong>BindCraft</strong> observed that if a structure predictor is differentiable, it is a design engine. Start from a random sequence, run it through AlphaFold2, define a loss that rewards a confident interface, and backpropagate to the sequence itself. Reported experimental success rates jumped again, with much less screening. The pathology is in the previous paragraph's word <em>differentiable</em>: direct gradient descent against a model is myopic, and it reliably finds the model's imperfections. You get designs that make AlphaFold confident, which is not the same as designs that bind.</p>
+<p><strong>Generation three — propose, then verify.</strong> The ProteoCraft paper splits the two roles that hallucination conflates:</p>
+<ul>
+<li><strong>Gradients propose.</strong> Differentiating through a <em>single</em> terminal diffusion step (cheap, and only approximate) yields a prior over which residues to change and to what. It is used strictly as a suggestion about <em>where to look</em>.</li>
+<li><strong>Full inference verifies.</strong> Every proposed sequence then gets a complete, gradient-free forward pass through the predictor, scored on interface confidence, binder confidence, global confidence and a compactness penalty. That score is the node's value.</li>
+</ul>
+<p>The two are wrapped in a <strong>tree search</strong> — the Monte Carlo tree search family, as used in game-playing engines. Nodes are verified sequences, edges are mutations, and the search budget flows to branches that have verified well, balancing exploitation against exploration. It runs coarse-to-fine: first multi-site edits that jump between distinct regions of sequence space, then single-residue refinement of the survivors. Hotspot targeting enters as an extra loss term that biases proposals toward a chosen patch, and the same framework covers de novo binders, TCR-facing binders and localised CDR redesign by changing only which positions are mutable.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>Generate-then-filter</th>
+<th>Hallucination</th>
+<th>Verified search</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Example</td>
+<td>RFdiffusion + ProteinMPNN</td>
+<td>BindCraft</td>
+<td>ProteoCraft</td>
+</tr>
+<tr>
+<td>Predictor's role</td>
+<td>Filter, at the end</td>
+<td>Differentiable objective</td>
+<td>Proposal <strong>and</strong> verifier, separated</td>
+</tr>
+<tr>
+<td>Compute per design</td>
+<td>Low</td>
+<td>Low–medium</td>
+<td>High (many full inference passes)</td>
+</tr>
+<tr>
+<td>Failure mode</td>
+<td>Shape and sequence decided separately</td>
+<td>Exploits predictor blind spots</td>
+<td>Expensive; still only as good as the verifier</td>
+</tr>
+<tr>
+<td>Guards against self-deception</td>
+<td>By rejection, after the fact</td>
+<td>Barely</td>
+<td>Inside the loop, plus cross-model checks</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>What they report.</strong> On 14 target-hotspot settings across eight targets, 54% of ProteoCraft designs cleared the strictest confidence bar against 19% for a compute-matched version of their own pipeline without the tree search, with the published baselines lower; ablations credit both the one-step diffusion signal and the search. The gains persisted under two independent evaluators (an AlphaFold2 initial-guess protocol and Rosetta interface scoring), which is the part that deserves the most weight, since it is evidence the designs are not merely artefacts of the one predictor they were optimised against. In the wet lab: against PD-L1, 35 miniproteins made, 29 bound (82.9%), six under 10 nM, best fitted at 0.879 nM from a single measurement; against IFNAR2 with a nanobody scaffold, 4 of 9 expressed candidates bound, best around 153 nM across two measurements. No laboratory affinity maturation.</p>
+<p><strong>How to read those numbers.</strong> They are author-reported, prospective, and on two targets. <code>landscape.md</code> classifies de novo binder design as "works, unreplicated" — author-reported hit rates from 2% to above 20%, with essentially no independent wet-lab replication — and that framing should survive this paper rather than be overwritten by it. An 82.9% hit rate on one target with 35 candidates is a strong result and a small sample; the nanobody number, 44% on nine, is the more sobering half of the same experiment and the more representative of a constrained scaffold. The right reading is that the method is promising and the field's validation protocol still cannot distinguish a genuine two-order-of-magnitude advance from a well-chosen target.</p>
+<h2 id="8-small-molecules-the-parallel-toolchain">8. Small molecules: the parallel toolchain</h2>
+<p>The same three jobs, different machinery, and a longer track record.</p>
+<ul>
+<li><strong>Docking</strong> places a molecule in a pocket and scores it. Fast — millions of compounds a day — and the basis of <strong>virtual screening</strong>. Scoring functions are known to rank poorly; docking is a usable enrichment filter and a bad affinity predictor.</li>
+<li><strong>Co-folding</strong> (the models in Section 5) now predicts the protein and ligand together, which handles induced fit — the pocket reshaping around the ligand — that rigid docking misses. The novel-family collapse from Section 5 applies.</li>
+<li><strong>Generative chemistry</strong> proposes molecules directly, conditioned on a pocket or a property profile, usually with synthesisability constraints folded in.</li>
+<li><strong>Free-energy methods</strong> are the accuracy end. <strong>FEP</strong> (free-energy perturbation) simulates the alchemical conversion of one molecule into a close analogue and computes the affinity difference, reaching roughly 1 kcal/mol error when well set up — about a factor of ten in K<sub>D</sub>, which is enough to rank a congeneric series. Expensive, needs a reliable structure, and fundamentally comparative rather than absolute.</li>
+<li><strong>Fragment and QSAR traditions</strong> remain, and are often the quiet workhorses in an industrial setting.</li>
+</ul>
+<p>The two AI-discovered antibiotics usually cited — halicin and abaucin — came from a different and more modest approach than anything above: train a classifier on compounds whose antibacterial activity was already measured, screen existing libraries computationally, and test the top predictions. No structure, no design, no generative model. Worth remembering when a pipeline diagram implies the whole stack is required.</p>
+<h2 id="9-the-funnel-between-a-design-and-a-wet-lab-experiment">9. The funnel between a design and a wet-lab experiment</h2>
+<p>This is the part the question in the conversation was really about. There is no single filter. You stack several cheap, <strong>independent</strong> checks, and the ones that predict wet-lab success are mostly not the affinity predictors.</p>
+<h3 id="the-shape-of-it">The shape of it</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Cost</th>
+<th>Removes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Confidence thresholds</td>
+<td>seconds</td>
+<td>Designs the model itself does not believe</td>
+</tr>
+<tr>
+<td>In-silico refolding / cross-model check</td>
+<td>minutes</td>
+<td>Designs that only one model believes</td>
+</tr>
+<tr>
+<td>Geometry and chemistry validity</td>
+<td>seconds</td>
+<td>Physically impossible outputs</td>
+</tr>
+<tr>
+<td>Interface quality metrics</td>
+<td>minutes</td>
+<td>Confident-looking but poorly packed interfaces</td>
+</tr>
+<tr>
+<td>Short molecular dynamics</td>
+<td>hours</td>
+<td>Poses that do not survive physics</td>
+</tr>
+<tr>
+<td>Artefact and novelty filters</td>
+<td>seconds</td>
+<td>Known liars, and memorised training data</td>
+</tr>
+<tr>
+<td>Synthesisability / expressibility</td>
+<td>minutes</td>
+<td>Things nobody can make</td>
+</tr>
+<tr>
+<td>ADMET and toxicity</td>
+<td>minutes</td>
+<td>Molecules that will fail in a cell or an animal</td>
+</tr>
+<tr>
+<td>Off-target panel</td>
+<td>hours</td>
+<td>Molecules that hit everything</td>
+</tr>
+<tr>
+<td>Free-energy calculation</td>
+<td>days</td>
+<td>Mis-ranked analogues</td>
+</tr>
+<tr>
+<td>Modality-specific physics</td>
+<td>varies</td>
+<td>For antibiotics: anything that cannot get in or stays out</td>
+</tr>
+</tbody>
+</table></div>
+<p>Earlier and cheaper is better, and the ordering should put the <em>modality's dominant failure mode</em> as early as its cost allows.</p>
+<h3 id="for-a-designed-protein">For a designed protein</h3>
+<p><strong>In-silico refolding is the highest-value filter, and it is nearly free.</strong> Take your designed sequence, predict its structure <em>on its own</em> with a model you did not design against, and compare to the structure you intended. If a design was optimised against predictor A, verify with predictor B. Agreement within about 2 Å is the usual bar. This catches the single largest class of failure — sequences that make one model confident and fold into nothing — and it is the discipline ProteoCraft follows by optimising with ESMFold2 and then re-scoring with AlphaFold2 initial-guess and Rosetta.</p>
+<p><strong>Interface quality, not just confidence.</strong> Confidence metrics are coarse. The physics-based interface descriptors are more diagnostic and worth thresholding separately: buried surface area, <strong>shape complementarity</strong> (how well the two surfaces match), hydrogen-bond count across the interface, Rosetta ΔG and ddG, and packing quality. ProteoCraft's cross-evaluation table reports exactly these, and the pattern to look for is a design that wins on confidence while losing on packing — a sign of a predictor artefact.</p>
+<p><strong>Specificity by negative design.</strong> Explicitly predict your binder against the target's close relatives and against anything it must not hit. Keep designs that bind one and not the others. This is underused, partly because it doubles the compute and partly because the models are weakest at exactly this.</p>
+<p><strong>Developability, which kills more biologics than affinity does.</strong> A binder that will not express, or aggregates in the vial, or provokes an immune response, is finished regardless of how well it binds. Predict and filter on expression level, aggregation propensity, solubility, thermostability, net charge and hydrophobic patches; and for anything antibody-derived, immunogenicity and chemical liability motifs — deamidation, oxidation, isomerisation and unwanted glycosylation sites. Working inside a natural framework, as CDR redesign does, inherits much of this for free, which is a real and underrated argument for constrained design over de novo design.</p>
+<p><strong>Several seeds, and the spread as a signal.</strong> Run the pipeline repeatedly with different random seeds. A design that appears only under one seed, or whose metrics swing widely across seeds, is less trustworthy than a mediocre one that appears consistently.</p>
+<h3 id="for-a-small-molecule">For a small molecule</h3>
+<p><strong>Does the pose survive physics?</strong> Co-folding gives one confident-looking pose. Short molecular dynamics — tens to hundreds of nanoseconds — tells you whether the ligand stays put or drifts out of the pocket, and is cheap enough to run on every survivor. Rescoring with MM/GBSA or MM/PBSA gives a rough free energy, better at ranking than at absolute values. FEP is the accurate option where a congeneric series needs ordering.</p>
+<p><strong>Physical validity of the pose itself.</strong> Predicted complexes frequently contain chemically impossible geometry — distorted bonds, wrong stereochemistry, atoms overlapping the protein. Automated validity checks (the PoseBusters-style battery) catch these, and the published finding that motivated them is that a substantial share of poses from deep-learning docking methods fail basic physical tests while scoring well on the usual accuracy metric. The restraint approach in Section 6 is the preventive version of the same concern.</p>
+<p><strong>Is the hit a known liar?</strong> A large fraction of apparent actives are artefacts. <strong>PAINS</strong> substructures and aggregation-prone compounds show activity in every assay by reacting non-specifically or forming colloids. These are cheap substructure and property filters and should run first. Separately, check <strong>novelty against the training data</strong>: a model proposing something it has memorised from a public bioactivity database is retrieving, not designing, and the published pose-prediction collapse on non-redundant families is the general form of this problem.</p>
+<p><strong>Can anyone make it?</strong> Retrosynthesis planners and synthetic-accessibility scores answer this, and the check belongs early because it is cheap and it removes candidates permanently. A design with no synthetic route is not a design.</p>
+<p><strong>Will it fail in a cell or an animal?</strong> This is where most attrition happens and where the predictive models are most mature: solubility, permeability, metabolic stability, plasma protein binding, and the toxicity flags — hERG cardiac channel liability above all, plus liver toxicity and mutagenicity. These models are far from perfect but they are good enough to rank, and they remove molecules that would otherwise consume months.</p>
+<p><strong>What else does it hit?</strong> Dock or co-fold against a panel of human proteins, with the known safety-liability targets prioritised. Cheap insurance against a predictable class of failure.</p>
+<h3 id="the-principle-underneath-all-of-it">The principle underneath all of it</h3>
+<p><strong>Orthogonality beats accuracy.</strong> Two independent weak filters catch more than one strong filter, because whatever you optimise against, the optimiser will find its holes. This is the single most transferable lesson in the document, it is why cross-model evaluation became standard practice, and it is the same argument the evaluation work in <code>../eval/</code> makes about benchmarks in a different field.</p>
+<p><strong>Filter on the actual failure mode.</strong> For antibiotics that is accumulation, not affinity. For antibodies it is developability. Teams routinely over-invest in affinity prediction — the most intellectually interesting and least solved problem — and under-invest in the boring check that would have killed the candidate in a second.</p>
+<p><strong>None of this substitutes for cheap experiments.</strong> The groups that do best shorten the loop rather than perfecting the filter: small batches, measured, fed back. Filtering moves a hit rate from under one percent to tens of percent, which is genuinely transformative, and no stack produces a reliable single-shot answer.</p>
+<h2 id="10-antibiotics-are-the-hard-case-for-specific-reasons">10. Antibiotics are the hard case, for specific reasons</h2>
+<p>Antibiotics were the example in the question and they are the least representative case, in instructive ways.</p>
+<p><strong>The target is not in a human cell.</strong> It is inside a bacterium, which has its own defences, and for Gram-negative bacteria — the clinically urgent ones — those defences dominate everything else:</p>
+<ul>
+<li><strong>A double membrane.</strong> An outer membrane with its own permeability rules, quite different from the physicochemical profile that gets a molecule into a human cell. Much of standard drug-likeness guidance is the wrong guidance here.</li>
+<li><strong>Efflux pumps.</strong> Active machinery that ejects foreign molecules. A compound that gets in and is pumped straight out is inactive no matter how tightly it binds.</li>
+</ul>
+<p>The consequence: <strong>potency against the purified enzyme predicts very little.</strong> The literature on compound accumulation in Gram-negatives — the "eNTRy rules" line of work, which identified physicochemical properties associated with accumulation in <em>E. coli</em> and used them to convert an inactive Gram-positive antibiotic into a broad-spectrum one — exists because this gap is the field's central practical problem. Any antibiotic filtering stack should put predicted accumulation and efflux liability <strong>before</strong> affinity.</p>
+<p><strong>Resistance is a design constraint, not a later surprise.</strong> A target where a single point mutation abolishes binding will fail clinically even if it works perfectly on the bench. This argues for targets where resistance mutations carry a fitness cost, for binding to conserved and functionally constrained sites, and for considering multi-target compounds. Computationally, it means scanning plausible target mutations against your candidate and checking that binding degrades gracefully.</p>
+<p><strong>Selectivity has two extra axes.</strong> Not just human off-targets, but the homologous human proteins (several antibiotic targets have mitochondrial counterparts) and the gut microbiome, where broad killing has its own consequences.</p>
+<p><strong>And the economics are the actual blocker.</strong> A successful new antibiotic is deliberately held in reserve and used as little as possible, so revenue is minimal in exactly the case where the drug is most valuable. Several companies that brought approved antibiotics to market went bankrupt doing it. Antimicrobial resistance is a large and growing cause of death globally, and the pipeline is thin not primarily for want of computational methods but because the reward structure is broken. Proposed fixes — subscription-style payments and market-entry rewards — have been debated for years with limited enactment. <strong>This matters for anyone weighing antibiotics as a commercial wedge: the science is the second obstacle, not the first.</strong></p>
+<h2 id="11-what-is-still-genuinely-unsolved">11. What is still genuinely unsolved</h2>
+<p>Worth stating plainly, because the gap between "a model exists for this" and "the model works" is where most disappointment lives.</p>
+<ol>
+<li><strong>Affinity prediction.</strong> The headline problem. At the measurement floor of its own labels: two assays of the same compound against the same target in the main public database agree at R² ≈ 0.31, so a model that reproduced the database perfectly would score about 0.3, and published models score about 0.3. This is a data-quality problem masquerading as a modelling problem, and more parameters will not touch it.</li>
+<li><strong>Specificity.</strong> Requires confidence about non-binding, with almost no training signal for it.</li>
+<li><strong>Conformational ensembles.</strong> Models return one state. Drug-relevant states — inactive receptors, cryptic pockets, allosteric sites — are systematically under-represented. Restraint-based steering helps when you already know what you are looking for, and does not help you discover a state you had not imagined.</li>
+<li><strong>Generalisation off the training distribution.</strong> The pose-prediction collapse on novel families is the cleanest published demonstration. Performance tracks test-train redundancy, and the standard validation protocol cannot see it.</li>
+<li><strong>Benchmarks and leakage.</strong> The field lacks what solved folding: a large standardised corpus plus a blind, prospective, third-party evaluation. Where that exists, problems get solved; where it does not, reported performance is partly a measure of redundancy with training data. For design specifically, there is no CASP — nobody runs a blind wet-lab bake-off, so hit rates are self-reported on self-chosen targets.</li>
+<li><strong>The last mile.</strong> A molecule that binds is not a drug. Roughly 90% of candidates entering human trials still fail, mostly on efficacy and safety rather than target engagement, and no computational method currently addresses that attrition. <code>landscape.md</code>'s clinical scorecard is the relevant check on any claim here.</li>
+</ol>
+<h2 id="12-where-the-openings-appear-to-be">12. Where the openings appear to be</h2>
+<p>Read against the repository's purpose, and deliberately short, because <code>landscape.md</code> is the considered version of this argument and reaches it from the business side.</p>
+<ul>
+<li><strong>Verification and filtering infrastructure, not models.</strong> Both papers read here wrap frozen third-party models in better search and better checking. That is where the leverage currently is, it does not require training a frontier model, and it is a software problem. The RGI-Toolkit result — making six predictors produce chemically valid ligands — is plumbing of exactly this kind.</li>
+<li><strong>Orthogonal evaluation as a product.</strong> Nobody sells independent, blind, prospective validation of designs. The field's inability to distinguish real advances from well-chosen targets is a market failure with a familiar shape, and it is the same argument as <code>../eval/</code>.</li>
+<li><strong>Label quality over model capacity.</strong> If the ceiling is the data, the valuable asset is consistently measured data, and the best-informed players are buying exactly that.</li>
+<li><strong>Constrained design beats de novo design commercially.</strong> CDR redesign inside a validated framework inherits developability, manufacturability and regulatory precedent. The de novo miniprotein is the better paper; the constrained redesign is the better product.</li>
+<li><strong>Modality-specific physics is underserved.</strong> The Gram-negative accumulation problem is well characterised, economically important and not where the modelling attention is.</li>
+</ul>
+<p>The counter-argument deserves equal space: if affinity and specificity are measurement-limited rather than model-limited, then much of the tooling above is improving the speed of a step that is not the bottleneck, and the honest version of the opportunity is in generating better measurements rather than in better search over bad ones.</p>
+<h2 id="glossary">Glossary</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Affinity / K<sub>D</sub></strong></td>
+<td>Binding strength, as a concentration. Lower is tighter. A tenfold change ≈ 1.4 kcal/mol.</td>
+</tr>
+<tr>
+<td><strong>ADMET</strong></td>
+<td>Absorption, distribution, metabolism, excretion, toxicity. Where most drugs fail.</td>
+</tr>
+<tr>
+<td><strong>Binder</strong></td>
+<td>A designed molecule intended to stick to a target.</td>
+</tr>
+<tr>
+<td><strong>CDR</strong></td>
+<td>The short loops of an antibody that do the binding.</td>
+</tr>
+<tr>
+<td><strong>Co-folding</strong></td>
+<td>Predicting protein plus ligand, ion or nucleic acid together in one pass.</td>
+</tr>
+<tr>
+<td><strong>Developability</strong></td>
+<td>Whether a protein can be expressed, purified, formulated and dosed.</td>
+</tr>
+<tr>
+<td><strong>Diffusion model</strong></td>
+<td>Generation by iteratively denoising from randomness. The hook restraints attach to.</td>
+</tr>
+<tr>
+<td><strong>Docking</strong></td>
+<td>Placing and scoring a small molecule in a pocket. Fast; poor at ranking affinity.</td>
+</tr>
+<tr>
+<td><strong>Epitope / hotspot</strong></td>
+<td>The patch on a target that gets bound; the few residues contributing most of the energy.</td>
+</tr>
+<tr>
+<td><strong>FEP</strong></td>
+<td>Free-energy perturbation. The accurate, expensive, comparative affinity method.</td>
+</tr>
+<tr>
+<td><strong>Hallucination</strong></td>
+<td>Designing by optimising a sequence against a differentiable predictor; also that method's pathology.</td>
+</tr>
+<tr>
+<td><strong>ipTM</strong></td>
+<td>Predicted interface accuracy, 0–1. The field's main binder filter. Confidence, not affinity.</td>
+</tr>
+<tr>
+<td><strong>MSA</strong></td>
+<td>Multiple sequence alignment: the stack of evolutionary relatives AlphaFold2 reads.</td>
+</tr>
+<tr>
+<td><strong>Miniprotein</strong></td>
+<td>A small designed binder, typically 50–150 residues, with no natural ancestor.</td>
+</tr>
+<tr>
+<td><strong>Nanobody / VHH</strong></td>
+<td>Single-domain antibody fragment, ~15 kDa.</td>
+</tr>
+<tr>
+<td><strong>pLDDT</strong></td>
+<td>Per-residue local confidence, 0–100. Above ~70 is a confident fold.</td>
+</tr>
+<tr>
+<td><strong>Restraint-guided inference</strong></td>
+<td>Correcting coordinates at each diffusion step so the output satisfies user-specified rules.</td>
+</tr>
+<tr>
+<td><strong>RMSD</strong></td>
+<td>Root-mean-square deviation: average atomic distance between two aligned structures, in ångströms.</td>
+</tr>
+<tr>
+<td><strong>Scaffold</strong></td>
+<td>The structural framework a binder is built on.</td>
+</tr>
+<tr>
+<td><strong>Self-consistency / in-silico refolding</strong></td>
+<td>Predicting a designed sequence's own structure and comparing to the intended one. The cheapest high-value filter.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="notes-on-evidence">Notes on evidence</h2>
+<p>This document is a synthesis of the author model's own knowledge, current to roughly mid-2026, together with two papers read in full in the session that produced it: RGI-Toolkit (Hori, Moriwaki and Ishitani, Institute of Science Tokyo, bioRxiv, October 6, 2026) and ProteoCraft (Wu, Lin, Duan, Wang, Li and others, a multi-institution preprint, read from a local PDF at <code>papers/ProteoCraft.pdf</code>). It is a primer, not a research contribution, and nothing in it is a new finding.</p>
+<p><strong>Status of the numbers.</strong> Every performance figure attributed to the two papers is <strong>author-reported</strong> and, in both cases, from a preprint without the benefit of peer review. The ProteoCraft wet-lab figures are prospective, which is the strongest available form of this evidence and considerably better than retrospective benchmarking, but they cover two targets with 35 and 9 candidates respectively, the best PD-L1 affinity rests on a single measurement, and the authors themselves state that specificity, biological activity and generalisation to further targets remain to be established. Nothing here is independent replication.</p>
+<p><strong>Where this document defers.</strong> The quantitative claims about affinity prediction, the label noise floor, pose-prediction collapse on novel families and the clinical record are carried over from <code>landscape.md</code>, which traced them to primary sources; they are reproduced here for a reader meeting the material for the first time and the landscape should be treated as the authority. Where that document's scepticism and an individual paper's headline conflict, the landscape governs. In particular, its classification of de novo binder design as "works, unreplicated" is not superseded by the ProteoCraft result.</p>
+<p><strong>Figures given as approximations</strong> — the roughly 90% clinical attrition rate, the ~10<sup>60</sup> estimate of drug-like chemical space, the confidence-metric thresholds, the 1 kcal/mol FEP accuracy and the ångström cut-offs for refolding agreement — are conventional rules of thumb in the field, cited here because they are the numbers practitioners actually use, not because any single source establishes them. Treat them as orientation, not as measurements.</p>
+<p><strong>Native model capabilities</strong> in the table in Section 6 reflect the state of those tools as the author model understood it to roughly mid-2026. This is a fast-moving area and several are actively developed open-source projects; any of them may have added constraint types since. Verify before relying on a specific row.</p>
+<p><strong>The source links below were not fetched during the session that wrote this.</strong> bioRxiv refused automated requests (HTTP 429) for both the paper PDF and its full text, so the links are given from the author model's knowledge and from the bioRxiv API record for the RGI-Toolkit DOI, which was retrievable. Digital object identifiers and journal references should be confirmed before this document is cited externally or quoted to anyone outside the group. The ProteoCraft preprint has no DOI recorded here; it was read as a local file.</p>
+<h2 id="sources">Sources</h2>
+<p><strong>The two papers read for this document</strong></p>
+<ul>
+<li>RGI-Toolkit: Differentiable Restraints for Controllable Biomolecular Structure Prediction — Hori, Moriwaki and Ishitani, bioRxiv, October 6, 2026. <a href="https://doi.org/10.64898/2026.10.05.756905">doi.org/10.64898/2026.10.05.756905</a></li>
+<li>ProteoCraft: Protein Design as Proposal-Verification Search — Wu, Lin, Duan, Wang, Li et al., preprint. Read locally; no DOI recorded.</li>
+</ul>
+<p><strong>Structure prediction</strong></p>
+<ul>
+<li>Highly accurate protein structure prediction with AlphaFold — Jumper et al., <em>Nature</em>, 2021. <a href="https://www.nature.com/articles/s41586-021-03819-2">nature.com/articles/s41586-021-03819-2</a></li>
+<li>Accurate structure prediction of biomolecular interactions with AlphaFold 3 — Abramson et al., <em>Nature</em>, 2024. <a href="https://www.nature.com/articles/s41586-024-07487-9">nature.com/articles/s41586-024-07487-9</a></li>
+<li>Evolutionary-scale prediction of atomic-level protein structure with a language model (ESMFold) — Lin et al., <em>Science</em>, 2023. <a href="https://www.science.org/doi/10.1126/science.ade2574">science.org/doi/10.1126/science.ade2574</a></li>
+<li>Open co-folding implementations: <a href="https://github.com/jwohlwend/boltz">Boltz</a>, <a href="https://github.com/chaidiscovery/chai-lab">Chai-1</a>, <a href="https://github.com/bytedance/Protenix">Protenix</a>, <a href="https://github.com/aqlaboratory/openfold">OpenFold</a></li>
+</ul>
+<p><strong>Protein design</strong></p>
+<ul>
+<li>De novo design of protein structure and function with RFdiffusion — Watson et al., <em>Nature</em>, 2023. <a href="https://www.nature.com/articles/s41586-023-06415-9">nature.com/articles/s41586-023-06415-9</a></li>
+<li>Robust deep learning-based protein sequence design using ProteinMPNN — Dauparas et al., <em>Science</em>, 2022. <a href="https://www.science.org/doi/10.1126/science.add2187">science.org/doi/10.1126/science.add2187</a></li>
+<li>Design of protein-binding proteins from the target structure alone — Cao et al., <em>Nature</em>, 2022. <a href="https://www.nature.com/articles/s41586-022-04654-9">nature.com/articles/s41586-022-04654-9</a></li>
+<li>Improving de novo protein binder design with deep learning — Bennett et al., <em>Nature Communications</em>, 2023. Source of the AlphaFold2 initial-guess evaluation protocol.</li>
+<li>BindCraft — Pacesa et al. <a href="https://github.com/martinpacesa/BindCraft">github.com/martinpacesa/BindCraft</a></li>
+<li>The 2024 Nobel Prize in Chemistry, for computational protein design and structure prediction. <a href="https://www.nobelprize.org/prizes/chemistry/2024/summary/">nobelprize.org/prizes/chemistry/2024</a></li>
+</ul>
+<p><strong>Evaluation, validity and artefacts</strong></p>
+<ul>
+<li>PoseBusters: AI-based docking methods fail to generate physically valid poses or generalise to novel sequences — Buttenschoen, Morris and Deane, <em>Chemical Science</em>, 2024.</li>
+<li>New substructure filters for removal of pan assay interference compounds (PAINS) — Baell and Holloway, <em>Journal of Medicinal Chemistry</em>, 2010.</li>
+<li>PLINDER, a protein-ligand interaction dataset and evaluation resource. <a href="https://github.com/plinder-org/plinder">github.com/plinder-org/plinder</a></li>
+</ul>
+<p><strong>Free energy and ADMET</strong></p>
+<ul>
+<li>Accurate and reliable prediction of relative ligand binding potency in prospective drug discovery by way of a modern free-energy calculation protocol and force field — Wang et al., <em>JACS</em>, 2015.</li>
+<li>The Open Free Energy consortium. <a href="https://openfree.energy/">openfree.energy</a></li>
+</ul>
+<p><strong>Antibiotics</strong></p>
+<ul>
+<li>Predictive compound accumulation rules yield a broad-spectrum antibiotic — Richter et al., <em>Nature</em>, 2017. The eNTRy rules work. <a href="https://doi.org/10.1038/nature22308">doi.org/10.1038/nature22308</a></li>
+<li>A deep learning approach to antibiotic discovery (halicin) — Stokes et al., <em>Cell</em>, 2020. <a href="https://doi.org/10.1016/j.cell.2020.01.021">doi.org/10.1016/j.cell.2020.01.021</a></li>
+<li>Deep learning-guided discovery of an antibiotic targeting <em>Acinetobacter baumannii</em> (abaucin) — Liu et al., <em>Nature Chemical Biology</em>, 2023.</li>
+<li>Global burden of bacterial antimicrobial resistance in 2019 — Antimicrobial Resistance Collaborators, <em>The Lancet</em>, 2022. <a href="https://doi.org/10.1016/S0140-6736(21)02724-0">doi.org/10.1016/S0140-6736(21)02724-0</a></li>
+</ul>
+<p><strong>In this repository</strong></p>
+<ul>
+<li><code>landscape.md</code> — where AI enters drug discovery, the ten stages, the label noise floor, the clinical record. The authority for every quantitative claim this document borrows.</li>
+<li><code>case-studies/</code> — Warp Sciences, OpenAI in the life sciences, and the founding-pairs study.</li>
+<li><code>../doc-understanding/bio-medical/</code> — literature, patents and biomedical evidence as a document-understanding problem.</li>
+<li><code>../eval/</code> — the evaluation work whose argument about benchmark validity recurs here in a different science.</li>
+</ul>
+</main>
+</div>
+
+<footer><div class="wrap">
+  <p>How a Designed Molecule Becomes a Candidate</p>
+  <p>Rendered from Markdown research notes. <a href="index.html">Back to the index</a>.</p>
+</div></footer>
+
+</body>
+</html>

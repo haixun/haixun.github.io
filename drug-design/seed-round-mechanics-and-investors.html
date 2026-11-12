@@ -1,0 +1,1838 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="An evidence file, not an essay. Compiled 11 November 2026 for the ai4bio exploration, to feed a synthesis document on how first rounds in this sector actually work: how much, from whom, on what...">
+<title>Seed round mechanics and the investor landscape in AI-for-drug-discovery</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="topbar"><div class="wrap">
+  <a href="index.html">&larr; All documents</a>
+  <span class="crumb">Evidence file &middot; <b>Seed round mechanics and the investor l...</b></span>
+</div></nav>
+
+<header class="mast"><div class="wrap">
+  <p class="kicker">Evidence file</p>
+  <h1>Seed round mechanics and the investor landscape in AI-for-drug-discovery</h1>
+  <p class="standfirst">An evidence file, not an essay. Compiled 11 November 2026 for the ai4bio exploration, to feed a synthesis document on how first rounds in this sector actually work: how much, from whom, on what terms. Method: primary sources where reachable (firm websites, law-firm quarterly deal-terms reports, agency program pages, company counsel announcements), third-party aggregates where not, and — for the amount distributions — my own computation from a company-level deal list rather than any aggregator's reported average. Every figure is labelled with its source, and with whether it is a median or a mean. Limits, stated up front because they are severe: </em><em>Carta blocked every request (HTTP 403) from this session</em><em>, so every Carta figure here is second-hand through blogs that disagree with each other; the </em><em>PitchBook-NVCA PDF would not parse</em><em>; the </em><em>HSBC Innovation Banking detail tables live in PDFs I could not reach</em><em>; </em><em>I have no year-by-year AI-bio seed data before 2024</em><em>; and the session's web-search budget was exhausted partway through, so several planned lines of enquiry (academic translational funds, the traditional preclinical-duration baseline, pharma venture arms' stated criteria) are marked not researched rather than not found. "Not found" means not found. Nothing here is estimated.</p>
+</div></header>
+
+<div class="wrap">
+<nav class="toc">
+  <h2>Contents</h2>
+  <ol>
+    <li><a href="#the-short-version">The short version</a></li>
+    <li><a href="#a-how-biotech-first-rounds-actually-work-versus-software">(a) How biotech first rounds actually work, versus software</a></li>
+    <li><a href="#b-amounts-with-real-numbers">(b) Amounts, with real numbers</a></li>
+    <li><a href="#c-the-investor-landscape-who-actually-leads-these-rounds">(c) The investor landscape: who actually leads these rounds</a></li>
+    <li><a href="#d-graduation-and-base-rates">(d) Graduation and base rates</a></li>
+    <li><a href="#gaps-and-conflicts">Gaps and conflicts</a></li>
+    <li><a href="#sources">Sources</a></li>
+  </ol>
+</nav>
+<main class="doc">
+<h2 id="the-short-version">The short version</h2>
+<ol>
+<li><strong>The central structural fact: classic biotech often has no seed round to compete for, because the seed-stage work happens inside the venture firm before the company exists.</strong> 5AM Ventures says this almost explicitly on its own site: its 4:59 Initiative is a "hands-on internal effort to discover, incubate, and fund breakthrough science" whose purpose is to generate early data <em>for a Series A</em>, and its venture strategy is "early-stage focused, with an emphasis on <strong>Series A</strong> companies." The word seed does not appear. Third Rock says it spends a long period "<strong>at the seed stage</strong>, validating mechanisms and maturing a lead program <strong>well before a company launches</strong>." Versant runs "<strong>in-house</strong> teams of multi-disciplinary scientists working in state-of-the-art laboratory facilities" that "enable the launch of novel biotechnology companies." The Column Group is "primarily focused on <strong>company formation</strong>." In each case the seed is an internal cost centre, not a financing event.</li>
+<li><strong>But the label is not the mechanism, and 2025–26 broke the label.</strong> Flagship Pioneering launched Lila Sciences in March 2025 with <strong>$200M of what it and the trade press called "seed" capital</strong>. Xaira launched in April 2024 with <strong>"&gt;$1bn in committed capital"</strong> — the company's own phrase — which one tracker records as a Series A and no one records as a seed. A $200M "seed" and a $1bn unlabelled first round are the same mechanism as a Series A; only the vocabulary moved.</li>
+<li><strong>The AI-native pattern is real, numerous and much smaller.</strong> A hand-curated tracker of AI-drug-discovery financings records <strong>57 seed rounds between 1 January 2024 and 21 September 2026</strong> in this one niche. My computation from that company-level list: <strong>pooled median seed $7.0M, pooled mean $11.34M (n=56 disclosed), p10 $1.97M, p90 $28.06M</strong>. That is a real ladder, not an artefact: Antiverse, Converge Bio, Orbis Medicines, Chai Discovery and Xellar all raised a seed and then a Series A inside the window.</li>
+<li><strong>The field is bifurcating, not converging.</strong> Model and tool companies run the software ladder with software investors and software instruments — Boltz PBC took a $28M seed from Amplify, a16z and Zetta; Topos Bio $10.5M from Boldstart and Threshold; 10x Science $4.8M from Initialized. Therapeutics companies that need wet labs and a pipeline are still formed and financed the biotech way: Flagship's Expedition Medicines entered at a <strong>$50M Series A</strong> (Oct 2025), not a seed.</li>
+<li><strong>Tranching is the terms difference that survives scrutiny, and Cooley only reports it for one side.</strong> Cooley's quarterly venture financing reports publish the share of <strong>life sciences</strong> rounds structured in tranches — 25.8% (Q4 2024), 27.1% (Q1 2025), 33.3% (Q2 2025, "the highest percentage seen since Q3 2023"), 28.3% (Q3 2025), 23.6% (Q4 2025), 28.1% (Q1 2026), 29.6% (Q2 2026) — and publish <strong>no comparable figure for technology</strong>. Roughly one life-sciences round in four to one in three is milestone-gated. Note Cooley silently revised two of its own quarters.</li>
+<li><strong>Second seeds are at least as common as observed graduations.</strong> Of the 56 seed-labelled rounds, <strong>6 companies raised a second round still labelled seed</strong> (Graph Therapeutics, Sable Bio, Helical, Manas AI, Relation Therapeutics, Meddenovo) against <strong>5 that reached a Series A inside the window</strong>. Relation Therapeutics' second seed was <strong>smaller than its first</strong> ($35M in Mar 2024, then $26M in Dec 2025, from the same lead). Meddenovo's second was $450K after $1.1M.</li>
+<li><strong>Mean-versus-median is not a pedantic caveat here; it is the whole story.</strong> AI-drug-discovery <strong>Series A 2024: median $32.5M, mean $108.67M — a 3.34x divergence</strong>, because Xaira's single round was <strong>70.8% of the year's Series A dollars</strong>. Remove one deal and the mean falls from $108.7M to $34.4M while the median barely moves ($32.5M → $29.2M). In 2025 Isomorphic's $600M was 45.3% of the year's Series A dollars. Any sentence in this sector containing an average and no median should be discarded.</li>
+<li><strong>AI-bio seeds are roughly 2x general software seeds, but the comparison is soft.</strong> AI-drug-discovery seed median pooled 2024–26: <strong>$7.0M</strong> (my computation, n=56). All-US all-sector median seed deal 2026: <strong>$3.0M</strong>, down from $3.4M in 2025 — seed was the only stage whose median <em>fell</em> (PitchBook-NVCA Venture Monitor Q3 2026). Ratio ~2.3x. Against the $4.1M Carta figure the ratio would be ~1.7x. Different populations, different windows, different definitions of "seed": the direction is probably right, the magnitude is not reliable.</li>
+<li><strong>The famous generalist crossover funds are mostly absent from AI-bio seeds.</strong> Of the names the group asked about, only <strong>a16z</strong> (Boltz) and <strong>General Catalyst</strong> (Manas AI, Lila) appear as seed investors in the 56-deal set. <strong>Lux Capital, Founders Fund, Khosla Ventures, Felicis, Compound, NFX and Civilization Ventures do not appear at all.</strong> The repeat seed leads are different names: <strong>DCVC</strong> (two of the six largest seeds in the dataset), <strong>Dimension</strong> (Achira $33M, Chai ~$30M), <strong>Madrona</strong>, <strong>redalpine</strong>, <strong>daphni</strong>.</li>
+<li><strong>The most active strategic investor at AI-bio seed is a chip company, not a pharma company.</strong> NVIDIA's <strong>NVentures</strong> backed Relation Therapeutics' seed twice and EvolutionaryScale's $142M seed. Across the entire 56-deal seed set I found <strong>no seed round from Pfizer Ventures, JJDC, Amgen, AbbVie, Roche, BMS, M Ventures, Boehringer, Sanofi Ventures or GV</strong>. Novartis Venture Fund's own site (&gt;$750M committed, 40+ companies) <strong>does not mention seed or company creation at all</strong>.</li>
+<li><strong>Y Combinator applies identical terms to a therapeutics company and a SaaS company, and says so by omission.</strong> $500,000 on two post-money SAFEs — $125,000 for 7% plus $375,000 uncapped with MFN — no fees, <strong>"not contingent on milestones,"</strong> pro rata included. YC's deal page <strong>does not mention bio or hard tech anywhere</strong>. That is the software pattern applied to bio without modification, and it is the exact inverse of the 23.6–33.3% of life-sciences rounds that Cooley finds tranched.</li>
+<li><strong>The non-dilutive on-ramp is real and specific.</strong> NIH SBIR/STTR Phase I <strong>$335,937</strong> and Phase II <strong>$2,239,578</strong> (guidelines, not caps). SOSV takes <strong>up to $550,000</strong> at pre-seed but has "strict ownership requirements" and needs "<strong>more than 10% ownership</strong>" for that cheque. Nucleate's Activator "forms pioneering biotech companies <strong>without taking equity</strong>." Wellcome Leap funds at the <strong>program</strong> level, $50–60M each, not per company.</li>
+<li><strong>There is no biotech-versus-software seed graduation rate. I looked hard and it does not exist in reachable form.</strong> The best quantified sector statement I could reach is J.P. Morgan, relayed second-hand, putting seed→A between <strong>"1 in 10" and "1 in 3" depending on sector and market conditions</strong> — a range, not a biotech figure. Carta's cohort series (30.6% for Q1 2018, ~40% for Q2 2020, 15.4% for Q1 2022, all 2-year windows) is all second-hand and the relays do not reconcile with each other.</li>
+<li><strong>The 2026 cohort is being set up for the hardest Series A yet.</strong> PitchBook-NVCA counts <strong>8,625 first-time financings through Q3 2026</strong>, already above the 8,507 full-year 2021 record, while the median seed round <em>shrank</em> to $3.0M and AI took 82.7% of all US venture dollars. More companies, smaller cheques, and — on the Carta relays — a lower graduation rate than any prior cohort.</li>
+</ol>
+<hr />
+<h2 id="a-how-biotech-first-rounds-actually-work-versus-software">(a) How biotech first rounds actually work, versus software</h2>
+<h3 id="the-venture-creation-model-in-the-firms-own-words">The venture-creation model, in the firms' own words</h3>
+<p>This is the structural point the group may not know, and it is worth establishing from primary sources rather than from the secondary blogs that dominate search results on it. The claim is <strong>not</strong> that biotech firms never use the word seed. The claim is that in the venture-creation model the seed-stage <em>work</em> — target validation, mechanism de-risking, lead maturation, team assembly — is performed inside the venture firm, funded off the firm's own balance sheet, before a company exists as a financeable entity. The company's first external financing is therefore a Series A, or an unlabelled block of committed capital.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Firm</th>
+<th>Primary-source language on the model</th>
+<th>Does it name a seed round?</th>
+<th>Reachable figures</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>5AM Ventures</strong></td>
+<td>The <strong>4:59 Initiative</strong> is a "hands-on internal effort to discover, incubate, and fund breakthrough science," working with academics and founders "often <strong>serving as an extension of the operating team</strong>" to generate early data <strong>for a Series A</strong>. The venture strategy is "<strong>early-stage focused, with an emphasis on Series A companies</strong>."</td>
+<td><strong>No.</strong> The word seed does not appear on the page.</td>
+<td>Fund sizes not stated; the site's "Capital Raised" field renders as "$ 0 B" (display error — do not use)</td>
+</tr>
+<tr>
+<td><strong>Third Rock Ventures</strong></td>
+<td>Four stages: Discover, Launch, Build, Transform. In Discover it works "with academics, scientific founders, and advisors to define a company's strategy." It spends a long period "<strong>at the seed stage, validating mechanisms and maturing a lead program well before a company launches</strong>," so companies launch with more developed programs. During Launch, Third Rock's own people "<strong>serve in interim roles</strong> to execute the company's R&amp;D strategy."</td>
+<td>Yes — but as a <strong>phase of the firm's internal work</strong>, explicitly "before a company launches," not as a financing event</td>
+<td>First financing, check sizes and round structure not disclosed</td>
+</tr>
+<tr>
+<td><strong>Versant Ventures</strong></td>
+<td><strong>Discovery Engines</strong> are "<strong>in-house</strong> teams of multi-disciplinary scientists working in state-of-the-art laboratory facilities" that "<strong>enable the launch of novel biotechnology companies</strong> with academic founders."</td>
+<td><strong>No.</strong> Not mentioned.</td>
+<td><strong>$5.5B</strong> under management; 3 Discovery Engines; 30+ academic partnerships; 50+ IPOs, 50+ M&As; founded 1999</td>
+</tr>
+<tr>
+<td><strong>The Column Group</strong></td>
+<td>"<strong>Primarily focused on company formation</strong> but with the financial wherewithal for long-term private and public capital support"; an "edge-to-edge model" moving platforms, single assets and later-stage programs "from inception through exit."</td>
+<td><strong>No.</strong> Not mentioned.</td>
+<td>TCG Labs-Soleil raised "<strong>Over $400 Million</strong> For Its New Fund"; $4.0bn in returns; 55 companies started or invested in; 18 exits. Platform/Opportunity/TCGX fund sizes not stated</td>
+</tr>
+<tr>
+<td><strong>Foresite Capital</strong></td>
+<td>"<strong>Multi-stage</strong> healthcare and life sciences investment firm" funding "promising businesses <strong>at all stages</strong> of their life cycles"; "data science-driven approach to invest in companies that leverage biology and big data"; focus on "breakthrough opportunities at the intersection of tech and biotech." <strong>Foresite Labs</strong> appears only in navigation and in one headline ("Foresite Labs: Supporting the Next Generation of Healthcare Entrepreneurs") — the mechanism is not described.</td>
+<td>Not stated either way</td>
+<td>"$900M" fund (Fierce Biotech headline carried on Foresite's own site); fund names and vintages not given</td>
+</tr>
+<tr>
+<td><strong>Flagship Pioneering</strong></td>
+<td><strong>Site returned HTTP 403 on both <code>/our-approach</code> and the root domain.</strong> Could not obtain primary language this session.</td>
+<td>—</td>
+<td>See below: Flagship's observable behaviour contradicts the simple version of the model</td>
+</tr>
+<tr>
+<td><strong>ARCH Venture Partners</strong></td>
+<td><strong>Site returned HTTP 403.</strong> Could not obtain primary language.</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Atlas Venture</strong></td>
+<td><code>/approach/</code> enters an HTTPS→HTTP→HTTPS redirect loop; could not fetch.</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>The secondary literature on Flagship</strong> (HBS-derived case summaries and several blogs) describes a firm that originates concepts internally, does not accept proposals from outside entrepreneurs, moves concept → experimentation → platform proof → team formation → company launch, and runs 80–100 explorations a year through Flagship Labs. One blog gives check sizes of $5M–$50M per company creation and Series A rounds averaging $22M. <strong>I could not verify any of these numbers against a primary source and would not put them in a synthesis document.</strong> The "80–100 explorations per year" figure traces to a single blog.</p>
+<h3 id="what-flagship-and-xaira-actually-did-which-is-the-more-useful-evidence">What Flagship and Xaira actually did, which is the more useful evidence</h3>
+<p>Two 2024–25 events show that the vocabulary has detached from the mechanism:</p>
+<ul>
+<li><strong>Lila Sciences</strong> launched out of Flagship's labs in <strong>March 2025 with $200M</strong> that BioPharma Dive and the company both call "<strong>seed funding</strong>" / "<strong>seed capital</strong>" — Flagship plus eight other investors, among them <strong>General Catalyst, ARK Venture Fund and Altitude Life Science Ventures</strong>. Lila is run by a Flagship general partner (Geoff von Maltzahn) with a Flagship senior fellow as CTO (Andrew Beam) and a Flagship origination partner as president of future science (Molly Gibson). It "will not make its own therapeutic candidates" and will instead partner with other Flagship startups and outside biotechs. <strong>The article does not explain the sizing or structure of the round.</strong> A $200M first round staffed by the sponsoring firm's own partners is the venture-creation model wearing a seed label.</li>
+<li><strong>Xaira Therapeutics</strong> launched <strong>23 April 2024</strong> after roughly six months in stealth with "<strong>more than $1 billion in committed capital</strong>" — the company's own phrase, not a round name — co-led by <strong>ARCH Venture Partners and Foresite Capital</strong>, with F-Prime, NEA, Sequoia, Lux, Lightspeed, Menlo Ventures, Two Sigma Ventures and SV Angel. One explainer notes that committed capital "is not the same as a $1 billion valuation or a single $1 billion funding round." The AI-drug-discovery tracker records it as a <strong>Series A of &gt;$1B</strong>; nobody records it as a seed. The tracker's own methodology says committed capital "is not treated as cash received at close." <strong>Two aggregators would give this event two different stage labels, and the company gave it none.</strong></li>
+</ul>
+<p>By contrast, Flagship's <strong>Expedition Medicines</strong> raised a <strong>$50M Series A</strong> from Flagship Pioneering in <strong>October 2025</strong>. So the same firm, in the same eighteen months, labelled one creation a $200M seed and another a $50M Series A. The label carries no information about the mechanism.</p>
+<h3 id="the-ai-native-pattern-and-whether-it-is-winning">The AI-native pattern, and whether it is winning</h3>
+<p>The AI-drug-discovery tracker records <strong>57 seed rounds and 46 Series A rounds</strong> between 1 January 2024 and 21 September 2026 in this single niche, with <strong>no round labelled pre-seed at all</strong>. That is a functioning seed market where the classic model says there should not be one. Named seed→A ladders inside the window:</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Company</th>
+<th>Seed</th>
+<th>Series A</th>
+<th>Gap</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Orbis Medicines</td>
+<td>$28.2M, Feb 2024 (Novo Holdings, Forbion)</td>
+<td>~$93.8M, Jan 2025 (NEA)</td>
+<td>~11 months</td>
+</tr>
+<tr>
+<td>Chai Discovery</td>
+<td>~$30M, Sep 2024 at a <strong>$150M valuation</strong> (Thrive lead; OpenAI Startup Fund; Dimension Capital)</td>
+<td>$70M, Aug 2025 (Menlo Ventures)</td>
+<td>~11 months</td>
+</tr>
+<tr>
+<td>Converge Bio</td>
+<td>$5.5M, Nov 2024 (TLV Partners)</td>
+<td>$25M, Jan 2026 (Bessemer)</td>
+<td>~14 months</td>
+</tr>
+<tr>
+<td>Xellar Biosystems</td>
+<td>~$13.8M, Jul 2024 (TriApex Group)</td>
+<td>~$29M, Jun 2026</td>
+<td>~23 months</td>
+</tr>
+<tr>
+<td>Antiverse</td>
+<td>$4.6M, Oct 2024 (i&amp;i Biotech Fund I, Kadmos)</td>
+<td>$9.3M, Mar 2026 (Soulmates Ventures)</td>
+<td>~17 months</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Evidence of convergence on the software pattern:</strong> classic software seed funds are now leading AI-bio seeds with their own instruments and cadence. Boldstart Ventures and Threshold led <strong>Topos Bio</strong> ($10.5M, Jan 2026); Amplify Partners with a16z and Zetta Venture Partners led <strong>Boltz PBC</strong> ($28M, Jan 2026); Initialized Capital led <strong>10x Science</strong> ($4.8M, Apr 2026); Sutter Hill Ventures led <strong>Integrated Biosciences</strong> ($17.2M, Oct 2024); Madrona led <strong>Archon Biosciences</strong> ($20M, Oct 2024) and <strong>Aizen Therapeutics</strong> ($13M, Nov 2024). a16z's own account of <strong>Arda Therapeutics</strong> says it "first invested at the <strong>Seed</strong> stage" and then led the Series A — the software sequence exactly.</p>
+<p><strong>Evidence of persistence of the biotech pattern:</strong> Cooley's all-stage median deal size was <strong>higher in life sciences than in technology</strong> in Q1 2026 ($22.2M vs $19.3M); life-sciences rounds are tranched at 23.6–33.3% while Cooley publishes no tranche figure for technology at all; venture-creation firms are still entering at Series A (Expedition Medicines $50M) or at unlabelled nine- and ten-figure first rounds (Xaira, Lila); and the therapeutics end of the 2025 Series A list is dominated by specialist and strategic syndicates (AI Proteins $41.5M from Mission BioCapital and Santé; PsiThera $47.5M from Samsara Biocapital and Lightstone; Syneron Bio ~$100M from AstraZeneca and the AZ-CICC fund).</p>
+<p><strong>My reading of the two together: this is a bifurcation along the wet-lab line, not a convergence.</strong> Companies selling models, tools and prediction (Boltz, Tamarind, Chai, Topos, Converge, 10x Science, deepmirror) run the software ladder. Companies that intend to own molecules and need laboratories, chemistry and a pipeline are still created and capitalised the biotech way, whatever the first round is called. The brief asked for evidence either way; this is the shape of it.</p>
+<h3 id="tranched-financings-and-milestone-gates">Tranched financings and milestone gates</h3>
+<p>Cooley's quarterly venture financing reports are the best reachable primary-adjacent series on this, drawn from the firm's own deal flow. <strong>Cooley reports this metric for life sciences only.</strong></p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Quarter</th>
+<th>Life sciences rounds structured in tranches</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q4 2024</td>
+<td>25.8%</td>
+<td>as cited in the Q1 2025 report</td>
+</tr>
+<tr>
+<td>Q1 2025</td>
+<td>27.1%</td>
+<td><strong>later revised to 28%</strong> in the Q2 2025 report</td>
+</tr>
+<tr>
+<td>Q2 2025</td>
+<td>33.3%</td>
+<td>"the highest percentage seen since Q3 2023"; <strong>later revised to 31.7%</strong></td>
+</tr>
+<tr>
+<td>Q3 2025</td>
+<td>28.3%</td>
+<td><strong>later revised to 26%</strong> in the Q4 report</td>
+</tr>
+<tr>
+<td>Q4 2025</td>
+<td>23.6%</td>
+<td></td>
+</tr>
+<tr>
+<td>Q1 2026</td>
+<td>28.1%</td>
+<td></td>
+</tr>
+<tr>
+<td>Q2 2026</td>
+<td>29.6%</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p>Two things matter here. First, <strong>roughly one life-sciences round in four to one in three is milestone-gated</strong>, persistently, across a period that includes both the downturn and the 2026 recovery. Second, <strong>Cooley revised three of its own quarters</strong> when restating them in later reports (27.1%→28%, 33.3%→31.7%, 28.3%→26%). Use the series for its level and its stability, not for quarter-to-quarter moves.</p>
+<p><strong>Cooley does not break tranching out by stage</strong>, so I cannot tell the group what share of <em>seed</em> rounds are tranched. Its Q3 2025 report notes only that "deal volume decreased across Series Seed, A and C financings." <strong>Seed-level tranche data: not found.</strong></p>
+<p>Seed <em>extensions</em> and second seeds, however, are directly countable from the company-level deal list. Six of the 56 seed-labelled AI-drug-discovery rounds are a company's <strong>second</strong> seed-labelled round:</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Company</th>
+<th>First seed</th>
+<th>Second seed</th>
+<th>Direction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Relation Therapeutics</td>
+<td>$35M, Mar 2024 (DCVC, NVentures)</td>
+<td><strong>$26M</strong>, Dec 2025 (DCVC, NVentures, Magnetic Ventures)</td>
+<td><strong>down</strong></td>
+</tr>
+<tr>
+<td>Meddenovo Drug Design</td>
+<td>~$1.1M, Jul 2024 (ACT Venture Partners)</td>
+<td><strong>$450K</strong>, May 2025</td>
+<td><strong>down</strong></td>
+</tr>
+<tr>
+<td>Manas AI</td>
+<td>$24.6M, Jan 2025 (General Catalyst, Reid Hoffman)</td>
+<td>$26M, Sep 2025</td>
+<td>up</td>
+</tr>
+<tr>
+<td>Helical</td>
+<td>$2.4M, Jun 2024</td>
+<td>$10M, Apr 2026 (redalpine)</td>
+<td>up</td>
+</tr>
+<tr>
+<td>Sable Bio</td>
+<td>~$1.9M, Feb 2024 (Episode 1)</td>
+<td>$3.8M, Feb 2026 (MMC Ventures)</td>
+<td>up</td>
+</tr>
+<tr>
+<td>Graph Therapeutics</td>
+<td>$3.1M, Jan 2025 (Squareone, Merantix)</td>
+<td>$5M, Jun 2026 (daphni)</td>
+<td>up</td>
+</tr>
+</tbody>
+</table></div>
+<p>Aureka Biotechnologies did the same thing one stage later: a <strong>$23.2M Series A</strong> in Nov 2025 (5Y Capital, Qiming) followed by a <strong>$35M Series A</strong> in Apr 2026 (HongShan). A separate biotech funding tracker records explicit Series A extensions in 2026 — Vima Therapeutics $40M extension (March), R1 Therapeutics adding $3M to take its Series A from $77.5M to $80.5M, Link Cell Therapies $30M extension (late September) — plus one entry stating "US$21M tranche; US$42M total Series A equity and grants" and one (Serapha Bio) at "US$230M total; US$138M already funded + US$92M expected at merger close." <em>Third-party tracker, no gating conditions disclosed; treat as illustrative of the structures in use, not as a rate.</em></p>
+<h3 id="safes-versus-priced-rounds">SAFEs versus priced rounds</h3>
+<p><strong>Honest answer: I could not find authoritative data on instrument mix split by sector, and the group should not be given a number.</strong> What I can establish:</p>
+<ul>
+<li><strong>Priced rounds dominate wherever a tranche exists, by construction.</strong> A milestone-gated tranche, a board seat and a liquidation preference cannot be papered in a SAFE. Cooley's 23.6–33.3% life-sciences tranche rate therefore sets a floor on the share of institutional life-sciences rounds that are priced. <em>This is my inference from Cooley's data, not a claim any source makes.</em></li>
+<li><strong>Cooley's life-sciences dataset is a priced-round dataset.</strong> Its terms tables report 1x liquidation preference in 95.8–98.2% of deals and nonparticipating preferred stock in ~96% across 2025–26. These are concepts that exist only in priced preferred financings.</li>
+<li><strong>At the pre-seed boundary, the software instrument is used unmodified.</strong> Y Combinator invests <strong>$500,000 on two post-money SAFEs</strong> — $125,000 for 7% (converting into 7% including any existing option pool) plus $375,000 on an <strong>uncapped MFN SAFE</strong> (converting at the lowest cap issued between the MFN start date and the priced round; at a $15M post-money cap, 2.5%) — with no fees, <strong>"not contingent on milestones,"</strong> and pro rata rights. <strong>YC's deal page does not mention bio or hard tech anywhere.</strong> Identical terms for a therapeutics company and a SaaS company.</li>
+<li><strong>SOSV takes equity, not a note, and is explicit about ownership.</strong> Up to <strong>$550,000</strong> at pre-seed, with "strict ownership requirements" and a need to reach "<strong>more than 10% ownership</strong>" for that cheque size. It accepts "angel notes and non-dilutive grants" as prior capital but will not join a company that has already raised a VC-backed seed or Series A.</li>
+<li><strong>Conflicting third-party claims on note usage, reported because they conflict.</strong> One law-oriented newsletter puts convertible notes at "<strong>at least 30%</strong> of pre-seed funding in Medical Devices, Pharma/Biotech, and Energy." A different vendor's pre-seed market-share table puts notes at "<strong>~5–7% overall</strong>," concentrated in biotech, medical devices and energy. These cannot both be right. <strong>Neither is verified; do not use either.</strong></li>
+<li>Several vendor guides assert that biotech seeds move to priced equity "once the round includes a dedicated life-sciences lead, because tranches, board seats, and milestone gates are easier to paper in priced rounds," and that SAFEs survive in "pre-seed angel rounds, academic carve-outs, and bridge instruments." This is consistent with everything above but it is <strong>vendor-blog reasoning, not data</strong>, and I flag it as such.</li>
+</ul>
+<hr />
+<h2 id="b-amounts-with-real-numbers">(b) Amounts, with real numbers</h2>
+<h3 id="methodology-note-which-matters-more-than-usual-here">Methodology note, which matters more than usual here</h3>
+<p>The tables below separate three kinds of figure, and the group should not mix them:</p>
+<ol>
+<li><strong>My own computation</strong> from a company-level deal list. The AI-drug-discovery tracker at newmarketpitch.com publishes every individual financing it records, with company, amount, date and disclosed investors, plus a stated methodology (private-company equity only; AI had to be core to the business; debt, grants, loans and public offerings excluded; committed capital not treated as cash at close; extensions and tranches reviewed case by case). <strong>The tracker does not itself publish stage-level medians.</strong> I extracted its 57 seed and 46 Series A rows and computed the distributions directly. This is a <strong>third-party aggregate as to its inputs and mine as to its statistics.</strong> Known weaknesses: a hand-curated list of ~100 rounds will systematically miss small undisclosed rounds, which biases the medians <strong>upward</strong>; 10 of the 57 seed rows are approximations or lower bounds (marked ≈ or &gt;); one seed row (AIMEDORIG, Nov 2024) has no disclosed amount and is excluded, giving n=56.</li>
+<li><strong>All-sector benchmarks</strong> from PitchBook-NVCA and Cooley, for the software comparison.</li>
+<li><strong>Sector aggregates</strong> from HSBC Innovation Banking and the tracker's own period summaries, which are mostly qualitative or mean-only.</li>
+</ol>
+<h3 id="ai-drug-discovery-seed-rounds-by-year-my-computation-n56">AI drug discovery: seed rounds by year (my computation, n=56)</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Year</th>
+<th>n</th>
+<th><strong>Median</strong></th>
+<th><strong>Mean</strong></th>
+<th>Min</th>
+<th>p25</th>
+<th>p75</th>
+<th>Max</th>
+<th>Year total</th>
+<th>Mean/median</th>
+<th>&lt; $5M</th>
+<th>≥ $20M</th>
+<th>Largest round as % of year's seed dollars</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2024</td>
+<td>22</td>
+<td><strong>$9.75M</strong></td>
+<td>$11.36M</td>
+<td>$0.45M</td>
+<td>$2.93M</td>
+<td>$16.30M</td>
+<td>$35.0M</td>
+<td>$249.9M</td>
+<td>1.16x</td>
+<td>32%</td>
+<td>18%</td>
+<td>14.0%</td>
+</tr>
+<tr>
+<td>2025</td>
+<td>18</td>
+<td><strong>$4.95M</strong></td>
+<td>$9.68M</td>
+<td>$0.45M</td>
+<td>$2.42M</td>
+<td>$15.15M</td>
+<td>$33.0M</td>
+<td>$174.2M</td>
+<td><strong>1.96x</strong></td>
+<td><strong>50%</strong></td>
+<td>22%</td>
+<td>18.9%</td>
+</tr>
+<tr>
+<td>2026 (to 21 Sep)</td>
+<td>16</td>
+<td><strong>$8.50M</strong></td>
+<td>$13.18M</td>
+<td>$2.20M</td>
+<td>$4.05M</td>
+<td>$13.12M</td>
+<td>$80.0M</td>
+<td>$210.9M</td>
+<td>1.55x</td>
+<td>38%</td>
+<td>12%</td>
+<td><strong>37.9%</strong></td>
+</tr>
+<tr>
+<td><strong>Pooled</strong></td>
+<td><strong>56</strong></td>
+<td><strong>$7.00M</strong></td>
+<td><strong>$11.34M</strong></td>
+<td>$0.45M</td>
+<td>—</td>
+<td>—</td>
+<td>$80.0M</td>
+<td>$635.0M</td>
+<td>1.62x</td>
+<td>39%</td>
+<td>18%</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<p>Pooled p10 <strong>$1.97M</strong>, p90 <strong>$28.06M</strong>. <em>Source of inputs: newmarketpitch AI Drug Discovery Funding Tracker, 1 Jan 2024 – 21 Sep 2026, last updated 14 Sep 2026 (third-party aggregate). Statistics computed by me.</em></p>
+<p>Removing the single largest round each year, to show how little of the median is outlier-driven and how much of the mean is:</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Median with → without</th>
+<th>Mean with → without</th>
+<th>Round removed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2024</td>
+<td>$9.8M → $9.3M</td>
+<td>$11.4M → $10.2M</td>
+<td>$35M (Relation Therapeutics)</td>
+</tr>
+<tr>
+<td>2025</td>
+<td>$5.0M → $4.5M</td>
+<td>$9.7M → $8.3M</td>
+<td>$33M (Achira)</td>
+</tr>
+<tr>
+<td>2026</td>
+<td>$8.5M → $7.5M</td>
+<td>$13.2M → $8.7M</td>
+<td><strong>$80M (Proxima)</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>The 2026 line is the clean demonstration: one deal moves the mean by 34% and the median by 12%.</p>
+<h3 id="ai-drug-discovery-series-a-rounds-by-year-my-computation-n46">AI drug discovery: Series A rounds by year (my computation, n=46)</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Year</th>
+<th>n</th>
+<th><strong>Median</strong></th>
+<th><strong>Mean</strong></th>
+<th>Min</th>
+<th>p25</th>
+<th>p75</th>
+<th>Max</th>
+<th>Year total</th>
+<th>Mean/median</th>
+<th>Largest round as % of year's Series A dollars</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2024</td>
+<td>13</td>
+<td><strong>$32.50M</strong></td>
+<td>$108.67M</td>
+<td>$8.80M</td>
+<td>$17.40M</td>
+<td>$41.50M</td>
+<td><strong>$1,000M</strong> (Xaira)</td>
+<td>$1,412.7M</td>
+<td><strong>3.34x</strong></td>
+<td><strong>70.8%</strong></td>
+</tr>
+<tr>
+<td>2025</td>
+<td>24</td>
+<td><strong>$24.10M</strong></td>
+<td>$55.23M</td>
+<td>$2.80M</td>
+<td>$7.70M</td>
+<td>$46.88M</td>
+<td><strong>$600M</strong> (Isomorphic Labs)</td>
+<td>$1,325.6M</td>
+<td>2.29x</td>
+<td>45.3%</td>
+</tr>
+<tr>
+<td>2026 (to 21 Sep)</td>
+<td>9</td>
+<td><strong>$24.00M</strong></td>
+<td>$21.79M</td>
+<td>$7.10M</td>
+<td>$8.50M</td>
+<td>$32.00M</td>
+<td>$47.0M</td>
+<td>$196.1M</td>
+<td>0.91x</td>
+<td>24.0%</td>
+</tr>
+<tr>
+<td><strong>Pooled</strong></td>
+<td><strong>46</strong></td>
+<td><strong>$25.00M</strong></td>
+<td><strong>$63.79M</strong></td>
+<td>$2.80M</td>
+<td>—</td>
+<td>—</td>
+<td>$1,000M</td>
+<td>$2,934.4M</td>
+<td>2.55x</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<p>Pooled p10 <strong>$5.62M</strong>, p90 <strong>$95.66M</strong>.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Median with → without largest</th>
+<th>Mean with → without largest</th>
+<th>Round removed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2024</td>
+<td>$32.5M → $29.2M</td>
+<td><strong>$108.7M → $34.4M</strong></td>
+<td>$1,000M (Xaira)</td>
+</tr>
+<tr>
+<td>2025</td>
+<td>$24.1M → $23.2M</td>
+<td><strong>$55.2M → $31.5M</strong></td>
+<td>$600M (Isomorphic Labs)</td>
+</tr>
+<tr>
+<td>2026</td>
+<td>$24.0M → $18.0M</td>
+<td>$21.8M → $18.6M</td>
+<td>$47M (Fathom)</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>This is the single most important quantitative point in the file.</strong> The 2024 Series A mean is $108.67M; the median is $32.50M. Removing one deal cuts the mean by 68% and the median by 10%. Any report in this sector quoting an average round size without a median is reporting Xaira, Isomorphic and Lila, not the market.</p>
+<h3 id="comparison-benchmarks-all-sector-and-all-stage">Comparison benchmarks: all-sector and all-stage</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Figure</th>
+<th>Value</th>
+<th>Median or mean</th>
+<th>Population / period</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>US median <strong>seed</strong> deal size, 2026</td>
+<td><strong>$3.0M</strong> (from $3.4M in 2025, −12%; <strong>the only stage whose median fell</strong>)</td>
+<td>median</td>
+<td>All US venture, data through 30 Sep 2026</td>
+<td>PitchBook-NVCA Venture Monitor Q3 2026, pub. 7 Oct 2026 <em>(via a secondary summary — the primary PDF would not parse)</em></td>
+</tr>
+<tr>
+<td>US median <strong>Series A</strong> deal size, 2026</td>
+<td><strong>$17.4M</strong> (from $13.7M in 2025, +27%)</td>
+<td>median</td>
+<td>same</td>
+<td>same</td>
+</tr>
+<tr>
+<td>US median seed pre-money valuation</td>
+<td><strong>$18.3M</strong> 2026 YTD vs $16M 2025; a separate relay gives <strong>$18.4M</strong> for Q1 2026</td>
+<td>median</td>
+<td>same</td>
+<td>same / secondary relays</td>
+</tr>
+<tr>
+<td>Total US venture through Q3 2026</td>
+<td><strong>$515.8B</strong>, ~44% above the full-year 2021 record</td>
+<td>total</td>
+<td>same</td>
+<td>same</td>
+</tr>
+<tr>
+<td>AI share of US venture funding</td>
+<td><strong>82.7%</strong></td>
+<td>share</td>
+<td>same</td>
+<td>same</td>
+</tr>
+<tr>
+<td>First-time financings through Q3 2026</td>
+<td><strong>8,625</strong>, vs an 8,507 full-year 2021 record</td>
+<td>count</td>
+<td>same</td>
+<td>same</td>
+</tr>
+<tr>
+<td>Rounds ≥$100M</td>
+<td>~5% of Q3 deals, <strong>75% of Q3 deal value</strong></td>
+<td>share</td>
+<td>same</td>
+<td>same</td>
+</tr>
+<tr>
+<td>Cooley median deal size, Q1 2026</td>
+<td><strong>Technology $19.3M</strong> (Q4 2025 $18.5M); <strong>Life sciences $22.2M</strong> (Q4 2025 $20.0M)</td>
+<td>median</td>
+<td>Cooley's own deal flow; all stages</td>
+<td>Cooley Q1 2026 Venture Financing Report (primary)</td>
+</tr>
+<tr>
+<td>Cooley median deal size, Q2 2026</td>
+<td><strong>Technology $30.5M</strong>; <strong>Life sciences $25.0M</strong></td>
+<td>median</td>
+<td>same; tech inflated by one large late-stage deal that doubled invested capital to $73.9B</td>
+<td>Cooley Q2 2026 Venture Financing Report (primary)</td>
+</tr>
+<tr>
+<td>Cooley deal counts, Q1 2026</td>
+<td>Technology <strong>91</strong> ($36.2B invested); Life sciences <strong>32</strong> ($1.8B)</td>
+<td>count</td>
+<td>same</td>
+<td>Cooley Q1 2026</td>
+</tr>
+<tr>
+<td>Cooley deal counts, Q2 2026</td>
+<td>Technology <strong>95</strong> ($73.9B); Life sciences <strong>27</strong> ($1.1B)</td>
+<td>count</td>
+<td>same</td>
+<td>Cooley Q2 2026</td>
+</tr>
+<tr>
+<td>Cooley <strong>average</strong> deal size, Q4 2025</td>
+<td>Technology <strong>$50.6M</strong> (Q3 $169M); Life sciences <strong>$43.1M</strong> (Q3 $43.5M)</td>
+<td><strong>mean — Cooley reported no medians that quarter</strong></td>
+<td>same</td>
+<td>Cooley Q4 2025</td>
+</tr>
+<tr>
+<td>Deals with pre-money &gt;$100M</td>
+<td>39% (Q4 2025) → 41% (Q1 2026) → 42% / 48% (Q2 2026)</td>
+<td>share</td>
+<td>all stages</td>
+<td>Cooley Q4 2025, Q1 2026, Q2 2026 <em>(Q1 and Q2 reports give 42% and 41% respectively for Q1 — see Gaps)</em></td>
+</tr>
+<tr>
+<td>Carta priced-seed benchmark, mid-2026</td>
+<td><strong>$4.1M round at $24.3M median post-money, ~18% dilution</strong></td>
+<td>median</td>
+<td>Carta's cap-table population</td>
+<td><strong>Second-hand only. Carta returned HTTP 403 on every URL tried.</strong> Multiple blogs relay these figures; others relay ~$3.2M and ~$16M pre-money for Q1 2026</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="ai-bio-versus-general-software-seeds">AI-bio versus general software seeds</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Comparison</th>
+<th>AI drug discovery</th>
+<th>All-sector US</th>
+<th>Ratio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Median seed round, pooled 2024–26 vs 2026</td>
+<td><strong>$7.0M</strong> (n=56, my computation)</td>
+<td><strong>$3.0M</strong> (PitchBook-NVCA)</td>
+<td><strong>~2.3x</strong></td>
+</tr>
+<tr>
+<td>Same, against the Carta relay</td>
+<td>$7.0M</td>
+<td>$4.1M (Carta, second-hand)</td>
+<td>~1.7x</td>
+</tr>
+<tr>
+<td>Median Series A</td>
+<td><strong>$25.0M</strong> pooled (n=46)</td>
+<td>$17.4M (2026)</td>
+<td>~1.4x</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Caveats that make the magnitude unreliable:</strong> the two populations are built differently (a hand-curated 56-deal niche list that systematically misses small undisclosed rounds, versus thousands of deals from a commercial database); the windows differ (33 months pooled versus calendar 2026); and "seed" is not defined identically. Cooley's all-stage medians point the same way in Q1 2026 (life sciences $22.2M above technology $19.3M) and the opposite way in Q2 2026 (technology $30.5M above life sciences $25.0M, on one late-stage deal). <strong>The direction — AI-bio seeds are larger than general software seeds — is supported by every source I reached. The multiple is not.</strong></p>
+<h3 id="sector-level-aggregates-and-what-they-do-and-dont-say">Sector-level aggregates and what they do and don't say</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Figure</th>
+<th>Value</th>
+<th>Median or mean</th>
+<th>Source and caveat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AI drug discovery, overall round size, 20 Sep 2025 – 19 Sep 2026</td>
+<td><strong>median $18.5M</strong> vs <strong>mean $83.4M</strong> (a 4.5x divergence); prior 12 months median $11.0M vs mean $36.8M</td>
+<td>both, side by side</td>
+<td>newmarketpitch (third-party). Largest round in the period <strong>$2.10B</strong> (prior year $600M)</td>
+</tr>
+<tr>
+<td>AI drug discovery, <strong>first financings</strong></td>
+<td>12 deals, <strong>median $7.45M</strong>, $175M total</td>
+<td>median</td>
+<td>same. Prior 12 months: 16 deals, median $10.0M, $781M total. Note "first financing" is a company-level category and does not map to the seed label: 39 deals were labelled Seed or Series A but only 12 were first financings</td>
+</tr>
+<tr>
+<td>AI drug discovery, <strong>follow-on</strong> financings</td>
+<td>45 deals, <strong>median $23.2M</strong>, $4.61B total</td>
+<td>median</td>
+<td>same</td>
+</tr>
+<tr>
+<td>Stage shares of deals vs capital, 2025–26</td>
+<td><strong>Seed: 34.5% of deals, 5.3% of capital. Series A: 32.8% / 11.7%. Series B: 17.2% / 56.2%</strong></td>
+<td>shares</td>
+<td>same. The capital concentration is at Series B, not at the top of the stack</td>
+</tr>
+<tr>
+<td>Round-size distribution shift</td>
+<td>Deals under $5M fell from <strong>29.6% → 17.2%</strong> of financings; deals $20–50M rose from <strong>18.5% → 31%</strong></td>
+<td>shares</td>
+<td>same</td>
+</tr>
+<tr>
+<td>Biopharma mega-rounds</td>
+<td><strong>&gt;50% of all biopharma funding dollars in 2024–25</strong>; ~58–60% over the last three years</td>
+<td>share</td>
+<td>HSBC Innovation Banking (primary pages, qualitative)</td>
+</tr>
+<tr>
+<td>Healthcare venture total</td>
+<td><strong>2025: $60B across 2,167 deals</strong>; 2026 projection <strong>$65–70B</strong>; 1H 2026 <strong>$31B across 1,101 deals</strong></td>
+<td>totals</td>
+<td>HSBC / Business Wire for 2025 and the projection; the 1H 2026 figure is from a third-party summary and <strong>I could not confirm it on HSBC's own page</strong>. A separate third-party write-up gives 2025 as $59B</td>
+</tr>
+<tr>
+<td>Biopharma first financings, Q1 2026</td>
+<td>"Continued a reduced investment pace," with "fewer mega rounds but a positive shift toward <strong>$20–50M</strong> deal sizes"</td>
+<td>qualitative</td>
+<td>HSBC Q1 2026 biopharma highlights (primary)</td>
+</tr>
+<tr>
+<td>Biopharma first financings, 1H 2026</td>
+<td>First-financing dollars up "because of <strong>two outsized mega rounds</strong>"; investors moved "back toward pre-clinical deals with <strong>smaller syndicates and check sizes</strong>"; autoimmune had "Three $100M+ first financings (two Phase II)"</td>
+<td>qualitative</td>
+<td>HSBC 2026 mid-year report (primary page). A third-party summary adds that <strong>the top 10% of deals take 63% of first-financing dollars</strong> — not confirmed on HSBC's page</td>
+</tr>
+<tr>
+<td>Pre-clinical / Phase I M&amp;A</td>
+<td>19 VC-backed deals in the last 18 months at a <strong>$1B median upfront</strong></td>
+<td>median</td>
+<td>HSBC mid-year 2026. <strong>This is an exit median, not a financing median</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Years 2018 through 2023: not found.</strong> The tracker's coverage begins 1 January 2024. I could not reach Nature Biotechnology's annual financing survey (searches returned only its 2021 academic-spinouts collection), the SVB/HSBC historical tables (PDF, 19.3MB, unreachable), or any Carta or PitchBook time series by sector. <strong>The brief asked for a year-by-year picture from roughly 2018; I can deliver 2024–2026 and must say so.</strong> Any 2018–2023 figure in the synthesis document will have to come from somewhere other than this file.</p>
+<h3 id="notably-large-seed-rounds-and-what-justified-them">Notably large "seed" rounds, and what justified them</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Company</th>
+<th>Amount</th>
+<th>Date</th>
+<th>Label used, and by whom</th>
+<th>Lead / notable investors</th>
+<th>Stated rationale</th>
+<th>Source quality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Lila Sciences</strong></td>
+<td><strong>$200M</strong></td>
+<td>Mar 2025</td>
+<td>"<strong>seed funding</strong>" / "<strong>seed capital</strong>" (BioPharma Dive and the company)</td>
+<td>Flagship Pioneering + 8 others incl. General Catalyst, ARK Venture Fund, Altitude Life Science Ventures</td>
+<td>"Scientific superintelligence"; automated "AI Science Factories"; <strong>will not make its own therapeutic candidates</strong>, partnering instead with Flagship startups and outside biotechs. <strong>The article does not explain the sizing or structure</strong></td>
+<td>Trade press (BioPharma Dive), primary-adjacent</td>
+</tr>
+<tr>
+<td><strong>EvolutionaryScale</strong></td>
+<td><strong>$142M</strong></td>
+<td>25 Jun 2024</td>
+<td>"<strong>$142 million Seed financing</strong>" — the phrase used by <strong>the company's own counsel</strong></td>
+<td>Nat Friedman, Daniel Gross and <strong>Lux Capital</strong> (co-leads); <strong>AWS</strong> and <strong>NVentures (NVIDIA)</strong> participating</td>
+<td>Training the next generation of the <strong>ESM3</strong> model and growing partnerships with the biotech industry. Counsel's release gives <strong>no valuation, security type or share pricing</strong></td>
+<td><strong>Primary</strong> (Gunderson Dettmer, deal counsel) + SiliconANGLE</td>
+</tr>
+<tr>
+<td><strong>Proxima</strong></td>
+<td><strong>$80M</strong></td>
+<td>Jan 2026</td>
+<td>Seed</td>
+<td><strong>DCVC</strong></td>
+<td><strong>Not found</strong></td>
+<td>Third-party tracker only</td>
+</tr>
+<tr>
+<td><strong>Radical Numerics</strong></td>
+<td><strong>$50M</strong></td>
+<td>launched 15 Jun 2026</td>
+<td>Seed</td>
+<td><strong>Emergence Capital</strong> (lead); Obvious Ventures, Triatomic Capital, Factory, First Spark Ventures; <strong>Patrick Collison</strong> was a pre-seed investor</td>
+<td>"<strong>General biological intelligence</strong>" — AI that can "read, write, and design across all of biology"; a "dual mandate" covering human health <strong>and biodefense</strong>; founders <strong>Eric Nguyen and Michael Poli</strong> are among the creators of <strong>Evo and Evo2</strong> at the Arc Institute; funds to scale next-generation models and hire frontier AI research talent; previewed a genomic language model, <strong>Omnii</strong>. <strong>No valuation disclosed</strong></td>
+<td>GenomeWeb + multiple outlets agreeing on the facts. Omnii performance claims are the <strong>company's own previews</strong></td>
+</tr>
+<tr>
+<td><strong>Relation Therapeutics</strong></td>
+<td><strong>$35M</strong></td>
+<td>Mar 2024</td>
+<td>Seed</td>
+<td><strong>DCVC, NVentures</strong></td>
+<td><strong>Not found</strong></td>
+<td>Tracker</td>
+</tr>
+<tr>
+<td><strong>Achira</strong></td>
+<td><strong>$33M</strong></td>
+<td>Feb 2025</td>
+<td>Seed</td>
+<td><strong>Dimension</strong></td>
+<td><strong>Not found</strong></td>
+<td>Tracker</td>
+</tr>
+<tr>
+<td><strong>Chai Discovery</strong></td>
+<td><strong>~$30M at a $150M valuation</strong></td>
+<td>Sep 2024</td>
+<td>Seed</td>
+<td><strong>Thrive Capital</strong> (lead), <strong>OpenAI Startup Fund</strong>, <strong>Dimension Capital</strong></td>
+<td>Company was <strong>six months old</strong>; zero-shot biologics design. Bloomberg names only Thrive and Dimension; other outlets list OpenAI as co-lead</td>
+<td>Bloomberg + TechCrunch. <strong>The only AI-bio seed valuation I could verify anywhere</strong></td>
+</tr>
+<tr>
+<td><strong>Orbis Medicines</strong></td>
+<td><strong>$28.2M</strong></td>
+<td>Feb 2024</td>
+<td>Seed</td>
+<td><strong>Novo Holdings, Forbion</strong></td>
+<td><strong>Not found</strong></td>
+<td>Tracker</td>
+</tr>
+<tr>
+<td><strong>Boltz PBC</strong></td>
+<td><strong>$28M</strong></td>
+<td>Jan 2026</td>
+<td>Seed</td>
+<td><strong>Amplify Partners, a16z, Zetta Venture Partners</strong></td>
+<td><strong>Not found</strong> (the Boltz open-source structure-prediction models originate at MIT)</td>
+<td>Tracker</td>
+</tr>
+<tr>
+<td><strong>Manas AI</strong></td>
+<td><strong>$24.6M</strong> then <strong>$26M</strong></td>
+<td>Jan 2025, Sep 2025</td>
+<td>Seed, then a second seed</td>
+<td><strong>General Catalyst, Reid Hoffman</strong></td>
+<td><strong>Not found</strong></td>
+<td>Tracker</td>
+</tr>
+<tr>
+<td><strong>Archon Biosciences</strong></td>
+<td><strong>$20M</strong></td>
+<td>Oct 2024</td>
+<td>Seed</td>
+<td><strong>Madrona</strong></td>
+<td><strong>Not found</strong></td>
+<td>Tracker</td>
+</tr>
+<tr>
+<td><strong>Xaira Therapeutics</strong></td>
+<td><strong>&gt;$1bn</strong></td>
+<td>23 Apr 2024</td>
+<td>"<strong>committed capital</strong>" (company); tracker labels it <strong>Series A</strong>; nobody calls it a seed</td>
+<td><strong>ARCH Venture Partners and Foresite Capital</strong> co-leads; F-Prime, NEA, Sequoia, Lux, Lightspeed, Menlo, Two Sigma Ventures, SV Angel</td>
+<td>~6 months in stealth; founded by former Stanford president Marc Tessier-Lavigne</td>
+<td>Axios, DDW, BioSpace. One secondary source cites mid-2025 PitchBook reporting of a <strong>~$2.7bn valuation</strong>; <strong>I could not verify it</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>What justified the big ones, where anyone said:</strong> in every case where a rationale is on the record, it is <strong>compute and team, not data or assets</strong>. EvolutionaryScale: training the next ESM3 generation. Radical Numerics: scaling next-generation models and hiring frontier AI research talent. Lila: building automated science factories. Chai: a six-month-old company priced off the founding team. None of these cites a validated target, a lead series or an animal model — the things that justify a classic biotech first round. <strong>The large AI-bio seed is a frontier-model financing wearing a biotech coat.</strong></p>
+<h3 id="notably-small-seeds-5m-which-are-39-of-the-population">Notably small seeds (&lt; $5M), which are 39% of the population</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Company</th>
+<th>Amount</th>
+<th>Date</th>
+<th>Disclosed investors</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Meddenovo Drug Design</td>
+<td><strong>$450K</strong></td>
+<td>May 2025</td>
+<td>Not disclosed (second seed; first was ~$1.1M, Jul 2024, ACT Venture Partners)</td>
+</tr>
+<tr>
+<td>AI|ffinity s.r.o.</td>
+<td><strong>~$453K</strong></td>
+<td>Nov 2024</td>
+<td>Garage Angels</td>
+</tr>
+<tr>
+<td>AMPLY Discovery</td>
+<td>$1.8M</td>
+<td>May 2025</td>
+<td>Twin Path Ventures</td>
+</tr>
+<tr>
+<td>Sable Bio</td>
+<td>~$1.9M</td>
+<td>Feb 2024</td>
+<td>Episode 1 Ventures</td>
+</tr>
+<tr>
+<td>Meta-Flux</td>
+<td>$2M</td>
+<td>Oct 2025</td>
+<td>Not disclosed</td>
+</tr>
+<tr>
+<td>ALP Bio AG</td>
+<td>$2.2M</td>
+<td>Apr 2026</td>
+<td>42CAP</td>
+</tr>
+<tr>
+<td>Kiin Bio</td>
+<td>$2.2M</td>
+<td>Jun 2025</td>
+<td>b2venture</td>
+</tr>
+<tr>
+<td>deepmirror</td>
+<td>$2.4M</td>
+<td>Dec 2024</td>
+<td>Twinpath Ventures</td>
+</tr>
+<tr>
+<td>Helical</td>
+<td>$2.4M</td>
+<td>Jun 2024</td>
+<td>Not disclosed</td>
+</tr>
+<tr>
+<td>OutSee</td>
+<td>~$2.5M</td>
+<td>Jun 2025</td>
+<td>Ahren Innovation Capital</td>
+</tr>
+<tr>
+<td>Stoked Bio</td>
+<td>$2.5M</td>
+<td>May 2026</td>
+<td>Not disclosed</td>
+</tr>
+<tr>
+<td>InVirtuoLabs</td>
+<td>~$3M</td>
+<td>Feb 2025</td>
+<td>Not disclosed</td>
+</tr>
+<tr>
+<td>Graph Therapeutics</td>
+<td>$3.1M</td>
+<td>Jan 2025</td>
+<td>Squareone, Merantix Capital</td>
+</tr>
+<tr>
+<td>Ordaōs Bio</td>
+<td>~$3.1M</td>
+<td>Sep 2024</td>
+<td>Not disclosed</td>
+</tr>
+<tr>
+<td>CircNova</td>
+<td>$3.3M</td>
+<td>Feb 2025</td>
+<td>South Loop Ventures</td>
+</tr>
+<tr>
+<td>Sightera Biosciences</td>
+<td>~$3.4M</td>
+<td>Jul 2026</td>
+<td>Entourage, Anacura, Qbic</td>
+</tr>
+<tr>
+<td>Sable Bio</td>
+<td>$3.8M</td>
+<td>Feb 2026</td>
+<td>MMC Ventures</td>
+</tr>
+<tr>
+<td>Olio Labs</td>
+<td>$4.5M</td>
+<td>Mar 2025</td>
+<td>Boom Capital, Overwater Ventures</td>
+</tr>
+<tr>
+<td>Antiverse</td>
+<td>$4.6M</td>
+<td>Oct 2024</td>
+<td>i&amp;i Biotech Fund I, Kadmos Capital</td>
+</tr>
+<tr>
+<td>10x Science</td>
+<td>$4.8M</td>
+<td>Apr 2026</td>
+<td>Initialized Capital</td>
+</tr>
+<tr>
+<td>Ternary Therapeutics</td>
+<td>~$4.8M</td>
+<td>Mar 2026</td>
+<td>daphni</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="what-explains-the-spread">What explains the spread</h3>
+<p>The seed label in this sector spans <strong>$450K to $200M</strong> — a factor of 440 — and <strong>$450K to $80M</strong> within the tracker's stricter AI-drug-discovery scope, a factor of 178. Four correlates are visible in the data itself:</p>
+<ol>
+<li><strong>What the company is.</strong> The right tail is model and platform companies with frontier compute bills: EvolutionaryScale $142M, Radical Numerics $50M, Chai $30M, Boltz $28M. The left tail is software-only tools and small spinouts: deepmirror $2.4M, AI|ffinity $453K, Meddenovo $450K–1.1M, OutSee $2.5M. <strong>The binding input at the top of the distribution is GPUs and researchers, not laboratories.</strong></li>
+<li><strong>Who formed it.</strong> Venture-creation output sits at the top of the distribution regardless of label: Flagship's Lila at $200M ("seed") and Expedition Medicines at $50M ("Series A"); ARCH and Foresite's Xaira at &gt;$1bn ("committed capital").</li>
+<li><strong>Founder provenance, priced directly.</strong> Chai Discovery raised ~$30M at a $150M valuation at <strong>six months old</strong>. Radical Numerics' founders co-created Evo and Evo2. EvolutionaryScale's came out of Meta's ESM team. Manas AI has Reid Hoffman as co-founder. Xaira has a former Stanford president. In each case the round was priced off the team before there was anything to measure.</li>
+<li><strong>Geography.</strong> The sub-$5M band is dominated by UK, European, Indian and CEE names (Sable Bio, deepmirror, Antiverse, AI|ffinity, Kiin Bio, ALP Bio, OutSee, and at Series A Pharmacelera, Peptris, immunitoAI). The $20M+ band is almost entirely US and Chinese. The same scientific claim prices very differently on either side of the Atlantic.</li>
+</ol>
+<p><strong>A fifth driver I cannot evidence from this dataset: wet-lab capex.</strong> It is the obvious explanation for why a therapeutics company needs more seed money than a tools company, and it is what the venture-creation model exists to absorb, but the tracker does not record whether a company runs its own laboratory and I found no source that codes it. <strong>Not found — flagging it as a plausible mechanism, not a measured one.</strong></p>
+<h3 id="valuations-and-dilution">Valuations and dilution</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Figure</th>
+<th>Value</th>
+<th>Source and status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Chai Discovery</strong> seed</td>
+<td>~$30M at a <strong>$150M valuation</strong> (implying roughly 20% sold)</td>
+<td>Bloomberg, Sep 2024. <strong>The only named AI-bio seed valuation I could verify this session</strong></td>
+</tr>
+<tr>
+<td>Median seed post-money, all sectors</td>
+<td><strong>$24.3M</strong> with <strong>~18% dilution</strong> on a ~$4.1M round, mid-2026</td>
+<td>Carta, <strong>second-hand only</strong> — Carta returned 403 on every URL. Other relays of Carta give ~$16M pre-money for Q1 2026. <strong>Do not treat as settled</strong></td>
+</tr>
+<tr>
+<td>Median seed pre-money, all sectors</td>
+<td><strong>$18.3M</strong> 2026 YTD vs $16M 2025</td>
+<td>PitchBook-NVCA Q3 2026 via secondary summary</td>
+</tr>
+<tr>
+<td>Biotech/healthcare <strong>sector-specific</strong> seed valuation</td>
+<td><strong>NOT FOUND.</strong> The only figures in circulation ($25–35M valuation on a $4–5M round) appear on an unsourced SEO page that names no provider. I will not reproduce them as data</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Cooley median valuations by industry</td>
+<td><strong>Cooley states on its own page that it does not break median valuations out by industry.</strong> Not found by construction</td>
+<td>Cooley Q2 2026</td>
+</tr>
+<tr>
+<td>Cooley median pre-money, Series Seed</td>
+<td><strong>Not disclosed in dollars</strong> in any 2026 quarter. Cooley reports only direction: Series Seed medians "increased" in Q1 and Q2 2026, "decreased" in Q4 2025</td>
+<td>Cooley Q4 2025, Q1 2026, Q2 2026</td>
+</tr>
+<tr>
+<td><strong>Xaira</strong> valuation</td>
+<td>~$2.7bn, mid-2025</td>
+<td>Secondary source citing PitchBook. <strong>Unverified</strong></td>
+</tr>
+<tr>
+<td><strong>Lila Sciences</strong> Series B</td>
+<td>Reportedly negotiating ~$2bn at a ~<strong>$8.5bn pre-money</strong></td>
+<td>Bloomberg, relayed second-hand. <strong>Unconfirmed, and may not have closed</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>SEC EDGAR Form D was in the brief as an underused primary source for actual amounts. I did not reach it.</strong> The session's web-search budget was exhausted before I could run the full-text search queries, and EDGAR's full-text search endpoints need query construction I could not test without searching. <strong>This is the single highest-value unexplored source for the synthesis document</strong> — Form D gives "total amount sold," which is the cash actually raised rather than the announced headline, and it would let the group check the tracker's numbers against filings for named companies.</p>
+<hr />
+<h2 id="c-the-investor-landscape-who-actually-leads-these-rounds">(c) The investor landscape: who actually leads these rounds</h2>
+<h3 id="who-leads-ai-bio-seeds-measured-rather-than-assumed">Who leads AI-bio seeds, measured rather than assumed</h3>
+<p>Before the firm-by-firm table, the most useful single finding. Taking the 56-deal seed set as the population and counting disclosed leads and participants:</p>
+<p><strong>Repeat seed investors (two or more AI-drug-discovery seeds, 2024–26):</strong></p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Investor</th>
+<th>Rounds</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>DCVC</strong></td>
+<td>Relation Therapeutics $35M (Mar 2024), Relation $26M (Dec 2025), <strong>Proxima $80M</strong> (Jan 2026)</td>
+<td><strong>Two of the six largest seeds in the dataset.</strong> The most consequential AI-bio seed investor by dollars deployed at the stage</td>
+</tr>
+<tr>
+<td><strong>NVentures (NVIDIA)</strong></td>
+<td>Relation Therapeutics ×2, <strong>EvolutionaryScale $142M</strong></td>
+<td>The most active <em>strategic</em> at AI-bio seed — and it is a chip company</td>
+</tr>
+<tr>
+<td><strong>Dimension Capital</strong></td>
+<td>Achira $33M (Feb 2025), Chai Discovery ~$30M (Sep 2024); plus Tamarind Bio $12M Series A (Feb 2026)</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Madrona</strong></td>
+<td>Archon Biosciences $20M (Oct 2024), Aizen Therapeutics $13M (Nov 2024)</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>redalpine</strong></td>
+<td>Helical $10M (Apr 2026), DaltonTx ~$5.4M (Sep 2025)</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>daphni</strong></td>
+<td>Graph Therapeutics $5M (Jun 2026), Ternary Therapeutics ~$4.8M (Mar 2026)</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Twin Path / Twinpath Ventures</strong></td>
+<td>AMPLY Discovery $1.8M (May 2025), deepmirror $2.4M (Dec 2024)</td>
+<td>Active at the very bottom of the distribution</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Single-appearance seed leads, which is most of the market:</strong> Sutter Hill Ventures (Integrated Biosciences $17.2M), Playground Global (Insamo $12M), Boldstart + Threshold (Topos Bio $10.5M), Amplify + a16z + Zetta (Boltz $28M), Novo Holdings + Forbion (Orbis $28.2M), Thrive + OpenAI Startup Fund (Chai), General Catalyst + Reid Hoffman (Manas AI), BGF (Shift Bioscience $16M), Two Bear Capital (Talus $11.2M), Scripta's Oxford Science Enterprises + Apollo Health Ventures ($12M), AIX Ventures + Pear VC + Fusion Fund (Therna $10M), Cambridge Innovation Capital (Sortera ~$10.2M), Protuoso's Taya Venture + Darwin Ventures ($9.5M), JSL Health Capital (Synfini $8.9M), Amplitude Ventures (Ability Biologics $6M), Montage Ventures (CardiaTec $6.5M), Nimbus Synergies (Variational AI $5.5M), TLV Partners (Converge Bio $5.5M), Springtide Ventures (Leash $9.3M), Initialized (10x Science $4.8M), Ahren Innovation Capital (OutSee ~$2.5M), i&amp;i Biotech Fund I + Kadmos (Antiverse), South Loop Ventures (CircNova), Boom Capital + Overwater (Olio Labs), Episode 1 then MMC (Sable Bio), b2venture (Kiin Bio), 42CAP (ALP Bio), Squareone + Merantix (Graph Therapeutics), IQ Capital (DaltonTx), Entourage/Anacura/Qbic (Sightera), Garage Angels (AI|ffinity), ACT Venture Partners (Meddenovo), TriApex Group (Xellar ~$13.8M), Huagai Capital + BioTrack Capital (Peak Perform Innova ~$14M), Xiang He Capital (AIPher ~$14.9M), Magnetic Ventures (Relation 2025).</p>
+<p><strong>The headline finding: of the ten generalist crossover funds the brief named, only two appear in this seed population.</strong> a16z (Boltz) and General Catalyst (Manas AI, and the Lila $200M "seed"). <strong>Lux Capital, Founders Fund, Khosla Ventures, Felicis, Compound, NFX and Civilization Ventures appear in no AI-drug-discovery seed round in the 56-deal set.</strong> Lux appears at EvolutionaryScale's seed (a model company, outside the tracker's scope) and in Xaira's launch syndicate; Khosla appears at Vivodyne's $40M Series A. The reputational map and the deal map are different maps.</p>
+<h3 id="investor-table">Investor table</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Investor</th>
+<th>Type</th>
+<th>Fund / vehicle and size</th>
+<th>Leads AI-bio seeds?</th>
+<th>What it says it requires at seed</th>
+<th>Named AI-bio seed activity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>a16z Bio+Health</strong></td>
+<td>Generalist crossover</td>
+<td><strong>Bio Fund III, $750M</strong> — but this is a <strong>February 2020</strong> figure from a16z's own announcement. <strong>Bio Fund IV: not found.</strong> A Lilly-partnered "Biotech Ecosystem Venture Fund" was announced <strong>10 Jan 2025</strong>; <strong>size and terms not found</strong> (Business Wire returned 403)</td>
+<td><strong>Yes.</strong> Its Arda post says a16z "first invested at the <strong>Seed</strong> stage," then led the Series A</td>
+<td>"We love <strong>product focused biotech companies with a repeatable, data-informed platform</strong>" where "continual learning enables rapid iteration and efficiency" (Arda post, Oct 2024). Bio Fund III: multidisciplinary founders "<strong>not scared to challenge the status quo</strong>" who use engineering processes "<strong>instead of chasing the lucky strike of discovery</strong>"; "you need to <strong>rethink the process from the ground up</strong>." Describes itself as <strong>stage agnostic</strong>. Per a GEN interview with Vijay Pande, it has not emphasised "single-asset types of life science companies" and prefers companies that build "the ability to engineer something"</td>
+<td><strong>Boltz PBC</strong> $28M seed (Jan 2026, with Amplify and Zetta); <strong>Arda Therapeutics</strong> seed then $43M Series A lead (Oct 2024)</td>
+</tr>
+<tr>
+<td><strong>Dimension Capital</strong></td>
+<td>Generalist, science-and-compute</td>
+<td><strong>Not stated on its own site.</strong> Self-describes as "a <strong>research oriented</strong>, investment firm partnering with companies across the frontiers of science and compute," and as "<strong>multistage</strong>"</td>
+<td><strong>Yes — one of the most active.</strong></td>
+<td><strong>No public seed criteria found.</strong> Notable structurally: it staffs a separate <strong>Research</strong> function (Simon Barnett, Bauer LeSavage, Frank Gao) alongside its investment team (Zavain Dar, Adam Goulburn, Nan Li, Nikhil Namburi, Darsh Patel) — unusual for a seed fund, and consistent with a thesis-led rather than pitch-led process. Publishes letters: <em>Colliding Worlds</em> (Jan 2023), <em>Make No Little Plans</em> (Dec 2024), <em>What If We're Right</em> (Mar 2026), <em>At the Limit</em> (Jul 2026), <em>The Cross-Pacific AI Chessboard</em> (Aug 2026)</td>
+<td><strong>Achira</strong> $33M seed (Feb 2025); <strong>Chai Discovery</strong> ~$30M seed (Sep 2024); <strong>Tamarind Bio</strong> $12M Series A (Feb 2026)</td>
+</tr>
+<tr>
+<td><strong>DCVC</strong></td>
+<td>Deep-tech generalist</td>
+<td>Not researched</td>
+<td><strong>Yes — the largest AI-bio seed cheques in the dataset</strong></td>
+<td>Not researched (search budget exhausted)</td>
+<td><strong>Proxima $80M</strong> (Jan 2026); <strong>Relation Therapeutics $35M</strong> (Mar 2024) and <strong>$26M</strong> (Dec 2025)</td>
+</tr>
+<tr>
+<td><strong>Lux Capital</strong></td>
+<td>Generalist crossover</td>
+<td>Not found</td>
+<td>Yes, outside the tracker's scope</td>
+<td><strong>No public seed criteria found</strong></td>
+<td>Co-led <strong>EvolutionaryScale's $142M seed</strong> (Jun 2024); in <strong>Xaira's</strong> launch syndicate</td>
+</tr>
+<tr>
+<td><strong>General Catalyst</strong></td>
+<td>Generalist crossover</td>
+<td>Not found</td>
+<td>Yes</td>
+<td><strong>No seed criteria statement found</strong></td>
+<td><strong>Manas AI</strong> $24.6M seed (Jan 2025, with Reid Hoffman); investor in <strong>Lila Sciences'</strong> $200M "seed" (Mar 2025)</td>
+</tr>
+<tr>
+<td><strong>Founders Fund</strong></td>
+<td>Generalist</td>
+<td>—</td>
+<td><strong>Not found in any AI-drug-discovery seed or Series A in the 56/46-deal set</strong></td>
+<td>Not found</td>
+<td><strong>None found</strong></td>
+</tr>
+<tr>
+<td><strong>Khosla Ventures</strong></td>
+<td>Generalist</td>
+<td>—</td>
+<td><strong>No AI-bio seed found.</strong> Appears at Series A</td>
+<td>Not found</td>
+<td><strong>Vivodyne</strong> $40M Series A (May 2025)</td>
+</tr>
+<tr>
+<td><strong>Felicis</strong></td>
+<td>Generalist</td>
+<td>—</td>
+<td><strong>Not found in the dataset at all</strong></td>
+<td>Not found</td>
+<td><strong>None found</strong></td>
+</tr>
+<tr>
+<td><strong>Compound</strong></td>
+<td>Generalist</td>
+<td>—</td>
+<td><strong>Not found in the dataset at all</strong></td>
+<td>Not found</td>
+<td><strong>None found</strong></td>
+</tr>
+<tr>
+<td><strong>Civilization Ventures</strong></td>
+<td>Bio seed specialist</td>
+<td><strong>&gt;$200M</strong> under management. Fund I was a "<strong>$1M 'pilot' seed fund</strong>"; <strong>Fund II $35M</strong> "to lead pre/seed investments"; an Opportunity Fund took capital under management "to over $100M" in 2023</td>
+<td><strong>Says yes — explicitly pre-seed and seed.</strong> But <strong>not found in the AI-drug-discovery dataset</strong></td>
+<td>Backs "<strong>scientific founders</strong> focused on cutting-edge innovations in health tech and biology"; "inspired founders solving essential problems." Focus areas: genomics and diagnostics, digital health, synthetic biology. <strong>Check sizes not stated.</strong> Notably, <strong>no portfolio company on its site is described in AI or ML terms</strong></td>
+<td><strong>None found in AI drug discovery.</strong> Portfolio includes BillionToOne, Fluent BioSciences (acq. Illumina), Foresight Diagnostics (acq. Natera), Omada Health, Aspect Biosystems, Kernal Bio</td>
+</tr>
+<tr>
+<td><strong>NFX / NFX Bio</strong></td>
+<td>Bio seed specialist</td>
+<td><strong>Not stated</strong> in the launch post. Third-party check-size figures <strong>disagree</strong> ($500K–$5M; $1.5M–$5M; a $1M floor) — <strong>unverified</strong></td>
+<td>Says it leads rounds; <strong>not found in the AI-drug-discovery dataset</strong></td>
+<td>The most explicit stage statement of any firm here: "<strong>We're investing in all stages of seed. Pre-seed, when it's just the scientist with the idea</strong>... Seed, when the entire team is there... <strong>We even do early A's.</strong>" Looks for "a <strong>core technology, especially a core biological technology</strong>" where the IP "can support many applications," and "an opportunity to <strong>build a platform</strong>." Timing: start "<strong>ideally after you peer-reviewed your research and you know that the basic biology works</strong>"; "the more proof points you have, the easier it is." Three screens: is the market big enough, does the technology have defensible "<strong>magic</strong>," can the team execute. On the structural problem: early bio funding is "<strong>broken</strong>"; getting IP to proof of concept "you need a few million dollars. And it's hard to find"; a tech investor sees "<strong>the bio company</strong>" while a bio investor sees "<strong>too much tech for them</strong>." <em>Post dated January 2021 — terms may have changed</em></td>
+<td><strong>None found in AI drug discovery</strong></td>
+</tr>
+<tr>
+<td><strong>Pillar VC / Petri</strong></td>
+<td>Bio-adjacent seed specialist + incubator</td>
+<td><strong>Fund IV $175M.</strong> AUM stated <strong>inconsistently on the same page</strong>: header "$525M", FAQ "$500M", with "$177M" as the current fund</td>
+<td>Yes, by its own description</td>
+<td>"We make investments <strong>as small as $50k and as large as $7M</strong>, typically in <strong>pre-seed and seed-stage</strong> rounds." "Our <strong>average check size is $2.5M</strong>." "We are a <strong>generalist</strong> fund focused on investing in breakthrough science," areas including "bio and biotech, medicines, manufacturing, synthetic biology, healthcare." Looks for "<strong>blow-through-walls resilience, deep curiosity, the ability to create momentum</strong>"</td>
+<td><strong>Pillar's own FAQ does not mention Petri at all.</strong> Petri's current status is <strong>not found</strong>. Third-party aggregators give Petri a $100K–$6M range and quote its 2019 launch materials at "$250K+ in seed funding" for a 12-month program — <strong>possibly stale, unverified</strong></td>
+</tr>
+<tr>
+<td><strong>Playground Global</strong></td>
+<td>Deep-tech</td>
+<td>Not researched</td>
+<td>Yes</td>
+<td>Not researched</td>
+<td><strong>Insamo</strong> $12M seed (Feb 2024)</td>
+</tr>
+<tr>
+<td><strong>Ahren Innovation Capital</strong></td>
+<td>Science specialist</td>
+<td>Not researched</td>
+<td>Yes, at small size</td>
+<td>Not researched</td>
+<td><strong>OutSee</strong> ~$2.5M seed (Jun 2025)</td>
+</tr>
+<tr>
+<td><strong>Oxford Science Enterprises / Cambridge Innovation Capital</strong></td>
+<td>University-linked</td>
+<td>Not researched</td>
+<td>Yes</td>
+<td>Not researched</td>
+<td><strong>Scripta Therapeutics</strong> $12M seed (Nov 2025, with Apollo Health Ventures); <strong>Sortera Bio</strong> ~$10.2M seed</td>
+</tr>
+<tr>
+<td><strong>Boldstart, Amplify, Zetta, Initialized, Sutter Hill, Madrona, Two Bear, Bessemer, Menlo</strong></td>
+<td><strong>Software/enterprise seed funds now active in bio</strong></td>
+<td>Various, not researched</td>
+<td><strong>Yes — this is the convergence evidence</strong></td>
+<td>Not researched individually</td>
+<td>Topos Bio $10.5M (Boldstart + Threshold); Boltz $28M (Amplify + Zetta + a16z); 10x Science $4.8M (Initialized); Integrated Biosciences $17.2M (Sutter Hill); Archon $20M and Aizen $13M (Madrona); Talus $11.2M (Two Bear); Converge Bio $25M Series A (Bessemer); Chai $70M Series A (Menlo)</td>
+</tr>
+<tr>
+<td><strong>Flagship Pioneering</strong></td>
+<td>Venture creation</td>
+<td>Not found (site 403)</td>
+<td>Creates companies; <strong>labels first rounds inconsistently</strong></td>
+<td>Not found (site 403). Secondary sources say it does not accept outside proposals</td>
+<td><strong>Lila Sciences $200M "seed"</strong> (Mar 2025); <strong>Expedition Medicines $50M Series A</strong> (Oct 2025)</td>
+</tr>
+<tr>
+<td><strong>ARCH Venture Partners</strong></td>
+<td>Venture creation</td>
+<td>Not found (site 403)</td>
+<td>Co-leads unlabelled mega first rounds</td>
+<td>Not found</td>
+<td><strong>Xaira &gt;$1bn committed capital</strong> (Apr 2024, with Foresite); <strong>Vilya</strong> $21M Series A (Jun 2024)</td>
+</tr>
+<tr>
+<td><strong>Foresite Capital / Foresite Labs</strong></td>
+<td>Venture creation + multistage</td>
+<td>"$900M" fund (headline on its own site)</td>
+<td>Co-led Xaira</td>
+<td>"Multi-stage... at all stages of their life cycles"; "data science-driven approach"; "breakthrough opportunities at the intersection of tech and biotech"</td>
+<td><strong>Xaira</strong> co-lead</td>
+</tr>
+<tr>
+<td><strong>Third Rock, 5AM, Versant, The Column Group</strong></td>
+<td>Venture creation</td>
+<td>Versant <strong>$5.5B</strong> AUM; TCG Labs-Soleil "Over $400 Million"; Third Rock and 5AM not stated</td>
+<td><strong>No — they enter at Series A or at formation.</strong> See the venture-creation table above</td>
+<td>5AM: "emphasis on <strong>Series A</strong> companies." Third Rock: the seed stage happens "<strong>well before a company launches</strong>." Versant: <strong>in-house</strong> Discovery Engines. TCG: "<strong>primarily focused on company formation</strong>"</td>
+<td><strong>No AI-drug-discovery seed rounds found for any of the four</strong></td>
+</tr>
+<tr>
+<td><strong>NVentures (NVIDIA)</strong></td>
+<td>Corporate / strategic</td>
+<td>Not found</td>
+<td><strong>Yes — the most active strategic at AI-bio seed</strong></td>
+<td><strong>Not found.</strong> No public statement of seed criteria located</td>
+<td><strong>Relation Therapeutics</strong> seed ×2 ($35M Mar 2024, $26M Dec 2025); <strong>EvolutionaryScale</strong> $142M seed</td>
+</tr>
+<tr>
+<td><strong>OpenAI Startup Fund</strong></td>
+<td>Corporate / strategic</td>
+<td>Not found</td>
+<td>Yes</td>
+<td>Not found</td>
+<td><strong>Chai Discovery</strong> ~$30M seed (Sep 2024)</td>
+</tr>
+<tr>
+<td><strong>Novartis Venture Fund</strong></td>
+<td>Pharma venture arm</td>
+<td><strong>Over USD 750 million in committed capital</strong>, 40+ portfolio companies in North America and Europe (its own site)</td>
+<td><strong>No AI-drug-discovery seed found.</strong> The site <strong>does not mention seed or company creation at all</strong></td>
+<td>Invests in companies "<strong>at various stages of growth and development</strong>"; biotechnology and biopharmaceutical companies developing "novel therapeutics and platforms that address unmet patient needs"; takes a "hands-on approach, working closely with boards and management to deliver clinical impact." <strong>Typical investment size not stated. No dated 2024–26 strategy statement</strong>, and the site carries a stale "backup-sept-02" portfolio link</td>
+<td><strong>None found</strong></td>
+</tr>
+<tr>
+<td><strong>Eli Lilly (Lilly Ventures, Catalyze360)</strong></td>
+<td>Pharma venture arm</td>
+<td><strong>Not found</strong> — the Catalyze360 page returned a header-overflow parse error. The a16z-partnered Biotech Ecosystem Venture Fund (announced 10 Jan 2025) size is <strong>not found</strong></td>
+<td>At Series A, yes</td>
+<td><strong>Not found</strong></td>
+<td><strong>Superluminal Medicines $120M Series A</strong> — note a <strong>source conflict</strong>: the companion file <code>outcomes-and-deals.md</code> in this folder records Lilly as leading it, while the AI-drug-discovery tracker credits <strong>RA Capital Management</strong> as lead (Sep 2024). Lilly separately signed a GPCR collaboration with Superluminal worth up to $1.3bn (Aug 2025)</td>
+</tr>
+<tr>
+<td><strong>AstraZeneca</strong></td>
+<td>Pharma strategic</td>
+<td>AZ-CICC Healthcare Investment Fund</td>
+<td>At Series A, not seed</td>
+<td>Not researched</td>
+<td><strong>Syneron Bio ~$100M Series A</strong> (Dec 2025)</td>
+</tr>
+<tr>
+<td><strong>Pfizer Ventures, JJDC / J&amp;J Innovation, Amgen Ventures, AbbVie Ventures, Roche Venture Fund, BMS, M Ventures, Boehringer Ingelheim Venture Fund, Sanofi Ventures, GV</strong></td>
+<td>Pharma venture arms</td>
+<td>Not researched</td>
+<td><strong>No AI-drug-discovery seed round found for any of them in the 56-deal set</strong></td>
+<td><strong>Not researched</strong> — search budget exhausted before I reached their criteria pages. Report as not found, not as absent</td>
+<td><strong>None found</strong></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="non-dilutive-and-equity-light-sources-that-precede-a-seed">Non-dilutive and equity-light sources that precede a seed</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Award size</th>
+<th>Timeline</th>
+<th>What it requires</th>
+<th>Status in 2026</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>NIH SBIR / STTR</strong> <em>(primary: seed.nih.gov)</em></td>
+<td><strong>Phase I $335,937</strong>; <strong>Phase II $2,239,578</strong>; <strong>Commercialization Readiness Pilot up to $4,479,156</strong>. These are <strong>budget guidelines, not statutory caps</strong> — individual Institutes and Centers set their own limits, NIH holds an SBA waiver permitting larger Phase I/II awards for approved topics, and applicants above the listed totals are "<strong>strongly encouraged to contact program officials</strong>" early</td>
+<td>Phase I <strong>6 months–2 years</strong>; Phase II <strong>1–3 years</strong>; CRP up to 3 years</td>
+<td>Money always goes to the small business. <strong>SBIR</strong>: may outsource up to 33% of Phase I and 50% of Phase II research; PI's primary employment (&gt;50%) should be with the small business. <strong>STTR</strong>: requires a partnership with a non-profit research institution, ≥40% of work by the small business and ≥30% by the research-institution partner; PI may be employed by either</td>
+<td>Live. <strong>Effective dates for the current figures are not stated on NIH's page.</strong> Conflicting figures circulating: $323,090 / $2,153,927 (several 2026 secondary sites); $335,937 / $2,239,578 attributed to an SBA guideline effective 16 Oct 2026; $314,363 / $2,095,748 (older); and <strong>NIDA's own page still shows the 2024 solicitation's $306,872 / $2,045,816</strong>. A "Strategic Breakthrough Phase II award... up to $30,000,000 with at least 100 percent matching funds" appears only on secondary sites — <strong>unverified</strong>. <strong>Any 2025–26 NIH budget disruption affecting SBIR: not found</strong></td>
+</tr>
+<tr>
+<td><strong>Wellcome Leap</strong> <em>(primary: wellcomeleap.org)</em></td>
+<td><strong>Funded at the program level, not per company: $50M–$60M per program.</strong> Active: AMPt $50M (jointly funded by Pivotal), Resistance Networks $50M (with Bayer support), Focused Antibiotics $50M, VISIBLE $55M, FORM $50M, The Missed Vital Sign $50M, CARE $50M, Untangling Addiction $60M, Dynamic Resilience $50M, In Utero $50M, R3 Global (total not stated). UZIMA $100M announced in news</td>
+<td>Programs "<strong>optimized to deliver breakthroughs in human health over 5 – 10 years</strong>"</td>
+<td><strong>Per-performer award sizes, equity terms and performer deliverables are not published on the programs page — not found</strong></td>
+<td>Live; site carries a 2026 copyright and 2026-dated AMPt and UZIMA announcements. Completed programs: MCPsych, Delta Tissue, 1kD, HOPE, SAVE, Q4Bio</td>
+</tr>
+<tr>
+<td><strong>ARPA-H</strong> <em>(primary: arpa-h.gov)</em></td>
+<td><strong>Not published on the programs page — not found</strong></td>
+<td>Not stated</td>
+<td><strong>Not stated</strong>; whether equity is taken is <strong>not stated</strong></td>
+<td>Live, with a "Solicitation Status" filter (Accepting Submissions / Under Review / Awarded). AI- and discovery-relevant programs: <strong>CATALYST</strong> (computational prediction of drug safety and efficacy), <strong>APECx</strong> (computationally predicted antigens), <strong>IGoR</strong> (AI-driven generation and rigor in biomedical research), <strong>RAPID</strong> (AI/ML for rare-disease diagnosis), <strong>BDF Toolbox</strong>, <strong>SURPASS</strong> (simulation-augmented adaptive trials), BIOGAMI, PROSPR, POSEIDON, EMBODY, GIVE, THRIVE, REACT, PRINT, BoSS, GLIDE, ADVOCATE, CIRCLE, HEARING. <strong>2026 budget: not found</strong> (the page links to Budget &amp; Appropriations but shows no figures)</td>
+</tr>
+<tr>
+<td><strong>Nucleate</strong> <em>(primary: nucleate.org)</em></td>
+<td><strong>Equity-free.</strong> The <strong>Activator</strong> "forms pioneering biotech companies <strong>without taking equity</strong>" and is described as a "premier, <strong>free</strong> program." No cash award</td>
+<td>Not stated</td>
+<td>Five stated Activator requirements: <strong>(1)</strong> approval from a PI; <strong>(2)</strong> a well-defined technology or product backed by preliminary scientific research; <strong>(3)</strong> existing IP, or a clear path to file IP within the next year; <strong>(4)</strong> clear potential to apply the technology; <strong>(5)</strong> a team willing to <strong>spin out in the near future</strong></td>
+<td>Live. Student-led nonprofit, <strong>40+ chapters</strong>, HQ Brighton MA; also runs <strong>PATH</strong> (education), <strong>Research</strong>, and <strong>dojo</strong> (undergraduates). The site is internally inconsistent on deadlines (a 2024 cohort reference in the application section vs an October 2026 deadline in the navigation)</td>
+</tr>
+<tr>
+<td><strong>SOSV / IndieBio</strong> <em>(primary: sosv.com)</em></td>
+<td><strong>Up to $550,000</strong> at pre-seed, described as an average check size. No target equity percentage published, but SOSV has "<strong>strict ownership requirements</strong>" and needs to reach "<strong>more than 10% ownership</strong>" for that check size. <strong>Tranche structure not described</strong></td>
+<td>Founders must be <strong>in person for about 4–6 months</strong></td>
+<td><strong>Pre-seed only</strong>: SOSV is "usually the <strong>first VC investor</strong>" and "does not join companies that have raised a VC-backed seed or Series A." <strong>Deep tech only</strong> — life sciences, robotics, energy transition; <strong>explicitly excludes</strong> enterprise software, fintech, blockchain, crypto, cybersecurity, ecommerce. Requires <strong>more than one founder</strong>. Suits companies with <strong>&lt;10 people, &lt;$1M annual revenue, usually &lt;$1M prior equity</strong>. <strong>Angel notes and non-dilutive grants are acceptable</strong> prior capital. Follow-on in later rounds <strong>only if SOSV invested at pre-seed</strong></td>
+<td><strong>Apparently rebranded.</strong> <code>indiebio.co/apply/</code> now <strong>301-redirects to <code>sosv.com/apply/sosv</code></strong>; the application form offers "New York," "San Francisco" or "Both" with topic categories (Therapeutics, Healthcare &amp; Diagnostics, AI &amp; Compute, AgTech, FoodTech, Energy, Frontier Tech) rather than an IndieBio-branded track; the FAQ mentions IndieBio only once, in passing, alongside HAX. Third-party sources describe a 2026 rebrand to "SOSV NY" and "SOSV SF" and give <strong>conflicting terms</strong> ($250K for ~8% with follow-on to ~$525K; $500K for 8–12%). <strong>Use the $550K / &gt;10% figures from SOSV's own FAQ</strong></td>
+</tr>
+<tr>
+<td><strong>Y Combinator</strong> <em>(primary: ycombinator.com/deal)</em></td>
+<td><strong>$500,000 total</strong> on two post-money SAFEs issued at the same time, plus a YC Agreement: <strong>$125,000 for 7%</strong> (converting into 7% of equity in the priced round, <strong>including any existing option pool</strong>) and <strong>$375,000 on an uncapped MFN SAFE</strong> (converting at the lowest cap, or other more favourable terms, issued between the MFN start date and the priced round; at a $15M post-money cap that is 2.5%)</td>
+<td>Standard batch</td>
+<td><strong>No fees.</strong> The investment is "<strong>not contingent on milestones</strong>." Includes a <strong>pro rata</strong> right in future rounds</td>
+<td>Live. <strong>The deal page does not mention bio or hard tech anywhere</strong> — no bio-specific track, no bio-specific terms, no bio carve-out. The number of bio companies per batch is <strong>not found</strong></td>
+</tr>
+<tr>
+<td><strong>J&amp;J JLABS</strong></td>
+<td><strong>Not found</strong></td>
+<td>Not found</td>
+<td>Not found</td>
+<td><strong>Could not verify from a primary source.</strong> Three J&amp;J URLs (<code>jnjinnovation.com/jlabs</code>, <code>jlabs.jnjinnovation.com</code>, <code>jnjinnovation.com/jlabs/</code>) returned title-only or empty bodies. <strong>The widely repeated claim that JLABS is equity-free and takes no IP rights is not verified here</strong></td>
+</tr>
+<tr>
+<td><strong>Academic translational funds</strong> (Harvard Blavatnik, Stanford SPARK, MIT Deshpande, Wellcome Trust translation awards)</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td><strong>Not researched.</strong> Search budget exhausted</td>
+</tr>
+<tr>
+<td><strong>Creative Destruction Lab, Illumina Accelerator, BioLabs</strong></td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td><strong>Not researched</strong></td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2 id="d-graduation-and-base-rates">(d) Graduation and base rates</h2>
+<h3 id="seed-to-series-a">Seed to Series A</h3>
+<p><strong>The brief asked what fraction of seeded biotech or techbio companies raise a Series A and how that compares with software. The honest answer is that this number does not exist in reachable form, and the group should not be handed one.</strong> What I can report:</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Population</th>
+<th>Metric</th>
+<th>Time window</th>
+<th>Figure</th>
+<th>Median or mean</th>
+<th>Source and caveat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Carta seed cohort Q1 2018</td>
+<td>reached Series A</td>
+<td><strong>2 years</strong></td>
+<td><strong>30.6%</strong></td>
+<td>rate</td>
+<td>Carta, <strong>relayed by Incisive Ventures (Jun 2025)</strong>. Carta blocked all direct access</td>
+</tr>
+<tr>
+<td>Carta seed cohort Q2 2020</td>
+<td>reached Series A</td>
+<td>2 years</td>
+<td><strong>~40%</strong></td>
+<td>rate</td>
+<td>same</td>
+</tr>
+<tr>
+<td>Carta seed cohort Q1 2022</td>
+<td>reached Series A</td>
+<td>2 years</td>
+<td><strong>15.4%</strong></td>
+<td>rate</td>
+<td>same</td>
+</tr>
+<tr>
+<td>Carta seed cohort Q1 2023</td>
+<td>reached Series A</td>
+<td>2 years / 8 quarters</td>
+<td><strong>~15%</strong>, "down from nearly 40% in 2020"</td>
+<td>rate</td>
+<td>Attributed to <strong>Peter Walker of Carta</strong>, relayed by a third-party blog. <strong>Not verified against Carta</strong></td>
+</tr>
+<tr>
+<td>Carta, unspecified later cohort</td>
+<td>reached Series A</td>
+<td>24 months</td>
+<td><strong>20%</strong></td>
+<td>rate</td>
+<td>A different relay of "a later Carta update." <strong>Does not reconcile with the above</strong></td>
+</tr>
+<tr>
+<td>Carta 2022 cohort</td>
+<td>reached Series A</td>
+<td>24 months</td>
+<td><strong>~17%</strong>, vs <strong>~25–30%</strong> for the 2018 cohort</td>
+<td>rate</td>
+<td>A third relay. <strong>Also does not reconcile — the 2018 figure here is 25–30% where Incisive's Carta citation gives 30.6%</strong></td>
+</tr>
+<tr>
+<td>Crunchbase, 2017–2020 seed cohorts</td>
+<td>Series A <strong>or exit</strong></td>
+<td>eventual</td>
+<td><strong>51–61%</strong></td>
+<td>rate</td>
+<td>Crunchbase, via Incisive. <strong>Different endpoint (includes exits) — not comparable to the Carta rows</strong></td>
+</tr>
+<tr>
+<td>Crunchbase, 2021 cohort</td>
+<td>beyond seed</td>
+<td>~2.5–3 years, as of late 2024</td>
+<td><strong>~36%</strong></td>
+<td>rate</td>
+<td>same</td>
+</tr>
+<tr>
+<td>Crunchbase, 2022 cohort</td>
+<td>Series A or beyond</td>
+<td>as of late 2024</td>
+<td><strong>~20%</strong></td>
+<td>rate</td>
+<td>same</td>
+</tr>
+<tr>
+<td>US pre-seed → seed</td>
+<td>reached seed</td>
+<td>~1–1.5 years; average ~18 months</td>
+<td><strong>~45–55%</strong></td>
+<td>rate</td>
+<td>"Recent industry benchmarks," <strong>unnamed source</strong> in Incisive's piece. Do not use</td>
+</tr>
+<tr>
+<td>Average time seed → Series A</td>
+<td>duration</td>
+<td>—</td>
+<td>rose from <strong>~1.7 years</strong> (c.2019, Carta) to <strong>over 24 months</strong> in 2024</td>
+<td>mean</td>
+<td>Incisive, citing mixed sources</td>
+</tr>
+<tr>
+<td>Share of late-2024 seed/A financings that were <strong>insider bridge or extension</strong> rounds</td>
+<td>share</td>
+<td>late 2024</td>
+<td><strong>nearly 40%</strong></td>
+<td>share</td>
+<td>Incisive, mixed sources. <strong>Directly relevant to the second-seed pattern documented above</strong></td>
+</tr>
+<tr>
+<td><strong>Sector split</strong></td>
+<td>seed → Series A</td>
+<td>varies</td>
+<td><strong>"1 in 10" (~10%) to "1 in 3" (~33%), depending on sector and market conditions</strong></td>
+<td>range</td>
+<td><strong>J.P. Morgan, as cited by Incisive Ventures.</strong> This is the only quantified sector-dependent statement I could reach, and it is a range across all sectors, <strong>not a biotech figure</strong></td>
+</tr>
+<tr>
+<td><strong>Biotech vs software graduation rate</strong></td>
+<td>—</td>
+<td>—</td>
+<td><strong>NOT FOUND</strong></td>
+<td>—</td>
+<td>Carta blocked (403 on carta.com/data, carta.com/blog, carta.com/data/startup-graduation-rates). The only sector commentary I could reach is qualitative: life science and deep tech "may take longer and convert less within 2 years," while AI in 2023–24 "reportedly had somewhat easier access to Series A" (Incisive)</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Three warnings for whoever uses these numbers.</strong> First, the Carta relays do not reconcile with each other and I could not adjudicate between them, so quote a range and name it as second-hand. Second, the Crunchbase rows count "Series A <strong>or exit</strong>" and the Carta rows count Series A only — they are not comparable and should never be put in the same sentence. Third, every cohort figure is a function of its observation window, and the recent cohorts are all right-censored: a 2023 cohort measured in 2025 has had two years, a 2018 cohort has had seven.</p>
+<h3 id="what-i-can-compute-with-its-limits-stated">What I can compute, with its limits stated</h3>
+<p>Of the <strong>56 seed-labelled AI-drug-discovery rounds</strong> between January 2024 and September 2026, I can identify inside the same window:</p>
+<ul>
+<li><strong>5 companies that reached a Series A</strong>: Orbis Medicines, Chai Discovery, Converge Bio, Xellar Biosystems, Antiverse</li>
+<li><strong>6 companies that instead raised a second round still labelled seed</strong>: Graph Therapeutics, Sable Bio, Helical, Manas AI, Relation Therapeutics, Meddenovo</li>
+</ul>
+<p><strong>This is emphatically not a graduation rate</strong> and must not be presented as one. The window is far too short — a company seeded in mid-2026 has had no time at all; the 2024 cohort has had at most 32 months; the tracker captures only disclosed rounds, so quiet graduations and quiet deaths are both invisible; and the tracker's seed and Series A lists are separately curated, so a company could have graduated without both rounds making the list. <strong>The one defensible observation is comparative: inside this window, second seeds are at least as common as observed graduations.</strong> That is consistent with Incisive's figure of nearly 40% of late-2024 seed/A financings being insider bridges or extensions, and with Cooley's 23.6–33.3% tranche rate. The AI-bio seed is frequently not a single event.</p>
+<h3 id="the-cohort-being-created-now">The cohort being created now</h3>
+<p>PitchBook-NVCA's Q3 2026 data puts three facts together that the synthesis document should not separate:</p>
+<ul>
+<li><strong>8,625 first-time financings through Q3 2026</strong>, already above the <strong>8,507</strong> full-year 2021 record</li>
+<li>The <strong>median seed deal fell to $3.0M from $3.4M</strong> — the only stage whose median declined</li>
+<li><strong>AI took 82.7%</strong> of all US venture dollars, and rounds ≥$100M were ~5% of Q3 deals but <strong>75% of Q3 deal value</strong></li>
+</ul>
+<p>More companies are being started than ever, on smaller cheques than last year, into a market where the capital is concentrating at the top of the stack — and, on the Carta relays, into a lower graduation rate than any prior cohort. HSBC's independent read on biopharma points the same way for 1H 2026: investors moved "back toward pre-clinical deals with <strong>smaller syndicates and check sizes</strong>," while first-financing <em>dollars</em> rose only "because of <strong>two outsized mega rounds</strong>."</p>
+<h3 id="time-from-seed-to-development-candidate-and-to-ind">Time from seed to development candidate and to IND</h3>
+<p><strong>Not found as a systematic figure.</strong> No aggregator I reached publishes time-from-seed-to-candidate or time-from-seed-to-IND for AI-native companies. What exists is a handful of vendor claims and one peer-reviewed trial.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Company</th>
+<th>Program</th>
+<th>Claimed timeline</th>
+<th>Label</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Insilico Medicine</strong></td>
+<td>a <strong>PHD2</strong> program</td>
+<td><strong>Two preclinical candidates nominated "12 Months After Program Initiation"</strong> — headline dated 5 Jan 2022</td>
+<td><strong>Vendor-reported.</strong> Program-level, and <strong>not</strong> for rentosertib</td>
+</tr>
+<tr>
+<td>Insilico</td>
+<td>ISM001-055 (inhaled, IPF)</td>
+<td>Preclinical candidate nominated <strong>20 Jul 2023</strong></td>
+<td>Vendor-reported milestone date, not a duration</td>
+</tr>
+<tr>
+<td>Insilico</td>
+<td>INS018_055</td>
+<td>New Zealand Phase 1 topline results <strong>10 Jan 2023</strong></td>
+<td>Vendor-reported. <strong>Note Insilico's own news page uses both ISM001-055 and INS018_055 for what appears to be the same molecule</strong></td>
+</tr>
+<tr>
+<td>Insilico</td>
+<td>an AI-designed <strong>USP1</strong> inhibitor</td>
+<td><strong>IND approval 25 May 2023</strong></td>
+<td>Vendor-reported; program unnamed in the headline</td>
+</tr>
+<tr>
+<td>Insilico (Fosun collaboration)</td>
+<td>unnamed anti-tumour drug</td>
+<td>advanced to <strong>Phase I, 15 Aug 2023</strong></td>
+<td>Vendor-reported</td>
+</tr>
+<tr>
+<td>Insilico</td>
+<td>unnamed</td>
+<td>first Phase II patients dosed on a drug "discovered and designed with generative AI," <strong>27 Jun 2023</strong></td>
+<td>Vendor-reported</td>
+</tr>
+<tr>
+<td><strong>Insilico / rentosertib (ISM001-055)</strong></td>
+<td>TNIK inhibitor, IPF</td>
+<td><strong>The only AI-origin molecule with a published randomised Phase 2a.</strong> Xu Z et al., "A generative AI-discovered TNIK inhibitor for idiopathic pulmonary fibrosis: a randomized phase 2a trial," <em>Nature Medicine</em>, Aug 2025 (epub 3 Jun 2025), <strong>PMID 40461817</strong>; described as a "first-in-class AI-generated small-molecule inhibitor of TNIK"; 12-week trial</td>
+<td><strong>Peer-reviewed.</strong> But <strong>I could not retrieve the abstract or any discovery-timeline statement from the paper</strong> — nature.com requires authentication and PubMed required cookies. <strong>The rentosertib discovery timeline is not verified in this file</strong></td>
+</tr>
+<tr>
+<td>Insilico pipeline</td>
+<td>14 programs (TNIK, 3CLPro, PHD, QPCTL, USP1, MAT2A, KAT6, ENPP1, DGKA, CDK12, TEAD, FGFR2/3, KIF18A, WRN)</td>
+<td><strong>Insilico's pipeline page carries no timeline, duration or cost statements at all</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Traditional preclinical discovery baseline</strong> (Paul et al. 2010 <em>Nat Rev Drug Discov</em>, Tufts CSDD, BIO)</td>
+<td>—</td>
+<td><strong>NOT RETRIEVED.</strong> Search budget exhausted before I could reach a citable version</td>
+<td><strong>Do not quote from memory.</strong> Without this baseline, none of the vendor claims above can be scored</td>
+</tr>
+</tbody>
+</table></div>
+<p>Related literature: Namboothiri DR et al., "Artificial intelligence in the development of Rentosertib," <em>Pulmonary Pharmacology &amp; Therapeutics</em>, Mar 2026 (epub 30 Dec 2025, PMID 41475169), a letter to the editor; and Zhavoronkov A et al., <em>Nature Biotechnology</em>, online ahead of print 7 Sep 2026 (PMID 42706338), applying proteomic ageing clocks to serum from the same 12-week Phase 2a.</p>
+<h3 id="clinical-success-rates-for-context-on-what-a-seed-is-buying">Clinical success rates, for context on what a seed is buying</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Figure</th>
+<th>Value</th>
+<th>Sample</th>
+<th>Source and label</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AI-discovered molecules, <strong>Phase I</strong> success</td>
+<td><strong>80–90%</strong>, "substantially higher than historic industry averages"</td>
+<td><strong>24 molecules had completed Phase I through December 2023, of which 21 succeeded</strong></td>
+<td><strong>Jayatunga et al. 2024, <em>Drug Discovery Today</em>. BCG-affiliated.</strong> Peer-reviewed but with a tiny, self-acknowledged sample</td>
+</tr>
+<tr>
+<td>AI-discovered molecules, <strong>Phase II</strong> success</td>
+<td><strong>~40%</strong>, which the authors themselves call "<strong>comparable to historic industry averages</strong>," "albeit on a limited sample size"</td>
+<td>not stated in what I could reach</td>
+<td>same</td>
+</tr>
+<tr>
+<td>Later Phase I figure</td>
+<td><strong>75%</strong></td>
+<td>an "IQVIA-style" 2026 cohort</td>
+<td><strong>Secondary sources only — unverified</strong></td>
+</tr>
+<tr>
+<td>Later Phase II figure</td>
+<td><strong>19.5%</strong></td>
+<td>"a larger 2026 analysis"</td>
+<td><strong>Secondary sources only — unverified</strong></td>
+</tr>
+<tr>
+<td>Critique</td>
+<td>The Phase I advantage "may benefit from delayed reporting or omission bias," and Phase I success does not predict efficacy because the advantage lies in safety and tolerability</td>
+<td>—</td>
+<td>Commentators, via search summaries</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>The companion file <code>outcomes-and-deals.md</code> in this folder already carries a fuller and better-sourced treatment of this literature</strong>, including the Wong et al. industry baseline (66.4%, n=41,040 development paths) against which 21-of-24 is not statistically distinguishable, and the observation that only 8 of 117 AI-enabled assets had completed Phase II at all as of December 2025. The relevance here is narrow: <strong>a seed investor in this sector is pricing a claim about speed and cost of discovery, not a claim about clinical success, because the clinical evidence does not yet support one.</strong></p>
+<h3 id="attrition">Attrition</h3>
+<p><code>outcomes-and-deals.md</code> covers this in depth. The financing-relevant facts already established there: BenevolentAI delisted at <strong>€9.96m against a €1.5bn SPAC post-money (−99.3%)</strong>; Exscientia sold into Recursion at <strong>−78% from its IPO price</strong>; <strong>Arena BioWorks spent $500m and shut down in 22 months</strong>; Atomwise was recapitalised as <strong>Numerion Labs</strong> with its founders displaced; Zymergen lost ~90% of its value in 18 months. <strong>I could not independently re-verify the Recursion/Exscientia merger-completion release this session (403).</strong> One further unverified item worth checking: a single secondary source (a pre-IPO marketplace page) states that <strong>EvolutionaryScale was acquired by Chan Zuckerberg Biohub in November 2025</strong>. If true, the largest "seed" round in this sector's history resolved within 17 months, and that matters for the synthesis. <strong>Unverified — one source, not primary.</strong></p>
+<hr />
+<h2 id="gaps-and-conflicts">Gaps and conflicts</h2>
+<h3 id="sources-i-could-not-reach-and-what-that-costs">Sources I could not reach, and what that costs</h3>
+<ul>
+<li><strong>Carta returned HTTP 403 on every URL attempted</strong> (<code>carta.com/data/</code>, <code>carta.com/blog/state-of-private-markets-q3-2026/</code>, <code>carta.com/data/startup-graduation-rates/</code>). Carta is the only source that plausibly holds both the <strong>sector-split seed valuation and dilution data</strong> and the <strong>sector-split graduation rates</strong> this brief asked for. <strong>Every Carta figure in this file is second-hand, and the relays contradict each other.</strong> Getting at Carta directly is the highest-value next step after Form D.</li>
+<li><strong>SEC EDGAR Form D: not attempted.</strong> The search budget ran out first. This is the brief's own suggested primary source and it remains the best way to get <em>actual</em> amounts sold rather than announced headlines, and to check the tracker.</li>
+<li><strong>The PitchBook-NVCA Q3 2026 PDF downloaded but would not parse</strong> (the extracted text was Flate-encoded object streams plus stray XMP metadata for a 2016 J.P. Morgan logo file). All Venture Monitor figures here come from a secondary summary of it.</li>
+<li><strong>HSBC Innovation Banking's detail tables are in PDFs I could not open</strong> (the 1H 2026 report's PDF is 19.3MB). HSBC's HTML pages carry only qualitative statements. The biopharma <strong>first-financing and Series A medians by year — the single best time series for this question — are in those PDFs.</strong></li>
+<li><strong>Flagship Pioneering (403 on two URLs), ARCH Venture Partners (403), Atlas Venture (redirect loop), Versant's approach page (404), Lilly Catalyze360 (header-overflow parse error), Business Wire (403), ScienceDirect (403), J&amp;J JLABS (three URLs, title-only or empty), nature.com and PubMed (auth/cookie walls).</strong> The venture-creation section would be materially stronger with Flagship's and ARCH's own language in it.</li>
+<li><strong>Not researched at all</strong> because the session's web-search budget (shared across all agents) was exhausted: academic translational funds; the traditional preclinical-discovery duration baseline; pharma venture arms' stated seed criteria; Creative Destruction Lab, Illumina Accelerator and BioLabs; Insilico's own timeline claims beyond its news index.</li>
+</ul>
+<h3 id="figures-that-are-missing-rather-than-unreachable">Figures that are missing rather than unreachable</h3>
+<ul>
+<li><strong>AI-bio seed and Series A data for 2018–2023.</strong> The tracker starts 1 January 2024. The brief asked for roughly 2018 onward and I can supply 2024–2026 only. The 2021 peak and the 2022–2024 downturn are therefore <strong>characterised in this file only qualitatively</strong>, through HSBC's mega-round share and Cooley's tranche series.</li>
+<li><strong>Tranche rates by stage.</strong> Cooley publishes life-sciences tranching for all stages combined and no stage breakdown, so <strong>the share of <em>seed</em> rounds that are tranched is not found.</strong></li>
+<li><strong>Tranche rates for technology.</strong> Cooley reports this metric for life sciences only. The comparison the brief wants — are bio rounds more tranched than software rounds — is therefore <strong>one-sided</strong>: I can show that roughly a quarter to a third of life-sciences rounds are tranched, but I cannot give the software number, only note that Cooley does not consider it worth reporting.</li>
+<li><strong>Instrument mix (SAFE vs priced) by sector.</strong> No authoritative data found. The two third-party claims I located (notes ≥30% of pre-seed in pharma/biotech; notes 5–7% overall) <strong>contradict each other</strong> and neither is verified.</li>
+<li><strong>Biotech-specific seed valuation and dilution.</strong> Not found in any reachable source. The $25–35M valuation / $4–5M round figures in circulation appear on an unsourced SEO page naming no provider; I have deliberately excluded them.</li>
+<li><strong>Biotech vs software seed→A graduation.</strong> Not found. See the warning in section (d).</li>
+<li><strong>Seed-to-candidate and seed-to-IND durations.</strong> Not found as a systematic figure for anyone.</li>
+<li><strong>a16z Bio Fund IV; the a16z–Lilly Biotech Ecosystem Venture Fund's size; Dimension's fund sizes; NFX Bio's fund size and check size; Third Rock's and 5AM's fund sizes; Petri's current status.</strong> All not found on primary sources.</li>
+<li><strong>Number of bio companies in a typical YC batch.</strong> Not found.</li>
+</ul>
+<h3 id="direct-conflicts-between-sources-reported-rather-than-resolved">Direct conflicts between sources, reported rather than resolved</h3>
+<ol>
+<li><strong>Xaira's round label.</strong> The company said "&gt;$1bn in <strong>committed capital</strong>." The AI-drug-discovery tracker records it as a <strong>Series A</strong>. Nobody records it as a seed. The tracker's methodology explicitly says committed capital "is not treated as cash received at close" — yet it still appears in the Series A table at $1,000M, where it constitutes 70.8% of the year's Series A dollars. <strong>The single largest datapoint in the 2024 Series A distribution is a figure the aggregator's own methodology says it does not treat as a round.</strong></li>
+<li><strong>EvolutionaryScale's round.</strong> Its own deal counsel (Gunderson Dettmer) and multiple outlets call it a <strong>$142M Seed financing, 25 June 2024</strong>. One startup-diligence profile calls it a <strong>$142M Series A in September 2024</strong> and lists its seed as undisclosed. <strong>Counsel's description should win.</strong></li>
+<li><strong>Cooley revised three of its own quarters</strong> when restating them: Q1 2025 tranching 27.1%→28%, Q2 2025 33.3%→31.7%, Q3 2025 28.3%→26%. Cooley's Q1 2026 report also gives "40% → 42%" for the share of deals with pre-money above $100M where the Q2 2026 report gives "41% → 48%" — the Q1 value appears as both 42% and 41% across the two reports.</li>
+<li><strong>Cooley switches between mean and median between quarters.</strong> Q4 2025 reports technology and life-sciences <strong>averages</strong> ($50.6M, $43.1M) and no medians; Q1 and Q2 2026 report <strong>medians</strong> and no averages. Do not build a time series across that break.</li>
+<li><strong>NIH SBIR/STTR award figures: four different pairs in circulation.</strong> seed.nih.gov's own page gives $335,937 / $2,239,578; several 2026 secondary sites give $323,090 / $2,153,927; another gives $314,363 / $2,095,748; and <strong>NIDA's own NIH page still shows $306,872 / $2,045,816</strong> from the 2024 solicitation. Use seed.nih.gov and note that NIH's own sub-sites disagree.</li>
+<li><strong>SOSV / IndieBio terms.</strong> SOSV's own FAQ says <strong>up to $550,000</strong> with "<strong>more than 10% ownership</strong>." Third-party aggregators variously say $250K for ~8% with follow-on to ~$525K, and $500K for 8–12%. One lists a 2026 batch deadline of 15 June 2026, another a 2027 batch deadline of 15 June 2027. <strong>Use SOSV's own page.</strong></li>
+<li><strong>Pillar VC's AUM, on one page.</strong> Header "$525M"; FAQ "$500M"; current fund quoted as both "$175M" (Fund IV announcement) and "$177M" (header stat).</li>
+<li><strong>Superluminal Medicines' $120M Series A lead.</strong> The companion file <code>outcomes-and-deals.md</code> records <strong>Lilly</strong> as lead; the AI-drug-discovery tracker credits <strong>RA Capital Management</strong>. Both may be partially right (Lilly's $1.3bn collaboration with Superluminal is dated August 2025, eleven months after the September 2024 Series A, and the collaboration explicitly bundled equity). <strong>Needs resolving before either is used.</strong></li>
+<li><strong>Lila Sciences' round history.</strong> The $200M March 2025 "seed" is well attested. After that the sources diverge badly: one says the Series A was $235M in September 2025 plus $115M in October; FinSMEs (June 2026) describes a <strong>$350M Series A</strong> co-led by Braidwell and Collective Global; another says the $350M Series A brought total capital to $550M. One tracker gives cumulative funding of ~$2.6bn. <strong>Only the $200M seed should be treated as established.</strong></li>
+<li><strong>Healthcare venture totals for 2025</strong>: HSBC/Business Wire say <strong>$60B across 2,167 deals</strong>; a third-party write-up says <strong>$59B</strong>.</li>
+<li><strong>Seed medians across providers, same period.</strong> PitchBook-NVCA: <strong>$3.0M</strong> (2026). Carta, via relays: <strong>$4.1M</strong> (mid-2026) or <strong>$3.2M</strong> (Q1 2026). My computation for AI drug discovery specifically: <strong>$7.0M</strong> pooled, <strong>$8.5M</strong> for 2026 YTD. All four are "the median seed round" and none is wrong; they are four different populations.</li>
+<li><strong>Radical Numerics' headquarters.</strong> Most outlets say San Francisco; two say Menlo Park. Trivial, but indicative of how much of the 2026 financing coverage is recycled.</li>
+</ol>
+<h3 id="sources-i-deliberately-did-not-use">Sources I deliberately did not use</h3>
+<p>A large share of search results for this topic are auto-generated SEO pages that launder figures from Carta and PitchBook without attribution, with internally inconsistent numbers and fabricated-looking precision: <strong>valueaddvc.com, gitdealflow.com, pitchwise.se, peony.ink, gritt.io, flowjam.com, waveup.com, startupik.com, raisetalks.com, pmf.show, rubiconos.com, venturetermbook.com, sheetventure.com, venturecapitalcareers.com, startupintros.com, aiwiki.ai, nextomoro.com, toflow.ai, revenuememo.com, siliconvalleyinvestclub.com.</strong> Several of these were the <em>only</em> places where a biotech-specific seed figure appeared, which is why that figure is marked not found rather than reported. Where I have used a secondary relay at all (Incisive Ventures for Carta cohorts, scalable.news for the Venture Monitor), I have said so inline and named what it is relaying.</p>
+<hr />
+<h2 id="sources">Sources</h2>
+<h3 id="deal-terms-primary-sources-law-firm-quarterly-reports">Deal-terms primary sources (law firm quarterly reports)</h3>
+<ul>
+<li><a href="https://www.cooleygo.com/trends/">Cooley, Q2 2026 Venture Financing Report</a> — median deal size by industry, life-sciences tranching, liquidation preference and participation data</li>
+<li><a href="https://www.cooley.com/news/insight/2026/2026-04-29-q1-2026-venture-financing-report">Cooley, Q1 2026 Venture Financing Report</a></li>
+<li><a href="https://www.cooley.com/news/insight/2026/2026-02-09-q4-2025-venture-financing-report">Cooley, Q4 2025 Venture Financing Report</a></li>
+<li><a href="https://www.cooley.com/news/insight/2025/2025-11-03-q3-2025-venture-financing-report">Cooley, Q3 2025 Venture Financing Report</a></li>
+<li><a href="https://www.cooley.com/news/insight/2025/2025-08-12-q2-2025-venture-financing-report">Cooley, Q2 2025 Venture Financing Report</a></li>
+<li><a href="https://www.cooley.com/news/insight/2025/2025-05-09-q1-2025-venture-financing-report">Cooley, Q1 2025 Venture Financing Report</a></li>
+<li><a href="https://www.cooleygo.com/data/">Cooley GO Data</a></li>
+<li><a href="https://www.gunder.com/en/news-insights/client-news/ai-biology-startup-evolutionaryscale-announces-dollar142m-seed-financing">Gunderson Dettmer (deal counsel), EvolutionaryScale $142M Seed financing</a></li>
+</ul>
+<h3 id="aggregate-financing-data">Aggregate financing data</h3>
+<ul>
+<li><a href="https://nvca.org/wp-content/uploads/2026/10/Q3-2026-PitchBook-NVCA-Venture-Monitor.pdf">PitchBook-NVCA Venture Monitor, Q3 2026 (PDF — downloaded but would not parse)</a></li>
+<li><a href="https://nvca.org/wp-content/uploads/2026/07/Q2-2026-PitchBook-NVCA-Venture-Monitor.pdf">PitchBook-NVCA Venture Monitor, Q2 2026 (PDF)</a></li>
+<li><a href="https://pitchbook.com/news/reports/q3-2026-pitchbook-nvca-venture-monitor">PitchBook, Q3 2026 Venture Monitor landing page</a></li>
+<li><a href="https://nvca.org/pitchbook-nvca-venture-monitor/">NVCA, PitchBook-NVCA Venture Monitor index</a></li>
+<li><a href="https://scalable.news/p/seed-got-smaller">"Seed Got Smaller: Q3 2026 PitchBook-NVCA Venture Monitor Data"</a> — <em>secondary summary, used because the primary PDF would not parse</em></li>
+<li><a href="https://www.hsbcinnovationbanking.com/us/en/resources/2026-1h-venture-healthcare-report">HSBC Innovation Banking, 2026 Mid-Year Healthcare Venture Report</a></li>
+<li><a href="https://www.hsbcinnovationbanking.com/us/en/resources/2025-annual-venture-healthcare-report">HSBC Innovation Banking, 2025 Annual Venture Healthcare Report</a></li>
+<li><a href="https://www.hsbcinnovationbanking.com/en/resources/venture-healthcare-highlights-q1-2026">HSBC Innovation Banking, Q1 2026 Venture Healthcare Highlights</a></li>
+<li><a href="https://www.hsbcinnovationbanking.com/us/en/business-stage/hsbc-healthcare-reports">HSBC Innovation Banking, healthcare reports index</a></li>
+<li><a href="https://www.about.us.hsbc.com/newsroom/press-releases/healthcare-venture-markets-regain-momentum-as-capital-returns">HSBC press release, "Healthcare venture markets regain momentum as capital returns" (Jan 2026)</a></li>
+<li><a href="https://www.about.us.hsbc.com/newsroom/press-releases/mega-round-momentum-drives-healthcare-venture-market-despite-investor-headwinds">HSBC press release, "Mega-Round Momentum Drives Healthcare Venture Market"</a></li>
+</ul>
+<h3 id="the-company-level-deal-list-underlying-my-own-computations">The company-level deal list underlying my own computations</h3>
+<ul>
+<li><a href="https://newmarketpitch.com/blogs/news/ai-drug-discovery-list-deals">newmarketpitch, AI in Drug Discovery Funding Tracker — full deal list (144 records; 57 seed, 46 Series A, Jan 2024 – Sep 2026)</a> — <em>third-party aggregate; stated methodology; the seed and Series A distributions in this file are my computation from these rows</em></li>
+<li><a href="https://newmarketpitch.com/blogs/news/ai-drug-discovery-funding-analysis">newmarketpitch, AI drug discovery funding analysis (period aggregates, first vs follow-on financings)</a></li>
+<li><a href="https://newmarketpitch.com/blogs/news/ai-drug-discovery-funding-deals">newmarketpitch, AI drug discovery, quarter-by-quarter</a></li>
+<li><a href="https://newmarketpitch.com/blogs/news/biotech-list-deals">newmarketpitch, biotechnology funding tracker (1,094 deals)</a></li>
+<li><a href="https://www.fiercebiotech.com/biotech/fierce-biotech-fundraising-tracker-26">Fierce Biotech Fundraising Tracker '26</a></li>
+<li><a href="https://www.biobucks.co/biotech-vc-funding-tracker-2026">biobucks, Biotech Funding Rounds 2026 tracker</a> — <em>Series A extension and tranche examples</em></li>
+<li><a href="https://wewillcure.com/insights/news/ai-and-machine-learning/ai-drug-discovery-venture-funding-tracker-2026">Cure, AI Drug Discovery Funding Tracker 2026</a></li>
+</ul>
+<h3 id="venture-creation-firms-primary-where-reachable">Venture-creation firms (primary where reachable)</h3>
+<ul>
+<li><a href="https://www.thirdrockventures.com/approach">Third Rock Ventures, Approach</a> — "at the seed stage... well before a company launches"</li>
+<li><a href="https://www.5amventures.com/">5AM Ventures</a> — the 4:59 Initiative; "emphasis on Series A companies"</li>
+<li><a href="https://www.versantventures.com/">Versant Ventures</a> — in-house Discovery Engines; $5.5B AUM</li>
+<li><a href="https://www.thecolumngroup.com/">The Column Group</a> — "primarily focused on company formation"; TCG Labs-Soleil</li>
+<li><a href="https://www.foresitecapital.com/">Foresite Capital</a> — multi-stage; Foresite Labs</li>
+<li>Flagship Pioneering (<a href="https://www.flagshippioneering.com/">flagshippioneering.com</a> and <code>/our-approach</code>) — <strong>HTTP 403, not retrieved</strong></li>
+<li>ARCH Venture Partners (<a href="https://www.archventure.com/approach">archventure.com/approach</a>) — <strong>HTTP 403, not retrieved</strong></li>
+<li><a href="https://gpisano.com/case-study/institutionalized-entrepreneurship-flagship-pioneering/">Institutionalized Entrepreneurship: Flagship Pioneering (Gary Pisano case summary)</a> — <em>secondary; unverified figures</em></li>
+</ul>
+<h3 id="investors-primary-statements-of-criteria">Investors: primary statements of criteria</h3>
+<ul>
+<li><a href="https://a16z.com/announcement/investing-in-arda-therapeutics/">a16z, "Investing in Arda Therapeutics" (Oct 2024)</a> — "product focused biotech companies with a repeatable, data-informed platform"; confirms a16z first invested at seed</li>
+<li><a href="https://a16z.com/bio-fund-iii/">a16z, Bio Fund III ($750M, Feb 2020)</a></li>
+<li><a href="https://a16z.com/new-year-new-fund-new-opportunities-in-bio-health/">a16z, "New Year, New Fund, New Opportunities in Bio + Health"</a></li>
+<li><a href="https://a16z.com/announcement-andreessen-horowitz-partners-with-lilly-to-launch-first-of-its-kind-biotech-ecosystem-venture-fund/">a16z, announcement of the Lilly-partnered Biotech Ecosystem Venture Fund (Jan 2025)</a> — <em>size not found; Business Wire version returned 403</em></li>
+<li><a href="https://www.nfx.com/post/launching-nfx-bio">NFX, "Launching NFX Bio and The Rise of the Scientist Founder" (Jan 2021)</a> — the most explicit public seed criteria in the sector</li>
+<li><a href="https://podcast.nfx.com/episodes/announcing-nfx-bio/transcript">NFX Bio launch transcript</a></li>
+<li><a href="https://signal.nfx.com/investor-lists/top-biotech-seed-investors">NFX Signal, Top 2026 BioTech Seed Investors</a></li>
+<li><a href="https://dimensioncap.com/">Dimension Capital</a> and <a href="https://dimensioncap.com/letters">its letters</a></li>
+<li><a href="https://www.pillar.vc/belief/faqs/">Pillar VC, FAQs</a> — $50k–$7M, $2.5M average check, pre-seed and seed</li>
+<li><a href="https://www.civilizationventures.com/">Civilization Ventures</a> — Fund I $1M pilot, Fund II $35M, &gt;$200M AUM</li>
+<li><a href="https://www.nvfund.com/">Novartis Venture Fund</a> — &gt;$750M committed; no mention of seed or company creation</li>
+<li><a href="https://www.genengnews.com/gen-edge/engineering-biology-a16zs-vijay-pande-discusses-shift-from-bespoke-drugs/">GEN Edge interview with Vijay Pande, a16z</a></li>
+<li><a href="https://www.mobihealthnews.com/news/andreessen-horowitz-eli-lilly-partner-biotech-ecosystem-fund">MobiHealthNews on the a16z–Lilly biotech ecosystem fund</a></li>
+<li><a href="https://www.biospace.com/press-releases/andreessen-horowitz-partners-with-lilly-to-launch-first-of-its-kind-biotech-ecosystem-venture-fund">BioSpace on the a16z–Lilly fund</a></li>
+</ul>
+<h3 id="non-dilutive-sources-incubators-and-accelerators-primary">Non-dilutive sources, incubators and accelerators (primary)</h3>
+<ul>
+<li><a href="https://seed.nih.gov/small-business-funding/small-business-program-basics/understanding-sbir-sttr">NIH SEED, Understanding SBIR/STTR</a> — Phase I $335,937, Phase II $2,239,578, CRP $4,479,156; guidelines not caps; work and PI requirements</li>
+<li><a href="https://nida.nih.gov/funding/small-business-innovation-research-sbir-technology-transfer-sttr-programs/about-sbir-sttr-programs/funding">NIDA, SBIR/STTR funding page</a> — <em>still showing the 2024 solicitation's figures; conflicts with NIH SEED</em></li>
+<li><a href="https://wellcomeleap.org/programs/">Wellcome Leap, Programs</a> — program-level funding, $50–60M each, 5–10 year horizon</li>
+<li><a href="https://arpa-h.gov/research-and-funding/programs">ARPA-H, Research and Funding Programs</a> — CATALYST, APECx, IGoR, RAPID, SURPASS and others; no award sizes published</li>
+<li><a href="https://nucleate.org/">Nucleate</a> — Activator "without taking equity"; five stated requirements</li>
+<li><a href="https://sosv.com/will-sosv-invest-in-your-company/">SOSV, "Will SOSV invest in your company?"</a> — up to $550,000 pre-seed; "&gt;10% ownership"; 4–6 months in person; pre-seed only</li>
+<li><a href="https://sosv.com/apply/sosv">SOSV application (IndieBio's URL now redirects here)</a></li>
+<li><a href="https://www.ycombinator.com/deal">Y Combinator, The YC Deal</a> — $500K on two post-money SAFEs; "not contingent on milestones"; no mention of bio</li>
+<li>J&amp;J JLABS — <a href="https://www.jnjinnovation.com/jlabs">jnjinnovation.com/jlabs</a>, <a href="https://jnjinnovation.com/jlabs/">jnjinnovation.com/jlabs/</a> — <strong>title-only/empty responses; equity-free claim not verified</strong></li>
+<li><a href="https://www.fiercebiotech.com/biotech/pillar-petri-boston-s-new-accelerator-for-fledgling-biotechs">Fierce Biotech on Pillar's Petri accelerator (2019)</a> — <em>dated</em></li>
+<li><a href="https://www.forbes.com/sites/johncumbers/2019/09/13/boston-tech-investors-launch-petr-accelerator-fund-synthetic-biology-entrepreneurs-startups-innovation/">Forbes on the Petri launch (2019)</a> — <em>dated</em></li>
+</ul>
+<h3 id="named-rounds">Named rounds</h3>
+<ul>
+<li><a href="https://www.biopharmadive.com/news/lila-flagship-ai-superintelligence-startup-seed/742213/">BioPharma Dive, "Flagship startup raises $200M in pursuit of 'scientific superintelligence'" (Lila Sciences, Mar 2025)</a></li>
+<li><a href="https://pharmaphorum.com/news/scientific-superintelligence-firm-lila-launches-200m">pharmaphorum, "Scientific 'superintelligence' firm Lila launches with $200m"</a></li>
+<li><a href="https://www.finsmes.com/2026/06/lila-sciences-raises-350m-in-series-a-funding.html">FinSMEs, "Lila Sciences Raises $350M in Series A Funding" (Jun 2026)</a> — <em>conflicts with other Series A accounts</em></li>
+<li><a href="https://siliconangle.com/2024/06/25/evolutionaryscale-raises-142m-seed-funding-accelerate-ai-powered-protein-discovery/">SiliconANGLE, EvolutionaryScale $142M seed (Jun 2024)</a></li>
+<li><a href="https://www.insideprecisionmedicine.com/topics/precision-medicine/ai-startup-evolutionaryscale-generates-novel-protein-and-raises-142m/">Inside Precision Medicine on EvolutionaryScale</a></li>
+<li><a href="https://www.genomeweb.com/business-news/radical-numerics-launches-50m-seed-funding">GenomeWeb, "Radical Numerics Launches with $50M Seed Funding" (Jun 2026)</a></li>
+<li><a href="https://crisprmedicinenews.com/press-release-service/card/ai-lab-radical-numerics-launches-with-50m-seed-round-to-build-general-biological-intelligence/">CRISPR Medicine News, Radical Numerics $50M seed press release</a></li>
+<li><a href="https://us-east-1.envoy.cirrus.bloomberg.com/news/articles/2024-09-09/openai-thrive-capital-back-six-month-old-ai-drug-discovery-startup">Bloomberg, "Chai Discovery Gets OpenAI, Thrive Capital Backing" (Sep 2024)</a> — ~$30M seed at a $150M valuation</li>
+<li><a href="https://techcrunch.com/2025/03/01/openais-startup-empire-the-companies-backed-by-its-venture-fund">TechCrunch, "OpenAI's startup empire" (Mar 2025)</a></li>
+<li><a href="https://www.businesswire.com/news/home/20250806670137/en/Chai-Discovery-Announces-%2470-million-Series-A-To-Transform-Molecular-Design">Business Wire, Chai Discovery $70M Series A (Aug 2025)</a></li>
+<li><a href="https://endpoints.news/openai-backed-biotech-chai-discovery-raises-70m-series-a/">Endpoints News, "OpenAI-backed biotech Chai Discovery raises $70M Series A"</a></li>
+<li><a href="https://www.axios.com/2024/04/24/stanford-ai-biotech-xaira">Axios, "Ex-Stanford president's AI biotech startup snares $1 billion" (Xaira, Apr 2024)</a></li>
+<li><a href="https://www.ddw-online.com/ai-drug-discovery-company-xaira-launches-with-1b-investment-29500-202404/">Drug Discovery World, Xaira launches with $1b</a></li>
+<li><a href="https://www.biospace.com/xaira-therapeutics-launches-to-deliver-transformative-medicines-by-advancing-and-harnessing-ai-for-drug-discovery-and-development">BioSpace, Xaira Therapeutics launch release</a></li>
+<li><a href="https://www.drugdiscoverytrends.com/xaira-therapeutics-billion-dollar-ai-biotech-funding/">Drug Discovery Trends, "How Xaira Therapeutics' $1B funding raise stacks up"</a></li>
+<li><a href="https://justainews.com/companies/funding-news/latent-labs-lands-50m-to-revolutionize-generative-protein-engineering/">Latent Labs $50M total / $40M Series A</a></li>
+</ul>
+<h3 id="graduation-rates-and-base-rates">Graduation rates and base rates</h3>
+<ul>
+<li><a href="https://incisive.vc/2025/06/10/update-on-venture-graduation-rates/">Incisive Ventures, "Update on Venture graduation rates" (Jun 2025)</a> — <em>the most complete reachable compilation of Carta and Crunchbase cohort figures, with the J.P. Morgan "1 in 10 to 1 in 3" sector range. Several of its own figures are unattributed</em></li>
+<li>Carta — <a href="https://carta.com/data/">carta.com/data</a>, <a href="https://carta.com/blog/state-of-private-markets-q3-2026/">State of Private Markets Q3 2026</a>, <a href="https://carta.com/data/startup-graduation-rates/">startup graduation rates</a> — <strong>all HTTP 403; every Carta figure in this file is second-hand</strong></li>
+</ul>
+<h3 id="clinical-success-rates-and-timelines">Clinical success rates and timelines</h3>
+<ul>
+<li><a href="https://www.sciencedirect.com/science/article/pii/S135964462400134X">Jayatunga et al., "How successful are AI-discovered drugs in clinical trials? A first analysis and emerging lessons," <em>Drug Discovery Today</em> (2024)</a> — <strong>ScienceDirect returned 403; figures taken from search summaries and from the companion file <code>outcomes-and-deals.md</code></strong></li>
+<li><a href="https://www.researchgate.net/publication/380223979_How_successful_are_AI-discovered_drugs_in_clinical_trials_A_first_analysis_and_emerging_lessons">ResearchGate copy of the same paper</a></li>
+<li><a href="https://www.nature.com/articles/s41591-025-03743-1">Xu Z et al., "A generative AI-discovered TNIK inhibitor for idiopathic pulmonary fibrosis: a randomized phase 2a trial," <em>Nature Medicine</em> (Aug 2025), PMID 40461817</a> — <strong>auth wall; abstract not retrieved</strong></li>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/?term=rentosertib+idiopathic+pulmonary+fibrosis">PubMed search for rentosertib</a> — paper list retrieved; abstracts cookie-walled</li>
+<li><a href="https://insilico.com/news">Insilico Medicine news index</a> — the "12 Months After Program Initiation" claim and dated milestones</li>
+<li><a href="https://insilico.com/pipeline">Insilico Medicine pipeline</a> — 14 programs, <strong>no timeline or cost statements</strong></li>
+</ul>
+<h3 id="companion-files-in-this-folder">Companion files in this folder</h3>
+<ul>
+<li><code>ai4bio/sources/outcomes-and-deals.md</code> — clinical outcomes, the success-rate literature with its baselines, pharma deal economics, and company failures. <strong>The authoritative place in this repository for the Jayatunga figures, the Wong et al. baseline, and the BenevolentAI / Exscientia / Arena BioWorks / Atomwise outcomes.</strong></li>
+<li><code>ai4bio/sources/ai-native-companies.md</code> — company-level profiles.</li>
+</ul>
+</main>
+</div>
+
+<footer><div class="wrap">
+  <p>Seed round mechanics and the investor landscape in AI-for-drug-discovery</p>
+  <p>Rendered from Markdown research notes. <a href="index.html">Back to the index</a>.</p>
+</div></footer>
+
+</body>
+</html>
