@@ -11,6 +11,11 @@ sit side by side in the same parent folder.
 Needs the `markdown` package (pip install markdown). Writes one .html per
 source document into this directory, alongside the hand-written index.html
 and the shared style.css, neither of which this script touches.
+
+The sources refer to each other by filename, which means nothing to a reader
+of the published site. Every such reference is rewritten to the document's
+title: a link when that document is published here, plain italics when it
+is not. See DISPLAY below.
 """
 
 import argparse
@@ -36,17 +41,49 @@ DOCS = [
     ("sources/seed-investor-requirements", "Evidence file", "seed-investor-requirements.html"),
 ]
 
-# Markdown references to sibling documents, rewritten to the built pages.
-CROSSLINKS = {
-    "`sources/seed-protein-design-companies.md`": "seed-protein-design-companies.html",
-    "`sources/seed-extracellular-degraders.md`": "seed-extracellular-degraders.html",
-    "`sources/seed-founder-credentials.md`": "seed-founder-credentials.html",
-    "`sources/seed-round-mechanics-and-investors.md`": "seed-round-mechanics-and-investors.html",
-    "`sources/seed-failures-and-survivorship.md`": "seed-failures-and-survivorship.html",
-    "`sources/seed-investor-requirements.md`": "seed-investor-requirements.html",
-    "`computational-drug-design-primer.md`": "computational-drug-design-primer.html",
-    "`what-gets-funded-at-seed.md`": "what-gets-funded-at-seed.html",
+# Markdown basename -> (name to show a reader, page to link to or None).
+# The display names match the cards on index.html so each document has one
+# name everywhere on the site.
+DISPLAY = {
+    "computational-drug-design-primer":
+        ("How a Designed Molecule Becomes a Candidate", "computational-drug-design-primer.html"),
+    "what-gets-funded-at-seed":
+        ("What Gets Funded at Seed in AI Drug Design", "what-gets-funded-at-seed.html"),
+    "seed-protein-design-companies":
+        ("Protein and Antibody Design Companies", "seed-protein-design-companies.html"),
+    "seed-extracellular-degraders":
+        ("Extracellular and Targeted Degraders", "seed-extracellular-degraders.html"),
+    "seed-founder-credentials":
+        ("Founder Credentials", "seed-founder-credentials.html"),
+    "seed-round-mechanics-and-investors":
+        ("Round Mechanics and Investors", "seed-round-mechanics-and-investors.html"),
+    "seed-failures-and-survivorship":
+        ("Failures and Survivorship", "seed-failures-and-survivorship.html"),
+    "seed-investor-requirements":
+        ("What Investors Say They Require", "seed-investor-requirements.html"),
+    # Documents that live only in the private repository. Named, never linked.
+    "landscape": ("Where AI Actually Enters Drug Discovery", None),
+    "plan": ("the research plan", None),
+    "README": ("the folder index", None),
+    "resources": ("the research log", None),
+    "the-pairing": ("The Pairing", None),
+    "outcomes-and-deals": ("Outcomes and Deals", None),
+    "ai-native-companies": ("AI-native Companies in Biology and Drug Discovery", None),
+    "pipeline-map": ("The Drug Discovery Pipeline", None),
+    "labs-and-cros": ("Labs and CROs", None),
+    "models-and-data": ("Models and Data", None),
 }
+
+# A reference to a sibling document: an optional path, a stem, and .md,
+# optionally wrapped in backticks.
+MD_REF = re.compile(r"`?(?:\.\./)?(?:ai4bio/)?(?:sources/)?([A-Za-z0-9._-]+)\.md`?")
+
+# Phrases that only make sense when the documents sit in a repository.
+PROSE_FIXES = [
+    ("**In this repository**", "**Related reading**"),
+    ("Related work in this repository:", "Related reading:"),
+    ("Related work in this repository", "Related reading"),
+]
 
 PAGE = """<!doctype html>
 <html lang="en">
@@ -90,11 +127,38 @@ PAGE = """<!doctype html>
 """
 
 
-def slug(text):
-    text = re.sub(r"<[^>]+>", "", text)
-    text = html.unescape(text).lower()
-    text = re.sub(r"[^a-z0-9\s-]", "", text)
-    return re.sub(r"[\s-]+", "-", text).strip("-")
+def retitle(text, self_page):
+    """Replace filename references with document titles.
+
+    URLs are stashed first so that an http address is never treated as a
+    document reference. One source carries a news URL with a stray '.md'
+    suffix, which is dropped on the way back in.
+    """
+    stash = []
+
+    def hide(m):
+        stash.append(m.group(0))
+        return "\x00%d\x00" % (len(stash) - 1)
+
+    text = re.sub(r"https?://[^\s)\"'<>]+", hide, text)
+
+    def sub(m):
+        stem = m.group(1)
+        name, page = DISPLAY.get(stem, (stem.replace("-", " "), None))
+        if page and page != self_page:
+            return "[%s](%s)" % (name, page)
+        return "*%s*" % name
+
+    text = MD_REF.sub(sub, text)
+
+    for old, new in PROSE_FIXES:
+        text = text.replace(old, new)
+
+    def show(m):
+        url = stash[int(m.group(1))]
+        return url[:-3] if url.endswith(".md") else url
+
+    return re.sub(r"\x00(\d+)\x00", show, text)
 
 
 def build_toc(body):
@@ -109,12 +173,8 @@ def build_toc(body):
     return '<nav class="toc">\n  <h2>Contents</h2>\n  <ol>\n%s\n  </ol>\n</nav>' % rows
 
 
-def render(path, kicker):
-    text = path.read_text(encoding="utf-8")
-
-    for ref, target in CROSSLINKS.items():
-        label = ref.strip("`").split("/")[-1]
-        text = text.replace(ref, "[`%s`](%s)" % (label, target))
+def render(path, kicker, self_page):
+    text = retitle(path.read_text(encoding="utf-8"), self_page)
 
     md = markdown.Markdown(
         extensions=["tables", "attr_list", "sane_lists", "toc", "md_in_html"],
@@ -171,7 +231,7 @@ def main():
         if not path.exists():
             print("  skip  %s (not found)" % stem)
             continue
-        (here / out).write_text(render(path, kicker), encoding="utf-8")
+        (here / out).write_text(render(path, kicker, out), encoding="utf-8")
         print("  wrote %-46s %6.0f KB" % (out, (here / out).stat().st_size / 1024))
 
 
