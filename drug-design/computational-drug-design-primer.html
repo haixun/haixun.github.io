@@ -427,7 +427,7 @@
 <p><strong>Will it fail in a cell or an animal?</strong> This is where most attrition happens and where the predictive models are most mature: solubility, permeability, metabolic stability, plasma protein binding, and the toxicity flags — hERG cardiac channel liability above all, plus liver toxicity and mutagenicity. These models are far from perfect but they are good enough to rank, and they remove molecules that would otherwise consume months.</p>
 <p><strong>What else does it hit?</strong> Dock or co-fold against a panel of human proteins, with the known safety-liability targets prioritised. Cheap insurance against a predictable class of failure.</p>
 <h3 id="the-principle-underneath-all-of-it">The principle underneath all of it</h3>
-<p><strong>Orthogonality beats accuracy.</strong> Two independent weak filters catch more than one strong filter, because whatever you optimise against, the optimiser will find its holes. This is the single most transferable lesson in the document, it is why cross-model evaluation became standard practice, and it is the same argument the evaluation work in <code>../eval/</code> makes about benchmarks in a different field.</p>
+<p><strong>Orthogonality beats accuracy.</strong> Two independent weak filters catch more than one strong filter, because whatever you optimise against, the optimiser will find its holes. This is the single most transferable lesson in the document, it is why cross-model evaluation became standard practice, and it is the same argument the evaluation work in <code>explore/eval/</code> makes about benchmarks in a different field.</p>
 <p><strong>Filter on the actual failure mode.</strong> For antibiotics that is accumulation, not affinity. For antibodies it is developability. Teams routinely over-invest in affinity prediction — the most intellectually interesting and least solved problem — and under-invest in the boring check that would have killed the candidate in a second.</p>
 <p><strong>None of this substitutes for cheap experiments.</strong> The groups that do best shorten the loop rather than perfecting the filter: small batches, measured, fed back. Filtering moves a hit rate from under one percent to tens of percent, which is genuinely transformative, and no stack produces a reliable single-shot answer.</p>
 <h2 id="10-antibiotics-are-the-hard-case-for-specific-reasons">10. Antibiotics are the hard case, for specific reasons</h2>
@@ -455,7 +455,7 @@
 <p>Read against the repository's purpose, and deliberately short, because <em>Where AI Actually Enters Drug Discovery</em> is the considered version of this argument and reaches it from the business side.</p>
 <ul>
 <li><strong>Verification and filtering infrastructure, not models.</strong> Both papers read here wrap frozen third-party models in better search and better checking. That is where the leverage currently is, it does not require training a frontier model, and it is a software problem. The RGI-Toolkit result — making six predictors produce chemically valid ligands — is plumbing of exactly this kind.</li>
-<li><strong>Orthogonal evaluation as a product.</strong> Nobody sells independent, blind, prospective validation of designs. The field's inability to distinguish real advances from well-chosen targets is a market failure with a familiar shape, and it is the same argument as <code>../eval/</code>.</li>
+<li><strong>Orthogonal evaluation as a product.</strong> Nobody sells independent, blind, prospective validation of designs. The field's inability to distinguish real advances from well-chosen targets is a market failure with a familiar shape, and it is the same argument as <code>explore/eval/</code>.</li>
 <li><strong>Label quality over model capacity.</strong> If the ceiling is the data, the valuable asset is consistently measured data, and the best-informed players are buying exactly that.</li>
 <li><strong>Constrained design beats de novo design commercially.</strong> CDR redesign inside a validated framework inherits developability, manufacturability and regulatory precedent. The de novo miniprotein is the better paper; the constrained redesign is the better product.</li>
 <li><strong>Modality-specific physics is underserved.</strong> The Gram-negative accumulation problem is well characterised, economically important and not where the modelling attention is.</li>
@@ -603,8 +603,8 @@
 <ul>
 <li><em>Where AI Actually Enters Drug Discovery</em> — where AI enters drug discovery, the ten stages, the label noise floor, the clinical record. The authority for every quantitative claim this document borrows.</li>
 <li><code>case-studies/</code> — Warp Sciences, OpenAI in the life sciences, and the founding-pairs study.</li>
-<li><code>../doc-understanding/bio-medical/</code> — literature, patents and biomedical evidence as a document-understanding problem.</li>
-<li><code>../eval/</code> — the evaluation work whose argument about benchmark validity recurs here in a different science.</li>
+<li><code>explore/doc-understanding/bio-medical/</code> — literature, patents and biomedical evidence as a document-understanding problem.</li>
+<li><code>explore/eval/</code> — the evaluation work whose argument about benchmark validity recurs here in a different science.</li>
 </ul>
 </main>
 </div>

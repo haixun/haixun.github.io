@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """Render the drug-design research documents to static HTML.
 
-The sources are Markdown files in a separate, private repository. Point
---src at its `ai4bio` directory; the default assumes the two repositories
-sit side by side in the same parent folder.
+The sources are Markdown files in a separate, private, local-only
+repository. Point --src at its `research` directory; the default is where
+that repository lives.
 
-    python3 build.py                       # uses ../../explore/ai4bio
-    python3 build.py --src ~/explore/ai4bio
+    python3 build.py                       # uses ~/carpediem/drug-design/research
+    python3 build.py --src /path/to/research
 
 Needs the `markdown` package (pip install markdown). Writes one .html per
 source document into this directory, alongside the hand-written index.html
@@ -218,7 +218,7 @@ def render(path, kicker, self_page):
 def main():
     here = pathlib.Path(__file__).resolve().parent
     ap = argparse.ArgumentParser()
-    ap.add_argument("--src", default=str(here.parent.parent / "explore" / "ai4bio"),
+    ap.add_argument("--src", default=str(pathlib.Path.home() / "carpediem" / "drug-design" / "research"),
                     help="directory holding the Markdown sources")
     args = ap.parse_args()
     src = pathlib.Path(args.src).expanduser()
