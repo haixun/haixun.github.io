@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Survey of the system around a base model (execution, tools, context, memory, evaluation) and of how optimisation targets moved from prompts to context, workflows, harnes…">
+<title>Harness Engineering for Self-Improvement · Optimus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<nav class="topbar"><div class="wrap">
+  <a href="../index.html">&larr; Optimus</a>
+  <span class="crumb"><a href="../articles.html">Articles</a> &middot; <b>Harness Engineering for Self-Improvement</b></span>
+  <span class="navlinks"><a href="../browse.html">Browse</a><a href="../owning-the-intelligence.html">Essay</a><a href="../landscape.html">Map</a></span>
+</div></nav>
+<header class="mast"><div class="wrap">
+<p class="kicker">Article &middot; 2026-07-04 &middot; Lil&#x27;Log</p>
+<h1>Harness Engineering for Self-Improvement</h1>
+<p class="entry-meta"><span class="badge ev">independent</span></p>
+<p class="chips"><a class="chip chip-optimises" href="../topics/optimises--harness-code.html" title="What it optimises">harness-code</a><a class="chip chip-optimises" href="../topics/optimises--context.html" title="What it optimises">context</a><a class="chip chip-optimises" href="../topics/optimises--structure.html" title="What it optimises">structure</a><a class="chip chip-optimises" href="../topics/optimises--prompt.html" title="What it optimises">prompt</a><a class="chip chip-route" href="../topics/route--search.html" title="How">search</a><a class="chip chip-domain" href="../topics/domain--general.html" title="Domain">general</a><a class="chip chip-domain" href="../topics/domain--code.html" title="Domain">code</a><a class="chip chip-domain" href="../topics/domain--science.html" title="Domain">science</a><a class="chip chip-topics" href="../topics/topics--harness-engineering.html" title="Topics">harness-engineering</a><a class="chip chip-topics" href="../topics/topics--self-improvement.html" title="Topics">self-improvement</a><a class="chip chip-topics" href="../topics/topics--workflow-search.html" title="Topics">workflow-search</a></p>
+</div></header>
+<div class="wrap"><main class="doc entry">
+<p class="links"><a href="https://lilianweng.github.io/posts/2026-07-04-harness/">lilianweng.github.io/posts/2026-07-04-harness</a></p>
+<p class="people"><span class="lbl">People</span> Lilian Weng</p>
+<h2>Summary</h2><p>Survey of the system around a base model (execution, tools, context, memory, evaluation) and of how optimisation targets moved from prompts to context, workflows, harness code and optimiser code. Argues near-term self-improvement runs through harness meta-optimisation, and lists open challenges led by weak and fuzzy evaluators.</p>
+<h2>Our take</h2><blockquote><p>The best single map of the harness-optimisation literature, and it ranks the evaluator problem first, which is the certificate gap we would fill.</p></blockquote>
+<h2>Relations</h2><ul class="relations"><li><span class="rel">discusses</span> <a href="../entries/meta-harness.html">Meta-Harness: End-to-End Optimization of Model Harnesses</a></li><li><span class="rel">discusses</span> <a href="../entries/self-harness.html">Self-Harness: Harnesses That Improve Themselves</a></li><li><span class="rel">discusses</span> <a href="../entries/agentic-harness-engineering.html">Agentic Harness Engineering: Observability-Driven Automatic Evolution of Coding-Agent Harnesses</a></li><li><span class="rel">discusses</span> <a href="../entries/continual-harness.html">Continual Harness: Online Adaptation for Self-Improving Foundation Agents</a></li><li><span class="rel">discusses</span> <a href="../entries/ace-context-engineering.html">Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models</a></li><li><span class="rel">discusses</span> <a href="../entries/meta-context-engineering.html">Meta Context Engineering via Agentic Skill Evolution</a></li><li><span class="rel">discusses</span> <a href="../entries/adas.html">Automated Design of Agentic Systems</a></li><li><span class="rel">discusses</span> <a href="../entries/aflow.html">AFlow: Automating Agentic Workflow Generation</a></li><li><span class="rel">discusses</span> <a href="../entries/darwin-godel-machine.html">Darwin Gödel Machine: Open-Ended Evolution of Self-Improving Agents</a></li><li><span class="rel">discusses</span> <a href="../entries/alphaevolve.html">AlphaEvolve: A coding agent for scientific and algorithmic discovery</a></li><li><span class="rel">discusses</span> <a href="../entries/gepa.html">GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning</a></li><li><span class="rel">discusses</span> <a href="../entries/promptbreeder.html">Promptbreeder: Self-Referential Self-Improvement Via Prompt Evolution</a></li><li><span class="rel">discusses</span> <a href="../entries/demoevolve.html">DemoEvolve: Demonstration-Guided Harness Evolution under Sparse Feedback</a></li><li><span class="rel">discusses</span> <a href="../entries/shinkaevolve.html">ShinkaEvolve: Towards Open-Ended And Sample-Efficient Program Evolution</a></li><li><span class="rel">discusses</span> <a href="../entries/hyperagents.html">Hyperagents</a></li><li><span class="rel">discusses</span> <a href="../entries/stop-self-taught-optimizer.html">Self-Taught Optimizer (STOP): Recursively Self-Improving Code Generation</a></li><li><span class="rel">discusses</span> <a href="../entries/sia-harness-and-weights.html">SIA: Self Improving AI with Harness &amp; Weight Updates</a></li></ul>
+<h2>Related by tags</h2><ul class="related"><li><a href="../entries/weco.html">Weco AI</a> <span class="tp">company</span></li><li><a href="../entries/meta-harness.html">Meta-Harness: End-to-End Optimization of Model Harnesses</a> <span class="tp">paper</span></li><li><a href="../entries/agentic-harness-engineering.html">Agentic Harness Engineering: Observability-Driven Automatic Evolution of Coding-Agent Harnesses</a> <span class="tp">paper</span></li><li><a href="../entries/harness-updating-not-benefit.html">Harness Updating Is Not Harness Benefit: Disentangling Evolution Capabilities in Self-Evolving LLM Agents</a> <span class="tp">paper</span></li><li><a href="../entries/adas.html">Automated Design of Agentic Systems</a> <span class="tp">paper</span></li><li><a href="../entries/darwin-godel-machine.html">Darwin Gödel Machine: Open-Ended Evolution of Self-Improving Agents</a> <span class="tp">paper</span></li></ul>
+<h2>Discussed in</h2><p><a href="../owning-the-intelligence.html">Owning the Intelligence</a></p>
+<p class="stamp">Added 2026-11-17 &middot; last checked against the source 2026-11-17</p>
+</main></div>
+<footer><div class="wrap">
+  <p>Optimus &middot; a research catalog of workflow, harness and program optimisation for AI, kept by Haixun Wang.</p>
+  <p>Facts are labelled by source: author-reported, vendor-reported, independent, press or estimate. &ldquo;Our take&rdquo; notes are opinions. Built 2026-11-17. <a href="../../">haixun.github.io</a></p>
+</div></footer>
+</body>
+</html>

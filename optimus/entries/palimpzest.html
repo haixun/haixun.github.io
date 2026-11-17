@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="A declarative system for AI-powered analytical queries over unstructured data: users write the query, and a cost-based optimiser picks the physical plan (model, inferenc…">
+<title>Palimpzest: Optimizing AI-Powered Analytics with Declarative Query Processing · Optimus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<nav class="topbar"><div class="wrap">
+  <a href="../index.html">&larr; Optimus</a>
+  <span class="crumb"><a href="../papers.html">Papers</a> &middot; <b>Palimpzest: Optimizing AI-Powered Analytics with Declarative Query Processing</b></span>
+  <span class="navlinks"><a href="../browse.html">Browse</a><a href="../owning-the-intelligence.html">Essay</a><a href="../landscape.html">Map</a></span>
+</div></nav>
+<header class="mast"><div class="wrap">
+<p class="kicker">Paper &middot; 2025-01 &middot; MIT CSAIL &middot; CIDR 2025 (preprint arXiv 2405.14696, &#x27;A Declarative System for Optimizing AI Workloads&#x27;)</p>
+<h1>Palimpzest: Optimizing AI-Powered Analytics with Declarative Query Processing</h1>
+<p class="entry-meta"><span class="badge ev">author-reported</span></p>
+<p class="chips"><a class="chip chip-optimises" href="../topics/optimises--physical-plan.html" title="What it optimises">physical-plan</a><a class="chip chip-route" href="../topics/route--search.html" title="How">search</a><a class="chip chip-route" href="../topics/route--compile.html" title="How">compile</a><a class="chip chip-certifies" href="../topics/certifies--estimate.html" title="What certifies the result">estimate</a><a class="chip chip-domain" href="../topics/domain--data-analytics.html" title="Domain">data-analytics</a><a class="chip chip-domain" href="../topics/domain--documents.html" title="Domain">documents</a><a class="chip chip-topics" href="../topics/topics--semantic-operators.html" title="Topics">semantic-operators</a><a class="chip chip-topics" href="../topics/topics--cost-quality.html" title="Topics">cost-quality</a></p>
+</div></header>
+<div class="wrap"><main class="doc entry">
+<p class="links"><a href="https://vldb.org/cidrdb/2025/palimpzest-optimizing-ai-powered-analytics-with-declarative-query-processing.html">vldb.org/cidrdb/2025/palimpzest-optimizing-ai-powered-analytics-with-d</a><br>arxiv: <a href="https://arxiv.org/abs/2405.14696">arxiv.org/abs/2405.14696</a><br>code: <a href="https://github.com/mitdbg/palimpzest">github.com/mitdbg/palimpzest</a></p>
+<p class="people"><span class="lbl">People</span> Chunwei Liu, Matthew Russo, Michael Cafarella, Lei Cao, Peter Baille Chen, Zui Chen, Michael Franklin, Tim Kraska, Samuel Madden, Gerardo Vitagliano</p>
+<h2>Summary</h2><p>A declarative system for AI-powered analytical queries over unstructured data: users write the query, and a cost-based optimiser picks the physical plan (model, inference method, prompt strategy, parallelism) that best trades runtime, dollar cost and output quality. Evaluated on legal discovery, real-estate search and medical schema matching; Abacus is its later optimiser.</p>
+<h2>Our take</h2><blockquote><p>The logical-query/physical-plan separation applied to LLM pipelines, from the group whose senior author co-founded G5 Labs; quality is estimated rather than certified, and the logical layer is a data query, not business logic.</p></blockquote>
+<h2>Key numbers</h2><ul><li>A plan 3.3x faster and 2.9x cheaper than the baseline with better quality (arXiv v2, author-reported)</li><li>With parallelism, up to 90.3x speedup at 9.1x lower cost than single-threaded GPT-4, with F1 within 83.5% of the baseline (arXiv v2, author-reported)</li></ul>
+<h2>Relations</h2><ul class="relations"><li><span class="rel">authored by team of</span> <a href="../entries/g5-labs.html">G5 Labs</a> <span class="rnote">Kraska co-authored; lineage only, no product link</span></li><li><a href="../entries/docetl.html">DocETL: Agentic Query Rewriting and Evaluation for Complex Document Processing</a> <span class="rel">competes with</span> this</li><li><a href="../entries/deep-research-analytics-runtime.html">Deep Research is the New Analytics System: Towards Building the Runtime for AI-Driven Analytics</a> <span class="rel">builds on</span> this</li><li><a href="../entries/thalamusdb.html">ThalamusDB: Approximate Query Processing on Multi-Modal Data</a> <span class="rel">competes with</span> this</li><li><a href="../entries/lotus.html">Semantic Operators: A Declarative Model for Rich, AI-based Data Processing (LOTUS)</a> <span class="rel">competes with</span> this</li><li><a href="../entries/abacus.html">Abacus: A Cost-Based Optimizer for Semantic Operator Systems</a> <span class="rel">builds on</span> this</li><li><a href="../entries/sembench.html">SemBench: A Benchmark for Semantic Query Processing Engines</a> <span class="rel">compares against</span> this</li><li><a href="../entries/g5-labs.html">G5 Labs</a> <span class="rel">founded by authors of</span> this <span class="rnote">Kraska co-authored; Ziniu Wu&#x27;s doctorate was in the same group. Lineage only</span></li></ul>
+<h2>Related by tags</h2><ul class="related"><li><a href="../entries/abacus.html">Abacus: A Cost-Based Optimizer for Semantic Operator Systems</a> <span class="tp">paper</span></li><li><a href="../entries/deep-research-analytics-runtime.html">Deep Research is the New Analytics System: Towards Building the Runtime for AI-Driven Analytics</a> <span class="tp">paper</span></li><li><a href="../entries/thalamusdb.html">ThalamusDB: Approximate Query Processing on Multi-Modal Data</a> <span class="tp">paper</span></li><li><a href="../entries/bargain.html">Cut Costs, Not Accuracy: LLM-Powered Data Processing with Guarantees (BARGAIN)</a> <span class="tp">paper</span></li><li><a href="../entries/lotus.html">Semantic Operators: A Declarative Model for Rich, AI-based Data Processing (LOTUS)</a> <span class="tp">paper</span></li><li><a href="../entries/flowcompile.html">FlowCompile: An Optimizing Compiler for Structured LLM Workflows</a> <span class="tp">paper</span></li></ul>
+<h2>Discussed in</h2><p><a href="../owning-the-intelligence.html">Owning the Intelligence</a></p>
+<p class="stamp">Added 2026-11-17 &middot; last checked against the source 2026-11-17</p>
+</main></div>
+<footer><div class="wrap">
+  <p>Optimus &middot; a research catalog of workflow, harness and program optimisation for AI, kept by Haixun Wang.</p>
+  <p>Facts are labelled by source: author-reported, vendor-reported, independent, press or estimate. &ldquo;Our take&rdquo; notes are opinions. Built 2026-11-17. <a href="../../">haixun.github.io</a></p>
+</div></footer>
+</body>
+</html>

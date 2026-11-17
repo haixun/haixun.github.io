@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="A programming model that expresses LM pipelines as graphs of declarative modules (signatures) and a compiler that optimises any such pipeline against a user metric by bo…">
+<title>DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines · Optimus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<nav class="topbar"><div class="wrap">
+  <a href="../index.html">&larr; Optimus</a>
+  <span class="crumb"><a href="../papers.html">Papers</a> &middot; <b>DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines</b></span>
+  <span class="navlinks"><a href="../browse.html">Browse</a><a href="../owning-the-intelligence.html">Essay</a><a href="../landscape.html">Map</a></span>
+</div></nav>
+<header class="mast"><div class="wrap">
+<p class="kicker">Paper &middot; 2023-10-05 &middot; Stanford NLP &middot; ICLR 2024</p>
+<h1>DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines</h1>
+<p class="entry-meta"><span class="badge ev">author-reported</span></p>
+<p class="chips"><a class="chip chip-optimises" href="../topics/optimises--prompt.html" title="What it optimises">prompt</a><a class="chip chip-optimises" href="../topics/optimises--examples.html" title="What it optimises">examples</a><a class="chip chip-optimises" href="../topics/optimises--weights.html" title="What it optimises">weights</a><a class="chip chip-route" href="../topics/route--compile.html" title="How">compile</a><a class="chip chip-route" href="../topics/route--search.html" title="How">search</a><a class="chip chip-certifies" href="../topics/certifies--metric.html" title="What certifies the result">metric</a><a class="chip chip-domain" href="../topics/domain--general.html" title="Domain">general</a><a class="chip chip-topics" href="../topics/topics--prompt-optimisation.html" title="Topics">prompt-optimisation</a><a class="chip chip-topics" href="../topics/topics--workflow-compilation.html" title="Topics">workflow-compilation</a></p>
+</div></header>
+<div class="wrap"><main class="doc entry">
+<p class="links"><a href="https://arxiv.org/abs/2310.03714">arxiv.org/abs/2310.03714</a><br>code: <a href="https://github.com/stanfordnlp/dspy">github.com/stanfordnlp/dspy</a><br>docs: <a href="https://dspy.ai">dspy.ai</a></p>
+<p class="people"><span class="lbl">People</span> Omar Khattab, Arnav Singhvi, Paridhi Maheshwari, Zhiyuan Zhang, Keshav Santhanam, Sri Vardhamanan, Saiful Haq, Ashutosh Sharma, Thomas T. Joshi, Hanna Moazam, Heather Miller, Matei Zaharia, Christopher Potts</p>
+<h2>Summary</h2><p>A programming model that expresses LM pipelines as graphs of declarative modules (signatures) and a compiler that optimises any such pipeline against a user metric by bootstrapping demonstrations, writing instructions or fine-tuning. The framework has since become the reference implementation for prompt and program optimisers (MIPROv2, GEPA, BetterTogether).</p>
+<h2>Our take</h2><blockquote><p>The canonical &#x27;logical program, optimised physical realisation&#x27; framing for LM pipelines and the de facto substrate others target; but the program is Python glue, the metric is the only spec, and nothing certifies the result. The adoption-friction thread on Hacker News is the cautionary data point.</p></blockquote>
+<h2>Key numbers</h2><ul><li>Compiled pipelines beat standard few-shot prompting by over 25% (GPT-3.5) and 65% (llama2-13b-chat) (author-reported)</li><li>Beat pipelines with expert-created demonstrations by 5-46% and 16-40% respectively (author-reported)</li></ul>
+<h2>Relations</h2><ul class="relations"><li><a href="../entries/compiled-ai.html">Compiled AI: Deterministic Code Generation for LLM-Based Workflow Automation</a> <span class="rel">cites</span> this <span class="rnote">Named as an antecedent in declarative pipeline optimisation</span></li><li><a href="../entries/gepa.html">GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning</a> <span class="rel">builds on</span> this <span class="rnote">Ships as dspy.GEPA</span></li><li><a href="../entries/better-together.html">Fine-Tuning and Prompt Optimization: Two Great Steps that Work Better Together</a> <span class="rel">builds on</span> this</li><li><a href="../entries/flowcompile.html">FlowCompile: An Optimizing Compiler for Structured LLM Workflows</a> <span class="rel">cites</span> this</li><li><a href="../entries/optimas.html">Optimas: Optimizing Compound AI Systems with Globally Aligned Local Rewards</a> <span class="rel">cites</span> this</li><li><a href="../entries/miprov2.html">Optimizing Instructions and Demonstrations for Multi-Stage Language Model Programs</a> <span class="rel">builds on</span> this <span class="rnote">Released as dspy.MIPROv2</span></li><li><a href="../entries/bair-compound-ai-systems.html">The Shift from Models to Compound AI Systems</a> <span class="rel">discusses</span> this</li><li><a href="../entries/databricks-gepa-90x-cheaper.html">Databricks: Building state-of-the-art enterprise agents 90x cheaper with automated prompt optimization</a> <span class="rel">discusses</span> this</li><li><a href="../entries/hn-why-isnt-anyone-using-dspy.html">Hacker News: If DSPy is so great, why isn&#x27;t anyone using it?</a> <span class="rel">discusses</span> this</li><li><a href="../entries/langprobe.html">LangProBe: a Language Programs Benchmark</a> <span class="rel">uses</span> this</li><li><a href="../entries/zenbase.html">Zenbase (now The Synthesis Company)</a> <span class="rel">uses</span> this</li></ul>
+<h2>Related by tags</h2><ul class="related"><li><a href="../entries/miprov2.html">Optimizing Instructions and Demonstrations for Multi-Stage Language Model Programs</a> <span class="tp">paper</span></li><li><a href="../entries/better-together.html">Fine-Tuning and Prompt Optimization: Two Great Steps that Work Better Together</a> <span class="tp">paper</span></li><li><a href="../entries/hn-why-isnt-anyone-using-dspy.html">Hacker News: If DSPy is so great, why isn&#x27;t anyone using it?</a> <span class="tp">article</span></li><li><a href="../entries/sammo.html">Symbolic Prompt Program Search: A Structure-Aware Approach to Efficient Compile-Time Prompt Optimization (SAMMO)</a> <span class="tp">paper</span></li><li><a href="../entries/zenbase.html">Zenbase (now The Synthesis Company)</a> <span class="tp">company</span></li><li><a href="../entries/ape.html">Large Language Models Are Human-Level Prompt Engineers</a> <span class="tp">paper</span></li></ul>
+<h2>Discussed in</h2><p><a href="../owning-the-intelligence.html">Owning the Intelligence</a></p>
+<p class="stamp">Added 2026-11-17 &middot; last checked against the source 2026-11-17</p>
+</main></div>
+<footer><div class="wrap">
+  <p>Optimus &middot; a research catalog of workflow, harness and program optimisation for AI, kept by Haixun Wang.</p>
+  <p>Facts are labelled by source: author-reported, vendor-reported, independent, press or estimate. &ldquo;Our take&rdquo; notes are opinions. Built 2026-11-17. <a href="../../">haixun.github.io</a></p>
+</div></footer>
+</body>
+</html>

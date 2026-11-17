@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Searches over combinations of inference-time techniques (repeated sampling, ranking, fusion, critique, verification) and LLMs under a compute budget, finding architectur…">
+<title>Archon: An Architecture Search Framework for Inference-Time Techniques · Optimus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<nav class="topbar"><div class="wrap">
+  <a href="../index.html">&larr; Optimus</a>
+  <span class="crumb"><a href="../papers.html">Papers</a> &middot; <b>Archon: An Architecture Search Framework for Inference-Time Techniques</b></span>
+  <span class="navlinks"><a href="../browse.html">Browse</a><a href="../owning-the-intelligence.html">Essay</a><a href="../landscape.html">Map</a></span>
+</div></nav>
+<header class="mast"><div class="wrap">
+<p class="kicker">Paper &middot; 2024-09-23 &middot; Stanford &middot; ICML 2025</p>
+<h1>Archon: An Architecture Search Framework for Inference-Time Techniques</h1>
+<p class="entry-meta"><span class="badge ev">author-reported</span></p>
+<p class="chips"><a class="chip chip-optimises" href="../topics/optimises--physical-plan.html" title="What it optimises">physical-plan</a><a class="chip chip-optimises" href="../topics/optimises--structure.html" title="What it optimises">structure</a><a class="chip chip-route" href="../topics/route--search.html" title="How">search</a><a class="chip chip-route" href="../topics/route--inference-time-search.html" title="How">inference-time-search</a><a class="chip chip-certifies" href="../topics/certifies--metric.html" title="What certifies the result">metric</a><a class="chip chip-domain" href="../topics/domain--general.html" title="Domain">general</a><a class="chip chip-domain" href="../topics/domain--code.html" title="Domain">code</a><a class="chip chip-topics" href="../topics/topics--workflow-search.html" title="Topics">workflow-search</a><a class="chip chip-topics" href="../topics/topics--cost-quality.html" title="Topics">cost-quality</a></p>
+</div></header>
+<div class="wrap"><main class="doc entry">
+<p class="links"><a href="https://arxiv.org/abs/2409.15254">arxiv.org/abs/2409.15254</a><br>code: <a href="https://github.com/ScalingIntelligence/Archon">github.com/ScalingIntelligence/Archon</a></p>
+<p class="people"><span class="lbl">People</span> Jon Saad-Falcon, Adrian Gamarra Lafuente, Shlok Natarajan, Nahum Maru, Hristo Todorov, Etash Guha, E. Kelly Buchanan, Mayee Chen, Neel Guha, Christopher Ré, Azalia Mirhoseini</p>
+<h2>Summary</h2><p>Searches over combinations of inference-time techniques (repeated sampling, ranking, fusion, critique, verification) and LLMs under a compute budget, finding architectures on the accuracy-versus-token-budget frontier for target benchmarks.</p>
+<h2>Our take</h2><blockquote><p>Shows physical plans built from inference-time operators can beat single frontier models, so the operator library matters; benchmark-tuned, with no notion of a customer program.</p></blockquote>
+<h2>Key numbers</h2><ul><li>Outperforms o1, GPT-4o and Claude 3.5 Sonnet by 15.1% on average across instruction-following, reasoning and coding (author-reported)</li></ul>
+<h2>Related by tags</h2><ul class="related"><li><a href="../entries/datarobot-syftr-blog.html">DataRobot: Designing Pareto-optimal GenAI workflows with syftr</a> <span class="tp">article</span></li><li><a href="../entries/datarobot-syftr-search.html">DataRobot Generative Syftr search</a> <span class="tp">product</span></li><li><a href="../entries/syftr.html">syftr: Pareto-Optimal Generative AI</a> <span class="tp">paper</span></li><li><a href="../entries/datarobot.html">DataRobot</a> <span class="tp">company</span></li><li><a href="../entries/aflow.html">AFlow: Automating Agentic Workflow Generation</a> <span class="tp">paper</span></li><li><a href="../entries/bair-compound-ai-systems.html">The Shift from Models to Compound AI Systems</a> <span class="tp">article</span></li></ul>
+<p class="stamp">Added 2026-11-17 &middot; last checked against the source 2026-11-17</p>
+</main></div>
+<footer><div class="wrap">
+  <p>Optimus &middot; a research catalog of workflow, harness and program optimisation for AI, kept by Haixun Wang.</p>
+  <p>Facts are labelled by source: author-reported, vendor-reported, independent, press or estimate. &ldquo;Our take&rdquo; notes are opinions. Built 2026-11-17. <a href="../../">haixun.github.io</a></p>
+</div></footer>
+</body>
+</html>

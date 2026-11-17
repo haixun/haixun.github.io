@@ -1,0 +1,750 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="A position note, first written November 14, 2026 and restructured November 15. It was prompted by YC&#x27;s &quot;Own Your Intelligence&quot; request for startups and by Dwarkesh Patel&#x27;s essay &quot;The avalanche that hit math is coming for AI development&quot;, and it reconsiders two earlier proposals, the Problem-to-Outco">
+<title>Owning the Intelligence · Optimus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="topbar"><div class="wrap">
+  <a href="index.html">&larr; Optimus</a>
+  <span class="crumb">Essay &middot; <b>Owning the Intelligence</b></span>
+  <span class="navlinks"><a href="browse.html">Browse</a><a href="owning-the-intelligence.html">Essay</a><a href="landscape.html">Map</a></span>
+</div></nav>
+<header class="mast"><div class="wrap"><p class="kicker">Essay</p><h1>Owning the Intelligence</h1><p class="standfirst"><em>A position note, first written November 14, 2026 and restructured November 15. It was prompted by YC's <a href="https://www.ycombinator.com/rfs#own-your-intelligence" rel="nofollow">"Own Your Intelligence"</a> request for startups and by Dwarkesh Patel's essay <a href="https://www.dwarkesh.com/p/rsi" rel="nofollow">"The avalanche that hit math is coming for AI development"</a>, and it reconsiders two earlier proposals, the <a href="https://docs.google.com/document/d/1oFSQLz90hI7KfftF83iG9k0SZuUzS4NuA-QDX1lDddY/edit?tab=t.n3sqk179n4r4#bookmark=id.w5y2mk66jz6l" rel="nofollow">Problem-to-Outcome AI Platform</a> and <a href="https://docs.google.com/presentation/d/1K6LaC6kUmjF2Rri2xPohHmgQxyQvrseak3mfxdKVFLc/edit" rel="nofollow">Optimus</a>. Its argument: an enterprise AI task is a program, not a model; the customer should own the program's logic and its definition of correct; and the company we are building helps customers write that program and then finds, certifies and maintains the best way to run it.</em></p></div></header><div class="wrap"><nav class="toc"><h2>Contents</h2><ol class="plain"><li><a href="#the-short-version">The short version</a></li><li><a href="#1-the-task-is-a-program">1. The task is a program</a></li><li><a href="#2-why-the-physical-plan-cannot-be-the-asset">2. Why the physical plan cannot be the asset</a></li><li><a href="#3-the-problem">3. The problem</a></li><li><a href="#4-why-it-is-harder-than-query-optimisation">4. Why it is harder than query optimisation</a></li><li><a href="#5-writing-the-logical-program">5. Writing the logical program</a></li><li><a href="#6-scope">6. Scope</a></li><li><a href="#7-how-it-relates-to-g5-labs-and-the-others">7. How it relates to G5 Labs and the others</a></li><li><a href="#8-the-earlier-attempts-re-examined">8. The earlier attempts, re-examined</a></li><li><a href="#9-the-business">9. The business</a></li><li><a href="#10-it-survives-the-dwarkesh-scenario">10. It survives the Dwarkesh scenario</a></li><li><a href="#11-what-this-means-for-the-two-proposals">11. What this means for the two proposals</a></li><li><a href="#12-what-would-kill-it">12. What would kill it</a></li><li><a href="#13-what-to-do-next">13. What to do next</a></li><li><a href="#notes-on-evidence">Notes on evidence</a></li><li><a href="#sources">Sources</a></li></ol></nav><main class="doc"><h2 id="the-short-version">The short version</h2>
+<ol>
+<li>
+<strong>An enterprise AI task is a program, not a model.</strong> Adjudicating a claim is business logic and data handling, with model calls at a handful of points. Its quality, cost and latency come from the whole program, and optimising it is not a matter of optimising any model's weights.</li>
+<li>
+<strong>Separate the logical program from the physical plan.</strong> The logical program says <em>what</em> happens: the steps, the rules, the data, and what counts as correct. The physical plan says <em>how</em> each model-dependent step runs: which model, which prompt and context, a cascade, a verification step, plain code, or a person. This is the separation databases made between a query and its execution plan.</li>
+<li>
+<strong>Owning the intelligence means owning the logical program and its contract.</strong> The physical plan is regenerated whenever models, prices, data or rules change. YC's "own the model" names one physical choice for one step; "own the loop" names the machinery that regenerates the plan. Neither is the asset.</li>
+<li>
+<strong>The problem:</strong> given a logical program and a contract, find the physical plan, and the rewrites the business logic permits, that maximise the share of work automated within an error budget and limits on cost, latency and memory. Return it with a certificate of its quality, and keep it current.</li>
+<li>
+<strong>It is query optimisation with five complications</strong>, and those are where the product is: no rewrite is safe, so quality must be estimated rather than assumed; errors propagate through the business logic; labels exist mostly at the end, so credit assignment is hard; some model steps should become plain code; and the program keeps changing, so re-planning must be incremental.</li>
+<li>
+<strong>Writing the logical program is part of the product.</strong> The company helps customers' engineers and product managers write it, drawing on procedures, existing code, examples and experts. That is where most of the engineering effort sits today.</li>
+<li>
+<strong>Every piece exists in research and nobody ships the whole.</strong> Physical-plan optimisers (Palimpzest and Abacus, co-authored by G5 Labs' chief executive), logical rewriting (DocETL), operator-level guarantees (LOTUS), prompt optimisation (DSPy, GEPA) and credit assignment through programs (TextGrad, Trace) are all published. None takes business logic as a first-class input or certifies a whole program.</li>
+<li>
+<strong>Earlier "describe the task, we optimise it" products survive only as features</strong> inside platforms that already hold the customer's data. A standalone company has to own what those platforms do not: a portable logical program, its contract and its certificate.</li>
+<li>
+<strong>The business never sells the specification.</strong> It sells outcomes, and the contract accumulates as a by-product. Provable correctness allows outcome pricing; each model release becomes a reason to re-plan, so a renewal; and in regulated industries the contract is the compliance record.</li>
+<li>
+<strong>Two tests decide it:</strong> the tenth workflow at one customer costs a fraction of the first, and a model swap or a rule change is absorbed by re-planning rather than re-engineering.</li>
+</ol>
+<hr>
+<h2 id="1-the-task-is-a-program">1. The task is a program</h2>
+<p>Take a claims workflow, the kind an insurer or a third-party administrator runs thousands of times a day:</p>
+<pre><code>classify the documents in the file        ← model call
+extract line items and amounts            ← model call
+match items to the policy                 ← data lookup + model call
+apply deductibles, limits and exclusions  ← business logic
+check that items sum to the stated total  ← rule
+compute the payable amount                ← code
+route exceptions to an adjuster           ← threshold → person
+</code></pre>
+<p>Most of it is ordinary logic and data. The model calls are a few steps inside it. And its quality is not the quality of any model: a 2% extraction error might vanish after a deductible rule, or double after a sum. What the customer needs is a program that runs correctly, cheaply and fast enough, and that keeps doing so as everything around it changes.</p>
+<p>That is the right unit for "intelligence" in an enterprise. An enterprise has hundreds of such programs. Each one today is an engineering project, and most of the engineering is not about models: it is the logic, the data, the exceptions, and deciding how each model-dependent step should run.</p>
+<h3 class="heading-element">1.1 Logical program and physical plan</h3>
+<p>Databases solved a version of this fifty years ago by separating <em>what</em> a query asks from <em>how</em> it runs. The same separation applies here.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>Logical program</th>
+<th>Physical plan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Says</td>
+<td>what happens: steps, rules, data access, what counts as correct</td>
+<td>how each model-dependent step runs</td>
+</tr>
+<tr>
+<td>Contains</td>
+<td>business logic, data contracts, step specifications, invariants, error costs, governance</td>
+<td>model per step, prompt and context, retrieval, cascades, verify-and-repair, caching, batching, plain code, deferral to a person</td>
+</tr>
+<tr>
+<td>Written by</td>
+<td>the customer's engineers and product managers, with our help</td>
+<td>the optimiser</td>
+</tr>
+<tr>
+<td>Changes when</td>
+<td>the business changes</td>
+<td>a model, a price, the data or the rules change</td>
+</tr>
+<tr>
+<td>Owned by</td>
+<td><strong>the customer</strong></td>
+<td>regenerated on demand</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>This is what owning the intelligence should mean.</strong> Databases gave applications independence from how data is stored. This gives business programs independence from which models they run on. The customer owns the logical program and its contract; the physical plan is a compiled artifact, rebuilt whenever it is cheaper or better to run differently.</p>
+<h3 class="heading-element">1.2 Where "own the model" and "own the loop" fit</h3>
+<p><a href="https://www.ycombinator.com/rfs#own-your-intelligence" rel="nofollow">YC's entry</a> is model-centric: own the weights, run them where you choose, decide when they change. But it names the work in a sentence that points past the model:</p>
+<blockquote>
+<p><em>"Someone has to turn workflows into evals, expertise into training data, production failures into improvements, and carry all of it forward with each new base model."</em></p>
+</blockquote>
+<p>In this frame, a fine-tuned model is one physical choice for one step. It is sometimes the right one, when a memory or latency limit forces a small model or volume makes per-call cost dominate, and the optimiser should consider it. But it is an output, rebuilt when the next base model arrives, not the thing owned.</p>
+<p>A popular reply to YC says the customer should own <em>the loop</em>: the data, context, feedback and workflows around the model. That is closer, but a loop has three parts with different owners. Its <strong>machinery</strong> (the harness, the optimiser, the routing) is increasingly commodity and can be rented. Its <strong>flow</strong> (logs, traces, context) is raw material, not ground truth. Its <strong>verdicts</strong> (what correct means, which outcomes were right, the rules that must hold) are what makes the loop improve rather than drift. The logical program and its contract are the verdicts written down. <strong>Rent the loop; own its inputs.</strong></p>
+<h2 id="2-why-the-physical-plan-cannot-be-the-asset">2. Why the physical plan cannot be the asset</h2>
+<p>The physical layer decays. Published research on harnesses (the prompts, context, tools and control flow around a model) shows how fast:</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Belongs to</th>
+<th>Survives a model change?</th>
+<th>Survives a task change?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Weights</strong></td>
+<td>physical plan</td>
+<td>
+<strong>No.</strong> Obsolete on the next release</td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Harness</strong></td>
+<td>physical plan</td>
+<td>
+<strong>Partly.</strong> Ports across model families, but the benefit does not reliably port with it</td>
+<td>
+<strong>Barely.</strong> +0.4 points across 500 tasks, with regressions on three of seven repositories. What ports is cost: 12% fewer tokens</td>
+</tr>
+<tr>
+<td><strong>Configuration profiles</strong></td>
+<td>physical plan</td>
+<td>
+<strong>No.</strong> Decays on every model and business change</td>
+<td>Partly</td>
+</tr>
+<tr>
+<td><strong>Program logic, contract and labelled outcomes</strong></td>
+<td>logical program</td>
+<td><strong>Yes, entirely</strong></td>
+<td><strong>Yes</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>The model-change and task-change figures are from <a href="https://arxiv.org/abs/2604.25850" rel="nofollow">Agentic Harness Engineering</a>, on SWE-bench Verified.</p>
+<p><strong>And the asymmetry is total.</strong> Given the logical program, the contract and the labelled outcomes, everything physical can be re-derived: re-plan, re-tune, re-profile. Given only the physical artifacts, the logic and the definition of correct cannot be recovered. They exist only where the business decisions were made.</p>
+<h2 id="3-the-problem">3. The problem</h2>
+<p><strong>Given a logical program and its contract, produce a certified physical plan and keep it certified.</strong></p>
+<h3 class="heading-element">3.1 The inputs</h3>
+<p><strong>The logical program</strong>: the steps and how they connect; the business logic as code or rules; the data each step reads, with its source of truth; and, for each model-dependent step, a specification of what it must produce. Model-dependent steps are left abstract, as <em>classify</em>, <em>extract</em>, <em>match</em> or <em>decide</em>, with their inputs, outputs and checks, but not their implementation.</p>
+<p><strong>The contract</strong>, in seven parts:</p>
+<ol>
+<li>
+<strong>Interface</strong>: input and output schemas, for the program and for each abstract step.</li>
+<li>
+<strong>Environment</strong>: the tools, systems and data sources the program may read or change, and with what permissions.</li>
+<li>
+<strong>Correctness specification</strong>: labelled examples, rubrics, invariants (checkable rules such as <em>line items sum to the total</em>, <em>dates fall within the policy period</em>, <em>codes exist in the code set</em>), and judges calibrated against people. Invariants can sit at any step, not only at the end.</li>
+<li>
+<strong>Error costs</strong>: what a wrong accept, a wrong reject and a deferral each cost.</li>
+<li>
+<strong>Constraints</strong>: quality as an error budget at a stated confidence; cost per item; p95 latency; memory and deployment target (cloud, private cloud, on-premise GPU, device).</li>
+<li>
+<strong>Governance</strong>: rules that must hold whatever the score, such as data residency, personal-data handling and approvals.</li>
+<li>
+<strong>Data</strong>: examples for search and tuning, held apart from the certification set.</li>
+</ol>
+<h3 class="heading-element">3.2 The objective</h3>
+<p>Maximise automated coverage, subject to error on automated items ≤ ε at confidence 1−δ, cost ≤ c, latency ≤ l, memory ≤ m, and every governance rule.</p>
+<h3 class="heading-element">3.3 The search space</h3>
+<p><strong>Per abstract step</strong>: plain code (including code a model writes once at build time); a model call, with the model, prompt, examples, context and decoding chosen; retrieval; a small or fine-tuned model; sampling, voting or an ensemble; a verify-and-repair step; or a person.</p>
+<p><strong>Across the program</strong>, the rewrites the business logic permits:</p>
+<ul>
+<li>merge two model calls into one, or split one into two;</li>
+<li>run a cheap step first and escalate only the uncertain cases (a cascade);</li>
+<li>move a cheap filter ahead of an expensive step;</li>
+<li>replace a model step with code once its behaviour is stable enough to compile;</li>
+<li>add a check, using an invariant, and repair or defer when it fails;</li>
+<li>cache, batch and reuse results across items;</li>
+<li>set the thresholds that route an item to a person.</li>
+</ul>
+<h3 class="heading-element">3.4 The outputs</h3>
+<ul>
+<li>
+<strong>The physical plan, as plain, portable code</strong> the customer owns ("the code is yours either way," in G5 Labs' phrase), not a configuration inside our platform.</li>
+<li>
+<strong>A certificate</strong>: held-out estimates with intervals, per constraint and per slice, on data the optimiser never saw.</li>
+<li>
+<strong>The deferral policy</strong>: which items go to a person, and why.</li>
+<li>
+<strong>When no plan meets the contract, the trade-off frontier and the constraint that binds</strong>: "not at 0.5% error under $0.10 a claim, but yes at 2%."</li>
+<li>
+<strong>Monitors and re-planning triggers</strong>: a model release, a price change, data drift, or a change to the logical program.</li>
+</ul>
+<h3 class="heading-element">3.5 The claims example, planned</h3>
+<p>For the claims program above, a plan might classify and extract in one call on a small model; send only low-confidence extractions to a larger one; match items to the policy with code and a fuzzy lookup, calling a model only for unmatched items; use <em>items sum to the total</em> as a free check, re-extracting or deferring on failure; and route the remainder to an adjuster under a threshold fitted to the error budget. Change the base model, the price of a call, or the deductible rules, and the optimiser re-plans the affected steps and re-certifies.</p>
+<h2 id="4-why-it-is-harder-than-query-optimisation">4. Why it is harder than query optimisation</h2>
+<p>The analogy to a database optimiser is close, and the differences are the product.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Database query optimisation</th>
+<th>Optimising an AI program</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Logical query, physical plan</td>
+<td>Logical program, physical plan</td>
+</tr>
+<tr>
+<td>Physical operators (scans, joins)</td>
+<td>Ways to run a step: model, prompt, cascade, code, person</td>
+</tr>
+<tr>
+<td>Cost model</td>
+<td>Cost <strong>and quality</strong> model</td>
+</tr>
+<tr>
+<td>Cardinality estimation</td>
+<td><strong>Quality estimation</strong></td>
+</tr>
+<tr>
+<td>Rewrites preserve the answer</td>
+<td><strong>Every rewrite changes the answer</strong></td>
+</tr>
+<tr>
+<td>Table statistics</td>
+<td>Labelled samples, invariants, calibrated judges</td>
+</tr>
+<tr>
+<td>Incremental view maintenance</td>
+<td>Incremental re-planning as models, data and rules change</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>1. No rewrite is safe.</strong> A database rewrite returns the same rows by construction. Here every physical choice changes the output, so every candidate's quality must be estimated rather than assumed. Quality estimation plays the role cardinality estimation plays in a database: the hard core. <a href="https://arxiv.org/abs/2505.14661" rel="nofollow">Abacus</a> estimates it per operator from a few validation examples, priors or a model judge, and treats the search as a bandit problem. That is the right start, but per operator.</p>
+<p><strong>2. Errors propagate through the logic.</strong> An extraction error can be absorbed by a rounding rule, blocked by a check, or multiplied by a sum. The optimiser needs a model of how step errors become program errors, which depends on the business logic, not just on per-step scores.</p>
+<p><strong>3. Credit assignment.</strong> Labels usually exist for the final output, not for each step. When the payable amount is wrong, which step caused it? <a href="https://arxiv.org/abs/2406.07496" rel="nofollow">TextGrad</a> and <a href="https://arxiv.org/abs/2406.16218" rel="nofollow">Trace</a> propagate feedback backwards through programs of model calls. The business logic gives a cheaper answer: invariants are free intermediate labels. <em>Items sum to the total</em> checks the extraction step on every item, with no labelling at all.</p>
+<p><strong>4. Some model steps should stop being model steps.</strong> The largest savings often come from compiling a stable model step into code (<a href="https://arxiv.org/abs/2604.05150" rel="nofollow">Compiled AI</a>) or from cascading cheap models in front of expensive ones (<a href="https://arxiv.org/abs/2305.05176" rel="nofollow">FrugalGPT</a>, <a href="https://www.vldb.org/pvldb/vol18/p4171-patel.pdf" rel="nofollow">LOTUS</a>). The optimiser must be able to leave the model behind.</p>
+<p><strong>5. The program keeps changing.</strong> Business rules change monthly, data drifts continuously, and models change quarterly. Re-planning the whole program each time is too expensive; re-planning only the affected steps, and re-certifying only what changed, is the database idea of incremental maintenance applied to AI programs.</p>
+<p><strong>A team from the data-management tradition is matched to exactly this.</strong> Cost-based optimisation, cardinality estimation, provenance and lineage, and incremental maintenance are that tradition's core. Strip the AI vocabulary and the product is <strong>a quality-aware optimiser for business programs, with provenance, maintained as the substrate changes.</strong></p>
+<h2 id="5-writing-the-logical-program">5. Writing the logical program</h2>
+<p>Who writes it decides whether this is a product. <strong>Our answer: the customer's engineers and product managers, with tooling and forward-deployed help from us.</strong> Writing it is where most of today's engineering effort sits, so making it fast is a large part of the value.</p>
+<h3 class="heading-element">5.1 How it gets written</h3>
+<ul>
+<li>
+<strong>From what already exists.</strong> Standard operating procedures, policy documents, existing code and scripts, and examples of past cases. The system drafts the steps, rules and step specifications from these, and an engineer or product manager corrects them. G5 Labs does the same for code, lifting intent out of legacy systems, and reports that this surfaces conflicting, ambiguous and duplicated intent.</li>
+<li>
+<strong>From experts.</strong> Edge cases, exceptions and the reasons behind decisions, captured as rules, examples and invariants.</li>
+<li>
+<strong>In a form people can read.</strong> A product manager should be able to review the logical program the way they review a specification. An engineer should be able to run and test it.</li>
+</ul>
+<h3 class="heading-element">5.2 Trusted data is a precondition</h3>
+<p>A program is only as good as the data its logic runs on. A check such as <em>the supplier record is current</em> or <em>the policy was in force on the date of loss</em> requires a trusted source of record. Part of writing the logical program is naming those sources, and part of the contract is saying which data may be relied on. This is another place where data-management experience is the advantage.</p>
+<h3 class="heading-element">5.3 Where correctness comes from</h3>
+<p>In the cases we have in mind there are three sources: <strong>a labelled set from the customer, rubrics and invariants co-written with the customer, and synthetic examples graded by model judges.</strong> Historical decisions with known outcomes, such as adjudicated claims or charged-off loans, are an accelerant where they exist.</p>
+<p><strong>The design rule: separate the search signal from the acceptance gate.</strong></p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Sources</th>
+<th>Character</th>
+<th>Seen by the optimiser?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Search signal</td>
+<td>synthetic examples, model judges, invariants, a training slice of labels</td>
+<td>cheap, plentiful, biased</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Acceptance gate</td>
+<td>a human-labelled held-out set, plus invariants</td>
+<td>expensive, small, trusted</td>
+<td><strong>Never</strong></td>
+</tr>
+<tr>
+<td>Judge calibration</td>
+<td>a human-labelled slice also scored by the judge</td>
+<td>says how far the judge can be trusted</td>
+<td>No</td>
+</tr>
+</tbody>
+</table></div>
+<p>The research gives three reasons. A self-improving loop <a href="https://arxiv.org/abs/2604.25850" rel="nofollow">predicted its own regressions at roughly twice chance</a>. A refitted acceptance threshold alone was <a href="https://arxiv.org/abs/2610.21412" rel="nofollow">worth 21.5 points</a>. And <a href="https://lilianweng.github.io/posts/2026-07-04-harness/" rel="nofollow">Lilian Weng's survey of harness engineering</a> recommends that the evaluator sit outside the loop that evolves the harness. <strong>An optimiser that can see its gate will find the judge's blind spots.</strong></p>
+<p><strong>The labelling cost can be calculated.</strong> To show an error rate below ε at 95% confidence from a held-out set with no errors in it takes about 3/ε items: 300 for 1%, 600 for 0.5%, 3,000 for 0.1%. That is per slice certified separately, and more once errors are observed. A 0.1% budget across five document types is a 15,000-label commitment, <em>unless invariants carry part of the proof</em>. <strong>That is why invariants matter most</strong>: they check every item in production rather than a sample, cost nothing to re-run, and survive any change of model.</p>
+<h3 class="heading-element">5.4 A living contract</h3>
+<p>The contract is not written once. Production outcomes arrive later (a claim is appealed, a loan defaults, a fraud is confirmed), and joined back to the cases they belong to, they extend the held-out set and sharpen the invariants. <strong>That stream of adjudicated outcomes is what compounds.</strong> It is the part of "own the loop" that is right.</p>
+<h2 id="6-scope">6. Scope</h2>
+<h3 class="heading-element">6.1 Batch first, agentic second</h3>
+<p>Both are in scope. They are different problems.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>Batch programs</th>
+<th>Agentic processes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Example</td>
+<td>extract, classify, reconcile and total a claim file</td>
+<td>open a case, query systems, request documents, update the record</td>
+</tr>
+<tr>
+<td>Unit of evaluation</td>
+<td>the item</td>
+<td>the trajectory</td>
+</tr>
+<tr>
+<td>Replay</td>
+<td>free: re-run on stored inputs</td>
+<td>needs a sandbox or simulator of the customer's systems</td>
+</tr>
+<tr>
+<td>Cost of an error</td>
+<td>bounded and reviewable</td>
+<td>side effects, some irreversible</td>
+</tr>
+<tr>
+<td>What certifies</td>
+<td>held-out statistics plus invariants</td>
+<td>the same, plus trajectory checks and permission policy in a simulated environment</td>
+</tr>
+<tr>
+<td>Prior art</td>
+<td>semantic-operator optimisers: Palimpzest and Abacus, DocETL, LOTUS</td>
+<td>workflow search (AFlow, ADAS), harness search, Palantir AIP Evolve</td>
+</tr>
+</tbody>
+</table></div>
+<p>Batch first is not only because it is easier. <strong>Certification is cheap there because replay is free.</strong> For agentic processes, the simulated environment is a large artifact in its own right, and a different one for every customer.</p>
+<h3 class="heading-element">6.2 Weights</h3>
+<p>Fine-tuning and distillation are physical choices like any other, considered step by step. They win when a memory or latency limit forces a small model, or at volumes where per-call cost dominates. They lose on the next base-model release unless they can be redone cheaply, and the contract is what makes redoing them cheap. A company not paid per GPU-minute can also return "don't train", the answer no vendor paid per GPU-minute or per training token has reason to give.</p>
+<h3 class="heading-element">6.3 The scale test</h3>
+<p>One program is consulting. The claim that makes this a company is that <strong>the engineering cost of program <em>n</em> at one customer falls with <em>n</em></strong>, because programs share parts: data sources and their trust rules, invariants (<em>a policy number is valid</em>, <em>a date is in range</em>), step specifications, judges and their calibrations, deferral queues, and per-step cost and quality profiles.</p>
+<p>The research is the warning. Tuned harnesses barely transfer across tasks: <a href="https://arxiv.org/abs/2604.25850" rel="nofollow">+0.4 points over 500 tasks</a>. The bet is that logical programs and contracts transfer where harnesses do not, because they describe the customer's business rather than a model's quirks. That is plausible but untested. <strong>The metric is engineer-days to a certified program, for programs 1, 3 and 10 at the same customer.</strong></p>
+<h2 id="7-how-it-relates-to-g5-labs-and-the-others">7. How it relates to G5 Labs and the others</h2>
+<p>Every component has been built by someone. Nobody ships the whole.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Who</th>
+<th>What it optimises in the program</th>
+<th>Takes business logic as input?</th>
+<th>What certifies</th>
+<th>Relation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>G5 Labs</strong></td>
+<td>generated code, from intent captured as a System Ontology</td>
+<td>Yes, as an ontology</td>
+<td>conformance to the ontology, claimed as formal proof (unsubstantiated in public)</td>
+<td>The same idea, for deterministic software</td>
+</tr>
+<tr>
+<td>
+<strong>Palimpzest and Abacus</strong> (MIT; Kraska, Madden, Cafarella)</td>
+<td>
+<strong>the physical plan</strong> for a user-written pipeline, under policies such as <em>max quality at fixed cost</em>
+</td>
+<td>No; a fixed pipeline of semantic operators</td>
+<td>estimates from a few validation examples, priors or a model judge</td>
+<td><strong>The constrained physical optimiser, built</strong></td>
+</tr>
+<tr>
+<td>
+<strong>DocETL</strong> (Berkeley)</td>
+<td>
+<strong>logical rewrites</strong> of a declarative document pipeline</td>
+<td>No</td>
+<td>agent-guided plan evaluation</td>
+<td>Rewriting. Research; no company found</td>
+</tr>
+<tr>
+<td>
+<strong>LOTUS</strong> (Stanford, Berkeley)</td>
+<td>cheap proxies for expensive operators</td>
+<td>No</td>
+<td>statistical accuracy guarantees against a gold reference</td>
+<td><strong>The certificate, at operator level</strong></td>
+</tr>
+<tr>
+<td><strong>DSPy and GEPA</strong></td>
+<td>prompts, examples and weights inside a fixed program</td>
+<td>Partly; the program is code</td>
+<td>the user's metric</td>
+<td>The free per-call optimiser</td>
+</tr>
+<tr>
+<td><strong>TextGrad, Trace</strong></td>
+<td>parameters anywhere in a program, by propagating feedback</td>
+<td>Partly</td>
+<td>the user's metric</td>
+<td>Credit assignment. Research</td>
+</tr>
+<tr>
+<td><strong>AFlow, ADAS</strong></td>
+<td>the workflow structure itself</td>
+<td>No</td>
+<td>benchmark score</td>
+<td>Structure search. Research</td>
+</tr>
+<tr>
+<td><strong>Compiled AI, FlowCompile</strong></td>
+<td>model steps compiled into code; per-step profiles</td>
+<td>No</td>
+<td>measured accuracy</td>
+<td>The compile route. Research and one company, XY.AI Labs</td>
+</tr>
+<tr>
+<td><strong>Palantir AIP Evolve</strong></td>
+<td>changes proposed by "fleets of AI FDE agents"</td>
+<td>Yes, inside Palantir's ontology</td>
+<td>a validation set</td>
+<td>
+<strong>The closest commercial match</strong>, but only inside Palantir's own platform</td>
+</tr>
+<tr>
+<td><strong>Extend Composer</strong></td>
+<td>field-level extraction schemas</td>
+<td>No</td>
+<td>a verified eval set</td>
+<td>Narrow: extraction, classification, splitting</td>
+</tr>
+<tr>
+<td><strong>Anthropic Outcomes</strong></td>
+<td>one artifact per session</td>
+<td>No</td>
+<td>a separate-context grader</td>
+<td>Per artifact, not a program under constraints. Not eligible for zero data retention or HIPAA</td>
+</tr>
+<tr>
+<td><strong>Databricks Agent Bricks</strong></td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>
+<strong>Dropped the "describe the task, we optimise it" pitch.</strong> Now a code-first agent platform with model judges for evaluation</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>G5 specifically.</strong> G5 runs the same idea for deterministic code, with the business model we would copy: forward-deployed engineers own the first project, a platform licence follows, and the customer keeps the code. Three differences, and one connection.</p>
+<ul>
+<li>
+<strong>Deterministic versus stochastic.</strong> G5's artifact is deterministic code, where correctness can in principle be logical. A program with model calls in it is stochastic and can only be certified statistically. Whatever G5's proof machinery turns out to be, it does not carry over; the certificate here is a held-out estimate with an interval.</li>
+<li>
+<strong>What is generated.</strong> G5 generates the whole program from intent. Here the customer's logic is kept as written, and only the model-dependent steps are planned.</li>
+<li>
+<strong>What is owned.</strong> G5's owned asset is its ontology. Here it is the logical program and its contract; the invariants are the part that most resembles an ontology.</li>
+<li>
+<strong>The connection: G5 is a plausible entrant, not a distant analogue.</strong> Its two named founders come from the MIT group that built Palimpzest and Abacus. Kraska co-authored both, and co-founder Ziniu Wu's doctorate there, co-advised by Kraska and Madden, was on query optimisation. Nothing public ties G5's product to that work. But any G5 system whose generated code calls a model will need exactly the statistical certificate described here.</li>
+</ul>
+<p><strong>What the table says.</strong> The physical optimiser exists in research, over fixed pipelines. Logical rewriting, credit assignment and operator-level guarantees exist separately. The per-call optimiser is free. The commercial versions are narrow, locked to one platform, or per artifact. <strong>What is not built is an optimiser that takes the customer's business logic as a first-class input and certifies the whole program, with the logical program and contract as portable artifacts the customer owns.</strong></p>
+<h2 id="8-the-earlier-attempts-re-examined">8. The earlier attempts, re-examined</h2>
+<p>Four efforts are often cited as proof that the broad "describe the task, supply data, and the system finds the best solution" product fails: Databricks Agent Bricks Custom LLM, TensorZero, Zenbase and DataRobot syftr. Read again from primary sources on 14 November 2026, <strong>the record is weaker than that.</strong> One is a company failure, one a pivot, one an incumbent folding a wizard into other products, and one is alive as a feature.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>What it was</th>
+<th>Searched over</th>
+<th>What happened</th>
+<th>Verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Databricks Agent Bricks: Custom LLM</strong></td>
+<td>Incumbent product, beta at Data + AI Summit, 11 June 2025</td>
+<td>prompts, fine-tuning; launch marketing also names reward models and TAO</td>
+<td>Marked legacy between February and April 2026; users sent to SQL AI Functions</td>
+<td><strong>Retired as a standalone wizard; the capability was absorbed</strong></td>
+</tr>
+<tr>
+<td><strong>TensorZero</strong></td>
+<td>Open-source LLM-ops stack, $7.3M seed led by FirstMark</td>
+<td>prompts and models, then an adaptive A/B test ("Autopilot")</td>
+<td>Wound down June 2026; remaining capital returned to investors</td>
+<td><strong>A company failure, but an LLM-ops one</strong></td>
+</tr>
+<tr>
+<td><strong>Zenbase</strong></td>
+<td>YC S24, DSPy optimisation applied to existing code, about $500K</td>
+<td>prompts and examples via DSPy optimisers</td>
+<td>Pivoted in autumn 2025 to systematic literature review</td>
+<td><strong>A pivot, by a very small team</strong></td>
+</tr>
+<tr>
+<td><strong>DataRobot syftr</strong></td>
+<td>Research from DataRobot, including its CTO, AutoML 2025</td>
+<td>about 10^23 retrieval and agentic configurations, Pareto search over cost and accuracy</td>
+<td>Shipped inside DataRobot's SDK and generative-AI playground, May 2026, still extended in September</td>
+<td><strong>Not a failure. Live as a feature</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Databricks Agent Bricks: Custom LLM.</strong> The launch pitch was close to the problem in this note. Describe the task and connect data. The system generates "task-aware benchmarks and synthetic data" plus model judges, then "automatically optimizes for cost and quality" across prompting and fine-tuning. The documentation asked for a task description and either a labelled table, an unlabelled table, or at least three examples, and at least 100 inputs to optimise. It inferred evaluation guidelines and turned them into pass/fail judges, compared several optimisation strategies including fine-tuning over a few hours, and returned a cost-optimised candidate. It never ran in workspaces with Enhanced Security and Compliance enabled, which is where regulated data lives. Between February and April 2026 the page gained the line <em>"This is a legacy offering. For custom text tasks on your data, use AI Functions, such as <code>ai_query</code>."</em> No release note covers that change. The related retirements, however, <em>were</em> announced: on 5 October 2026 the documentation "now centers on building, deploying, and running custom agents in code", and on 12 October Knowledge Assistant and Supervisor Agent became legacy. No reason was given for any of it. <strong>The fair reading is that the optimisation moved into SQL functions and a code-first platform, and the standalone "declare and we optimise" product went away.</strong> Note also what it optimised: a single task, not a program with business logic.</p>
+<p><strong>TensorZero.</strong> Founded by Gabriel Bianconi and Viraj Mehta, building from January 2024 and open source (Apache 2.0) from September 2024. It was a gateway, observability, evaluation, optimisation and A/B-testing stack. Its main business was LLM operations, not automatic optimisation. Autopilot, announced on 23 March 2026 as "an automated AI engineer", took production observability data, set up evaluations and judges, optimised prompts and models, and ran an adaptive A/B test. It reported gains from +3.4% to +613% on a six-model benchmark with fine-tuning disabled, and was offered only to "a handful of companies," without published pricing. Eleven weeks later the company wound down. The repository was archived, the last release was 4 June 2026, and it still has 11,701 stars. Bianconi wrote publicly that "we came to the difficult decision to wind down the project". He said they had spent about $3M, mostly on salaries, and were returning the rest to investors. He added that the stack carried "tens of trillions of inference tokens per month" but was "not widely used." His stated reason: <em>"an open-source company has to find product market fit twice... The AI market moves very quickly so it's easy to take a step in the wrong direction."</em> <strong>Autopilot was a late bet by an LLM-ops company, not a long test of automatic optimisation.</strong></p>
+<p><strong>Zenbase.</strong> Founded by Cyrus Nouroozi and Amir Mehr, both DSPy contributors, in YC's summer 2024 batch, with about $500K of pre-seed funding (an aggregator figure). It shipped an MIT-licensed library that applied DSPy optimisers to existing code, plus a hosted API that learned from feedback. Its two public customers were batchmates; one reported evaluations rising "from 10% to 80%." The library was last updated in April 2025. By October 2025 the company had become The Synthesis Company, selling systematic literature reviews with a team of one, and the chief executive's profile now lists OpenAI. No founder explanation has been found. <strong>It is a pivot by a two-person company a year out of YC, too small to say much about the market.</strong></p>
+<p><strong>DataRobot syftr.</strong> A May 2025 paper, <em>syftr: Pareto-Optimal Generative AI</em>, presented at AutoML 2025. All seven authors are from DataRobot, including chief technology officer Michael Schmidt. It used multi-objective Bayesian optimisation with early pruning over about 10^23 retrieval and agentic workflow configurations. It reported workflows about 9× cheaper at near-top accuracy, and DataRobot's blog said about $500 of search per use case. <strong>It was productised.</strong> DataRobot's SDK added a <code>SearchStudy</code> for "LLM blueprint searches" in May 2026 and was still extending it in September. A documentation page titled "Generative Syftr search," updated 7 November 2026, describes search against grounding and evaluation datasets with a cost cap and a Pareto front. DataRobot's September blog names a follow-on project that would feed production telemetry back into the optimiser. Release status and pricing were not found.</p>
+<p><strong>What the four say, read correctly.</strong> Not that the problem is unsolvable. <strong>The automatic optimiser survives as a feature inside a platform that already holds the data and the runtime, and dies as a product on its own.</strong> Databricks put it into SQL functions. DataRobot put it into its playground. Palantir's AIP Evolve and Extend's Composer (section 7) have the same shape. The only standalone company, TensorZero, failed for reasons its founder put down to open-source economics and pace. And none of the four took the customer's business logic as input: each optimised a task or a configuration, not a program.</p>
+<p>Two practitioner comments from a March 2026 discussion, "If DSPy is so great, why isn't anyone using it?", add the user's side:</p>
+<ul>
+<li>Many problems "don't have an obvious path to evaluate... This takes a ton of upfront work."</li>
+<li>Optimised prompts could not easily be taken out of the tool, which meant lock-in.</li>
+</ul>
+<p>Those are the two gaps this note is about: <strong>the logical program and contract nobody has written, and an output the customer does not own.</strong> A company selling only the search will be out-competed by the platforms that hold the data. The surviving form has to own what they do not: the authoring of the logical program, the contract and its certificate, all portable across platforms.</p>
+<h2 id="9-the-business">9. The business</h2>
+<h3 class="heading-element">9.1 Why this is not an evaluation company</h3>
+<p>Standalone evaluation is a hard business. Benchmarks are public goods, and the best-known independent evaluator, <a href="https://www.vals.ai/blog/series-a" rel="nofollow">Vals AI</a>, publishes no prices and earns part of its revenue licensing private test sets to the companies it evaluates. Enterprises do not have a budget line for "a specification."</p>
+<p><strong>The resolution is that you never sell it.</strong> You sell the working program, and the logical program and contract accumulate as the by-product. That is the pattern in the working comparables:</p>
+<ul>
+<li>
+<strong><a href="https://g5labs.ai/" rel="nofollow">G5 Labs</a></strong>: forward-deployed engineers own the first project, then an annual licence. The ontology accrues while they are paid to deliver software.</li>
+<li>
+<strong><a href="https://www.sixfold.ai/" rel="nofollow">Sixfold</a></strong>: a per-customer validator and compliance records ship as <em>features</em> of an underwriting product.</li>
+</ul>
+<p>And the first engagement can start before any labels exist. Instrument the customer's current process first: where its steps fail, how often its model calls follow their instructions (<a href="https://arxiv.org/abs/2605.30621" rel="nofollow">skill-load rate and adherence drift</a>), whether repeated runs converge (<a href="https://arxiv.org/abs/2604.08988" rel="nofollow">SEA-Eval</a>). That needs <strong>no labels, no ground truth and no judge</strong>, and it produces numbers the customer does not have.</p>
+<h3 class="heading-element">9.2 Three loops</h3>
+<p><strong>Provability unlocks a pricing model nobody has.</strong> In a review of roughly sixty vendors' published pricing and terms (November 2026), not one in document processing charges per correctly processed result, and the only service-level agreement found was on <em>uptime, not accuracy</em>. The reason is that <strong>correctness is expensive to adjudicate</strong>, which is exactly what the contract makes cheap. The thing that locks the customer in is the same thing that lets you price where competitors cannot follow.</p>
+<p><strong>Every model release becomes a renewal event rather than a threat.</strong> A vendor selling weights or a tuned harness has to re-earn its position on each generation. A vendor holding the logical program and contract gets <em>paid</em> on each generation, because that is when re-planning and re-certifying has value. The customer's willingness to pay rises with the pace of the frontier. <strong>That inverts the usual relationship between a startup and the labs</strong>, and it is the only structure we have found where faster model progress is good for the vendor.</p>
+<p><strong>In regulated industries the contract is the compliance record.</strong> <a href="https://www.dfs.ny.gov/industry-guidance/circular-letters/cl2024-07" rel="nofollow">New York's Insurance Circular Letter No. 7 (2024)</a> says insurers <em>"may not rely solely on a third-party's claim of non-discrimination,"</em> must hold audit rights, and <strong>"may not rely on the proprietary nature of a third-party vendor's algorithmic processes."</strong> <a href="https://willkie.com/publications/2023/09/colorado-adopts-life-insurer-ai-governance-and-risk-management-regulation" rel="nofollow">Colorado's Regulation 10-1-1</a> requires a documented process for selecting third-party data and model vendors. The <a href="https://www.fenwick.com/insights/publications/naic-expands-ai-systems-evaluation-tool-pilot-program-to-12-states-key-updates-for-insurers-and-ai-vendors-supporting-insurers" rel="nofollow">NAIC is piloting an AI evaluation tool with twelve states</a> and is weighing a registry of third-party data and model vendors. A readable logical program, a contract and a certificate are what those rules ask for. <strong>That makes the contract a line item somebody is already obliged to fund.</strong> <a href="https://www.ycombinator.com/rfs#own-your-intelligence" rel="nofollow">YC's entry</a> points at the same place: <em>"This matters most in regulated industries, where strict data governance and locked-down infrastructure make renting even more expensive for the performance they get."</em></p>
+<h2 id="10-it-survives-the-dwarkesh-scenario">10. It survives the Dwarkesh scenario</h2>
+<p><a href="https://www.dwarkesh.com/p/rsi" rel="nofollow">Dwarkesh's</a> mechanism is that AI compounds <strong>in verifiable domains</strong>, and he concedes the boundary himself: <em>"some parts of AI research are, in fact, less verifiable than math. That's why OpenAI hasn't fired all of its researchers."</em></p>
+<p>Run that forward. If capability races ahead wherever work can be checked, then <strong>the bottleneck migrates to making work checkable</strong>, and a written logical program with a contract is exactly that. Better models make the physical plan cheaper and better; they do not write down an insurer's deductible rules or decide what error rate it will accept. <a href="https://lilianweng.github.io/posts/2026-07-04-harness/" rel="nofollow">Weng's survey</a> makes the same point from the research side: it ranks weak and fuzzy evaluators first among open challenges and, summarising <a href="https://arxiv.org/abs/2604.25850" rel="nofollow">Agentic Harness Engineering</a>, notes that <em>"the bottlenecks of harness evolution are around observability."</em></p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Survives</th>
+<th>Does not</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The customer's logic and definition of correct, which are statements of policy and liability, not facts a model can supply</td>
+<td>Anything premised on a current model deficiency: long-document recall collapse, zero grounding scores, confidence miscalibration</td>
+</tr>
+<tr>
+<td>Provenance and audit, because the regulator's question does not go away when the model improves</td>
+<td>A per-call prompt optimiser, which is already free</td>
+</tr>
+<tr>
+<td>Regulated deployment, where the constraint is legal rather than technical</td>
+<td>A tuned harness, which ports across models but not across tasks</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="11-what-this-means-for-the-two-proposals">11. What this means for the two proposals</h2>
+<p><strong>The <a href="https://docs.google.com/document/d/1oFSQLz90hI7KfftF83iG9k0SZuUzS4NuA-QDX1lDddY/edit?tab=t.n3sqk179n4r4#bookmark=id.w5y2mk66jz6l" rel="nofollow">Problem-to-Outcome platform</a> searches the physical layer without a logical program.</strong> It asks for a problem statement, data and success criteria, and searches over approaches. In this frame the problem statement is too thin to search against: the business logic, the step specifications and the invariants are missing, and so is anything the customer keeps afterwards. Its machinery and market analysis carry over; its input has to become a logical program and a contract.</p>
+<p><strong><a href="https://docs.google.com/presentation/d/1K6LaC6kUmjF2Rri2xPohHmgQxyQvrseak3mfxdKVFLc/edit" rel="nofollow">Optimus</a> has the right shape.</strong> Its sketch is a logical program and its compile step is a physical planner. What it lacks is what section 4 says is hard: quality estimation, error propagation through the logic, and a certificate. Two changes follow. It should emit plain code, not code for agent frameworks: <a href="https://arxiv.org/abs/2609.00006" rel="nofollow">an audit of eleven production harnesses</a> found none that imports one. And it should compete on the quality model, not the compiler, because the compile step is occupied by four papers (<a href="https://arxiv.org/abs/2605.13647" rel="nofollow">FlowCompile</a>, <a href="https://arxiv.org/abs/2604.13092" rel="nofollow">PlanCompiler</a>, <a href="https://arxiv.org/abs/2604.05150" rel="nofollow">Compiled AI</a>, <a href="https://arxiv.org/abs/2605.22502" rel="nofollow">workflows compiled into weights</a>) and a funded company, XY.AI Labs.</p>
+<p><strong>The synthesis is Optimus's shape with the Problem-to-Outcome platform's search, plus authoring and a certificate.</strong></p>
+<h2 id="12-what-would-kill-it">12. What would kill it</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Risk</th>
+<th>Why it is live</th>
+<th>What would settle it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Customers will not write logical programs</strong></td>
+<td>It is real work, and the reason enterprises buy software is to avoid it</td>
+<td>Time for an engineer or product manager to write one with our tooling, on the first engagement. If it is weeks, the tooling is the product to fix</td>
+</tr>
+<tr>
+<td><strong>Enterprises will not label</strong></td>
+<td>The contract needs a trusted held-out set, and the thing that makes the asset uncopiable is the same thing that makes it hard to obtain</td>
+<td>The first engagement. Instrumentation needs no labels, so this can be tested before committing</td>
+</tr>
+<tr>
+<td><strong>Quality estimation costs too much</strong></td>
+<td>Every candidate plan must be scored; without cheap estimation the search is unaffordable</td>
+<td>Evaluation spend per certified plan, against the savings the plan delivers</td>
+</tr>
+<tr>
+<td><strong>Certification costs too many labels</strong></td>
+<td>About 3/ε held-out items per certified slice: 300 at 1% error, 3,000 at 0.1% (section 5.3)</td>
+<td>Whether invariants carry part of the proof on the first program, and the label count actually needed</td>
+</tr>
+<tr>
+<td><strong>The optimiser learns the judge, not the task</strong></td>
+<td>Synthetic data and model judges are the search signal; loops are near-blind to their own regressions</td>
+<td>The gap between judge-scored and human-scored quality on the held-out set, tracked on every run</td>
+</tr>
+<tr>
+<td><strong>Programs do not share parts</strong></td>
+<td>Tuned harnesses barely transfer across tasks; logical programs may not either</td>
+<td>Engineer-days to a certified program for programs 1, 3 and 10 at one customer (section 6.3)</td>
+</tr>
+<tr>
+<td><strong>The labs ship it</strong></td>
+<td>Anthropic already has an <a href="https://platform.claude.com/docs/en/managed-agents/define-outcomes" rel="nofollow">"Outcomes"</a> primitive: target result, rubric, grader, iterate</td>
+<td>Whether a lab will hold a customer's <em>private</em> business logic, and whether a regulated buyer would let it</td>
+</tr>
+<tr>
+<td><strong>A platform owner closes the loop first</strong></td>
+<td>Palantir AIP Evolve already runs it inside Palantir's own platform; G5's founders built the research optimiser</td>
+<td>Whether either ships a program-level statistical certificate that works outside its own platform</td>
+</tr>
+<tr>
+<td><strong>It becomes free tooling</strong></td>
+<td>A <a href="https://arxiv.org/abs/2604.08988" rel="nofollow">benchmark for the measurement gap</a> now exists, a <a href="https://arxiv.org/abs/2604.08224" rel="nofollow">twenty-author survey</a> has written the research agenda, and <a href="https://www.ycombinator.com/rfs#own-your-intelligence" rel="nofollow">YC is advertising the category</a>
+</td>
+<td>Assume a window of well under eighteen months</td>
+</tr>
+<tr>
+<td><strong>Outcome pricing is unadoptable</strong></td>
+<td>In customer support, the one category where it exists, <a href="https://decagon.ai/resources/pricing-ai-agents" rel="nofollow">Decagon reports</a> that most customers choose per-conversation over per-resolution pricing</td>
+<td>The first three pricing conversations</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="13-what-to-do-next">13. What to do next</h2>
+<ol>
+<li>
+<strong>Pick one program with known outcomes.</strong> Claims, loan decisions or reviewed documents, where past cases have adjudicated results. Batch, not agentic.</li>
+<li>
+<strong>Instrument the current process before changing it.</strong> No labels needed, and it produces numbers the customer does not have.</li>
+<li>
+<strong>Write the logical program with the customer's engineers and product managers</strong>, from their procedures, code and experts. Time it. This is the first product test.</li>
+<li>
+<strong>Build the contract</strong>: a held-out set, invariants at each step, calibrated judges, error costs. The optimiser never sees the gate.</li>
+<li>
+<strong>Plan, certify and deploy.</strong> Compare cost, latency and quality with the customer's current implementation.</li>
+<li>
+<strong>Prove re-planning twice</strong>: once on a model swap, once on a business-rule change. Show the program re-certifies with little engineering. <strong>That demonstration is the pitch.</strong>
+</li>
+<li>
+<strong>Do the second and third programs at the same customer</strong>, and measure the scale curve. If engineer-days do not fall, this is a services firm.</li>
+<li>
+<strong>Then price on the outcome</strong>, because by then you can adjudicate correctness and they cannot.</li>
+</ol>
+<p><strong>One question this note does not answer</strong>: whether a company is the right vehicle, as against building this inside an organisation that already has the programs, the liability and the buyers. Everything above argues the thesis is sound. None of it argues that a startup is the best way to express it.</p>
+<h2 id="notes-on-evidence">Notes on evidence</h2>
+<ul>
+<li>
+<strong>The logical/physical framing is an argument, not a finding.</strong> It is borrowed from database systems and supported by the published optimisers in section 7, but no study has measured an enterprise program optimised this way end to end.</li>
+<li>
+<strong>The half-life table is assembled from published harness research</strong> rather than measured directly. The model-change and task-change figures come from a single paper (<a href="https://arxiv.org/abs/2604.25850" rel="nofollow">Agentic Harness Engineering</a>) on a small number of benchmarks.</li>
+<li>
+<strong>The three loops are arguments, not findings.</strong> The inputs are evidenced (no outcome pricing in this category, the regulatory language, the model-release cadence), but the conclusion that they compound is reasoning.</li>
+<li>
+<strong>The absence of outcome pricing is a negative finding</strong> from our own review of roughly sixty vendors' published pricing pages and terms in November 2026. It may miss private contracts. Decagon's customer preference is vendor-reported.</li>
+<li>
+<strong>"Customers will write logical programs" and "enterprises will label" are the assumptions everything rests on</strong>, and both are untested here.</li>
+<li>
+<strong>Section 7's table was checked against primary sources on 14 November 2026</strong>: the papers on PVLDB, CIDR and arXiv, and vendor documentation. The Abacus figures (6.7–39.4% better quality, 10.8× cheaper, 3.4× faster than the next-best system) are from its third arXiv version and are author-reported. Extend's and Palantir's capabilities are vendor-reported from their own docs; AIP Evolve's docs give no date or release status. The Anthropic Outcomes launch date is from secondary sources only.</li>
+<li>
+<strong>Ziniu Wu as G5 co-founder</strong> is confirmed by his own conference biography. The link between G5 and Palimpzest is lineage (same group, same advisers) and nothing more; no public statement connects the products.</li>
+<li>
+<strong>Section 8 rests on</strong> Databricks' documentation and its archived snapshots, TensorZero's blog, repository and founder posts on Hacker News, Zenbase's YC record and archived site, and the syftr paper, SDK changelog and docs. Zenbase's funding and pivot date rest on an aggregator and archive snapshots; the Zenbase CEO's move rests on a profile headline alone. These sources do not support common accounts that syftr was never productised or that TensorZero shut down silently.</li>
+<li>
+<strong>The 3/ε label count is arithmetic</strong> (the rule of three for zero observed failures at 95% confidence), not a measured figure. It is a lower bound.</li>
+<li>No 2026 startup was found pitching exactly "business program plus constraints in, optimised and certified plan out." That is a search result, not proof of absence.</li>
+<li>The Dwarkesh essay is one writer's forecast with a stated 25% chance of being wrong by several years. It is used here only for its mechanism, that capability compounds where work is checkable, which is independently supported by the harness research cited above.</li>
+</ul>
+<h2 id="sources">Sources</h2>
+<p><strong>The two proposals</strong></p>
+<ul>
+<li>
+<a href="https://docs.google.com/document/d/1oFSQLz90hI7KfftF83iG9k0SZuUzS4NuA-QDX1lDddY/edit?tab=t.n3sqk179n4r4#bookmark=id.w5y2mk66jz6l" rel="nofollow">Problem-to-Outcome AI Platform</a> · <a href="https://docs.google.com/presentation/d/1K6LaC6kUmjF2Rri2xPohHmgQxyQvrseak3mfxdKVFLc/edit" rel="nofollow">Optimus</a>
+</li>
+</ul>
+<p><strong>What prompted this</strong></p>
+<ul>
+<li>
+<a href="https://www.ycombinator.com/rfs#own-your-intelligence" rel="nofollow">Y Combinator, Requests for Startups, Winter 2027: "Own Your Intelligence"</a>, by Jon Xu</li>
+<li>
+<a href="https://www.dwarkesh.com/p/rsi" rel="nofollow">Dwarkesh Patel, "The avalanche that hit math is coming for AI development"</a>, 13 November 2026</li>
+</ul>
+<p><strong>Optimising programs of model calls</strong></p>
+<ul>
+<li>
+<a href="https://vldb.org/cidrdb/2025/palimpzest-optimizing-ai-powered-analytics-with-declarative-query-processing.html" rel="nofollow">Palimpzest: Optimizing AI-Powered Analytics with Declarative Query Processing</a> (CIDR 2025) · <a href="https://github.com/mitdbg/palimpzest">code and optimisation policies</a>
+</li>
+<li>
+<a href="https://arxiv.org/abs/2505.14661" rel="nofollow">Abacus: a cost-based optimizer for semantic operator systems</a> (PVLDB 19, 2026)</li>
+<li>
+<a href="https://www.vldb.org/pvldb/vol18/p3035-shankar.pdf" rel="nofollow">DocETL: agentic query rewriting and evaluation for complex document processing</a> (PVLDB 18, 2025)</li>
+<li>
+<a href="https://www.vldb.org/pvldb/vol18/p4171-patel.pdf" rel="nofollow">Semantic operators and their optimization in LOTUS</a> (PVLDB 18, 2025)</li>
+<li>
+<a href="https://arxiv.org/abs/2310.03714" rel="nofollow">DSPy</a> · <a href="https://iclr.cc/virtual/2026/oral/10009494" rel="nofollow">GEPA, ICLR 2026 oral</a>
+</li>
+<li>
+<a href="https://arxiv.org/abs/2406.07496" rel="nofollow">TextGrad</a> · <a href="https://arxiv.org/abs/2406.16218" rel="nofollow">Trace</a> · <a href="https://arxiv.org/abs/2305.05176" rel="nofollow">FrugalGPT</a>
+</li>
+<li>
+<a href="https://arxiv.org/abs/2410.10762" rel="nofollow">AFlow</a> · <a href="https://iclr.cc/virtual/2025/poster/28073" rel="nofollow">ADAS</a>
+</li>
+<li>Compile route: <a href="https://arxiv.org/abs/2605.13647" rel="nofollow">FlowCompile</a> · <a href="https://arxiv.org/abs/2604.13092" rel="nofollow">PlanCompiler</a> · <a href="https://arxiv.org/abs/2604.05150" rel="nofollow">Compiled AI</a> · <a href="https://arxiv.org/abs/2605.22502" rel="nofollow">Compiling Agentic Workflows into LLM Weights</a>
+</li>
+</ul>
+<p><strong>Harness research</strong></p>
+<ul>
+<li>
+<a href="https://arxiv.org/abs/2604.25850" rel="nofollow">Agentic Harness Engineering</a>: model-change and task-change transfer, regression prediction</li>
+<li>
+<a href="https://arxiv.org/abs/2605.30621" rel="nofollow">Harness Updating Is Not Harness Benefit</a>: skill-load rate and adherence drift</li>
+<li>
+<a href="https://arxiv.org/abs/2610.21412" rel="nofollow">JevAgentHarness</a>: the fitted acceptance threshold</li>
+<li>
+<a href="https://lilianweng.github.io/posts/2026-07-04-harness/" rel="nofollow">Lilian Weng, "Harness Engineering for Self-Improvement"</a>, July 2026: the evaluator outside the loop, and weak evaluators as the first open challenge</li>
+<li>
+<a href="https://arxiv.org/abs/2604.08988" rel="nofollow">SEA-Eval</a>: the benchmark for the measurement gap · <a href="https://arxiv.org/abs/2604.08224" rel="nofollow">Externalization in LLM Agents</a>: the twenty-author survey</li>
+<li><a href="https://arxiv.org/abs/2609.00006" rel="nofollow">Harness Engineering: A Source-Code Study of Eleven Systems</a></li>
+</ul>
+<p><strong>Companies and products, read 14 November 2026</strong></p>
+<ul>
+<li>
+<a href="https://g5labs.ai/" rel="nofollow">G5 Labs</a> · <a href="https://event.technologyreview.com/emtech-ai-2026/speaker/2196230/ziniu-wu" rel="nofollow">Ziniu Wu, EmTech AI 2026 speaker biography</a>
+</li>
+<li>
+<a href="https://palantir.com/docs/foundry/aip-evolve/overview/" rel="nofollow">Palantir AIP Evolve</a> · <a href="https://www.extend.ai/resources/product-launch-composer" rel="nofollow">Extend Composer</a> · <a href="https://platform.claude.com/docs/en/managed-agents/define-outcomes" rel="nofollow">Anthropic Managed Agents: outcomes</a>
+</li>
+<li>
+<a href="https://learn.microsoft.com/en-us/azure/databricks/agents/concepts/" rel="nofollow">Databricks: what is Agent Bricks</a> · <a href="https://learn.microsoft.com/en-us/azure/databricks/agents/legacy/" rel="nofollow">legacy agent offerings</a>
+</li>
+<li>
+<a href="https://www.sixfold.ai/" rel="nofollow">Sixfold</a> · <a href="https://www.vals.ai/blog/series-a" rel="nofollow">Vals AI, Series A</a> · <a href="https://decagon.ai/resources/pricing-ai-agents" rel="nofollow">Decagon on pricing AI agents</a>
+</li>
+</ul>
+<p><strong>The earlier attempts (section 8), read 14 November 2026</strong></p>
+<ul>
+<li>Databricks: <a href="https://www.databricks.com/company/newsroom/press-releases/databricks-launches-agent-bricks-new-approach-building-ai-agents" rel="nofollow">Agent Bricks launch press release</a> · <a href="https://databricks.com/blog/introducing-agent-bricks" rel="nofollow">launch blog</a> · <a href="https://learn.microsoft.com/en-us/azure/databricks/agents/agent-bricks/custom-llm" rel="nofollow">Custom LLM documentation</a> · <a href="https://web.archive.org/web/20260419015631/https://docs.databricks.com/aws/en/generative-ai/agent-bricks/custom-llm" rel="nofollow">archived page, April 2026</a> · <a href="https://docs.databricks.com/aws/en/release-notes/product/2026/march" rel="nofollow">March 2026 release notes</a> · <a href="https://docs.databricks.com/aws/en/release-notes/product/2026/october" rel="nofollow">October 2026 release notes</a>
+</li>
+<li>TensorZero: <a href="https://www.tensorzero.com/blog/tensorzero-raises-7-3m-seed-round-to-build-an-open-source-stack-for-industrial-grade-llm-applications/" rel="nofollow">seed announcement</a> · <a href="https://www.tensorzero.com/blog/automated-ai-engineer/" rel="nofollow">Autopilot announcement</a> · <a href="https://github.com/tensorzero/tensorzero">repository</a> · founder's wind-down posts: <a href="https://news.ycombinator.com/item?id=48518120" rel="nofollow">decision</a>, <a href="https://news.ycombinator.com/item?id=48518491" rel="nofollow">capital returned</a>, <a href="https://news.ycombinator.com/item?id=48518624" rel="nofollow">usage</a>, <a href="https://news.ycombinator.com/item?id=48518798" rel="nofollow">reason</a>
+</li>
+<li>Zenbase: <a href="https://www.ycombinator.com/companies/the-synthesis-company" rel="nofollow">YC company record</a> · <a href="https://github.com/zenbase-ai/core">library</a> · <a href="https://web.archive.org/web/20250916223701/https://zenbase.ai/" rel="nofollow">archived site, September 2025</a> · <a href="https://www.thesynthesis.company/" rel="nofollow">The Synthesis Company</a>
+</li>
+<li>DataRobot syftr: <a href="https://arxiv.org/abs/2505.20266" rel="nofollow">paper</a> (<a href="https://proceedings.mlr.press/v293/conway25a.html" rel="nofollow">AutoML 2025</a>) · <a href="https://github.com/datarobot/syftr">repository</a> · <a href="https://datarobot-public-api-client.readthedocs-hosted.com/en/latest-release/CHANGES.html" rel="nofollow">SDK changelog</a> · <a href="https://docs.datarobot.com/en/docs/api/reference/sdk/gen-syftr-search.html" rel="nofollow">Generative Syftr search docs</a> · <a href="https://www.datarobot.com/blog/a-decade-of-open-source-at-datarobot-from-predictive-ai-to-the-agent-lifecycle/" rel="nofollow">September 2026 blog</a>
+</li>
+<li>
+<a href="https://news.ycombinator.com/item?id=47490365" rel="nofollow">Hacker News: "If DSPy is so great, why isn't anyone using it?"</a>, 23 March 2026</li>
+</ul>
+</main></div>
+<footer><div class="wrap">
+  <p>Optimus &middot; a research catalog of workflow, harness and program optimisation for AI, kept by Haixun Wang.</p>
+  <p>Facts are labelled by source: author-reported, vendor-reported, independent, press or estimate. &ldquo;Our take&rdquo; notes are opinions. Built 2026-11-17. <a href="../">haixun.github.io</a></p>
+</div></footer>
+</body>
+</html>

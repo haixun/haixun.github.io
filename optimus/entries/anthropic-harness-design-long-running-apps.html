@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Builds a planner-generator-evaluator harness for multi-hour autonomous app building, with an evaluator that tests the running app via Playwright against negotiated crite…">
+<title>Anthropic: Harness design for long-running application development · Optimus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<nav class="topbar"><div class="wrap">
+  <a href="../index.html">&larr; Optimus</a>
+  <span class="crumb"><a href="../articles.html">Articles</a> &middot; <b>Anthropic: Harness design for long-running application development</b></span>
+  <span class="navlinks"><a href="../browse.html">Browse</a><a href="../owning-the-intelligence.html">Essay</a><a href="../landscape.html">Map</a></span>
+</div></nav>
+<header class="mast"><div class="wrap">
+<p class="kicker">Article &middot; 2026-03-24 &middot; Anthropic</p>
+<h1>Anthropic: Harness design for long-running application development</h1>
+<p class="entry-meta"><span class="badge ev">vendor-reported</span></p>
+<p class="chips"><a class="chip chip-optimises" href="../topics/optimises--harness-code.html" title="What it optimises">harness-code</a><a class="chip chip-optimises" href="../topics/optimises--structure.html" title="What it optimises">structure</a><a class="chip chip-optimises" href="../topics/optimises--evaluator.html" title="What it optimises">evaluator</a><a class="chip chip-route" href="../topics/route--manual.html" title="How">manual</a><a class="chip chip-certifies" href="../topics/certifies--estimate.html" title="What certifies the result">estimate</a><a class="chip chip-domain" href="../topics/domain--code.html" title="Domain">code</a><a class="chip chip-topics" href="../topics/topics--harness-engineering.html" title="Topics">harness-engineering</a><a class="chip chip-topics" href="../topics/topics--cost-quality.html" title="Topics">cost-quality</a><a class="chip chip-topics" href="../topics/topics--evaluation.html" title="Topics">evaluation</a></p>
+</div></header>
+<div class="wrap"><main class="doc entry">
+<p class="links"><a href="https://www.anthropic.com/engineering/harness-design-long-running-apps">anthropic.com/engineering/harness-design-long-running-apps</a></p>
+<p class="people"><span class="lbl">People</span> Prithvi Rajasekaran</p>
+<h2>Summary</h2><p>Builds a planner-generator-evaluator harness for multi-hour autonomous app building, with an evaluator that tests the running app via Playwright against negotiated criteria. Shows components (context resets, sprints) becoming unnecessary as models improved, and recommends removing one component at a time to find what is load-bearing.</p>
+<h2>Our take</h2><blockquote><p>The best first-party evidence that harness components have a half-life tied to model generations, which is why the physical plan must be regenerated rather than owned.</p></blockquote>
+<h2>Key numbers</h2><ul><li>Solo run 20 min, $9, broken result vs full harness 6 hr, $200 (vendor-reported)</li><li>V2 harness on Opus 4.6: 3 hr 50 min, $124.70 (vendor-reported)</li></ul>
+<h2>Relations</h2><ul class="relations"><li><span class="rel">authored by team of</span> <a href="../entries/anthropic.html">Anthropic</a></li><li><span class="rel">discusses</span> <a href="../entries/anthropic-outcomes.html">Claude Managed Agents: outcomes</a> <span class="rnote">same separate-evaluator pattern, later productised</span></li></ul>
+<h2>Related by tags</h2><ul class="related"><li><a href="../entries/anthropic-effective-harnesses-long-running.html">Anthropic: Effective harnesses for long-running agents</a> <span class="tp">article</span></li><li><a href="../entries/cognition-dont-build-multi-agents.html">Cognition: Don&#x27;t Build Multi-Agents</a> <span class="tp">article</span></li><li><a href="../entries/openai-harness-engineering.html">OpenAI: Harness engineering: leveraging Codex in an agent-first world</a> <span class="tp">article</span></li><li><a href="../entries/swe-bench-verified.html">SWE-bench Verified</a> <span class="tp">benchmark</span></li><li><a href="../entries/agentic-harness-engineering.html">Agentic Harness Engineering: Observability-Driven Automatic Evolution of Coding-Agent Harnesses</a> <span class="tp">paper</span></li><li><a href="../entries/factory.html">Factory</a> <span class="tp">company</span></li></ul>
+<p class="stamp">Added 2026-11-17 &middot; last checked against the source 2026-11-17</p>
+</main></div>
+<footer><div class="wrap">
+  <p>Optimus &middot; a research catalog of workflow, harness and program optimisation for AI, kept by Haixun Wang.</p>
+  <p>Facts are labelled by source: author-reported, vendor-reported, independent, press or estimate. &ldquo;Our take&rdquo; notes are opinions. Built 2026-11-17. <a href="../../">haixun.github.io</a></p>
+</div></footer>
+</body>
+</html>

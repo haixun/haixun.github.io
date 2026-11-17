@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Delegates an agent&#x27;s multiple-choice decisions (which tool, which arguments, whether to stop) to a small decision model when its confidence exceeds a threshold fitted on…">
+<title>JevAgentHarness: Benchmarking, Deploying and Training Decision Models That Share Control with LLMs · Optimus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<nav class="topbar"><div class="wrap">
+  <a href="../index.html">&larr; Optimus</a>
+  <span class="crumb"><a href="../papers.html">Papers</a> &middot; <b>JevAgentHarness: Benchmarking, Deploying and Training Decision Models That Share Control with LLMs</b></span>
+  <span class="navlinks"><a href="../browse.html">Browse</a><a href="../owning-the-intelligence.html">Essay</a><a href="../landscape.html">Map</a></span>
+</div></nav>
+<header class="mast"><div class="wrap">
+<p class="kicker">Paper &middot; 2026-10-15 &middot; UIUC; Princeton; Google</p>
+<h1>JevAgentHarness: Benchmarking, Deploying and Training Decision Models That Share Control with LLMs</h1>
+<p class="entry-meta"><span class="badge ev">author-reported</span></p>
+<p class="chips"><a class="chip chip-optimises" href="../topics/optimises--physical-plan.html" title="What it optimises">physical-plan</a><a class="chip chip-optimises" href="../topics/optimises--weights.html" title="What it optimises">weights</a><a class="chip chip-route" href="../topics/route--search.html" title="How">search</a><a class="chip chip-route" href="../topics/route--weight-update.html" title="How">weight-update</a><a class="chip chip-certifies" href="../topics/certifies--estimate.html" title="What certifies the result">estimate</a><a class="chip chip-domain" href="../topics/domain--general.html" title="Domain">general</a><a class="chip chip-domain" href="../topics/domain--code.html" title="Domain">code</a><a class="chip chip-topics" href="../topics/topics--cascades-routing.html" title="Topics">cascades-routing</a><a class="chip chip-topics" href="../topics/topics--calibration.html" title="Topics">calibration</a><a class="chip chip-topics" href="../topics/topics--evaluation.html" title="Topics">evaluation</a><a class="chip chip-topics" href="../topics/topics--cost-quality.html" title="Topics">cost-quality</a></p>
+</div></header>
+<div class="wrap"><main class="doc entry">
+<p class="links"><a href="https://arxiv.org/abs/2610.21412">arxiv.org/abs/2610.21412</a><br>code: <a href="https://github.com/JevAgentHarness/JevAgentHarness">github.com/JevAgentHarness/JevAgentHarness</a></p>
+<p class="people"><span class="lbl">People</span> Kunlun Zhu, Tao Feng, Xu Han, Heng Wang, Ling Yang, Xiangru Tang, Jiaxuan You, Heng Ji</p>
+<h2>Summary</h2><p>Delegates an agent&#x27;s multiple-choice decisions (which tool, which arguments, whether to stop) to a small decision model when its confidence exceeds a threshold fitted on the agent&#x27;s own trajectories, leaving the LLM to decide below it. Introduces AgentDecisionBench and DecisionGym, trains AgentDecision-4B on states after mistakes, and evaluates with pre-registered non-inferiority tests and Holm correction.</p>
+<h2>Our take</h2><blockquote><p>The strongest evidence we have that the acceptance rule, not the component, is where value sits: isolated accuracy misranks models and a refitted threshold is worth 21.5 points. It is a cascade with calibration done properly, in the harness.</p></blockquote>
+<h2>Key numbers</h2><ul><li>Spread across models: 5.1 pts isolated, 19.7 step-level, 57.5 task-level, with ordering inverted (author-reported)</li><li>Fixed 0.5 threshold −21.5 pts; delegating every tool choice −19.0 pts; fitted threshold +0.0 pts with 14.2% cost saved (author-reported)</li><li>81.6% per-decision accuracy yielded 3.0% task success vs 88.0% for the LLM alone until the threshold was refitted (author-reported)</li><li>81.1–89.0% cheaper and up to 2.5× faster on in-distribution tasks without losing 3+ points (author-reported)</li><li>Step-level accuracy on recorded runs ranks models with Kendall 0.84 against task success (author-reported)</li></ul>
+<h2>Related by tags</h2><ul class="related"><li><a href="../entries/automix.html">AutoMix: Automatically Mixing Language Models</a> <span class="tp">paper</span></li><li><a href="../entries/cascade-routing.html">A Unified Approach to Routing and Cascading for LLMs</a> <span class="tp">paper</span></li><li><a href="../entries/frugalgpt.html">FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance</a> <span class="tp">paper</span></li><li><a href="../entries/hybrid-llm.html">Hybrid LLM: Cost-Efficient and Quality-Aware Query Routing</a> <span class="tp">paper</span></li><li><a href="../entries/llmselector.html">Optimizing Model Selection for Compound AI Systems (LLMSelector)</a> <span class="tp">paper</span></li><li><a href="../entries/routellm.html">RouteLLM: Learning to Route LLMs with Preference Data</a> <span class="tp">paper</span></li></ul>
+<h2>Discussed in</h2><p><a href="../owning-the-intelligence.html">Owning the Intelligence</a></p>
+<p class="stamp">Added 2026-11-17 &middot; last checked against the source 2026-11-17</p>
+</main></div>
+<footer><div class="wrap">
+  <p>Optimus &middot; a research catalog of workflow, harness and program optimisation for AI, kept by Haixun Wang.</p>
+  <p>Facts are labelled by source: author-reported, vendor-reported, independent, press or estimate. &ldquo;Our take&rdquo; notes are opinions. Built 2026-11-17. <a href="../../">haixun.github.io</a></p>
+</div></footer>
+</body>
+</html>

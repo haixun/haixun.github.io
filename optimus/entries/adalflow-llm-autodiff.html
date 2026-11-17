@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Extends textual-gradient prompt optimisation to multi-component, possibly cyclic LLM graphs with functional nodes such as retrieval, implemented in the AdalFlow library.">
+<title>LLM-AutoDiff: Auto-Differentiate Any LLM Workflow · Optimus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<nav class="topbar"><div class="wrap">
+  <a href="../index.html">&larr; Optimus</a>
+  <span class="crumb"><a href="../papers.html">Papers</a> &middot; <b>LLM-AutoDiff: Auto-Differentiate Any LLM Workflow</b></span>
+  <span class="navlinks"><a href="../browse.html">Browse</a><a href="../owning-the-intelligence.html">Essay</a><a href="../landscape.html">Map</a></span>
+</div></nav>
+<header class="mast"><div class="wrap">
+<p class="kicker">Paper &middot; 2025-01-28 &middot; SylphAI (AdalFlow), UT Austin</p>
+<h1>LLM-AutoDiff: Auto-Differentiate Any LLM Workflow</h1>
+<p class="entry-meta"><span class="badge ev">author-reported</span></p>
+<p class="chips"><a class="chip chip-optimises" href="../topics/optimises--prompt.html" title="What it optimises">prompt</a><a class="chip chip-optimises" href="../topics/optimises--examples.html" title="What it optimises">examples</a><a class="chip chip-route" href="../topics/route--credit-assignment.html" title="How">credit-assignment</a><a class="chip chip-certifies" href="../topics/certifies--metric.html" title="What certifies the result">metric</a><a class="chip chip-domain" href="../topics/domain--general.html" title="Domain">general</a><a class="chip chip-topics" href="../topics/topics--prompt-optimisation.html" title="Topics">prompt-optimisation</a></p>
+</div></header>
+<div class="wrap"><main class="doc entry">
+<p class="links"><a href="https://arxiv.org/abs/2501.16673">arxiv.org/abs/2501.16673</a><br>code: <a href="https://github.com/SylphAI-Inc/AdalFlow">github.com/SylphAI-Inc/AdalFlow</a></p>
+<p class="people"><span class="lbl">People</span> Li Yin, Zhangyang Wang</p>
+<h2>Summary</h2><p>Extends textual-gradient prompt optimisation to multi-component, possibly cyclic LLM graphs with functional nodes such as retrieval, implemented in the AdalFlow library. A frozen backward-engine LLM produces feedback for each trainable textual parameter, sub-prompts are isolated, and gradients are computed selectively on error-prone samples.</p>
+<h2>Our take</h2><blockquote><p>TextGrad made practical for pipelines with loops; the same limitation of unverified textual gradients, in a small vendor&#x27;s library.</p></blockquote>
+<h2>Relations</h2><ul class="relations"><li><span class="rel">builds on</span> <a href="../entries/textgrad.html">TextGrad: Automatic &quot;Differentiation&quot; via Text</a></li><li><span class="rel">compares against</span> <a href="../entries/textgrad.html">TextGrad: Automatic &quot;Differentiation&quot; via Text</a></li></ul>
+<h2>Related by tags</h2><ul class="related"><li><a href="../entries/miprov2.html">Optimizing Instructions and Demonstrations for Multi-Stage Language Model Programs</a> <span class="tp">paper</span></li><li><a href="../entries/protegi.html">Automatic Prompt Optimization with &quot;Gradient Descent&quot; and Beam Search (ProTeGi)</a> <span class="tp">paper</span></li><li><a href="../entries/gepa.html">GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning</a> <span class="tp">paper</span></li><li><a href="../entries/textgrad.html">TextGrad: Automatic &quot;Differentiation&quot; via Text</a> <span class="tp">paper</span></li><li><a href="../entries/hn-why-isnt-anyone-using-dspy.html">Hacker News: If DSPy is so great, why isn&#x27;t anyone using it?</a> <span class="tp">article</span></li><li><a href="../entries/trace.html">Trace is the Next AutoDiff: Generative Optimization with Rich Feedback, Execution Traces, and LLMs</a> <span class="tp">paper</span></li></ul>
+<p class="stamp">Added 2026-11-17 &middot; last checked against the source 2026-11-17</p>
+</main></div>
+<footer><div class="wrap">
+  <p>Optimus &middot; a research catalog of workflow, harness and program optimisation for AI, kept by Haixun Wang.</p>
+  <p>Facts are labelled by source: author-reported, vendor-reported, independent, press or estimate. &ldquo;Our take&rdquo; notes are opinions. Built 2026-11-17. <a href="../../">haixun.github.io</a></p>
+</div></footer>
+</body>
+</html>

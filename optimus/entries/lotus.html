@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Defines semantic operators (filter, join, group-by, top-k and aggregation with natural-language criteria) as a formalism whose reference semantics is a gold algorithm, a…">
+<title>Semantic Operators: A Declarative Model for Rich, AI-based Data Processing (LOTUS) · Optimus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<nav class="topbar"><div class="wrap">
+  <a href="../index.html">&larr; Optimus</a>
+  <span class="crumb"><a href="../papers.html">Papers</a> &middot; <b>Semantic Operators: A Declarative Model for Rich, AI-based Data Processing (LOTUS)</b></span>
+  <span class="navlinks"><a href="../browse.html">Browse</a><a href="../owning-the-intelligence.html">Essay</a><a href="../landscape.html">Map</a></span>
+</div></nav>
+<header class="mast"><div class="wrap">
+<p class="kicker">Paper &middot; 2024-07-16 &middot; Stanford, UC Berkeley &middot; PVLDB 18, 2025</p>
+<h1>Semantic Operators: A Declarative Model for Rich, AI-based Data Processing (LOTUS)</h1>
+<p class="entry-meta"><span class="badge ev">author-reported</span></p>
+<p class="chips"><a class="chip chip-optimises" href="../topics/optimises--physical-plan.html" title="What it optimises">physical-plan</a><a class="chip chip-route" href="../topics/route--rewrite.html" title="How">rewrite</a><a class="chip chip-route" href="../topics/route--search.html" title="How">search</a><a class="chip chip-certifies" href="../topics/certifies--statistical-guarantee.html" title="What certifies the result">statistical-guarantee</a><a class="chip chip-domain" href="../topics/domain--data-analytics.html" title="Domain">data-analytics</a><a class="chip chip-domain" href="../topics/domain--documents.html" title="Domain">documents</a><a class="chip chip-topics" href="../topics/topics--semantic-operators.html" title="Topics">semantic-operators</a><a class="chip chip-topics" href="../topics/topics--cost-quality.html" title="Topics">cost-quality</a><a class="chip chip-topics" href="../topics/topics--cascades-routing.html" title="Topics">cascades-routing</a></p>
+</div></header>
+<div class="wrap"><main class="doc entry">
+<p class="links"><a href="https://arxiv.org/abs/2407.11418">arxiv.org/abs/2407.11418</a><br>pvldb: <a href="https://www.vldb.org/pvldb/vol18/p4171-patel.pdf">vldb.org/pvldb/vol18/p4171-patel.pdf</a><br>code: <a href="https://github.com/lotus-data/lotus">github.com/lotus-data/lotus</a></p>
+<p class="people"><span class="lbl">People</span> Liana Patel, Siddharth Jha, Melissa Pan, Harshit Gupta, Parth Asawa, Carlos Guestrin, Matei Zaharia</p>
+<h2>Summary</h2><p>Defines semantic operators (filter, join, group-by, top-k and aggregation with natural-language criteria) as a formalism whose reference semantics is a gold algorithm, and an optimiser that substitutes cheaper plans such as model cascades and embedding proxies while giving accuracy guarantees relative to that gold algorithm. Implemented in the open-source LOTUS system.</p>
+<h2>Our take</h2><blockquote><p>The semantic-operator system that states a guarantee, but relative to an expensive LLM &#x27;gold algorithm&#x27;, not to ground truth; the certificate we want is against the customer&#x27;s labels and contract.</p></blockquote>
+<h2>Key numbers</h2><ul><li>Semantic filter, join, group-by and top-k accelerated by up to 1,000x (author-reported)</li><li>Up to 170% higher quality than recent LLM analytic systems; up to 3.6x faster than the highest-quality baselines (author-reported)</li></ul>
+<h2>Relations</h2><ul class="relations"><li><span class="rel">competes with</span> <a href="../entries/palimpzest.html">Palimpzest: Optimizing AI-Powered Analytics with Declarative Query Processing</a></li><li><a href="../entries/docetl.html">DocETL: Agentic Query Rewriting and Evaluation for Complex Document Processing</a> <span class="rel">competes with</span> this</li><li><a href="../entries/thalamusdb.html">ThalamusDB: Approximate Query Processing on Multi-Modal Data</a> <span class="rel">competes with</span> this</li><li><a href="../entries/bargain.html">Cut Costs, Not Accuracy: LLM-Powered Data Processing with Guarantees (BARGAIN)</a> <span class="rel">competes with</span> this <span class="rnote">Both cascade with accuracy guarantees</span></li><li><a href="../entries/sembench.html">SemBench: A Benchmark for Semantic Query Processing Engines</a> <span class="rel">compares against</span> this</li></ul>
+<h2>Related by tags</h2><ul class="related"><li><a href="../entries/bargain.html">Cut Costs, Not Accuracy: LLM-Powered Data Processing with Guarantees (BARGAIN)</a> <span class="tp">paper</span></li><li><a href="../entries/abacus.html">Abacus: A Cost-Based Optimizer for Semantic Operator Systems</a> <span class="tp">paper</span></li><li><a href="../entries/palimpzest.html">Palimpzest: Optimizing AI-Powered Analytics with Declarative Query Processing</a> <span class="tp">paper</span></li><li><a href="../entries/llm-queries-relational-workloads.html">Optimizing LLM Queries in Relational Data Analytics Workloads</a> <span class="tp">paper</span></li><li><a href="../entries/thalamusdb.html">ThalamusDB: Approximate Query Processing on Multi-Modal Data</a> <span class="tp">paper</span></li><li><a href="../entries/docetl.html">DocETL: Agentic Query Rewriting and Evaluation for Complex Document Processing</a> <span class="tp">paper</span></li></ul>
+<h2>Discussed in</h2><p><a href="../owning-the-intelligence.html">Owning the Intelligence</a></p>
+<p class="stamp">Added 2026-11-17 &middot; last checked against the source 2026-11-17</p>
+</main></div>
+<footer><div class="wrap">
+  <p>Optimus &middot; a research catalog of workflow, harness and program optimisation for AI, kept by Haixun Wang.</p>
+  <p>Facts are labelled by source: author-reported, vendor-reported, independent, press or estimate. &ldquo;Our take&rdquo; notes are opinions. Built 2026-11-17. <a href="../../">haixun.github.io</a></p>
+</div></footer>
+</body>
+</html>

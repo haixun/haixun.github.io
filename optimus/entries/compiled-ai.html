@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="A company systems paper: LLMs generate code artifacts at compile time, after which orchestration runs deterministically, and semantic steps become bounded LLM tool calls…">
+<title>Compiled AI: Deterministic Code Generation for LLM-Based Workflow Automation · Optimus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<nav class="topbar"><div class="wrap">
+  <a href="../index.html">&larr; Optimus</a>
+  <span class="crumb"><a href="../papers.html">Papers</a> &middot; <b>Compiled AI: Deterministic Code Generation for LLM-Based Workflow Automation</b></span>
+  <span class="navlinks"><a href="../browse.html">Browse</a><a href="../owning-the-intelligence.html">Essay</a><a href="../landscape.html">Map</a></span>
+</div></nav>
+<header class="mast"><div class="wrap">
+<p class="kicker">Paper &middot; 2026-04-06 &middot; XY.AI Labs, with Stanford Medicine, Cornell and Brigham and Women&#x27;s / Harvard Medical School</p>
+<h1>Compiled AI: Deterministic Code Generation for LLM-Based Workflow Automation</h1>
+<p class="entry-meta"><span class="badge ev">author-reported</span></p>
+<p class="chips"><a class="chip chip-optimises" href="../topics/optimises--structure.html" title="What it optimises">structure</a><a class="chip chip-optimises" href="../topics/optimises--physical-plan.html" title="What it optimises">physical-plan</a><a class="chip chip-route" href="../topics/route--compile.html" title="How">compile</a><a class="chip chip-certifies" href="../topics/certifies--metric.html" title="What certifies the result">metric</a><a class="chip chip-domain" href="../topics/domain--biomedical.html" title="Domain">biomedical</a><a class="chip chip-domain" href="../topics/domain--documents.html" title="Domain">documents</a><a class="chip chip-domain" href="../topics/domain--enterprise-workflow.html" title="Domain">enterprise-workflow</a><a class="chip chip-topics" href="../topics/topics--workflow-compilation.html" title="Topics">workflow-compilation</a><a class="chip chip-topics" href="../topics/topics--cost-quality.html" title="Topics">cost-quality</a></p>
+</div></header>
+<div class="wrap"><main class="doc entry">
+<p class="links"><a href="https://arxiv.org/abs/2604.05150">arxiv.org/abs/2604.05150</a><br>code: <a href="https://github.com/XY-Corp/Compiled-AI">github.com/XY-Corp/Compiled-AI</a></p>
+<p class="people"><span class="lbl">People</span> Geert Trooskens, Aaron Karlsberg, Anmol Sharma, Lamara De Brouwer, Max Van Puyvelde, Matthew Young, John Thickstun, Gil Alterovitz, Walter A. De Brouwer</p>
+<h2>Summary</h2><p>A company systems paper: LLMs generate code artifacts at compile time, after which orchestration runs deterministically, and semantic steps become bounded LLM tool calls whose schema and trigger are fixed at compile time (the &#x27;Code Factory&#x27; variant). Evaluated on BFCL function calling (n=400) and DocILE invoices (n=5,680), with a released 540-specification benchmark suite, targeting healthcare administrative workflows such as prior authorisation.</p>
+<h2>Our take</h2><blockquote><p>The closest commercial statement of our thesis, from a funded company in the same first market. Its limitations section names bounded-tool-call drift monitoring and continuous re-optimisation as unbuilt future work, which is both validation and a sign it is a race.</p></blockquote>
+<h2>Key numbers</h2><ul><li>96% task completion on BFCL with zero execution tokens; break-even with runtime inference at ~17 transactions; 57× fewer tokens at 1,000 transactions (author-reported)</li><li>DocILE: Code Factory KILE 80.0% (matching Direct LLM) and LIR 80.4% (best), at 2,695 ms against 6,339 ms for Direct LLM (author-reported)</li><li>Pure deterministic regex: 20.3% KILE (author-reported)</li><li>TCO at 1M transactions/month $555 against $22,000 (author-reported)</li><li>4% compilation failure (16/400 BFCL); generated code cyclomatic complexity 23.8 against 8 for human code (author-reported)</li></ul>
+<h2>Relations</h2><ul class="relations"><li><span class="rel">authored by team of</span> <a href="../entries/xy-ai-labs.html">XY.AI Labs</a></li><li><span class="rel">cites</span> <a href="../entries/dspy.html">DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines</a> <span class="rnote">Named as an antecedent in declarative pipeline optimisation</span></li><li><span class="rel">compares against</span> <a href="../entries/langchain.html">LangChain</a> <span class="rnote">LangChain and AutoGen runtime baselines on DocILE</span></li><li><a href="../entries/xy-ai-labs.html">XY.AI Labs</a> <span class="rel">authored by team of</span> this <span class="rnote">reverse direction recorded on the paper: XY.AI Labs is the first affiliation</span></li></ul>
+<h2>Related by tags</h2><ul class="related"><li><a href="../entries/xy-ai-labs.html">XY.AI Labs</a> <span class="tp">company</span></li><li><a href="../entries/flowcompile.html">FlowCompile: An Optimizing Compiler for Structured LLM Workflows</a> <span class="tp">paper</span></li><li><a href="../entries/plancompiler.html">PlanCompiler: A Deterministic Compilation Architecture for Structured Multi-Step LLM Pipelines</a> <span class="tp">paper</span></li><li><a href="../entries/syftr.html">syftr: Pareto-Optimal Generative AI</a> <span class="tp">paper</span></li><li><a href="../entries/datarobot.html">DataRobot</a> <span class="tp">company</span></li><li><a href="../entries/deep-research-analytics-runtime.html">Deep Research is the New Analytics System: Towards Building the Runtime for AI-Driven Analytics</a> <span class="tp">paper</span></li></ul>
+<h2>Discussed in</h2><p><a href="../owning-the-intelligence.html">Owning the Intelligence</a></p>
+<p class="stamp">Added 2026-11-17 &middot; last checked against the source 2026-11-17</p>
+</main></div>
+<footer><div class="wrap">
+  <p>Optimus &middot; a research catalog of workflow, harness and program optimisation for AI, kept by Haixun Wang.</p>
+  <p>Facts are labelled by source: author-reported, vendor-reported, independent, press or estimate. &ldquo;Our take&rdquo; notes are opinions. Built 2026-11-17. <a href="../../">haixun.github.io</a></p>
+</div></footer>
+</body>
+</html>

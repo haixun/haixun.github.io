@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="A closed loop that evolves coding-agent harness components (tools, middleware, memory, system prompt) with three observability pillars: file-level components, a distille…">
+<title>Agentic Harness Engineering: Observability-Driven Automatic Evolution of Coding-Agent Harnesses · Optimus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<nav class="topbar"><div class="wrap">
+  <a href="../index.html">&larr; Optimus</a>
+  <span class="crumb"><a href="../papers.html">Papers</a> &middot; <b>Agentic Harness Engineering: Observability-Driven Automatic Evolution of Coding-Agent Harnesses</b></span>
+  <span class="navlinks"><a href="../browse.html">Browse</a><a href="../owning-the-intelligence.html">Essay</a><a href="../landscape.html">Map</a></span>
+</div></nav>
+<header class="mast"><div class="wrap">
+<p class="kicker">Paper &middot; 2026-04-28 &middot; Fudan University; Peking University; Shanghai Qiji Zhifeng</p>
+<h1>Agentic Harness Engineering: Observability-Driven Automatic Evolution of Coding-Agent Harnesses</h1>
+<p class="entry-meta"><span class="badge ev">author-reported</span></p>
+<p class="chips"><a class="chip chip-optimises" href="../topics/optimises--harness-code.html" title="What it optimises">harness-code</a><a class="chip chip-optimises" href="../topics/optimises--context.html" title="What it optimises">context</a><a class="chip chip-route" href="../topics/route--search.html" title="How">search</a><a class="chip chip-certifies" href="../topics/certifies--metric.html" title="What certifies the result">metric</a><a class="chip chip-domain" href="../topics/domain--code.html" title="Domain">code</a><a class="chip chip-topics" href="../topics/topics--harness-engineering.html" title="Topics">harness-engineering</a><a class="chip chip-topics" href="../topics/topics--self-improvement.html" title="Topics">self-improvement</a><a class="chip chip-topics" href="../topics/topics--evaluation.html" title="Topics">evaluation</a></p>
+</div></header>
+<div class="wrap"><main class="doc entry">
+<p class="links"><a href="https://arxiv.org/abs/2604.25850">arxiv.org/abs/2604.25850</a><br>code: <a href="https://github.com/china-qijizhifeng/agentic-harness-engineering">github.com/china-qijizhifeng/agentic-harness-engineering</a></p>
+<p class="people"><span class="lbl">People</span> Jiahang Lin, Shichun Liu, Chengjun Pan, Lizhi Lin, Shihan Dou, Zhiheng Xi, Xuanjing Huang, Hang Yan, Zhenhua Han, Tao Gui, Yu-Gang Jiang</p>
+<h2>Summary</h2><p>A closed loop that evolves coding-agent harness components (tools, middleware, memory, system prompt) with three observability pillars: file-level components, a distilled evidence corpus from trajectories, and a self-declared prediction per edit checked against the next round. Ten iterations on Terminal-Bench 2 with GPT-5.4, then frozen and transferred to other models and to SWE-bench Verified.</p>
+<h2>Our take</h2><blockquote><p>The source of the half-life numbers in our argument: harnesses port across models but barely across tasks, and the loop is near-blind to its own regressions. The paper most invested in self-evolution supplies the best case for an independent acceptance gate.</p></blockquote>
+<h2>Key numbers</h2><ul><li>Terminal-Bench 2 pass@1 69.7% → 77.0% over ten iterations, above Codex at 71.9% (author-reported)</li><li>Frozen harness on SWE-bench Verified: 75.6% vs 75.2% seed (+0.4 pp over 500 tasks), regressing on 3 of 7 repositories; 12% fewer tokens (author-reported)</li><li>Cross-model on the same benchmark: +2.3 to +10.1 pp (author-reported)</li><li>Regression prediction precision 11.8% against a 5.6% baseline; fix prediction 33.7% against 6.5% (author-reported)</li><li>System prompt alone regresses (67.4% vs 69.7% seed); memory alone beats full AHE on the Hard tier (63.3% vs 53.3%) (author-reported)</li></ul>
+<h2>Relations</h2><ul class="relations"><li><span class="rel">compares against</span> <a href="../entries/ace-context-engineering.html">Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models</a></li><li><span class="rel">uses</span> <a href="../entries/swe-bench-verified.html">SWE-bench Verified</a> <span class="rnote">Cross-benchmark transfer test</span></li><li><a href="../entries/weng-harness-engineering.html">Harness Engineering for Self-Improvement</a> <span class="rel">discusses</span> this</li></ul>
+<h2>Related by tags</h2><ul class="related"><li><a href="../entries/harness-updating-not-benefit.html">Harness Updating Is Not Harness Benefit: Disentangling Evolution Capabilities in Self-Evolving LLM Agents</a> <span class="tp">paper</span></li><li><a href="../entries/darwin-godel-machine.html">Darwin Gödel Machine: Open-Ended Evolution of Self-Improving Agents</a> <span class="tp">paper</span></li><li><a href="../entries/demoevolve.html">DemoEvolve: Demonstration-Guided Harness Evolution under Sparse Feedback</a> <span class="tp">paper</span></li><li><a href="../entries/self-harness.html">Self-Harness: Harnesses That Improve Themselves</a> <span class="tp">paper</span></li><li><a href="../entries/meta-harness.html">Meta-Harness: End-to-End Optimization of Model Harnesses</a> <span class="tp">paper</span></li><li><a href="../entries/memevolve.html">MemEvolve: Meta-Evolution of Agent Memory Systems</a> <span class="tp">paper</span></li></ul>
+<h2>Discussed in</h2><p><a href="../owning-the-intelligence.html">Owning the Intelligence</a></p>
+<p class="stamp">Added 2026-11-17 &middot; last checked against the source 2026-11-17</p>
+</main></div>
+<footer><div class="wrap">
+  <p>Optimus &middot; a research catalog of workflow, harness and program optimisation for AI, kept by Haixun Wang.</p>
+  <p>Facts are labelled by source: author-reported, vendor-reported, independent, press or estimate. &ldquo;Our take&rdquo; notes are opinions. Built 2026-11-17. <a href="../../">haixun.github.io</a></p>
+</div></footer>
+</body>
+</html>

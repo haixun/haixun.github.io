@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Compiles a procedural workflow into the weights of a small fully fine-tuned model instead of running an external orchestrator.">
+<title>Compiling Agentic Workflows into LLM Weights: Near-Frontier Quality at Two Orders of Magnitude Less Cost · Optimus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<nav class="topbar"><div class="wrap">
+  <a href="../index.html">&larr; Optimus</a>
+  <span class="crumb"><a href="../papers.html">Papers</a> &middot; <b>Compiling Agentic Workflows into LLM Weights: Near-Frontier Quality at Two Orders of Magnitude Less Cost</b></span>
+  <span class="navlinks"><a href="../browse.html">Browse</a><a href="../owning-the-intelligence.html">Essay</a><a href="../landscape.html">Map</a></span>
+</div></nav>
+<header class="mast"><div class="wrap">
+<p class="kicker">Paper &middot; 2026-05-21 &middot; i14; University of Melbourne</p>
+<h1>Compiling Agentic Workflows into LLM Weights: Near-Frontier Quality at Two Orders of Magnitude Less Cost</h1>
+<p class="entry-meta"><span class="badge ev">author-reported</span></p>
+<p class="chips"><a class="chip chip-optimises" href="../topics/optimises--weights.html" title="What it optimises">weights</a><a class="chip chip-route" href="../topics/route--compile.html" title="How">compile</a><a class="chip chip-route" href="../topics/route--weight-update.html" title="How">weight-update</a><a class="chip chip-certifies" href="../topics/certifies--estimate.html" title="What certifies the result">estimate</a><a class="chip chip-domain" href="../topics/domain--enterprise-workflow.html" title="Domain">enterprise-workflow</a><a class="chip chip-topics" href="../topics/topics--workflow-compilation.html" title="Topics">workflow-compilation</a><a class="chip chip-topics" href="../topics/topics--fine-tuning.html" title="Topics">fine-tuning</a><a class="chip chip-topics" href="../topics/topics--cost-quality.html" title="Topics">cost-quality</a></p>
+</div></header>
+<div class="wrap"><main class="doc entry">
+<p class="links"><a href="https://arxiv.org/abs/2605.22502">arxiv.org/abs/2605.22502</a></p>
+<p class="people"><span class="lbl">People</span> Simon Dennis, Rivaan Patil, Kevin Shabahang, Hao Guo</p>
+<h2>Summary</h2><p>Compiles a procedural workflow into the weights of a small fully fine-tuned model instead of running an external orchestrator. Tested on travel booking (14 nodes), Zoom support (14 nodes) and insurance claims (55 nodes, 6 decision hubs), n=200 per condition, judged by two LLM judges with Wilcoxon, bootstrap CIs and Holm correction; it reproduces the finding that procedure-in-prompt dominates LangGraph-style orchestration.</p>
+<h2>Our take</h2><blockquote><p>The most dangerous paper for anything that emits an orchestration layer, and a demonstration of the comparator problem: the ranking between systems moves when the judge changes from Claude to GPT-4.1. Weights are a legitimate physical-plan target for stable procedures.</p></blockquote>
+<h2>Key numbers</h2><ul><li>128–462× lower cost per conversation; $50–80 one-time setup (author-reported)</li><li>Failure rate compiled vs LangGraph orchestrator: travel 5.5% vs 24.0%, insurance 9.0% vs 17.0%, Zoom 11.0% vs 9.0% (author-reported)</li><li>Insurance per-conversation cost: $0.327 in-context, $0.174 orchestrated, $0.0007 compiled (author-reported)</li><li>Orchestration frameworks exceed 290,000 GitHub stars combined (author-reported)</li></ul>
+<h2>Relations</h2><ul class="relations"><li><span class="rel">compares against</span> <a href="../entries/langchain.html">LangChain</a> <span class="rnote">LangGraph orchestrator baseline</span></li></ul>
+<h2>Related by tags</h2><ul class="related"><li><a href="../entries/baseten.html">Baseten</a> <span class="tp">company</span></li><li><a href="../entries/modal.html">Modal</a> <span class="tp">company</span></li><li><a href="../entries/nebius.html">Nebius</a> <span class="tp">company</span></li><li><a href="../entries/together-ai.html">Together AI</a> <span class="tp">company</span></li><li><a href="../entries/unsloth.html">Unsloth</a> <span class="tp">company</span></li><li><a href="../entries/yc-own-your-intelligence.html">YC Requests for Startups: Own Your Intelligence</a> <span class="tp">article</span></li></ul>
+<h2>Discussed in</h2><p><a href="../owning-the-intelligence.html">Owning the Intelligence</a></p>
+<p class="stamp">Added 2026-11-17 &middot; last checked against the source 2026-11-17</p>
+</main></div>
+<footer><div class="wrap">
+  <p>Optimus &middot; a research catalog of workflow, harness and program optimisation for AI, kept by Haixun Wang.</p>
+  <p>Facts are labelled by source: author-reported, vendor-reported, independent, press or estimate. &ldquo;Our take&rdquo; notes are opinions. Built 2026-11-17. <a href="../../">haixun.github.io</a></p>
+</div></footer>
+</body>
+</html>

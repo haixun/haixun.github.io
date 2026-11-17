@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="A PyTorch-style framework that backpropagates natural-language feedback from LLMs through a computation graph of compound-system components (prompts, code, molecules, tr…">
+<title>TextGrad: Automatic &quot;Differentiation&quot; via Text · Optimus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<nav class="topbar"><div class="wrap">
+  <a href="../index.html">&larr; Optimus</a>
+  <span class="crumb"><a href="../papers.html">Papers</a> &middot; <b>TextGrad: Automatic &quot;Differentiation&quot; via Text</b></span>
+  <span class="navlinks"><a href="../browse.html">Browse</a><a href="../owning-the-intelligence.html">Essay</a><a href="../landscape.html">Map</a></span>
+</div></nav>
+<header class="mast"><div class="wrap">
+<p class="kicker">Paper &middot; 2024-06-11 &middot; Stanford &middot; Nature, 2025</p>
+<h1>TextGrad: Automatic &quot;Differentiation&quot; via Text</h1>
+<p class="entry-meta"><span class="badge ev">author-reported</span></p>
+<p class="chips"><a class="chip chip-optimises" href="../topics/optimises--prompt.html" title="What it optimises">prompt</a><a class="chip chip-optimises" href="../topics/optimises--harness-code.html" title="What it optimises">harness-code</a><a class="chip chip-route" href="../topics/route--credit-assignment.html" title="How">credit-assignment</a><a class="chip chip-certifies" href="../topics/certifies--metric.html" title="What certifies the result">metric</a><a class="chip chip-domain" href="../topics/domain--general.html" title="Domain">general</a><a class="chip chip-domain" href="../topics/domain--science.html" title="Domain">science</a><a class="chip chip-topics" href="../topics/topics--prompt-optimisation.html" title="Topics">prompt-optimisation</a></p>
+</div></header>
+<div class="wrap"><main class="doc entry">
+<p class="links"><a href="https://arxiv.org/abs/2406.07496">arxiv.org/abs/2406.07496</a><br>code: <a href="https://github.com/zou-group/textgrad">github.com/zou-group/textgrad</a></p>
+<p class="people"><span class="lbl">People</span> Mert Yuksekgonul, Federico Bianchi, Joseph Boen, Sheng Liu, Zhi Huang, Carlos Guestrin, James Zou</p>
+<h2>Summary</h2><p>A PyTorch-style framework that backpropagates natural-language feedback from LLMs through a computation graph of compound-system components (prompts, code, molecules, treatment plans) and uses it to update each variable. Users supply only the objective.</p>
+<h2>Our take</h2><blockquote><p>Names the credit-assignment problem for programs of model calls and gives a usable mechanism; its &#x27;gradients&#x27; are unverified LLM opinions, which is why invariants as free intermediate labels matter more for business programs.</p></blockquote>
+<h2>Key numbers</h2><ul><li>GPT-4o zero-shot accuracy on Google-Proof QA from 51% to 55% (author-reported)</li><li>20% relative gain on LeetCode-Hard solutions (author-reported)</li></ul>
+<h2>Relations</h2><ul class="relations"><li><a href="../entries/trace.html">Trace is the Next AutoDiff: Generative Optimization with Rich Feedback, Execution Traces, and LLMs</a> <span class="rel">competes with</span> this</li><li><a href="../entries/adalflow-llm-autodiff.html">LLM-AutoDiff: Auto-Differentiate Any LLM Workflow</a> <span class="rel">builds on</span> this</li><li><a href="../entries/adalflow-llm-autodiff.html">LLM-AutoDiff: Auto-Differentiate Any LLM Workflow</a> <span class="rel">compares against</span> this</li></ul>
+<h2>Related by tags</h2><ul class="related"><li><a href="../entries/trace.html">Trace is the Next AutoDiff: Generative Optimization with Rich Feedback, Execution Traces, and LLMs</a> <span class="tp">paper</span></li><li><a href="../entries/adalflow-llm-autodiff.html">LLM-AutoDiff: Auto-Differentiate Any LLM Workflow</a> <span class="tp">paper</span></li><li><a href="../entries/protegi.html">Automatic Prompt Optimization with &quot;Gradient Descent&quot; and Beam Search (ProTeGi)</a> <span class="tp">paper</span></li><li><a href="../entries/gepa.html">GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning</a> <span class="tp">paper</span></li><li><a href="../entries/ape.html">Large Language Models Are Human-Level Prompt Engineers</a> <span class="tp">paper</span></li><li><a href="../entries/evoprompt.html">EvoPrompt: Connecting LLMs with Evolutionary Algorithms Yields Powerful Prompt Optimizers</a> <span class="tp">paper</span></li></ul>
+<h2>Discussed in</h2><p><a href="../owning-the-intelligence.html">Owning the Intelligence</a></p>
+<p class="stamp">Added 2026-11-17 &middot; last checked against the source 2026-11-17</p>
+</main></div>
+<footer><div class="wrap">
+  <p>Optimus &middot; a research catalog of workflow, harness and program optimisation for AI, kept by Haixun Wang.</p>
+  <p>Facts are labelled by source: author-reported, vendor-reported, independent, press or estimate. &ldquo;Our take&rdquo; notes are opinions. Built 2026-11-17. <a href="../../">haixun.github.io</a></p>
+</div></footer>
+</body>
+</html>
