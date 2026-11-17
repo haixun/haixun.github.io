@@ -270,3 +270,10 @@ p.count{margin:14px 0 8px}
 }
 
 .topbar .wrap{max-width:none;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+
+table.companies{table-layout:fixed}
+table.companies td:last-child,table.companies td:first-child{overflow-wrap:anywhere}
+table.companies td .sub{font-family:var(--mono);font-size:11.5px;color:var(--faint);margin-top:2px}
+table.companies .chip{font-size:10.5px;padding:1px 7px}
+table.companies .badge{font-size:10px;padding:1px 6px;margin-right:0}
+@media (max-width:760px){table.companies{min-width:900px}}

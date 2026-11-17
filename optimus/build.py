@@ -287,13 +287,16 @@ def render_entry(e, entries, incoming):
 
 def list_table(items, entries, up="", company=False):
     if company:
-        head = "<tr><th>Company</th><th>Status</th><th>Layer</th><th>Latest funding</th><th>What it does</th></tr>"
+        head = ("<tr><th>Company</th><th>Status</th><th>Layer</th><th>Latest funding</th><th>What it does</th></tr>")
         rows = []
         for e in sorted(items, key=lambda x: x["name"].lower()):
             f = (e.get("funding") or [{}])[-1]
-            fs = " ".join(x for x in [f.get("amount"), f.get("round"), f.get("date")] if x)
-            rows.append("<tr><td>%s</td><td>%s</td><td>%s</td><td class=\"nowrap\">%s</td><td>%s</td></tr>" % (
-                entry_link(e["id"], entries, up), status_badge(e), chips(e, up, ["layer"]), esc(fs), esc(first_sentence(e.get("summary")))))
+            top = " ".join(x for x in [f.get("amount"), f.get("round")] if x)
+            fs = esc(top) + ('<div class="sub">%s</div>' % esc(f.get("date")) if f.get("date") else "")
+            rows.append("<tr><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>" % (
+                entry_link(e["id"], entries, up), status_badge(e), chips(e, up, ["layer"]), fs, esc(" ".join(str(e.get("summary") or "").split()))))
+        return ('<div class="tablewrap"><table class="list companies"><colgroup><col style="width:13%%"><col style="width:10%%">'
+                '<col style="width:15%%"><col style="width:12%%"><col style="width:50%%"></colgroup><thead>%s</thead><tbody>%s</tbody></table></div>') % (head, "".join(rows))
     else:
         head = "<tr><th>Date</th><th>Name</th><th>Tags</th><th>What it is</th></tr>"
         rows = []
