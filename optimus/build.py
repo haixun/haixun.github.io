@@ -70,7 +70,39 @@ def esc(s):
     return html.escape(str(s or ""), quote=True)
 
 
-def page(title, body, crumb, description="", depth=0, wide=False, home=False):
+NAV = {"types": {}, "themes": {}}
+
+
+def sidebar(up, active):
+    def item(href, label, key, count=None):
+        cls = ' class="on"' if key == active else ""
+        c = '<span class="n">%d</span>' % count if count is not None else ""
+        return '<li><a%s href="%s%s">%s%s</a></li>' % (cls, up, href, label, c)
+    S = ['<aside class="side"><details class="sidebox" open><summary>Menu</summary>',
+         '<a class="brand" href="%sindex.html">Optimus</a>' % up, '<ul>',
+         item("index.html", "Overview", "index"), item("browse.html", "Browse &amp; search", "browse"), '</ul>',
+         '<p class="side-h">Read</p><ul>',
+         item("owning-the-intelligence.html", "Owning the Intelligence", "doc:owning-the-intelligence.html"),
+         item("landscape.html", "The Landscape", "doc:landscape.html"), '</ul>',
+         '<p class="side-h">Catalog</p><ul>']
+    for t, name, f in TYPES:
+        S.append(item(f, name, t, NAV["types"].get(t, 0)))
+    S.append(item("timeline.html", "Timeline", "timeline"))
+    S.append("</ul>")
+    for dim, label in (("topics", "Themes"), ("optimises", "What it optimises"), ("route", "How"), ("layer", "Market layer"), ("certifies", "What certifies"), ("domain", "Domain")):
+        vals = NAV["themes"].get(dim, [])
+        if not vals:
+            continue
+        opened = " open" if (active.startswith("topic:%s--" % dim) or dim == "topics") else ""
+        S.append('<details class="side-group"%s><summary>%s</summary><ul>' % (opened, label))
+        for v, c in vals:
+            S.append(item("topics/%s--%s.html" % (dim, v.replace("/", "-")), esc(v), "topic:%s--%s" % (dim, v), c))
+        S.append("</ul></details>")
+    S.append("</details></aside>")
+    return "\n".join(S)
+
+
+def page(title, body, crumb, description="", depth=0, wide=False, home=False, active=""):
     up = "../" * depth
     return """<!doctype html>
 <html lang="en">
@@ -88,14 +120,20 @@ def page(title, body, crumb, description="", depth=0, wide=False, home=False):
   <span class="crumb">%s</span>
   <span class="navlinks"><a href="%sbrowse.html">Browse</a><a href="%sowning-the-intelligence.html">Essay</a><a href="%slandscape.html">Map</a></span>
 </div></nav>
+<div class="layout">
+%s
+<div class="content">
 %s
 <footer><div class="wrap">
   <p>Optimus &middot; a research catalog of workflow, harness and program optimisation for AI, kept by Haixun Wang.</p>
   <p>Facts are labelled by source: author-reported, vendor-reported, independent, press or estimate. &ldquo;Our take&rdquo; notes are opinions. Built %s. <a href="%s../">haixun.github.io</a></p>
 </div></footer>
+</div>
+</div>
+<script>if(window.matchMedia('(max-width: 900px)').matches){var s=document.querySelector('.sidebox');if(s)s.removeAttribute('open');}</script>
 </body>
 </html>
-""" % (esc(description), esc(title), FONTS, up, ' class="wide"' if wide else "", (up + "../") if home else (up + "index.html"), "&larr; haixun.github.io" if home else "&larr; Optimus", crumb, up, up, up, body,
+""" % (esc(description), esc(title), FONTS, up, ' class="wide"' if wide else "", (up + "../") if home else (up + "index.html"), "&larr; haixun.github.io" if home else "&larr; Optimus", crumb, up, up, up, sidebar(up, active), body,
        date.today().isoformat(), up)
 
 
@@ -240,7 +278,7 @@ def render_entry(e, entries, incoming):
     B.append('<p class="stamp">Added %s &middot; last checked against the source %s</p>' % (esc(e.get("added")), esc(e.get("checked"))))
     B.append("</main></div>")
     return page(e["name"] + " · Optimus", "\n".join(B), '<a href="../%s">%s</a> &middot; <b>%s</b>' % (TYPE_PAGE[e["type"]], TYPE_TITLE[e["type"]], esc(e["name"])),
-                first_sentence(e.get("summary")), depth=1)
+                first_sentence(e.get("summary")), depth=1, active=e["type"])
 
 
 # ---------------- list pages ----------------
@@ -268,7 +306,7 @@ def render_type(t, items, entries):
     body = ('<header class="mast"><div class="wrap"><p class="kicker">Catalog</p><h1>%s</h1>'
             '<p class="lede">%d entries. <a href="browse.html#type=%s">Filter and search them</a>.</p></div></header>'
             '<div class="wrap"><main class="doc">%s</main></div>') % (TYPE_TITLE[t], len(items), t, list_table(items, entries, "", t == "company"))
-    return page(TYPE_TITLE[t] + " · Optimus", body, "<b>%s</b>" % TYPE_TITLE[t], "%s in the Optimus catalog" % TYPE_TITLE[t], wide=True)
+    return page(TYPE_TITLE[t] + " · Optimus", body, "<b>%s</b>" % TYPE_TITLE[t], "%s in the Optimus catalog" % TYPE_TITLE[t], wide=True, active=t)
 
 
 def render_topic(tax, dim, v, items, entries):
@@ -283,7 +321,7 @@ def render_topic(tax, dim, v, items, entries):
     body = ('<header class="mast"><div class="wrap"><p class="kicker">%s</p><h1>%s</h1><p class="lede">%s</p>'
             '<p class="lede small">%d entries. <a href="../browse.html#%s=%s">Combine with other filters</a>.</p></div></header>'
             '<div class="wrap"><main class="doc">%s</main></div>') % (esc(DIM_LABEL[dim]), esc(v), esc(desc), len(items), dim, esc(v), "".join(parts))
-    return page("%s: %s · Optimus" % (DIM_LABEL[dim], v), body, "%s &middot; <b>%s</b>" % (esc(DIM_LABEL[dim]), esc(v)), desc, depth=1, wide=True)
+    return page("%s: %s · Optimus" % (DIM_LABEL[dim], v), body, "%s &middot; <b>%s</b>" % (esc(DIM_LABEL[dim]), esc(v)), desc, depth=1, wide=True, active="topic:%s--%s" % (dim, v))
 
 
 def render_timeline(entries):
@@ -298,7 +336,7 @@ def render_timeline(entries):
         parts.append('<h2>%s <span class="count">%d</span></h2><ul class="timeline">%s</ul>' % (esc(y), len(by[y]), lis))
     body = ('<header class="mast"><div class="wrap"><p class="kicker">Catalog</p><h1>Timeline</h1>'
             '<p class="lede">How the field moved, newest first.</p></div></header><div class="wrap"><main class="doc">%s</main></div>') % "".join(parts)
-    return page("Timeline · Optimus", body, "<b>Timeline</b>", "The optimisation-space catalog by date")
+    return page("Timeline · Optimus", body, "<b>Timeline</b>", "The optimisation-space catalog by date", active="timeline")
 
 
 # ---------------- browse (client-side filters) ----------------
@@ -370,7 +408,7 @@ def render_browse(entries):
             '<a href="timeline.html">timeline</a> pages work without it.</p></noscript></main></div>'
             '<script id="data" type="application/json">%s</script><script>%s</script>') % (
         selects, json.dumps(data, ensure_ascii=False).replace("</", "<\\/"), BROWSE_JS)
-    return page("Browse · Optimus", body, "<b>Browse</b>", "Search and filter the Optimus catalog")
+    return page("Browse · Optimus", body, "<b>Browse</b>", "Search and filter the Optimus catalog", active="browse")
 
 
 # ---------------- index ----------------
@@ -442,7 +480,7 @@ attempts at &ldquo;describe the task, we optimise it&rdquo;.</p>
 <p class="more"><a href="timeline.html">Full timeline &rarr;</a></p>
 </div>""" % (len(entries), counts, grid_html, "".join(topics), recent_html)
     return page("Optimus: optimising AI programs", body, "<b>Optimus</b>",
-                "A research catalog of workflow, harness and program optimisation for AI: companies, papers, products, articles and benchmarks.", home=True)
+                "A research catalog of workflow, harness and program optimisation for AI: companies, papers, products, articles and benchmarks.", home=True, active="index")
 
 
 # ---------------- essays ----------------
@@ -515,7 +553,7 @@ def render_doc(src, fn, out, kicker, short):
     toc_html = '<nav class="toc"><h2>Contents</h2><ol class="plain">%s</ol></nav>' % "".join(toc) if len(toc) > 2 else ""
     page_body = ('<header class="mast"><div class="wrap"><p class="kicker">%s</p><h1>%s</h1><p class="standfirst">%s</p></div></header>'
                  '<div class="wrap">%s<main class="doc">%s</main></div>') % (kicker, esc(title), standfirst, toc_html, body)
-    write(out, page(title + " · Optimus", page_body, "%s &middot; <b>%s</b>" % (kicker, esc(short)), re.sub(r"<[^>]+>", "", standfirst)[:300]))
+    write(out, page(title + " · Optimus", page_body, "%s &middot; <b>%s</b>" % (kicker, esc(short)), re.sub(r"<[^>]+>", "", standfirst)[:300], active="doc:" + out))
 
 
 # ---------------- main ----------------
@@ -537,6 +575,10 @@ def main():
         for dim, vals in (e.get("tags") or {}).items():
             for v in vals:
                 tag_index[(dim, v)].append(e)
+    NAV["types"] = {t: len(v) for t, v in by_type.items()}
+    for dim in ("topics", "optimises", "route", "layer", "certifies", "domain"):
+        NAV["themes"][dim] = [(v, len(tag_index[(dim, v)])) for v in tax["tags"][dim]
+                              if not v.startswith("_") and v not in ("none", "n/a") and tag_index.get((dim, v))]
     for sub in ("entries", "topics"):
         d = os.path.join(HERE, sub)
         if os.path.isdir(d):
