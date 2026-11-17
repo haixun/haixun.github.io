@@ -71,12 +71,14 @@ def esc(s):
 
 
 NAV = {"types": {}, "themes": {}}
+import hashlib
+CSS_VERSION = hashlib.sha1(open(os.path.join(HERE, "style.css"), "rb").read()).hexdigest()[:8]
 
 
 def sidebar(up, active):
     def item(href, label, key, count=None):
         cls = ' class="on"' if key == active else ""
-        c = '<span class="n">%d</span>' % count if count is not None else ""
+        c = ' <span class="n">(%d)</span>' % count if count is not None else ""
         return '<li><a%s href="%s%s">%s%s</a></li>' % (cls, up, href, label, c)
     S = ['<aside class="side"><details class="sidebox" open><summary>Menu</summary>',
          '<a class="brand" href="%sindex.html">Optimus</a>' % up, '<ul>',
@@ -112,7 +114,7 @@ def page(title, body, crumb, description="", depth=0, wide=False, home=False, ac
 <meta name="description" content="%s">
 <title>%s</title>
 %s
-<link rel="stylesheet" href="%sstyle.css">
+<link rel="stylesheet" href="%sstyle.css?v=%s">
 </head>
 <body%s>
 <nav class="topbar"><div class="wrap">
@@ -130,10 +132,10 @@ def page(title, body, crumb, description="", depth=0, wide=False, home=False, ac
 </div></footer>
 </div>
 </div>
-<script>if(window.matchMedia('(max-width: 900px)').matches){var s=document.querySelector('.sidebox');if(s)s.removeAttribute('open');}</script>
+<script>if(window.matchMedia('(max-width: 760px)').matches){var s=document.querySelector('.sidebox');if(s)s.removeAttribute('open');}</script>
 </body>
 </html>
-""" % (esc(description), esc(title), FONTS, up, ' class="wide"' if wide else "", (up + "../") if home else (up + "index.html"), "&larr; haixun.github.io" if home else "&larr; Optimus", crumb, up, up, up, sidebar(up, active), body,
+""" % (esc(description), esc(title), FONTS, up, CSS_VERSION, ' class="wide"' if wide else "", (up + "../") if home else (up + "index.html"), "&larr; haixun.github.io" if home else "&larr; Optimus", crumb, up, up, up, sidebar(up, active), body,
        date.today().isoformat(), up)
 
 
