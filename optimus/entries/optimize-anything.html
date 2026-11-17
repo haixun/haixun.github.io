@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Generalises GEPA into one API that optimises any text artifact against a scoring function, with single-task search, multi-task search with cross-problem transfer, and ge…">
+<title>optimize_anything: A Universal API for Optimizing any Text Parameter · Optimus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../style.css?v=98a06d24">
+</head>
+<body>
+<nav class="topbar"><div class="wrap">
+  <a href="../index.html">&larr; Optimus</a>
+  <span class="crumb"><a href="../papers.html">Papers</a> &middot; <b>optimize_anything: A Universal API for Optimizing any Text Parameter</b></span>
+  <span class="navlinks"><a href="../browse.html">Browse</a><a href="../owning-the-intelligence.html">Essay</a><a href="../landscape.html">Map</a></span>
+</div></nav>
+<div class="layout">
+<aside class="side"><details class="sidebox" open><summary>Menu</summary>
+<a class="brand" href="../index.html">Optimus</a>
+<ul>
+<li><a href="../index.html">Overview</a></li>
+<li><a href="../whats-new.html">What&rsquo;s new</a></li>
+<li><a href="../browse.html">Browse &amp; search</a></li>
+</ul>
+<p class="side-h">Read</p><ul>
+<li><a href="../owning-the-intelligence.html">Owning the Intelligence</a></li>
+<li><a href="../landscape.html">The Landscape</a></li>
+</ul>
+<p class="side-h">Catalog</p><ul>
+<li><a class="on" href="../papers.html">Papers <span class="n">(85)</span></a></li>
+<li><a href="../companies.html">Companies <span class="n">(75)</span></a></li>
+<li><a href="../products.html">Products <span class="n">(13)</span></a></li>
+<li><a href="../articles.html">Articles <span class="n">(27)</span></a></li>
+<li><a href="../benchmarks.html">Benchmarks <span class="n">(6)</span></a></li>
+<li><a href="../timeline.html">Timeline</a></li>
+</ul>
+<details class="side-group" open><summary>Themes</summary><ul>
+<li><a href="../topics/topics--harness-engineering.html">harness-engineering <span class="n">(50)</span></a></li>
+<li><a href="../topics/topics--semantic-operators.html">semantic-operators <span class="n">(11)</span></a></li>
+<li><a href="../topics/topics--prompt-optimisation.html">prompt-optimisation <span class="n">(43)</span></a></li>
+<li><a href="../topics/topics--workflow-search.html">workflow-search <span class="n">(19)</span></a></li>
+<li><a href="../topics/topics--workflow-compilation.html">workflow-compilation <span class="n">(15)</span></a></li>
+<li><a href="../topics/topics--self-improvement.html">self-improvement <span class="n">(49)</span></a></li>
+<li><a href="../topics/topics--cost-quality.html">cost-quality <span class="n">(63)</span></a></li>
+<li><a href="../topics/topics--cascades-routing.html">cascades-routing <span class="n">(13)</span></a></li>
+<li><a href="../topics/topics--evaluation.html">evaluation <span class="n">(56)</span></a></li>
+<li><a href="../topics/topics--calibration.html">calibration <span class="n">(6)</span></a></li>
+<li><a href="../topics/topics--llmops.html">llmops <span class="n">(13)</span></a></li>
+<li><a href="../topics/topics--fine-tuning.html">fine-tuning <span class="n">(47)</span></a></li>
+<li><a href="../topics/topics--graveyard.html">graveyard <span class="n">(16)</span></a></li>
+<li><a href="../topics/topics--ownership.html">ownership <span class="n">(23)</span></a></li>
+<li><a href="../topics/topics--agents-in-production.html">agents-in-production <span class="n">(41)</span></a></li>
+<li><a href="../topics/topics--survey.html">survey <span class="n">(2)</span></a></li>
+<li><a href="../topics/topics--forward-deployed.html">forward-deployed <span class="n">(5)</span></a></li>
+<li><a href="../topics/topics--simulation.html">simulation <span class="n">(2)</span></a></li>
+<li><a href="../topics/topics--continual-learning.html">continual-learning <span class="n">(2)</span></a></li>
+</ul></details>
+<details class="side-group"><summary>What it optimises</summary><ul>
+<li><a href="../topics/optimises--prompt.html">prompt <span class="n">(61)</span></a></li>
+<li><a href="../topics/optimises--examples.html">examples <span class="n">(5)</span></a></li>
+<li><a href="../topics/optimises--context.html">context <span class="n">(27)</span></a></li>
+<li><a href="../topics/optimises--structure.html">structure <span class="n">(29)</span></a></li>
+<li><a href="../topics/optimises--physical-plan.html">physical-plan <span class="n">(47)</span></a></li>
+<li><a href="../topics/optimises--harness-code.html">harness-code <span class="n">(52)</span></a></li>
+<li><a href="../topics/optimises--weights.html">weights <span class="n">(50)</span></a></li>
+<li><a href="../topics/optimises--evaluator.html">evaluator <span class="n">(18)</span></a></li>
+<li><a href="../topics/optimises--algorithm.html">algorithm <span class="n">(4)</span></a></li>
+<li><a href="../topics/optimises--optimiser-code.html">optimiser-code <span class="n">(3)</span></a></li>
+</ul></details>
+<details class="side-group"><summary>How</summary><ul>
+<li><a href="../topics/route--search.html">search <span class="n">(101)</span></a></li>
+<li><a href="../topics/route--compile.html">compile <span class="n">(15)</span></a></li>
+<li><a href="../topics/route--rewrite.html">rewrite <span class="n">(12)</span></a></li>
+<li><a href="../topics/route--weight-update.html">weight-update <span class="n">(50)</span></a></li>
+<li><a href="../topics/route--credit-assignment.html">credit-assignment <span class="n">(7)</span></a></li>
+<li><a href="../topics/route--manual.html">manual <span class="n">(36)</span></a></li>
+<li><a href="../topics/route--inference-time-search.html">inference-time-search <span class="n">(2)</span></a></li>
+</ul></details>
+<details class="side-group"><summary>Market layer</summary><ul>
+<li><a href="../topics/layer--frontier-lab.html">frontier-lab <span class="n">(8)</span></a></li>
+<li><a href="../topics/layer--compute-cloud.html">compute-cloud <span class="n">(12)</span></a></li>
+<li><a href="../topics/layer--customisation.html">customisation <span class="n">(15)</span></a></li>
+<li><a href="../topics/layer--platform-feature.html">platform-feature <span class="n">(18)</span></a></li>
+<li><a href="../topics/layer--optimiser-tool.html">optimiser-tool <span class="n">(11)</span></a></li>
+<li><a href="../topics/layer--llmops.html">llmops <span class="n">(9)</span></a></li>
+<li><a href="../topics/layer--evaluation.html">evaluation <span class="n">(4)</span></a></li>
+<li><a href="../topics/layer--data.html">data <span class="n">(3)</span></a></li>
+<li><a href="../topics/layer--services.html">services <span class="n">(11)</span></a></li>
+<li><a href="../topics/layer--vertical-app.html">vertical-app <span class="n">(10)</span></a></li>
+<li><a href="../topics/layer--research-lab.html">research-lab <span class="n">(1)</span></a></li>
+<li><a href="../topics/layer--agent-framework.html">agent-framework <span class="n">(5)</span></a></li>
+</ul></details>
+<details class="side-group"><summary>What certifies</summary><ul>
+<li><a href="../topics/certifies--metric.html">metric <span class="n">(103)</span></a></li>
+<li><a href="../topics/certifies--estimate.html">estimate <span class="n">(37)</span></a></li>
+<li><a href="../topics/certifies--statistical-guarantee.html">statistical-guarantee <span class="n">(4)</span></a></li>
+<li><a href="../topics/certifies--proof.html">proof <span class="n">(3)</span></a></li>
+<li><a href="../topics/certifies--human-review.html">human-review <span class="n">(26)</span></a></li>
+</ul></details>
+<details class="side-group"><summary>Domain</summary><ul>
+<li><a href="../topics/domain--general.html">general <span class="n">(139)</span></a></li>
+<li><a href="../topics/domain--documents.html">documents <span class="n">(15)</span></a></li>
+<li><a href="../topics/domain--code.html">code <span class="n">(34)</span></a></li>
+<li><a href="../topics/domain--data-analytics.html">data-analytics <span class="n">(15)</span></a></li>
+<li><a href="../topics/domain--biomedical.html">biomedical <span class="n">(7)</span></a></li>
+<li><a href="../topics/domain--enterprise-workflow.html">enterprise-workflow <span class="n">(38)</span></a></li>
+<li><a href="../topics/domain--science.html">science <span class="n">(13)</span></a></li>
+<li><a href="../topics/domain--financial-services.html">financial-services <span class="n">(5)</span></a></li>
+</ul></details>
+</details></aside>
+<div class="content">
+<header class="mast"><div class="wrap">
+<p class="kicker">Paper &middot; 2026-05-19 &middot; UC Berkeley; GEPA project</p>
+<h1>optimize_anything: A Universal API for Optimizing any Text Parameter</h1>
+<p class="entry-meta"><span class="badge ev">author-reported</span></p>
+<p class="chips"><a class="chip chip-optimises" href="../topics/optimises--prompt.html" title="What it optimises">prompt</a><a class="chip chip-optimises" href="../topics/optimises--algorithm.html" title="What it optimises">algorithm</a><a class="chip chip-optimises" href="../topics/optimises--harness-code.html" title="What it optimises">harness-code</a><a class="chip chip-route" href="../topics/route--search.html" title="How">search</a><a class="chip chip-certifies" href="../topics/certifies--metric.html" title="What certifies the result">metric</a><a class="chip chip-domain" href="../topics/domain--general.html" title="Domain">general</a><a class="chip chip-domain" href="../topics/domain--code.html" title="Domain">code</a><a class="chip chip-topics" href="../topics/topics--prompt-optimisation.html" title="Topics">prompt-optimisation</a><a class="chip chip-topics" href="../topics/topics--workflow-search.html" title="Topics">workflow-search</a></p>
+</div></header>
+<div class="wrap"><main class="doc entry">
+<p class="links"><a href="https://arxiv.org/abs/2605.19633">arxiv.org/abs/2605.19633</a><br>code: <a href="https://github.com/gepa-ai/gepa">github.com/gepa-ai/gepa</a><br>blog: <a href="https://gepa-ai.github.io/gepa/blog/2026/02/18/introducing-optimize-anything/">gepa-ai.github.io/gepa/blog/2026/02/18/introducing-optimize-</a></p>
+<p class="people"><span class="lbl">People</span> Lakshya A Agrawal, Donghyun Lee, Shangyin Tan, Wenjie Ma, Karim Elmaaroufi, Rohit Sandadi, Sanjit A. Seshia, Koushik Sen, Dan Klein, Ion Stoica, Joseph E. Gonzalez, Omar Khattab, Alexandros G. Dimakis, Matei Zaharia</p>
+<h2>Summary</h2><p>Generalises GEPA into one API that optimises any text artifact against a scoring function, with single-task search, multi-task search with cross-problem transfer, and generalisation to unseen inputs. Reports state-of-the-art results across six tasks, from agent architectures for ARC-AGI to cloud scheduling, CUDA kernels and circle packing, and finds that actionable side information beats score-only feedback.</p>
+<h2>Our take</h2><blockquote><p>The GEPA team positioning reflective text search as a general solver, competing with AlphaEvolve-style systems. It is the open-source default an enterprise optimiser will be measured against, and it optimises an artifact, not a program with a certificate.</p></blockquote>
+<h2>Key numbers</h2><ul><li>Gemini Flash ARC-AGI accuracy 32.5% → 89.5% with a discovered agent architecture (author-reported)</li><li>Scheduling algorithms cut cloud costs by 40%; 87% of generated CUDA kernels match or beat PyTorch (author-reported)</li><li>Beats AlphaEvolve&#x27;s reported circle-packing solution (n=26) (author-reported)</li></ul>
+<h2>Relations</h2><ul class="relations"><li><span class="rel">builds on</span> <a href="../entries/gepa.html">GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning</a> <span class="rnote">released as part of the GEPA project</span></li><li><span class="rel">compares against</span> <a href="../entries/alphaevolve.html">AlphaEvolve: A coding agent for scientific and algorithmic discovery</a> <span class="rnote">circle packing</span></li><li><span class="rel">competes with</span> <a href="../entries/shinkaevolve.html">ShinkaEvolve: Towards Open-Ended And Sample-Efficient Program Evolution</a></li></ul>
+<h2>Related by tags</h2><ul class="related"><li><a href="../entries/gptswarm.html">Language Agents as Optimizable Graphs (GPTSwarm)</a> <span class="tp">paper</span></li><li><a href="../entries/harnessflow.html">HarnessFlow: MCTS-Guided Harness Optimization for LLM Agents</a> <span class="tp">paper</span></li><li><a href="../entries/mass-multi-agent-search.html">Multi-Agent Design: Optimizing Agents with Better Prompts and Topologies (MASS)</a> <span class="tp">paper</span></li><li><a href="../entries/weco.html">Weco AI</a> <span class="tp">company</span></li><li><a href="../entries/meta-harness.html">Meta-Harness: End-to-End Optimization of Model Harnesses</a> <span class="tp">paper</span></li><li><a href="../entries/trace.html">Trace is the Next AutoDiff: Generative Optimization with Rich Feedback, Execution Traces, and LLMs</a> <span class="tp">paper</span></li></ul>
+<p class="stamp">Added 2026-11-17 &middot; last checked against the source 2026-11-17</p>
+</main></div>
+<footer><div class="wrap">
+  <p>Optimus &middot; a research catalog of workflow, harness and program optimisation for AI, kept by Haixun Wang.</p>
+  <p>Facts are labelled by source: author-reported, vendor-reported, independent, press or estimate. &ldquo;Our take&rdquo; notes are opinions. Built 2026-11-17. <a href="../../">haixun.github.io</a></p>
+</div></footer>
+</div>
+</div>
+<script>if(window.matchMedia('(max-width: 760px)').matches){var s=document.querySelector('.sidebox');if(s)s.removeAttribute('open');}</script>
+</body>
+</html>

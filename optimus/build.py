@@ -82,7 +82,8 @@ def sidebar(up, active):
         return '<li><a%s href="%s%s">%s%s</a></li>' % (cls, up, href, label, c)
     S = ['<aside class="side"><details class="sidebox" open><summary>Menu</summary>',
          '<a class="brand" href="%sindex.html">Optimus</a>' % up, '<ul>',
-         item("index.html", "Overview", "index"), item("browse.html", "Browse &amp; search", "browse"), '</ul>',
+         item("index.html", "Overview", "index"), item("whats-new.html", "What&rsquo;s new", "news"),
+         item("browse.html", "Browse &amp; search", "browse"), '</ul>',
          '<p class="side-h">Read</p><ul>',
          item("owning-the-intelligence.html", "Owning the Intelligence", "doc:owning-the-intelligence.html"),
          item("landscape.html", "The Landscape", "doc:landscape.html"), '</ul>',
@@ -162,7 +163,9 @@ def load(src):
             if fn.endswith(".json"):
                 e = json.load(open(os.path.join(dp, fn)))
                 entries[e["id"]] = e
-    return tax, entries
+    news_path = os.path.join(cat, "news.json")
+    news = json.load(open(news_path)) if os.path.exists(news_path) else []
+    return tax, entries, news
 
 
 def tag_href(dim, v, up=""):
@@ -344,6 +347,37 @@ def render_timeline(entries):
     return page("Timeline · Optimus", body, "<b>Timeline</b>", "The optimisation-space catalog by date", active="timeline")
 
 
+# ---------------- what's new ----------------
+
+def news_entries_html(item, entries, up=""):
+    ids = [i for i in item.get("entries", []) if i in entries]
+    if not ids:
+        return ""
+    by = defaultdict(list)
+    for i in ids:
+        by[entries[i]["type"]].append(entries[i])
+    parts = []
+    for t, name, _ in TYPES:
+        if by.get(t):
+            lis = "".join('<li>%s <span class="s">%s</span></li>' % (entry_link(e["id"], entries, up), esc(first_sentence(e.get("summary"), 140)))
+                          for e in sorted(by[t], key=lambda x: x["name"].lower()))
+            parts.append('<h3>%s <span class="count">%d</span></h3><ul class="timeline">%s</ul>' % (name, len(by[t]), lis))
+    return "".join(parts)
+
+
+def render_whats_new(news, entries):
+    parts = []
+    for item in news:
+        notes = "".join("<p>%s</p>" % esc(p) for p in item.get("note", []))
+        n = len([i for i in item.get("entries", []) if i in entries])
+        parts.append('<section class="news"><p class="kicker">%s%s</p><h2>%s</h2>%s%s</section>' % (
+            esc(item.get("date")), (" &middot; %d added" % n) if n else "", esc(item.get("title")), notes, news_entries_html(item, entries)))
+    body = ('<header class="mast"><div class="wrap"><p class="kicker">Catalog</p><h1>What&rsquo;s new</h1>'
+            '<p class="lede">Each sweep or batch of additions, newest first: what changed in the field, and what we added.</p></div></header>'
+            '<div class="wrap"><main class="doc">%s</main></div>') % "".join(parts)
+    return page("What's new · Optimus", body, "<b>What&rsquo;s new</b>", "Recent additions to the Optimus catalog", active="news")
+
+
 # ---------------- browse (client-side filters) ----------------
 
 BROWSE_JS = r"""
@@ -418,7 +452,7 @@ def render_browse(entries):
 
 # ---------------- index ----------------
 
-def render_index(tax, entries, by_type, tag_index):
+def render_index(tax, entries, by_type, tag_index, news=()):
     opt = [v for v in tax["tags"]["optimises"] if not v.startswith("_") and v != "none"]
     routes = [v for v in tax["tags"]["route"] if not v.startswith("_") and v not in ("n/a",)]
     grid = defaultdict(int)
@@ -444,6 +478,13 @@ def render_index(tax, entries, by_type, tag_index):
     counts = "".join('<li class="card"><h3><a href="%s">%s</a></h3><p class="big">%d</p></li>' % (f, n, len(by_type.get(t, []))) for t, n, f in TYPES)
     recent = sorted(entries.values(), key=lambda e: (str(e.get("added")), str(e.get("date") or "")), reverse=True)[:12]
     recent_html = "".join('<li><span class="tp">%s</span> %s <span class="s">%s</span></li>' % (esc(e["type"]), entry_link(e["id"], entries), esc(first_sentence(e.get("summary"), 110))) for e in recent)
+    latest_html = ""
+    if news:
+        it = news[0]
+        n = len([i for i in it.get("entries", []) if i in entries])
+        latest_html = ('<div class="newsbox"><p class="section-label">What&rsquo;s new &middot; %s</p><h3><a href="whats-new.html">%s</a></h3>'
+                       '<p>%s</p><p class="more"><a href="whats-new.html">%sRead the update &rarr;</a></p></div>') % (
+            esc(it.get("date")), esc(it.get("title")), esc((it.get("note") or [""])[0]), ("%d new entries. " % n) if n else "")
     topics = []
     for dim in ("topics", "layer", "certifies", "domain"):
         vals = [(v, len(tag_index[(dim, v)])) for v in tax["tags"][dim] if not v.startswith("_") and tag_index.get((dim, v))]
@@ -459,6 +500,7 @@ search and compilation, semantic-operator optimisers from the database world, ha
 attempts at &ldquo;describe the task, we optimise it&rdquo;.</p>
 </div></header>
 <div class="wrap">
+%s
 <p class="section-label">Start here</p>
 <ul class="cards">
   <li class="card wide"><h3><a href="owning-the-intelligence.html">Owning the Intelligence</a></h3>
@@ -483,7 +525,7 @@ attempts at &ldquo;describe the task, we optimise it&rdquo;.</p>
 <p class="section-label">Recently added</p>
 <ul class="timeline">%s</ul>
 <p class="more"><a href="timeline.html">Full timeline &rarr;</a></p>
-</div>""" % (len(entries), counts, grid_html, "".join(topics), recent_html)
+</div>""" % (latest_html, len(entries), counts, grid_html, "".join(topics), recent_html)
     return page("Optimus: optimising AI programs", body, "<b>Optimus</b>",
                 "A research catalog of workflow, harness and program optimisation for AI: companies, papers, products, articles and benchmarks.", home=True, active="index")
 
@@ -568,7 +610,7 @@ def main():
     ap.add_argument("--src", default=os.path.expanduser("~/explore/ai-platform"))
     ap.add_argument("--no-docs", action="store_true")
     a = ap.parse_args()
-    tax, entries = load(a.src)
+    tax, entries, news = load(a.src)
     incoming = defaultdict(list)
     for eid, e in entries.items():
         for r in e.get("relations") or []:
@@ -598,7 +640,8 @@ def main():
         write("topics/%s--%s.html" % (dim, v.replace("/", "-")), render_topic(tax, dim, v, items, entries))
     write("timeline.html", render_timeline(entries))
     write("browse.html", render_browse(entries))
-    write("index.html", render_index(tax, entries, by_type, tag_index))
+    write("index.html", render_index(tax, entries, by_type, tag_index, news))
+    write("whats-new.html", render_whats_new(news, entries))
     if not a.no_docs:
         for fn, out, kicker, short in DOCS:
             render_doc(a.src, fn, out, kicker, short)
