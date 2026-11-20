@@ -45,7 +45,7 @@ DOCS = [  # (source file, output page, kicker, short title)
 # Internal references in the essay -> (label, href or None). Matched on the path's basename.
 DOC_REFS = {
     "landscape.md": ("The Knowledge Layer", "landscape.html"),
-    "kb.md": ("our underlying research report (not published)", None),
+    "enterprise-business-knowledge-vish.md": ("an underlying research report (not published)", None),
     "README.md": ("the company entries in the catalog", "companies.html"),
 }
 PROSE_FIXES = [
@@ -265,7 +265,7 @@ def render_entry(e, entries, incoming):
     docrefs = []
     for r in e.get("repo_refs") or []:
         b = os.path.basename(r)
-        if b in ("landscape.md", "kb.md"):
+        if b in ("landscape.md", "enterprise-business-knowledge-vish.md"):
             docrefs.append('<a href="%s%s">%s</a>' % (up, DOC_REFS[b][1], esc(DOC_REFS[b][0])))
     if docrefs:
         B.append("<h2>Discussed in</h2><p>%s</p>" % ", ".join(docrefs))
