@@ -46,6 +46,7 @@ DOCS = [  # (source file, output page, kicker, short title)
 DOC_REFS = {
     "landscape.md": ("The Knowledge Layer", "landscape.html"),
     "enterprise-business-knowledge-vish.md": ("an underlying research report (not published)", None),
+    "opportunity.md": ("our internal assessment of the opportunity (not published)", None),
     "README.md": ("the company entries in the catalog", "companies.html"),
 }
 PROSE_FIXES = [
