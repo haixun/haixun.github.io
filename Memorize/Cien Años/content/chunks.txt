@@ -1,0 +1,141 @@
+# Phrase-by-phrase breakdown of paragraph 1.
+#   "# S<n>" starts a sentence; each following line is:  Spanish chunk | close, literal English
+# build.py checks that the chunks of a sentence, joined by spaces, reproduce para1.txt exactly.
+
+# S1
+MUCHOS años después, | many years later,
+frente al pelotón de fusilamiento, | facing the firing squad (literally: the squad of shooting),
+el coronel Aureliano Buendía | Colonel Aureliano Buendía
+había de recordar | was to remember
+aquella tarde remota | that distant afternoon
+en que su padre | when (literally: in which) his father
+lo llevó a conocer el hielo. | took him to see ice for the first time.
+
+# S2
+Macondo era entonces | Macondo was then
+una aldea de veinte casas | a village of twenty houses
+de barro y cañabrava | of mud and wild cane
+construidas a la orilla de un río | built on the bank of a river
+de aguas diáfanas | of crystal-clear waters
+que se precipitaban | that rushed down
+por un lecho de piedras pulidas, | along a bed of polished stones,
+blancas y enormes | white and enormous
+como huevos prehistóricos. | like prehistoric eggs.
+
+# S3
+El mundo era tan reciente, | The world was so recent
+que muchas cosas carecían de nombre, | that many things lacked a name,
+y para mencionarlas | and in order to mention them
+había que señalarlas con el dedo. | one had to point at them with one's finger.
+
+# S4
+Todos los años, | Every year (literally: all the years),
+por el mes de marzo, | around the month of March,
+una familia de gitanos desarrapados | a family of ragged gypsies
+plantaba su carpa cerca de la aldea, | would pitch its tent near the village,
+y con un grande alboroto | and with a great uproar
+de pitos y timbales | of whistles and kettledrums
+daban a conocer los nuevos inventos. | they showed off the new inventions.
+
+# S5
+Primero llevaron el imán. | First they brought the magnet.
+
+# S6
+Un gitano corpulento, | A burly gypsy,
+de barba montaraz y manos de gorrión, | with a wild beard and a sparrow's hands,
+que se presentó con el nombre de Melquíades, | who introduced himself by the name of Melquíades,
+hizo una truculenta demostración pública | put on a lurid public demonstration
+de lo que él mismo llamaba | of what he himself called
+la octava maravilla | the eighth wonder
+de los sabios alquimistas de Macedonia. | of the learned alchemists of Macedonia.
+
+# S7
+Fue de casa en casa | He went from house to house
+arrastrando dos lingotes metálicos, | dragging two metal ingots,
+y todo el mundo se espantó | and everybody was terrified
+al ver que los calderos, | on seeing that the cauldrons,
+las pailas, | the pans,
+las tenazas y los anafes | the tongs and the braziers
+se caían de su sitio, | were falling from their places,
+y las maderas crujían | and the timbers were creaking
+por la desesperación de los clavos y los tornillos | from the desperation of the nails and the screws
+tratando de desenclavarse, | trying to pull themselves out,
+y aun los objetos perdidos | and even the objects lost
+desde hacía mucho tiempo | for a long time
+aparecían por donde más se les había buscado, | turned up in the places where they had been looked for most,
+y se arrastraban en desbandada turbulenta | and dragged themselves along in a wild stampede
+detrás de los fierros mágicos de Melquíades. | behind Melquíades' magic irons.
+
+# S8
+«Las cosas tienen vida propia | "Things have a life of their own,"
+—pregonaba el gitano con áspero acento—, | proclaimed the gypsy with a harsh accent,
+todo es cuestión de | "it is all a matter of
+despertarles el ánima». | waking up their souls."
+
+# S9
+José Arcadio Buendía, | José Arcadio Buendía,
+cuya desaforada imaginación | whose unbridled imagination
+iba siempre más lejos | always went farther
+que el ingenio de la naturaleza, | than the ingenuity of nature,
+y aun más allá del milagro y la magia, | and even beyond miracle and magic,
+pensó que era posible | thought that it was possible
+servirse de aquella invención inútil | to make use of that useless invention
+para desentrañar el oro de la tierra. | to draw the gold out of the depths of the earth.
+
+# S10
+Melquíades, | Melquíades,
+que era un hombre honrado, | who was an honest man,
+le previno: | warned him:
+«Para eso no sirve». | "It is no good for that."
+
+# S11
+Pero José Arcadio Buendía | But José Arcadio Buendía
+no creía en aquel tiempo | did not believe at that time
+en la honradez de los gitanos, | in the honesty of gypsies,
+así que cambió su mulo | so he traded his mule
+y una partida de chivos | and a lot of young goats
+por los dos lingotes imantados. | for the two magnetised ingots.
+
+# S12
+Úrsula Iguarán, su mujer, | Úrsula Iguarán, his wife,
+que contaba con aquellos animales | who was counting on those animals
+para ensanchar | to enlarge
+el desmedrado patrimonio doméstico, | the meagre household estate,
+no consiguió disuadirlo. | did not manage to dissuade him.
+
+# S13
+«Muy pronto | "Very soon
+ha de sobrarnos oro | we are bound to have gold to spare
+para empedrar la casa», | to pave the house,"
+replicó su marido. | replied her husband.
+
+# S14
+Durante varios meses | For several months
+se empeñó en demostrar | he strove stubbornly to prove
+el acierto de sus conjeturas. | the rightness of his conjectures.
+
+# S15
+Exploró palmo a palmo la región, | He explored the region inch by inch,
+inclusive el fondo del río, | even the bottom of the river,
+arrastrando los dos lingotes de hierro | dragging the two iron ingots
+y recitando en voz alta | and reciting aloud
+el conjuro de Melquíades. | Melquíades' incantation.
+
+# S16
+Lo único que logró desenterrar | The only thing he managed to dig up
+fue una armadura del siglo XV | was a suit of armour from the fifteenth century
+con todas sus partes soldadas | with all its parts welded together
+por un cascote de óxido, | by a crust of rust,
+cuyo interior tenía | whose inside had
+la resonancia hueca | the hollow resonance
+de un enorme calabazo lleno de piedras. | of an enormous gourd full of stones.
+
+# S17
+Cuando José Arcadio Buendía | When José Arcadio Buendía
+y los cuatro hombres de su expedición | and the four men of his expedition
+lograron desarticular la armadura, | managed to take the armour apart,
+encontraron dentro | they found inside
+un esqueleto calcificado | a calcified skeleton
+que llevaba colgado en el cuello | that wore hanging at its neck
+un relicario de cobre | a copper locket
+con un rizo de mujer. | with a lock of a woman's hair.

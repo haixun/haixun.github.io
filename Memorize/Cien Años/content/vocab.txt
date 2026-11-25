@@ -1,0 +1,366 @@
+# Vocabulary for paragraph 1.  One entry per line:
+#   form | base form | grammar | meaning in this paragraph
+# "form" is the word exactly as it appears in the paragraph (lower-cased unless a name).
+# Lines starting with "+" are multi-word expressions:
+#   + expression as it appears | base pattern | grammar / how it works | meaning
+# build.py checks that every word of the paragraph has an entry.
+
+# ---------- Sentence 1
+muchos | mucho | adjective, masculine plural | many
+años | año | noun, masculine plural | years
+después | después | adverb | later, afterwards
+frente | frente | adverb; part of "frente a" | facing, in front of
+al | a + el | contraction: a + el always merges into "al" | to the, at the
+pelotón | pelotón | noun, masculine singular | squad, platoon
+de | de | preposition; the most common word in the paragraph | of, from; also links a noun to what it is made of or belongs to
+fusilamiento | fusilamiento | noun, masculine singular; from fusil "rifle" | execution by shooting
+el | el | definite article, masculine singular | the
+coronel | coronel | noun, masculine singular | colonel
+Aureliano | Aureliano | proper name | first name of Colonel Aureliano Buendía
+Buendía | Buendía | proper name (family name) | the family at the centre of the novel
+había | haber | verb, imperfect tense, 3rd person singular of haber. Used three ways here: "había de" + infinitive, "había que" + infinitive, and as a helper verb in "se les había buscado" | had; (había de) was to; (había que) it was necessary to
+recordar | recordar | verb, infinitive | to remember
+aquella | aquel | demonstrative adjective, feminine singular: points at something far away in space or time | that (distant)
+tarde | tarde | noun, feminine singular | afternoon
+remota | remoto | adjective, feminine singular | remote, distant
+en | en | preposition | in, on, at
+que | que | the all-purpose connector: "that / which / who" after a noun, "that" after a verb, "than" in comparisons | that, which, who; than
+su | su | possessive adjective, singular; owner is 3rd person | his, her, its, their
+padre | padre | noun, masculine singular | father
+lo | lo | (1) direct-object pronoun, masculine singular: "him / it", placed before the verb or attached to an infinitive; (2) neuter article in "lo que", "lo único" | him, it; (lo que) what; (lo único) the only thing
+llevó | llevar | verb, preterite (completed past), 3rd person singular | took (someone somewhere)
+a | a | preposition; also links a verb of motion to an infinitive ("llevó a conocer") | to, at
+conocer | conocer | verb, infinitive | to get to know, to meet, to see for the first time
+hielo | hielo | noun, masculine singular | ice
+
+# ---------- Sentence 2
+Macondo | Macondo | proper name | the invented village where the novel takes place
+era | ser | verb, imperfect, 3rd person singular of ser "to be" (description in the past) | was
+entonces | entonces | adverb | then, at that time
+una | un | indefinite article, feminine singular | a, an
+aldea | aldea | noun, feminine singular | small village
+veinte | veinte | number | twenty
+casas | casa | noun, feminine plural | houses
+barro | barro | noun, masculine singular | mud, clay
+y | y | conjunction | and
+cañabrava | cañabrava | noun, feminine singular; a Latin American word | wild cane (a tall reed used for building walls and roofs)
+construidas | construir | past participle used as an adjective, feminine plural (agrees with "casas") | built
+la | la | definite article, feminine singular | the
+orilla | orilla | noun, feminine singular | bank, shore, edge
+un | un | indefinite article, masculine singular | a, an
+río | río | noun, masculine singular | river
+aguas | agua | noun, feminine plural; the plural is literary | waters
+diáfanas | diáfano | adjective, feminine plural | crystal-clear, transparent
+se | se | reflexive / pronominal pronoun, 3rd person: marks the action as happening to the subject itself (se precipitaban, se espantó, se caían). In "se les había buscado" it makes the verb impersonal: "one had looked for them" | itself, himself, themselves; (impersonal) one, people
+precipitaban | precipitarse | verb, imperfect, 3rd person plural; used with "se" | rushed, hurtled down
+por | por | preposition with many jobs: movement along or through, cause, exchange, the "by" of passive phrases | along, through, by, because of, in exchange for, around (a time)
+lecho | lecho | noun, masculine singular | bed (here a riverbed)
+piedras | piedra | noun, feminine plural | stones
+pulidas | pulir | past participle used as an adjective, feminine plural | polished
+blancas | blanco | adjective, feminine plural | white
+enormes | enorme | adjective, plural (same form for masculine and feminine) | enormous
+como | como | conjunction of comparison | like, as
+huevos | huevo | noun, masculine plural | eggs
+prehistóricos | prehistórico | adjective, masculine plural | prehistoric
+
+# ---------- Sentence 3
+mundo | mundo | noun, masculine singular | world
+tan | tan | adverb; "tan ... que" = "so ... that" | so
+reciente | reciente | adjective, singular | recent, new
+muchas | mucho | adjective, feminine plural | many
+cosas | cosa | noun, feminine plural | things
+carecían | carecer | verb, imperfect, 3rd person plural; always followed by "de" | lacked
+nombre | nombre | noun, masculine singular | name
+para | para | preposition; "para" + infinitive = "in order to" | for, in order to
+mencionarlas | mencionar + las | infinitive with the object pronoun "las" (them, feminine = las cosas) attached | to mention them
+señalarlas | señalar + las | infinitive with "las" attached | to point at them
+con | con | preposition | with
+dedo | dedo | noun, masculine singular | finger
+
+# ---------- Sentence 4
+todos | todo | adjective, masculine plural | all, every
+los | el | definite article, masculine plural | the
+mes | mes | noun, masculine singular | month
+marzo | marzo | noun, masculine singular; months are not capitalised in Spanish | March
+familia | familia | noun, feminine singular | family
+gitanos | gitano | noun, masculine plural | gypsies
+desarrapados | desarrapado | adjective, masculine plural | ragged, in tatters
+plantaba | plantar | verb, imperfect, 3rd person singular (a habit: every year) | would set up, used to pitch
+carpa | carpa | noun, feminine singular; Latin American usage | tent
+cerca | cerca | adverb; "cerca de" = near | near
+grande | grande | adjective, singular. Before a noun it normally shortens to "gran"; the full "grande" here is an old-fashioned, emphatic touch | great, big
+alboroto | alboroto | noun, masculine singular | uproar, racket
+pitos | pito | noun, masculine plural | whistles, pipes
+timbales | timbal | noun, masculine plural | kettledrums
+daban | dar | verb, imperfect, 3rd person plural of dar "to give" (plural because the gypsies are meant) | (they) gave; here part of "daban a conocer"
+nuevos | nuevo | adjective, masculine plural | new
+inventos | invento | noun, masculine plural | inventions
+
+# ---------- Sentence 5
+primero | primero | adverb | first
+llevaron | llevar | verb, preterite, 3rd person plural | (they) brought
+imán | imán | noun, masculine singular | magnet
+
+# ---------- Sentence 6
+gitano | gitano | noun, masculine singular | gypsy
+corpulento | corpulento | adjective, masculine singular | heavy-set, burly
+barba | barba | noun, feminine singular | beard
+montaraz | montaraz | adjective, singular; from monte "wild hill country" | wild, untamed
+manos | mano | noun, feminine plural (la mano is feminine although it ends in -o) | hands
+gorrión | gorrión | noun, masculine singular | sparrow
+presentó | presentarse | verb, preterite, 3rd person singular; with "se" = to introduce oneself | introduced himself
+Melquíades | Melquíades | proper name | the wise gypsy
+hizo | hacer | verb, preterite, 3rd person singular of hacer "to do, to make" (irregular) | made, did; here "put on" a demonstration
+truculenta | truculento | adjective, feminine singular. A false friend: not "truculent" but lurid and sensational | lurid, sensational, showy
+demostración | demostración | noun, feminine singular | demonstration
+pública | público | adjective, feminine singular | public
+él | él | subject pronoun; the accent mark separates it from the article "el" | he
+mismo | mismo | adjective; after a pronoun it means "-self" | himself; same
+llamaba | llamar | verb, imperfect, 3rd person singular | called, used to call
+octava | octavo | ordinal number, feminine singular | eighth
+maravilla | maravilla | noun, feminine singular | wonder, marvel
+sabios | sabio | adjective, masculine plural | wise, learned
+alquimistas | alquimista | noun, plural (un alquimista: masculine although it ends in -a) | alchemists
+Macedonia | Macedonia | proper name | Macedonia
+
+# ---------- Sentence 7
+fue | ir | verb, preterite, 3rd person singular of ir "to go" (irregular; the same form also belongs to ser "to be", as in sentence 16) | went; (sentence 16) was
+casa | casa | noun, feminine singular | house
+arrastrando | arrastrar | verb, gerund (the -ando form = English -ing) | dragging
+dos | dos | number | two
+lingotes | lingote | noun, masculine plural | ingots, bars
+metálicos | metálico | adjective, masculine plural | metal, metallic
+todo | todo | adjective / pronoun, masculine singular | all, everything, the whole
+espantó | espantarse | verb, preterite, 3rd person singular; with "se" = to get frightened | was terrified, was astonished
+ver | ver | verb, infinitive; "al ver" = on seeing | to see
+calderos | caldero | noun, masculine plural | cauldrons, cooking pots
+las | la | definite article, feminine plural; also an object pronoun "them" when attached to a verb (mencionarlas) | the; them
+pailas | paila | noun, feminine plural; a Latin American word | large shallow pans
+tenazas | tenaza | noun, feminine plural | tongs
+anafes | anafe | noun, masculine plural | portable stoves, braziers
+caían | caerse | verb, imperfect, 3rd person plural; with "se" = to fall down | were falling
+sitio | sitio | noun, masculine singular | place, spot
+maderas | madera | noun, feminine plural | woods; here the timbers and boards of the houses
+crujían | crujir | verb, imperfect, 3rd person plural | creaked, were creaking
+desesperación | desesperación | noun, feminine singular | desperation, despair
+clavos | clavo | noun, masculine plural | nails
+tornillos | tornillo | noun, masculine plural | screws
+tratando | tratar | verb, gerund; "tratar de" + infinitive = to try to | trying
+desenclavarse | desenclavarse | verb, infinitive with "se" attached; des- (un-) + en- + clavo (nail) | to un-nail themselves, to pull themselves out
+aun | aun | adverb; without an accent mark it means "even" (aún with an accent means "still") | even
+objetos | objeto | noun, masculine plural | objects
+perdidos | perder | past participle used as an adjective, masculine plural | lost
+desde | desde | preposition | since, from
+hacía | hacer | verb, imperfect, 3rd person singular of hacer; with time expressions it means "ago / for" | (desde hacía mucho tiempo) for a long time
+mucho | mucho | adjective, masculine singular | much, a lot of
+tiempo | tiempo | noun, masculine singular | time
+aparecían | aparecer | verb, imperfect, 3rd person plural | appeared, kept turning up
+donde | donde | relative adverb | where
+más | más | adverb | more, most
+les | les | indirect-object pronoun, plural. In "se les había buscado" it stands for the lost objects; in "despertarles" for the things | (to) them
+buscado | buscar | past participle (había buscado = had searched) | searched for, looked for
+arrastraban | arrastrarse | verb, imperfect, 3rd person plural; with "se" = to drag oneself along | dragged themselves along
+desbandada | desbandada | noun, feminine singular; "en desbandada" = in a scattered rush | stampede, rout
+turbulenta | turbulento | adjective, feminine singular | turbulent, wild
+detrás | detrás | adverb; "detrás de" = behind | behind
+fierros | fierro | noun, masculine plural; Latin American form of hierro | irons, pieces of iron
+mágicos | mágico | adjective, masculine plural | magic, magical
+
+# ---------- Sentence 8
+tienen | tener | verb, present, 3rd person plural of tener "to have" | (they) have
+vida | vida | noun, feminine singular | life
+propia | propio | adjective, feminine singular | own
+pregonaba | pregonar | verb, imperfect, 3rd person singular; a pregonero is a town crier | proclaimed, cried out
+áspero | áspero | adjective, masculine singular | harsh, rough
+acento | acento | noun, masculine singular | accent
+es | ser | verb, present, 3rd person singular of ser "to be" | is
+cuestión | cuestión | noun, feminine singular | matter, question
+despertarles | despertar + les | infinitive with the pronoun "les" (to them = the things) attached | to wake up their ...
+ánima | ánima | noun, feminine singular. It takes "el" instead of "la" because it begins with a stressed a-: el ánima | soul, spirit
+
+# ---------- Sentence 9
+José | José | proper name | first name of José Arcadio Buendía, the founder of Macondo
+Arcadio | Arcadio | proper name | second given name of José Arcadio Buendía
+cuya | cuyo | relative possessive, feminine singular; agrees with the thing owned (imaginación), not the owner | whose
+desaforada | desaforado | adjective, feminine singular | unbridled, boundless
+imaginación | imaginación | noun, feminine singular | imagination
+iba | ir | verb, imperfect, 3rd person singular of ir "to go" (irregular) | went, used to go
+siempre | siempre | adverb | always
+lejos | lejos | adverb | far
+ingenio | ingenio | noun, masculine singular | ingenuity, inventive genius
+naturaleza | naturaleza | noun, feminine singular | nature
+allá | allá | adverb; "más allá de" = beyond | there, yonder
+del | de + el | contraction: de + el always merges into "del" | of the, from the
+milagro | milagro | noun, masculine singular | miracle
+magia | magia | noun, feminine singular | magic
+pensó | pensar | verb, preterite, 3rd person singular | thought
+posible | posible | adjective, singular | possible
+servirse | servirse | verb, infinitive with "se"; "servirse de" = to make use of | to make use (of)
+invención | invención | noun, feminine singular | invention
+inútil | inútil | adjective, singular; in- (not) + útil (useful) | useless
+desentrañar | desentrañar | verb, infinitive; des- + entraña "entrail": literally to disembowel | to dig out from the depths, to extract
+oro | oro | noun, masculine singular | gold
+tierra | tierra | noun, feminine singular | earth, ground
+
+# ---------- Sentence 10
+hombre | hombre | noun, masculine singular | man
+honrado | honrado | adjective, masculine singular | honest, honourable
+le | le | indirect-object pronoun, singular | (to) him
+previno | prevenir | verb, preterite, 3rd person singular (irregular, like venir → vino) | warned
+eso | eso | neuter demonstrative pronoun: "that" as an idea or purpose, not a particular noun | that
+no | no | negation; always placed just before the verb | not, no
+sirve | servir | verb, present, 3rd person singular (e → i stem change) | it works, it is of use
+
+# ---------- Sentence 11
+pero | pero | conjunction | but
+creía | creer | verb, imperfect, 3rd person singular; "creer en" = to believe in | believed
+aquel | aquel | demonstrative adjective, masculine singular | that (distant)
+honradez | honradez | noun, feminine singular | honesty
+así | así | adverb; "así que" = so, and so | thus, so
+cambió | cambiar | verb, preterite, 3rd person singular; "cambiar A por B" = to trade A for B | traded, exchanged
+mulo | mulo | noun, masculine singular | mule
+partida | partida | noun, feminine singular | batch, lot (a small group of animals)
+chivos | chivo | noun, masculine plural | young goats, kids
+imantados | imantar | past participle used as an adjective, masculine plural; from imán "magnet" | magnetised
+
+# ---------- Sentence 12
+Úrsula | Úrsula | proper name | José Arcadio Buendía's wife
+Iguarán | Iguarán | proper name (family name) | Úrsula's family name
+mujer | mujer | noun, feminine singular | wife (sentence 12); woman (sentence 17)
+contaba | contar | verb, imperfect, 3rd person singular; "contar con" = to count on | was counting (on)
+aquellos | aquel | demonstrative adjective, masculine plural | those
+animales | animal | noun, masculine plural | animals
+ensanchar | ensanchar | verb, infinitive; from ancho "wide" | to widen, to enlarge
+desmedrado | desmedrado | adjective, masculine singular | meagre, stunted
+patrimonio | patrimonio | noun, masculine singular | estate, family property
+doméstico | doméstico | adjective, masculine singular | domestic, household
+consiguió | conseguir | verb, preterite, 3rd person singular (irregular e → i); "conseguir" + infinitive = to manage to | managed
+disuadirlo | disuadir + lo | infinitive with the pronoun "lo" (him) attached | to dissuade him
+
+# ---------- Sentence 13
+muy | muy | adverb | very
+pronto | pronto | adverb | soon
+ha | haber | verb, present, 3rd person singular of haber; "ha de" + infinitive = is bound to, will surely | (ha de) is to, will
+sobrarnos | sobrar + nos | infinitive with "nos" (to us) attached; sobrar = to be more than enough, to be left over | to be more than enough for us
+empedrar | empedrar | verb, infinitive; en- + piedra "stone" | to pave
+replicó | replicar | verb, preterite, 3rd person singular | replied
+marido | marido | noun, masculine singular | husband
+
+# ---------- Sentence 14
+durante | durante | preposition | during, for (a length of time)
+varios | varios | adjective, masculine plural | several
+meses | mes | noun, masculine plural | months
+empeñó | empeñarse | verb, preterite, 3rd person singular; "empeñarse en" + infinitive = to be determined to, to insist on | (se empeñó) he strove stubbornly
+demostrar | demostrar | verb, infinitive | to prove, to demonstrate
+acierto | acierto | noun, masculine singular; from acertar "to get it right" | correctness, rightness
+sus | su | possessive adjective, plural | his, her, their
+conjeturas | conjetura | noun, feminine plural | conjectures, guesses
+
+# ---------- Sentence 15
+exploró | explorar | verb, preterite, 3rd person singular | explored
+palmo | palmo | noun, masculine singular; an old measure, the width of a spread hand | handspan
+región | región | noun, feminine singular | region
+inclusive | inclusive | adverb | even, including
+fondo | fondo | noun, masculine singular | bottom
+hierro | hierro | noun, masculine singular | iron
+recitando | recitar | verb, gerund | reciting
+voz | voz | noun, feminine singular | voice
+alta | alto | adjective, feminine singular | high; loud
+conjuro | conjuro | noun, masculine singular | spell, incantation
+
+# ---------- Sentence 16
+único | único | adjective, masculine singular; "lo único" = the only thing | only
+logró | lograr | verb, preterite, 3rd person singular; "lograr" + infinitive = to succeed in, to manage to | managed, succeeded
+desenterrar | desenterrar | verb, infinitive; des- + en- + tierra "earth" | to dig up, to unearth
+armadura | armadura | noun, feminine singular | suit of armour
+siglo | siglo | noun, masculine singular | century
+XV | quince | Roman numeral; centuries are written in Roman numerals and read as plain numbers: "siglo quince" | 15 (the fifteenth century)
+todas | todo | adjective, feminine plural | all
+partes | parte | noun, feminine plural | parts
+soldadas | soldar | past participle used as an adjective, feminine plural | soldered, welded together
+cascote | cascote | noun, masculine singular; normally "rubble" | crust, lump (of rust)
+óxido | óxido | noun, masculine singular | rust
+cuyo | cuyo | relative possessive, masculine singular; agrees with "interior" | whose
+interior | interior | noun, masculine singular | inside, interior
+tenía | tener | verb, imperfect, 3rd person singular | had
+resonancia | resonancia | noun, feminine singular | resonance, echo
+hueca | hueco | adjective, feminine singular | hollow
+enorme | enorme | adjective, singular | enormous
+calabazo | calabazo | noun, masculine singular; Caribbean Spanish | gourd, calabash
+lleno | lleno | adjective, masculine singular; "lleno de" = full of | full
+
+# ---------- Sentence 17
+cuando | cuando | conjunction | when
+cuatro | cuatro | number | four
+hombres | hombre | noun, masculine plural | men
+expedición | expedición | noun, feminine singular | expedition
+lograron | lograr | verb, preterite, 3rd person plural | (they) managed
+desarticular | desarticular | verb, infinitive; des- + articular "to joint" | to take apart, to dismantle
+encontraron | encontrar | verb, preterite, 3rd person plural | (they) found
+dentro | dentro | adverb | inside
+esqueleto | esqueleto | noun, masculine singular | skeleton
+calcificado | calcificar | past participle used as an adjective, masculine singular | calcified
+llevaba | llevar | verb, imperfect, 3rd person singular; llevar also means "to wear" | was wearing, had on
+colgado | colgar | past participle, masculine singular (agrees with "relicario") | hung, hanging
+cuello | cuello | noun, masculine singular | neck
+relicario | relicario | noun, masculine singular | locket, reliquary
+cobre | cobre | noun, masculine singular | copper
+rizo | rizo | noun, masculine singular | curl, lock of hair
+
+# ---------- Expressions
++ muchos años después | mucho + año + después | time phrase; the adverb después comes after the amount of time | many years later
++ frente al | frente a | compound preposition; a + el → al | facing, in front of the
++ pelotón de fusilamiento | pelotón de fusilamiento | noun + de + noun: Spanish builds compound nouns with "de" | firing squad
++ había de recordar | haber de + infinitive | a literary future-in-the-past: fate seen from the storyteller's distance | was to remember, would one day remember
++ en que | en que | relative phrase after a time word | when, on which
++ lo llevó a conocer | llevar a alguien a + infinitive | object pronoun before the verb; a + infinitive gives the purpose | took him to see (for the first time)
++ casas de barro y cañabrava | casa de + material | "de" + material says what something is made of | houses of mud and wild cane, adobe houses
++ a la orilla de | a la orilla de | prepositional phrase | on the bank of
++ se precipitaban por | precipitarse por | pronominal verb + por (movement along) | rushed down along
++ tan reciente, que | tan + adjective + que | result construction | so recent that
++ carecían de nombre | carecer de | the verb always takes "de"; no article before nombre | lacked a name, had no names
++ había que señalarlas | haber que + infinitive | impersonal obligation with no subject: "one had to" | it was necessary to point at them
++ con el dedo | con el dedo | Spanish uses "the" for body parts where English uses "my / his" | with one's finger
++ todos los años | todos los + plural noun | todos los / todas las = every | every year
++ por el mes de marzo | por + time | "por" with a time gives a loose "around" | around the month of March
++ cerca de | cerca de | compound preposition | near
++ daban a conocer | dar a conocer | idiom, literally "to give to know" | made known, presented, showed off
++ se presentó con el nombre de | presentarse con el nombre de | pronominal verb + phrase | introduced himself by the name of
++ lo que | lo que | neuter relative: "the thing that" | what, that which
++ él mismo | él mismo | pronoun + mismo for emphasis | he himself
++ de casa en casa | de X en X | pattern for going from one to the next | from house to house
++ todo el mundo | todo el mundo | idiom, literally "all the world"; takes a singular verb | everybody
++ al ver | al + infinitive | al + infinitive = at the moment of doing | on seeing, when they saw
++ se caían de su sitio | caerse de | pronominal verb | were falling from their places
++ tratando de desenclavarse | tratar de + infinitive | gerund + de + infinitive | trying to pull themselves out
++ desde hacía mucho tiempo | desde hacía + time | "since it made much time": how Spanish says "for a long time" when looking back from the past | for a long time
++ por donde | por donde | por (around, in the area) + donde (where) | in the places where
++ se les había buscado | buscar | impersonal "se" + les (them) + pluperfect: "one had searched for them" | they had been searched for
++ en desbandada | en desbandada | set phrase | in a rout, scattering in all directions
++ detrás de | detrás de | compound preposition | behind
++ vida propia | vida propia | propio after the noun = of its own | a life of their own
++ es cuestión de | ser cuestión de + infinitive | set phrase | it is a matter of
++ despertarles el ánima | despertar algo a alguien | Spanish says "wake to-them the soul" where English says "wake their soul" | to wake up their souls
++ más lejos que | más ... que | comparison: más + adverb + que | farther than
++ más allá del | más allá de | compound preposition; de + el → del | beyond the
++ era posible | ser posible + infinitive | impersonal expression | it was possible
++ servirse de | servirse de | pronominal verb + de | to make use of
++ para eso no sirve | servir para | servir para = to be good for; "eso" comes first for emphasis | it is no good for that
++ en aquel tiempo | en aquel tiempo | time phrase | at that time, in those days
++ creía en | creer en | verb + en | believed in
++ así que | así que | conjunction | so, and so
++ una partida de chivos | una partida de | quantity noun + de | a lot of young goats, a few goats
++ contaba con | contar con | verb + con | was counting on
++ no consiguió disuadirlo | conseguir + infinitive | negative + preterite + infinitive with pronoun attached | did not manage to talk him out of it
++ muy pronto | muy pronto | adverb phrase | very soon
++ ha de sobrarnos oro | haber de + infinitive | "ha de" = is bound to; the subject (oro) follows the verb | we are going to have gold to spare
++ se empeñó en | empeñarse en + infinitive | pronominal verb + en | he threw himself stubbornly into
++ palmo a palmo | X a X | pattern for doing something unit by unit (poco a poco, paso a paso) | inch by inch
++ el fondo del río | el fondo de | noun phrase | the bottom of the river, the riverbed
++ en voz alta | en voz alta | set phrase, literally "in high voice" | aloud
++ lo único que | lo único que | neuter "lo" + adjective turns it into "the ... thing" | the only thing that
++ logró desenterrar | lograr + infinitive | no preposition between the two verbs | managed to dig up
++ del siglo XV | del siglo quince | de + el → del; read "siglo quince" | from the fifteenth century
++ lleno de | lleno de | adjective + de | full of
++ llevaba colgado | llevar + participle | llevar + past participle describes what someone has on them | had hanging, wore
++ un rizo de mujer | noun de noun | "de" + noun without an article describes a kind | a woman's curl
