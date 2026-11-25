@@ -496,11 +496,16 @@ working on that question, and tracks the one thing neither camp supplies: someth
 %s
 <p class="section-label">Start here</p>
 <ul class="cards">
+  <li class="card wide"><h3><a href="field-guide.html">Ontologies for AI Agents</a></h3>
+  <p>A guide to the field, written to be read cold: the problem, the vocabulary, the two strategies, what every large
+  platform built in 2026, how they decide which definition to trust, what about forty-five research papers actually
+  show, the problems nobody has solved, the standards, and the debate in the participants' own words.</p>
+  <div class="meta"><span>Guide</span><span>November 2026</span></div></li>
   <li class="card wide"><h3><a href="landscape.html">The Knowledge Layer</a></h3>
-  <p>The map: commit versus derive, the commitment ladder from raw corpus to rules, the commercial tiers, and the seven
+  <p>The map: commit versus derive, the commitment ladder from raw corpus to rules, the commercial tiers, and the
   acquisitions that show the standalone product being absorbed by whoever already owns the corpus. Then the one thing
-  empty from every direction &mdash; across this catalog, 40 entries claim to enforce permissions, 7 carry valid time,
-  4 can abstain, and 2 address conflicting claims at all.</p>
+  empty from every direction &mdash; across this catalog, 58 entries claim to enforce permissions, 24 record who
+  decided, 16 carry valid time, and 12 can report logical entailment.</p>
   <div class="meta"><span>Map</span><span>November 2026</span></div></li>
 </ul>
 <p class="section-label">The catalog</p>
