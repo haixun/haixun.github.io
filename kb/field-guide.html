@@ -1,0 +1,1798 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="November 2026. Written from public sources: vendor documentation, research papers, standards documents, and practitioner and analyst writing. Copies of the sources are under sources/, and working notes with more detail are under notes/.">
+<title>Ontologies for AI agents: a guide to the field · Knowledge Layer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css?v=98a06d24">
+</head>
+<body>
+<nav class="topbar"><div class="wrap">
+  <a href="index.html">&larr; Knowledge Layer</a>
+  <span class="crumb">Guide &middot; <b>Ontologies for AI Agents</b></span>
+  <span class="navlinks"><a href="browse.html">Browse</a><a href="whats-new.html">New</a><a href="landscape.html">Map</a></span>
+</div></nav>
+<div class="layout">
+<aside class="side"><details class="sidebox" open><summary>Menu</summary>
+<a class="brand" href="index.html">Knowledge Layer</a>
+<ul>
+<li><a href="index.html">Overview</a></li>
+<li><a href="whats-new.html">What&rsquo;s new</a></li>
+<li><a href="browse.html">Browse &amp; search</a></li>
+</ul>
+<p class="side-h">Read</p><ul>
+<li><a class="on" href="field-guide.html">Field guide</a></li>
+<li><a href="landscape.html">The Knowledge Layer</a></li>
+</ul>
+<p class="side-h">Catalog</p><ul>
+<li><a href="papers.html">Papers <span class="n">(59)</span></a></li>
+<li><a href="companies.html">Companies <span class="n">(56)</span></a></li>
+<li><a href="products.html">Products <span class="n">(30)</span></a></li>
+<li><a href="articles.html">Articles <span class="n">(43)</span></a></li>
+<li><a href="benchmarks.html">Benchmarks <span class="n">(33)</span></a></li>
+<li><a href="timeline.html">Timeline</a></li>
+</ul>
+<details class="side-group" open><summary>Themes</summary><ul>
+<li><a href="topics/topics--ontology-engineering.html">ontology-engineering <span class="n">(60)</span></a></li>
+<li><a href="topics/topics--kg-construction.html">kg-construction <span class="n">(34)</span></a></li>
+<li><a href="topics/topics--graphrag.html">graphrag <span class="n">(30)</span></a></li>
+<li><a href="topics/topics--entity-resolution.html">entity-resolution <span class="n">(7)</span></a></li>
+<li><a href="topics/topics--hybrid-retrieval.html">hybrid-retrieval <span class="n">(21)</span></a></li>
+<li><a href="topics/topics--agentic-retrieval.html">agentic-retrieval <span class="n">(14)</span></a></li>
+<li><a href="topics/topics--long-context-vs-retrieval.html">long-context-vs-retrieval <span class="n">(12)</span></a></li>
+<li><a href="topics/topics--agent-memory.html">agent-memory <span class="n">(23)</span></a></li>
+<li><a href="topics/topics--permissions-and-acl.html">permissions-and-acl <span class="n">(20)</span></a></li>
+<li><a href="topics/topics--provenance-and-lineage.html">provenance-and-lineage <span class="n">(14)</span></a></li>
+<li><a href="topics/topics--temporal-knowledge.html">temporal-knowledge <span class="n">(11)</span></a></li>
+<li><a href="topics/topics--conflict-resolution.html">conflict-resolution <span class="n">(10)</span></a></li>
+<li><a href="topics/topics--abstention.html">abstention <span class="n">(8)</span></a></li>
+<li><a href="topics/topics--semantic-layer.html">semantic-layer <span class="n">(36)</span></a></li>
+<li><a href="topics/topics--metadata-catalog.html">metadata-catalog <span class="n">(21)</span></a></li>
+<li><a href="topics/topics--mcp-and-tools.html">mcp-and-tools <span class="n">(24)</span></a></li>
+<li><a href="topics/topics--evaluation.html">evaluation <span class="n">(46)</span></a></li>
+<li><a href="topics/topics--benchmark-integrity.html">benchmark-integrity <span class="n">(10)</span></a></li>
+<li><a href="topics/topics--neurosymbolic.html">neurosymbolic <span class="n">(24)</span></a></li>
+<li><a href="topics/topics--tacit-knowledge.html">tacit-knowledge <span class="n">(8)</span></a></li>
+<li><a href="topics/topics--open-standards.html">open-standards <span class="n">(39)</span></a></li>
+<li><a href="topics/topics--consolidation.html">consolidation <span class="n">(32)</span></a></li>
+<li><a href="topics/topics--graveyard.html">graveyard <span class="n">(14)</span></a></li>
+<li><a href="topics/topics--survey.html">survey <span class="n">(13)</span></a></li>
+<li><a href="topics/topics--security.html">security <span class="n">(15)</span></a></li>
+<li><a href="topics/topics--bottom-up-ontology.html">bottom-up-ontology <span class="n">(12)</span></a></li>
+<li><a href="topics/topics--hyperscaler-ontology.html">hyperscaler-ontology <span class="n">(16)</span></a></li>
+<li><a href="topics/topics--ontology-maintenance.html">ontology-maintenance <span class="n">(10)</span></a></li>
+<li><a href="topics/topics--attestation.html">attestation <span class="n">(18)</span></a></li>
+<li><a href="topics/topics--cross-organisation.html">cross-organisation <span class="n">(7)</span></a></li>
+<li><a href="topics/topics--agent-identity.html">agent-identity <span class="n">(7)</span></a></li>
+<li><a href="topics/topics--regulation.html">regulation <span class="n">(6)</span></a></li>
+<li><a href="topics/topics--context-graph.html">context-graph <span class="n">(16)</span></a></li>
+<li><a href="topics/topics--agentic-ontology.html">agentic-ontology <span class="n">(20)</span></a></li>
+<li><a href="topics/topics--text-to-sql.html">text-to-sql <span class="n">(12)</span></a></li>
+<li><a href="topics/topics--measured-lift.html">measured-lift <span class="n">(22)</span></a></li>
+<li><a href="topics/topics--competency-questions.html">competency-questions <span class="n">(5)</span></a></li>
+<li><a href="topics/topics--ranking-authority.html">ranking-authority <span class="n">(6)</span></a></li>
+<li><a href="topics/topics--silent-errors.html">silent-errors <span class="n">(5)</span></a></li>
+<li><a href="topics/topics--three-layer-design.html">three-layer-design <span class="n">(7)</span></a></li>
+</ul></details>
+<details class="side-group"><summary>What it commits</summary><ul>
+<li><a href="topics/commits--nothing.html">nothing <span class="n">(10)</span></a></li>
+<li><a href="topics/commits--index.html">index <span class="n">(39)</span></a></li>
+<li><a href="topics/commits--facts.html">facts <span class="n">(63)</span></a></li>
+<li><a href="topics/commits--glossary.html">glossary <span class="n">(53)</span></a></li>
+<li><a href="topics/commits--ontology.html">ontology <span class="n">(88)</span></a></li>
+<li><a href="topics/commits--rules.html">rules <span class="n">(37)</span></a></li>
+<li><a href="topics/commits--memory.html">memory <span class="n">(19)</span></a></li>
+</ul></details>
+<details class="side-group"><summary>How</summary><ul>
+<li><a href="topics/route--declare.html">declare <span class="n">(73)</span></a></li>
+<li><a href="topics/route--induce.html">induce <span class="n">(56)</span></a></li>
+<li><a href="topics/route--hybrid.html">hybrid <span class="n">(37)</span></a></li>
+<li><a href="topics/route--traverse.html">traverse <span class="n">(23)</span></a></li>
+<li><a href="topics/route--agentic.html">agentic <span class="n">(41)</span></a></li>
+<li><a href="topics/route--lexical-semantic.html">lexical-semantic <span class="n">(26)</span></a></li>
+<li><a href="topics/route--long-context.html">long-context <span class="n">(3)</span></a></li>
+<li><a href="topics/route--manual.html">manual <span class="n">(7)</span></a></li>
+</ul></details>
+<details class="side-group"><summary>Market layer</summary><ul>
+<li><a href="topics/layer--enterprise-search.html">enterprise-search <span class="n">(13)</span></a></li>
+<li><a href="topics/layer--catalog-governance.html">catalog-governance <span class="n">(17)</span></a></li>
+<li><a href="topics/layer--graph-platform.html">graph-platform <span class="n">(22)</span></a></li>
+<li><a href="topics/layer--semantic-layer.html">semantic-layer <span class="n">(21)</span></a></li>
+<li><a href="topics/layer--retrieval-infra.html">retrieval-infra <span class="n">(7)</span></a></li>
+<li><a href="topics/layer--agent-memory.html">agent-memory <span class="n">(7)</span></a></li>
+<li><a href="topics/layer--agent-platform.html">agent-platform <span class="n">(7)</span></a></li>
+<li><a href="topics/layer--hyperscaler.html">hyperscaler <span class="n">(19)</span></a></li>
+<li><a href="topics/layer--open-source.html">open-source <span class="n">(19)</span></a></li>
+<li><a href="topics/layer--vertical-app.html">vertical-app <span class="n">(5)</span></a></li>
+<li><a href="topics/layer--research-lab.html">research-lab <span class="n">(2)</span></a></li>
+<li><a href="topics/layer--standards-body.html">standards-body <span class="n">(15)</span></a></li>
+<li><a href="topics/layer--services.html">services <span class="n">(4)</span></a></li>
+<li><a href="topics/layer--assurance.html">assurance <span class="n">(5)</span></a></li>
+</ul></details>
+<details class="side-group"><summary>What grounds</summary><ul>
+<li><a href="topics/grounds--citation.html">citation <span class="n">(37)</span></a></li>
+<li><a href="topics/grounds--provenance.html">provenance <span class="n">(70)</span></a></li>
+<li><a href="topics/grounds--authority.html">authority <span class="n">(59)</span></a></li>
+<li><a href="topics/grounds--valid-time.html">valid-time <span class="n">(16)</span></a></li>
+<li><a href="topics/grounds--permissions.html">permissions <span class="n">(58)</span></a></li>
+<li><a href="topics/grounds--abstention.html">abstention <span class="n">(12)</span></a></li>
+<li><a href="topics/grounds--benchmark.html">benchmark <span class="n">(46)</span></a></li>
+<li><a href="topics/grounds--decision-record.html">decision-record <span class="n">(24)</span></a></li>
+<li><a href="topics/grounds--entailment.html">entailment <span class="n">(12)</span></a></li>
+</ul></details>
+<details class="side-group"><summary>Domain</summary><ul>
+<li><a href="topics/domain--general.html">general <span class="n">(111)</span></a></li>
+<li><a href="topics/domain--enterprise-workflow.html">enterprise-workflow <span class="n">(73)</span></a></li>
+<li><a href="topics/domain--documents.html">documents <span class="n">(12)</span></a></li>
+<li><a href="topics/domain--code.html">code <span class="n">(3)</span></a></li>
+<li><a href="topics/domain--data-analytics.html">data-analytics <span class="n">(49)</span></a></li>
+<li><a href="topics/domain--financial-services.html">financial-services <span class="n">(5)</span></a></li>
+<li><a href="topics/domain--legal.html">legal <span class="n">(3)</span></a></li>
+<li><a href="topics/domain--biomedical.html">biomedical <span class="n">(6)</span></a></li>
+<li><a href="topics/domain--customer-support.html">customer-support <span class="n">(7)</span></a></li>
+<li><a href="topics/domain--science.html">science <span class="n">(1)</span></a></li>
+</ul></details>
+</details></aside>
+<div class="content">
+<header class="mast"><div class="wrap"><p class="kicker">Guide</p><h1>Ontologies for AI agents: a guide to the field</h1><p class="standfirst"><em>November 2026. Written from public sources: vendor documentation, research papers, standards documents, and practitioner and analyst writing. Copies of the sources are under <code>sources/</code>, and working notes with more detail are under <code>notes/</code>.</em></p></div></header><div class="wrap"><nav class="toc"><h2>Contents</h2><ol class="plain"><li><a href="#part-1-the-problem">Part 1. The problem</a></li><li><a href="#part-2-the-vocabulary-in-plain-words">Part 2. The vocabulary, in plain words</a></li><li><a href="#part-3-two-ways-to-give-an-agent-meaning">Part 3. Two ways to give an agent meaning</a></li><li><a href="#part-4-what-the-big-platforms-built-in-2026">Part 4. What the big platforms built in 2026</a></li><li><a href="#part-5-the-ranking-problem">Part 5. The ranking problem</a></li><li><a href="#part-6-what-the-research-shows">Part 6. What the research shows</a></li><li><a href="#part-7-the-problems-nobody-has-solved">Part 7. The problems nobody has solved</a></li><li><a href="#part-8-standards-what-exists-and-what-s-coming">Part 8. Standards: what exists and what's coming</a></li><li><a href="#part-9-the-debate-in-the-participants-words">Part 9. The debate, in the participants' words</a></li><li><a href="#part-10-practical-advice-for-a-team-starting-out">Part 10. Practical advice for a team starting out</a></li><li><a href="#part-11-what-to-watch-in-the-coming-months">Part 11. What to watch in the coming months</a></li><li><a href="#sources">Sources</a></li></ol></nav><main class="doc"><p><em>A note on numbers.</em> Most accuracy figures in this field come from the company selling the product, and almost none have been checked by anyone else. Each figure below says who reported it.</p>
+<hr>
+<h2 id="part-1-the-problem">Part 1. The problem</h2>
+<p>Imagine asking an AI agent at your company a simple question: "How many active customers did we have last quarter?"</p>
+<p>The model is fluent and capable, but it can't answer this well on its own, for three reasons.</p>
+<ol>
+<li>
+<strong>It doesn't know what your words mean.</strong>
+<ul>
+<li>"Active customer" might mean someone who logged in within 30 days, someone with a paid contract, or someone who placed an order. Different teams often use different definitions.</li>
+<li>"Last quarter" depends on whether your fiscal year starts in January or July.</li>
+<li>None of this is in the model's training data, because it's private to your company.</li>
+</ul>
+</li>
+<li>
+<strong>It doesn't know where the data lives.</strong>
+<ul>
+<li>There may be five tables with "customer" in the name: one current, one deprecated, one a test copy.</li>
+<li>A human analyst learns over months which one to trust. The agent starts from zero every time.</li>
+</ul>
+</li>
+<li>
+<strong>It doesn't know what it's allowed to show.</strong> The person asking may not be permitted to see revenue for every region. The answer has to respect that.</li>
+</ol>
+<p>Everything in this guide is about one question: <strong>how do you give an AI agent the business knowledge it needs to answer correctly?</strong> In 2026 this became one of the most active areas in enterprise software. The industry has a dozen names for it: ontology, knowledge graph, semantic layer, context layer, context engineering.</p>
+<hr>
+<h2 id="part-2-the-vocabulary-in-plain-words">Part 2. The vocabulary, in plain words</h2>
+<p>The terms overlap and vendors use them loosely. Here is what each means, using the "active customer" example.</p>
+<ul>
+<li>
+<p><strong>Glossary.</strong> A list of business terms with agreed definitions. "Active customer: a customer with at least one paid order in the last 90 days. Owner: Finance." It tells people (and agents) what words mean, but it doesn't compute anything.</p>
+</li>
+<li>
+<p><strong>Semantic layer, or metrics layer.</strong> A glossary that a computer can execute. "Active customers" is defined once as a precise calculation over specific tables, and every dashboard and agent that asks for it gets the same number. dbt, Cube, LookML (Google's Looker) and similar tools work this way. A semantic layer is good at <em>measures</em>: counts, sums, ratios.</p>
+</li>
+<li>
+<p><strong>Ontology.</strong> A model of the <em>things</em> in your business and how they relate. Customers place orders; orders contain products; an account manager owns a customer; a contract has a start and end date. An ontology says which kinds of things exist, what properties they have and which relationships are allowed. A semantic layer models calculations; an ontology models the business itself.</p>
+</li>
+<li>
+<p><strong>Knowledge graph.</strong> The actual data arranged according to such a model: this specific customer, connected to these specific orders. The ontology is the blueprint; the knowledge graph is the building.</p>
+</li>
+<li>
+<p><strong>Context graph.</strong> A newer term for a knowledge graph that also records what is <em>happening</em>: live relationships, events, decisions and who did what. Tata Communications draws the line clearly: the ontology "defines entities, relationships, roles and rules", and the context graph "connects them with history, dependencies and events". If the ontology is the rulebook, the context graph is the running record of play. (One explainer, Zero Future Tech's "The 5 Graphs Behind AI Agents", extends the list to five: ontology, knowledge graph, context graph, a graph of code, and a graph of the agent's own workflow.)</p>
+</li>
+<li>
+<p><strong>Context layer.</strong> The 2026 umbrella term, adopted by both Forrester and Gartner in August 2026. It means everything above the raw data that helps an agent answer correctly: definitions, metrics, relationships, which sources are trustworthy, usage history and permissions. Forrester calls it "the next evolution of semantic layers and knowledge graphs".</p>
+</li>
+<li>
+<p><strong>Context engineering.</strong> The practice of deciding what information to put in front of a model at each step. The term spread in mid-2025 (Shopify's Tobi Lütke, then Andrej Karpathy). It's broader than ontology: it also covers conversation history, tool results and file contents. An ontology is one of the things a context engineer can draw on.</p>
+</li>
+</ul>
+<p>Three more distinctions help when reading the literature.</p>
+<ul>
+<li>
+<p><strong>An ontology <em>for</em> agents versus an ontology <em>of</em> agents.</strong></p>
+<ul>
+<li>Most of this guide is about ontologies that describe the business, so an agent can understand it.</li>
+<li>A second, smaller line of work builds ontologies that describe <em>agent systems themselves</em>: which agents exist, what tasks and tools they have, what they remember, how they hand work to each other.</li>
+<li>
+<strong>AgentO</strong> (ESWC 2026) is the clearest example. Its 18 classes include Team, LLMAgent, HumanAgent, Task, Goal, Tool, Memory, WorkflowPattern and Constraint, and it reuses the W3C provenance vocabulary. It's useful for auditing what agents did (Part 7), not for answering business questions.</li>
+</ul>
+</li>
+<li>
+<p><strong>Three ways language models and knowledge graphs combine.</strong> The standard map of the field (Pan and colleagues' "Unifying Large Language Models and Knowledge Graphs: A Roadmap", IEEE TKDE 2024) sorts the work into three kinds:</p>
+<ul>
+<li>knowledge graphs that make language models better (grounding, fact-checking);</li>
+<li>language models that help build knowledge graphs (extraction, drafting);</li>
+<li>the two working together, each doing what it's good at.</li>
+</ul>
+<p>Almost everything in this guide is the third kind.</p>
+</li>
+<li>
+<p><strong>Classic background.</strong> Two older works are still the best introductions:</p>
+<ul>
+<li>Noy and McGuinness's <em>Ontology Development 101</em> (Stanford, 2001) is the standard step-by-step guide to building an ontology by hand: define the scope, list the terms, define classes and their hierarchy, then properties and constraints.</li>
+<li>Hogan and colleagues' <em>Knowledge Graphs</em> (ACM Computing Surveys, 2021) is the most complete survey of what knowledge graphs are and how they're built and used.</li>
+</ul>
+<p>Part 6 describes a 2026 update to the first, written for building ontologies with AI agents.</p>
+</li>
+</ul>
+<p>One more idea runs through the whole field: <strong>who commits to a meaning, and when.</strong> That's Part 3.</p>
+<hr>
+<h2 id="part-3-two-ways-to-give-an-agent-meaning">Part 3. Two ways to give an agent meaning</h2>
+<p>There are two basic strategies, and most of the debate is between them.</p>
+<h3 class="heading-element">Strategy one: decide up front</h3>
+<p>Someone (a data team, domain experts) decides in advance what "active customer" means, writes it down in a governed place, and connects it to the right tables. When the agent is asked, it looks up the agreed definition and uses it.</p>
+<p><strong>The advantage is consistency.</strong> Everyone gets the same answer, and if the question can't be expressed with the agreed definitions, the system can say so instead of guessing.</p>
+<p><strong>The cost is maintenance.</strong> Businesses change. Teams reorganise, products launch, definitions drift. Someone has to keep the model current forever, and that work rarely has a budget. This is the traditional objection to ontologies: not that they're hard to draft, but that they rot.</p>
+<p>Palantir is the most successful example. Its Foundry platform is built around an ontology, and Palantir reported $2.31 billion of revenue in the third quarter of 2026 (company-reported). But it sells that ontology with its own engineers attached, who build and maintain it with the customer.</p>
+<h3 class="heading-element">Strategy two: work it out each time</h3>
+<p>Leave the data as it is. When a question arrives, the agent searches documents, reads table descriptions, looks at past queries and decides on the spot what "active customer" probably means.</p>
+<p><strong>The advantage is no up-front cost</strong>, and the system keeps working as things change.</p>
+<p><strong>The cost is paid on every question</strong>, in time and tokens. And when sources disagree, nothing tells the agent which one is authoritative, so two people asking the same question can get different answers.</p>
+<p>The strongest evidence for this strategy comes from coding agents. Anthropic's Claude Code dropped its search index in favour of letting the agent explore files directly; its creator said "agentic search generally works better". But code is a special case: names are exact and repositories are small enough to explore. Anthropic's own guidance on context engineering adds that some data retrieved up front "might be better suited for … legal or finance work".</p>
+<h3 class="heading-element">The middle ground</h3>
+<p>Most serious practitioners now argue for a mix: <em>decide the meaning, let the agent find its way to it.</em> Commit to a small set of definitions people have approved, and let the agent search and reason around them. Kurt Cagle, Tim Kellogg and Anthropic all describe the ontology as a <strong>tool the agent calls</strong>, not text pasted into its prompt. As Part 4 shows, this middle ground is what the big platforms built in 2026.</p>
+<p><strong>A longer view.</strong> A 2026 history of agents and the semantic web ("From Multi-Agent Systems and the Semantic Web to Agentic AI") tells this as a story about <em>where meaning lives</em>.</p>
+<ul>
+<li>
+<strong>Agents of the 1990s</strong> carried meaning in the platform: agreed message formats and shared ontologies that every agent had to follow.</li>
+<li>
+<strong>The semantic web of the 2000s</strong> moved meaning into the data itself, as published, machine-readable vocabularies.</li>
+<li>
+<strong>Language-model agents</strong> moved it into the model, which buys flexibility but loses the ability to check.</li>
+</ul>
+<p>The authors predict the next step is meaning written into <em>verifiable contracts</em> between agents and tools: signed descriptions of what a tool does, checkable statements of what an agent may do. That's another way of describing the middle ground: let the model be flexible, and commit the parts that must be checked.</p>
+<p>A large 2025 survey of agent research ("Agentic AI: A Comprehensive Survey of Architectures, Applications, and Future Directions", 90 studies) finds the same split in the literature. Symbolic, rule-based designs dominate safety-critical applications; neural, model-based designs dominate adaptive ones. The authors argue the future is hybrid.</p>
+<hr>
+<h2 id="part-4-what-the-big-platforms-built-in-2026">Part 4. What the big platforms built in 2026</h2>
+<p>Between June and November 2026, nearly every large data platform shipped or announced a "context" or "ontology" product. The names differ, but most follow one design. This part explains that design first, then walks through each vendor in turn: what it built, how the knowledge gets in, how it decides which definition to trust, how it handles permissions, how agents reach it, and what is shipping versus only promised.</p>
+<h3 class="heading-element">The three-layer design</h3>
+<p>Return to "active customer".</p>
+<p><strong>Layer one: what the system learns by watching.</strong></p>
+<ul>
+<li>The platform reads your query history, dashboards, notebooks, BI models and documents. It notices, for example, that Finance analysts usually compute active customers from the <code>orders</code> table with a 90-day window and a filter that excludes test accounts.</li>
+<li>It records this as a <em>learned</em> definition. Nobody wrote it down; the system inferred it from how people actually work.</li>
+<li>Learned knowledge is cheap to collect and covers a lot of ground. It can also be wrong: the most common habit isn't always the correct one, and an old dashboard nobody maintains can still be the most-used.</li>
+</ul>
+<p><strong>Layer two: what a person has approved.</strong></p>
+<ul>
+<li>A data steward or domain owner reviews the learned definition and certifies it: "Yes, this is the official definition of active customer, owned by Finance."</li>
+<li>Approved knowledge is smaller and slower to build, but trustworthy.</li>
+<li>When learned and approved definitions disagree, every vendor says approved wins.</li>
+</ul>
+<p><strong>Layer three: what actually runs.</strong></p>
+<ul>
+<li>The approved definition becomes an executable metric (a semantic-layer calculation), so every dashboard and every agent computes the number the same way.</li>
+<li>Layer three is what lets a system <em>refuse</em> a question it can't express, instead of improvising a query.</li>
+</ul>
+<p><strong>The weak point is moving from layer one to layer two.</strong> How does a learned definition get reviewed and promoted? Who reviews it, and is the review recorded? What happens to answers that relied on the old definition? As of November 2026, this promotion step is the least finished part of every vendor's product. Several call it "coming soon".</p>
+<h3 class="heading-element">Databricks: Genie Ontology</h3>
+<p><strong>What it is.</strong></p>
+<ul>
+<li>Databricks announced Genie Ontology at its June 2026 summit and made it generally available on 11 November 2026.</li>
+<li>It sits inside Unity Catalog, Databricks' governance layer, and feeds Genie, Databricks' agent for answering business questions.</li>
+<li>It's the most complete shipping example of the three-layer design.</li>
+</ul>
+<p><strong>Modelled knowledge (written by people)</strong> comes in several forms:</p>
+<ul>
+<li>
+<strong>Metric Views</strong> are executable definitions of KPIs: the calculation, the tables, the filters.</li>
+<li>
+<strong>Pages</strong> are definitions of business concepts, each with an owner, a domain and synonyms. Think of them as the official glossary entries.</li>
+<li>
+<strong>Domains</strong> group knowledge by business area, such as Finance or Supply Chain, and carry their own permissions.</li>
+<li>
+<strong>Certification and deprecation flags</strong> on tables and dashboards say which assets are trusted and which are retired.</li>
+<li>
+<strong>Curated Genie Agents</strong> are agents that a team has set up and vouched for, such as a Finance agent.</li>
+</ul>
+<p><strong>Learned knowledge</strong> comes as "snippets". Genie extracts them automatically from metric views, dashboards, SQL query history (including dbt runs), notebooks, existing Genie agents and BI semantic models. They come in three types:</p>
+<ul>
+<li>
+<em>Metric definitions</em>: how a number is usually computed.</li>
+<li>
+<em>Authoritative sources</em>: pointers about where to look, such as "Revenue questions should be answered using the curated Finance Genie Agent".</li>
+<li>
+<em>Business rules</em>: conventions such as "fiscal year starts in February".</li>
+</ul>
+<p>In Databricks' own words, "most of Genie Ontology's knowledge is automatically learned."</p>
+<p><strong>It isn't an ontology in the classical sense.</strong></p>
+<ul>
+<li>There's no formal model of classes, properties and allowed relationships. "Ontology" here means a large collection of definitional snippets and pointers, plus governed metrics.</li>
+<li>Learned snippets can't be edited directly. To fix a wrong one, you change the asset it was learned from, or override it with a written Page or Metric View.</li>
+</ul>
+<p><strong>How knowledge gets in.</strong></p>
+<ul>
+<li>Most of it arrives automatically from Databricks assets.</li>
+<li>There's also a beta connector for <strong>external knowledge sources</strong>. Today that's Power BI semantic models only; Tableau and Sigma are "coming soon".</li>
+<li>Genie can <strong>draft Pages in bulk</strong> from Confluence, Slack, Google Docs and GitHub. It flags conflicts, duplicates and low-confidence terms, and puts the results in a draft state for review.</li>
+<li>A visual curation tool, <strong>Ontology Manager</strong>, with a review queue for "promot[ing] what agents have learned into authoritative Pages", is announced as "coming soon in Beta". In other words, the layer-one-to-layer-two step is not yet shipped as a tool.</li>
+</ul>
+<p><strong>How it decides which definition to trust.</strong></p>
+<ul>
+<li>Every snippet gets an <strong>authority score</strong> "based on where it was generated from, how often it is used, and how fresh it is". Databricks calls the ranking <strong>OntoRank</strong>, a deliberate echo of Google's PageRank.</li>
+<li>OntoRank also weighs certification, the author's expertise and <strong>organisational signals</strong>. It uses the company's org chart (imported from Workday) and collaboration patterns to give more weight to "knowledge from teammates and close collaborators" of the person asking.</li>
+<li>Modelled knowledge, certified assets and curated agents "generally take precedence" over learned snippets.</li>
+<li>If Genie can't resolve a conflict, the documentation says "it might ask you for clarification". That's the most useful behaviour on offer from any vendor here: asking instead of guessing.</li>
+</ul>
+<p><strong>Permissions.</strong></p>
+<ul>
+<li>Learned snippets inherit the Unity Catalog permissions of their source asset, so you only see knowledge learned from data you're allowed to see.</li>
+<li>Pages inherit the permissions of their domain.</li>
+<li>The documentation lists two exceptions:
+<ul>
+<li>Snippets learned from external sources (Power BI) "are available to all users in your account", whatever the permissions on the original Power BI model.</li>
+<li>By default, <em>all account users</em> may create and publish Pages, the official definitions. An administrator must restrict this deliberately.</li>
+</ul>
+</li>
+<li>Page data "may be replicated globally" and doesn't support customer-managed encryption keys. The documentation advises against putting personal or regulated data in Pages.</li>
+</ul>
+<p><strong>How agents reach it.</strong></p>
+<ul>
+<li>Agents outside Databricks connect through a <strong>Genie MCP server</strong>, generally available. MCP is a standard protocol for connecting agents to tools (Part 8). Named clients include Claude, Claude Code, ChatGPT, Cursor and Microsoft Copilot.</li>
+<li>The tools are conversational: an outside agent asks Genie a question and receives an answer with the SQL behind it. It doesn't receive the definitions themselves. In effect, Databricks is selling the agent that uses the ontology, not the ontology.</li>
+<li>An older beta version of the MCP endpoint is retired on 30 November 2026.</li>
+</ul>
+<p><strong>Price.</strong> "At this time, customers do not incur costs for curating ontology snippets," and Databricks "may update pricing."</p>
+<p><strong>The claim.</strong></p>
+<ul>
+<li>Databricks reports a 91% pass rate against 45% and 58% for two unnamed frontier-model agents, using about 432,000 tokens against 889,000 and 1.05 million. The benchmark was built with Turing around a fictional British energy company.</li>
+<li>Three caveats come from Databricks' own write-up:
+<ul>
+<li>The competing agents weren't given access to Genie's knowledge.</li>
+<li>The result reflects "an established deployment where teams have accumulated that knowledge".</li>
+<li>Replication goes through "your account team".</li>
+</ul>
+</li>
+<li>An earlier claim from June was 84.5% against 52.4% on a proprietary set.</li>
+<li>Named customers include 7-Eleven, Virgin Atlantic, GM and BHG Financial.</li>
+</ul>
+<p><strong>Our reading.</strong> Genie Ontology is a serious product, and its "ask for clarification" behaviour is something others should copy. Two choices deserve scrutiny before adoption. First, authority depends partly on who's asking: two people can get different "official" answers. Second, the default lets anyone publish the official definitions.</p>
+<h3 class="heading-element">Glean: no definitions, just very good ranking</h3>
+<p><strong>What it is.</strong> Glean is the best-known enterprise search company. It connects to more than 275 business applications (vendor figure) and lets employees and agents search and ask questions across them. In 2026 it repositioned itself from "search" to "system of context". Its two 2026 blog posts on indexing and context are the clearest statement of the opposite position to Databricks.</p>
+<p><strong>What it builds.</strong> Glean names five components:</p>
+<ul>
+<li>
+<strong>Indexes</strong>: separate search indexes for company documents, code, people and their expertise, profiles, tools and calendars. Glean trains the search models on each customer's own corpus, so they learn the company's acronyms and product names.</li>
+<li>
+<strong>Graphs</strong>: an <em>Enterprise Graph</em> connecting people, projects, documents and activity, and a <em>personal graph</em> for each employee describing what they work on and with whom. Both launched in September 2025.</li>
+<li>
+<strong>Memory</strong>: what the assistant has learned about a user and their work.</li>
+<li>
+<strong>Connectors</strong>: for each source, Glean either indexes the content, queries it as structured data, or calls it live ("federation"), depending on what the source allows.</li>
+<li>
+<strong>Tools</strong>: actions an agent can take, Glean's own and third-party via MCP.</li>
+</ul>
+<p><strong>How knowledge gets in.</strong> Entirely automatically. Glean builds its graphs "entirely using machine learning by understanding the data structures of enterprise apps and automatically inferring entities". Its FAQ asks whether building a knowledge graph requires manual modelling or upkeep, and answers: "Not on a platform like Glean."</p>
+<p><strong>How it decides which document to trust.</strong> Ranking. When several documents answer a question, Glean uses signals such as "authorship, views, edits, comments, freshness, and relationships" to decide "which one the company trusts". It's the same idea as OntoRank, applied to documents instead of definitions.</p>
+<p><strong>Permissions.</strong> Glean copies each source's permissions when it indexes content and enforces them at query time. "Updates, permission changes, and deletions are reflected." It runs in a single-tenant environment per customer. None of this has been independently measured.</p>
+<p><strong>Its argument about MCP.</strong> Glean argues that connecting an agent to dozens of live tools through MCP isn't a substitute for an index: "MCP is a communication protocol ... but it doesn't address relevance." An agent that queries ten systems live gets ten partial answers; it still needs something to rank them.</p>
+<p><strong>The claim.</strong></p>
+<ul>
+<li>Glean's evaluation used about 280 queries drawn from its own internal deployment, judged by four human graders.</li>
+<li>When the graders had a preference, they chose Glean's answer as correct 1.9 times as often as ChatGPT's company-knowledge feature and 1.6 times as often as Claude's enterprise search.</li>
+<li>Glean notes that ChatGPT lacked Jira and Salesforce connectors at the time. Ties were excluded, and Glean designed and ran the test.</li>
+</ul>
+<p><strong>Context.</strong> In 2026 the data platforms (Databricks, Microsoft) and the model companies (OpenAI, Anthropic) all launched enterprise search of their own. Glean's indexing post opens with "More enterprise AI vendors are turning to indexing". It reads as a defence of the standalone index against platforms that now offer one as a feature. <em>(Our interpretation; the post names no one.)</em></p>
+<p><strong>Our reading.</strong> Glean commits no meaning and says so. Its bet is that ranking good enough to stand in for authority is cheaper than defining it. That's a coherent bet for documents and conversations, where nobody owns "the truth". It's a weaker bet for numbers, where two plausible definitions give two different answers.</p>
+<h3 class="heading-element">Palantir: the ontology that can act</h3>
+<p><strong>What it is.</strong> Palantir's Foundry Ontology is the oldest and most complete product in this survey, and the only one with real scale. Palantir reported revenue of $2.31 billion in the third quarter of 2026, up 96% from a year earlier. US commercial revenue ($984 million) overtook US government revenue ($953 million) for the first time (company-reported).</p>
+<p><strong>What it commits.</strong> Four kinds of thing:</p>
+<ul>
+<li>
+<strong>Object types</strong>: the things in the business (customer, order, aircraft, claim) and their properties.</li>
+<li>
+<strong>Link types</strong>: the allowed relationships between them.</li>
+<li>
+<strong>Action types</strong>: governed operations that change the data, such as "approve this claim" or "reassign this work order", each with rules about who may perform it and what it checks first.</li>
+<li>
+<strong>Functions</strong>: business logic written as code (Palantir calls its AI-assisted version AIP Logic).</li>
+</ul>
+<p>(A popular 2026 explainer summarises Palantir's ontology in six parts: objects, links, properties, logic, actions and security. That's a reasonable reading, but the explainer gives no Palantir source for it.)</p>
+<p>The action types are what set Palantir apart. Every other product in this part describes the business; Palantir's ontology also defines what may be <em>done</em> to it.</p>
+<p><strong>How it's built.</strong> By people: Palantir's own forward-deployed engineers and customers' developers, working together. Since 2026 they can do this with AI help from their code editors (Claude Code, Cursor and others) through a builder tool, <strong>Palantir MCP</strong>, which has more than 70 tools. That tool can change the ontology's <em>structure</em>, but it "cannot write actual ontology data".</p>
+<p><strong>How agents reach it.</strong> Through <strong>Ontology MCP</strong>, generally available from mid-June 2026:</p>
+<ul>
+<li>Agents read objects through an SQL tool.</li>
+<li>Each action type appears as a separate MCP tool. An agent that wants to approve a claim calls the "approve claim" tool, which enforces the same rules a human user would face.</li>
+<li>Functions can be exposed too, so agents can call other agents.</li>
+<li>Named clients include Microsoft Copilot Studio, Claude, Gemini Enterprise and custom agents.</li>
+</ul>
+<p><strong>Permissions.</strong></p>
+<ul>
+<li>Every tool call runs "under the authenticated user's existing Foundry permissions", through standard OAuth sign-in.</li>
+<li>Administrators can restrict which actions an agent may take.</li>
+<li>Security policies on individual objects and properties can now be tested before release.</li>
+<li>Palantir's documentation also warns plainly that connecting an outside AI model makes Foundry data "available to an external MCP client".</li>
+</ul>
+<p><strong>An interesting detail.</strong> Palantir's documentation shows <strong>"skills"</strong> (written instructions for how to do a task, such as "get or create a task") layered on top of the ontology tools. So even the most committed ontology vendor doesn't put everything in the ontology. The ontology says what exists and what may be done; procedural know-how lives in ordinary text files the agent reads.</p>
+<p><strong>How competitors position against it.</strong> ServiceNow's 2026 launch blog attacks the Palantir model without naming it: "Field engineers. Custom ontologies. Manual mapping. Six months later, a beautiful model of your business — frozen in time." Databricks' launch makes the same argument: built by specialists, maintained manually, "quickly became outdated". The learned-context products exist largely as an answer to that critique.</p>
+<h3 class="heading-element">Microsoft: Fabric IQ and Microsoft IQ</h3>
+<p><strong>What it is.</strong> At Ignite on 17 November 2026, Microsoft made <strong>Microsoft IQ</strong> generally available. It's an umbrella over four sources of context:</p>
+<ul>
+<li>
+<strong>Fabric IQ</strong>: business data and its ontology, from Fabric, Microsoft's data platform.</li>
+<li>
+<strong>Work IQ</strong>: Microsoft 365 email, documents, meetings and chats.</li>
+<li>
+<strong>Foundry IQ</strong>: knowledge for agents built on Microsoft's agent platform.</li>
+<li>
+<strong>Web IQ</strong>: the public web.</li>
+</ul>
+<p>Microsoft says it is "a complete enterprise context management platform", "built on products customers already use, with no new SKU or subscription". It's available to Microsoft Copilot, GitHub Copilot, Microsoft Foundry "and any agent harness via MCP".</p>
+<p><strong>The Fabric IQ ontology.</strong> This is the part that matters for this guide. It defines:</p>
+<ul>
+<li>
+<strong>Entity types and properties,</strong> with hierarchies, inheritance and namespaces.</li>
+<li>
+<strong>Relationships</strong> between entity types.</li>
+<li>
+<strong>Data bindings</strong> that connect each entity type to the tables in Microsoft's data lake that hold it.</li>
+<li>
+<strong>Metrics</strong> that reuse existing Power BI calculations (DAX measures). The ontology points to the measure; "the source semantic model remains the owner of the DAX expression".</li>
+<li>
+<strong>Rules</strong>, which are "natural-language statement[s] of business logic". That makes them guidance an agent reads, not logic a computer runs.</li>
+</ul>
+<p><strong>How it's built.</strong> Four ways:</p>
+<ul>
+<li><strong>From scratch.</strong></li>
+<li>
+<strong>Generated from an existing Power BI model,</strong> including its measures.</li>
+<li>
+<strong>By an ontology agent</strong> that works "proposal-first": the model proposes changes and a person accepts them.</li>
+<li>
+<strong>Imported</strong> from the standard semantic-web formats (RDF, Turtle, OWL). An import report lists what was kept, adjusted and unsupported. The ontology can also be exported again.</li>
+</ul>
+<p><strong>Version history.</strong></p>
+<ul>
+<li>You can save named versions of the ontology, each recording the date, the creator and a description, and restore an earlier one.</li>
+<li>In the first release, versions are created manually.</li>
+<li>That's a partial record of who decided, at the level of whole snapshots rather than individual definitions.</li>
+</ul>
+<p><strong>What's actually shipping.</strong> This needs care, because the announcements and the documentation differ.</p>
+<ul>
+<li>Microsoft IQ as a whole is generally available.</li>
+<li>The <strong>Fabric IQ ontology item is still in preview.</strong> Microsoft's documentation, checked on 24 November, still labels it so. That's more than a year after it was introduced. An Ignite session was titled "Fabric IQ Ontology GA", but an independent day-one review found Microsoft "did not announce general availability".</li>
+<li>The new <strong>connectors for ChatGPT and Claude are in preview,</strong> and they bring "insights from Power BI semantic models" into those assistants, not the ontology.</li>
+<li>Also in preview: Fabric IQ inside GitHub Copilot and Excel, ontology sharing, and <strong>Foundry IQ knowledge graphs</strong>, which "connect entities and relationships across documents".</li>
+</ul>
+<p><strong>Permissions.</strong> Standard Fabric workspace permissions apply. Querying respects row-, column- and object-level security on the source data.</p>
+<p><strong>Our reading.</strong> Microsoft's advantage is possession. It already holds most companies' documents, email, identities and permissions. Its ontology item has taken more than a year to approach general availability, even with Microsoft's resources. That's a fair measure of how hard defining enterprise meaning is.</p>
+<h3 class="heading-element">AWS: two products that disagree</h3>
+<p>AWS has two context products built on opposite philosophies, plus several smaller features.</p>
+<p><strong>The Context Ontology Accelerator</strong> (open-sourced 31 July 2026, Apache 2.0 licence) is the traditional approach, done thoroughly.</p>
+<ul>
+<li>A model drafts a formal ontology, and "your domain experts review, edit, and approve <strong>every element</strong> of it".</li>
+<li>It's stored in the W3C semantic-web standards (OWL).</li>
+<li>Automated reasoners (HermiT and ELK) check it for logical consistency.</li>
+<li>A tool called Ontop makes existing databases look like a knowledge graph without copying the data, so they can be queried with SPARQL, the standard graph query language.</li>
+<li>It supports metric definitions, has an MCP server for agents, and defines roles such as owner, maintainer, data steward and analyst.</li>
+<li>It's the most orthodox semantic-web system from any large cloud provider.</li>
+<li>Two caveats:
+<ul>
+<li>The repository is a "read-only mirror"; AWS doesn't accept outside contributions.</li>
+<li>One builder reported that the reference deployment uses 16 infrastructure stacks and costs about $930 a month while idle (unverified).</li>
+</ul>
+</li>
+</ul>
+<p><strong>AWS Context</strong> (announced 17 June 2026, still "coming soon" in late November) is the opposite.</p>
+<ul>
+<li>It "automatically maps the relationships across your existing data into a knowledge graph". Stewards review inferred relationships and promote the good ones.</li>
+<li>It "ranks sources by actual usage and shares what it learns ... without requiring a human re-curate the graph".</li>
+<li>It extends a personal knowledge graph AWS already runs for its Amazon Quick assistant into one for the whole organisation.</li>
+<li>Each query is "designed to inherit the calling user's IAM and Lake Formation permissions", and "every interaction is auditable". These are pre-release claims.</li>
+</ul>
+<p>AWS says the Accelerator's capability "will become a fully managed feature native to AWS Context". Neither product announcement says how "experts approve every element" and "learns without human re-curation" will coexist.</p>
+<p><strong>The design guide: AWS's most complete answer.</strong> In July 2026, three AWS architects (Don Simpson, Taylor Riggan, Chun Schiros) published Prescriptive Guidance titled <em>Semantic Layer for Agentic AI using Ontology, Symbolic Reasoning, and Virtual Knowledge Graph</em>. It doesn't use the Accelerator's name, but it describes the same kind of system in more detail than any vendor document in this survey. It's a design, not a product, and it reports no benchmark results.</p>
+<ul>
+<li>
+<p><strong>The goal.</strong> AWS calls it "ACE": accuracy, consistency and explainability.</p>
+</li>
+<li>
+<p><strong>The principle.</strong> "LLMs propose candidate knowledge, symbolic reasoners validate and refine it."</p>
+</li>
+<li>
+<p><strong>The architecture has five layers:</strong></p>
+<ul>
+<li>an <em>interface</em> layer (MCP, A2A and REST);</li>
+<li>an <em>intelligence</em> layer (the agents);</li>
+<li>a <em>knowledge</em> layer (the ontology, reasoners and graph);</li>
+<li>a <em>data</em> layer (the existing databases);</li>
+<li>an <em>orchestration</em> layer.</li>
+</ul>
+</li>
+<li>
+<p><strong>Data stays where it is.</strong> A virtual knowledge graph (the open-source tool Ontop) maps existing databases onto the ontology and translates graph queries into SQL against them. Only data that needs reasoning across sources is copied into AWS's graph database, Neptune.</p>
+</li>
+<li>
+<p><strong>Reasoning runs on change.</strong> Logical reasoners (ELK and HermiT) and SHACL validation rules run whenever the graph changes. They write back inferred facts, validation results and consistency flags, each with its provenance.</p>
+</li>
+<li>
+<p><strong>How the ontology gets built.</strong> An "ontology induction service" drafts it in two directions:</p>
+<ul>
+<li>bottom-up, from existing data catalogs (AWS Glue, SageMaker, DataHub, Collibra) and documents;</li>
+<li>top-down, from reference ontologies such as BFO and DOLCE (general upper ontologies), FIBO (finance) and SNOMED CT (medicine).</li>
+</ul>
+<p>A "business elicitation" agent interviews domain experts, and an "ontology maintenance" agent handles merging duplicates, aligning vocabularies and keeping facts consistent as data changes.</p>
+</li>
+<li>
+<p><strong>The promotion step, spelled out.</strong> This is the part every product in this survey leaves vague.</p>
+<ul>
+<li>Machine-drafted ontologies go into <strong>draft graphs flagged DRAFT, which the query layer and reasoners ignore.</strong>
+</li>
+<li>To be promoted, a draft must pass an approval process the customer defines. It can combine a set number of human approvers (through a user interface, a Git pull request or a ServiceNow ticket), a model acting as judge, a consistency check by the reasoner, coverage measures, and test queries over the mappings.</li>
+<li>Approved versions get semantic version numbers, are stored as separate versioned graphs, can be rolled back from S3 or Git, can run side by side for comparison, and emit change events.</li>
+<li>Metric definitions follow the same draft → review → publish cycle.</li>
+</ul>
+</li>
+<li>
+<p><strong>Permissions and provenance.</strong></p>
+<ul>
+<li>Access uses AWS identity or standard single sign-on, with group-based authorisation and least-privilege roles.</li>
+<li>Row-level security is enforced in the virtual graph.</li>
+<li><strong>Every fact carries its source, a timestamp and a confidence score.</strong></li>
+<li>Business analysts and data stewards are the people who "approve semantic changes".</li>
+</ul>
+</li>
+<li>
+<p><strong>How agents use it.</strong> Either a ready-made question-answering agent, or separate MCP tools: classify the question's intent, generate queries, run them, search the graph, and call the reasoner. Tool outputs carry provenance and flags for consistency and conflicts.</p>
+</li>
+<li>
+<p><strong>Stated limits.</strong></p>
+<ul>
+<li>Query translation works only for a restricted profile of OWL (OWL 2 QL).</li>
+<li>Reasoning over large amounts of data needs pre-computation.</li>
+<li>Human approval adds delay.</li>
+<li>The only evidence cited is the 2024 data.world follow-up study (Part 6).</li>
+</ul>
+</li>
+</ul>
+<p><strong>Our reading.</strong> The guide is the clearest published statement of the three-layer design. Machine-drafted knowledge is quarantined as a draft, promoted only through a recorded approval, and executed in versioned form. It also comes closest of any vendor material to recording who decided: approvers, versions, change events and per-fact provenance. What it doesn't do is track when a fact was true (it uses consistency maintenance instead), or link a version to the agent actions that relied on it. AWS's managed product, AWS Context, still describes the opposite philosophy.</p>
+<p><strong>Smaller features:</strong></p>
+<ul>
+<li>
+<strong>Business context and semantic search in the Glue Data Catalog</strong> (preview).</li>
+<li>
+<strong>"Skill assets"</strong> in Glue: catalog entries pointing to runbooks and Markdown instructions stored elsewhere (preview).</li>
+<li>
+<strong>S3 annotations:</strong> up to 1 GB of editable context attached to any stored object and queryable as a table (generally available).</li>
+</ul>
+<p><strong>The standout design choice.</strong> AWS Context publishes its accumulated context as ordinary data tables, in the open Apache Iceberg format, in the customer's own storage, so customers "can ... audit it, or migrate it". No other vendor here does this for the context layer itself. Your accumulated business knowledge becomes data you own and can take elsewhere, rather than a service locked inside one platform.</p>
+<h3 class="heading-element">Google: Knowledge Catalog</h3>
+<p><strong>What it is.</strong></p>
+<ul>
+<li>In April 2026 Google renamed its data catalog, Dataplex, to <strong>Knowledge Catalog</strong> and began marketing it as "the universal context engine for your enterprise".</li>
+<li>Separately, Google presented a "Borderless Context Engine" at a semantics conference in November. That's a talk, not a product; Knowledge Catalog is the shipping product.</li>
+</ul>
+<p><strong>What it does differently.</strong> Google doesn't ask customers to adopt a new definition language. Since 30 October 2026 (generally available) it <strong>ingests other tools' definitions</strong> and combines them into "one context graph":</p>
+<ul>
+<li>Looker LookML.</li>
+<li>BigQuery measures.</li>
+<li>dbt MetricFlow.</li>
+<li>Snowflake Semantic Views.</li>
+<li>Databricks Metric Views.</li>
+<li>SAP's data-model notation.</li>
+</ul>
+<p>Google is positioning itself as the place where everyone else's semantic layers meet.</p>
+<p><strong>How knowledge gets in.</strong></p>
+<ul>
+<li>
+<strong>Aggregation</strong> of those existing definitions.</li>
+<li>
+<strong>Gemini extraction</strong> of entities and relationships from documents.</li>
+<li>
+<strong>Generated descriptions</strong> of tables and columns.</li>
+<li>
+<strong>Joins</strong> mined from query history.</li>
+<li>
+<strong>"Self-learning enrichment"</strong> (preview), which "continuously finds missing or outdated context and turns it into governed, reusable context sets".</li>
+</ul>
+<p>Further features in preview:</p>
+<ul>
+<li>
+<strong>Verified "golden" queries:</strong> example queries people have vetted.</li>
+<li>
+<strong>Connections</strong> to Palantir, Salesforce, SAP, ServiceNow and Workday.</li>
+<li>A <strong>deep-research agent</strong> in Gemini Enterprise built on the catalog.</li>
+</ul>
+<p><strong>How it handles conflicts: the most distinctive choice in this survey.</strong></p>
+<ul>
+<li>"When two tools define the same metric differently, both definitions appear with their provenance, so data stewards can reconcile."</li>
+<li>"Nothing is silently overwritten: overlapping definitions stay side by side, each labeled with its source."</li>
+<li>Every other vendor here resolves conflicts automatically, with a precedence rule or a score. Google shows the conflict to a person.</li>
+</ul>
+<p><strong>Permissions and access.</strong></p>
+<ul>
+<li>Search "respects metadata access permissions as defined in the source systems".</li>
+<li>Agents connect through MCP: read-only for searching context, read-write for managing data products.</li>
+<li>There's also a lookup API.</li>
+</ul>
+<p><strong>Claims.</strong></p>
+<ul>
+<li>"Nearly 4X more accurate, up to 33% lower latency, up to 75% fewer tokens" (vendor, with no published method).</li>
+<li>One customer story: Bloomberg Media with 102 auto-generated usage notes and a 63% improvement in SQL accuracy (reported only in search results).</li>
+<li>A competitor (Atlan) notes that the product's technical names and price list still say "Dataplex".</li>
+</ul>
+<h3 class="heading-element">Snowflake: the clearest approval record</h3>
+<p><strong>What it is.</strong> Snowflake announced <strong>Horizon Context</strong> at its Summit in June 2026 and filled in the details on 3 November 2026. It names the three layers outright:</p>
+<ul>
+<li>
+<strong>Cortex Sense</strong> "infers context automatically" from usage: layer one.</li>
+<li>
+<strong>Business Ontology</strong> "governs business meaning": terms, entities, relationships, owners and approval status. Layer two.</li>
+<li>
+<strong>Semantic Views</strong> "execute metrics", and can be imported and exported in the Apache Ossie format (Part 8). Layer three.</li>
+</ul>
+<p><strong>Scoped definitions.</strong> Business Ontology lets the same term have different official meanings in different scopes, each with its own owner. For example, <em>Finance.Net Revenue</em> and <em>Sales.Net Revenue</em>, or same-store sales defined per brand. That's a cleaner answer to "finance and sales define it differently" than ranking: both definitions are official, and each is labelled with whose it is.</p>
+<p><strong>How conflicts are handled.</strong></p>
+<ul>
+<li>"Only approved definitions are served to AI agents."</li>
+<li>When an approved definition conflicts with something Cortex Sense inferred, "agents use the approved definition and Cortex Sense learns from it".</li>
+<li>Cortex Sense "identifies conflicting knowledge and asks teams which source to trust".</li>
+</ul>
+<p><strong>The headline promise.</strong> "Every change is logged, so when an auditor asks what net revenue meant in Q2 and who signed off, the answer is a simple lookup." That's the most direct statement by any product of an idea Part 7 returns to: recording who decided, and what a definition meant at a past date.</p>
+<p><strong>Migration.</strong> Snowflake's coding agent can migrate an existing glossary or spreadsheet in a guided session, and "marks everything as a draft for owners to approve".</p>
+<p><strong>What's actually shipping.</strong></p>
+<ul>
+<li>Business Ontology and Cortex Sense are both "public preview soon" as of 3 November. In July, Snowflake had said Cortex Sense would enter private preview in mid-July.</li>
+<li>No documentation of the change log's structure was found.</li>
+<li>The log covers changes to definitions; it doesn't record which agent used which version.</li>
+</ul>
+<p><strong>Permissions.</strong></p>
+<ul>
+<li>Snowflake's governance controls decide who may create, edit and approve definitions.</li>
+<li>The first preview of Cortex Sense uses "a single role that will get access to all of Cortex Sense". Per-role learned context is "planned". At launch, learned knowledge isn't divided by permission.</li>
+<li>A generally available <strong>Cortex AI Gateway</strong> applies user policies to agents' MCP tool calls and keeps an audit trail.</li>
+</ul>
+<p><strong>Claims.</strong></p>
+<ul>
+<li>Snowflake says its own semantic views covered "under 5% of our 9,685 tables" before Cortex Sense.</li>
+<li>On an internal benchmark, Cortex Sense raised accuracy from 24.1% to 86.3% and cut cost per query from $1.76 to $0.59 (vendor).</li>
+<li>A survey sponsored by Snowflake found 55% of executives cite a lack of business context as an obstacle (n=400).</li>
+</ul>
+<h3 class="heading-element">Salesforce, ServiceNow and SAP</h3>
+<p><strong>Salesforce: Data 360 and Tableau Semantics.</strong></p>
+<ul>
+<li>Salesforce maps customer data from many sources into a canonical customer data model.</li>
+<li>Its semantic layer (Tableau Semantics, generally available) defines metrics over that model.</li>
+<li>Agents use it through a Semantic Query API, through Salesforce's own Agentforce agents, and through an MCP server for Tableau.</li>
+<li>Salesforce has written a converter from the Apache Ossie format into its own, and plans to import Snowflake and dbt definitions directly.</li>
+<li>At Ignite it also showed Salesforce data inside Microsoft Copilot (preview).</li>
+<li>It's a conventional, declared semantic layer. Nothing is learned automatically.</li>
+</ul>
+<p><strong>ServiceNow: Context Engine.</strong></p>
+<ul>
+<li>Introduced at ServiceNow's conference in May 2026, the Context Engine is a "graph of graphs":
+<ul>
+<li>an <strong>Enterprise Knowledge Graph</strong>;</li>
+<li>a <strong>Security Graph</strong> of who can access what, built on acquisitions Veza and Armis;</li>
+<li>a <strong>User Graph</strong>;</li>
+<li>a <strong>Decision Graph</strong>.</li>
+</ul>
+</li>
+<li>
+<strong>The Decision Graph</strong> is ServiceNow's term for "the record of what your organization did, and whether it worked". It traces what agents and workflows did and infers whether each interaction succeeded.</li>
+<li>
+<strong>Definitions</strong> come from ServiceNow's data catalog (the former data.world, an ontology company it acquired) and a BI semantic layer from Pyramid Analytics.</li>
+<li>
+<strong>How it's built:</strong> most of the knowledge is derived from ServiceNow's own records, which run to tens of billions of workflows a year (vendor figures vary: 95 or 100 billion).</li>
+<li>
+<strong>Relevance to Part 7:</strong> the Decision Graph is the only shipping construct here explicitly modelled as decision history. It records outcomes and traces mined from workflows, not approvals with their reasoning.</li>
+</ul>
+<p><strong>SAP: Business Data Cloud and SAP Knowledge Graph.</strong></p>
+<ul>
+<li>SAP's knowledge graph is "a semantic map, not another data store". It holds "more than a billion facts" about SAP's own products: over 15,000 business processes, more than 260,000 APIs and about half a million tables.</li>
+<li>
+<strong>Today it describes SAP's reference model, not the customer's own data.</strong> Coverage of customers' own data, SAP and non-SAP, is planned for general availability in the first quarter of 2027, with an Ontology Manager in beta at the same time. SAP notes that "this timeline reflects current plans, not general availability commitments".</li>
+<li>Its agent, Joule, is the main consumer.</li>
+</ul>
+<h3 class="heading-element">The November formats: Neo4j, NVIDIA and Snowflake</h3>
+<p>In the first week of November 2026, three companies released ontology formats within five days.</p>
+<p><strong>NVIDIA Auto Ontology (1 November, Apache 2.0).</strong></p>
+<ul>
+<li>A tool that points a language model at a relational database and drafts business terms, join paths and example SQL. People then certify the result, and agents use it through MCP.</li>
+<li>It uses no semantic-web standards.</li>
+<li>An independent test (Pondhouse Data) built an ontology for a 51-table database in 8–10 minutes. Part 6 describes what went wrong.</li>
+</ul>
+<p><strong>Snowflake Business Ontology (3 November)</strong>, described above. It can import and export RDF as well as Apache Ossie.</p>
+<p><strong>Neo4j Ontology Graph Specification (5 November, Apache 2.0).</strong></p>
+<ul>
+<li>An open YAML/JSON format for describing the meaning of a property graph. It maps to some constructs of the W3C standards but "does no inference".</li>
+<li>Its announcement names Palantir, Databricks Genie Ontology and Microsoft Fabric IQ as peers, and puts the case well: "A schema tells an agent what exists, not what it means."</li>
+<li>Neo4j also shipped <strong>Aura Agent</strong> in February: it builds an agent automatically from a graph's schema and a description of the use case, deployed behind a read-only MCP server.</li>
+</ul>
+<p>On Hacker News, commenters asked why NVIDIA hadn't simply used the existing standards (OWL, RDF, SPARQL), since language models are "exceptionally proficient at authoring sparql". Nobody from NVIDIA answered.</p>
+<h3 class="heading-element">The exception: Collate Ontology Studio (17 November 2026)</h3>
+<p>Two weeks later, one vendor shipped the opposite choice. Collate, the company behind the open-source OpenMetadata data catalog (used, it says, by more than 4,000 organisations), released <strong>Ontology Studio</strong> in Collate 2.1.</p>
+<ul>
+<li>
+<strong>It uses the actual W3C standards.</strong>
+<ul>
+<li>Business concepts are modelled as OWL and SKOS classes (SKOS is the W3C standard for controlled vocabularies). They have typed properties and named, directional relationships such as "part of", "broader/narrower" and "calculated from", and child concepts inherit from parents.</li>
+<li>Ontologies can be imported and exported, with versions, as OWL, Turtle, RDF/XML and JSON-LD, preserving their identifiers.</li>
+<li>Collate's pitch is ownership: you write down how the business works once, in an open format you can take elsewhere. It's aimed squarely at the lock-in that platform ontologies create.</li>
+</ul>
+</li>
+<li>
+<strong>Industry starting points.</strong> It ships ready-made ontologies:
+<ul>
+<li>FIBO (finance);</li>
+<li>HL7 FHIR (healthcare);</li>
+<li>GS1 and EPCIS (supply chain);</li>
+<li>ISA-95 (manufacturing);</li>
+<li>HR Open Standards.</li>
+</ul>
+</li>
+<li>
+<strong>Draft and published versions.</strong>
+<ul>
+<li>Each ontology has a working <em>draft</em> and, once released, a <em>published</em> version. Editing always happens on the draft.</li>
+<li>A review-and-publish step shows how many unpublished changes are waiting, and publishing applies to one ontology at a time.</li>
+<li>The release also adds approval-first governance workflows and a "Memory Agent".</li>
+<li>This is a shipped, if simple, version of the promotion step that Part 4 found missing elsewhere.</li>
+</ul>
+</li>
+<li>
+<strong>How agents use it.</strong> Through Collate's MCP server, an agent can describe the ontology, explore the neighbourhood of a concept, find assets by tag, and run <strong>read-only SPARQL queries</strong>.
+<ul>
+<li>Those tools run on a knowledge-graph projection that is <strong>in beta and switched off by default</strong>.</li>
+<li>No separate graph database is needed. Collate says the studio doesn't replace a semantic layer or metrics store.</li>
+</ul>
+</li>
+<li>
+<strong>Evidence.</strong>
+<ul>
+<li>One named customer: Scout24, the German property-listing company, for its internal agents.</li>
+<li>No accuracy figures. The press release leans instead on Gartner's prediction of "up to 80%" accuracy gains (see "What the products have in common").</li>
+<li>Analyst coverage from Futurum is labelled as written by a language model without editorial review, so we've relied only on Collate's own pages.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Our reading.</strong> Collate weakens the claim that the 2026 market abandoned the semantic-web standards. The large platforms did. A catalog vendor whose business is neutrality between platforms bet on them, precisely because they make an ontology portable. Whether customers value that portability enough to pay for it is the open question, and the same one Stancil raises in Part 9.</p>
+<h3 class="heading-element">Governance and graph vendors</h3>
+<p><strong>Collibra and Atlan</strong> sell data catalogs and governance tools. Both now describe themselves as context layers.</p>
+<ul>
+<li>
+<strong>Atlan's offering:</strong>
+<ul>
+<li>"Context Agents" that generate descriptions, joins, metrics and even ontologies. Atlan says "89% of AI output [is] rated equal to or better than human-written" (vendor).</li>
+<li>A "Context Engineering Studio" with a build → test → review → approve → deploy lifecycle: meaning managed like software.</li>
+<li>Atlan reports 58-fold growth in MCP calls since September 2025 (vendor). It also publishes many comparison pages about competitors' products, which rank well in search and should be read as interested-party material.</li>
+</ul>
+</li>
+<li>
+<strong>Collibra</strong> launched an "AI Command Center" in May 2026 for governing AI agents, and says more than 100 customers use its MCP server.</li>
+</ul>
+<p><strong>Traditional graph and ontology vendors</strong> have mostly added MCP:</p>
+<ul>
+<li>
+<strong>Stardog</strong> can harvest Databricks' catalog metadata and serve it to agents.</li>
+<li>
+<strong>Graphwise</strong> added MCP to its GraphDB database. Graphwise is the 2024 merger of Ontotext and Semantic Web Company, two of the oldest ontology companies, and in August 2026 private-equity firm Oakley Capital reportedly agreed to take a majority stake (not confirmed on a primary page).</li>
+<li>
+<strong>TopQuadrant</strong> offers governance of formal vocabularies with an MCP component.</li>
+</ul>
+<h3 class="heading-element">What the products have in common</h3>
+<p>Across all of them:</p>
+<ol>
+<li>
+<strong>Most meaning is learned, and a smaller part is approved.</strong> Nobody now asks customers to build a full ontology by hand before getting value. Even Palantir is adding AI help, and even AWS's formal Accelerator starts from a machine draft.</li>
+<li>
+<strong>Authority is mostly decided by ranking.</strong> Which definition wins is computed from usage, source, certification and recency (Part 5). The exceptions are Google, which shows conflicts to people, and Snowflake, which allows several scoped official definitions.</li>
+<li>
+<strong>The promotion step is unfinished.</strong>
+<ul>
+<li>Databricks: Ontology Manager review queue, "coming soon".</li>
+<li>Snowflake: approval log, not yet in preview.</li>
+<li>Microsoft: the proposal-first agent is shipping, but the ontology item is still in preview.</li>
+<li>AWS: two products with no stated bridge, although its July design guide describes a full draft → approve → version cycle (above). It's the most complete design published, and it isn't a product.</li>
+</ul>
+</li>
+<li>
+<strong>The classic semantic web is being adopted without its reasoning.</strong>
+<ul>
+<li>The 2000s standards (OWL and RDF) included automated logical inference.</li>
+<li>The 2026 products keep the vocabulary (types of things, properties, relationships) and drop the inference.</li>
+<li>The exceptions are AWS's Accelerator (full OWL with reasoners) and Collate's Ontology Studio (OWL and SKOS, queried with SPARQL, though with no reasoning). Elsewhere, the formal tools survive mainly as <em>validation</em>: checking that output conforms to the model.</li>
+</ul>
+</li>
+<li>
+<strong>Agents get answers, not the ontology.</strong> Databricks, Microsoft and Google expose question-answering tools to outside agents. Only Palantir exposes the objects and actions themselves.</li>
+<li>
+<strong>Every accuracy number is the vendor's own.</strong> None has been independently replicated.
+<ul>
+<li>
+<strong>The most quoted figure is a forecast.</strong> In May 2026, Gartner predicted that "by 2027, organizations that prioritize semantics in AI-ready data will increase their agentic AI accuracy by up to 80% and reduce costs by up to 60%". Collate's and several other vendors' launch materials repeat it.</li>
+<li>It's an analyst forecast, not a measurement, and the research behind it is paywalled. Treat "up to 80%" as a statement of belief about the direction, not a result.</li>
+<li>
+<strong>Gartner's adjacent advice.</strong> Its February 2026 research, as summarised publicly, says a single universal semantic layer "keeps proving elusive", and recommends a <em>composite</em> approach instead: mapping the semantic models a company already has (CRM, finance, BI) to each other rather than replacing them. That's close to Google's design and to the scoped definitions in Part 5.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="part-5-the-ranking-problem">Part 5. The ranking problem</h2>
+<p>Ranking is how almost every product now decides which definition to trust. That makes it the most consequential design choice in the field, and the least discussed. This part explains how the ranking works, why it was borrowed from web search, where it goes wrong inside a company, and what the alternatives are.</p>
+<h3 class="heading-element">How the ranking works</h3>
+<p>Each product combines a handful of signals into a score, then prefers the highest-scoring definition or document.</p>
+<ul>
+<li>
+<strong>Databricks (OntoRank).</strong>
+<ul>
+<li>Signals: where a snippet was learned from (a certified metric view counts more than a scratch notebook), how often it's used, how recent it is, whether it's certified, the expertise of its author, and how close its author is to the person asking in the org chart and collaboration graph.</li>
+<li>Modelled knowledge generally overrides learned knowledge.</li>
+</ul>
+</li>
+<li>
+<strong>Glean.</strong> Signals: authorship, views, edits, comments, freshness and the relationships between people. A document edited by the owning team and read by many people counts more than one written once and forgotten.</li>
+<li>
+<strong>AWS Context.</strong> It "ranks sources by actual usage".</li>
+<li>
+<strong>Snowflake (Cortex Sense).</strong> It infers context from usage, gives approved definitions precedence, and asks teams which source to trust when it detects a conflict.</li>
+<li>
+<strong>Google.</strong> Google ranks search results, but for conflicting <em>definitions</em> it doesn't pick a winner. It shows both, labelled with their sources.</li>
+</ul>
+<h3 class="heading-element">Why it was borrowed from web search</h3>
+<p>Ranking by popularity and links is how the web became searchable. On the web:</p>
+<ul>
+<li>No one owns the truth about most topics.</li>
+<li>There are billions of documents, so hand curation is impossible.</li>
+<li>The most-linked page is usually a reasonable answer.</li>
+</ul>
+<p>The 2026 vendors made a sensible bet: inside a company with thousands of tables and dashboards, most never documented, usage is the best available evidence of what people rely on. Ranking finds useful candidates quickly and costs nothing to maintain.</p>
+<h3 class="heading-element">Where it goes wrong inside a company</h3>
+<p>A company is different from the web in one crucial way: <strong>for many terms, someone does own the truth.</strong> Finance owns the definition of revenue. Legal owns what counts as a signed contract. When an owner exists, popularity is a proxy for their judgement, and proxies fail in predictable ways.</p>
+<p><strong>1. Popularity measures habit, not correctness.</strong></p>
+<ul>
+<li>The most-used definition of "active customer" may come from a dashboard built three years ago that everyone still opens, even though Finance has since changed the official definition.</li>
+<li>Ranking will keep promoting the old one, because that's what people use.</li>
+</ul>
+<p><strong>2. Changes are penalised exactly when they matter most.</strong></p>
+<ul>
+<li>When a definition is corrected, the new version starts with no usage history. The old one has years of it.</li>
+<li>A popularity-based system is therefore slowest to adopt a change at the moment the change is most important.</li>
+<li>Freshness signals help, but they also reward whichever version was touched last, which isn't necessarily the approved one.</li>
+</ul>
+<p><strong>3. Agents can create a feedback loop.</strong></p>
+<ul>
+<li>Once agents use a definition, every agent query becomes more "usage" for that definition, so the ranking reinforces whatever the agents picked first.</li>
+<li>None of the vendors' documentation says whether agent usage is counted separately from human usage. <em>(Our concern; not tested.)</em>
+</li>
+</ul>
+<p><strong>4. Personalised authority.</strong></p>
+<ul>
+<li>Databricks weights knowledge from the asker's own teammates. That has a real benefit: Sales and Finance often do mean different things by "bookings", and each team would rather get its own definition.</li>
+<li>But it means the "official" answer depends on who's asking, and two executives in the same meeting can receive different numbers for the same question with no signal that they differ.</li>
+</ul>
+<p><strong>5. Silent resolution.</strong></p>
+<ul>
+<li>When ranking resolves a conflict automatically, the user usually never learns there was one. The answer looks as confident as any other.</li>
+<li>That's the same failure Part 6 documents for text-to-SQL: a wrong answer that looks right.</li>
+</ul>
+<h3 class="heading-element">Evidence that this matters</h3>
+<p>The research and case studies point the same way.</p>
+<ul>
+<li>
+<strong>LinkedIn's text-to-SQL study</strong> measured which kinds of knowledge helped its agent:
+<ul>
+<li>Knowledge derived from actual usage (example queries, groupings of related tables, column descriptions) did most of the good work. Accuracy rose from 9% to 48% (author-reported).</li>
+<li>Business definitions typed in by employees, without review, <em>lowered</em> accuracy.</li>
+<li>The lesson isn't that usage is good and definitions are bad. Unvetted knowledge of either kind is risky, and usage data is strong at finding <em>where</em> things are.</li>
+</ul>
+</li>
+<li>
+<strong>Pinterest</strong> reported that its analytics agent, used by 40% of its 2,500+ analysts within two months, struggled most with "ambiguous business terms and cross-domain conflicting metric definitions" (author-reported). That's exactly the case ranking handles worst.</li>
+<li>
+<strong>The CONFLICTS study</strong> (Part 6) found models handled disagreeing sources correctly only 59–68% of the time, and improved by about 24 points when told <em>why</em> the sources disagreed. A ranking score doesn't say why; an approved definition with an owner and a date does.</li>
+</ul>
+<h3 class="heading-element">The alternatives</h3>
+<p>There are four better ways to resolve a conflict between definitions, each already in at least one product.</p>
+<ol>
+<li>
+<strong>Explicit precedence rules.</strong> "The billing system is authoritative for revenue; the CRM is authoritative for account ownership." Written down once, applied every time. Every vendor says approved definitions beat learned ones. Few let you state rules between <em>sources</em>.</li>
+<li>
+<strong>Scoped official definitions.</strong> Snowflake's approach: <em>Finance.Net Revenue</em> and <em>Sales.Net Revenue</em> are both official, each with an owner. The agent picks by context and can say which one it used. This removes the false choice between one definition and personalised ranking.</li>
+<li>
+<strong>Show the conflict.</strong> Google's approach: keep both definitions side by side with their sources and let a steward resolve it. Slower, but nothing is hidden.</li>
+<li>
+<strong>Ask.</strong> Databricks' "it might ask you for clarification" when a conflict can't be resolved. For an agent, asking one question is cheap. A confidently wrong number is expensive.</li>
+</ol>
+<h3 class="heading-element">A sensible way to use ranking</h3>
+<p>Ranking is a good way to <em>find</em> candidate definitions and a poor way to <em>decide</em> between them. A reasonable design:</p>
+<ol>
+<li>Use usage-based ranking to surface candidates and flag likely conflicts.</li>
+<li>Have the owning team approve one definition per scope, and record who approved it and why.</li>
+<li>Serve only approved definitions to agents for anything that drives a number or a decision. Let ranking guide search and exploration elsewhere.</li>
+<li>When the agent meets an unresolved conflict, have it say so or ask, rather than pick silently.</li>
+</ol>
+<p>This is roughly what Snowflake describes and what Databricks' coming review queue is meant to enable. Neither has shipped it in full.</p>
+<hr>
+<h2 id="part-6-what-the-research-shows">Part 6. What the research shows</h2>
+<p>Research on ontologies and structured knowledge for AI agents grew quickly in 2025–2026. This part summarises about 45 papers, grouped by the question they answer. Numbers are as reported by the authors. Where an author sells a product in the area being measured, we say so. <code>notes/papers.md</code> has a summary of each paper.</p>
+<h3 class="heading-element">Question 1: Can an AI write your ontology?</h3>
+<p><strong>Short answer: it drafts vocabulary reliably. It can contribute structure when the job is small, grounded in real identifiers and reviewed by people, but it falls well short of experts.</strong></p>
+<p><strong>The community challenge.</strong></p>
+<ul>
+<li>The <strong>LLMs4OL</strong> challenge (2024, with a second round in 2025) split ontology-building into subtasks: classifying terms, discovering hierarchies, and extracting other relationships.</li>
+<li>Classifying terms and finding hierarchies proved tractable. <strong>Extracting relationships other than "is a kind of" stayed hardest.</strong>
+</li>
+<li>The winning entries combined language models with retrieval or fine-tuning, rather than prompting alone.</li>
+</ul>
+<p><strong>The best result for AI drafting: Ontogenia (2025).</strong></p>
+<ul>
+<li>It generated OWL ontologies from user stories and <em>competency questions</em>: the questions an ontology must be able to answer, such as "Which customers have overdue invoices?".</li>
+<li>Across 10 ontologies and 100 such questions, the best model produced ontologies "of sufficient quality to meet the requirements of ontology engineers".</li>
+<li>It beat <strong>novice</strong> human engineers, not experienced ones, and the authors reported recurring mistakes and high variation between runs.</li>
+</ul>
+<p><strong>The most careful evaluation: CQ4OE (September 2026).</strong></p>
+<ul>
+<li>Its test ontologies record which competency question required each element, so the benchmark can check whether a model built the right thing for the right reason.</li>
+<li>Nine models were tested in three ways: one-shot, iterative and multi-agent.</li>
+<li>Models recovered <strong>vocabulary</strong> (the right names for things) far more reliably than <strong>structure</strong>: properties, hierarchies and logical axioms.</li>
+<li>The <strong>domain</strong> mattered more than which model or strategy was used.</li>
+<li>Running a logical reasoner afterwards barely helped when the hierarchy was wrong to begin with.</li>
+</ul>
+<p><strong>Splitting the work across agents: CoA-Text2OWL (2025).</strong></p>
+<ul>
+<li>French researchers (Ghanem, Jabbar and Cruz) split ontology learning across a "chain of agents". Worker agents each read one chunk of a long text, and a manager agent assembles their findings into a single OWL ontology.</li>
+<li>Compared with a single model doing the whole job, it extracted relationships better and produced more complete ontologies, but "challenges remain in preserving hierarchical structures".</li>
+<li>The papers (FRCCS and KES 2025) report no numeric scores and don't name the models used. It's one more data point for the same pattern: agents find the pieces; getting the hierarchy right is the hard part.</li>
+</ul>
+<p><strong>Extending an existing ontology: OntoExtend (2026).</strong> Extending an ontology is the more common real-world task. In a test that included an industrial Bosch ontology, the output passed all functional tests, but engineers judged it still needed "minor to moderate revision before integration".</p>
+<p><strong>The newest and largest test: AutoOntologyBench (November 2026).</strong></p>
+<ul>
+<li>Most ontology benchmarks ask whether a generated ontology <em>looks</em> right. This one asks whether it <em>works</em>.</li>
+<li>It has 19,947 tasks drawn from 18 versioned sources in seven domains (including chemistry, organisational data, policy and web APIs). Each task is checked by the source's own validator, not by a model acting as judge.</li>
+<li>Nine frontier models had to build an ontology and then use it to do the task.</li>
+<li>
+<strong>Average task success (author-reported):</strong>
+<ul>
+<li>36.0% answering directly;</li>
+<li>38.7% with retrieval;</li>
+<li>41.9% with the agent's own ontology;</li>
+<li>44.8% with retrieval plus the agent's ontology;</li>
+<li><strong>57.8% with an expert-built ontology.</strong></li>
+</ul>
+</li>
+<li>
+<strong>Three findings matter most:</strong>
+<ol>
+<li>
+<strong>An agent-built ontology helps, but modestly.</strong> It added about 6 points over retrieval alone. Weighted so that every domain counts equally, the gain shrinks to about 4 points, and the ontology alone beat retrieval by only 1.4 points, which wasn't statistically significant.</li>
+<li>
+<strong>The content does the work, not the format.</strong> A stub ontology containing only names scored 21.0%, worse than answering directly. Corrupting a single element of a good ontology cost about 24 points on the tasks that depended on it.</li>
+<li>
+<strong>The gap to experts is about 13 points.</strong> The authors attribute it to acquiring the right knowledge and mapping between sources, not to vocabulary.</li>
+</ol>
+</li>
+<li>Gains were largest for organisational data and chemistry, and slightly negative for policy and web APIs, where each domain's own rule language did better.</li>
+<li>The agent-built ontologies were tiny: a median of 3 concepts and 11 relations or properties. Ability to map between sources predicted success better than model size.</li>
+<li>
+<strong>What it adds to the picture.</strong> Agents can build small working structures that help, but expert structure is still worth far more.</li>
+</ul>
+<p><strong>Structure at scale, with grounding tools: OntoKG (April 2026).</strong></p>
+<ul>
+<li>Researchers had Claude Opus 4.6 act as the <em>designer</em> of a schema for all of Wikidata: for each of thousands of properties, deciding whether it describes the entity itself (a node attribute) or connects it to something else (a relationship).</li>
+<li>The model worked with tools that checked every Wikidata identifier against the real data, so it couldn't invent properties.</li>
+<li>A person accepted or rejected each recommendation, then a deterministic program re-ran the classification to measure the effect.</li>
+<li>The result was 94 modules covering 98% of 34.6 million entities, and a graph that slightly improved a standard entity-disambiguation benchmark (author-reported).</li>
+<li>
+<strong>What it adds to the picture.</strong> A model <em>can</em> make structural decisions at scale, when every decision is checked against real data and reviewed by a person. That's the three-layer design applied to the schema itself.</li>
+</ul>
+<p><strong>A practitioner's method: Agentic Ontology 101 (March 2026).</strong></p>
+<ul>
+<li>Jie Bao, writing with Claude, updated Noy and McGuinness's classic guide for building ontologies with AI agents. It's a draft on GitHub, not peer-reviewed, built on one corpus: the <em>Shiji</em>, a Chinese history of 130 chapters.</li>
+<li>Its rule is the reverse of the classic method: <strong>"extract first, design later."</strong>
+<ul>
+<li>Instead of designing classes up front, the agent extracts entities and events, and the structure grows from fixing its mistakes. The entity types grew from 11 to 18 as misclassified edge cases were resolved.</li>
+<li>Each subtask goes to the cheapest reliable worker: a rule, a script, a model or a person.</li>
+<li>The source text is never changed; annotations live in separate files and are checked against it character by character.</li>
+</ul>
+</li>
+<li>The project extracted 15,190 entities, 3,197 events and 7,637 relationships, with about 150 hours of human work and about 3 billion tokens.</li>
+<li>Corrections to event dates fell across rounds: 1,010, 431, 465, 167, 46. The claimed rise in accuracy from 90% to over 97% isn't backed by a published measurement, and the document gives two different totals for corrections.</li>
+<li>
+<strong>What it adds to the picture.</strong> The bottleneck moves from <em>designing</em> the ontology to <em>reviewing and correcting</em> what the agent produced. Structure is still decided by a person, but in response to the agent's errors rather than in advance.</li>
+</ul>
+<p><strong>A claim worth testing: Skillful-Alhazen (CAIS 2026).</strong> Gully Burns and Paul Groth argue that coding agents have made writing schemas cheap, so explicit structure is now affordable where it used to be a luxury. Their evidence is about using structure (Question 2), not about its cost; the cheapness claim is asserted rather than measured.</p>
+<p><strong>An ontology of agents, drafted by a model: AgentO (ESWC 2026).</strong></p>
+<ul>
+<li>People designed the 18-class schema.</li>
+<li>A small model (gpt-5-mini) read the code of 66 agent workflows written in four popular frameworks (AutoGen, CrewAI, LangGraph, Mastra) and described each one in the ontology, for $2.72 in total.</li>
+<li>No accuracy figure for that extraction is reported.</li>
+<li>
+<strong>What it adds to the picture.</strong> The schema was human, and the model only filled in instances.</li>
+</ul>
+<p><strong>Checking an ontology: OE-Assist (2025).</strong> Can an AI <em>review</em> an ontology? Across 1,393 competency questions and 19 ontology engineers, automated checking performed "at a similar level to the average user". Review can be partly automated, to roughly average-human standard.</p>
+<p><strong>Evaluating a whole ontology: OLLM (2024).</strong> It generated whole taxonomies rather than individual relationships, and had to invent new metrics to evaluate them. Even <em>measuring</em> a generated ontology is still an open problem.</p>
+<p><strong>What this means.</strong> In 2026 the large vendors pitched AI-drafted ontologies with human review (AWS, Microsoft). Long-time practitioners such as Juan Sequeda insisted you can't have AI auto-generate your ontology. The research says both are partly right:</p>
+<ul>
+<li>
+<strong>Vocabulary:</strong> a model can reliably draft a glossary of names, synonyms and descriptions.</li>
+<li>
+<strong>Structure:</strong> a model can contribute what relates to what, what's a kind of what, and what rules hold, under three conditions:
+<ul>
+<li>the scope is small;</li>
+<li>every element is checked against real data;</li>
+<li>a person reviews it.</li>
+</ul>
+</li>
+<li>
+<strong>Unsupervised:</strong> left alone, it builds structures that are thin (AutoOntologyBench's median of three concepts) or subtly wrong (CQ4OE).</li>
+<li>
+<strong>Expert value:</strong> expert-built structure still outperforms agent-built structure by a wide margin (about 13 points in AutoOntologyBench).</li>
+<li>
+<strong>Where the human effort goes:</strong> the job moves from authoring to reviewing and correcting, but it doesn't disappear.</li>
+<li>
+<strong>Vendor products</strong> are mostly glossaries plus metrics, which is the part models do well.</li>
+</ul>
+<h3 class="heading-element">Question 2: Does committed meaning actually help an agent answer questions?</h3>
+<p><strong>Short answer: yes, substantially, and mostly through names and definitions.</strong></p>
+<p><strong>The founding result: data.world (2023).</strong></p>
+<ul>
+<li>Using an insurance database and 43 business questions, GPT-4 writing SQL directly got 16% right. Querying the same data through a knowledge graph built on an ontology got 54% (author-reported; the authors' company sold such a system).</li>
+<li>A 2024 follow-up added an automatic check of each generated query against the ontology's rules, plus a repair step. It reached <strong>72% correct, 8% "I don't know", and 20% wrong.</strong>
+</li>
+<li>That second result is important for a reason beyond accuracy: the ontology let the system <strong>abstain</strong>, saying it didn't know instead of guessing.</li>
+</ul>
+<p><strong>Which part of the ontology pays: NLKGQ (2026).</strong></p>
+<ul>
+<li>Researchers translated questions into queries over a neuroscience metadata ontology, then varied how the ontology was presented to the model, in eight different ways.</li>
+<li>
+<strong>Readable names and annotations mattered more than the choice of model or prompt</strong>, and the formal ontology outperformed a plain database schema.</li>
+<li>The test set was small (21 questions).</li>
+</ul>
+<p><strong>A definitions file: Cube (2026).</strong></p>
+<ul>
+<li>100 business questions over a retail database, three frontier models, each run two ways: with the database schema only, or with the schema plus a <strong>4 KB hand-written Markdown file</strong> of measures, conventions and rules for telling similar terms apart.</li>
+<li>The file improved accuracy by <strong>17–23 percentage points for every model</strong>: from 45–51% to 68–69%.</li>
+<li>Which model was used made almost no difference.</li>
+<li>Cube sells a semantic layer, so it has an interest in this result. It also lists a formal analysis of silent versus visible failures as future work.</li>
+</ul>
+<p><strong>Semantic layer versus free-form SQL: dbt (April 2026)</strong>, on the same insurance questions as the data.world study, 11 questions repeated 20 times (vendor-run).</p>
+<ul>
+<li>
+<strong>On the original database:</strong>
+<ul>
+<li>The model writing its own SQL scored <strong>64.5%</strong>, up from 32.7% in 2023. Models had improved.</li>
+<li>The semantic layer answered <strong>100% of the questions it could express</strong>, but could express only some of them, so <strong>72.7% overall</strong>.</li>
+</ul>
+</li>
+<li>
+<strong>After the data model was reorganised:</strong>
+<ul>
+<li>Sonnet 4.6 scored <strong>90.0%</strong> writing SQL and <strong>98.2%</strong> through the semantic layer.</li>
+<li>GPT-5.3-codex scored <strong>84.1%</strong> and <strong>100%</strong>.</li>
+</ul>
+</li>
+<li>Reorganising the data did more than either tool.</li>
+<li>In dbt's words, the semantic layer "never returns invalid data. Text-to-SQL will cheerfully give you a wrong number."</li>
+</ul>
+<p><strong>Typed memory versus vector search: Skillful-Alhazen (CAIS 2026).</strong></p>
+<ul>
+<li>Burns and Groth store an agent's working memory as a typed knowledge graph (in the TypeDB database), which they call an "ontological notebook".</li>
+<li>Each domain skill adds its own schema extension, scripts and instructions.</li>
+<li>Raw sources, extracted fragments and the agent's own notes are kept separate, in a chain from source to fragment to note.</li>
+<li>On 13 questions about disease mechanisms, traversing the typed graph scored 0.68–0.77. Standard vector retrieval scored close to zero on three kinds of question: aggregation ("how many"), absence ("which have no known treatment") and ranking.</li>
+<li>The test is small and chosen to favour structure, but it shows the kind of question where meaning in a schema is essential. Similarity search can't count, rank or notice what's missing.</li>
+</ul>
+<p><strong>Answers labelled by how well they're grounded: OA-RAG (October 2026).</strong></p>
+<ul>
+<li>
+<strong>How it works.</strong> The agent first answers from its own knowledge, then queries a formal ontology (with a logical reasoner) in a loop, then answers again.</li>
+<li>
+<strong>The label.</strong> Each answer is labelled by how it relates to the ontology: <em>entailed</em> (follows logically), <em>supported</em>, <em>related</em> or <em>unrelated</em>.</li>
+<li>
+<strong>The test.</strong> Benchmarks built from three large biomedical ontologies (GO, FoodOn and SNOMED CT) plus six medical question sets, with two small models.</li>
+<li>
+<strong>Results (author-reported):</strong>
+<ul>
+<li>On one test it scored 84.9% against 66.7% for a strong medical retrieval method at the same context size. Matching it with a far larger context window took about 4 times as many model calls and 10 times as many tokens.</li>
+<li>The label predicted correctness. <em>Entailed</em> answers were right 94.9% of the time and <em>supported</em> ones 82.1%, against 72.1% for the rest.</li>
+</ul>
+</li>
+<li>
+<strong>Limits.</strong> Finding the right evidence was the bottleneck: the correct evidence was fully retrieved for only 23.6% of open questions. Definitions buried in free-text annotations were hard to use.</li>
+<li>
+<strong>What it adds to the picture.</strong> A committed ontology lets an agent say <em>how well grounded</em> each answer is. That's a step towards the warrant Part 7 says is missing.</li>
+</ul>
+<p><strong>Real deployments.</strong></p>
+<ul>
+<li>
+<strong>LinkedIn's</strong> text-to-SQL agent, with 300+ weekly users, got 53% of answers correct or close in expert review. As Part 5 describes, most of its gain came from usage-derived knowledge, and unreviewed employee-written definitions <em>hurt</em>. Fixing how the data was modelled raised the share of queries that ran without error from 66% to 96%, but barely changed how many were correct.</li>
+<li>
+<strong>Pinterest's</strong> analytics agent spread to 40% of 2,500+ analysts in two months and has ten times the usage of the next internal agent. AI-written table descriptions cut manual documentation work by about 40%. Finding the right table "meets expectations"; writing correct SQL is weaker.</li>
+</ul>
+<p><strong>What this means.</strong></p>
+<ul>
+<li>The highest-value part of committed meaning is the most human-readable part: names, definitions, conventions.</li>
+<li>It can live in a plain, reviewed file.</li>
+<li>It must be vetted.</li>
+<li>Defined metrics fail by refusing; free-form SQL fails by being silently wrong.</li>
+</ul>
+<h3 class="heading-element">Question 3: When does it help most?</h3>
+<p><strong>Short answer: where the model knows least, which is most of a company's private world.</strong></p>
+<p><strong>The "inverse parametric knowledge effect" (April 2026).</strong></p>
+<ul>
+<li>A study of agents in five industries (1,800 runs, three models) found that constraining agents with an ontology improved metric accuracy and role consistency significantly.</li>
+<li>The improvement was <strong>about twice as large in domains localised to Vietnam</strong> as in English-language ones. The authors call this the "inverse parametric knowledge effect": the less the model learned about a domain in training, the more an explicit ontology helps. Vietnamese banking improved by 0.29 and insurance by 0.28, against an English average of 0.12.</li>
+<li>
+<strong>The ontology has three layers:</strong>
+<ul>
+<li>a <em>role</em> layer: each agent's decision patterns, metrics, expertise and <strong>approval authority</strong>;</li>
+<li>a <em>domain</em> layer: entity definitions, metrics with healthy ranges, and governance constraints;</li>
+<li>an <em>interaction</em> layer: hand-offs between agents, approval chains with time-outs, and escalation paths.</li>
+</ul>
+</li>
+<li>
+<strong>The core argument</strong> is that enterprise systems constrain what goes <em>into</em> an agent but rarely check what comes <em>out</em>. The authors propose a validator that checks an agent's output terms, metric values, hand-offs and regulatory references against the ontology. It's <strong>proposed, not yet implemented</strong>.</li>
+<li>
+<strong>An important warning sign: committed meaning can hurt.</strong> For well-known insurance concepts, injecting the ontology <em>lowered</em> scores (from 0.81 to 0.50 and from 0.87 to 0.57 on two measures). The authors attribute it to "context displacement": extra material pushed out what the model already knew well.</li>
+<li>
+<strong>Caveats.</strong> One platform; an AI judge (Claude Sonnet 4) without checks against human experts. The authors estimate the main effect would shrink by about a third if the judge disagrees with experts as often as is typical. They build an agent platform, so they have an interest.</li>
+<li>If it holds, it explains a puzzle. Ontologies look unimpressive on public benchmarks, built from public data the model has already seen, and valuable inside companies, whose meanings are private.</li>
+</ul>
+<p><strong>Spider 2.0 (2024)</strong> shows how hard real enterprise data is.</p>
+<ul>
+<li>Its 632 tasks run on real cloud warehouses, often with more than 1,000 columns, and require reading documentation and project code.</li>
+<li>A strong reasoning agent solved <strong>21%</strong>, against 91% on the older academic Spider benchmark and 73% on BIRD.</li>
+<li>Spider 2.0 doesn't test a semantic-layer condition: a notable gap.</li>
+</ul>
+<p><strong>Ontology as a contract on actions: Symbolic Separation (2026).</strong></p>
+<ul>
+<li>The agent could reason freely but could touch data only through an ontology-constrained interface that validated each operation before it ran.</li>
+<li>On 50 terabytes of supercomputer monitoring data, task success rose from <strong>43% to 86%</strong>, token use fell 2.4-fold, and "silent data-integrity errors" were prevented. This was the authors' own comparison.</li>
+<li>It's the research version of Palantir's action types: the ontology as a set of rules about what the agent may do, not just background reading.</li>
+</ul>
+<p><strong>Validating after rather than constraining before.</strong></p>
+<ul>
+<li>
+<strong>Better Later Than Sooner (2026)</strong> found it cheaper to let a model extract facts freely and then fix violations of the ontology afterwards, rather than cramming the ontology's constraints into the extraction prompt. Token use was lower and consistency better, with question-answering unchanged.</li>
+<li>
+<strong>OntoLogX (2025)</strong>, which extracts knowledge from security logs, checks the output against formal shape rules (SHACL). If no valid result emerges, it <strong>returns nothing rather than something invalid</strong>.</li>
+<li>Both suggest the most practical role for formal rules today: a gate that output must pass.</li>
+</ul>
+<p><strong>Ontology-grounded retrieval: OG-RAG (Microsoft, 2024).</strong> It organised document facts around a domain ontology and retrieved the smallest set of connected facts as context. Fact recall rose by 55%, answer correctness by 40%, and tracing an answer back to its sources got 30% faster (author-reported).</p>
+<p><strong>Learning and maintaining an ontology: AgentOnto (2026).</strong></p>
+<ul>
+<li>An agent built an ontology from databases, documents and example tasks, then refined it using tasks it generated itself and user feedback, but only feedback the user had <em>confirmed</em>.</li>
+<li>A motivating example: one retail workload needed 46 business concepts that its database schema didn't capture at all.</li>
+<li>This is close to the three-layer design of Part 4, with a promotion rule (only confirmed feedback changes the ontology).</li>
+</ul>
+<h3 class="heading-element">Question 4: Is it worth organising knowledge as a graph?</h3>
+<p><strong>Short answer: for questions that connect several facts, yes; for simple lookups, no.</strong></p>
+<p><strong>The graph-retrieval family.</strong> Since Microsoft's 2024 GraphRAG paper, a family of methods builds a graph of entities and relationships from documents and retrieves through it:</p>
+<ul>
+<li>
+<strong>LightRAG</strong> adds cheap incremental updates.</li>
+<li>
+<strong>HippoRAG 2</strong> uses a PageRank-style walk over an automatically extracted graph. It reports a 7% gain on questions that need connecting associated facts, without losing accuracy on simple ones, a problem earlier graph methods had.</li>
+<li>
+<strong>KAG</strong> (from Ant Group, which uses it) adds schema constraints and logical reasoning, and reports large gains on multi-hop question sets.</li>
+</ul>
+<p><strong>Graph structure as a plan: Reasoning on Graphs (ICLR 2024).</strong> An earlier, influential idea: instead of retrieving facts from a knowledge graph and pasting them into context, the model first writes a <em>plan</em>, a path of relationships to follow ("person → born in → city → located in → country"). It then retrieves only paths that actually exist and reasons over them. On two standard graph question-answering benchmarks this beat prior methods (by 4.4 and 22.3 points on the top answer, author-reported), and every answer comes with the path that justifies it. It needs a fine-tuned model and was tested only on general-knowledge graphs, but it's the research ancestor of "the ontology as a tool the agent navigates" (Part 3).</p>
+<p><strong>The critiques.</strong></p>
+<ul>
+<li>
+<strong>GraphRAG-Bench (2025, ICLR 2026)</strong> began from the observation that graph retrieval often <em>loses</em> to plain retrieval; prior work found 13.4% lower accuracy on a standard question set. Graded from simple fact lookup up to multi-step reasoning, graphs helped on hierarchical and multi-hop questions and not on simple lookups.</li>
+<li>
+<strong>"Do We Still Need GraphRAG?" (April 2026)</strong> is the most direct test of the two strategies from Part 3. It held the model and budget fixed and compared plain retrieval with five graph methods, with and without a searching agent.
+<ul>
+<li>Without agentic search, graphs added just <strong>0.47 points</strong> on general questions but <strong>27 points</strong> on multi-hop ones.</li>
+<li>Agentic search narrowed the gap for plain retrieval, but the best graph method still led on multi-hop questions.</li>
+<li>The authors' summary is that agentic search "redistributes where structure emerges": from building it in advance to discovering it during the search.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Why graphs built from documents disappoint, and one fix: MemGraphRAG (KDD 2026).</strong></p>
+<ul>
+<li>The paper starts from the same observation as GraphRAG-Bench: graph retrieval "frequently underperforms" plain retrieval in practice.</li>
+<li>Its diagnosis is that most systems build the graph <strong>one document chunk at a time</strong>, with no view of the whole corpus. That causes three defects:
+<ul>
+<li>
+<strong>Off-topic facts.</strong> Removing the least common 40% of extracted facts slightly <em>improved</em> accuracy (65.28% against 64.85%). Much of what was extracted was noise.</li>
+<li>
+<strong>Contradictions.</strong> The paper names three kinds:
+<ul>
+<li>
+<em>mutually exclusive</em> facts;</li>
+<li>
+<em>temporal</em> conflicts, where a fact that changes over time is recorded without a date;</li>
+<li>
+<em>granularity</em> conflicts, where the same thing is described at different levels of detail.</li>
+</ul>
+</li>
+<li>
+<strong>Fragmentation.</strong> The same entity ends up duplicated across disconnected pieces of the graph.</li>
+</ul>
+</li>
+<li>
+<strong>The fix</strong> is a team of agents sharing a global memory of schemas, facts and source passages:
+<ul>
+<li>an extraction agent records each fact with its evidence;</li>
+<li>a detection agent watches for conflicts;</li>
+<li>a resolution agent settles them by going back to the source passages, not by guessing.</li>
+<li>Only facts that fit the schemas the corpus has settled on are used.</li>
+</ul>
+</li>
+<li>
+<strong>Results (author-reported, four benchmarks).</strong>
+<ul>
+<li>It beat the leading graph methods on retrieval and answer accuracy (for example 69.4% on HotpotQA).</li>
+<li>Retrieval took 0.06 seconds against 1.6 for HippoRAG and 11 for LightRAG.</li>
+<li>Swapping its graph into other systems improved them only slightly (HippoRAG from 51.07 to 51.78 on average).</li>
+</ul>
+</li>
+<li>
+<strong>What it adds to the picture.</strong> Graph quality is a <em>maintenance</em> problem even at build time. The fix looks like the governance ideas in this guide in miniature: a shared schema, evidence for every fact, and conflicts resolved against sources.</li>
+</ul>
+<p><strong>Cost.</strong> One consultancy (Graffitecs) reported that across three client projects of about two million tokens and 50,000 entities, graph retrieval cost <strong>6–8 times as much to build and 3 times as much to run</strong> as plain retrieval. It concluded: "Most of the lift… comes from a clean schema, a small evaluator, and prompt engineering."</p>
+<h3 class="heading-element">Question 5: How do you keep knowledge current?</h3>
+<p><strong>Short answer: you must record what each fact is about and when it was true; search alone can't tell new from old.</strong></p>
+<p><strong>Why search fails: MemStrata (June 2026).</strong></p>
+<ul>
+<li>Text-similarity search can barely tell "this fact replaced that one" from "these two facts say the same thing in different words". It scored 0.59 on a scale where 0.5 is chance.</li>
+<li>So when facts change, ordinary retrieval keeps serving old versions. When forced to answer, it returned superseded facts <strong>15–40% of the time</strong>.</li>
+<li>MemStrata's alternative keys each fact by its subject and relationship (customer X, <em>billing address</em>), so a new value automatically retires the old one. Its error rate was close to zero, with no similarity threshold and no extra model calls.</li>
+<li>The paper also proposes testing without "deprecated" labels on old facts, because in real data nothing marks a fact as stale.</li>
+<li>It's a single-author study using a small model, but the argument is structural. Retiring a fact needs at least a minimal commitment: knowing what the fact is about.</li>
+</ul>
+<p><strong>Storing time isn't the same as reasoning about it.</strong></p>
+<ul>
+<li>
+<strong>Zep's Graphiti (2025)</strong> is the reference design for time in agent memory. Every relationship in its graph carries a validity interval, and old facts are marked invalid rather than deleted. Zep reports strong results on memory benchmarks (it sells the product).</li>
+<li>But <strong>a 2026 study of a similar store</strong> on another graph database found that adding point-in-time search <em>lowered</em> the model's accuracy on time-based questions, from 50% to 37.5%. Storing when facts were valid doesn't by itself help the model reason about time.</li>
+</ul>
+<p><strong>Keeping a large graph fresh: Apple's ODKE+ (2025).</strong></p>
+<ul>
+<li>It detects stale or missing facts, retrieves evidence, extracts candidates guided by small ontology fragments, checks each with a second model, and ranks candidates by corroboration.</li>
+<li>It ingested 19 million facts at 98.8% precision and cut the average delay before a change was reflected by 50 days.</li>
+<li>The cost is a pipeline of extra model calls for every fact.</li>
+</ul>
+<p><strong>Merging duplicates safely (2026).</strong> A production system that extracts entities from a live data stream retrieves only the relevant slice of the ontology for each record (about 94% less overhead). It uses six deduplication methods that need no model calls, plus a "conflict guard no similarity score can override". Search recall rose from about 70% to 95% with no false merges. Most of the work in that paper is maintenance engineering, not drafting.</p>
+<h3 class="heading-element">Question 6: What happens when sources disagree?</h3>
+<p><strong>Short answer: models handle it poorly, and improve sharply when told why the sources disagree.</strong></p>
+<p><strong>The CONFLICTS benchmark (Google, 2025)</strong> classifies disagreements between retrieved documents into types, each with the correct behaviour:</p>
+<ul>
+<li>
+<em>Complementary</em>: both are partly right, so combine them.</li>
+<li>
+<em>Conflicting opinions</em>: present both views.</li>
+<li>
+<em>Freshness</em>: one is outdated, so prefer the newer.</li>
+<li>
+<em>Misinformation</em>: one is wrong, so ignore it.</li>
+</ul>
+<p>Across 458 expert-annotated questions, models behaved correctly only <strong>59–68%</strong> of the time. Told the conflict type, they improved by about <strong>24 points</strong>.</p>
+<p>MemGraphRAG (Question 4) found the same problem inside automatically built graphs, and resolved its three kinds of contradiction (mutually exclusive, temporal, granularity) by going back to the source passages.</p>
+<p><strong>What this means.</strong> The hard part isn't reconciling sources; it's knowing why they disagree. An approved definition with an owner and an effective date supplies exactly that. A ranking score doesn't. No paper yet evaluates the precedence rules companies actually use, such as "the billing system is authoritative for revenue".</p>
+<h3 class="heading-element">Question 7: Can permissions be enforced safely?</h3>
+<p><strong>Short answer: correct enforcement isn't enough; the agent must say what it couldn't see.</strong></p>
+<p><strong>Partial Evidence Bench (May 2026)</strong> builds 72 tasks (due diligence, compliance audit, incident response) where part of the relevant evidence is outside the user's permissions.</p>
+<ul>
+<li>When access control silently filters out documents the user can't see, which is correct enforcement, the agent still answers as if it had the full picture.</li>
+<li>The authors call silent filtering "catastrophically unsafe".</li>
+<li>The fix is for the agent to report that evidence was withheld. That removed the unsafe answers without making the agent refuse everything.</li>
+<li>It's small, synthetic and single-author, but it's the first public benchmark of this failure.</li>
+</ul>
+<p><strong>Permissioned LLMs (Oracle Labs, 2025)</strong> gives a formal definition of what it means for a model's answers to respect access rights, with a metric for leakage. It deals mainly with knowledge built into the model itself, and covers retrieval only briefly.</p>
+<h3 class="heading-element">Question 8: Can we record who decided?</h3>
+<p><strong>Short answer: in research prototypes, yes, narrowly; nobody has connected it end to end.</strong></p>
+<ul>
+<li>
+<strong>IDEA2 (2026)</strong> has a model propose competency questions and domain experts vote on them. Rejected questions are rewritten until approved. Every edit, vote and piece of feedback is recorded. In one test, 92.7% of proposals were eventually accepted (102 of 110 reviews). It records approval <em>with its reasoning</em>, not as a click.</li>
+<li>
+<strong>A 2026 scholarly knowledge-graph system</strong> stores each curator's decision to admit an extracted claim as a provenance record in the W3C's standard vocabulary. The classification can change later without losing the path from each conclusion to its evidence.</li>
+<li>
+<strong>Skillful-Alhazen (2026)</strong> builds provenance into the memory itself: every note an agent writes links back to the fragment it came from, and every fragment to its source.</li>
+<li>
+<strong>Agentic Ontology 101 (2026)</strong> keeps source and interpretation physically separate. Annotations live outside the text and are checked against it, so a correction never silently alters the evidence.</li>
+<li>
+<strong>AgentO (2026)</strong> goes a step further and describes the agents themselves (tasks, tools, memory, hand-offs) in an ontology based on W3C provenance. That makes "which agent did what, with which tool, as part of which workflow" something you can query.</li>
+<li>
+<strong>AWS's design guide (2026)</strong> specifies, in a vendor document for the first time:
+<ul>
+<li>draft definitions quarantined until approved;</li>
+<li>approvals recorded through pull requests or tickets;</li>
+<li>semantic version numbers;</li>
+<li>per-fact source, timestamp and confidence.</li>
+</ul>
+</li>
+<li>
+<strong>A 2026 survey of agent provenance</strong> reviewed how agent systems trace their evidence and actions. It found <strong>no benchmark evaluates the complete chain from source to action</strong>, and tamper-evident records are rare.</li>
+</ul>
+<h3 class="heading-element">What hasn't been studied</h3>
+<p>Searching the literature also shows what's missing. These are gaps in published research, not proofs that nothing exists:</p>
+<ul>
+<li>
+<strong>Maintenance cost.</strong> No study measures what it costs to keep an ontology or semantic layer correct over months: how often definitions drift, how many person-hours review takes, what breaks when the business reorganises.</li>
+<li>
+<strong>A fair head-to-head comparison.</strong> AutoOntologyBench now compares direct answers, retrieval, agent-built ontologies and expert ontologies on the same tasks, the closest yet. But no study compares an approved ontology, a Markdown definitions file and usage-learned knowledge on the same <em>business</em> tasks.</li>
+<li>
+<strong>Precedence rules.</strong> No evaluation of rules for which enterprise source wins a conflict.</li>
+<li>
+<strong>Permissions at scale.</strong> No permission-aware benchmark at enterprise scale.</li>
+<li>
+<strong>The end-to-end link.</strong> No study connects a definition's version to its approver, to the agent that used it, to the action it took.</li>
+<li>
+<strong>Independent replication.</strong> No independent replication of any agent-memory accuracy figure.</li>
+<li>
+<strong>Approval quality.</strong> No study of whether <em>approving</em> a machine-drafted ontology preserves the judgement that writing one used to require, beyond acceptance rates.</li>
+<li>
+<strong>No position paper</strong> titled "ontologies for agents" was found. The argument is spread across the papers above, two 2026 surveys, and the historical essay "From Multi-Agent Systems and the Semantic Web to Agentic AI" (Part 3). That essay comes closest, but it's a narrative rather than an argument with evidence.</li>
+</ul>
+<hr>
+<h2 id="part-7-the-problems-nobody-has-solved">Part 7. The problems nobody has solved</h2>
+<p>Step back from the products and the research, and four problems remain open. Each is a different way of asking: <strong>can you trust this answer?</strong></p>
+<h3 class="heading-element">1. Is the answer allowed?</h3>
+<p>Every product says it respects permissions. None has been independently tested on whether it does, and vendor documentation already lists exceptions (Part 4). As Part 6 showed, even correct enforcement can mislead if the agent doesn't say what it couldn't see.</p>
+<h3 class="heading-element">2. Is the answer current?</h3>
+<p>No product records how long a fact or definition is valid. All treat freshness as a ranking signal ("newer is probably better"), which isn't the same as knowing a fact has been replaced. The research says this needs to be built into how facts are stored.</p>
+<h3 class="heading-element">3. Which source wins when two disagree?</h3>
+<p>Most products now answer this with a ranking (Part 5). Only Google shows the conflict to a person. No one has evaluated whether the ranking picks correctly.</p>
+<h3 class="heading-element">4. Who decided, and what did the agent do with it?</h3>
+<p>This is the least developed and probably the most important.</p>
+<p><strong>Why it matters.</strong> Suppose the definition of "eligible customer" changes. Every agent that relies on it now behaves differently: different customers get offers, different cases get flagged. No code changed, so there's nothing in the code history to review. Months later, someone asks why a decision was made. To answer, you'd need to know:</p>
+<ul>
+<li>which version of the definition the agent used;</li>
+<li>who approved that version, and why;</li>
+<li>what the agent then did.</li>
+</ul>
+<p><strong>What exists today:</strong></p>
+<ul>
+<li>
+<strong>Snowflake</strong> promises a log of who approved each definition change, not yet in preview.</li>
+<li>
+<strong>Microsoft Fabric</strong> records who created each ontology version.</li>
+<li>
+<strong>ServiceNow</strong> records outcomes of workflows.</li>
+<li>
+<strong>Research prototypes</strong> record approvals of individual definitions (IDEA2), store curators' decisions as provenance records, and describe agent workflows themselves in a queryable ontology (AgentO).</li>
+<li>
+<strong>AWS's design guide</strong> goes furthest on paper: quarantined drafts, recorded approvals, versioned definitions, per-fact provenance and change events. It's a design, not a shipping product.</li>
+</ul>
+<p><strong>What's missing.</strong> No product or standard yet connects all four pieces: the definition's version, its approver, the agent that used it, and the action it took.</p>
+<p>Tara Raafat of Bloomberg asked at a November 2026 conference: "when generation becomes cheap, judgement becomes scarce — if approval becomes a click-through, where did the judgement go?" When a model drafts a definition and a person clicks "approve", the record should capture the reasoning, not just the click.</p>
+<hr>
+<h2 id="part-8-standards-what-exists-and-what-s-coming">Part 8. Standards: what exists and what's coming</h2>
+<p>Standards matter here because they decide whether your business definitions can move between products.</p>
+<h3 class="heading-element">Sharing metric definitions: Apache Ossie</h3>
+<p><strong>What it is.</strong></p>
+<ul>
+<li>Ossie began in September 2025 as Snowflake's "Open Semantic Interchange": a common file format for metric definitions, so a metric defined in one tool can be read by another.</li>
+<li>It entered the Apache Software Foundation's incubator in June 2026.</li>
+<li>About 80 organisations list support, including Microsoft, Oracle, Salesforce and ServiceNow, and there are converters for dbt, Databricks and Power BI.</li>
+</ul>
+<p><strong>Its limits.</strong></p>
+<ul>
+<li>It has <strong>no official release yet</strong>, and it covers only metrics, not business entities.</li>
+<li>Entities and a notion of "certifying authority" are on its roadmap.</li>
+<li>One test of exporting metrics through a converter found 4 of 16 came out wrong (press report).</li>
+</ul>
+<h3 class="heading-element">Connecting agents to tools: MCP and A2A</h3>
+<p><strong>MCP.</strong></p>
+<ul>
+<li>The Model Context Protocol is how agents connect to tools and data; almost every product in Part 4 uses it.</li>
+<li>Its July 2026 version added two signals to the data a tool returns: how long it can be cached, and whether it's public or private. It also added a way for companies to control agent access through their existing identity systems.</li>
+<li>It still has <strong>no standard way to say where an answer came from, who is authoritative for it, or who approved it.</strong>
+</li>
+</ul>
+<p><strong>A2A.</strong> The protocol for agents talking to each other reached version 1.0 in March 2026.</p>
+<p><strong>Where they live.</strong> Both now sit under the Agentic AI Foundation at the Linux Foundation.</p>
+<h3 class="heading-element">The semantic-web standards</h3>
+<p>The classic standards from W3C, the web's standards body, are being updated.</p>
+<ul>
+<li>
+<strong>RDF 1.2</strong> became a Candidate Recommendation Draft on 16 November 2026. It adds a feature called triple terms: the ability to make statements <em>about</em> individual facts. For example: "this fact came from the billing system, was valid from March, and was approved by Finance." That's the first standard way to attach source, validity time and approver to a single fact, exactly what Part 7 says is missing.</li>
+<li>
+<strong>SHACL 1.2</strong> (rules for validating data) and <strong>SPARQL 1.2</strong> (querying) are still drafts.</li>
+<li>
+<strong>W3C PROV,</strong> a standard for recording provenance, has existed since 2013 but is rarely used.</li>
+</ul>
+<h3 class="heading-element">Recording decisions: SCITT and agent identity</h3>
+<p><strong>SCITT.</strong></p>
+<ul>
+<li>SCITT (RFC 9943, June 2026) is an internet standard for tamper-evident signed records, originally built for software supply chains.</li>
+<li>About twenty proposals apply it to recording agent actions and the decisions behind them. None has yet been adopted by the standards working group.</li>
+</ul>
+<p><strong>Agent identity.</strong> Separate work at the IETF on recording <em>which agent</em> acted on whose behalf was formally adopted in November 2026.</p>
+<h3 class="heading-element">Regulation</h3>
+<p><strong>What the law requires.</strong> The EU AI Act requires high-risk AI systems to keep automatic logs of their operation.</p>
+<p><strong>When.</strong> In July 2026 the EU postponed these obligations to December 2027 and August 2028. That removes the nearest legal pressure to build decision records.</p>
+<h3 class="heading-element">Industry ontologies</h3>
+<p>Several industries maintain shared ontologies:</p>
+<ul>
+<li>
+<strong>Finance:</strong> FIBO.</li>
+<li>
+<strong>Law:</strong> FOLIO, about 18,000 concepts, freely licensed.</li>
+<li>
+<strong>Healthcare:</strong> SNOMED CT, FHIR and OMOP.</li>
+</ul>
+<p>In 2026 these reached agents mainly as <strong>lookup tools</strong>. FOLIO offers an MCP server, and clinical terminology servers let a model pick from valid codes instead of inventing them. That caution is justified: a November 2026 study found frontier models "hallucinate medical codes at a rate that currently renders them unsuitable for autonomous clinical coding".</p>
+<hr>
+<h2 id="part-9-the-debate-in-the-participants-words">Part 9. The debate, in the participants' words</h2>
+<p>The arguments for and against ontologies for agents are old: some go back to the semantic-web debates of the 2000s. What's new in 2026 is that both sides now have production systems and some data. This part gives each side its strongest form, in the participants' own words, then asks what the skeptics get right and where they overreach.</p>
+<h3 class="heading-element">The case for deciding meaning up front</h3>
+<p><strong>Kurt Cagle: an ontology is a contract.</strong> Cagle, a long-time ontologist, wrote "The Ontology Fight Nobody in the Boardroom Knows They're Having" (September 2026).</p>
+<ul>
+<li>An ontology is an explicit agreement between parties about what terms mean. "Context" is "the set of conditions under which the contract is considered valid": a jurisdiction, a date range, a business unit.</li>
+<li>Companies deploying AI already build ontologies without calling them that: "Guardrails are, in effect, an improvised ontology." The rules they bolt on to stop an agent misbehaving encode assumptions about what things mean and what's allowed, just undocumented and scattered.</li>
+<li>The mature pattern, in his view: the ontology produces a valid, correctly scoped query, and the language model only interprets the result for the user.</li>
+<li>He reads the vendors' sudden enthusiasm for ontology as a commercial admission that the bet on scale alone, larger models getting it right on their own, hasn't paid off.</li>
+</ul>
+<p><strong>Jessica Talisman: lookup is not reasoning.</strong> In "Ontologies, Context Graphs, and Semantic Layers: What AI Actually Needs in 2026" (January 2026, published on a vendor's blog):</p>
+<ul>
+<li>The semantic layer solved <em>measurement</em>, not <em>meaning</em>. "Metric definition and ontology engineering are fundamentally different disciplines."</li>
+<li>Her summary: "A semantic layer is for lookup, an ontology is for context and reasoning."</li>
+<li>Agents that act also need a model of <em>procedure</em>: what steps exist, what was actually done, who had authority to do it. Building that is knowledge-elicitation work with experts, not something to generate.</li>
+<li>She credits Palantir's operational ontology as ahead of its time, but closed.</li>
+</ul>
+<p><strong>Juan Sequeda: models don't come with your DNA.</strong> Sequeda, formerly of data.world and now at ServiceNow, recalls that in 2023 many believed "LLMs were going to figure it out", until his group's benchmark showed a large accuracy gap without a knowledge graph.</p>
+<ul>
+<li>On why agents need explicit meaning: "frontier models don't come pre-loaded with that DNA."</li>
+<li>He separates two goals: shared meaning as lasting <em>infrastructure</em> across systems, and meaning built just to feed today's agent. The second, he warns, produces brittle work.</li>
+<li>His advice on scope is cautious: "Do not walk in on day one and try to model your entire enterprise ontology. That path leads to nowhere."</li>
+</ul>
+<p><strong>Frank Coyle, via Latent Space: logical guardrails.</strong></p>
+<ul>
+<li>Latent Space's July 2026 essay "Ontologies Are So Back" did more than anything else to bring the debate to AI engineers.</li>
+<li>It was built around a widely watched talk by Frank Coyle at the AI Engineer World's Fair: language models are good at probabilistic reasoning, but agents need "logical guardrails", by which he means ontologies, to keep them inside deterministic boundaries.</li>
+<li>The essay also covered Eifrem's three pillars (below).</li>
+</ul>
+<p><strong>Enterprise Knowledge: one ontology, all agents.</strong></p>
+<ul>
+<li>Diana Felder, an ontology consultant at Enterprise Knowledge (June 2026), makes the practical case: an ontology "is not data". It's the schema that gives data its meaning, and the same constraints can keep <em>every</em> agent in a system aligned on the same business concepts.</li>
+<li>Her examples are concrete:
+<ul>
+<li>telling apart three meanings of "policy" at an insurer (customer, underwriting, compliance);</li>
+<li>an inference rule that marks a customer as "preferred" after their twentieth purchase.</li>
+</ul>
+</li>
+<li>She recommends injecting relevant parts of the ontology into prompts. That's worth noting, because the practitioners in "The middle positions" below prefer giving the agent the ontology as a tool to query, and the 2026 enterprise-agents study (Part 6) found that injected ontology content can push out what the model already knew.</li>
+</ul>
+<p><strong>Emil Eifrem: thin agents on a smart substrate.</strong> Neo4j's chief executive argued at the AI Engineer conference (July 2026) for moving from "thick agents" individually wired to data sources to "thin agents" on a shared substrate with three parts:</p>
+<ul>
+<li>a business ontology;</li>
+<li>a technical ontology (metadata and mappings);</li>
+<li>execution traces, so agents learn from each other's work.</li>
+</ul>
+<p>His sharpest line is about learning: "when your agent wakes up tomorrow, it's not smarter than it was today." On plain Markdown files, he says they're "part of the solution, but it is not the solution." His examples (a "Fortune 20 global bank", a fintech) are anecdotes without numbers.</p>
+<p><strong>Capital One: ontology as a staffed job.</strong> Notes from Sequeda's podcast describe Capital One employing about <strong>40 enterprise ontologists</strong> as a recognised job family, building toward 80–100 governed data products, each with a vice-president accountable for it (as reported). Yet the advice from inside that programme is: "Don't start with the ontology… Start with understanding who your consumers are."</p>
+<h3 class="heading-element">The case against, or for skepticism</h3>
+<p>The skeptics fall into five groups: those who think general methods will win, those who doubt the business model, those who point to cost and failure rates, those who doubt AI-generated ontologies in particular, and those who think the real problem is people.</p>
+<p><strong>1. "Be Bitter Lesson pilled": general methods will win.</strong></p>
+<p><em>Tim Kellogg</em>, an AI engineer, published "Knowledge Graphs" on 11 November 2026. It's the most careful skeptical piece of the year, partly because he argues against himself.</p>
+<ul>
+<li>
+<strong>The thesis.</strong> He opens: "I hate knowledge graphs."
+<ul>
+<li>Knowledge graphs are "inherently limited to what a single human can conceive". The schema caps what the system can represent at what its designers thought of in advance.</li>
+<li>This is the "Bitter Lesson", Rich Sutton's 2019 observation that in AI research, general methods that scale with computation have repeatedly beaten systems built around human-designed structure.</li>
+</ul>
+</li>
+<li>
+<strong>His test.</strong> If the model underneath gets twice as good, does your agent? An agent bound to a hand-built schema may not, because the schema, not the model, sets the ceiling.</li>
+<li>
+<strong>His advice:</strong> "Be cautious with knowledge graphs. Be bitter lesson pilled."</li>
+<li>
+<strong>The concession.</strong> When he tried to get systematic completeness from plain text (an agent that notices when something "surprising" conflicts with what it knows), he found the prompting ends up re-inventing an ontology.</li>
+<li>
+<strong>His compromise.</strong> His own graph "doesn't store facts, it just stores observations. The factuality is determined at query time." He keeps structure for <em>recording what was seen</em>, and leaves <em>deciding what is true</em> to the model at the moment of asking.</li>
+</ul>
+<p><em>Ethan Mollick</em> (Wharton) applied the same argument to organisations in "The Bitter Lesson versus The Garbage Can" (July 2025).</p>
+<ul>
+<li>Organisations are "garbage cans": undocumented processes, informal workarounds, decisions nobody wrote down.</li>
+<li>One approach to agents maps all of that carefully. The Bitter Lesson suggests that agents trained on outcomes may simply skip it.</li>
+<li>He contrasts Manus's carefully engineered agent with OpenAI's compute-scaled one, and notes the language used to praise the former: "'Carefully crafted,' 'bespoke,' 'incorporates hard-won knowledge' — exactly the kind of work the Bitter Lesson tells us to avoid."</li>
+<li>His conclusion is a warning to companies that treat their institutional knowledge as a moat: it "might matter less than they think".</li>
+</ul>
+<p><em>Coding agents</em> are the strongest practical evidence for this view. In February 2026, Anthropic's Boris Cherny explained why Claude Code stopped using a retrieval index: "agentic search generally works better. It is also simpler and doesn't have the same issues around security, privacy, staleness, and reliability." An Amazon paper cited in the same discussion ("Keyword Search Is All You Need") reports that an agent doing plain keyword search reaches over 90% of the performance of retrieval-augmented systems (author-reported; not checked here).</p>
+<p><strong>2. "It can't be sold on its own": the business-model objection.</strong></p>
+<p><em>Benn Stancil</em>, a well-known data-industry writer, popularised the term "context layer" in August 2025 while doubting it could be a business.</p>
+<ul>
+<li>His argument is economic, not technical. By the end of 2021 at least six companies were building a standalone metrics layer: "Two pivoted, one got acquired, and one stalled."</li>
+<li>A standalone context layer faces the same problem. Every BI tool, data platform and agent vendor wants to own its own context, because that's where customer lock-in comes from.</li>
+<li>He's equally skeptical of the word: "'Context' feels like AI's version of social media's 'content:' A sterile, anesthetized term."</li>
+</ul>
+<p>The 2026 launches in Part 4 support his prediction. Context became a feature of Databricks, Snowflake, Microsoft, Google and AWS, not a product bought separately.</p>
+<p><strong>3. "Most of these projects fail, and they're expensive."</strong></p>
+<p><em>Kurt Cagle</em>, an advocate, is also the most candid about failure. In "Why Knowledge Graph Projects Fail" (August 2026) he writes: "the number of unsuccessful knowledge graphs far outweighs the number of successful ones."</p>
+<ul>
+<li>
+<strong>The failure modes he lists:</strong>
+<ul>
+<li>lifting a relational database into a graph without rethinking it;</li>
+<li>deep hierarchies of abstract categories that nobody uses;</li>
+<li>no clear purpose;</li>
+<li>poor scoping;</li>
+<li>exposing raw graph queries to users;</li>
+<li>pasting the whole graph into a model's context window.</li>
+</ul>
+</li>
+<li>
+<strong>His prescriptions:</strong>
+<ul>
+<li>validation rules that carry instructions for agents;</li>
+<li>recording provenance;</li>
+<li>tracking when facts were true;</li>
+<li>federating small graphs rather than building one big one;</li>
+<li>"assume the model will change".</li>
+</ul>
+</li>
+<li><em>(The piece is co-written with a collaborator he describes as an AI.)</em></li>
+</ul>
+<p><em>Tarek Saade</em> of the consultancy Graffitecs ("RAG vs GraphRAG", April 2026) puts numbers on cost.</p>
+<ul>
+<li>Across three client projects, graph retrieval cost 6–8 times as much to build and 3 times as much to run as plain retrieval.</li>
+<li>His verdict: "GraphRAG is the buzzword of 2026, and most teams reaching for it shouldn't." He adds: "Most of the lift… comes from a clean schema, a small evaluator, and prompt engineering."</li>
+</ul>
+<p><strong>4. "Machine-generated ontologies can't be trusted."</strong></p>
+<p>When NVIDIA released Auto Ontology in November 2026, an independent tester (Andreas Nigg of Pondhouse Data) tried it on a 51-table database.</p>
+<ul>
+<li>It produced an ontology in under ten minutes, but "two of four answers had wrong SQL that the answer text did not reveal, so expert certification is not optional".</li>
+<li>On Hacker News, commenters were blunter. One: "I'm not convinced a machine-generated ontology is the start of the answer." Others asked why NVIDIA hadn't used the existing standards, given that language models are "exceptionally proficient at authoring sparql".</li>
+<li>Juan Sequeda, at a November 2026 conference, said simply that you can't have AI auto-generate your ontology. The research in Part 6 agrees for structure, though not for vocabulary.</li>
+</ul>
+<p><strong>5. "The problem is people, not formats."</strong></p>
+<p><em>Hacker News skeptics</em> have made the longest-running objection.</p>
+<ul>
+<li>In a 2025 thread: "Ontologies and all that have been tried and have always been found to be too brittle." A reply argued that concepts should be represented as vectors (numerical embeddings learned from data), not as fixed labels.</li>
+<li>In the 2026 NVIDIA thread, one commenter said a generated ontology "will not magically solve the messy people issues": the disagreements between teams about what words mean, and the absence of anyone empowered to settle them.</li>
+</ul>
+<p><em>Atlan's reading of Gartner's 2026 research</em> gives this a number. Analyzing 314 profiles across Gartner's hype cycles, the author found organisational obstacles cited 14 points more often once a technology passes the peak of hype. The most quotable line: "A CDAO handed context without the identity model, the delivery pipeline and the platform budget has been given a title rather than a job." <em>(The author works for a vendor, and the coding of profiles is his own.)</em></p>
+<p><em>Manuel Herranz</em> of Pangeanic, a competing vendor, challenged the claim that Palantir's ontology is hard to replicate. An analyst had said no customer cited a risk of rebuilding Palantir themselves with Claude, "<em>likely</em> because the data mapping… is very sophisticated". Herranz's point: the word "likely" is doing the work. In his view, the real moat is lock-in of the business logic customers have accumulated inside the platform, not the ontology technology.</p>
+<h3 class="heading-element">The middle positions</h3>
+<p><strong>a16z: context as a superset of the semantic layer.</strong></p>
+<ul>
+<li>Investors Jason Cui and Jennifer Li argued in March 2026 that data agents are "essentially useless without the right context".</li>
+<li>They describe a context layer that includes the semantic layer and adds canonical entities, identity resolution across systems, tribal knowledge and governance, exposed to agents through APIs and MCP.</li>
+<li>Their process: models build the first version, people refine it, and the refinement "cannot be fully automated".</li>
+</ul>
+<p><strong>Rippletide: necessary, not sufficient.</strong> Patrick Joubert replied that "Context layers are necessary. They are not sufficient." Agents that <em>act</em> need deterministic enforcement of decisions (rules a computer applies every time) as well as better information.</p>
+<p><strong>Foundation Capital: record decisions, not just things.</strong></p>
+<ul>
+<li>Jaya Gupta and Ashu Garg argued (December 2025) that the missing layer is <strong>decision traces</strong>: the exceptions, overrides and precedents that explain why things happened.</li>
+<li>Their phrase is "systems of record for decisions, not just objects", which they call "a living record of decision traces stitched across entities and time so precedent becomes searchable".</li>
+<li>They expect the value to go to agent companies in the path of work, not to existing systems of record.</li>
+<li>The "trillion-dollar" headline is their estimate.</li>
+</ul>
+<p><strong>Builders who use agents to build ontologies.</strong> Two 2026 pieces by people doing the work describe a middle that is neither "design it all first" nor "let the model work it out".</p>
+<ul>
+<li>
+<strong>Jie Bao ("Agentic Ontology 101")</strong> argues for "extract first, design later". Let the agent extract, then grow the structure from its mistakes. His claim is that the bottleneck has moved from design to the repeated cycle of reviewing and correcting.</li>
+<li>
+<strong>Gully Burns and Paul Groth (Skillful-Alhazen)</strong> argue that coding agents have made writing schemas cheap enough that explicit structure no longer needs to be rationed. Agents should keep their working memory in a typed graph rather than in free text.</li>
+</ul>
+<p>Both keep a person deciding the structure. Both separate the evidence from the agent's interpretation of it.</p>
+<p><strong>Context engineering: the practitioners' synthesis.</strong> The writers who shaped context engineering offer a practical middle.</p>
+<ul>
+<li>
+<strong>Anthropic</strong> treats context as a limited "attention budget": give the model the "smallest possible set of high-signal tokens", retrieve just in time, and use some up-front retrieval for stable domains "such as legal or finance work".</li>
+<li>
+<strong>Drew Breunig</strong> names four ways long contexts fail: poisoning, distraction, confusion and <em>clash</em> (conflicting information), the conflict problem of Part 5 by another name.</li>
+<li>
+<strong>Manus</strong> treats the file system as "the ultimate context" and warns: "If model progress is the rising tide, we want Manus to be the boat, not the pillar stuck to the seabed."</li>
+<li>
+<strong>The convergence.</strong> Cagle, Kellogg and Anthropic all say the ontology or graph should be a <strong>tool the agent queries</strong>, not text pasted into its context.</li>
+</ul>
+<h3 class="heading-element">What the skeptics get right, and where they overreach</h3>
+<p><strong>What they get right:</strong></p>
+<ol>
+<li>
+<strong>Hand-built schemas cap what a system can represent</strong>, and they age. Kellogg's two-times-better-model test is worth applying to any design.</li>
+<li>
+<strong>The standalone business is hard.</strong> Stancil's prediction is coming true: ontology and context are becoming platform features.</li>
+<li>
+<strong>Most knowledge-graph projects fail, and graphs are expensive.</strong> The advocates say so themselves.</li>
+<li>
+<strong>Machine-generated ontologies fail silently</strong>, and generated structure is unreliable (Part 6).</li>
+<li>
+<strong>The hardest part is organisational:</strong> who owns a definition and who settles disagreements.</li>
+</ol>
+<p><strong>Where they overreach:</strong></p>
+<ol>
+<li>
+<strong>The coding-agent evidence doesn't transfer to business data.</strong>
+<ul>
+<li>Code has exact names and small repositories an agent can explore. Business definitions are ambiguous, private and disputed.</li>
+<li>Anthropic itself makes this distinction for legal and finance work.</li>
+<li>Enterprise benchmarks (Spider 2.0) show derive-only agents failing badly.</li>
+</ul>
+</li>
+<li>
+<strong>The Bitter Lesson is about capability, not authority.</strong>
+<ul>
+<li>A better model can infer what "active customer" usually means. It can't know what Finance decided it means this quarter, or who decided.</li>
+<li>That's a fact about the organisation, not a pattern in data. Even Kellogg ends up storing observations in a graph.</li>
+</ul>
+</li>
+<li>
+<strong>The measured gains are real, and cheap to get.</strong>
+<ul>
+<li>A small, reviewed definitions file improved accuracy by 17–23 points across models.</li>
+<li>Semantic layers refuse rather than invent.</li>
+<li>Nothing in the skeptical case argues against that minimal commitment. Their target is the large, hand-built enterprise ontology, and against that target they're largely right.</li>
+</ul>
+</li>
+</ol>
+<p><strong>The defensible position after a year of argument:</strong> commit to a small set of definitions people own and review, keep them in plain, version-controlled form, expose them to agents as tools, and let the agent search and reason around them. Build heavy structure only where questions require connecting many facts, and only where someone will maintain it.</p>
+<hr>
+<h2 id="part-10-practical-advice-for-a-team-starting-out">Part 10. Practical advice for a team starting out</h2>
+<p>What this suggests for an organisation that wants agents to answer business questions reliably:</p>
+<ol>
+<li>
+<strong>Start with a reviewed definitions file, not a platform.</strong> Write down your 20–50 most important business terms, with a precise definition, an owner and the data source. Keep it in version control and review changes like code. The research suggests this captures much of the benefit at a fraction of the cost.</li>
+<li>
+<strong>Fix the data before the ontology.</strong> dbt's test found that reorganising the data improved results more than any choice of tooling.</li>
+<li>
+<strong>Let the system learn, but have people approve.</strong> Learned knowledge from query logs is valuable for finding candidates. Don't let it become official without review; unreviewed knowledge can make results worse.</li>
+<li>
+<strong>Prefer systems that refuse to answering wrongly.</strong> Give agents defined metrics as tools, so a question that can't be answered produces "I can't" rather than a plausible wrong number.</li>
+<li>
+<strong>Measure silent errors, not just accuracy.</strong> When you test an agent, count how often it's wrong <em>without signalling it</em>. That's the failure that does damage.</li>
+<li>
+<strong>Make the agent say what it couldn't see.</strong> If permissions hide some evidence, the answer should say so.</li>
+<li>
+<strong>Record when facts were valid,</strong> for anything that changes over time.</li>
+<li>
+<strong>Keep a simple change record.</strong> For each definition change: what changed, who approved it, why and when. Even a plain log makes it possible to explain later why a number moved.</li>
+<li>
+<strong>Keep drafts out of production.</strong> Machine-drafted definitions should sit in a draft state that agents can't use until someone approves them. AWS's design guide shows one way to do this: separate draft and approved versions, numbered releases and rollback.</li>
+<li>
+<strong>Keep evidence separate from interpretation.</strong> Store the agent's extractions and notes alongside the source documents, linked back to them, never edited into them. A correction then never silently changes the evidence.</li>
+<li>
+<strong>Use industry vocabularies as lookups.</strong> In regulated fields (medical codes, legal categories), have the model choose from a controlled list rather than generate codes.</li>
+</ol>
+<hr>
+<h2 id="part-11-what-to-watch-in-the-coming-months">Part 11. What to watch in the coming months</h2>
+<ul>
+<li>Whether Databricks' review tool and Snowflake's approval log ship, and whether they record <em>why</em> a definition was approved, not just who approved it.</li>
+<li>Whether anyone publishes a neutral comparison of approved definitions, definition files and learned knowledge on real business tasks, including silent-error rates.</li>
+<li>Whether MCP adds a standard way to say where returned information came from and who approved it.</li>
+<li>Whether Apache Ossie makes its first release and extends from metrics to business entities.</li>
+<li>Forrester's first market report on context layers, due by the end of 2026, and whether it evaluates permissions and authority at all.</li>
+<li>How AWS reconciles its "experts approve everything" product with its "learns without human review" product.</li>
+</ul>
+<hr>
+<h2 id="sources">Sources</h2>
+<p>All sources are saved under <code>sources/</code>, with detailed notes under <code>notes/</code>:</p>
+<ul>
+<li>vendors: <code>notes/vendors.md</code>
+</li>
+<li>research: <code>notes/papers.md</code>
+</li>
+<li>standards: <code>notes/standards.md</code>
+</li>
+<li>practitioners and analysts: <code>notes/writing.md</code>
+</li>
+</ul>
+<p>The main ones:</p>
+<p><strong>Vendor documentation and announcements</strong></p>
+<ul>
+<li>Databricks: Genie Ontology product page, documentation, GA announcement (11 Nov 2026), Turing benchmark write-up, Unity Catalog semantics, Genie MCP.</li>
+<li>Glean:
+<ul>
+<li>"Enterprise AI indexing and context"</li>
+<li>"From enterprise search to enterprise context: what AI agents actually need"</li>
+<li>Enterprise Graph</li>
+<li>context evaluation</li>
+</ul>
+</li>
+<li>Palantir: Ontology MCP documentation and June 2026 announcements.</li>
+<li>Microsoft: Ignite 2026 Book of News (Microsoft IQ), Fabric IQ and ontology documentation.</li>
+<li>AWS:
+<ul>
+<li>AWS Context announcement (June 2026)</li>
+<li>Context Ontology Accelerator (July 2026) and its repository README</li>
+<li>Prescriptive Guidance, <em>Semantic Layer for Agentic AI using Ontology, Symbolic Reasoning, and Virtual Knowledge Graph</em> (Simpson, Riggan and Schiros, July 2026), with its related-resources page</li>
+</ul>
+</li>
+<li>Google: Knowledge Catalog introduction and semantic-model ingestion (30 Oct 2026).</li>
+<li>Snowflake: Horizon Context press release and blogs (3 Nov 2026).</li>
+<li>ServiceNow, Salesforce, SAP, Neo4j, NVIDIA (via an independent test), Collibra, Atlan.</li>
+<li>Collate: Ontology Studio product page, documentation, and press release (17 Nov 2026).</li>
+<li>Tata Communications: "Context Graph &amp; Agentic Ontology".</li>
+</ul>
+<p><strong>Research papers (arXiv identifiers)</strong></p>
+<ul>
+<li>Ontology generation and evaluation: CQ4OE 2609.26029; Ontogenia 2503.05388; OntoExtend 2607.17963; IDEA2 2604.01344.</li>
+<li>Definitions, semantic layers and text-to-SQL:
+<ul>
+<li>Cube's semantic-layer benchmark 2604.25149; NLKGQ 2607.18029; LinkedIn text-to-SQL 2507.14372.</li>
+<li>Data.world knowledge-graph benchmark 2311.07509 and follow-up 2405.11706.</li>
+<li>Spider 2.0 2411.07763.</li>
+</ul>
+</li>
+<li>Ontology-constrained agents: 2604.00555.</li>
+<li>Graphs versus search: RAGSearch 2604.09666; GraphRAG-Bench 2506.05690.</li>
+<li>Facts that change over time: MemStrata 2606.26511; bitemporal memory 2607.26520; Zep/Graphiti 2501.13956.</li>
+<li>Conflicting sources: CONFLICTS 2506.08500.</li>
+<li>Permissions: Partial Evidence Bench 2605.05379.</li>
+<li>Provenance and decision records: agent provenance survey 2606.04990; decision records 2610.28663; OntoLogX 2510.01409.</li>
+<li>Medical coding: SNOMED CT coding with LLMs 2611.18595.</li>
+<li>Agent-built ontologies and knowledge graphs: AutoOntologyBench 2611.27734; OntoKG 2604.02618; LLM-empowered knowledge graph construction survey 2510.20345.</li>
+<li>Graph construction with agents: MemGraphRAG 2606.00610 (KDD 2026); CoA-Text2OWL (Ghanem, Jabbar and Cruz; FRCCS 2025, doi 10.1007/978-3-032-00206-8_20, and KES 2025).</li>
+<li>Ontology-grounded agents: OA-RAG 2610.36335; Reasoning on Graphs 2310.01061 (ICLR 2024).</li>
+<li>Agentic ontology:
+<ul>
+<li>AgentO, an ontology for modelling agentic AI systems (Ekelhart, Kurniawan, Ekaputra and Kiesling; ESWC 2026, LNCS 16550)</li>
+<li>Skillful-Alhazen, "Complex Knowledge Curation using Agentic Ontological Notebook Memory" (Burns and Groth; CAIS 2026)</li>
+</ul>
+</li>
+<li>Background and surveys:
+<ul>
+<li>"Unifying Large Language Models and Knowledge Graphs: A Roadmap" (Pan et al.; IEEE TKDE 2024), 2306.08302</li>
+<li>"From Multi-Agent Systems and the Semantic Web to Agentic AI", 2507.10644</li>
+<li>"Agentic AI: A Comprehensive Survey of Architectures, Applications, and Future Directions", 2510.25445</li>
+</ul>
+</li>
+<li>Classics:
+<ul>
+<li>Noy and McGuinness, <em>Ontology Development 101</em> (Stanford KSL, 2001): <a href="https://protege.stanford.edu/publications/ontology_development/ontology101.pdf" rel="nofollow">https://protege.stanford.edu/publications/ontology_development/ontology101.pdf</a>
+</li>
+<li>Hogan et al., <em>Knowledge Graphs</em> (ACM Computing Surveys, 2021), arXiv 2003.02320</li>
+</ul>
+</li>
+</ul>
+<p><strong>Standards</strong></p>
+<ul>
+<li>Apache Ossie; dbt MetricFlow.</li>
+<li>MCP (version 2026-07-28); Agentic AI Foundation; A2A.</li>
+<li>W3C: RDF 1.2, SPARQL 1.2, SHACL 1.2, PROV, ODRL, Verifiable Credentials.</li>
+<li>ISO GQL.</li>
+<li>IETF: SCITT (RFC 9943), WIMSE agent identity.</li>
+<li>C2PA 2.5.</li>
+<li>EU AI Act Articles 12 and 19, and the postponement in Regulation 2026/1744.</li>
+<li>FOLIO, FIBO, gist.</li>
+</ul>
+<p><strong>Practitioners and analysts</strong></p>
+<ul>
+<li>Ontology practitioners and skeptics:
+<ul>
+<li>Kurt Cagle, "The Ontology Fight…" and "Why knowledge graph projects fail"</li>
+<li>Jessica Talisman on ontologies, context graphs and semantic layers</li>
+<li>Juan Sequeda</li>
+<li>Emil Eifrem talk transcript</li>
+<li>Tim Kellogg, "Knowledge Graphs"</li>
+<li>Ethan Mollick</li>
+<li>Benn Stancil, "The context layer"</li>
+</ul>
+</li>
+<li>Investors and analysts:
+<ul>
+<li>a16z on data agents and context</li>
+<li>Foundation Capital on context graphs</li>
+<li>Forrester on context layers</li>
+<li>Gartner's 2026 Hype Cycles, via Atlan</li>
+</ul>
+</li>
+<li>Context engineering:
+<ul>
+<li>Anthropic, "Effective context engineering for AI agents"</li>
+<li>Manus, LangChain, Drew Breunig, Simon Willison</li>
+</ul>
+</li>
+<li>Case studies: dbt (semantic layer vs text-to-SQL, Apr 2026); Pinterest; Pondhouse's test of NVIDIA Auto Ontology.</li>
+<li>Practitioner and explainer pieces:
+<ul>
+<li>Latent Space, "Ontologies Are So Back" (Jul 2026)</li>
+<li>Diana Felder, "Ontology and Knowledge Graph in the Age of AI and Agents" (Enterprise Knowledge, Jun 2026)</li>
+<li>Zero Future Tech, "The 5 Graphs Behind AI Agents" (Aug 2026)</li>
+</ul>
+</li>
+<li>Analyst forecast: Gartner press release, 11 May 2026, on semantics and agentic AI accuracy (quoted via Collate and RevOS); RevOS on Gartner's composite semantic layer.</li>
+<li>Practitioner guides: Jie Bao, "Agentic Ontology 101: A Practical Guide to Building Knowledge Graphs with AI Agents" (GitHub draft, March 2026).</li>
+<li>Discussion: Hacker News threads on ontologies.</li>
+</ul>
+</main></div>
+<footer><div class="wrap">
+  <p>The Knowledge Layer &middot; a research catalog of enterprise knowledge, ontology and retrieval, kept by Haixun Wang.</p>
+  <p>Facts are labelled by source: author-reported, vendor-reported, independent, press or estimate. &ldquo;Our take&rdquo; notes are opinions. Built 2026-11-25. <a href="../">haixun.github.io</a></p>
+</div></footer>
+</div>
+</div>
+<script>if(window.matchMedia('(max-width: 760px)').matches){var s=document.querySelector('.sidebox');if(s)s.removeAttribute('open');}</script>
+</body>
+</html>

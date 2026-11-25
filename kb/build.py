@@ -40,6 +40,7 @@ DIM_LABEL = {"commits": "Where meaning is committed", "route": "How structure is
              "domain": "Domain", "topics": "Topics"}
 
 DOCS = [  # (source file, output page, kicker, short title)
+    ("agentic-ontology-report.md", "field-guide.html", "Guide", "Ontologies for AI Agents"),
     ("landscape.md", "landscape.html", "Map", "The Knowledge Layer"),
 ]
 # Internal references in the essay -> (label, href or None). Matched on the path's basename.
@@ -77,6 +78,7 @@ def sidebar(up, active):
          item("index.html", "Overview", "index"), item("whats-new.html", "What&rsquo;s new", "news"),
          item("browse.html", "Browse &amp; search", "browse"), '</ul>',
          '<p class="side-h">Read</p><ul>',
+         item("field-guide.html", "Field guide", "doc:field-guide.html"),
          item("landscape.html", "The Knowledge Layer", "doc:landscape.html"), '</ul>',
          '<p class="side-h">Catalog</p><ul>']
     for t, name, f in TYPES:
@@ -634,7 +636,7 @@ def main():
         for fn, out, kicker, short in DOCS:
             render_doc(a.src, fn, out, kicker, short)
     print("Built %d entry pages, %d topic pages, %d type pages%s." % (
-        len(entries), len(tag_index), len(by_type), "" if a.no_docs else ", 1 essay"))
+        len(entries), len(tag_index), len(by_type), "" if a.no_docs else ", 2 essays"))
 
 
 if __name__ == "__main__":
