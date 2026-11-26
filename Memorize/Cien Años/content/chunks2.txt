@@ -1,0 +1,227 @@
+# Phrase-by-phrase breakdown of paragraph 2.  Same format as chunks.txt.
+# Sentence numbers are local to paragraph 2.
+
+# S1
+En marzo volvieron los gitanos. | In March the gypsies came back.
+
+# S2
+Esta vez llevaban un catalejo | This time they brought a telescope
+y una lupa del tamaño de un tambor, | and a magnifying glass the size of a drum,
+que exhibieron como el último descubrimiento | which they exhibited as the latest discovery
+de los judíos de Ámsterdam. | of the Jews of Amsterdam.
+
+# S3
+Sentaron una gitana | They sat a gypsy woman
+en un extremo de la aldea | at one end of the village
+e instalaron el catalejo | and set up the telescope
+a la entrada de la carpa. | at the entrance of the tent.
+
+# S4
+Mediante el pago de cinco reales, | By paying five reales (literally: by means of the payment of five reales),
+la gente se asomaba al catalejo | people would put their eye to the telescope
+y veía a la gitana | and see the gypsy woman
+al alcance de su mano. | within reach of their hand.
+
+# S5
+«La ciencia ha eliminado las distancias», | "Science has eliminated distances,"
+pregonaba Melquíades. | Melquíades proclaimed.
+
+# S6
+«Dentro de poco, | "Before long,
+el hombre podrá ver | man will be able to see
+lo que ocurre | what is happening
+en cualquier lugar de la tierra, | in any place on earth,
+sin moverse de su casa». | without stirring from his house."
+
+# S7
+Un mediodía ardiente | One burning noon
+hicieron una asombrosa demostración | they gave an astonishing demonstration
+con la lupa gigantesca: | with the gigantic magnifying glass:
+pusieron un montón de hierba seca | they put a heap of dry grass
+en mitad de la calle | in the middle of the street
+y le prendieron fuego | and set fire to it
+mediante la concentración de los rayos solares. | by concentrating the sun's rays.
+
+# S8
+José Arcadio Buendía, | José Arcadio Buendía,
+que aún no acababa de consolarse | who had still not quite got over
+por el fracaso de sus imanes, | the failure of his magnets,
+concibió la idea | conceived the idea
+de utilizar aquel invento | of using that invention
+como un arma de guerra. | as a weapon of war.
+
+# S9
+Melquíades, otra vez, | Melquíades, once again,
+trató de disuadirlo. | tried to dissuade him.
+
+# S10
+Pero terminó por aceptar | But he ended up accepting
+los dos lingotes imantados | the two magnetised ingots
+y tres piezas de dinero colonial | and three pieces of colonial money
+a cambio de la lupa. | in exchange for the magnifying glass.
+
+# S11
+Úrsula lloró de consternación. | Úrsula wept with dismay.
+
+# S12
+Aquel dinero formaba parte | That money was part
+de un cofre de monedas de oro | of a chest of gold coins
+que su padre había acumulado | that her father had accumulated
+en toda una vida de privaciones, | over a whole lifetime of privations,
+y que ella había enterrado | and that she had buried
+debajo de la cama | under the bed
+en espera de una buena ocasión | waiting for a good opportunity
+para invertirlas. | to invest them.
+
+# S13
+José Arcadio Buendía | José Arcadio Buendía
+no trató siquiera de consolarla, | did not even try to console her,
+entregado por entero | given over entirely
+a sus experimentos tácticos | to his tactical experiments
+con la abnegación de un científico | with the self-denial of a scientist
+y aun a riesgo de su propia vida. | and even at the risk of his own life.
+
+# S14
+Tratando de demostrar | Trying to demonstrate
+los efectos de la lupa | the effects of the magnifying glass
+en la tropa enemiga, | on enemy troops,
+se expuso él mismo | he exposed himself
+a la concentración de los rayos solares | to the concentration of the sun's rays
+y sufrió quemaduras | and suffered burns
+que se convirtieron en úlceras | that turned into sores
+y tardaron mucho tiempo en sanar. | and took a long time to heal.
+
+# S15
+Ante las protestas de su mujer, | In the face of his wife's protests,
+alarmada por tan peligrosa inventiva, | alarmed by such dangerous inventiveness,
+estuvo a punto de incendiar la casa. | he was on the point of setting the house on fire.
+
+# S16
+Pasaba largas horas en su cuarto, | He would spend long hours in his room,
+haciendo cálculos | making calculations
+sobre las posibilidades estratégicas | about the strategic possibilities
+de su arma novedosa, | of his novel weapon,
+hasta que logró componer un manual | until he managed to put together a manual
+de una asombrosa claridad didáctica | of an astonishing instructional clarity
+y un poder de convicción irresistible. | and an irresistible power of conviction.
+
+# S17
+Lo envió a las autoridades | He sent it to the authorities
+acompañado de numerosos testimonios | accompanied by numerous accounts
+sobre sus experiencias | of his experiments
+y de varios pliegos de dibujos explicativos, | and by several sheets of explanatory drawings,
+al cuidado de un mensajero | in the care of a messenger
+que atravesó la sierra, | who crossed the mountains,
+se extravió en pantanos desmesurados, | got lost in boundless swamps,
+remontó ríos tormentosos | went up stormy rivers
+y estuvo a punto de perecer | and was on the point of perishing
+bajo el azote de las fieras, | under the scourge of wild beasts,
+la desesperación y la peste, | despair and plague,
+antes de conseguir una ruta de enlace | before finding a connecting route
+con las mulas del correo. | with the mail mules.
+
+# S18
+A pesar de que el viaje a la capital | Although the journey to the capital
+era en aquel tiempo | was at that time
+poco menos que imposible, | little short of impossible,
+José Arcadio Buendía prometía intentarlo | José Arcadio Buendía promised to attempt it
+tan pronto como se lo ordenara el gobierno, | as soon as the government ordered him to,
+con el fin de hacer demostraciones prácticas | in order to give practical demonstrations
+de su invento | of his invention
+ante los poderes militares, | before the military authorities,
+y adiestrarlos personalmente | and train them personally
+en las complicadas artes de la guerra solar. | in the complicated arts of solar war.
+
+# S19
+Durante varios años | For several years
+esperó la respuesta. | he waited for the answer.
+
+# S20
+Por último, cansado de esperar, | At last, tired of waiting,
+se lamentó ante Melquíades | he complained to Melquíades
+del fracaso de su iniciativa, | of the failure of his venture,
+y el gitano dio entonces | and the gypsy then gave
+una prueba convincente de honradez: | a convincing proof of honesty:
+le devolvió los doblones | he gave him back the doubloons
+a cambio de la lupa, | in exchange for the magnifying glass,
+y le dejó además | and he left him as well
+unos mapas portugueses | some Portuguese maps
+y varios instrumentos de navegación. | and several navigation instruments.
+
+# S21
+De su puño y letra | In his own hand (literally: of his fist and handwriting)
+escribió una apretada síntesis | he wrote a compact summary
+de los estudios del monje Hermann, | of the studies of the monk Hermann,
+que dejó a su disposición | which he left at his disposal
+para que pudiera servirse | so that he could make use
+del astrolabio, la brújula y el sextante. | of the astrolabe, the compass and the sextant.
+
+# S22
+José Arcadio Buendía | José Arcadio Buendía
+pasó los largos meses de lluvia | spent the long months of rain
+encerrado en un cuartito | shut up in a little room
+que construyó en el fondo de la casa | that he built at the back of the house
+para que nadie perturbara sus experimentos. | so that nobody would disturb his experiments.
+
+# S23
+Habiendo abandonado por completo | Having completely abandoned
+las obligaciones domésticas, | his household duties,
+permaneció noches enteras en el patio | he stayed whole nights in the courtyard
+vigilando el curso de los astros, | watching the course of the stars,
+y estuvo a punto de contraer una insolación | and he was on the point of getting sunstroke
+por tratar de establecer un método exacto | from trying to establish an exact method
+para encontrar el mediodía. | for finding noon.
+
+# S24
+Cuando se hizo experto | When he became expert
+en el uso y manejo de sus instrumentos, | in the use and handling of his instruments,
+tuvo una noción del espacio | he had a notion of space
+que le permitió navegar por mares incógnitos, | that allowed him to sail across unknown seas,
+visitar territorios deshabitados | to visit uninhabited territories
+y trabar relación con seres espléndidos, | and to strike up relations with splendid beings,
+sin necesidad de abandonar su gabinete. | without needing to leave his study.
+
+# S25
+Fue esa la época | That was the time
+en que adquirió el hábito | when he acquired the habit
+de hablar a solas, | of talking to himself,
+paseándose por la casa | pacing about the house
+sin hacer caso de nadie, | without paying attention to anyone,
+mientras Úrsula y los niños | while Úrsula and the children
+se partían el espinazo en la huerta | were breaking their backs in the garden
+cuidando el plátano y la malanga, | tending the plantain and the taro,
+la yuca y el ñame, | the cassava and the yam,
+la ahuyama y la berenjena. | the squash and the aubergine.
+
+# S26
+De pronto, sin ningún anuncio, | Suddenly, without any warning,
+su actividad febril se interrumpió | his feverish activity broke off
+y fue sustituida | and was replaced
+por una especie de fascinación. | by a kind of fascination.
+
+# S27
+Estuvo varios días como hechizado, | He spent several days as if bewitched,
+repitiéndose a sí mismo en voz baja | repeating to himself in a low voice
+un sartal de asombrosas conjeturas, | a string of astonishing conjectures,
+sin dar crédito | without giving credit
+a su propio entendimiento. | to his own understanding.
+
+# S28
+Por fin, un martes de diciembre, | At last, one Tuesday in December,
+a la hora del almuerzo, | at lunchtime,
+soltó de un golpe | he let out all at once
+toda la carga de su tormento. | the whole burden of his torment.
+
+# S29
+Los niños habían de recordar | The children were to remember
+por el resto de su vida | for the rest of their lives
+la augusta solemnidad | the august solemnity
+con que su padre se sentó | with which their father sat down
+a la cabecera de la mesa, | at the head of the table,
+temblando de fiebre, | trembling with fever,
+devastado por la prolongada vigilia | devastated by the long vigil
+y por el encono de su imaginación, | and by the fury of his imagination,
+y les reveló su descubrimiento: | and revealed his discovery to them:
+
+# S30
+—La tierra es redonda como una naranja. | "The earth is round, like an orange."
