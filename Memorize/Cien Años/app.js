@@ -1,13 +1,17 @@
-/* Cien años paragraph course: audio, browser voice, word cards, practice boxes, progress.
-   No dependencies. Data comes from data.js (window.CA), which build.py generates. */
+/* Cien años course: audio, browser voice, word cards, practice boxes, progress.
+   No dependencies. Data comes from data.js (window.CA), which build.py generates.
+   Sentences are addressed by a global number g (CA.sent[g - 1]); each knows its paragraph (p)
+   and its number inside that paragraph (n).  Each paragraph has its own audio excerpt. */
 (function () {
   "use strict";
   var CA = window.CA;
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  function para(p) { return CA.paras[p - 1]; }
+  function many() { return CA.paras.length > 1; }
 
   /* ------------------------------------------------------------ saved state */
-  var KEY = "cienanos.p1.v1";
+  var KEY = "cienanos.p1.v1";   // unchanged since the one-paragraph version, so earlier progress carries over
   var store = { done: {}, checks: {}, practice: {}, speed: 1, en: true, last: null };
   try {
     var saved = JSON.parse(localStorage.getItem(KEY) || "{}");
@@ -23,15 +27,28 @@
   }
 
   /* ------------------------------------------------------------ recording player */
-  var audio = null, cur = null, raf = 0, bar = null;
+  var audio = null, loaded = 0, cur = null, raf = 0, bar = null;
   var SPEEDS = [1, 0.85, 0.75, 0.6, 0.5];
 
+  function sentLabel(g) { var s = CA.sent[g - 1]; return (many() ? "Paragraph " + s.p + ", sentence " : "Sentence ") + s.n; }
+
   function rangeOf(target) {
-    var m;
-    if (target === "all") return { a: 0, b: CA.clip, label: "The whole paragraph", s0: 1, s1: 17 };
-    if ((m = /^s(\d+)$/.exec(target))) { var t = CA.sent[m[1] - 1].t; return { a: t[0], b: t[1], label: "Sentence " + m[1], s0: +m[1], s1: +m[1] }; }
-    if ((m = /^r(\d+)-(\d+)$/.exec(target))) return { a: CA.sent[m[1] - 1].t[0], b: CA.sent[m[2] - 1].t[1], label: "Sentences " + m[1] + " to " + m[2], s0: +m[1], s1: +m[2] };
-    if ((m = /^c(\d+)$/.exec(target))) { var c = CA.chunks[+m[1]]; if (!c || !c.t) return null; return { a: c.t[0], b: c.t[1], label: "Phrase from sentence " + c.s, s0: c.s, s1: c.s, phrase: true }; }
+    var m, s, P;
+    if ((m = /^all(\d*)$/.exec(target))) {
+      P = para(+(m[1] || 1));
+      return { p: P.n, a: 0, b: P.clip, label: many() ? "Paragraph " + P.n : "The whole paragraph", s0: P.first, s1: P.last };
+    }
+    if ((m = /^s(\d+)$/.exec(target))) { s = CA.sent[m[1] - 1]; return { p: s.p, a: s.t[0], b: s.t[1], label: sentLabel(+m[1]), s0: +m[1], s1: +m[1] }; }
+    if ((m = /^r(\d+)-(\d+)$/.exec(target))) {
+      s = CA.sent[m[1] - 1]; var e = CA.sent[m[2] - 1];
+      if (s.p !== e.p) return null;
+      return { p: s.p, a: s.t[0], b: e.t[1], label: (many() ? "Paragraph " + s.p + ", sentences " : "Sentences ") + s.n + " to " + e.n, s0: +m[1], s1: +m[2] };
+    }
+    if ((m = /^c(\d+)$/.exec(target))) {
+      var c = CA.chunks[+m[1]]; if (!c || !c.t) return null;
+      s = CA.sent[c.s - 1];
+      return { p: s.p, a: c.t[0], b: c.t[1], label: "Phrase from " + sentLabel(c.s).toLowerCase(), s0: c.s, s1: c.s, phrase: true };
+    }
     return null;
   }
 
@@ -39,8 +56,7 @@
     if (audio) return audio;
     audio = new Audio();
     audio.preload = "auto";
-    audio.src = audio.canPlayType('audio/mp4; codecs="mp4a.40.2"') ? "audio/para1.m4a" : "audio/para1.mp3";
-    audio.addEventListener("error", function () { toast("The recording could not be loaded. Check your connection and try again."); stop(); });
+    audio.addEventListener("error", function () { if (cur) { toast("The recording could not be loaded. Check your connection and try again."); stop(); } });
     bar = document.createElement("div");
     bar.className = "player";
     bar.innerHTML = '<div class="row"><button class="btn solid" data-p="toggle" aria-label="Pause or resume">Pause</button>' +
@@ -70,6 +86,7 @@
     if (!bar) return;
     bar.classList.toggle("show", !!cur);
     if (!cur) return;
+    cur.shown = 0;
     $(".lbl", bar).textContent = cur.label;
     $("[data-p=toggle]", bar).textContent = audio.paused ? "Resume" : "Pause";
     var rep = $("[data-p=repeat]", bar); rep.setAttribute("aria-pressed", cur.repeat ? "true" : "false");
@@ -92,7 +109,7 @@
 
   function tick() {
     cancelAnimationFrame(raf);
-    if (!cur) return;
+    if (!cur || cur.loading) return;
     var t = audio.currentTime;
     $(".bar i", bar).style.width = Math.max(0, Math.min(100, (t - cur.a) / (cur.b - cur.a) * 100)) + "%";
     highlight(t);
@@ -114,7 +131,8 @@
     stopVoice();
     ensureAudio();
     if (cur && cur.target === target && !audio.paused && !repeat) { stop(); return; }
-    cur = { target: target, a: r.a, b: r.b, label: r.label, s0: r.s0, s1: r.s1, phrase: r.phrase, repeat: !!repeat, shown: 0 };
+    audio.pause();
+    cur = { target: target, a: r.a, b: r.b, label: r.label, s0: r.s0, s1: r.s1, phrase: r.phrase, repeat: !!repeat, shown: 0, loading: true };
     var mine = cur, tries = 0;
     var canSeek = function (t) {
       var sk = audio.seekable;
@@ -128,17 +146,24 @@
         $(".lbl", bar).textContent = r.label + " (loading…)";
         setTimeout(start, 250); return;
       }
+      mine.loading = false;
       audio.currentTime = r.a; audio.playbackRate = store.speed;
       var p = audio.play();
       if (p && p.catch) p.catch(function () { if (cur === mine) { toast("Tap the play button again to start the audio."); stop(); } });
       syncUI(); tick();
     };
     syncUI();
-    if (audio.readyState >= 1) start();
-    else { audio.addEventListener("loadedmetadata", start, { once: true }); audio.load(); }
+    if (loaded !== r.p) {           // each paragraph has its own excerpt
+      loaded = r.p;
+      var base = para(r.p).audio;
+      audio.src = audio.canPlayType('audio/mp4; codecs="mp4a.40.2"') ? base + ".m4a" : base + ".mp3";
+      audio.addEventListener("loadedmetadata", start, { once: true });
+      audio.load();
+    } else if (audio.readyState >= 1) start();
+    else audio.addEventListener("loadedmetadata", start, { once: true });
   }
   document.addEventListener("visibilitychange", function () { if (cur && audio && !audio.paused) tick(); });
-  setInterval(function () { if (cur && audio && !audio.paused) { if (audio.currentTime >= cur.b) tick(); } }, 120);
+  setInterval(function () { if (cur && !cur.loading && audio && !audio.paused && audio.currentTime >= cur.b) tick(); }, 120);
 
   /* ------------------------------------------------------------ browser voice (synthesized) */
   var voice = null, voicesReady = false;
@@ -178,14 +203,14 @@
     }
     var link = "";
     if (v.u) {
-      var lab = v.uk === "base" ? 'SpanishDict: base form <i lang="es">' + v.ub + "</i>" : "Hear on SpanishDict";
+      var lab = v.uk === "base" ? 'SpanishDict: base form <i lang="es">' + v.ub + "</i>" : (v.uk === "entry" ? "SpanishDict entry" : "Hear on SpanishDict");
       link = '<a class="ext" target="_blank" rel="noopener" href="' + v.u + '">' + lab + " ↗</a>";
     }
     var base = v.b !== v.f ? ' <span class="fine">from <i lang="es">' + v.b + "</i></span>" : "";
     card.innerHTML = '<button class="x" aria-label="Close">×</button><h4 lang="es">' + v.f + "</h4>" +
       '<div class="syl" lang="es">' + v.syl + "</div>" + (v.sn.length ? '<div class="sn">' + v.sn.join("; ") + "</div>" : "") +
       '<p class="m">' + v.m + base + '</p><p class="g">' + v.g + "</p>" +
-      '<div class="acts"><button class="btn say" data-say="' + (key === "XV" ? "quince" : v.f) + '">Voice</button>' + link +
+      '<div class="acts"><button class="btn say" data-say="' + (CA.say[key] || v.f) + '">Voice</button>' + link +
       '<a class="ext" href="vocabulary.html#w-' + encodeURIComponent(key) + '">In the vocabulary list</a></div>';
     card.classList.add("show");
   }
@@ -194,7 +219,6 @@
   /* ------------------------------------------------------------ practice boxes */
   function seeded(seed) { return function () { seed = (seed * 1664525 + 1013904223) % 4294967296; return seed / 4294967296; }; }
   var WORD = /[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]+/g;
-  var FRACTION = [0, 0.25, 0.5, 0.75, 1, 1];
   var HINTS = ["Level 0: the full text. Read it aloud twice before hiding anything.",
     "Level 1: one word in four is hidden. Say the whole text aloud; tap a blank only if you are stuck.",
     "Level 2: half the words are hidden.", "Level 3: three words in four are hidden.",
@@ -206,9 +230,11 @@
     function rkey() { return sel.value; }
     function render() {
       var nums = sel.value.split(",").map(Number), rnd = seeded(st.seed + nums[0] * 31 + st.level), out = [];
+      var mixed = CA.sent[nums[0] - 1].p !== CA.sent[nums[nums.length - 1] - 1].p, lastP = 0;
       st.reveals = 0;
-      nums.forEach(function (n) {
-        var s = CA.sent[n - 1], i = 0, phase = Math.floor(rnd() * 4);
+      nums.forEach(function (g) {
+        var s = CA.sent[g - 1], i = 0, phase = Math.floor(rnd() * 4);
+        if (mixed && s.p !== lastP) { out.push('<div class="cz-para">Paragraph ' + s.p + "</div>"); lastP = s.p; }
         var htmlS = s.es.replace(WORD, function (w) {
           var hide;
           if (st.level === 0) hide = false;
@@ -221,7 +247,7 @@
           var shown = st.level === 4 ? '<span class="fl">' + w.charAt(0) + "</span>" + w.slice(1) : w;
           return '<span class="gap" tabindex="0" role="button" aria-label="hidden word">' + shown + "</span>";
         });
-        out.push('<div class="cz-sent"><span class="num">' + n + "</span>" + htmlS + '<div class="cz-en" lang="en">' + s.en + "</div></div>");
+        out.push('<div class="cz-sent"><span class="num">' + s.n + "</span>" + htmlS + '<div class="cz-en" lang="en">' + s.en + "</div></div>");
       });
       body.innerHTML = out.join("");
       $$("[data-level]", box).forEach(function (b) { b.classList.toggle("on", +b.getAttribute("data-level") === st.level); });
@@ -251,22 +277,29 @@
     box.addEventListener("keydown", function (e) {
       if ((e.key === "Enter" || e.key === " ") && e.target.classList.contains("gap")) { e.preventDefault(); open(e.target); }
     });
-    sel.addEventListener("change", render);
+    function initLevel() {
+      var best = store.practice[rkey()];
+      st.level = document.body.hasAttribute("data-final") ? 5 : (best != null ? Math.min(5, best + 1) : 1);
+    }
+    sel.addEventListener("change", function () { initLevel(); render(); });
     $(".cz-en", box).addEventListener("change", function () { box.classList.toggle("show-en", this.checked); });
-    var best = store.practice[rkey()];
-    if (best != null) st.level = Math.min(5, best + 1);
-    if (document.body.getAttribute("data-page") === "lesson-20.html") st.level = 5;
+    initLevel();
     render();
   }
 
+  function span(a, b) { var out = []; for (var i = a; i <= b; i++) out.push(i); return out.join(","); }
   function renderRecord() {
     var host = $("#practice-record"); if (!host) return;
-    var rows = CA.scenes.map(function (sc) {
-      var nums = []; for (var i = sc.a; i <= sc.b; i++) nums.push(i);
-      return [sc.name + " (" + (sc.a === sc.b ? sc.a : sc.a + "–" + sc.b) + ")", nums.join(",")];
+    var rows = [];
+    CA.paras.forEach(function (P) {
+      CA.scenes.forEach(function (sc) {
+        if (sc.p !== P.n) return;
+        var a = CA.sent[sc.a - 1].n, b = CA.sent[sc.b - 1].n;
+        rows.push(["Paragraph " + P.n + " · " + sc.name + " (" + (a === b ? a : a + "–" + b) + ")", span(sc.a, sc.b)]);
+      });
+      rows.push(["<b>Paragraph " + P.n + ", whole</b>", span(P.first, P.last)]);
     });
-    var all = []; for (var i = 1; i <= 17; i++) all.push(i);
-    rows.push(["The whole paragraph", all.join(",")]);
+    if (many()) rows.push(["<b>Both paragraphs</b>", span(1, CA.sent.length)]);
     host.innerHTML = '<div class="tablewrap"><table><thead><tr><th>Text</th><th>Levels 1 to 5</th><th>Best</th></tr></thead><tbody>' + rows.map(function (r) {
       var best = store.practice[r[1]], dots = "";
       for (var l = 1; l <= 5; l++) dots += '<span class="dot' + (best != null && best >= l ? " on" : "") + '"></span>';
@@ -292,15 +325,15 @@
   }
   function refreshIndex() {
     var cards = $$(".lcard"); if (!cards.length) return;
-    var n = 0, next = 0;
+    var n = 0, next = 0, total = cards.length;
     cards.forEach(function (c) {
       var id = c.getAttribute("data-lesson"), d = !!store.done[id];
       c.classList.toggle("done", d); if (d) n++; else if (!next) next = +id;
     });
-    $(".pfill").style.width = (n / 20 * 100) + "%";
-    $(".ptext").textContent = n + " of 20 lessons complete";
+    $(".pfill").style.width = (n / total * 100) + "%";
+    $(".ptext").textContent = n + " of " + total + " lessons complete";
     var cont = $("#continue");
-    if (n === 20) { cont.textContent = "Review the final assessment"; cont.href = "lesson-20.html"; }
+    if (n === total) { cont.textContent = "Review the final assessment"; cont.href = "lesson-" + total + ".html"; }
     else {
       var goto = next || 1;
       cont.href = "lesson-" + (goto < 10 ? "0" : "") + goto + ".html";
@@ -315,8 +348,9 @@
     function fold(x) { return x.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, ""); }
     function apply() {
       var t = fold(q.value.trim()), sn = s.value, n = 0;
+      var attr = sn.charAt(0) === "p" ? "data-p" : "data-s", want = "," + sn.replace("p", "") + ",";
       rows.forEach(function (r) {
-        var ok = (!t || r.getAttribute("data-f").indexOf(t) >= 0) && (!sn || r.getAttribute("data-s").indexOf("," + sn + ",") >= 0);
+        var ok = (!t || r.getAttribute("data-f").indexOf(t) >= 0) && (!sn || r.getAttribute(attr).indexOf(want) >= 0);
         r.hidden = !ok; if (ok) n++;
       });
       cnt.textContent = n + " of " + rows.length + " entries";

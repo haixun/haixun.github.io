@@ -163,8 +163,8 @@ ul.checks li{margin-bottom:8px}
 /* ---- practice box ---- */
 .cloze{background:var(--panel);border:1px solid var(--rule);border-radius:10px;padding:14px 16px;margin-top:16px}
 .cz-bar{display:flex;gap:10px 16px;flex-wrap:wrap;align-items:center;justify-content:space-between}
-.cz-bar label{font-size:13.5px;color:var(--muted);display:flex;gap:8px;align-items:center;min-width:0}
-.cz-bar select{max-width:100%}
+.cz-bar label{font-size:13.5px;color:var(--muted);display:flex;gap:8px;align-items:center;min-width:0;flex:1 1 240px}
+.cz-bar select{flex:1 1 auto;min-width:0;width:100%;max-width:26em}
 .cz-levels{display:flex;gap:4px}
 .cz-levels .btn{min-width:34px;justify-content:center;padding:6px 0;font-family:var(--mono)}
 .cz-hint{font-size:13px;color:var(--muted);margin:10px 0 8px !important}
@@ -186,6 +186,11 @@ ul.checks li{margin-bottom:8px}
 #practice-record table{width:auto}
 .dot{display:inline-block;width:10px;height:10px;border-radius:50%;border:1px solid var(--rule);margin-right:3px}
 .dot.on{background:var(--green);border-color:var(--green)}
+
+.cz-para{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);margin:14px 0 6px}
+.parts h2{margin-top:34px}
+.mast .kicker a{border:0}
+.mast .kicker b{color:var(--ink);font-weight:500}
 
 /* ---- index ---- */
 .progress-panel{background:var(--panel);border:1px solid var(--rule);border-radius:10px;padding:16px 18px 6px;margin-top:22px !important}

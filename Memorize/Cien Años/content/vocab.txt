@@ -59,7 +59,7 @@ piedras | piedra | noun, feminine plural | stones
 pulidas | pulir | past participle used as an adjective, feminine plural | polished
 blancas | blanco | adjective, feminine plural | white
 enormes | enorme | adjective, plural (same form for masculine and feminine) | enormous
-como | como | conjunction of comparison | like, as
+como | como | conjunction of comparison; "tan pronto como" = as soon as | like, as
 huevos | huevo | noun, masculine plural | eggs
 prehistóricos | prehistórico | adjective, masculine plural | prehistoric
 
@@ -110,12 +110,12 @@ manos | mano | noun, feminine plural (la mano is feminine although it ends in -o
 gorrión | gorrión | noun, masculine singular | sparrow
 presentó | presentarse | verb, preterite, 3rd person singular; with "se" = to introduce oneself | introduced himself
 Melquíades | Melquíades | proper name | the wise gypsy
-hizo | hacer | verb, preterite, 3rd person singular of hacer "to do, to make" (irregular) | made, did; here "put on" a demonstration
+hizo | hacer | verb, preterite, 3rd person singular of hacer "to do, to make" (irregular) | made, did; here "put on" a demonstration; (se hizo, paragraph 2) became
 truculenta | truculento | adjective, feminine singular. A false friend: not "truculent" but lurid and sensational | lurid, sensational, showy
 demostración | demostración | noun, feminine singular | demonstration
 pública | público | adjective, feminine singular | public
 él | él | subject pronoun; the accent mark separates it from the article "el" | he
-mismo | mismo | adjective; after a pronoun it means "-self" | himself; same
+mismo | mismo | adjective; after a pronoun it means "-self": él mismo, a sí mismo | himself; same
 llamaba | llamar | verb, imperfect, 3rd person singular | called, used to call
 octava | octavo | ordinal number, feminine singular | eighth
 maravilla | maravilla | noun, feminine singular | wonder, marvel
@@ -200,7 +200,7 @@ invención | invención | noun, feminine singular | invention
 inútil | inútil | adjective, singular; in- (not) + útil (useful) | useless
 desentrañar | desentrañar | verb, infinitive; des- + entraña "entrail": literally to disembowel | to dig out from the depths, to extract
 oro | oro | noun, masculine singular | gold
-tierra | tierra | noun, feminine singular | earth, ground
+tierra | tierra | noun, feminine singular | earth, ground; (paragraph 2) the world, the Earth
 
 # ---------- Sentence 10
 hombre | hombre | noun, masculine singular | man
@@ -239,7 +239,7 @@ disuadirlo | disuadir + lo | infinitive with the pronoun "lo" (him) attached | t
 
 # ---------- Sentence 13
 muy | muy | adverb | very
-pronto | pronto | adverb | soon
+pronto | pronto | adverb; "de pronto" = suddenly | soon
 ha | haber | verb, present, 3rd person singular of haber; "ha de" + infinitive = is bound to, will surely | (ha de) is to, will
 sobrarnos | sobrar + nos | infinitive with "nos" (to us) attached; sobrar = to be more than enough, to be left over | to be more than enough for us
 empedrar | empedrar | verb, infinitive; en- + piedra "stone" | to pave
@@ -261,7 +261,7 @@ exploró | explorar | verb, preterite, 3rd person singular | explored
 palmo | palmo | noun, masculine singular; an old measure, the width of a spread hand | handspan
 región | región | noun, feminine singular | region
 inclusive | inclusive | adverb | even, including
-fondo | fondo | noun, masculine singular | bottom
+fondo | fondo | noun, masculine singular | bottom; (of a house) the back
 hierro | hierro | noun, masculine singular | iron
 recitando | recitar | verb, gerund | reciting
 voz | voz | noun, feminine singular | voice

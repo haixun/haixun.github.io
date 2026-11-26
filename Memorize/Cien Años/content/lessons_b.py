@@ -418,8 +418,8 @@ dict(
     <li data-check="c3">I needed three reveals or fewer.</li>
     <li data-check="c4">For any sentence chosen at random, I can say in English what it means.</li></ul>
     <p>The first, second and fourth ticks are a pass. The third is mastery.</p>"""),
-    ("Where to go next", """<p>Keep the paragraph alive by reciting it once a week. If you want more, the second paragraph of the novel continues the story of the magnets and the telescope,
-    and you already know most of its small words. Your supplied recording carries on straight into it.</p>"""),
+    ("Where to go next", """<p>Keep the paragraph alive by reciting it once a week. Then go on to <a href="lesson-21.html">Part 2</a>: lessons 21 to 40 do the same for the second paragraph,
+    which continues the story with the telescope and the magnifying glass. You already know most of its small words, and the recording carries straight on into it.</p>"""),
   ],
   pron=[],
   exercises=[
