@@ -11,6 +11,7 @@ Per paragraph N (the files of paragraph 1 have no number, for historical reasons
   content/paraN.txt        the supplied text: Spanish, a line with "-" or "==", then the English translation
   content/chunksN.txt      phrase-by-phrase breakdown with literal glosses
   content/vocabN.txt       vocabulary and expressions (only forms not already in an earlier paragraph)
+  content/examplesN.txt    one original example sentence for every noun, verb and adjective in vocabN.txt
   content/timingsN.json    sentence / phrase time ranges inside audio/paraN.m4a (measured, see the text pages)
 Shared:
   content/lessons_a.py ... lessons_d.py   the lessons (a, b: paragraph 1; c, d: paragraph 2)
@@ -37,11 +38,14 @@ NL = len(LESSONS)
 TITLE = "Cien años de soledad: the opening paragraphs"
 esc = html.escape
 
+# The course is organised as book -> chapter -> paragraph -> lesson.  Add chapters and paragraphs here.
+BOOK = dict(title="Cien años de soledad", chapters=[dict(n=1, title="Chapter 1", paras=[1, 2])])
+
 PARAS = [
-    dict(n=1, file="para1.txt", chunks="chunks.txt", vocab="vocab.txt", timings="timings.json", page="paragraph.html",
+    dict(n=1, file="para1.txt", chunks="chunks.txt", vocab="vocab.txt", examples="examples.txt", timings="timings.json", page="paragraph.html",
          scenes=[(1, 1, "The memory"), (2, 3, "The village"), (4, 8, "The gypsies"), (9, 13, "The bargain"), (14, 17, "The search")],
          stats=dict(mismatches=6, min_pause=0.41), source_note="the opening"),
-    dict(n=2, file="para2.txt", chunks="chunks2.txt", vocab="vocab2.txt", timings="timings2.json", page="paragraph-2.html",
+    dict(n=2, file="para2.txt", chunks="chunks2.txt", vocab="vocab2.txt", examples="examples2.txt", timings="timings2.json", page="paragraph-2.html",
          scenes=[(1, 6, "The telescope"), (7, 12, "The burning glass"), (13, 19, "The weapon of war"),
                  (20, 25, "The instruments"), (26, 30, "The discovery")],
          stats={}, source_note="the stretch that follows paragraph 1"),
@@ -291,6 +295,35 @@ for e in EXPR:
     if L.get("ok"):
         e["u"] = L["url"]
 
+# ---------------------------------------------------------------- example sentences
+CONTENT_WORD = ("verb", "noun", "adjective", "past participle", "gerund", "infinitive", "ordinal")
+
+
+def needs_example(v):
+    return v["g"].lower().startswith(CONTENT_WORD)
+
+
+for P in PARAS:
+    for line in (C / P["examples"]).read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+        f = [x.strip() for x in line.split("|")]
+        assert len(f) == 3, line
+        assert f[0] in VOCAB, f"example for a word that is not in the vocabulary: {f[0]}"
+        assert "x" not in VOCAB[f[0]], f"two examples for {f[0]}"
+        assert f[0].lower() in [w.lower() for w in words(f[1])], f"the example for {f[0]} does not contain that exact form: {f[1]}"
+        VOCAB[f[0]]["x"] = [f[1], f[2]]
+no_example = [k for k, v in VOCAB.items() if needs_example(v) and "x" not in v]
+assert not no_example, f"nouns, verbs or adjectives without an example sentence: {no_example}"
+
+
+def ex_html(v):
+    if "x" not in v:
+        return ""
+    return (f'<div class="ex"><span class="ex-l">Example</span> <span class="es" lang="es">{esc(v["x"][0])}</span>'
+            f'<span class="ex-en">{esc(v["x"][1])}</span></div>')
+
 # ---------------------------------------------------------------- lesson bookkeeping
 for n, L in enumerate(LESSONS, 1):
     L["n"] = n
@@ -405,11 +438,12 @@ def vocab_rows(keys):
     rows = []
     for k in keys:
         v = VOCAB[k]
-        base = "" if v["b"] == v["f"] else f'<div class="base">from <i lang="es">{esc(v["b"])}</i></div>'
+        base = f'<i lang="es">{esc(v["b"])}</i>' if v["b"] != v["f"] else '<span class="same" title="This is already the base form">=</span>'
         rows.append(f'<tr><td><span class="w head" data-k="{esc(k)}" lang="es">{esc(v["f"])}</span><div class="syl" lang="es">{v["syl"]}</div></td>'
-                    f'<td>{esc(v["m"])}{base}</td><td class="gram">{rich(esc(v["g"]))}</td>'
+                    f'<td class="basecol" data-label="Base form">{base}</td>'
+                    f'<td>{esc(v["m"])}{ex_html(v)}</td><td class="gram">{rich(esc(v["g"]))}</td>'
                     f'<td class="ctl">{say_btn(SAY.get(k, v["f"]))}{link_html(v, True)}</td></tr>')
-    return ('<div class="tablewrap"><table class="vocab"><thead><tr><th>Word</th><th>Meaning here</th><th>Grammar</th><th>Hear</th></tr></thead><tbody>'
+    return ('<div class="tablewrap"><table class="vocab lessonwords"><thead><tr><th>Word</th><th>Base form</th><th>Meaning here, and an example</th><th>Grammar</th><th>Hear</th></tr></thead><tbody>'
             + "".join(rows) + "</tbody></table></div>")
 
 
@@ -471,9 +505,13 @@ FAVICON = ("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox
 
 
 def page(fname, title, body, desc="", final=False):
-    nav = [("index.html", "Course"), ("paragraph.html", "Text"), ("vocabulary.html", "Vocabulary"), ("practice.html", "Practice")]
+    nav = [("paragraph.html", "Text"), ("vocabulary.html", "Vocabulary"), ("practice.html", "Practice")]
     here = "paragraph.html" if fname.startswith("paragraph") else fname
-    links = "".join(f'<a href="{h}"{" aria-current=page" if h == here else ""}>{t}</a>' for h, t in nav)
+    on_course = fname == "index.html" or fname.startswith("lesson-")
+    # Without JavaScript the button is an ordinary link to the overview; app.js turns it into the menu.
+    links = (f'<a href="index.html" id="menu-btn" class="menu-btn" role="button" aria-haspopup="dialog" aria-expanded="false"{" aria-current=page" if on_course else ""}>'
+             'Lessons <span class="caret" aria-hidden="true">▾</span></a>'
+             + "".join(f'<a href="{h}"{" aria-current=page" if h == here else ""}>{t}</a>' for h, t in nav))
     return f'''<!doctype html>
 <html lang="en">
 <head>
@@ -489,7 +527,7 @@ def page(fname, title, body, desc="", final=False):
 </head>
 <body data-page="{fname}"{" data-final" if final else ""}>
 <nav class="topbar"><div class="wrap">
-  <a class="home" href="index.html">Cien años <span>· the opening</span></a>
+  <a class="home" href="index.html">Cien años <span>· chapter 1</span></a>
   <span class="navlinks">{links}</span>
 </div></nav>
 {body}
@@ -512,7 +550,8 @@ def lesson_file(n):
 def build_lesson(L):
     n, p = L["n"], L["p"]
     P = PBY[p]
-    kind_tag = {"lesson": "", "review": "Checkpoint · ", "final": "Assessment · "}[L["kind"]]
+    kind_tag = {"lesson": "", "review": '<span class="tag">checkpoint</span>', "final": '<span class="tag">assessment</span>'}[L["kind"]]
+    ch = chapter_of(p)
     parts = []
     prev = f'<a class="pn prev" href="{lesson_file(n-1)}">← Lesson {n-1}</a>' if n > 1 else '<a class="pn prev" href="index.html">← Course overview</a>'
     nxt = f'<a class="pn next" href="{lesson_file(n+1)}">Lesson {n+1} →</a>' if n < NL else '<a class="pn next" href="index.html">Course overview →</a>'
@@ -521,9 +560,11 @@ def build_lesson(L):
     is_whole = len(target_g) == P["len"]
     covers = "the whole paragraph" if is_whole else rng(target_g)
     parts.append(f'''<header class="mast"><div class="wrap">
-  <p class="kicker">Part {p} · Lesson {n} of {NL} · {kind_tag}paragraph {p}, {covers}</p>
+  <nav class="crumbs" aria-label="Where you are"><a href="index.html">{esc(BOOK["title"])}</a><span class="sep">›</span><a href="index.html#chapter{ch["n"]}">{esc(ch["title"])}</a><span class="sep">›</span><a href="index.html#part{p}">Paragraph {p}</a><span class="sep">›</span><b>Lesson {n}</b></nav>
   <h1>{rich(L["title"])}</h1>
+  <p class="lmeta">Lesson {n} of {NL} · {covers}{kind_tag}</p>
 </div></header>
+<!--SECNAV-->
 <div class="wrap doc">
 {pn}
 <section><h2>Objectives</h2><ul class="objectives">{"".join(f"<li>{rich(o)}</li>" for o in L["objectives"])}</ul>
@@ -552,7 +593,7 @@ def build_lesson(L):
                      + chunk_rows(L["chunk_ids"]) + "</section>")
         if L["new_words"]:
             parts.append(f'<section><h2>New words <span class="count">{len(L["new_words"])}</span></h2>'
-                         '<p class="fine">Bold marks the stressed syllable. Words from earlier lessons are not repeated here: tap any word in the text, or open the '
+                         '<p class="fine">Bold marks the stressed syllable. Nouns, verbs and adjectives come with an everyday example sentence, written for this course and not taken from the novel; tap it to hear the browser voice. Words from earlier lessons are not repeated here: tap any word in the text, or open the '
                          '<a href="vocabulary.html">vocabulary reference</a>.</p>' + vocab_rows(L["new_words"]) + "</section>")
         if L["new_expr"]:
             parts.append('<section><h2>Expressions</h2>' + expr_rows(L["new_expr"]) + "</section>")
@@ -621,7 +662,33 @@ def build_lesson(L):
 <p class="fine">Progress is saved in this browser only.</p></section>
 {pn}
 </div>''')
-    return page(lesson_file(n), f"Lesson {n}: {re.sub('<[^>]+>', '', L['title'])} · {TITLE}", "\n".join(parts), final=L["kind"] == "final")
+    return page(lesson_file(n), f"Lesson {n}: {re.sub('<[^>]+>', '', L['title'])} · {TITLE}", section_nav("\n".join(parts)), final=L["kind"] == "final")
+
+
+SECTION_IDS = [("Objectives", "objectives", "Objectives"), ("Today's text", "text", "Text"), ("The text for today", "text", "Text"),
+               ("Phrase by phrase", "phrases", "Phrases"), ("New words", "words", "Words"), ("Expressions", "expressions", "Expressions"),
+               ("Grammar and expressions", "grammar", "Grammar"), ("Pulling it together", "grammar", "Summary"), ("The tests", "grammar", "Tests"),
+               ("Pronunciation", "pronunciation", "Pronunciation"), ("Read aloud", "read-aloud", "Read aloud"), ("Check yourself", "check", "Check"),
+               ("Review", "review", "Review"), ("Memorise", "memorise", "Memorise")]
+
+
+def section_nav(body):
+    """give every lesson section an id and build the row of jump links under the header"""
+    chips = []
+
+    def tag(m):
+        title = re.sub("<[^>]+>.*", "", m.group(1)).strip()
+        for t, sid, label in SECTION_IDS:
+            if title == t:
+                chips.append(f'<a href="#{sid}">{label}</a>')
+                return f'<section id="{sid}"><h2>{m.group(1)}</h2>'
+        return m.group(0)
+    body = re.sub(r"<section><h2>(.*?)</h2>", tag, body)
+    return body.replace("<!--SECNAV-->", '<nav class="secnav" aria-label="Sections of this lesson"><div class="wrap">' + "".join(chips) + "</div></nav>")
+
+
+def chapter_of(p):
+    return next(c for c in BOOK["chapters"] if p in c["paras"])
 
 
 # ---------------------------------------------------------------- other pages
@@ -637,24 +704,31 @@ PART_BLURB = {
 }
 
 
+def lesson_cov(L):
+    gs = L["new_g"] or L["review_g"]
+    return f"all {PBY[L['p']]['len']} sentences" if len(gs) == PBY[L["p"]]["len"] else rng(gs)
+
+
 def build_index():
     out = []
-    for P in PARAS:
-        p = P["n"]
-        ns = PART_LESSONS[p]
-        out.append(f'<h2 id="part{p}">Part {p}: lessons {ns[0]} to {ns[-1]}</h2><p>{PART_BLURB[p]} '
-                   f'<span class="fine">{P["len"]} sentences, {P["words"]} words, recording {int(P["clip"]//60)}:{int(P["clip"]%60):02d}. '
-                   f'<a href="{P["page"]}">Read and hear paragraph {p}</a>.</span></p>')
-        for gname, lns in INDEX_GROUPS[p]:
-            items = []
-            for n in lns:
-                L = LESSONS[n - 1]
-                gs = L["new_g"] or L["review_g"]
-                cov = f"all {P['len']} sentences" if len(gs) == P["len"] else rng(gs)
-                tag = {"lesson": "", "review": '<span class="tag">checkpoint</span>', "final": '<span class="tag">assessment</span>'}[L["kind"]]
-                items.append(f'<li class="lcard" data-lesson="{n}"><a href="{lesson_file(n)}"><span class="ln">{n}</span>'
-                             f'<span class="lt">{rich(L["title"])}{tag}<small>{cov}</small></span><span class="lcheck" aria-hidden="true"></span></a></li>')
-            out.append(f'<h3 class="group">{gname}</h3><ol class="lessons">{"".join(items)}</ol>')
+    for ch in BOOK["chapters"]:
+        out.append(f'<h2 id="chapter{ch["n"]}" class="chapter">{esc(ch["title"])}</h2>')
+        for p in ch["paras"]:
+            P = PBY[p]
+            ns = PART_LESSONS[p]
+            inner = [f'<p>{PART_BLURB[p]} <span class="fine">{P["len"]} sentences, {P["words"]} words, recording {int(P["clip"]//60)}:{int(P["clip"]%60):02d}. '
+                     f'<a href="{P["page"]}">Read and hear paragraph {p}</a>.</span></p>']
+            for gname, lns in INDEX_GROUPS[p]:
+                items = []
+                for n in lns:
+                    L = LESSONS[n - 1]
+                    tag = {"lesson": "", "review": '<span class="tag">checkpoint</span>', "final": '<span class="tag">assessment</span>'}[L["kind"]]
+                    items.append(f'<li class="lcard" data-lesson="{n}"><a href="{lesson_file(n)}"><span class="ln">{n}</span>'
+                                 f'<span class="lt">{rich(L["title"])}{tag}<small>{lesson_cov(L)}</small></span><span class="lcheck" aria-hidden="true"></span></a></li>')
+                inner.append(f'<h3 class="group">{gname}</h3><ol class="lessons">{"".join(items)}</ol>')
+            out.append(f'<details class="part" id="part{p}" data-part="{p}" open><summary><span class="part-t">Paragraph {p}</span>'
+                       f'<span class="part-m">Lessons {ns[0]} to {ns[-1]}</span><span class="part-p" data-count="{len(ns)}"></span></summary>'
+                       f'<div class="part-body">{"".join(inner)}</div></details>')
     total_words = sum(P["words"] for P in PARAS)
     body = f'''<header class="mast"><div class="wrap">
   <p class="kicker">A {NL}-lesson Spanish course · from zero</p>
@@ -674,12 +748,13 @@ def build_index():
 <section><h2>How a lesson works</h2>
 <p>Each lesson takes 30 to 45 minutes and has the same parts: objectives, a portion of the text with audio, a phrase-by-phrase breakdown, new words,
 grammar, pronunciation, a read-aloud routine, questions with answers, a review of earlier sentences, and a memorisation exercise with a practice box that hides more words as you improve.
-One lesson a day is a good pace; the checkpoints consolidate before you move on. Each part ends with an assessment of all three goals.</p>
+One lesson a day is a good pace; the checkpoints consolidate before you move on. Each paragraph ends with an assessment of all three goals.
+The <b>Lessons</b> menu at the top of every page takes you to any lesson; inside a lesson, the row of links under the title jumps between its sections.</p>
 <ul><li><span class="ico">▶</span> buttons play the <b>audiobook recording</b> you supplied, cut to the sentence or phrase. You can slow it down and repeat it.</li>
 <li><b>Voice</b> buttons use your browser's <b>synthesized</b> Spanish voice. It is useful for single words and phrases, but it is not the audiobook and is less natural.</li>
 <li>Tap any Spanish word, anywhere, to see its meaning, grammar, syllables and a dictionary link.</li></ul></section>
 
-<section class="parts">{"".join(out)}</section>
+<section class="parts"><p class="fine book-line">{esc(BOOK["title"])}</p>{"".join(out)}</section>
 
 <section><h2>Always available</h2>
 <ul class="cards">
@@ -751,7 +826,7 @@ def build_vocab():
         sn = f'<div class="sn">{esc("; ".join(v["sn"]))}</div>' if v["sn"] else ""
         rows.append(f'<tr id="w-{esc(k)}" {attrs(v, k + " " + v["b"] + " " + v["m"])}>'
                     f'<td><span class="head" lang="es">{esc(v["f"])}</span><div class="syl" lang="es">{v["syl"]}</div>{sn}</td>'
-                    f'<td>{base}</td><td>{esc(v["m"])}</td><td class="gram">{esc(v["g"])}</td><td class="srefs">{" ".join(sref(g) for g in v["s"])}</td>'
+                    f'<td>{base}</td><td>{esc(v["m"])}{ex_html(v)}</td><td class="gram">{esc(v["g"])}</td><td class="srefs">{" ".join(sref(g) for g in v["s"])}</td>'
                     f'<td class="ctl">{say_btn(SAY.get(k, v["f"]))}{link_html(v, True)}</td></tr>')
     xrows = []
     for j, e in enumerate(EXPR):
@@ -825,10 +900,14 @@ def build_data():
         sent=[dict(es=s["es"], en=s["en"], t=s["t"], p=s["p"], n=s["n"]) for s in SENT],
         chunks=[dict(s=c["g"], t=c["t"]) for c in CHUNKS],
         paras=[dict(n=P["n"], clip=P["clip"], audio=f"audio/para{P['n']}", first=P["off"] + 1, last=P["off"] + P["len"]) for P in PARAS],
-        vocab={k: {x: v[x] for x in ("f", "b", "g", "m", "syl", "sn", "s", "u", "uk", "ub") if x in v} for k, v in VOCAB.items()},
+        vocab={k: {x: v[x] for x in ("f", "b", "g", "m", "syl", "sn", "s", "u", "uk", "ub", "x") if x in v} for k, v in VOCAB.items()},
         say=SAY,
         scenes=[dict(a=G(P["n"], a), b=G(P["n"], b), name=n, p=P["n"]) for P in PARAS for a, b, n in P["scenes"]],
         lessons=NL,
+        nav=dict(book=BOOK["title"], chapters=[dict(n=ch["n"], title=ch["title"], paras=[dict(
+            n=p, page=PBY[p]["page"], first=PART_LESSONS[p][0], last=PART_LESSONS[p][-1],
+            groups=[dict(name=g, lessons=[dict(n=n, t=re.sub("<[^>]+>", "", LESSONS[n - 1]["title"]), k=LESSONS[n - 1]["kind"], c=lesson_cov(LESSONS[n - 1])) for n in lns])
+                    for g, lns in INDEX_GROUPS[p]]) for p in ch["paras"]]) for ch in BOOK["chapters"]]),
     )
     return "window.CA = " + json.dumps(data, ensure_ascii=False, separators=(",", ":")) + ";\n"
 

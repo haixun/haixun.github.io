@@ -210,6 +210,7 @@
     card.innerHTML = '<button class="x" aria-label="Close">×</button><h4 lang="es">' + v.f + "</h4>" +
       '<div class="syl" lang="es">' + v.syl + "</div>" + (v.sn.length ? '<div class="sn">' + v.sn.join("; ") + "</div>" : "") +
       '<p class="m">' + v.m + base + '</p><p class="g">' + v.g + "</p>" +
+      (v.x ? '<div class="ex"><span class="ex-l">Example</span> <span class="es" lang="es">' + v.x[0] + '</span><span class="ex-en">' + v.x[1] + "</span></div>" : "") +
       '<div class="acts"><button class="btn say" data-say="' + (CA.say[key] || v.f) + '">Voice</button>' + link +
       '<a class="ext" href="vocabulary.html#w-' + encodeURIComponent(key) + '">In the vocabulary list</a></div>';
     card.classList.add("show");
@@ -341,6 +342,106 @@
     }
   }
 
+  /* ------------------------------------------------------------ Lessons menu: book > chapter > paragraph > lesson */
+  var menu = null, menuBack = null, menuPara = 0;
+  function pad(n) { return (n < 10 ? "0" : "") + n; }
+  function allParas() { var out = []; CA.nav.chapters.forEach(function (ch) { ch.paras.forEach(function (P) { out.push(P); }); }); return out; }
+  function paraLessons(P) { var out = []; P.groups.forEach(function (g) { g.lessons.forEach(function (l) { out.push(l); }); }); return out; }
+  function doneIn(P) { return paraLessons(P).filter(function (l) { return store.done[l.n]; }).length; }
+  function nextLesson() { for (var i = 1; i <= CA.lessons; i++) if (!store.done[i]) return i; return CA.lessons; }
+  function paraOfLesson(n) { var hit = 0; allParas().forEach(function (P) { if (n >= P.first && n <= P.last) hit = P.n; }); return hit; }
+  function herePara() {
+    var pg = document.body.getAttribute("data-page") || "", n = lessonNo();
+    if (n) return paraOfLesson(n);
+    var hit = 0; allParas().forEach(function (P) { if (P.page === pg) hit = P.n; });
+    return hit || paraOfLesson(nextLesson()) || 1;
+  }
+  function renderMenu() {
+    var cur = lessonNo(), tree = "", many = CA.nav.chapters.length > 1 || allParas().length > 1;
+    CA.nav.chapters.forEach(function (ch) {
+      tree += '<div class="menu-ch">' + ch.title + "</div>";
+      ch.paras.forEach(function (P) {
+        var total = paraLessons(P).length, d = doneIn(P);
+        tree += '<button class="menu-para" role="tab" data-mp="' + P.n + '" aria-selected="' + (P.n === menuPara) + '">Paragraph ' + P.n +
+          "<small>Lessons " + P.first + "–" + P.last + " · " + d + " of " + total + ' done</small><span class="mini"><i style="width:' + (d / total * 100) + '%"></i></span></button>';
+      });
+    });
+    var P = allParas().filter(function (x) { return x.n === menuPara; })[0], body = "";
+    body += '<div class="menu-ptitle"><h4>Paragraph ' + P.n + '</h4><a href="' + P.page + '">Read and hear the text →</a></div>';
+    P.groups.forEach(function (g) {
+      body += '<div class="menu-g">' + g.name + '</div><ol class="menu-list">' + g.lessons.map(function (l) {
+        var k = l.k === "review" ? '<span class="menu-k">checkpoint</span>' : (l.k === "final" ? '<span class="menu-k">assessment</span>' : "");
+        return '<li class="' + (store.done[l.n] ? "done" : "") + '"><a href="lesson-' + pad(l.n) + '.html"' + (l.n === cur ? ' aria-current="page"' : "") + '><span class="menu-n">' +
+          (store.done[l.n] ? "✓" : l.n) + '</span><span class="menu-t">' + (store.done[l.n] ? l.n + ". " : "") + l.t + k + "<small>" + l.c + "</small></span></a></li>";
+      }).join("") + "</ol>";
+    });
+    $(".menu-tree", menu).innerHTML = tree;
+    $(".menu-tree", menu).hidden = !many;
+    $(".menu-lessons", menu).innerHTML = body;
+    $(".menu-lessons", menu).scrollTop = 0;
+    var sel = $('.menu-para[aria-selected="true"]', menu); if (sel && sel.scrollIntoView) sel.scrollIntoView({ block: "nearest", inline: "nearest" });
+    var here = $('.menu-list a[aria-current]', menu); if (here) here.scrollIntoView({ block: "center" });
+  }
+  function openMenu() {
+    var btn = $("#menu-btn");
+    if (!menu) {
+      menuBack = document.createElement("div"); menuBack.className = "menu-back"; document.body.appendChild(menuBack);
+      menu = document.createElement("div"); menu.className = "menu"; menu.id = "menu"; menu.setAttribute("role", "dialog"); menu.setAttribute("aria-label", "Lessons");
+      menu.innerHTML = '<div class="menu-head"><span class="menu-book">' + CA.nav.book + '</span><a href="index.html">Course overview</a>' +
+        '<button class="menu-x" aria-label="Close the menu">×</button></div><div class="menu-body"><div class="menu-tree" role="tablist" aria-label="Paragraphs"></div><div class="menu-lessons"></div></div>';
+      document.body.appendChild(menu);
+      menuBack.addEventListener("click", closeMenu);
+      menu.addEventListener("click", function (e) {
+        var mp = e.target.closest("[data-mp]");
+        if (mp) { menuPara = +mp.getAttribute("data-mp"); renderMenu(); return; }
+        if (e.target.closest(".menu-x")) closeMenu();
+      });
+    }
+    menuPara = herePara();
+    menu.classList.add("show"); menuBack.classList.add("show");
+    renderMenu();
+    btn.setAttribute("aria-expanded", "true");
+    document.documentElement.style.overflow = "hidden";
+    var f = $('.menu-list a[aria-current]', menu) || $(".menu-list a", menu); if (f) f.focus({ preventScroll: true });
+  }
+  function closeMenu() {
+    if (!menu || !menu.classList.contains("show")) return false;
+    menu.classList.remove("show"); menuBack.classList.remove("show");
+    document.documentElement.style.overflow = "";
+    var btn = $("#menu-btn"); btn.setAttribute("aria-expanded", "false"); btn.focus({ preventScroll: true });
+    return true;
+  }
+
+  /* ------------------------------------------------------------ index: paragraph blocks */
+  function refreshParts() {
+    var parts = $$("details.part"); if (!parts.length) return;
+    var hash = location.hash.slice(1), want = /^part\d+$/.test(hash) ? hash : "part" + paraOfLesson(nextLesson());
+    parts.forEach(function (d) {
+      var cards = $$(".lcard", d), n = cards.filter(function (c) { return store.done[c.getAttribute("data-lesson")]; }).length;
+      $(".part-p", d).textContent = n === cards.length ? "complete ✓" : n + " of " + cards.length + " done";
+      if (parts.length > 1) d.open = d.id === want;
+    });
+    if (/^part\d+$/.test(hash)) { var el = document.getElementById(hash); if (el) el.scrollIntoView(); }
+  }
+  window.addEventListener("hashchange", refreshParts);
+
+  /* ------------------------------------------------------------ lesson: section links */
+  function setupSecnav() {
+    var nav = $(".secnav .wrap"); if (!nav) return;
+    var links = $$("a", nav), secs = links.map(function (a) { return document.getElementById(a.getAttribute("href").slice(1)); });
+    function mark() {
+      var line = 130, on = 0;
+      secs.forEach(function (s, i) { if (s && s.getBoundingClientRect().top <= line) on = i; });
+      links.forEach(function (a, i) {
+        var was = a.classList.contains("on"); a.classList.toggle("on", i === on);
+        if (i === on && !was) nav.scrollLeft = Math.max(0, a.offsetLeft - nav.clientWidth / 2 + a.offsetWidth / 2);
+      });
+    }
+    var busy = false;
+    window.addEventListener("scroll", function () { if (busy) return; busy = true; requestAnimationFrame(function () { busy = false; mark(); }); }, { passive: true });
+    mark();
+  }
+
   /* ------------------------------------------------------------ vocabulary page */
   function setupVocab() {
     var q = $("#vq"); if (!q) return;
@@ -368,6 +469,7 @@
   /* ------------------------------------------------------------ wiring */
   document.addEventListener("click", function (e) {
     var t = e.target;
+    if (t.closest("#menu-btn")) { e.preventDefault(); if (!closeMenu()) openMenu(); return; }
     var p = t.closest("[data-play]"); if (p) { e.preventDefault(); play(p.getAttribute("data-play")); return; }
     var rp = t.closest("[data-repeat]"); if (rp) { e.preventDefault(); play(rp.getAttribute("data-repeat"), true); return; }
     var sy = t.closest("[data-say]"); if (sy) { e.preventDefault(); sayText(sy.getAttribute("data-say")); return; }
@@ -388,7 +490,10 @@
     }
     if (card && card.classList.contains("show") && !t.closest(".wcard")) hideWord();
   });
-  document.addEventListener("keydown", function (e) { if (e.key === "Escape") { hideWord(); } });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") { if (!closeMenu()) hideWord(); }
+    if ((e.key === "Enter" || e.key === " ") && e.target.id === "menu-btn") { e.preventDefault(); if (!closeMenu()) openMenu(); }
+  });
   document.addEventListener("change", function (e) {
     var c = e.target;
     if (c.matches && c.matches("input[data-check]")) {
@@ -406,7 +511,7 @@
   });
   var ten = $("#toggle-en"); if (ten) { ten.checked = store.en !== false; document.body.classList.toggle("no-en", store.en === false); }
   $$("[data-cloze]").forEach(setupCloze);
-  renderRecord(); refreshScores(); refreshDone(); refreshIndex(); setupVocab();
+  renderRecord(); refreshScores(); refreshDone(); refreshIndex(); refreshParts(); setupSecnav(); setupVocab();
   if (lessonNo()) { store.last = lessonNo(); save(); }
   if (location.hash && /^#s\d+$/.test(location.hash)) { var tgt = $(location.hash); if (tgt) tgt.classList.add("now"); }
 })();

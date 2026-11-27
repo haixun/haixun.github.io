@@ -1,0 +1,207 @@
+# Example sentences for the nouns, verbs and adjectives of paragraph 1.
+#   form | a short Spanish sentence that uses exactly that form | English
+# The sentences are written for this course; none comes from the novel.
+# build.py checks that every noun, verb and adjective has one and that it contains the form.
+
+muchos | Tengo muchos libros en casa. | I have many books at home.
+años | Mi hermana tiene diez años. | My sister is ten years old.
+pelotón | Un pelotón de ciclistas pasó por el pueblo. | A pack of cyclists went through the town.
+fusilamiento | El cuadro de Goya muestra un fusilamiento. | Goya's painting shows an execution by firing squad.
+coronel | El coronel habló con sus soldados. | The colonel spoke with his soldiers.
+había | Había mucha gente en la plaza. | There were a lot of people in the square.
+recordar | No puedo recordar su nombre. | I cannot remember his name.
+tarde | Esta tarde voy al mercado. | This afternoon I am going to the market.
+remota | Viven en una isla remota. | They live on a remote island.
+padre | Mi padre trabaja en un banco. | My father works in a bank.
+llevó | Ana llevó a su hijo al médico. | Ana took her son to the doctor.
+conocer | Quiero conocer a tu familia. | I want to meet your family.
+hielo | Quiero agua con hielo, por favor. | I would like water with ice, please.
+era | Mi abuela era maestra. | My grandmother was a teacher.
+aldea | La aldea tiene una sola calle. | The village has only one street.
+casas | Las casas del barrio son pequeñas. | The houses in the neighbourhood are small.
+barro | Los zapatos están llenos de barro. | The shoes are covered in mud.
+cañabrava | El techo de la choza es de cañabrava. | The roof of the hut is made of wild cane.
+construidas | Las torres fueron construidas en un año. | The towers were built in one year.
+orilla | Caminamos por la orilla del lago. | We walked along the shore of the lake.
+río | El río pasa por el centro de la ciudad. | The river runs through the centre of the city.
+aguas | Las aguas del lago son muy frías. | The waters of the lake are very cold.
+diáfanas | Las mañanas de invierno son frías y diáfanas. | Winter mornings are cold and crystal-clear.
+precipitaban | Las rocas se precipitaban por la montaña. | The rocks were hurtling down the mountain.
+lecho | El lecho del arroyo está seco en verano. | The bed of the stream is dry in summer.
+piedras | Los niños tiran piedras al agua. | The children throw stones into the water.
+pulidas | Las mesas de mármol están muy pulidas. | The marble tables are highly polished.
+blancas | Las paredes de la cocina son blancas. | The kitchen walls are white.
+enormes | Los elefantes son animales enormes. | Elephants are enormous animals.
+huevos | Compré una docena de huevos. | I bought a dozen eggs.
+prehistóricos | El museo tiene huesos de animales prehistóricos. | The museum has bones of prehistoric animals.
+mundo | Quiero viajar por todo el mundo. | I want to travel all over the world.
+reciente | Es una foto reciente de mis hijos. | It is a recent photo of my children.
+muchas | Hay muchas flores en el jardín. | There are many flowers in the garden.
+cosas | Tengo que comprar algunas cosas. | I have to buy a few things.
+carecían | Las escuelas carecían de libros. | The schools lacked books.
+nombre | ¿Cuál es tu nombre? | What is your name?
+mencionarlas | Hay dos reglas más, pero no voy a mencionarlas ahora. | There are two more rules, but I am not going to mention them now.
+señalarlas | Si ves las estrellas, puedes señalarlas. | If you see the stars, you can point at them.
+dedo | Me corté el dedo con un cuchillo. | I cut my finger with a knife.
+todos | Todos los niños están en la escuela. | All the children are at school.
+mes | El mes de febrero es corto. | The month of February is short.
+marzo | Mi cumpleaños es en marzo. | My birthday is in March.
+familia | Mi familia vive en el campo. | My family lives in the country.
+gitanos | Los gitanos tocaron la guitarra toda la noche. | The gypsies played the guitar all night.
+desarrapados | Dos niños desarrapados pedían pan. | Two ragged children were asking for bread.
+plantaba | Mi abuelo plantaba tomates cada primavera. | My grandfather used to plant tomatoes every spring.
+carpa | El circo levantó su carpa en la plaza. | The circus put up its tent in the square.
+grande | La casa de mis tíos es muy grande. | My aunt and uncle's house is very big.
+alboroto | Los niños hacen mucho alboroto en el patio. | The children make a great racket in the yard.
+pitos | Los niños tocaban pitos en la fiesta. | The children were blowing whistles at the party.
+timbales | Mi primo toca los timbales en una orquesta. | My cousin plays the kettledrums in an orchestra.
+daban | Mis abuelos me daban dulces. | My grandparents used to give me sweets.
+nuevos | Necesito zapatos nuevos. | I need new shoes.
+inventos | El teléfono es uno de los grandes inventos. | The telephone is one of the great inventions.
+llevaron | Mis amigos llevaron vino a la cena. | My friends brought wine to the dinner.
+imán | El imán atrae el hierro. | The magnet attracts iron.
+gitano | El gitano cantaba una canción triste. | The gypsy was singing a sad song.
+corpulento | El panadero es un hombre corpulento. | The baker is a heavy-set man.
+barba | Mi tío tiene una barba blanca. | My uncle has a white beard.
+montaraz | Es un gato montaraz que no entra en la casa. | It is a wild cat that does not come into the house.
+manos | Lávate las manos antes de comer. | Wash your hands before eating.
+gorrión | Un gorrión come migas en la ventana. | A sparrow is eating crumbs at the window.
+presentó | El director se presentó a los alumnos. | The headmaster introduced himself to the pupils.
+hizo | Mi madre hizo una sopa de verduras. | My mother made a vegetable soup.
+truculenta | Es una película truculenta, llena de sangre. | It is a lurid film, full of blood.
+demostración | El vendedor hizo una demostración del producto. | The salesman gave a demonstration of the product.
+pública | La biblioteca pública abre a las nueve. | The public library opens at nine.
+mismo | Vivimos en el mismo edificio. | We live in the same building.
+llamaba | Mi abuela me llamaba todos los domingos. | My grandmother used to call me every Sunday.
+octava | Vivo en la octava planta. | I live on the eighth floor.
+maravilla | Este jardín es una maravilla. | This garden is a marvel.
+sabios | Los viejos del pueblo son muy sabios. | The old people of the village are very wise.
+alquimistas | Los alquimistas buscaban oro en sus laboratorios. | The alchemists looked for gold in their laboratories.
+fue | Ayer mi hermano fue al cine. | Yesterday my brother went to the cinema.
+casa | Mi casa está cerca del parque. | My house is near the park.
+arrastrando | El niño llegó arrastrando una maleta. | The boy arrived dragging a suitcase.
+lingotes | El banco guarda lingotes de plata. | The bank keeps silver ingots.
+metálicos | Los cubos metálicos hacen mucho ruido. | The metal buckets make a lot of noise.
+todo | Todo el pueblo fue a la fiesta. | The whole town went to the party.
+espantó | El caballo se espantó con el ruido. | The horse took fright at the noise.
+ver | Quiero ver el mar. | I want to see the sea.
+calderos | En la cocina hay dos calderos de cobre. | In the kitchen there are two copper cauldrons.
+pailas | Las pailas están colgadas en la pared. | The pans are hanging on the wall.
+tenazas | Sacó el carbón con unas tenazas. | He took out the coal with a pair of tongs.
+anafes | En el mercado cocinan en anafes de carbón. | In the market they cook on charcoal braziers.
+caían | Las hojas se caían de los árboles. | The leaves were falling from the trees.
+sitio | Este es un buen sitio para comer. | This is a good place to eat.
+maderas | El carpintero trabaja con maderas duras. | The carpenter works with hard woods.
+crujían | Las escaleras crujían por la noche. | The stairs creaked at night.
+desesperación | Lloraba de desesperación. | She was crying with despair.
+clavos | Necesito un martillo y unos clavos. | I need a hammer and some nails.
+tornillos | Faltan dos tornillos en la silla. | Two screws are missing from the chair.
+tratando | Estoy tratando de aprender español. | I am trying to learn Spanish.
+desenclavarse | La tabla vieja empieza a desenclavarse. | The old board is starting to come unnailed.
+objetos | Hay muchos objetos antiguos en el museo. | There are many old objects in the museum.
+perdidos | Encontré los guantes perdidos debajo del sofá. | I found the lost gloves under the sofa.
+hacía | Ayer hacía mucho frío. | It was very cold yesterday.
+mucho | No tengo mucho dinero. | I do not have much money.
+tiempo | No tengo tiempo hoy. | I do not have time today.
+aparecían | Las estrellas aparecían una a una. | The stars were appearing one by one.
+buscado | He buscado las llaves por toda la casa. | I have looked for the keys all over the house.
+arrastraban | Los soldados heridos se arrastraban por el suelo. | The wounded soldiers were dragging themselves along the ground.
+desbandada | Los pájaros salieron en desbandada. | The birds scattered in all directions.
+turbulenta | Fue una época turbulenta para el país. | It was a turbulent time for the country.
+fierros | El patio está lleno de fierros viejos. | The yard is full of old pieces of iron.
+mágicos | Mi hija cree en los poderes mágicos. | My daughter believes in magic powers.
+tienen | Mis vecinos tienen dos perros. | My neighbours have two dogs.
+vida | La vida en el campo es tranquila. | Life in the country is quiet.
+propia | Cada niño tiene su propia cama. | Each child has their own bed.
+pregonaba | El vendedor pregonaba el precio del pescado. | The seller was crying out the price of the fish.
+áspero | Este jabón es áspero. | This soap is rough.
+acento | Habla español con acento francés. | He speaks Spanish with a French accent.
+es | Mi hermano es médico. | My brother is a doctor.
+cuestión | Es una cuestión de tiempo. | It is a matter of time.
+despertarles | Los niños duermen; no quiero despertarles. | The children are asleep; I do not want to wake them.
+ánima | Rezaron por el ánima del abuelo. | They prayed for grandfather's soul.
+desaforada | Corrió con una prisa desaforada. | He ran in a wild hurry.
+imaginación | Los niños tienen mucha imaginación. | Children have a lot of imagination.
+iba | De niño iba a la escuela a pie. | As a child I used to go to school on foot.
+ingenio | Resolvió el problema con mucho ingenio. | She solved the problem with great ingenuity.
+naturaleza | Me gusta caminar por la naturaleza. | I like walking in nature.
+milagro | Es un milagro que estés vivo. | It is a miracle that you are alive.
+magia | El mago hizo un truco de magia. | The magician did a magic trick.
+pensó | Luis pensó que era domingo. | Luis thought that it was Sunday.
+posible | No es posible llegar hoy. | It is not possible to arrive today.
+servirse | Cada invitado puede servirse la comida. | Each guest can help himself to the food.
+invención | La invención de la rueda cambió el mundo. | The invention of the wheel changed the world.
+inútil | Este paraguas roto es inútil. | This broken umbrella is useless.
+desentrañar | El detective quiere desentrañar el misterio. | The detective wants to get to the bottom of the mystery.
+oro | Lleva un anillo de oro. | She wears a gold ring.
+tierra | La tierra de este valle es muy fértil. | The soil of this valley is very fertile.
+hombre | Ese hombre es mi profesor. | That man is my teacher.
+honrado | El tendero es un hombre honrado. | The shopkeeper is an honest man.
+previno | El médico me previno contra el sol. | The doctor warned me against the sun.
+sirve | Este cuchillo no sirve para cortar pan. | This knife is no good for cutting bread.
+creía | De niño creía en los fantasmas. | As a child he believed in ghosts.
+honradez | Todos conocen la honradez de ese juez. | Everyone knows that judge's honesty.
+cambió | Marta cambió su coche por una moto. | Marta traded her car for a motorbike.
+mulo | El mulo lleva la carga al pueblo. | The mule carries the load to the village.
+partida | Llegó una partida de naranjas al mercado. | A batch of oranges arrived at the market.
+chivos | Los chivos saltan entre las rocas. | The young goats jump among the rocks.
+imantados | Los destornilladores imantados no pierden los tornillos. | Magnetised screwdrivers do not lose the screws.
+mujer | Esa mujer es mi vecina. | That woman is my neighbour.
+contaba | Yo contaba con tu ayuda. | I was counting on your help.
+animales | En la granja hay muchos animales. | There are many animals on the farm.
+ensanchar | Van a ensanchar la carretera. | They are going to widen the road.
+desmedrado | El árbol creció desmedrado por falta de agua. | The tree grew up stunted for lack of water.
+patrimonio | La casa es todo el patrimonio de la familia. | The house is the family's entire estate.
+doméstico | El gato es un animal doméstico. | The cat is a domestic animal.
+consiguió | Mi hermana consiguió un buen trabajo. | My sister got a good job.
+disuadirlo | Quiere dejar la escuela y no puedo disuadirlo. | He wants to leave school and I cannot dissuade him.
+ha | Mi hermano ha llegado tarde. | My brother has arrived late.
+sobrarnos | Con dos panes va a sobrarnos comida. | With two loaves we are going to have food left over.
+empedrar | Van a empedrar la plaza del pueblo. | They are going to pave the village square with stones.
+replicó | —No es verdad —replicó la niña. | "It is not true," the girl replied.
+marido | Su marido cocina muy bien. | Her husband cooks very well.
+varios | Tengo varios amigos en Madrid. | I have several friends in Madrid.
+meses | El año tiene doce meses. | The year has twelve months.
+empeñó | Se empeñó en pagar la cena. | He insisted on paying for dinner.
+demostrar | Quiero demostrar que tengo razón. | I want to prove that I am right.
+acierto | Comprar esta casa fue un acierto. | Buying this house was the right decision.
+conjeturas | No tenemos datos, solo conjeturas. | We have no facts, only guesses.
+exploró | El grupo exploró la cueva durante horas. | The group explored the cave for hours.
+palmo | El agua subió un palmo en una hora. | The water rose a handspan in an hour.
+región | Esta región produce mucho vino. | This region produces a lot of wine.
+fondo | Las llaves están en el fondo del bolso. | The keys are at the bottom of the bag.
+hierro | La puerta del jardín es de hierro. | The garden gate is made of iron.
+recitando | La niña está recitando un poema. | The girl is reciting a poem.
+voz | Tiene una voz muy bonita. | She has a very lovely voice.
+alta | Mi hermana es más alta que yo. | My sister is taller than I am.
+conjuro | La bruja dijo un conjuro. | The witch spoke a spell.
+único | Es mi único hermano. | He is my only brother.
+logró | Por fin logró abrir la puerta. | At last he managed to open the door.
+desenterrar | El perro quiere desenterrar su hueso. | The dog wants to dig up its bone.
+armadura | El caballero llevaba una armadura pesada. | The knight wore a heavy suit of armour.
+siglo | Vivimos en el siglo veintiuno. | We live in the twenty-first century.
+todas | Todas las tiendas están cerradas. | All the shops are closed.
+partes | El libro tiene tres partes. | The book has three parts.
+soldadas | Las dos piezas están soldadas. | The two pieces are welded together.
+cascote | Después del terremoto la calle estaba llena de cascote. | After the earthquake the street was full of rubble.
+óxido | La bicicleta vieja tiene óxido. | The old bicycle has rust on it.
+interior | El interior de la iglesia es oscuro. | The inside of the church is dark.
+tenía | Mi abuelo tenía un caballo. | My grandfather had a horse.
+resonancia | La sala vacía tiene mucha resonancia. | The empty hall has a lot of echo.
+hueca | El árbol tiene una rama hueca. | The tree has a hollow branch.
+enorme | Hay un árbol enorme en la plaza. | There is an enormous tree in the square.
+calabazo | Guardan el agua en un calabazo. | They keep the water in a gourd.
+lleno | El vaso está lleno de leche. | The glass is full of milk.
+hombres | Dos hombres esperan en la puerta. | Two men are waiting at the door.
+expedición | La expedición llegó a la cima. | The expedition reached the summit.
+lograron | Los bomberos lograron apagar el fuego. | The firemen managed to put out the fire.
+desarticular | La policía quiere desarticular la banda. | The police want to break up the gang.
+encontraron | Los niños encontraron un gato en la calle. | The children found a cat in the street.
+esqueleto | En la clase hay un esqueleto de plástico. | In the classroom there is a plastic skeleton.
+calcificado | El médico vio un hueso calcificado en la radiografía. | The doctor saw a calcified bone in the X-ray.
+llevaba | La niña llevaba un vestido rojo. | The girl was wearing a red dress.
+colgado | El abrigo está colgado en la puerta. | The coat is hanging on the door.
+cuello | Me duele el cuello. | My neck hurts.
+relicario | Guarda una foto de su madre en un relicario. | She keeps a photo of her mother in a locket.
+cobre | Los cables son de cobre. | The cables are made of copper.
+rizo | Un rizo le cae sobre la frente. | A curl falls over her forehead.
